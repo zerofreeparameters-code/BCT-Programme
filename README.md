@@ -8,8 +8,8 @@
 > Planck-scale superfluid lattice. Using three numbers. In 18 months."*
 
 [![Zenodo](https://img.shields.io/badge/Zenodo-76%2B%20Records-blue)](https://zenodo.org/search?q=cabri%C3%A9)
-[![Letters](https://img.shields.io/badge/Letters-201-navy)](https://zenodo.org/search?q=cabri%C3%A9)
-[![Predictions](https://img.shields.io/badge/Predictions-245%2B-green)](https://zenodo.org/search?q=cabri%C3%A9)
+[![Letters](https://img.shields.io/badge/Letters-203-navy)](https://zenodo.org/search?q=cabri%C3%A9)
+[![Predictions](https://img.shields.io/badge/Predictions-247%2B-green)](https://zenodo.org/search?q=cabri%C3%A9)
 [![Parameters](https://img.shields.io/badge/Free%20Parameters-ZERO-red)](https://zenodo.org/search?q=cabri%C3%A9)
 [![Wikipedia](https://img.shields.io/badge/Wikipedia-5%20Articles-lightgrey)](https://en.wikipedia.org/wiki/Types_of_periodic_tables)
 [![Patreon](https://img.shields.io/badge/Patreon-Support%20BCT-orange)](https://www.patreon.com/TheBCTSuperfluidLatticeModel)
@@ -48,9 +48,9 @@ and c/a = √2.
 
 | Statistic | Value |
 |---|---|
-| Letters | 201 |
+| Letters | 203 |
 | Volumes | 14 |
-| Predictions | 245+ |
+| Predictions | 247+ |
 | Free parameters | **0** |
 | Zenodo records | 76+ |
 | Pages | ~2,900 |
@@ -222,6 +222,8 @@ work connects to BCT predictions. Current active outreach:
 Scientific content: **CC BY 4.0**
 Patent technologies: **BCT Ethical Patent Licence v1.0 (BCT-EPL-1.0)**
 BCT-HIVE: **CC BY 4.0 (gifted freely to world beekeepers)**
+
+📋 **[Apply for a BCT Ethical Patent Licence](https://docs.google.com/forms/d/e/1FAIpQLSdN_0KzsP9ldhLdvJqKjnNed6x98nsThciqUHa0oaNvF4S_zA/viewform?usp=header)** | **[Full licence details](EPL_LICENCE.md)**
 
 ---
 
