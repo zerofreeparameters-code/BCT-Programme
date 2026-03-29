@@ -1,3 +1,5 @@
+[![PI/2 Institute Logo](http://logo.pi2.institute)](http://logo.pi2.institute)
+
 # The BCT Superfluid Lattice Model
 ## Zero Free Parameters | Three Inputs | One Geometry
 
