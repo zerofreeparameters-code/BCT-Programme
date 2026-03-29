@@ -1,0 +1,111 @@
+\documentclass[aps,prl,twocolumn,showpacs,superscriptaddress]{revtex4-2}
+\usepackage{amsmath,amssymb,booktabs,xcolor,hyperref,amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+
+\begin{document}
+
+\title{Appendix KA4: Formal Proof of the OHC Mode Capacity Constraint
+$|H|\leq n$\\
+The topological underpinning of the Pauli Exclusion Theorem
+and the Noble Gas Theorem}
+
+\author{Michel Robert Cabri\'e}
+\affiliation{Independent Researcher, Victoria, Australia}
+\email{ZeroFreeParameters@gmail.com}
+\date{20 March 2026}
+
+\begin{abstract}
+This appendix derives the OHC mode capacity constraint $|H|\leq n$ 
+from the Josephson-Bessel structure of the OHC condensate, providing 
+the formal foundation for both the Pauli Exclusion Theorem and the 
+Noble Gas Theorem of Letter~81. The constraint follows from the 
+requirement that the Hopf phase winding $H\times2\pi\alpha_0$ must 
+not exceed the $n$-th Josephson phase $\Delta\varphi_n = 2\pi n\alpha_0$.
+The crucial distinction between topological impossibility and energetic 
+unfavourability is established.
+\end{abstract}
+
+\maketitle
+
+\section{Hopf Charge Quantisation}
+
+The Hopf invariant $H$ classifies maps $\eta: S^3\to S^2$ by the 
+homotopy group $\pi_3(S^2) = \mathbb{Z}$ (Hopf 1931). This gives 
+$H\in\mathbb{Z}$ exactly --- no continuous values are permitted. 
+Hopf charge is additive:
+\begin{equation}
+    H(f\circ g) = H(f) + H(g)
+\end{equation}
+This is the topological foundation of charge quantisation in BCT 
+(Appendix~JH).
+
+\section{OHC Bessel Modes and Josephson Coupling}
+
+The OHC interior condensate $\Psi_{\rm int}$ satisfies the 
+Gross-Pitaevskii equation with Josephson boundary condition at 
+coupling $\alpha_0 = r_{\rm oct}\times r_{\rm tet}/\pi = 0.0074081$. 
+The linearised solutions are spherical Bessel functions 
+$j_n(\kappa_0 r/R)$ indexed by $n = 1,2,3,\ldots$
+
+The Josephson phase accumulated across the $n$-th mode:
+\begin{equation}
+    \Delta\varphi_n = 2\pi n\alpha_0
+\end{equation}
+
+\begin{theorem}[OHC Mode Capacity]
+The $n$-th OHC Bessel resonance mode supports total Hopf charge 
+$|H_{\rm total}|\leq n$.
+\end{theorem}
+
+\begin{proof}
+A Hopf excitation of charge $H$ in the $n$-th mode requires phase 
+winding $H\times2\pi\alpha_0$. The mode can sustain phase winding up 
+to $\Delta\varphi_n = 2\pi n\alpha_0$ without exceeding the Josephson 
+energy barrier. Therefore $H\times2\pi\alpha_0 \leq 2\pi n\alpha_0$, 
+giving $|H|\leq n$. \qed
+\end{proof}
+
+\section{Implications}
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Theorem & Uses $|H|\leq n$ via & Conclusion \\
+\midrule
+Pauli (L81 Thm~1) & $n=1$: $|2|>1$ forbidden & 2 electrons/mode, opp.~spin \\
+Noble Gas (L81 Thm~2) & Closed: no mode for $H\neq0$ & Bonding impossible \\
+Shell $2n^2$ (L78) & $n^2$ modes $\times2$ orientations & Shell capacity \\
+Bond angle (L80) & Lone pair: $r_{\rm tet}(1+r_{\rm tet})=1/8$ & $\cos\theta=-(1-n_{\rm lp}/8)/3$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Topological vs Energetic}
+
+\begin{remark}
+The mode capacity $|H|\leq n$ is a hard topological constraint. 
+No smooth deformation of the OHC condensate creates a state with 
+$|H|>n$ in the $n$-th mode without a topology change requiring 
+infinite energy. By contrast, energetic barriers are finite. 
+This is why Pauli exclusion admits no exceptions and noble gas 
+inertness is absolute: they are topological theorems.
+\end{remark}
+
+\section{The Foundation}
+
+All BCT chemistry rests on:
+\begin{align}
+    &H \in \mathbb{Z} \quad (\pi_3(S^2)=\mathbb{Z})\\
+    &|H| \leq n \text{ per mode} \quad\text{(Josephson-Bessel)}
+\end{align}
+Two integers. One geometry. All of chemistry.
+
+\begin{thebibliography}{99}
+\bibitem{AppJH} M.~R.~Cabri\'e, \textit{Appendix JH}, Zenodo (2026),
+doi:10.5281/zenodo.18975018
+\bibitem{L78} M.~R.~Cabri\'e, \textit{BCT Letter 78}, Zenodo (2026).
+\bibitem{L81} M.~R.~Cabri\'e, \textit{BCT Letter 81}, Zenodo (2026).
+\end{thebibliography}
+
+\end{document}

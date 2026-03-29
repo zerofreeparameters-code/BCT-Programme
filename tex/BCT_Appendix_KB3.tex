@@ -1,0 +1,177 @@
+\documentclass[aps,prl,onecolumn,superscriptaddress]{revtex4-2}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\definecolor{navy}{HTML}{0B2545}
+\definecolor{dgrn}{HTML}{1B5E20}
+\definecolor{teal}{HTML}{006064}
+\definecolor{purp}{HTML}{4527A0}
+\definecolor{mgrey}{HTML}{555555}
+
+\begin{document}
+
+\title{Appendix KB3: f-Shell Hopf Symmetry ---
+Half-Fill Attractors and Closure Points\\
+\normalsize Companion to BCT Letter 83}
+
+\author{Michel Robert Cabri\'{e}}
+\affiliation{Independent Researcher, Barrys Reef, Victoria, Australia}
+\affiliation{ORCID: 0009-0007-9561-9859}
+
+\date{20 March 2026}
+
+\begin{abstract}
+We derive the f-shell analogues of the d-shell Hopf symmetry theorems
+proven in Appendix KB2. The f-shell half-fill attractor at $N_f = 7$
+(Eu, Am) and the f-shell closure attractor at $N_f = 14$ (Yb, No)
+are shown to be topological consequences of the Octet-Hopfion
+Condensate (OHC) mode structure, identical in character to the
+d-shell attractors responsible for the anomalous configurations
+of Cr, Mo, Cu, Ag, and Au.
+\end{abstract}
+
+\maketitle
+
+\section{f-Shell mode structure}
+
+The f-shell has capacity 14 electrons across 7 OHC modes
+(2 spin states per mode). The Hopf symmetry number for the f-shell is:
+%
+\begin{equation}
+  S_H(f) = \frac{\min(N_f,\; 14 - N_f)}{7}
+\end{equation}
+%
+where $N_f$ is the f-electron count. Maximum $S_H(f) = 1.00$ at
+$N_f = 7$ (half-fill). This is the f-shell analogue of the d-shell
+half-fill attractor proven in Appendix KB2, where
+$S_H(d) = 1.00$ at $N_d = 5$.
+
+\section{The f half-fill Hopf attractor: Eu and Am}
+
+\begin{quotation}
+\textbf{f Half-Fill Theorem.}
+The configuration $4f^7$ (lanthanides) and $5f^7$ (actinides)
+represents a Hopf symmetry point with $S_H(f) = 1.00$.
+This is a topological attractor. The energy stabilisation from
+reaching $S_H(f) = 1.00$ exceeds the energy cost of depopulating
+adjacent modes, driving anomalous electron configurations.
+\end{quotation}
+
+\textbf{Europium (Z=63).}
+Expected from periodic trends: $[\mathrm{Xe}]4f^6 5d^1 6s^2$.
+Observed: $[\mathrm{Xe}]4f^7 6s^2$.
+The $5d$ electron is absent; the f-shell reaches half-fill.
+Eu is anomalously stable as Eu$^{2+}$: removal of one $6s$ electron
+leaves the closed $4f^7$ Hopf half-fill intact, exactly as
+Cr$^{6+}$ would preserve a $3d^5$ half-fill.
+
+\textbf{Americium (Z=95).}
+Exactly analogous in the 5f-shell.
+Observed: $[\mathrm{Rn}]5f^7 7s^2$.
+Am$^{3+}$ retains $5f^7$ -- anomalously stable for the same
+topological reason. Am-241 (smoke detectors) exploits this stability.
+
+The pattern is cross-period consistent:
+\begin{align}
+  \text{Period 4 (d):}\quad & \mathrm{Cr}\; [d^5 s^1],\;
+    S_H(d) = 1.00 \nonumber\\
+  \text{Period 5 (d):}\quad & \mathrm{Mo}\; [d^5 s^1],\;
+    S_H(d) = 1.00 \nonumber\\
+  \text{Period 6 (f):}\quad & \mathrm{Eu}\; [f^7 s^2],\;
+    S_H(f) = 1.00 \nonumber\\
+  \text{Period 7 (f):}\quad & \mathrm{Am}\; [f^7 s^2],\;
+    S_H(f) = 1.00
+\end{align}
+
+\section{The f-shell closure attractor: Yb and No}
+
+\begin{quotation}
+\textbf{f Closure Theorem.}
+The configuration $4f^{14}$ represents a closed Hopf multiplet
+with $S_H(f) = 0$ (all modes filled, no vacant channels).
+This is the f-shell analogue of the d-shell closure attractor
+(Cu, Ag, Au) proven in Appendix KB2. Elements at f-closure
+exhibit anomalously stable $2+$ states.
+\end{quotation}
+
+\textbf{Ytterbium (Z=70).}
+Observed $[\mathrm{Xe}]4f^{14}6s^2$.
+Yb exhibits anomalously stable Yb$^{2+}$ -- atypical for
+lanthanides, which normally form $3+$. This is the direct
+f-closure analogue of Cu ($d^{10}s^1$): the closed multiplet
+topology stabilises the configuration.
+Yb-doped fibre lasers and optical lattice clocks exploit this stability.
+
+\textbf{Nobelium (Z=102).}
+Observed $[\mathrm{Rn}]5f^{14}7s^2$.
+No$^{2+}$ is anomalously stable for a transactinide.
+The $5f^{14}$ closed Hopf multiplet provides the same
+topological stabilisation. This was experimentally puzzling
+before BCT; it is a derived consequence within BCT.
+
+\section{Complete lanthanide $S_H(f)$ table}
+
+\begin{table}[h]
+\centering
+\caption{Hopf symmetry numbers across the lanthanide series.
+Rows marked $\star$ are Hopf symmetry points.}
+\begin{tabular}{llccc}
+\toprule
+Element & Z & Config. & $N_f$ & $S_H(f)$ \\
+\midrule
+La & 57 & $4f^0 5d^1 6s^2$ & 0 & 0.00 \\
+Ce & 58 & $4f^1 5d^1 6s^2$ & 1 & 0.14 \\
+Pr & 59 & $4f^3 6s^2$       & 3 & 0.43 \\
+Nd & 60 & $4f^4 6s^2$       & 4 & 0.57 \\
+Pm & 61 & $4f^5 6s^2$       & 5 & 0.71 \\
+Sm & 62 & $4f^6 6s^2$       & 6 & 0.86 \\
+\textbf{Eu} & \textbf{63} & $\mathbf{4f^7 6s^2}$
+  & \textbf{7} & $\mathbf{1.00}^\star$ \\
+Gd & 64 & $4f^7 5d^1 6s^2$ & 7 & 1.00 \\
+Tb & 65 & $4f^9 6s^2$       & 9 & 0.71 \\
+Dy & 66 & $4f^{10}6s^2$    & 10 & 0.57 \\
+Ho & 67 & $4f^{11}6s^2$    & 11 & 0.43 \\
+Er & 68 & $4f^{12}6s^2$    & 12 & 0.29 \\
+Tm & 69 & $4f^{13}6s^2$    & 13 & 0.14 \\
+\textbf{Yb} & \textbf{70} & $\mathbf{4f^{14}6s^2}$
+  & \textbf{14} & $\mathbf{0.00}^\star$ \\
+Lu & 71 & $4f^{14}5d^1 6s^2$ & 14 & 0.00 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The actinide series (Ac--Lr, Z=89--103) follows the identical pattern
+with 5f electrons: Am (Z=95) at $5f^7$ is the f-half-fill attractor;
+No (Z=102) at $5f^{14}$ is the f-closure point.
+The BCT prediction is exact and cross-period consistent.
+
+\section*{Note on cross-series universality}
+
+The following table summarises all Hopf symmetry attractors
+across d and f shells, confirming the universality of the theorem:
+
+\begin{table}[h]
+\centering
+\caption{Universal Hopf symmetry attractors across d and f shells.}
+\begin{tabular}{lllll}
+\toprule
+Period & Shell & Type & Elements & $S_H$ \\
+\midrule
+4 & d & Half-fill & Cr ($3d^5 4s^1$) & 1.00 \\
+5 & d & Half-fill & Mo ($4d^5 5s^1$) & 1.00 \\
+6 & d & Half-fill & Re ($5d^5 6s^2$) & 1.00 \\
+4 & d & Closure   & Cu ($3d^{10}4s^1$) & 0.00 \\
+5 & d & Closure   & Ag ($4d^{10}5s^1$) & 0.00 \\
+6 & d & Closure   & Au ($5d^{10}6s^1$) & 0.00 \\
+6 & f & Half-fill & Eu ($4f^7 6s^2$) & 1.00 \\
+7 & f & Half-fill & Am ($5f^7 7s^2$) & 1.00 \\
+6 & f & Closure   & Yb ($4f^{14}6s^2$) & 0.00 \\
+7 & f & Closure   & No ($5f^{14}7s^2$) & 0.00 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}

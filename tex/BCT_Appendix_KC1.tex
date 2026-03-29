@@ -1,0 +1,142 @@
+\documentclass[aps,prl,onecolumn,superscriptaddress]{revtex4-2}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\definecolor{navy}{HTML}{0B2545}
+\definecolor{dgrn}{HTML}{1B5E20}
+\definecolor{teal}{HTML}{006064}
+\definecolor{purp}{HTML}{4527A0}
+\definecolor{mgrey}{HTML}{555555}
+
+\begin{document}
+
+\title{Appendix KC1: The BCT Periodic Table ---
+Topological Classification of All 118 Elements\\
+\normalsize Companion to BCT Letter 84}
+
+\author{Michel Robert Cabri\'{e}}
+\affiliation{Independent Researcher, Barrys Reef, Victoria, Australia}
+\affiliation{ORCID: 0009-0007-9561-9859}
+
+\date{20 March 2026}
+
+\begin{abstract}
+We provide the complete topological classification of all 118 elements
+under the BCT Superfluid Lattice Model, organised by Hopf multiplet
+structure. Eleven classes are defined, each with a rigorous BCT
+derivation. We justify the Janet (left-step) layout as the natural
+periodic arrangement consistent with OHC Bessel resonance mode ordering,
+and define the Hopf fill fraction that annotates each element in the
+BCT Periodic Table figures.
+\end{abstract}
+
+\maketitle
+
+\section{Classification scheme}
+
+Each element is assigned to one of eleven BCT topological classes
+based on the Hopf multiplet structure of its outermost active modes.
+The classification follows directly from the OHC mode theorems
+(Appendices KA1, KA4) and the Hopf symmetry theorems (KB1, KB2, KB3).
+
+\begin{table}[h]
+\centering
+\caption{BCT topological classification of the elements.
+$^\dagger$ Carbon appears in both Life axis and p-block;
+Life axis takes precedence.
+$^\ddagger$ Lu and Lr appear in f-closure; f-block
+refers to remaining lanthanides and actinides.}
+\begin{tabular}{p{26mm}p{58mm}p{50mm}}
+\toprule
+Class & Defining BCT property & Representative elements \\
+\midrule
+Noble gas    & Closed Hopf multiplet. No vacant modes. Bonding topologically impossible (L81). & He, Ne, Ar, Kr, Xe, Rn, Og \\[4pt]
+Life axis    & $S_H = 1$ at sp$^3$ half-fill. Unique equal filling of Hopf channels (L82). & H, C, Si, Ge, Sn, Pb, Fl \\[4pt]
+d half-fill  & $S_H(d) = 0.50$ at $N_d = 5$. d-shell Hopf symmetry attractor (L83). & Cr, Mo, Mn, Tc, Re \\[4pt]
+d closure    & Closed d Hopf multiplet, $N_d = 10$. d-shell closure attractor (L83). & Cu, Ag, Au, Pd, Zn, Cd, Hg, Cn \\[4pt]
+f half-fill  & $S_H(f) = 1.00$ at $N_f = 7$. f-shell Hopf attractor (KB3). & Eu, Am \\[4pt]
+f closure    & Closed f Hopf multiplet, $N_f = 14$ (KB3). & Yb, No, Lu, Lr \\[4pt]
+Ferromagnetic & Collective Hopf alignment in d-shell (L83). & Fe, Co, Ni \\[4pt]
+s-block      & Outermost active mode is $r_\mathrm{oct}$ (octahedral void). & Li, Be, Na, Mg, K, Ca\ldots \\[4pt]
+p-block      & Outermost active modes are $r_\mathrm{tet}$ (tetrahedral void). & B, N, O, F, Al\ldots \\[4pt]
+d-block      & Active d-modes, not at Hopf symmetry point. & Sc, Ti, V, and others \\[4pt]
+f-block      & Active f-modes. & La--Yb$^\ddagger$, Ac--No$^\ddagger$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Priority rule for overlapping classes}
+
+Some elements satisfy criteria for more than one class.
+The priority rule is: Noble gas $>$ Life axis $>$ d/f-closure
+$>$ d/f-half-fill $>$ Ferromagnetic $>$ d-block $>$ f-block
+$>$ p-block $>$ s-block. The higher-priority class is assigned.
+Carbon (Life axis) takes priority over p-block; Cu (d-closure)
+takes priority over d-block.
+
+\section{The Janet left-step layout}
+
+The standard Mendeleev table places the s-block at the left
+and detaches the f-block as a footnote. The Janet (left-step)
+layout, first proposed by Charles Janet in 1928, places the
+s-block at the right and the f-block at the left.
+The reading order left-to-right is: f $\to$ d $\to$ p $\to$ s.
+
+In the BCT framework, this is not cosmetic.
+The Janet order corresponds exactly to the OHC Bessel resonance
+filling sequence -- from deepest Planck-scale mode (f, innermost
+tetrahedral void resonance) to outermost mode (s, principal
+octahedral void). The Janet layout is the \emph{natural} BCT layout.
+
+Two additional consequences follow:
+\begin{enumerate}
+\item Helium sits above Beryllium (both $s^2$ configurations)
+  rather than above Neon. This is correct: He is a closed
+  1s$^2$ shell (Hopf closure at $n=1$), not a p-shell element.
+\item The noble gas column forms the \emph{right edge} of every
+  period -- geometrically marking the topological closure of each
+  Hopf shell.
+\end{enumerate}
+
+\section{The Hopf fill fraction}
+
+Each element cell in the BCT Periodic Table displays a Hopf fill
+fraction bar (linear layout) or arc (circular layout), defined as:
+%
+\begin{equation}
+  f_H = \frac{N_\mathrm{active}}{N_\mathrm{capacity}}
+\end{equation}
+%
+where $N_\mathrm{active}$ is the electron count in the outermost
+active Hopf shell and $N_\mathrm{capacity}$ is the shell capacity
+(2 for s, 6 for p, 10 for d, 14 for f).
+This provides an immediate visual indicator of position within
+the topological period:
+
+\begin{align}
+  f_H = 0.00 &\quad \text{(empty shell, e.g.\ La: }4f^0\text{)} \nonumber\\
+  f_H = 0.50 &\quad \text{(half-fill: Life axis, Cr, Eu)} \nonumber\\
+  f_H = 1.00 &\quad \text{(closed: noble gases, Cu, Yb)}
+\end{align}
+
+Noble gases display a full disc ($f_H = 1.00$);
+life axis elements display a half-arc ($f_H = 0.50$);
+all other elements display a proportional arc.
+
+\section{Companion figures}
+
+This appendix accompanies two publication figures:
+\begin{itemize}
+\item \texttt{BCT\_PeriodicTable.pdf} -- Janet left-step layout,
+  A3 landscape, all 118 elements colour-coded by BCT class.
+\item \texttt{BCT\_PeriodicTable\_Round\_v12.pdf} -- circular
+  in-the-round layout, A3, noble gases at 12~o'clock, Life axis
+  at 6~o'clock, Hopf fill arcs in every element circle.
+\end{itemize}
+Both figures are available open-access on Zenodo
+(search: BCT superfluid lattice, ORCID 0009-0007-9561-9859).
+
+\end{document}

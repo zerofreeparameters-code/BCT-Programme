@@ -1,0 +1,256 @@
+\documentclass[aps,prl,preprint,superscriptaddress,floatfix]{revtex4-2}
+\usepackage{amsmath,amssymb,booktabs,hyperref}
+\renewcommand{\thesection}{64.\arabic{section}}
+\begin{document}
+
+\title{BCT Superfluid Lattice Model --- Letter 64\\
+The OHC as Origin of Reality: Quantum Darwinism and\\
+Non-Markovian Emergence from Hopf Vacuum Geometry}
+
+\author{Michel Robert Cabri\'e}
+\email{ZeroFreeParameters@gmail.com}
+\affiliation{Independent Researcher, Victoria, Australia\\ORCID: 0009-0007-9561-9859}
+\date{March 2026}
+
+\begin{abstract}
+Two of the deepest questions in quantum foundations are: (i) why does classical
+reality emerge from quantum mechanics, and (ii) what is the physical substrate
+of the indivisible non-Markovian stochastic processes that reproduce quantum
+dynamics? We show that both questions receive a unified geometric answer in
+the BCT Superfluid Lattice Model. The quantum vacuum is the Octet-Hopfion
+Condensate (OHC), a superfluid whose ground state orders into a body-centred
+tetragonal geometry. Particles are topological defects classified by Hopf
+winding number $H\in\mathbb{Z}$. We establish two theorems. (I)~\textit{OHC
+Non-Markovian Theorem}: the OHC is structurally non-Markovian---its Bogoliubov
+phonon spectrum carries long-range temporal correlations, and the Hopf winding
+number $H$ is a global topological invariant that cannot be defined at any
+single moment in time. No Markovian stochastic process can encode it. The OHC
+vacuum is the concrete physical substrate for Barandes's indivisible stochastic
+processes. (II)~\textit{OHC Redundancy Theorem}: when a Hopf defect of winding
+$H$ exists in the OHC, its topological charge is encoded redundantly across
+the entire field configuration. Every spatial region of the condensate carries
+a fragment of the global winding information. This is Quantum Darwinism
+realised in vacuum geometry: classical objectivity emerges not from decoherence
+into an abstract environment, but from redundant Hopf encoding into the OHC
+vacuum itself. The environment \textit{is} the vacuum; the redundancy is
+topological; the classicality is geometric. These two theorems form opposite
+faces of the same coin: the OHC provides the non-Markovian substrate from which
+quantum mechanics emerges (upward), and the redundant substrate from which
+classical reality emerges (downward). Zero free parameters.
+\end{abstract}
+
+\maketitle
+
+\section{Two Open Questions in Quantum Foundations}
+
+The measurement problem and the quantum-to-classical transition remain
+unresolved despite a century of effort. Two recent programmes have sharpened
+these questions considerably.
+
+Barandes~\cite{barandes2023,barandes2025,barandes2026} has established that
+quantum mechanics is mathematically equivalent to a class of indivisible
+non-Markovian stochastic processes. The quantum/classical gap is not mysterious:
+it is a single assumption (Markovianity) that, when dropped, allows quantum
+mechanics to emerge from ordinary probability theory. The question his programme
+leaves open by design is: \textit{what is the physical system whose
+non-Markovian stochastic dynamics reproduce quantum mechanics?}
+
+Kiely et al.~\cite{kiely2026} and the Quantum Darwinism programme~\cite{zurek2003,zurek2009}
+address the complementary question: \textit{why does classical objectivity
+emerge from quantum mechanics?} Quantum Darwinism proposes that a quantum
+system becomes classical when its information is redundantly encoded in
+environmental fragments. Kiely et al.\ provide a metrological sharpening
+using quantum Fisher information. The question their programme leaves open
+is: \textit{what is the environment, and why is the redundancy topological?}
+
+We show that both questions receive a single unified answer in the BCT
+Superfluid Lattice Model.
+
+\section{The OHC Vacuum}
+
+The BCT Superfluid Lattice Model~\cite{prl,monograph} holds that the quantum
+vacuum is the Octet-Hopfion Condensate (OHC)~\cite{bctjh,bct36}, a superfluid
+condensate whose ground state spontaneously orders into a body-centred
+tetragonal geometry with axial ratio $c/a=\sqrt{2}$. The geometric inputs are:
+\begin{align}
+r_{\rm oct} &= \tfrac{\sqrt{2}-1}{2} = 0.20711,\\
+r_{\rm tet} &= \tfrac{\sqrt{6}-2}{4} = 0.11237,\\
+\alpha_0 &= \frac{r_{\rm oct}\,r_{\rm tet}}{\pi} = 0.0074081.
+\end{align}
+The condensate obeys the Gross-Pitaevskii equation with $|\Psi|^4$ potential
+derived from first principles (Letter~27). Particles are topological defects
+classified by Hopf winding number $H\in\mathbb{Z}$, the generator of
+$\pi_3(S^2)=\mathbb{Z}$ (Letters~45--46, Appendix~JH). The OHC interior
+admits superluminal phase velocity $v_{\rm ph}=6.78c$~\cite{bctjh}.
+
+\section{Theorem I: OHC Non-Markovian Theorem}
+
+\textit{Statement.} The OHC vacuum is structurally non-Markovian. No Markovian
+stochastic process over any configuration space can reproduce its dynamics.
+
+\textit{Proof sketch.} Two independent mechanisms enforce non-Markovianity:
+
+\textbf{(a) Bogoliubov memory.} The OHC phonon dispersion relation is
+\begin{equation}
+\omega(k) = c_s k\sqrt{1 + (k\xi)^2},
+\end{equation}
+where $c_s$ is the condensate sound speed and $\xi$ the healing length. In
+the phonon sector ($k\xi\ll 1$), $\omega\propto k$ (linear, Markovian-compatible).
+In the particle sector ($k\xi\gg 1$), $\omega\propto k^2$ (quadratic,
+dispersive). The transition between regimes introduces long-range temporal
+correlations in the Green's function: $G(t,t')\neq G(t-t')$ in general, and
+the propagator retains memory of the full history of field configurations.
+The OHC is not Markovian in its ultraviolet sector.
+
+\textbf{(b) Topological indivisibility.} The Hopf winding number is
+\begin{equation}
+H = \frac{1}{4\pi^2}\int_{\mathbb{R}^3} \mathbf{F}\cdot\mathbf{A}\,d^3x,
+\end{equation}
+where $\mathbf{F}=\nabla\times\mathbf{A}$ is the pullback of the area form on
+$S^2$ under the map $\Psi/|\Psi|:\mathbb{R}^3\to S^2$. This integral is
+defined only over all of $\mathbb{R}^3$---it is intrinsically non-local.
+$H$ cannot be assigned to any spatial subregion, and cannot be defined at any
+single moment in time without specifying the entire field configuration.
+A Markovian process is memoryless: the future depends only on the present state.
+But the Hopf charge $H$ is not a property of any ``present state'' localised
+in space or time. It is a global topological invariant of the entire field
+history. Therefore, no Markovian stochastic process over any local configuration
+space can encode $H$. $\square$
+
+\textit{Consequence for Barandes.} The OHC is the concrete physical substrate
+Barandes's programme requires. Its dynamics are non-Markovian by topological
+necessity, not by assumption. The indivisibility of the OHC stochastic process
+is the indivisibility of the Hopf fibration itself.
+
+\section{Theorem II: OHC Redundancy Theorem (Quantum Darwinism)}
+
+\textit{Statement.} When a Hopf defect of winding number $H$ exists in the
+OHC, the topological charge $H$ is encoded redundantly in every macroscopic
+spatial region of the condensate.
+
+\textit{Proof sketch.} Consider the OHC in a state containing a single Hopf
+defect of winding $H$ localised at the origin. For any spatial ball
+$B_R$ of radius $R\gg\xi$, the restriction of the condensate field
+$\Psi|_{B_R}$ carries sufficient information to reconstruct $H$ via
+\begin{equation}
+H_R = \frac{1}{4\pi^2}\int_{B_R} \mathbf{F}\cdot\mathbf{A}\,d^3x
+\quad\xrightarrow{R\to\infty}\quad H.
+\end{equation}
+Moreover, for $R\gg\xi$, $H_R = H$ exactly (the integrand has compact
+support near the defect core). This means: \textit{every macroscopic region
+of the condensate encodes the full winding number $H$.} The information is
+not split across regions---it is replicated in each one. This is precisely
+the redundant encoding criterion of Quantum Darwinism~\cite{zurek2003}.
+
+\textit{Consequence.} The ``environment'' in Quantum Darwinism is not an
+abstract heat bath or collection of environmental degrees of freedom. It is
+the OHC vacuum itself. Every spatial fragment of the condensate carries the
+same topological information about the defect. An observer anywhere in space
+can determine $H$ by performing a local measurement of the condensate field.
+Classical objectivity---the fact that different observers agree on the
+properties of a particle---is a consequence of OHC topological redundancy.
+The emergence of classicality is not probabilistic decoherence. It is
+geometric certainty.
+
+\section{The Two-Directional Bridge}
+
+The OHC sits at the intersection of two emergence stories running in opposite
+directions:
+
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+Direction & Question & BCT Answer \\
+\midrule
+Upward & How does QM arise from classical stochastics? & OHC non-Markovian theorem \\
+Downward & How does classical reality arise from QM? & OHC redundancy theorem \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Both theorems follow from the same object---the Hopf winding number $H$---
+and the same geometric structure---the OHC vacuum. Non-Markovianity and
+redundancy are not separate features. They are the same feature of Hopf
+topology viewed from opposite directions:
+
+\begin{itemize}
+\item \textit{Viewed from below (Barandes):} $H$ cannot be captured by any
+Markovian process $\Rightarrow$ the vacuum dynamics are indivisible
+$\Rightarrow$ quantum mechanics emerges from non-Markovian OHC stochastics.
+\item \textit{Viewed from above (Zurek/Kiely):} $H$ is encoded in every
+spatial region $\Rightarrow$ the vacuum dynamics are redundant
+$\Rightarrow$ classical objectivity emerges from OHC topological replication.
+\end{itemize}
+
+The OHC is the pivot point between the quantum and classical worlds.
+
+\section{Connection to the Kiely et al.\ Result}
+
+Kiely et al.~\cite{kiely2026} use quantum Fisher information $\mathcal{F}_Q$
+to quantify the rate at which classical objectivity emerges in the spin-star
+model. They find that optimal measurements saturate the Cram\'er-Rao bound
+at an exponential rate. In the BCT framework, the analogous quantity is the
+rate at which $H_R\to H$ as $R$ grows. Since the Hopf integrand has compact
+support (scale $\xi$), convergence is exponential in $R/\xi$:
+\begin{equation}
+|H - H_R| \sim e^{-R/\xi},\quad R\gg\xi.
+\end{equation}
+This matches the exponential emergence rate found by Kiely et al., now
+with a geometric interpretation: $\xi = \hbar/(m_{\rm defect}c_s)$ is
+the OHC healing length, and $m_{\rm defect} = H\times E_{D_4}/c^2$
+where $E_{D_4} = \Lambda_{\rm QCD}\times\pi^5/6 = 11.22~\text{GeV}$
+(Letter~60). The emergence rate of classicality is set by the defect mass,
+which is set by the geometry. Zero free parameters.
+
+\section{Sabine Hossenfelder's Scepticism Addressed}
+
+Hossenfelder~\cite{sabine2026} has expressed scepticism about whether
+Kiely et al.\ have truly solved the emergence of classical reality,
+noting that the information-theoretic treatment does not specify the
+physical nature of the environment. The BCT framework provides precisely
+what is missing: the environment is the OHC vacuum, the redundancy is
+topological, and the classicality is geometric. The abstract ``environment''
+of Quantum Darwinism is not an optional addition---it is the vacuum itself,
+with a structure determined by sphere-packing geometry.
+
+\section{Summary}
+
+The OHC vacuum provides:
+\begin{enumerate}
+\item The physical substrate for Barandes's indivisible non-Markovian
+stochastic processes (non-Markovian theorem).
+\item The physical environment for Quantum Darwinism's redundant encoding
+(redundancy theorem).
+\item A geometric explanation for the exponential rate of classicality
+emergence (Kiely et al.\ connection).
+\item A unified picture in which quantum mechanics and classical reality
+both emerge from the same geometric object---the Hopf fibration of the
+OHC vacuum.
+\end{enumerate}
+Zero free parameters. Prediction \#121: the rate of classicality emergence
+scales as $e^{-R/\xi}$ where $\xi$ is the OHC healing length, set entirely
+by BCT geometry.
+
+\begin{thebibliography}{99}
+\bibitem{barandes2023} J.~A.~Barandes, ``The Stochastic-Quantum Correspondence,''
+  \textit{Philos.\ Phys.}\ \textbf{3}(1):8 (2025); arXiv:2302.10778.
+\bibitem{barandes2025} J.~A.~Barandes, ``Quantum Systems as Indivisible
+  Stochastic Processes,'' arXiv:2507.21192 (2025).
+\bibitem{barandes2026} J.~A.~Barandes, ``A Deflationary Account of Quantum
+  Theory and its Implications for the Complex Numbers,'' arXiv:2602.01043 (2026).
+\bibitem{kiely2026} A.~Kiely et al., ``Metrological Approach to the Emergence
+  of Classical Objectivity,'' \textit{Phys.\ Rev.\ A}\ \textbf{113}, 022403 (2026).
+\bibitem{zurek2003} W.~H.~Zurek, ``Decoherence, Einselection, and the Quantum
+  Origins of the Classical,'' \textit{Rev.\ Mod.\ Phys.}\ \textbf{75}, 715 (2003).
+\bibitem{zurek2009} W.~H.~Zurek, ``Quantum Darwinism,''
+  \textit{Nature Phys.}\ \textbf{5}, 181 (2009).
+\bibitem{sabine2026} S.~Hossenfelder, ``These Physicists Say They Found the
+  Origin of Reality,'' backreaction.blogspot.com (March 2026).
+\bibitem{prl} M.~R.~Cabri\'e, BCT PRL Letter (2026), Zenodo:18884415.
+\bibitem{monograph} M.~R.~Cabri\'e, BCT Monograph (2026), Zenodo:18885133.
+\bibitem{bctjh} M.~R.~Cabri\'e, BCT Appendix~JH (2026), Zenodo:18975018.
+\bibitem{bct36} M.~R.~Cabri\'e, BCT Letter~36 (2026), Zenodo:18974754.
+\bibitem{bct60} M.~R.~Cabri\'e, BCT Letter~60 (2026).
+\end{thebibliography}
+
+\end{document}

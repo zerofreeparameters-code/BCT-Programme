@@ -1,0 +1,99 @@
+\documentclass[aps,prl,twocolumn,showpacs,superscriptaddress]{revtex4-2}
+\usepackage{amsmath,amssymb,booktabs,xcolor,hyperref,amsthm}
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+
+\title{Appendix KA1: OHC Resonance Mode Structure and Shell Capacity\\
+Full derivation of $2n^2$ capacity from Hopf fibration geometry}
+
+\author{Michel Robert Cabri\'e}
+\affiliation{Independent Researcher, Victoria, Australia}
+\email{ZeroFreeParameters@gmail.com}
+\date{20 March 2026}
+
+\begin{abstract}
+This appendix derives the OHC Bessel resonance mode structure and 
+the electron shell capacity $2n^2$ from first principles, supporting 
+Letter~78 (Atomic Structure as Hopfion Topology). The $n$-th OHC 
+resonance level has exactly $n^2$ independent spatial modes, each 
+supporting two Hopf orientations ($H=\pm1$), giving total capacity 
+$2n^2$. The two BCT void types generate the orbital symmetries: 
+$r_{\rm oct}$ gives 1 isotropic (s) mode per shell; $r_{\rm tet}$ 
+gives 3 directional (p) modes per shell.
+\end{abstract}
+
+\maketitle
+
+\section{Purpose}
+
+This appendix provides the technical derivation supporting Letter~78.
+The key results are: (1) shell capacity $2n^2$ from Bessel mode 
+counting; (2) orbital symmetry from void geometry; (3) the Hopf 
+charge constraint $|H|\leq n$ per mode.
+
+\section{OHC Bessel Mode Derivation}
+
+The OHC interior condensate $\Psi_{\rm int}$ satisfies the 
+Gross-Pitaevskii equation within each Planck sphere of radius 
+$R = \ell_P/2$ (Letter~27). Linearised modes are spherical Bessel 
+resonances indexed by $(n, \ell, m)$ where $n$ is the principal 
+quantum number, $\ell$ the orbital angular momentum, and $m$ the 
+magnetic quantum number.
+
+For given $n$, the allowed pairs satisfy $0\leq\ell\leq n-1$ and 
+$-\ell\leq m\leq+\ell$. The total spatial mode count:
+\begin{equation}
+    \sum_{\ell=0}^{n-1}(2\ell+1) = 1+3+5+\cdots+(2n-1) = n^2
+\end{equation}
+This is the sum of the first $n$ odd integers. Each spatial mode 
+supports two Hopf orientations ($H=+1$ spin up, $H=-1$ spin down), 
+giving total shell capacity $2n^2$. \qed
+
+\section{Mode Capacity and Hopf Charge}
+
+The constraint $|H_{\rm total}|\leq n$ per mode follows from the 
+Josephson boundary condition at coupling $\alpha_0 = r_{\rm oct}
+\times r_{\rm tet}/\pi = 0.0074081$. The Josephson phase across 
+the $n$-th Bessel mode is $\Delta\varphi_n = 2\pi n\alpha_0$. 
+The maximum coherent Hopf excitation sustainable within this phase 
+budget is $|H|\leq n$.
+
+\begin{center}
+\begin{tabular}{cclrr}
+\toprule
+$n$ & $\ell$ values & Spatial modes & $\times2$ spin & Noble gas \\
+\midrule
+1 & $\ell=0$ & $n^2=1$ & $2n^2=2$ & He ($Z=2$) \\
+2 & $\ell=0,1$ & $n^2=4$ & $2n^2=8$ & Ne ($Z=10$) \\
+3 & $\ell=0,1,2$ & $n^2=9$ & $2n^2=18$ & Ar ($Z=18$) \\
+4 & $\ell=0,1,2,3$ & $n^2=16$ & $2n^2=32$ & Kr ($Z=36$) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Orbital Symmetry from Void Geometry}
+
+The two BCT void types generate the orbital symmetries:
+\begin{itemize}
+\item $r_{\rm oct} = (\sqrt{2}-1)/2$: 1 isotropic centre 
+$\to$ $\ell=0$ (s-orbital), 1 mode per shell
+\item $r_{\rm tet} = (\sqrt{6}-2)/4$: 3 axial orientations 
+$\to$ $\ell=1$ (p-orbitals), 3 modes per shell
+\item Higher Hopf sectors: $\ell=2$ (d, 5 modes), $\ell=3$ (f, 7 modes)
+\end{itemize}
+
+Total per shell at $n=4$: $1+3+5+7=16$ spatial modes $\times 2 = 
+32 = 2\times4^2$ \checkmark
+
+The octet rule (Letter~78) follows directly: the $n=2$ shell has 
+$1~({\rm oct}) + 3~({\rm tet}) = 4$ spatial modes $\times 2 = 8$ electrons.
+
+\begin{thebibliography}{99}
+\bibitem{AppJH} M.~R.~Cabri\'e, \textit{Appendix JH: The OHC},
+Zenodo (2026), doi:10.5281/zenodo.18975018
+\bibitem{L27} M.~R.~Cabri\'e, \textit{BCT Letter 27}, Zenodo (2026).
+\bibitem{L78} M.~R.~Cabri\'e, \textit{BCT Letter 78}, Zenodo (2026).
+\end{thebibliography}
+
+\end{document}

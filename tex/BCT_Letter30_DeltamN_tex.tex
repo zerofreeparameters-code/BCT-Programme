@@ -1,0 +1,282 @@
+\documentclass[twocolumn,10pt,a4paper]{article}
+
+\usepackage[margin=1.8cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{enumitem}
+
+\hypersetup{colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black}
+
+\titleformat{\section}[block]{\normalsize\bfseries\centering}{}{0em}{}
+\titleformat{\subsection}[runin]{\normalsize\itshape}{}{0em}{}[.\quad]
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+\titlespacing*{\subsection}{0pt}{4pt}{0pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textit{BCT Superfluid Lattice Model --- Letter 30}}
+\fancyhead[R]{\small\textit{March 2026}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\setlength{\columnsep}{0.6cm}
+\setlist[enumerate]{leftmargin=*,itemsep=2pt,topsep=2pt}
+\setlist[itemize]{leftmargin=*,itemsep=2pt,topsep=2pt}
+
+\begin{document}
+
+\twocolumn[{%
+\begin{center}
+{\large\bfseries The Neutron--Proton Mass Difference at Sub-0.1\%:\\[2pt]
+BCT Colour Casimir SU(6) Theorem}\\[8pt]
+{\normalsize Michel Robert Cabri\'e$^{1,\ast}$}\\[4pt]
+{\small $^1$Independent Researcher;\; ORCID: 0009-0007-9561-9859}\\[2pt]
+{\small (Dated: March 2026)\quad BCT Letter 30}\\[10pt]
+\end{center}
+\begin{center}
+\begin{minipage}{0.85\textwidth}
+\small
+We apply the BCT Colour Casimir Theorem established in Letter~29 to the
+neutron--proton mass difference $\Delta m_N = m_n - m_p$.  At leading order,
+the BCT SU(6) spin-flavour theorem gives
+$\Delta m_N^{\rm LO} = \Lambda_{\rm QCD}\,\alpha_0\,\pi/4 = 1.280\,\mathrm{MeV}$
+(Phase~48B, $-1.03\%$).  Applying the NLO Casimir correction
+$F_{\rm SU(6)} \to F_{\rm SU(6)}\,(1 + C_F\alpha_0)$ with
+$C_F = (N_c^2-1)/(2N_c) = 4/3$ yields
+\[
+  \Delta m_N = \frac{\Lambda\alpha_0\pi}{4}\,(1+C_F\alpha_0)
+             = 1.2927\,\mathrm{MeV}\,,\quad\delta = -0.052\%\,,
+\]
+against the observed value $1.29333\,\mathrm{MeV}$.
+This is \textbf{Prediction~\#105} of the BCT programme and the fourth
+sub-$0.1\%$ result obtained in Phase~97.  Combined with Letter~29
+(Predictions~\#102--104), this session delivers four simultaneous
+sub-$0.1\%$ nuclear predictions --- kaon mass, proton mass, neutron mass, and
+neutron--proton mass difference --- from a single NLO colour correction with
+zero new free parameters.  The N-class coefficient $C_F = 4/3$ appears
+identically in all four predictions, providing strong internal consistency for
+the BCT NLO colour structure.
+\end{minipage}
+\end{center}
+\vspace{10pt}
+}]
+
+%% ═══════════════════════════════════════════════════════════
+\section{Introduction}
+%% ═══════════════════════════════════════════════════════════
+
+The neutron--proton mass difference $\Delta m_N = m_n - m_p = 1.29333\,\mathrm{MeV}$ is
+one of the most cosmologically critical numbers in physics.  Were it negative,
+the proton would be unstable; were it much larger than the electron mass, Big
+Bang nucleosynthesis would produce almost no helium.  Its precise value
+controls the $n/p$ freeze-out ratio and the primordial ${}^4$He abundance
+$Y_p \approx 0.25$.  Deriving it from first principles is therefore a sharp
+test of any fundamental theory.
+
+The BCT programme has addressed $\Delta m_N$ in two previous phases.
+Phase~48B~\cite{monograph} established the leading-order result
+$\Delta m_N^{\rm LO} = \Lambda\alpha_0\pi/4 = 1.280\,\mathrm{MeV}$ ($-1.03\%$)
+from the BCT SU(6) spin-flavour theorem.
+Phase~81D~\cite{monograph} improved this to $1.285\,\mathrm{MeV}$
+($-0.647\%$) by separating the strong NLO and electromagnetic Cottingham
+contributions.  Both are sub-$1\%$ but not sub-$0.1\%$.
+
+Letter~29~\cite{letter29} introduced the \textbf{BCT Colour Casimir Theorem}:
+when meson modes in a hadronic decomposition carry their own NLO colour
+corrections, the baryon NLO coefficient upgrades from $N = 3/4$ to
+$C_F = (N_c^2-1)/(2N_c) = 4/3$, the SU(3) colour Casimir.  This theorem
+produced Predictions~\#102--104: the kaon, proton, and neutron masses all
+sub-$0.1\%$.
+
+Here we apply the same theorem to the \emph{nucleon mass splitting} and obtain
+Prediction~\#105.
+
+%% ═══════════════════════════════════════════════════════════
+\section{The BCT SU(6) Theorem at LO}
+%% ═══════════════════════════════════════════════════════════
+
+The proton (u,u,d) and neutron (u,d,d) differ by a single $u \leftrightarrow d$
+quark exchange.  The BCT T$_d$ void lattice assigns $u$-type quarks to
+octahedral voids (radius $r_{\rm oct}$) and $d$-type quarks to tetrahedral
+voids (radius $r_{\rm tet}$).  The D$_{4h}$ tetragonal distortion of the BCT
+lattice ($c/a = \sqrt{2}$) breaks $u$-$d$ isospin symmetry, generating the
+quark mass difference~\cite{monograph}:
+\begin{equation}
+  \label{eq:mu_md}
+  m_d - m_u = \Lambda\alpha_0\pi/2\,,
+\end{equation}
+with all quantities from the three BCT inputs
+$\{r_{\rm oct},\,r_{\rm tet},\,\Lambda_{\rm QCD}\}$.
+
+The BCT SU(6) spin-flavour overlap integral for the single-quark substitution
+in the non-relativistic T$_d$ nucleon wave function gives
+$F_{\rm SU(6)} = 1/2$~\cite{monograph}.  Physically, each nucleon contains three
+quarks, but the T$_d$ doublet geometry of the $(u,d)$ pair suppresses the
+single-quark matrix element by $1/2$ rather than the naive $1/3$.
+The LO prediction is:
+\begin{equation}
+  \label{eq:dm_LO}
+  \Delta m_N^{\rm LO} = (m_d - m_u)\cdot F_{\rm SU(6)}
+  = \frac{\Lambda\alpha_0\pi}{4}
+  = 1.280020\,\mathrm{MeV}\,,
+\end{equation}
+with observed $\Delta m_N = 1.29333\,\mathrm{MeV}$ and error $-1.03\%$.
+
+%% ═══════════════════════════════════════════════════════════
+\section{NLO Casimir Correction — Prediction \#105}
+%% ═══════════════════════════════════════════════════════════
+
+\textit{The Casimir upgrade.}\quad
+The BCT Colour Casimir Theorem (Letter~29) states that when hadronic states
+involve NLO colour corrections, the baryon self-energy coefficient upgrades to
+the SU(3) Casimir $C_F$.  For the nucleon mass splitting, the relevant
+correction is to the SU(6) factor $F_{\rm SU(6)}$: the single quark being
+exchanged ($u \to d$) carries colour charge $C_F$ and acquires an NLO
+colour-loop dressing.  The upgrade is:
+\begin{equation}
+  \label{eq:F_upgrade}
+  F_{\rm SU(6)} = \frac{1}{2} \;\longrightarrow\;
+  F_{\rm SU(6)}^{\rm NLO} = \frac{1}{2}(1 + C_F\alpha_0)\,,
+\end{equation}
+where $C_F = (N_c^2-1)/(2N_c) = 4/3$ and $N_c = 3$ is derived from the BCT
+D$_4$ triality theorem~\cite{monograph}.
+
+\textit{The NLO formula.}\quad
+Substituting Eq.~(\ref{eq:F_upgrade}) into Eq.~(\ref{eq:dm_LO}):
+\begin{equation}
+  \label{eq:dm_NLO}
+  \Delta m_N^{\rm NLO} = \frac{\Lambda\alpha_0\pi}{4}\,(1 + C_F\alpha_0)\,.
+\end{equation}
+
+\textit{Numerical evaluation.}\quad
+With $\Lambda = 220\,\mathrm{MeV}$,
+$\alpha_0 = r_{\rm oct}\,r_{\rm tet}/\pi = 0.00740806$,
+$C_F = 4/3$:
+\begin{align}
+  \Lambda\alpha_0\pi/4 &= 1.280020\,\mathrm{MeV}, \label{eq:LO_num}\\
+  C_F\alpha_0           &= \tfrac{4}{3}\times 0.00740806 = 0.00987741,\label{eq:CF_num}\\
+  1 + C_F\alpha_0       &= 1.00987741, \label{eq:factor}
+\end{align}
+\begin{equation}
+  \label{eq:result}
+  \Delta m_N^{\rm NLO} = 1.292663\,\mathrm{MeV}\,,\quad
+  \delta = -0.052\%\quad(\star\;\text{sub-}0.1\%)\,.
+\end{equation}
+
+against the CODATA value $\Delta m_N^{\rm obs} = 1.29333\,\mathrm{MeV}$.
+This is \textbf{Prediction~\#105}.
+
+%% ═══════════════════════════════════════════════════════════
+\section{The N-Class Quartet}
+%% ═══════════════════════════════════════════════════════════
+
+The BCT Colour Casimir Theorem now governs four simultaneous predictions
+in the nuclear sector, all from Phase~97:
+
+\begin{table}[h]
+\centering
+\caption{Phase 97 nuclear sub-$0.1\%$ quartet.  All from
+  $\{r_{\rm oct},\,r_{\rm tet},\,\Lambda_{\rm QCD}\}$; $C_F = 4/3$ throughout.}
+\label{tab:quartet}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llccc}
+\toprule
+Pred. & Observable & BCT Value & Obs. & Error \\
+\midrule
+\#102 & $m_K$ (NLO) & 493.534\,MeV & 493.677 & $-0.029\%$\,$\star$ \\
+\#103 & $m_p$ (NLO) & 938.288\,MeV & 938.272 & $+0.002\%$\,$\star$ \\
+\#104 & $m_n$ (NLO) & 939.541\,MeV & 939.565 & $-0.003\%$\,$\star$ \\
+\#105 & $\Delta m_N$ & 1.2927\,MeV & 1.2933 & $-0.052\%$\,$\star$ \\
+\bottomrule
+\multicolumn{5}{l}{$\star$ Sub-0.1\%.  \quad All N-class: $N = C_F = 4/3$.}
+\end{tabular}
+\end{table}
+
+The uniformity of the N-class coefficient $C_F = 4/3$ across all four
+observables is a non-trivial internal consistency check.  In each case the
+physical mechanism is the same: a quark undergoing an NLO colour-loop
+interaction acquires a self-energy proportional to $C_F\alpha_0$, where $C_F$ is
+the quadratic Casimir of the fundamental SU(3) representation.
+
+\textit{Comparison with Phase~81D.}\quad
+The Phase~81D result~\cite{monograph} obtained $\Delta m_N = 1.2846\,\mathrm{MeV}$
+($-0.647\%$) by separating the contribution into a strong NLO term
+$2m_\pi\alpha_0(1 + 3\alpha_0) = 2.045\,\mathrm{MeV}$ and an electromagnetic
+Cottingham term $-0.76\,\mathrm{MeV}$ (taken from standard QCD+QED
+calculations).  The present result
+achieves better precision without invoking the Cottingham separation, using
+instead the compact formula Eq.~(\ref{eq:dm_NLO}) which treats the full
+$\Delta m_N$ holistically through the BCT geometric approach.
+
+\textit{Cosmological note.}\quad
+The BCT formula Eq.~(\ref{eq:dm_NLO}) evaluates to $\Delta m_N/m_N =
+\alpha_0\pi C_F\alpha_0/4\ldots$, a tiny but precise fraction of the nucleon
+mass set entirely by void geometry.  BCT naturally generates $\Delta m_N$
+in the window $[m_e, 3\,\mathrm{MeV}]$ required for both proton stability and
+Big Bang nucleosynthesis --- without any parameter tuning.
+
+%% ═══════════════════════════════════════════════════════════
+\section{Conclusion}
+%% ═══════════════════════════════════════════════════════════
+
+Applying the BCT Colour Casimir Theorem to the SU(6) spin-flavour factor
+governing the neutron--proton mass difference gives:
+\[
+  \Delta m_N = \frac{\Lambda\alpha_0\pi}{4}(1+C_F\alpha_0)
+             = 1.2927\,\mathrm{MeV}\,,\quad\delta=-0.052\%\,,
+\]
+from $\{r_{\rm oct},\,r_{\rm tet},\,\Lambda_{\rm QCD}\}$ alone, with no new
+parameters.
+
+Combined with Letter~29, Phase~97 delivers four simultaneous sub-$0.1\%$
+predictions (\#102--\#105) for the four most fundamental nuclear observables
+--- kaon mass, proton mass, neutron mass, and nucleon mass splitting --- all
+governed by the single Casimir coefficient $C_F = (N_c^2-1)/(2N_c) = 4/3$
+derived from BCT D$_4$ triality.
+
+The BCT programme stands at \textbf{105 sub-$1\%$ predictions and 30
+sub-$0.1\%$ predictions}, all from $\{r_{\rm oct},\,r_{\rm tet},\,\Lambda_{\rm QCD}\}$.
+
+\bigskip
+\noindent\textit{Data availability.}
+All results reproduced from the formulas given; no datasets beyond
+CODATA/PDG values cited are used.
+
+\bigskip
+\noindent$^\ast$ cabriem@gmail.com
+
+\begin{thebibliography}{9}
+
+\bibitem{monograph}
+M.~R.\ Cabri\'e,
+\textit{BCT Superfluid Lattice Model: Complete Derivation of Standard Model
+Parameters},
+Zenodo (2026), \href{https://doi.org/10.5281/zenodo.18884976}{doi:10.5281/zenodo.18884976}.
+
+\bibitem{prl_letter}
+M.~R.\ Cabri\'e,
+\textit{Zero Free Parameters: Deriving 92 Standard Model Observables from
+BCT Vacuum Geometry},
+Zenodo (2026), \href{https://doi.org/10.5281/zenodo.18884415}{doi:10.5281/zenodo.18884415}.
+
+\bibitem{letter29}
+M.~R.\ Cabri\'e,
+\textit{BCT Letter~29: The NLO Colour Correction to the Strange Sector ---
+Three Sub-0.1\% Predictions},
+Zenodo (2026), \href{https://doi.org/10.5281/zenodo.18884415}{doi:10.5281/zenodo.18884415}.
+
+\bibitem{pdg2022}
+R.~L.\ Workman \textit{et al.}\ (Particle Data Group),
+Prog.\ Theor.\ Exp.\ Phys.\ \textbf{2022}, 083C01 (2022).
+
+\end{thebibliography}
+
+\end{document}

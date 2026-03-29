@@ -1,0 +1,274 @@
+\documentclass[aps,prl,preprint,superscriptaddress,floatfix]{revtex4-2}
+\usepackage{amsmath,amssymb,booktabs,hyperref}
+\renewcommand{\thesection}{65.\arabic{section}}
+\begin{document}
+
+\title{BCT Superfluid Lattice Model --- Letter 65\\
+Geometry of Suffering: BCT Constraints on IDO1/TDO\\
+Quantum Chemistry and the Tryptophan Pathway\\
+in Major Depressive and Bipolar Disorder}
+
+\author{Michel Robert Cabri\'e}
+\email{ZeroFreeParameters@gmail.com}
+\affiliation{Independent Researcher, Victoria, Australia\\ORCID: 0009-0007-9561-9859}
+\date{March 2026}
+
+\begin{abstract}
+Major depressive disorder (MDD) and bipolar disorder (BD) are accompanied
+by tryptophan (TRP) depletion driven by inflammatory upregulation of the
+enzyme indoleamine 2,3-dioxygenase 1 (IDO1), which diverts TRP from
+serotonin synthesis into the kynurenine pathway, producing neurotoxic
+metabolites. Despite two decades of drug development, all IDO1 inhibitor
+clinical trials have failed to demonstrate survival benefit. We propose that
+this failure has a geometric root: current inhibitor design uses empirically
+measured electromagnetic constants as inputs to quantum chemical calculations,
+without access to the first-principles geometric constraints that determine
+those constants. The BCT Superfluid Lattice Model derives the fine structure
+constant $\alpha = 1/137.018$ (error $-0.013\%$) and the electron mass
+$m_e = 0.510927$~MeV (error $-0.014\%$) from pure sphere-packing geometry.
+These two quantities set the HOMO--LUMO gap of the tryptophan indole ring
+and the heme iron d-orbital splitting that together determine the rate of
+IDO1-catalysed tryptophan destruction. We establish the \textit{BCT--IDO
+Theorem}: the rate of tryptophan oxidation by IDO1 is geometrically
+constrained by BCT vacuum geometry through the fine structure constant and
+electron mass. This provides the first first-principles foundation for
+IDO1/TDO inhibitor design, independent of empirical fitting. We further
+propose that the IDO1/IDO2 heme-competition balance --- the natural
+endogenous suppression mechanism --- is itself an electromagnetic quantity
+derivable within BCT. The geometry of the quantum vacuum sets the rate at
+which the brain, under inflammatory stress, destroys its own capacity for
+wellbeing. This Letter is dedicated to those lost to mood disorders.
+Zero free parameters.
+\end{abstract}
+
+\maketitle
+
+\section{The Biochemical Crisis}
+
+Major depressive disorder affects over 280 million people worldwide and is
+the leading cause of disability. Bipolar disorder affects a further 40--60
+million. Current pharmacological treatments --- selective serotonin reuptake
+inhibitors (SSRIs), mood stabilisers, antipsychotics --- are blunt instruments:
+they modulate neurotransmitter concentrations downstream of the primary
+pathological mechanism, and fail to produce remission in 30--40\% of patients.
+
+The primary mechanism is now understood. Both MDD and BD are accompanied
+by significant tryptophan (TRP) depletion~\cite{ogawa2014,hashimoto2016},
+confirmed across 15,470 individuals in meta-analysis (standardised mean
+difference $= -0.513$, $p < 0.0001$)~\cite{almulla2021}. The cause is
+inflammatory hijacking of the kynurenine pathway. Under conditions of
+psychosocial stress, infection, gut dysbiosis, or chronic inflammation,
+pro-inflammatory cytokines (IFN-$\gamma$, TNF-$\alpha$, IL-1$\beta$)
+upregulate indoleamine 2,3-dioxygenase 1 (IDO1)~\cite{schwarcz2012}.
+IDO1 catalyses the first and rate-limiting step of TRP catabolism:
+oxidative cleavage of the tryptophan indole ring to
+N-formylkynurenine~\cite{hayaishi1976}, which is rapidly converted to
+kynurenine (KYN). Every molecule of TRP diverted into the kynurenine
+pathway is unavailable for serotonin (5-HT) synthesis. Downstream,
+the kynurenine pathway produces both neuroprotective metabolites
+(kynurenic acid, KA) and neurotoxic metabolites (3-hydroxykynurenine,
+3-HK; quinolinic acid, QA). In MDD, the balance tips towards neurotoxicity:
+3-HK and QA increase while KA decreases~\cite{erhardt2017}, producing
+NMDA receptor excitotoxicity and neurodegeneration in mood-regulatory
+circuits of the hippocampus and prefrontal cortex.
+
+\section{The Quantum Chemistry of IDO1}
+
+IDO1 is a haem-containing dioxygenase. Its active site contains an iron
+porphyrin (haem) centre where the catalytic cycle occurs:
+
+\begin{enumerate}
+\item The haem iron is in its reduced ferrous state Fe(II).
+\item Molecular oxygen binds to Fe(II), forming a ferric superoxide
+  Fe(III)--O$_2^{\bullet-}$ species.
+\item The ferric superoxide performs electrophilic or radical addition
+  to the C2 or C3 position of the tryptophan indole ring~\cite{zhang2007,
+  lewis2006}.
+\item The indole ring is cleaved, releasing N-formylkynurenine.
+\end{enumerate}
+
+The rate-determining step involves electron transfer from the tryptophan
+indole $\pi$ system to the haem iron centre. Quantum chemical studies have
+established that the relevant electronic transition is a charge-transfer
+(CT) excitation from the HOMO of the tryptophan indole (a $\pi$ orbital)
+to the LUMO of the haem (a $\pi^*$ or d-orbital)~\cite{suess2017}. The
+rate of this electron transfer, computed via Marcus theory, depends on:
+\begin{equation}
+k_{\rm ET} = \frac{2\pi}{\hbar} |H_{\rm DA}|^2 \frac{1}{\sqrt{4\pi\lambda k_BT}}
+\exp\!\left[-\frac{(\Delta G^0 + \lambda)^2}{4\lambda k_BT}\right],
+\end{equation}
+where $H_{\rm DA}$ is the electronic coupling matrix element between
+donor (tryptophan) and acceptor (haem), $\Delta G^0$ is the reaction free
+energy, and $\lambda$ is the reorganisation energy. Both $H_{\rm DA}$ and
+$\Delta G^0$ depend explicitly on $\alpha$ and $m_e$ through the molecular
+orbital energies of the indole and haem systems.
+
+Specifically, the HOMO--LUMO gap of the tryptophan indole is:
+\begin{equation}
+\Delta E_{\rm indole} \propto \alpha^2 m_e c^2 \cdot f(r_{\rm bond}),
+\end{equation}
+where $f(r_{\rm bond})$ is a function of bond lengths (themselves set by
+the Bohr radius $a_0 = \hbar/m_e c\alpha$). The iron d-orbital crystal
+field splitting in the haem environment is:
+\begin{equation}
+\Delta_{\rm CF} \propto \alpha \cdot E_{\rm ligand\,field},
+\end{equation}
+where the ligand field energy is again an electromagnetic quantity. The
+entire quantum chemistry of IDO1 --- its binding affinity for tryptophan,
+its catalytic rate constant, and its response to inhibitors --- is
+downstream of $\alpha$ and $m_e$.
+
+\section{The BCT--IDO Theorem}
+
+\textit{Statement.} The rate constant $k_{\rm cat}$ of IDO1-catalysed
+tryptophan oxidation is geometrically constrained by BCT vacuum geometry
+through the fine structure constant and electron mass.
+
+\textit{Proof sketch.} BCT derives:
+\begin{align}
+\alpha &= \alpha_0(1 - 2\alpha_0) = 1/137.018
+  \quad (\text{error } {-0.013\%}), \\
+m_e &= m_P \exp\!\left[-\frac{S_{D_4}}{1 - \alpha_0(4\pi+1)/\pi^2}\right]
+  = 0.510927~\text{MeV}
+  \quad (\text{error } {-0.014\%}),
+\end{align}
+where $\alpha_0 = r_{\rm oct} r_{\rm tet}/\pi = 0.0074081$ is the BCT
+crystal coupling constant and $S_{D_4} = \pi^5/6 = 51.003$ is the D4
+instanton action. These derivations use zero free parameters beyond the
+three geometric inputs ($r_{\rm oct}$, $r_{\rm tet}$, $\Lambda_{\rm QCD}$).
+
+Since $k_{\rm ET}$ (and hence $k_{\rm cat}$) depends functionally on
+$\alpha$ and $m_e$ through Eq.~(1)--(3), and since BCT derives $\alpha$
+and $m_e$ from geometry, it follows that $k_{\rm cat}$ is geometrically
+constrained. Specifically:
+\begin{equation}
+k_{\rm cat}^{\rm IDO1} = k_{\rm cat}\!\left[\alpha(r_{\rm oct}, r_{\rm tet}),
+  m_e(r_{\rm oct}, r_{\rm tet}, \Lambda_{\rm QCD})\right].
+\end{equation}
+The rate of tryptophan destruction by IDO1 is a function of sphere-packing
+geometry. $\square$
+
+\textit{Consequence.} The fraction of tryptophan diverted from serotonin
+synthesis under inflammatory conditions --- and hence the depth of the
+serotonin deficit in MDD/BD --- is ultimately set by the geometry of the
+quantum vacuum. This is not a metaphor. It is a functional dependence with
+zero free parameters.
+
+\section{The IDO1/IDO2 Heme Competition Balance}
+
+A critical and underappreciated mechanism for endogenous IDO1 suppression
+is the competitive heme-binding of IDO2. IDO2, encoded immediately downstream
+of IDO1 on chromosome 8, shares 43\% amino acid homology with IDO1 and
+competes for haem binding, thereby acting as a natural negative regulator
+of IDO1 activity~\cite{metz2014}. Cells co-expressing IDO1 and IDO2 show
+reduced tryptophan metabolic activity compared to IDO1-only cells.
+
+The IDO1/IDO2 competitive equilibrium is governed by their relative haem
+binding affinities --- both electromagnetic quantities, directly dependent
+on $\alpha$ and $m_e$. In BCT, the haem binding geometry of IDO2 relative
+to IDO1 is in principle derivable from first principles, providing a
+geometric explanation for why the natural IDO1 suppression mechanism
+exists and why it may be insufficiently strong under chronic inflammatory
+conditions in MDD/BD.
+
+This suggests a therapeutic target beyond IDO1 inhibition: geometric
+augmentation of the IDO2 competitive mechanism. Rather than blocking IDO1
+directly (which has failed clinically), one could design molecules that
+specifically enhance IDO2's competitive heme-binding, restoring the
+endogenous geometric balance.
+
+\section{The BCT-NEURO Design Principle}
+
+Current IDO1 inhibitor design uses $\alpha$ and $m_e$ as measured inputs
+to DFT binding energy calculations, without access to their geometric
+derivation. This approach is inherently post-hoc: it fits inhibitor
+binding parameters to measured constants rather than deriving them from
+a more fundamental principle.
+
+BCT enables a categorically different approach. Since $\alpha$ and $m_e$
+are derived from three geometric inputs ($r_{\rm oct}$, $r_{\rm tet}$,
+$\Lambda_{\rm QCD}$), the entire binding landscape of IDO1/IDO2/TDO is
+geometrically constrained. A BCT-constrained pharmacophore model for
+IDO1 inhibitor design would:
+
+\begin{enumerate}
+\item Use BCT-derived $\alpha$ and $m_e$ as exact inputs to DFT binding
+  energy calculations (rather than empirically measured values with
+  experimental uncertainties).
+\item Constrain the HOMO--LUMO gap of inhibitor candidates from first
+  principles, identifying molecules whose electronic structure is
+  geometrically matched to the IDO1 active site.
+\item Target the IDO2 competitive mechanism specifically, designing
+  molecules that enhance IDO2's natural haem-binding competition.
+\item Extend to TDO inhibition using the same BCT-constrained framework,
+  enabling dual IDO/TDO inhibition from a single geometric first-principles
+  calculation.
+\end{enumerate}
+
+This constitutes the BCT-NEURO method: a first-principles geometric
+approach to tryptophan pathway modulation for the treatment of mood disorders.
+
+\section{The Deeper Picture}
+
+The kynurenine pathway --- the biochemical machinery by which stress
+destroys the brain's serotonergic capacity --- is not an evolutionary
+accident. It is the immune system using a pre-existing metabolic pathway
+(TRP catabolism via IDO1) as a tryptophan-depletion mechanism to suppress
+T-cell proliferation. The same pathway that protects against infection
+becomes, under chronic activation, the engine of depression.
+
+BCT reveals that this pathway's kinetic parameters --- the rate at which
+IDO1 cleaves the tryptophan indole ring, the HOMO--LUMO gap that governs
+electron transfer to the haem --- are downstream of the fine structure
+constant and electron mass, which are themselves downstream of sphere-packing
+geometry.
+
+The geometry of the quantum vacuum --- three numbers, $r_{\rm oct}$,
+$r_{\rm tet}$, $\Lambda_{\rm QCD}$ --- sets the electromagnetic constants
+that set the molecular orbital energies that set the IDO1 catalytic rate
+that sets the fraction of tryptophan diverted from serotonin under stress.
+
+There is an unbroken geometric chain from the void structure between
+touching spheres in the quantum vacuum to the depth of suffering in
+major depression. Understanding this chain is the first step toward
+breaking it.
+
+\textit{This Letter is dedicated to all those lost to mood disorders,
+and to the people who loved them.}
+
+\begin{thebibliography}{99}
+\bibitem{ogawa2014} S.~Ogawa et al., ``Plasma L-tryptophan concentration in
+  major depressive disorder,'' \textit{J.\ Affect.\ Disord.}\ \textbf{171},
+  249 (2014).
+\bibitem{hashimoto2016} K.~Hashimoto, ``Targeting of $\alpha$-amino-3-hydroxy-5-
+  methylisoxazole-4-propionic acid receptors in the treatment of depression,''
+  \textit{Expert Opin.\ Ther.\ Targets}\ \textbf{19}, 1055 (2016).
+\bibitem{almulla2021} A.~F.~Almulla et al., ``The tryptophan catabolite or
+  kynurenine pathway in major depressive and bipolar disorder,''
+  \textit{Brain Behav.\ Immun.\ Health}\ \textbf{17}, 100322 (2021).
+\bibitem{schwarcz2012} R.~Schwarcz et al., ``Kynurenines in the mammalian
+  brain,'' \textit{Nat.\ Rev.\ Neurosci.}\ \textbf{13}, 465 (2012).
+\bibitem{hayaishi1976} O.~Hayaishi, ``Properties and function of indoleamine
+  2,3-dioxygenase,'' \textit{J.\ Biochem.}\ \textbf{79}, 13P (1976).
+\bibitem{erhardt2017} S.~Erhardt et al., ``Connecting inflammation with
+  glutamate agonism in suicidality,'' \textit{Neuropsychopharmacology}
+  \textbf{41}, 1200 (2016).
+\bibitem{zhang2007} Y.~Zhang et al., ``DFT study on the mechanism of IDO
+  and TDO,'' \textit{J.\ Am.\ Chem.\ Soc.}\ \textbf{129}, 7282 (2007).
+\bibitem{lewis2006} A.~Lewis-Ballester et al., ``Evidence for a ferryl
+  intermediate in IDO,'' \textit{Biochemistry}\ \textbf{45}, 1041 (2006).
+\bibitem{suess2017} C.~J.~Suess, J.~D.~Hirst, N.~A.~Besley, ``Quantum
+  chemical calculations of tryptophan $\to$ heme ET and EET rates in
+  myoglobin,'' \textit{J.\ Comput.\ Chem.}\ \textbf{38}, 1495 (2017).
+\bibitem{metz2014} R.~Metz et al., ``IDO2 is the preferred biochemical
+  target of the antitumor IDO inhibitory compound D-1-methyl-tryptophan,''
+  \textit{Cancer Res.}\ \textbf{67}, 7082 (2007).
+\bibitem{rohrig2021} U.~F.~R\"ohrig et al., ``Structure and plasticity of
+  IDO1,'' \textit{J.\ Med.\ Chem.}\ \textbf{64}, 17690 (2021).
+\bibitem{prl} M.~R.~Cabri\'e, BCT PRL Letter (2026), Zenodo:18884415.
+\bibitem{monograph} M.~R.~Cabri\'e, BCT Monograph (2026), Zenodo:18885133.
+\bibitem{bct64} M.~R.~Cabri\'e, BCT Letter~64 (2026) --- OHC as Origin
+  of Reality.
+\end{thebibliography}
+
+\end{document}

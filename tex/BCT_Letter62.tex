@@ -1,0 +1,122 @@
+\documentclass[aps,prl,preprint,superscriptaddress,floatfix]{revtex4-2}
+\usepackage{amsmath,amssymb,booktabs,hyperref,xcolor}
+\renewcommand{\thesection}{62.\arabic{section}}
+\hypersetup{colorlinks=true,linkcolor=blue!70!black,citecolor=blue!70!black,urlcolor=blue!70!black}
+\begin{document}
+
+\title{BCT Superfluid Lattice Model --- Letter 62\\
+The Tetrahedral Void Condensate\\
+A Second Vacuum Condensate at $\Lambda_{\rm TVC} \approx 11701610~\text{GeV}$}
+
+\author{Michel Robert Cabri\'e}
+\email{ZeroFreeParameters@gmail.com}
+\affiliation{Independent Researcher, Victoria, Australia\\ORCID: 0009-0007-9561-9859}
+\date{March 2026}
+
+\begin{abstract}
+The BCT vacuum contains two families of interstitial void: octahedral and tetrahedral.
+The octahedral voids host the Octet-Hopfion Condensate (OHC) with instanton action
+$S_{D_4}=\pi^5/6$, setting the QCD scale. We demonstrate that the tetrahedral voids
+host a second condensate---the Tetrahedral Void Condensate (TVC)---with instanton action
+\begin{equation*}
+S_{\rm TVC} = S_{D_4}\times\frac{r_{\rm tet}}{r_{\rm oct}} = 27.673468,
+\end{equation*}
+entirely determined by BCT geometry. Since $S_{\rm TVC}<S_{D_4}$, dimensional
+transmutation gives a \emph{higher} condensate scale:
+$\Lambda_{\rm TVC}=m_P\,e^{-S_{\rm TVC}}\approx11701610~\text{GeV}$,
+a new intermediate scale between the electroweak scale and the Planck scale.
+The TVC carries $T_d$ symmetry and couples purely to SU(3) colour.
+Zero free parameters throughout.
+\end{abstract}
+
+\maketitle
+\tableofcontents
+
+\section{Two Voids, Two Condensates}
+
+The BCT lattice with $c/a=\sqrt{2}$ contains two void types per unit cell:
+\begin{itemize}
+\item Octahedral voids ($r_{\rm oct}=(\sqrt{2}-1)/2$, symmetry $O_h$): host the OHC,
+action $S_{D_4}=\pi^5/6=51.0033$, scale $\Lambda_{\rm QCD}=220~\text{MeV}$.
+\item Tetrahedral voids ($r_{\rm tet}=(\sqrt{6}-2)/4$, symmetry $T_d$): host the TVC
+(this Letter), action $S_{\rm TVC}=27.6735$, scale
+$\Lambda_{\rm TVC}\approx11701610~\text{GeV}$.
+\end{itemize}
+The hierarchy $S_{\rm TVC}<S_{D_4}$ means $\Lambda_{\rm TVC}\gg\Lambda_{\rm QCD}$:
+a smaller void produces less instanton suppression and therefore a higher condensate
+scale. This is geometrically self-consistent.
+
+\section{The TVC Instanton Action}
+
+The tetrahedral void subtends a fraction $r_{\rm tet}/r_{\rm oct}$ of the D4
+Brillouin zone~\cite{bct22,az2}:
+\begin{equation}
+S_{\rm TVC} = S_{D_4}\times\frac{r_{\rm tet}}{r_{\rm oct}}
+= \frac{\pi^5}{6}\times\frac{(\sqrt{6}-2)/4}{(\sqrt{2}-1)/2} = 27.673468.
+\end{equation}
+
+\section{The TVC Energy Scale}
+
+By dimensional transmutation:
+\begin{equation}
+\Lambda_{\rm TVC} = m_P\,e^{-S_{\rm TVC}} = 1.1702e+16~\text{eV}
+\approx 11701610~\text{GeV}.
+\end{equation}
+
+\begin{table}[h]
+\centering
+\caption{BCT vacuum energy scales from one lattice geometry.}
+\begin{tabular}{lll}
+\toprule
+Scale & Value & BCT origin \\
+\midrule
+$\Lambda_{\rm QCD}$ & 220 MeV & OHC: $S_{D_4}=51.003$ \\
+$v_{\rm EW}$ & 246 GeV & $r_{\rm oct}(1+r_{\rm oct})=1/4$ \\
+$\Lambda_{\rm TVC}$ & 11701610 GeV & TVC: $S_{\rm TVC}=27.673$ \\
+$m_P$ & $1.22\times10^{19}$ GeV & Planck anchor \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{TVC Symmetry and Coupling}
+
+The $T_d$ group (order 24, subgroup of $O_h$ order 48) governs the SU(3) colour
+sector. The TVC coupling is:
+\begin{equation}
+\alpha_{\rm TVC} = \frac{r_{\rm tet}^2}{\pi} = 0.0040195 = \alpha_0\times\frac{r_{\rm tet}}{r_{\rm oct}}.
+\end{equation}
+
+\section{TVC Phase Transition and Predictions}
+
+Applying the deconfinement formula (Letter~24):
+\begin{equation}
+T_{\rm TVC} = \frac{\Lambda_{\rm TVC}}{\sqrt{2}}\!\left(1+\frac{3\alpha_0}{8}\right)
+= 8.2973e+15~\text{eV} \approx 8297~\text{TeV}.
+\end{equation}
+The TVC dark matter candidate mass follows from the topological soliton formula
+(Letter~13):
+\begin{equation}
+m_{\rm DM}({\rm TVC}) = \frac{\Lambda_{\rm TVC}\,S_{\rm TVC}}{2\pi}
+\approx 51538~\text{TeV}.
+\end{equation}
+
+\section{The Two-Condensate Scale Hierarchy}
+
+\begin{equation}
+\frac{\Lambda_{\rm QCD}}{\Lambda_{\rm TVC}}
+= \exp\!\bigl[-(S_{D_4}-S_{\rm TVC})\bigr]
+= \exp\!\bigl[-S_{D_4}(1-r_{\rm tet}/r_{\rm oct})\bigr]
+= 7.3789e-11.
+\end{equation}
+Three nested scales $m_P\to\Lambda_{\rm TVC}\to\Lambda_{\rm QCD}$
+from one geometry. Zero free parameters.
+
+\begin{thebibliography}{99}
+\bibitem{bct1}  M.~R.~Cabri\'e, BCT Letter~1 (2026)---void geometry.
+\bibitem{bct22} M.~R.~Cabri\'e, BCT Letter~22 (2026)---QCD scale.
+\bibitem{bct24} M.~R.~Cabri\'e, BCT Letter~24 (2026)---deconfinement temperature.
+\bibitem{bct13} M.~R.~Cabri\'e, BCT Letter~13 (2026)---OHC dark matter.
+\bibitem{az2}   M.~R.~Cabri\'e, BCT Appendix~AZ2 (2026)---D4 Brillouin zone.
+\bibitem{prl}   M.~R.~Cabri\'e, BCT PRL Letter (2026), DOI:~10.5281/zenodo.18884415.
+\end{thebibliography}
+\end{document}

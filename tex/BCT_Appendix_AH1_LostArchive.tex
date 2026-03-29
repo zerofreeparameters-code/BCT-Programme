@@ -1,0 +1,328 @@
+\documentclass[12pt,twocolumn]{article}
+\usepackage[margin=2cm,columnsep=0.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\definecolor{bctnavy}{RGB}{11,37,69}
+\definecolor{bctblue}{RGB}{13,71,161}
+
+\title{\textbf{\color{bctnavy}BCT Appendix AH1: The Lost Archive}\\
+{\large\color{bctblue}Complete Dataset Specifications and Processing\\
+Parameters for Seven BCT SAR Archaeological Sites}}
+\author{Michel Robert Cabri\'{e}\\
+{\small Independent Researcher, Victoria, Australia}\\
+{\small ORCID: 0009-0007-9561-9859}}
+\date{23 March 2026}
+
+\begin{document}
+\twocolumn[
+\maketitle
+\begin{center}\rule{0.9\textwidth}{0.4pt}\end{center}
+\begin{center}
+\parbox{0.88\textwidth}{\small\textbf{Abstract.}
+This appendix provides complete technical specifications for
+BCT Bessel ratio SAR processing of seven archaeological
+mystery sites described in BCT Letter~116. For each site
+we give: exact coordinates, recommended dataset parameters,
+processing code (Google Earth Engine), expected anomaly
+signatures, and cross-validation approach. All datasets
+are publicly available at zero cost.
+\smallskip\hrule\smallskip}
+\end{center}
+\vspace{4pt}
+]
+
+\section{AH1.1 --- BCT Bessel Ratio Filter: Technical Definition}
+
+The BCT Bessel ratio filter maps SAR backscatter intensity
+$I(x,y)$ to a dimensionless anomaly field:
+
+\begin{equation}
+\mathcal{B}(x,y) = I(x,y) \times \frac{j_{1,1}}{j_{2,1}}
+= I(x,y) \times \frac{2.4048}{3.8317} = 0.6276 \cdot I(x,y)
+\end{equation}
+
+The anomaly significance metric is:
+\begin{equation}
+Z(x,y) = \frac{\mathcal{B}(x,y) - \mu_\mathcal{B}(r)}
+{\sigma_\mathcal{B}(r)},
+\end{equation}
+where $\mu_\mathcal{B}(r)$ and $\sigma_\mathcal{B}(r)$ are
+the mean and standard deviation of $\mathcal{B}$ computed
+within a context radius $r$ (typically 50~km). Detection
+threshold: $Z > 3$ (3-sigma significance).
+
+The physical basis: structures encoding the BCT void ratio
+$\mathcal{R} = r_\mathrm{tet}/r_\mathrm{oct} = 0.5426$
+produce resonant SAR backscatter at the $j_{1,1}/j_{2,1}$
+Bessel ratio. The filter is sensitive to this geometric
+signature regardless of the surface material --- stone,
+mud-brick, timber, or bedrock all produce the same
+Bessel ratio signature if their void geometry matches
+BCT predictions.
+
+\section{AH1.2 --- Google Earth Engine Code Template}
+
+The following GEE JavaScript template applies the BCT
+Bessel ratio filter to any of the seven sites. Substitute
+the coordinates and date range as specified in
+Sections~AH1.3--AH1.9.
+
+\begin{verbatim}
+// BCT Bessel Ratio SAR Filter
+// Substitute SITE_LON, SITE_LAT, START, END
+
+var j11 = 2.4048;
+var j21 = 3.8317;
+var bct_ratio = j11 / j21; // 0.6276
+
+var site = ee.Geometry.Point([SITE_LON, SITE_LAT]);
+var roi = site.buffer(50000); // 50km context
+
+var s1 = ee.ImageCollection('COPERNICUS/S1_GRD')
+  .filterBounds(roi)
+  .filterDate('START', 'END')
+  .filter(ee.Filter.eq('instrumentMode','IW'))
+  .select('VV');
+
+var median = s1.median().clip(roi);
+
+// Apply BCT Bessel ratio filter
+var bct_b = median.multiply(bct_ratio);
+
+// Compute anomaly (Z-score)
+var mean = bct_b.reduceRegion({
+  reducer: ee.Reducer.mean(),
+  geometry: roi, scale: 10
+}).getNumber('VV');
+var std = bct_b.reduceRegion({
+  reducer: ee.Reducer.stdDev(),
+  geometry: roi, scale: 10
+}).getNumber('VV');
+
+var z_score = bct_b.subtract(mean).divide(std);
+var anomaly = z_score.gt(3); // 3-sigma detection
+
+Map.centerObject(site, 12);
+Map.addLayer(z_score, {min:-2,max:5,
+  palette:['blue','white','red']},
+  'BCT Bessel Ratio Z-score');
+Map.addLayer(anomaly.selfMask(),
+  {palette:['red']}, 'BCT Anomaly >3sigma');
+\end{verbatim}
+
+\section{AH1.3 --- Site 1: Hawara Labyrinth}
+
+\textbf{Coordinates:} 29.2667°N, 30.9000°E\\
+\textbf{GEE Point:} \verb|[30.90, 29.27]|\\
+\textbf{Buffer:} 10~km (focused on pyramid precinct)\\
+\textbf{Date range:} 2017--2026 (maximum scenes)\\
+\textbf{Primary band:} VV polarisation\\
+\textbf{Expected signature:} Grid pattern of wall reflections
+at 8--12~m depth, detectable through shallow soil via
+differential subsurface penetration at C-band (5.6~cm).
+
+\textbf{Cross-validation:} Compare BCT anomaly map with
+published 2008 Mataha Expedition GPR grid showing walls
+at 8--12~m depth south of pyramid. Spatial correspondence
+at $<$100~m constitutes confirmation.
+
+\textbf{Biondi coordination:} When Dr Biondi publishes
+HarmonicSAR Hawara results (expected Summer 2026), apply
+BCT Bessel ratio to his published radar echo strength maps
+for independent validation.
+
+\textbf{Special note on central object:} The 40~m anomalous
+object at Hawara centre. If metallic (as some scans suggest),
+it will produce an extremely strong BCT Bessel ratio anomaly
+due to high radar reflectivity. Expected Z-score $>10$.
+
+\section{AH1.4 --- Site 2: Richat Structure (Atlantis)}
+
+\textbf{Coordinates:} 21.1167°N, 11.3667°W\\
+\textbf{GEE Point:} \verb|[-11.37, 21.12]|\\
+\textbf{Buffer:} 30~km (full ring structure)\\
+\textbf{Date range:} 2015--2026\\
+\textbf{Primary band:} VV + VH (dual polarisation)
+
+\textbf{Discriminating natural vs plasma origin:}
+Natural eroded dome: random backscatter, no Bessel ratio
+structure. Plasma discharge scar (Lichtenberg origin):
+concentric Bessel ratio rings matching $j_{1,1}$, $j_{2,1}$,
+$j_{3,1}$ spacing ratios 1:1.594:2.295.
+
+\textbf{BCT anomaly prediction:} If Richat is a plasma
+discharge scar, the ring spacing ratio should satisfy:
+\begin{equation}
+\frac{R_2}{R_1} = \frac{j_{2,1}}{j_{1,1}} = 1.594,
+\end{equation}
+where $R_1$ and $R_2$ are the inner and middle ring radii.
+Observed ring radii: inner $\approx$5~km, middle $\approx$10~km,
+outer $\approx$20~km. Ratio inner/middle = 0.50, close to
+$j_{1,1}/j_{2,1} = 0.628$ but not matching. This suggests
+natural dome origin is more likely --- but BCT SAR will
+settle it definitively.
+
+\textbf{Flood evidence:} Apply BCT Bessel ratio to the
+southwest sand-drift region to characterise flood direction
+and magnitude.
+
+\section{AH1.5 --- Site 3: Alexandria Harbour (Cleopatra)}
+
+\textbf{Coordinates:} 31.2000°N, 29.9000°E\\
+\textbf{Method:} GEBCO bathymetry (0.25 arcminute,
+available at \url{https://www.gebco.net})\\
+\textbf{Processing:} BCT Bessel ratio applied to depth
+gradient $|\nabla d(x,y)|$ rather than SAR backscatter.
+
+Structured architectural ruins (rectangular rooms, column
+bases, canal walls) produce gradient anomalies at right
+angles inconsistent with natural sedimentation. BCT Bessel
+ratio filter amplifies the spatial frequency corresponding
+to OHC-resonant room geometry.
+
+\textbf{Known structures:} Marine archaeology has located
+several large stone blocks and column bases in the eastern
+harbour at 5--8~m depth. BCT Bessel ratio will reveal
+whether these are isolated finds or part of a systematic
+geometric grid (library / palace complex).
+
+\section{AH1.6 --- Site 4: Persian Gulf (Garden of Eden)}
+
+\textbf{Coordinates:} 27°N, 53°E (central Gulf)\\
+\textbf{Method:} GEBCO bathymetry + Sentinel-1 coastal SAR\\
+\textbf{Target depth:} 0--40~m (pre-flood river valley)
+
+\textbf{The Ur-Shatt River:} Ancient river systems are
+visible in Gulf bathymetry at 20--40~m depth. BCT Bessel
+ratio applied to bathymetric gradient will map the
+pre-flood landscape and identify any anomalous geometric
+features (settlement mounds, canal networks) inconsistent
+with natural river valley morphology.
+
+\textbf{Flood timeline:} Sea level rose $\sim$60~m between
+15,000 and 6,000~BCE. Final Gulf flooding: $\sim$6,000~BCE.
+Any settlement predating 6,000~BCE would be at 0--40~m
+depth, within GEBCO resolution.
+
+\section{AH1.7 --- Site 5: Mount Ararat (Noah's Ark)}
+
+\textbf{Coordinates:} 39.7020°N, 44.2980°E\\
+\textbf{Elevation target:} 4,700--4,900~m (anomaly zone)\\
+\textbf{Dataset:} Sentinel-1 IW mode, mountain geometry\\
+\textbf{Date filter:} Late summer (minimum snow cover)
+
+\textbf{Anomaly signature:} A large wooden structure under
+permafrost produces a Bessel ratio anomaly at the organic-
+inorganic interface. Timber decays into lignin-rich matrix
+with characteristic dielectric properties distinct from
+surrounding basalt. Expected anomaly shape: elongated
+($\sim$170~m), oriented NW-SE (consistent with published
+satellite photographs of the anomaly).
+
+\textbf{Falsification test:} If no BCT anomaly present
+in late-summer low-snow Sentinel-1 data at the published
+anomaly coordinates, the Ararat object is either natural
+basalt or too deeply buried for C-band penetration.
+
+\section{AH1.8 --- Site 6: Antarctic Peninsula}
+
+\textbf{Coordinates:} 67°S, 65°W (primary target zone)\\
+\textbf{Dataset:} BEDMAP3 (British Antarctic Survey,
+freely available)\\
+\textbf{Processing:} BCT Bessel ratio applied to radar
+echo strength in BEDMAP3 radargrams.
+
+\textbf{Key distinction:} Natural bedrock topography
+(river valleys, glacially carved fjords) has characteristic
+fractal geometry with no preferred Bessel ratio. Any
+structured surface feature from the pre-glaciation
+period (before $\sim$12,000~BCE) would appear as a
+non-fractal anomaly at BCT Bessel ratio significance.
+
+\textbf{Priority zone:} The Antarctic peninsula between
+65°S and 70°S, where bedrock lies within 1~km of the
+surface and pre-glaciation surface features are most
+likely to be preserved.
+
+\section{AH1.9 --- Site 7: Nazca Plateau}
+
+\textbf{Coordinates:} 14.7300°S, 75.1300°W\\
+\textbf{Dataset:} Sentinel-1 + SRTM elevation\\
+\textbf{Processing:} BCT Bessel ratio applied to surface
+SAR backscatter AND to subsurface GPR-derived void maps.
+
+\textbf{Angular geometry test:} The Nazca lines include
+geometric figures (spirals, trapezoids, animal outlines)
+whose angular relationships BCT predicts should encode
+Bessel mode ratios. Specifically:
+\begin{equation}
+\frac{\theta_1}{\theta_2} \approx \frac{j_{1,1}}{j_{2,1}}
+= 0.628 \text{ for paired line sets}.
+\end{equation}
+This is a non-invasive angular analysis of published
+Nazca line maps requiring no new data.
+
+\textbf{Puquio system:} The underground water channels
+(puquios) beneath the plateau have never been fully mapped.
+BCT Bessel ratio SAR will detect their geometry as linear
+anomalies in subsurface-sensitive C-band backscatter.
+
+\section{AH1.10 --- Summary Table}
+
+\begin{center}
+{\small
+\begin{tabular}{p{1.8cm}p{2.2cm}p{2.0cm}p{1.5cm}}
+\hline\hline
+Site & Primary Dataset & BCT Signature & Cost \\
+\hline
+Hawara & Sentinel-1 SAR & Grid walls >3$\sigma$ & Zero \\
+Richat & Sentinel-1 SAR & Ring spacing ratio & Zero \\
+Alexandria & GEBCO bathy & Rect. gradient & Zero \\
+Persian Gulf & GEBCO bathy & River anomaly & Zero \\
+Ararat & Sentinel-1 SAR & Elongated void & Zero \\
+Antarctica & BEDMAP3 & Non-fractal bedrock & Zero \\
+Nazca & Sentinel-1 SAR & Angular Bessel & Zero \\
+\hline
+\textbf{Total} & \textbf{Open data} & \textbf{7 tests} & \textbf{Zero} \\
+\hline\hline
+\end{tabular}
+}
+\end{center}
+
+\section*{Data Availability}
+
+All datasets referenced in this appendix are freely available:
+\begin{itemize}
+\item Sentinel-1 SAR: \url{https://scihub.copernicus.eu}
+\item Google Earth Engine: \url{https://earthengine.google.com}
+\item GEBCO Bathymetry: \url{https://www.gebco.net}
+\item BEDMAP3: \url{https://www.bas.ac.uk/project/bedmap}
+\item SRTM Elevation: \url{https://earthexplorer.usgs.gov}
+\end{itemize}
+
+No special access, permits, or funding required. Total
+computational cost: approximately 10~CPU-hours in Google
+Earth Engine free tier. The geometry either resonates
+or it does not.
+
+\begin{thebibliography}{9}
+\bibitem{BCT_L116} M.~R.~Cabri\'{e},
+BCT Letter 116: The Lost Archive,
+\href{https://zenodo.org/search?q=cabrie}
+{zenodo.org/search?q=cabrie} (2026).
+
+\bibitem{BCT_L102} M.~R.~Cabri\'{e},
+BCT Letter 102: BCT SAR Victorian Goldfields,
+\href{https://zenodo.org/search?q=cabrie}
+{zenodo.org/search?q=cabrie} (2026).
+
+\bibitem{Mataha2008} L.~De Cordier \textit{et al.},
+Mataha Expedition Report, NRIAG/Ghent (2008).
+
+\bibitem{BEDMAP3} BAS BEDMAP3 Consortium,
+\url{https://www.bas.ac.uk/project/bedmap} (2023).
+\end{thebibliography}
+
+\end{document}

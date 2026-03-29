@@ -1,0 +1,191 @@
+%% BCT Letter 38 — Ultralight Dark Matter
+\documentclass[aps,prl,twocolumn,superscriptaddress,floatfix]{revtex4-2}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\begin{document}
+
+\title{Ultralight Dark Matter from BCT Geometry:\\
+$m_{\rm DM} = \Lambda_{\rm QCD}^2/m_P = 3.96\times10^{-12}\ \mathrm{eV}$
+at $f = 957\ \mathrm{Hz}$}
+
+\author{Michel Robert Cabri\'e}
+\affiliation{Independent Researcher; ORCID: 0009-0007-9561-9859}
+\email{ZeroFreeParameters@gmail.com}
+
+\date{March 2026 \quad BCT Letter 38}
+
+\begin{abstract}
+The BCT Superfluid Lattice Model predicts a unique ultralight dark matter candidate:
+the zero-mode acoustic phonon of the BCT quantum vacuum crystal.
+Its mass is determined by the single BCT mass formula:
+\[
+  m_{\rm DM} = \frac{\Lambda_{\rm QCD}^2}{m_P}
+  = \frac{(220\ \mathrm{MeV})^2}{1.2209\times10^{22}\ \mathrm{MeV}}
+  = 3.96\times10^{-12}\ \mathrm{eV},
+\]
+corresponding to a coherent electromagnetic oscillation at $f_{\rm BCT} = m_{\rm DM}c^2/h = 957\ \mathrm{Hz}$.
+This falls in the audio-RF band, directly within the target sensitivity range of the
+ABRACADABRA and DM Radio experiments currently running or in commissioning.
+The photon coupling is $g_{\phi\gamma\gamma} = \alpha_{\rm EM}/(2\pi f_a) = 6.8\times10^{-31}\ \mathrm{GeV}^{-1}$
+with decay constant $f_a = m_P/\sqrt{S_{D4}} = 1.71\times10^{18}\ \mathrm{GeV}$.
+The D4 $\mathbb{Z}_2$ self-duality symmetry ensures absolute stability.
+This is Prediction~\#113 of the BCT programme. \textit{Zero free parameters.}
+\end{abstract}
+
+\maketitle
+
+\noindent\textbf{Introduction.}
+The identity of dark matter is one of the central open problems in physics.
+The BCT Superfluid Lattice Model~\cite{Monograph,PRL} does not require
+an external dark matter candidate: the BCT quantum vacuum crystal supports
+acoustic phonon excitations whose lightest zero mode is stable and cosmologically
+long-lived. Its mass is set by the geometric mean of the two BCT energy scales
+already determined by the programme.
+
+\medskip
+\noindent\textbf{The BCT Dark Matter Mass.}
+The BCT vacuum crystal supports phonon modes with dispersion $\omega(k)$.
+The zero-mode acoustic phonon — the lightest excitation of the BCT condensate
+in the cosmological background — has mass set by the ratio of the two
+BCT dimensionful scales (Appendix~II5):
+\begin{equation}
+  m_{\rm DM} = \frac{\Lambda_{\rm QCD}^2}{m_P}
+  \label{eq:mDM}
+\end{equation}
+Substituting BCT values $\Lambda_{\rm QCD} = 220\ \mathrm{MeV}$ and
+$m_P({\rm BCT}) = 1.2185\times10^{22}\ \mathrm{MeV}$ (Letter~37~\cite{L37}):
+\begin{equation}
+  m_{\rm DM} = \frac{(220)^2}{1.2185\times10^{22}}\ \mathrm{MeV}
+  = 3.968\times10^{-12}\ \mathrm{eV}
+  \label{eq:mDMnum}
+\end{equation}
+
+\medskip
+\noindent\textbf{Detection Frequency.}
+The coherent oscillation frequency of the BCT dark matter field:
+\begin{equation}
+  f_{\rm BCT} = \frac{m_{\rm DM}\,c^2}{h}
+  = \frac{3.968\times10^{-12}\ \mathrm{eV}}{4.136\times10^{-15}\ \mathrm{eV\cdot s}}
+  = 957\ \mathrm{Hz}
+  \label{eq:fBCT}
+\end{equation}
+This lies in the audio frequency band, well within the reach of SQUID-based
+magnetometer arrays. The coherence time for virialized dark matter
+with velocity $v/c \approx 10^{-3}$ is:
+\begin{equation}
+  \tau_{\rm coh} = \frac{1}{m_{\rm DM}(v/c)^2}
+  \approx \frac{h}{m_{\rm DM} c^2 \cdot 10^{-6}}
+  \approx 10^6\ \mathrm{s} \approx 12\ \mathrm{days}
+  \label{eq:tcoh}
+\end{equation}
+The long coherence time makes matched-filter signal detection feasible
+with integration times of order weeks.
+
+\medskip
+\noindent\textbf{Photon Coupling.}
+The BCT phonon dark matter couples to photons through the axion-photon
+vertex with decay constant:
+\begin{equation}
+  f_a = \frac{m_P}{\sqrt{S_{D4}}}
+  = \frac{1.2185\times10^{22}\ \mathrm{MeV}}{\sqrt{51.003}}
+  = 1.706\times10^{18}\ \mathrm{GeV}
+  \label{eq:fa}
+\end{equation}
+The photon coupling is:
+\begin{equation}
+  g_{\phi\gamma\gamma} = \frac{\alpha_{\rm EM}}{2\pi f_a}
+  = \frac{1/137.036}{2\pi \times 1.706\times10^{18}\ \mathrm{GeV}}
+  = 6.82\times10^{-31}\ \mathrm{GeV}^{-1}
+  \label{eq:gcoupling}
+\end{equation}
+This is far below current axion bounds from ADMX and CAST,
+consistent with the BCT phonon being weakly coupled and ultralight.
+
+\medskip
+\noindent\textbf{Stability.}
+The BCT dark matter is absolutely stable by symmetry.
+The D4 $\mathbb{Z}_2$ self-duality (proven in Appendix DI~\cite{Monograph})
+assigns the phonon zero mode to the odd sector: $\phi \to -\phi$ under
+$\mathbb{Z}_2$. Any decay $\phi \to \gamma\gamma$ would require an odd number
+of $\phi$ insertions in the vertex, which vanishes by $\mathbb{Z}_2$ parity.
+The BCT dark matter is therefore stable to all orders in perturbation theory.
+
+\medskip
+\noindent\textbf{Experimental Targets.}
+\begin{table}[h]
+\centering
+\caption{BCT dark matter vs.\ running experiments.}
+\label{tab:expt}
+\begin{tabular}{lccc}
+\toprule
+Experiment & Range (eV) & BCT $m_{\rm DM}$ & Status \\
+\midrule
+ABRACADABRA & $10^{-12}$--$10^{-9}$ & $3.97\times10^{-12}$ & \textbf{Target} \\
+DM Radio & $10^{-12}$--$10^{-6}$ & $3.97\times10^{-12}$ & \textbf{Target} \\
+CASPEr-E & $10^{-17}$--$10^{-14}$ & too heavy & — \\
+ADMX & $10^{-6}$--$10^{-5}$ & too light & — \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The BCT prediction sits at the lower edge of the ABRACADABRA sensitivity band.
+A signal at $957 \pm 1\ \mathrm{Hz}$ in a toroidal SQUID detector would confirm
+the BCT dark matter candidate. Non-detection with sensitivity below
+$g_{\phi\gamma\gamma} \sim 10^{-28}\ \mathrm{GeV}^{-1}$ at this frequency
+would falsify the BCT photon-coupling prediction.
+
+\medskip
+\noindent\textbf{Relic Density.}
+The BCT relic density via the misalignment mechanism gives:
+\begin{equation}
+  \Omega_{\rm DM} h^2 \approx 0.12
+  \quad\text{for initial angle}\ \theta_i \approx 0.4\ \mathrm{rad}
+  \label{eq:relic}
+\end{parameter}
+\end{equation}
+This is a natural value (not fine-tuned) in the BCT framework.
+The production mechanism via topological defect network decay is
+an open Phase~74 calculation; the mass prediction~(\ref{eq:mDM}) is
+independent of the production mechanism.
+
+\medskip
+\noindent\textbf{Falsifiable Predictions.}
+\begin{enumerate}
+\item Signal at $f = 957 \pm 10\ \mathrm{Hz}$ in ABRACADABRA or DM Radio.
+\item No signal at ADMX ($10^{-6}$--$10^{-5}\ \mathrm{eV}$ band): the BCT mass is $10^6\times$ too light.
+\item No signal at CASPEr-E ($10^{-17}$--$10^{-14}\ \mathrm{eV}$ band): the BCT mass is $10^2\times$ too heavy.
+\item If ABRACADABRA detects a signal outside $[100, 9600]\ \mathrm{Hz}$,
+  the BCT dark matter candidate is falsified.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Conclusion.}
+The BCT superfluid phonon zero mode has mass
+$m_{\rm DM} = \Lambda_{\rm QCD}^2/m_P = 3.97\times10^{-12}\ \mathrm{eV}$,
+corresponding to a coherent oscillation at $957\ \mathrm{Hz}$.
+Its photon coupling $g_{\phi\gamma\gamma} = 6.82\times10^{-31}\ \mathrm{GeV}^{-1}$
+and coherence time $\tau_{\rm coh} \approx 12\ \mathrm{days}$ make it
+detectable in principle by ABRACADABRA and DM Radio, both currently operating.
+All parameters follow from $r_{\rm oct}$, $r_{\rm tet}$, and $\Lambda_{\rm QCD}$.
+Zero free parameters.
+
+\begin{thebibliography}{99}
+\bibitem{PRL} M.~R.~Cabri\'e,
+  DOI:~10.5281/zenodo.18884415 (2026).
+\bibitem{Monograph} M.~R.~Cabri\'e,
+  DOI:~10.5281/zenodo.18884976 (2026).
+\bibitem{L37} M.~R.~Cabri\'e, BCT Letter~37 (2026).
+\bibitem{ABRA} J.~Kahn et al.\ (ABRACADABRA),
+  Phys.\ Rev.\ Lett.\ \textbf{127}, 081801 (2021).
+\bibitem{DMRadio} DMRadio Collaboration,
+  Phys.\ Rev.\ D \textbf{106}, 103008 (2022).
+\bibitem{Preskill} J.~Preskill, M.~Wise, F.~Wilczek,
+  Phys.\ Lett.\ B \textbf{120}, 127 (1983).
+\end{thebibliography}
+
+\end{document}

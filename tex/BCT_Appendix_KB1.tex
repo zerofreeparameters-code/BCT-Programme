@@ -1,0 +1,102 @@
+\documentclass[aps,prl,twocolumn,showpacs,superscriptaddress]{revtex4-2}
+\usepackage{amsmath,amssymb,booktabs,xcolor,hyperref,amsthm}
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+
+\title{Appendix KB1: The Carbon Hopf Symmetry Index\\
+$S_H = \min(n_{\rm filled},n_{\rm empty})/4$ and the Half-Fill
+Uniqueness Theorem for the $n=2$ Hopf Multiplet}
+
+\author{Michel Robert Cabri\'e}
+\affiliation{Independent Researcher, Victoria, Australia}
+\email{ZeroFreeParameters@gmail.com}
+\date{20 March 2026}
+
+\begin{abstract}
+This appendix derives the Hopf Bond Symmetry Index $S_H$ for all 
+$n=2$ elements, proves the uniqueness of $S_H=1$ at carbon ($Z=6$), 
+derives the bond compression formula $L(n_\pi)/L_0 = 1-n_\pi r_{\rm tet}$ 
+from $\pi$-bond Hopf mode geometry, and tabulates the half-fill 
+series ($S_H=1$ elements) across all shells. Supporting Letter~82.
+\end{abstract}
+
+\maketitle
+
+\section{The Hopf Bond Symmetry Index}
+
+For $n=2$ elements with shell capacity $C=8$:
+\begin{equation}
+    S_H = \frac{\min(n_{\rm filled},\,8-n_{\rm filled})}{4}
+\end{equation}
+
+\begin{center}
+\begin{tabular}{lcccr}
+\toprule
+Element & Filled & Empty & min & $S_H$ \\
+\midrule
+Li & 1 & 7 & 1 & 0.25 \\
+Be & 2 & 6 & 2 & 0.50 \\
+B  & 3 & 5 & 3 & 0.75 \\
+\textbf{C}  & \textbf{4} & \textbf{4} & \textbf{4} & \textbf{1.00} $\star$ \\
+N  & 5 & 3 & 3 & 0.75 \\
+O  & 6 & 2 & 2 & 0.50 \\
+F  & 7 & 1 & 1 & 0.25 \\
+Ne & 8 & 0 & 0 & 0.00 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{theorem}[Carbon Uniqueness]
+$S_H=1$ is achieved uniquely by carbon ($Z=6$) in the $n=2$ shell.
+\end{theorem}
+\begin{proof}
+$S_H=1$ requires $\min(n_{\rm filled},\,8-n_{\rm filled})=4$, 
+i.e.\ $n_{\rm filled}=4$. Only $Z=6$ has exactly 4 outer electrons 
+in the $n=2$ shell. \qed
+\end{proof}
+
+\section{Bond Compression Derivation}
+
+A $\sigma$ bond shares 2 Hopfions along the bond axis. Each 
+$\pi$ bond shares 2 Hopfions via $r_{\rm tet}$ modes perpendicular 
+to the axis, compressing the internuclear distance by $r_{\rm tet}$:
+\begin{equation}
+    \frac{L(n_\pi)}{L_0} = 1 - n_\pi \times r_{\rm tet}
+\end{equation}
+
+\begin{center}
+\begin{tabular}{lclr}
+\toprule
+Bond & $n_\pi$ & BCT ratio & Error \\
+\midrule
+C--C & 0 & $1$ & --- \\
+C=C  & 1 & $1-r_{\rm tet} = 0.8876$ & $+2.0\%$ \\
+C$\equiv$C & 2 & $1-2r_{\rm tet} = 0.7753$ & $-0.5\%$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{The Half-Fill Series}
+
+$S_H=1$ at the half-fill point of every shell:
+
+\begin{center}
+\begin{tabular}{rclll}
+\toprule
+$n$ & $Z$ & Symbol & Name & BCT significance \\
+\midrule
+2 & 6  & C  & Carbon    & Carbon-based life \\
+3 & 14 & Si & Silicon   & Mineral structures \\
+4 & 32 & Ge & Germanium & Semiconductor \\
+5 & 50 & Sn & Tin       & BCT prediction \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{99}
+\bibitem{L82} M.~R.~Cabri\'e, \textit{BCT Letter 82}, Zenodo (2026).
+\bibitem{L78} M.~R.~Cabri\'e, \textit{BCT Letter 78}, Zenodo (2026).
+\end{thebibliography}
+
+\end{document}

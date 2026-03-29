@@ -1,0 +1,174 @@
+\documentclass[aps,prl,twocolumn,showpacs,superscriptaddress]{revtex4-2}
+\usepackage{amsmath,amssymb,booktabs,xcolor,hyperref}
+
+\begin{document}
+
+\begin{abstract}
+We derive atomic structure, the Pauli exclusion principle, the octet 
+rule, and the chemical inertness of noble gases from BCT vacuum topology, 
+without additional postulates. Electrons are H=1 Hopf defects of the 
+Octet-Hopfion Condensate (OHC); protons are D4 instanton nodes; electron 
+shells are quantised OHC Bessel resonance modes with capacity $2n^2$. 
+The Pauli exclusion principle is the topological complementarity of 
+$H=+1$ and $H=-1$ Hopfions, which combine to net $H=0$: a theorem, 
+not a postulate. Noble gases are \textbf{closed Hopf multiplets} --- 
+topologically inert, not merely energetically stable. The octet rule 
+derives from the two BCT void types: $r_{\rm oct}$ generates 1 spherical 
+(s) mode; $r_{\rm tet}$ generates 3 directional (p) modes; giving 
+$4 \times 2 = 8$ electrons at $n=2$. Gilbert Lewis drew $r_{\rm oct}$ 
+and $r_{\rm tet}$ in 1916. He called them dots. Chemistry is topology. 
+The periodic table is a Hopf fibration atlas.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+Standard quantum mechanics derives atomic structure correctly but 
+incompletely. It provides rules without reasons: the Pauli exclusion 
+principle is postulated, not derived; the octet rule is a pattern, 
+not a theorem; noble gas inertness is energetic, not topological. 
+The BCT Superfluid Lattice Model provides the missing depth.
+
+The recent result of White et al.~\cite{White2026} --- deriving the 
+hydrogen spectrum acoustically from a dynamic vacuum via the 
+Madelung/Bogoliubov framework --- is the limiting case of BCT. 
+BCT specifies the exact vacuum geometry ($c/a = \sqrt{2}$, the unique 
+Lorentz-invariant BCT lattice) and derives all coupling constants.
+
+\section{BCT Atomic Constituents}
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Entity & BCT identity & Origin \\
+\midrule
+Proton/neutron & D4 instanton node & Letter~71 \\
+Electron & $H=1$ Hopfion & $\pi_3(S^2)=\mathbb{Z}$ \\
+Electron spin & OHC phase $\pm$ & Opposite orientation \\
+Shell $n$ & OHC Bessel mode $n$ & Josephson at $\alpha_0$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Hydrogen}
+
+The hydrogen atom: single D4 node (proton) with single $H=1$ Hopfion 
+(electron) in the first OHC Bessel resonance. The Bohr radius:
+\begin{equation}
+    a_0 = \frac{\hbar}{m_e c\,\alpha} = 0.5293~\text{\AA}
+    \quad \text{(observed: } 0.5292~\text{\AA}\ \checkmark\text{)}
+\end{equation}
+where $\alpha = \alpha_0(1-2\alpha_0) = 1/137.018$ (Letter~1, error 
+$-0.013\%$). Shell energies $E_n = -13.606/n^2~\text{eV}$ follow from 
+the OHC Bessel mode spectrum; the $1/n^2$ ladder is exact.
+
+\section{Pauli Exclusion as Topological Complementarity}
+
+\begin{theorem}[BCT Pauli Theorem]
+Two $H=+1$ Hopfions in the same spatial OHC resonance mode must have 
+opposite OHC interior phase orientations (opposite spin). Two maps 
+$S^3\to S^2$ with the \emph{same} orientation combine to $H=+2$, 
+exceeding the single-mode capacity. Two maps with \emph{opposite} 
+orientation ($H=+1$ and $H=-1$) combine to net $H=0$ --- topologically 
+complementary --- and share the same mode.
+\end{theorem}
+
+The Pauli principle is not postulated. It is topological necessity: 
+$H=+2$ exceeds the $n=1$ mode capacity. $H\in\mathbb{Z}$ follows from 
+$\pi_3(S^2) = \mathbb{Z}$ (Appendix~JH).
+
+\section{The Octet Rule}
+
+The BCT vacuum has exactly two void types. Their geometry directly 
+determines the orbital symmetries at $n=2$:
+\begin{itemize}
+\item $r_{\rm oct}$: 1 isotropic centre $\to$ 1 s-orbital $\to$ 2 electrons
+\item $r_{\rm tet}$: 3 axial orientations $\to$ 3 p-orbitals $\to$ 6 electrons
+\end{itemize}
+Total: $4 \times 2 = \mathbf{8}$ electrons. The octet is the BCT void 
+geometry at $n=2$. Lewis drew $r_{\rm oct} + 3r_{\rm tet}$ in 1916. 
+He called them dots.
+
+\section{Noble Gases as Closed Hopf Multiplets}
+
+\begin{theorem}[BCT Noble Gas Theorem]
+A noble gas is an atom whose outermost electron shell is a \textbf{closed 
+Hopf multiplet}: all $2n^2$ Hopf modes at level $n$ are occupied, 
+with net shell Hopf charge $= 0$.
+
+A closed Hopf multiplet is \textbf{topologically inert}: it cannot 
+accept an additional electron (which would require opening a new Hopf 
+mode at the next resonance level) and cannot donate an electron 
+(which would break the topological closure) without supplying 
+energy $\propto \Delta E_{\rm top}$.
+\end{theorem}
+
+Noble gas inertness is not merely energetic. It is topological. 
+The Hopf multiplet is complete. There is no available topological 
+channel for bonding.
+
+\begin{center}
+\begin{tabular}{lllr}
+\toprule
+Gas & $Z$ & Outer config & BCT status \\
+\midrule
+He & 2 & $1s^2$ & $H{=}+1,H{=}-1$ pair, net $H{=}0$ \\
+Ne & 10 & $2s^22p^6$ & oct+3 tet all filled \\
+Ar & 18 & $3s^23p^6$ & $n=3$ valence closed \\
+Kr & 36 & $3d^{10}4s^24p^6$ & d-shell adds 5 Hopf modes \\
+Xe & 54 & $4d^{10}5s^25p^6$ & Complete period 5 \\
+Rn & 86 & $4f^{14}..6p^6$ & f-shell: 7 highest modes \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{The Periodic Table as Hopf Atlas}
+
+Each period corresponds to completing a Hopf multiplet at level $n$, 
+with capacity $2n^2$. Period lengths 2, 8, 8, 18, 18, 32, 32 
+follow directly. The periodic table is an atlas of Hopf multiplet 
+completions, ordered by $Z$.
+
+\section{Why Chemistry Exists}
+
+Chemistry requires atoms with open Hopf channels: incomplete 
+outer-shell multiplets that can accept or donate electrons to 
+achieve topological closure. Every chemical bond is a Hopf channel 
+negotiation. Covalent bonds share Hopf modes; ionic bonds transfer 
+them. The driving force: topological closure.
+
+Standard chemistry says atoms react to achieve full outer shells. 
+BCT says atoms react to achieve closed Hopf multiplets. BCT is 
+the reason why the first statement is true.
+
+\section{Conclusion}
+
+Atomic structure, the Pauli principle, the octet rule, and noble 
+gas inertness all derive from BCT vacuum topology. The periodic 
+table is a Hopf fibration atlas. Every noble gas is a topological 
+completion. Every chemical bond is a Hopf channel negotiation.
+
+\begin{acknowledgments}
+The instinct that noble gases must be topologically complete 
+structures --- not merely energetically stable --- was stated 
+by Michel Cabri\'e before the calculation was done. 
+The instinct was correct. The universe agreed.
+\end{acknowledgments}
+
+\begin{thebibliography}{99}
+\bibitem{AppJH} M.~R.~Cabri\'e, \textit{Appendix JH: The Hopfion 
+Interior and OHC}, Zenodo (2026), doi:10.5281/zenodo.18975018
+
+\bibitem{L1} M.~R.~Cabri\'e, \textit{BCT Letter 1}, Zenodo (2026), 
+doi:10.5281/zenodo.18958207
+
+\bibitem{L71} M.~R.~Cabri\'e, \textit{BCT Letter 71: Baryogenesis}, 
+Zenodo (2026).
+
+\bibitem{White2026} H.~White, J.~Vera, A.~Sylvester, L.~Dudzinski, 
+\textit{Emergent quantization from a dynamic vacuum}, 
+Phys.\ Rev.\ Research \textbf{8}, 013264 (2026).
+\end{thebibliography}
+
+\end{document}

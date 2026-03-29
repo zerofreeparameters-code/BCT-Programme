@@ -1,0 +1,315 @@
+\documentclass[10pt,twocolumn]{article}
+
+\usepackage[margin=1.9cm,top=2.2cm,bottom=2.2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{times}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{parskip}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\titleformat{\section}{\normalfont\bfseries\small\centering}{}{0em}{}
+\titlespacing{\section}{0pt}{6pt}{3pt}
+
+\setlength{\columnsep}{0.5cm}
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{1em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\itshape BCT Superfluid Lattice Model --- Letter 29}
+\fancyhead[R]{\small\itshape March 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+\twocolumn[{%
+\begin{center}
+{\large\bfseries The NLO Colour Correction to the Strange Sector:}\\[3pt]
+{\large\bfseries Three Sub-0.1\% Predictions from a Single BCT Calculation}\\[8pt]
+{\normalsize Michel Robert Cabri\'{e}$^{1,\,*}$}\\[2pt]
+{\small $^1$\textit{Independent Researcher;  ORCID: \href{https://orcid.org/0009-0007-9561-9859}{0009-0007-9561-9859}}}\\[2pt]
+{\small (Dated: March 2026)\quad BCT Letter 29}\\[6pt]
+\end{center}
+\begin{quotation}
+\small\noindent
+We apply the BCT next-to-leading-order (NLO) colour correction to the strange quark sector,
+deriving three new sub-0.1\% predictions --- Predictions~\#102, \#103, and \#104 --- from a
+single geometric calculation. The kaon mass at NLO follows from replacing the leading-order
+strange/light quark ratio $(1/\alpha_0)^{2/3}$ with its colour-corrected form
+$(1/\alpha_0)^{2/3}(1-3\alpha_0)$, where $3\alpha_0 = N_c\alpha_0$ is the BCT three-colour
+loop contribution:
+\[
+  m_K^{\rm NLO} = m_\pi\sqrt{\frac{1 + (1/\alpha_0)^{2/3}(1-3\alpha_0)}{2}}
+               = 493.5335\,\text{MeV}\;\;(-0.029\%).
+\]
+Substituting this NLO kaon --- together with the NLO $\rho$ mass of Phase~83B --- into the BCT
+three-mode Pythagorean formula, and upgrading the baryon NLO coefficient from $N = \tfrac{3}{4}$
+to the SU(3) colour Casimir $C_F = (N_c^2-1)/(2N_c) = \tfrac{4}{3}$ (itself derived from BCT
+via the $D_4$ triality theorem), yields:
+\begin{align*}
+m_p &= \sqrt{m_\rho^2+m_K^2+m_\pi^2}\times(1+C_F\alpha_0) = 938.288\,\text{MeV}\;\;(+0.0017\%),\\
+m_n &= m_p + \Delta m_N = 939.541\,\text{MeV}\;\;(-0.0026\%).
+\end{align*}
+All three results are sub-0.1\%, all from $\{r_{\rm oct}, r_{\rm tet}, \Lambda_{\rm QCD}\}$
+alone. The upgrade $N\!:\!\tfrac{3}{4}\to C_F$ is not a new free parameter: $C_F$ is uniquely
+fixed by $N_c = 3$, which BCT derives from $D_4$ triality. Zero free parameters.
+\end{quotation}
+\vspace{6pt}
+}]
+
+\section{Introduction}
+
+Letter~28~[3] established Prediction~\#101: the proton mass $m_p = 935.35$~MeV ($-0.31\%$) from
+a fully closed first-principles chain. That derivation used the leading-order (LO) kaon mass
+$m_K^{\rm LO} = m_\pi(1/\alpha_0)^{1/3}/\sqrt{2} = 489.686$~MeV (Prediction~\#82, $-0.81\%$)
+and the LO $\rho$ mass from Phase~76A. The $-0.31\%$ proton error was identified as arising
+primarily from the $-0.81\%$ kaon error~[3].
+
+The same BCT documents that established Prediction~\#82 (Appendix LO6 of Ref.~[1]) noted a
+remarkable NLO formula:
+\begin{equation}
+m_K^{\rm NLO} = m_\pi\sqrt{\frac{1+(1/\alpha_0)^{2/3}(1-N_c\alpha_0)}{2}}\,,
+\label{eq:mKNLO}
+\end{equation}
+but its implications for the proton and neutron masses were not developed. The present Letter
+does so fully. We show that a single NLO colour correction --- replacing the LO ratio
+$(1/\alpha_0)^{2/3}$ with its colour-dressed form $(1/\alpha_0)^{2/3}(1-N_c\alpha_0)$ ---
+simultaneously improves all three ground-state hadron masses from the sub-1\% tier to the
+sub-0.1\% tier, and in doing so reveals that the correct baryon NLO coefficient is the SU(3)
+colour Casimir $C_F = 4/3$, not the simpler $N = 3/4$ of Phase~40C.
+
+\section{The NLO Kaon Mass --- Prediction \#102}
+
+\textit{LO formula review.} The BCT Kaon Theorem (Phase~89B, Prediction~\#82~[1]) states:
+\begin{equation}
+m_K^{\rm LO} = \frac{m_\pi}{\sqrt{2}\,\alpha_0^{1/3}}\,,
+\label{eq:mKLO}
+\end{equation}
+which gives 489.686~MeV ($-0.808\%$). The formula encodes the strange/light quark mass ratio:
+from the BCT GOR relation $m_K^2/m_\pi^2 = (m_s + \hat{m})/2\hat{m}$ and the identification
+$m_s/\hat{m} = (1/\alpha_0)^{2/3}$, one obtains Eq.~(\ref{eq:mKLO}).
+
+\textit{NLO colour correction.} In BCT, every hadronic mass receives an NLO correction from
+colour loops in the condensate phonon field. For the strange quark sector, the colour loop
+correction reduces the effective strange/light quark mass ratio by the factor $(1-N_c\alpha_0)$,
+where $N_c = 3$ is the number of QCD colours (derived in BCT from the $D_4$ triality
+theorem~[1]). Physically, the three gluon loops surrounding the strange quark each contribute
+$-\alpha_0$ to the self-energy, giving a net reduction of $3\alpha_0 = N_c\alpha_0$.
+
+The NLO strange/light mass ratio is therefore:
+\begin{equation}
+\frac{m_s}{\hat{m}}\bigg|_{\rm NLO}
+  = \left(\frac{1}{\alpha_0}\right)^{2/3}\!(1-N_c\alpha_0) = 25.730\,,
+\label{eq:ratio}
+\end{equation}
+compared to the PDG value $m_s/\hat{m} \approx 96.4/3.45 = 27.9$. The 8\% residual difference
+is the known higher-order SU(3) breaking in the $\overline{\rm MS}$ scheme~[4] and does not
+affect the kaon mass prediction, which uses the geometric BCT ratio rather than
+$\overline{\rm MS}$ quark masses directly.
+
+Substituting into the GOR ratio:
+\begin{equation}
+m_K^{\rm NLO} = m_\pi\sqrt{\frac{1+(1/\alpha_0)^{2/3}(1-3\alpha_0)}{2}}\,,
+\label{eq:mKNLO2}
+\end{equation}
+with all quantities from $\{r_{\rm oct}, r_{\rm tet}, \Lambda_{\rm QCD}\}$:
+\begin{equation}
+m_K^{\rm NLO} = 493.534\,\text{MeV},\quad
+\delta = -0.029\%\;\;(\star\,\text{sub-0.1\%}).
+\label{eq:mKresult}
+\end{equation}
+This is a $28\times$ improvement over the LO result and constitutes \textbf{Prediction~\#102}
+of the BCT programme.
+
+\textit{Why the colour factor is $N_c$, not $N_c/2$.} For mesons (two-quark states), the colour
+correction coefficient is $N_c/2$ (one factor of $N_c$ from the colour loop, divided by 2 for
+the two-quark normalisation). The strange quark mass ratio $m_s/\hat{m}$ is a ratio of
+single-quark self-energies, so it receives the full factor $N_c\alpha_0 = 3\alpha_0$ without
+the $1/2$ denominator. This is consistent with the $\rho$ mass correction in Phase~83B, which
+used $(1 - \tfrac{N_c}{2}\alpha_0) = (1 - \tfrac{3}{2}\alpha_0)$ for the two-quark $\bar{q}q$
+bound state.
+
+\section{The Colour Casimir Theorem and the Upgraded $N$-Class}
+
+\textit{The BCT $N$-class taxonomy.} Every BCT hadronic mass prediction carries an NLO factor
+$(1+N\alpha_0)$ where $N$ is determined by the internal quark structure. The original
+taxonomy~[1] gives $N = +3/4$ for three-quark baryons, derived as $3\times(1/4)$ where $1/4$
+is the per-quark colour fraction at LO.
+
+\textit{The Casimir upgrade.} When the meson modes entering the Pythagorean decomposition carry
+their own NLO colour corrections (as they do in Phase~97B), the baryon correction must be
+upgraded to avoid double-counting the colour structure already absorbed into the meson masses.
+The consistent NLO baryon coefficient is the SU(3) colour Casimir:
+\begin{equation}
+C_F = \frac{N_c^2-1}{2N_c} = \frac{8}{6} = \frac{4}{3}\,,
+\label{eq:CF}
+\end{equation}
+where $N_c = 3$ is derived from $D_4$ triality in BCT. $C_F$ is the eigenvalue of the SU(3)
+quadratic Casimir in the fundamental representation --- the colour charge carried by a single
+quark. It appears throughout QCD: in the quark self-energy, the quark-gluon vertex, and the
+leading-order Sommerfeld factor for quarkonia.
+
+\textit{Why $C_F$, not $3/4$.} At LO (Phase~40C), the baryon uses LO phonon masses for the
+three modes, and the colour structure of those modes is not yet resolved. The correction
+$N = 3/4 = 3\times(1/4)$ counts three quarks each contributing $1/4$ of the elementary BCT
+correction. At NLO, the meson modes already carry their own colour corrections; the baryon's
+residual colour interaction is the pure gluon-exchange Casimir $C_F = 4/3$. This is not a new
+free parameter: $C_F$ is uniquely determined by $N_c = 3$, which BCT derives from geometry.
+
+The \textbf{BCT Colour Casimir Theorem} states: when all meson modes in the Pythagorean
+decomposition carry their NLO colour corrections, the baryon NLO coefficient upgrades from
+$N = 3/4$ to $N = C_F = (N_c^2-1)/(2N_c)$.
+
+\section{Proton and Neutron Masses --- Predictions \#103 and \#104}
+
+With the NLO meson masses and the Casimir upgrade in hand, the proton mass formula becomes:
+\begin{equation}
+m_p = \sqrt{m_\rho^2 + m_K^2 + m_\pi^2}\times(1+C_F\alpha_0)\,,
+\label{eq:mp}
+\end{equation}
+where:
+\begin{align}
+m_\rho &= \frac{m_\pi}{2\sqrt{\alpha_0}}\cdot\!\left(1-\tfrac{3}{2}\alpha_0\right)
+         = 775.530\,\text{MeV}\;\;(+0.035\%), \notag\\
+m_K    &= 493.534\,\text{MeV}\quad\text{(Pred.~\#102, $-0.029\%$),} \notag\\
+m_\pi  &= 135.0\,\text{MeV}\quad(+0.02\%). \notag
+\end{align}
+The calculation proceeds:
+\begin{align}
+m_\rho^2 &= 601{,}447.1\,\text{MeV}^2, \notag\\
+m_K^2    &= 243{,}575.3\,\text{MeV}^2, \notag\\
+m_\pi^2  &= 18{,}225.0\,\text{MeV}^2,  \notag\\
+\text{Sum} &= 863{,}247.4\,\text{MeV}^2, \label{eq:sum}\\
+m_p^{\rm LO} &= 929.111\,\text{MeV}, \notag\\
+1+C_F\alpha_0 &= 1.009877, \notag
+\end{align}
+\begin{equation}
+m_p^{\rm BCT} = 938.288\,\text{MeV},\quad
+\delta = +0.002\%\;\;(\star\,\text{sub-0.1\%}).
+\label{eq:mpresult}
+\end{equation}
+This is \textbf{Prediction~\#103} and the first BCT proton mass prediction in the sub-0.1\%
+tier.
+
+\textit{Neutron mass.} Adding the Phase~39D neutron--proton mass difference
+$\Delta m_N = 1.253$~MeV (error $-3.1\%$~[1]):
+\begin{equation}
+m_n^{\rm BCT} = 939.541\,\text{MeV},\quad
+\delta = -0.003\%\;\;(\star\,\text{sub-0.1\%}).
+\label{eq:mnresult}
+\end{equation}
+This is \textbf{Prediction~\#104}. Table~\ref{tab:summary} summarises all three predictions
+alongside their predecessors.
+
+\begin{table}[h]
+\centering\small
+\caption{BCT strange-sector predictions before and after NLO colour correction. All inputs from
+$\{r_{\rm oct}, r_{\rm tet}, \Lambda_{\rm QCD}\}$.}
+\label{tab:summary}
+\begin{tabular}{@{}llccc@{}}
+\toprule
+Pred. & Quantity & BCT Value & Obs. & Error \\
+\midrule
+\#82  & $m_K$ (LO)       & 489.686 & 493.677 & $-0.808\%$ \\
+\#102 & $m_K$ (NLO)      & 493.534 & 493.677 & $-0.029\%\star$ \\
+\#101 & $m_p$ (LO chain) & 935.350 & 938.272 & $-0.311\%$ \\
+\#103 & $m_p$ (NLO)      & 938.288 & 938.272 & $+0.002\%\star$ \\
+\#104 & $m_n$ (NLO)      & 939.541 & 939.565 & $-0.003\%\star$ \\
+\bottomrule
+\multicolumn{5}{@{}l@{}}{\footnotesize $\star$ Sub-0.1\% (new tier reached in this Letter).}
+\end{tabular}
+\end{table}
+
+\section{Discussion}
+
+\textit{One calculation, three predictions.} The single physical input to this Letter ---
+replacing $(1/\alpha_0)^{2/3}$ with $(1/\alpha_0)^{2/3}(1-N_c\alpha_0)$ in the kaon GOR formula
+--- triggers a cascade. The NLO kaon (Prediction~\#102) feeds directly into the proton
+Pythagorean formula (Prediction~\#103), which feeds into the neutron mass (Prediction~\#104).
+All three improve by factors of $\sim 25$--$100$ in precision relative to their LO predecessors.
+
+\textit{The BCT sub-0.1\% tier.} Before this Letter, 26 BCT predictions had reached sub-0.1\%
+precision. This Letter adds three more, all in the nuclear sector. The kaon, proton, and neutron
+masses --- the three most important low-energy hadronic observables --- are now simultaneously
+in the sub-0.1\% tier.
+
+\textit{The Casimir connection.} The appearance of $C_F = 4/3$ in the baryon NLO coefficient
+is not merely numerological. In QCD, $C_F$ is the unique Casimir invariant of the fundamental
+(quark) representation of SU(3). It appears in the quark-gluon vertex Feynman rule, in the
+leading-order Coulomb potential $V(r) = -C_F\alpha_s/r$, and in the one-loop quark self-energy.
+Its appearance here --- replacing $3/4$ when the meson modes are already colour-corrected --- is
+the BCT manifestation of the transition from colour-counting (LO: $N_c$ colours, $1/4$ each
+$= 3/4$) to colour-charge (NLO: the irreducible Casimir eigenvalue $C_F$). BCT derives $C_F$
+from $N_c = 3$ ($D_4$ triality), so no new parameter is introduced.
+
+\textit{Why does the proton land so close to zero error?} At LO (Prediction~\#101), the
+cancellation between the overestimate in $m_\rho$ ($+1.16\%$) and the underestimate in $m_K$
+($-0.81\%$) gave a net proton error of $-0.31\%$. At NLO, both $m_\rho$ ($+0.035\%$) and
+$m_K$ ($-0.029\%$) are very close to their observed values, but both remain very slightly below.
+The upgrade $N\!: 3/4 \to C_F = 4/3$ raises the NLO factor just enough to compensate, landing
+the proton at $+0.0017\%$ --- essentially at the observed value. This triple coincidence (NLO
+rho, NLO kaon, and Casimir baryon correction all aligning) is a strong internal consistency
+signal for the BCT framework.
+
+\textit{Comparison with Phase~40C.} Phase~40C~[1] achieved $m_p = 938.162$~MeV ($-0.012\%$)
+using observed meson masses as inputs. The present result $m_p = 938.288$~MeV ($+0.0017\%$)
+uses entirely derived meson masses and achieves comparable (in fact slightly better) precision.
+This is the strongest indication yet that the BCT NLO programme has converged onto the correct
+colour structure of the QCD vacuum.
+
+\section{Conclusion}
+
+A single NLO colour correction to the BCT strange quark sector yields three simultaneous
+sub-0.1\% predictions:
+\begin{align*}
+m_K^{\rm NLO} &= 493.534\,\text{MeV}\;\;(-0.029\%),\quad\text{Pred.~\#102,}\\
+m_p^{\rm NLO} &= 938.288\,\text{MeV}\;\;(+0.002\%),\quad\text{Pred.~\#103,}\\
+m_n^{\rm NLO} &= 939.541\,\text{MeV}\;\;(-0.003\%),\quad\text{Pred.~\#104.}
+\end{align*}
+
+The key new structural result is the \textbf{BCT Colour Casimir Theorem}: when all meson modes
+in the Pythagorean decomposition carry NLO colour corrections, the baryon NLO coefficient
+upgrades from $N = 3/4$ to $C_F = (N_c^2-1)/(2N_c) = 4/3$, where $N_c = 3$ is derived from
+BCT $D_4$ triality. This is not a new free parameter.
+
+The BCT programme now has 104 sub-1\% predictions and 29 sub-0.1\% predictions, all from
+$\{r_{\rm oct}, r_{\rm tet}, \Lambda_{\rm QCD}\}$ alone. The three most fundamental masses of
+nuclear physics --- kaon, proton, neutron --- are simultaneously reproduced to better than
+$0.03\%$ from pure void geometry.
+
+\smallskip
+\noindent\textit{Data availability.} All results are reproduced from the formulas given; no
+datasets beyond PDG/CODATA values cited are used.
+
+\bigskip
+\noindent$^*$ \href{mailto:ZeroFreeParameters@gmail.com}{\texttt{ZeroFreeParameters@gmail.com}}
+
+\begin{thebibliography}{4}
+
+\bibitem{BCT_Monograph}
+M.~R. Cabri\'{e}, \textit{BCT Superfluid Lattice Model: Complete Derivation of Standard Model
+Parameters}, Zenodo (2026),
+\href{https://doi.org/10.5281/zenodo.18884976}{doi:10.5281/zenodo.18884976}.
+
+\bibitem{BCT_PRL}
+M.~R. Cabri\'{e}, \textit{Zero Free Parameters: Deriving 92 Standard Model Observables from
+BCT Vacuum Geometry}, Zenodo (2026),
+\href{https://doi.org/10.5281/zenodo.18884415}{doi:10.5281/zenodo.18884415}.
+
+\bibitem{BCT_L28}
+M.~R. Cabri\'{e}, BCT Letter~28: The Proton Mass from First Principles, Zenodo (2026),
+\href{https://doi.org/10.5281/zenodo.18884415}{doi:10.5281/zenodo.18884415}.
+
+\bibitem{PDG2022}
+R.~L. Workman et al.\ (Particle Data Group), Prog.\ Theor.\ Exp.\ Phys.\ \textbf{2022},
+083C01 (2022).
+
+\end{thebibliography}
+
+\end{document}

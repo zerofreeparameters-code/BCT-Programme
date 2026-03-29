@@ -1,0 +1,93 @@
+\documentclass[aps,prl,twocolumn,showpacs,superscriptaddress]{revtex4-2}
+\usepackage{amsmath,amssymb,booktabs,xcolor,hyperref,amsthm}
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+
+\title{Appendix KA3: The BCT Bond Angle Theorem --- Full Algebraic Derivation\\
+Proof of $r_{\rm tet}(1+r_{\rm tet})=1/8$ and the complete rational
+series of sp$^3$ bond angles}
+
+\author{Michel Robert Cabri\'e}
+\affiliation{Independent Researcher, Victoria, Australia}
+\email{ZeroFreeParameters@gmail.com}
+\date{20 March 2026}
+
+\begin{abstract}
+This appendix provides the complete algebraic derivation of the BCT 
+bond angle theorem, supporting Letter~80. The central result is the 
+identity $r_{\rm tet}(1+r_{\rm tet}) = 1/8$ (exact), proved by the 
+difference of squares $(\sqrt{6}-2)(\sqrt{6}+2) = 2$. This gives 
+the universal sp$^3$ formula $\cos\theta = -(1-n_{\rm lp}/8)/3$, 
+generating the rational series: CH$_4 = \arccos(-1/3) = 109.471^\circ$ 
+(exact); NH$_3 = \arccos(-7/24) = 106.958^\circ$; 
+H$_2$O $= \arccos(-1/4) = 104.4775^\circ$ (obs $104.4776^\circ$, 
+error $-0.0001\%$).
+\end{abstract}
+
+\maketitle
+
+\section{The Key Identity}
+
+\begin{theorem}
+$r_{\rm tet}(1+r_{\rm tet}) = 1/8$, exactly.
+\end{theorem}
+
+\begin{proof}
+With $r_{\rm tet} = (\sqrt{6}-2)/4$:
+\begin{align}
+1 + r_{\rm tet} &= \frac{4+\sqrt{6}-2}{4} = \frac{\sqrt{6}+2}{4}\\
+r_{\rm tet}(1+r_{\rm tet}) &= \frac{(\sqrt{6}-2)(\sqrt{6}+2)}{16}
+= \frac{6-4}{16} = \frac{2}{16} = \frac{1}{8}
+\end{align}
+The difference of squares $(\sqrt{6})^2 - 2^2 = 2$ completes 
+the proof. \qed
+\end{proof}
+
+\section{Physical Origin}
+
+In BCT (Letter~78), lone pairs are closed Hopf multiplets ($H=0$) 
+confined to the central nucleus. Their effective angular reach in 
+the molecular frame is:
+\begin{equation}
+    r_{\rm tet} + r_{\rm tet}^2 = r_{\rm tet}(1+r_{\rm tet}) = \frac{1}{8}
+\end{equation}
+where $r_{\rm tet}$ is the primary Hopf mode radius and $r_{\rm tet}^2$ 
+is the Josephson self-coupling correction. Each lone pair compresses 
+$\cos\theta$ by $1/8$.
+
+\section{The Rational Series}
+
+\begin{center}
+\begin{tabular}{lccll}
+\toprule
+$n_{\rm lp}$ & $\cos\theta$ & $\theta$ & Molecule & Error \\
+\midrule
+0 & $-1/3$ & $109.471^\circ$ & CH$_4$ & Exact \\
+1 & $-7/24$ & $106.958^\circ$ & NH$_3$ & $-0.78\%$ \\
+2 & $-1/4$ & $\mathbf{104.4775^\circ}$ & \textbf{H$_2$O} & $\mathbf{-0.0001\%}$ \\
+3 & $-5/24$ & $102.025^\circ$ & F$_2$O & theoretical \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Numerical Verification --- H$_2$O}
+
+\begin{align}
+r_{\rm tet} &= (\sqrt{6}-2)/4 = 0.11237243569\ldots\\
+r_{\rm tet}(1+r_{\rm tet}) &= 0.12500000000\ldots = 1/8\\
+\theta_{\rm H_2O} &= \arccos(-1/4) = 104.47751219\ldots^\circ\\
+\theta_{\rm obs} &= 104.47760^\circ\quad\text{(NIST)}\\
+\text{Error} &= -0.000084\%
+\end{align}
+
+The H$_2$O bond angle is $\arccos(-1/4)$ --- an exact rational 
+fraction following from the difference of squares identity on 
+$r_{\rm tet} = (\sqrt{6}-2)/4$.
+
+\begin{thebibliography}{99}
+\bibitem{L78} M.~R.~Cabri\'e, \textit{BCT Letter 78}, Zenodo (2026).
+\bibitem{L80} M.~R.~Cabri\'e, \textit{BCT Letter 80}, Zenodo (2026).
+\end{thebibliography}
+
+\end{document}

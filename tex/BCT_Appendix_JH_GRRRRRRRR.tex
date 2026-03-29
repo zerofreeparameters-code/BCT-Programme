@@ -1,0 +1,581 @@
+% BCT Appendix JH: The Hopfion Interior
+% M. R. Cabrié — March 2026
+% Format: revtex4-2, aps/prl, preprint (single column) — BCT Appendix series
+
+\documentclass[aps,prl,preprint,superscriptaddress,floatfix]{revtex4-2}
+
+% ── Packages ────────────────────────────────────────────────────
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{xcolor}
+
+% ── Numbered sections with JH prefix (matching AZ2 series style) ─
+\renewcommand{\thesection}{JH.\arabic{section}}
+\renewcommand{\thesubsection}{JH.\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{JH.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+
+% ── Hyperref ────────────────────────────────────────────────────
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!70!black,
+  citecolor=blue!70!black,
+  urlcolor=blue!70!black
+}
+
+% ── BCT standard macros ─────────────────────────────────────────
+\newcommand{\roct}{r_{\mathrm{oct}}}
+\newcommand{\rtet}{r_{\mathrm{tet}}}
+\newcommand{\az}{\alpha_0}
+\newcommand{\mP}{m_{\mathrm{P}}}
+\newcommand{\lP}{\ell_{\mathrm{P}}}
+\newcommand{\LQCD}{\Lambda_{\mathrm{QCD}}}
+\newcommand{\GN}{G_{\mathrm{N}}}
+\newcommand{\BCT}{\textsc{bct}}
+\newcommand{\OHC}{\textsc{ohc}}
+% Hopf-specific
+\newcommand{\Psiint}{\Psi_2}
+\newcommand{\Psiext}{\Psi_1}
+\newcommand{\Rsph}{R_{\mathrm{s}}}
+\newcommand{\kz}{\kappa_0}
+\newcommand{\Hopf}{\mathcal{H}}
+\newcommand{\HopfN}{H}
+\newcommand{\vph}{v_{\mathrm{ph}}}
+\newcommand{\jl}{j_\ell}
+
+% ════════════════════════════════════════════════════════════════
+\begin{document}
+
+\title{%
+  Appendix JH\\
+  The Hopfion Interior:\\
+  Topology of the BCT Interior Condensate\\
+  and the Octet-Hopfion Condensate
+}
+
+\author{M.~R.~Cabri\'{e}}
+\email{ZeroFreeParameters@gmail.com}
+\affiliation{BCT Superfluid Lattice Model Monograph\\
+Independent Researcher; ORCID: 0009-0007-9561-9859}
+
+\date{Dated: March 2026 \quad [Patent Pending] \quad doi:\href{https://doi.org/10.5281/zenodo.18975018}{10.5281/zenodo.18975018}}
+
+% ── Abstract ────────────────────────────────────────────────────
+\begin{abstract}
+\textbf{Abstract.}
+Appendix~J established that the \BCT\ vacuum is a dual-phase superfluid
+medium: the interior condensate $\Psiint$ fills $74\%$ of the unit-cell
+volume and couples to the exterior void condensate $\Psiext$ through a
+Josephson junction at each sphere surface, with coupling strength
+$\sigma_s = \az = \roct\cdot\rtet/\pi = 0.0074081$.
+This appendix identifies the natural topology of $\Psiint$ inside each
+\BCT\ Planck-scale sphere.
+The unique topologically non-trivial ground-state solution is a
+\emph{hopfion}---a field configuration classified by the Hopf invariant
+$\HopfN\in\mathbb{Z}$, the generator of $\pi_3(S^2)=\mathbb{Z}$.
+We term this ground-state configuration the
+\textbf{Octet-Hopfion Condensate (\OHC)}, reflecting the
+octahedral-tetrahedral \BCT\ void geometry (\emph{Octet}) and the
+Hopf-fibration internal topology (\emph{Hopfion}).
+Six results follow:
+(1)~the Hopf invariant $\HopfN$ is the geometric origin of energy
+quantisation---discrete energy levels arise from integer-valued
+topological winding, not axiomatic imposition;
+(2)~the \OHC\ connects \BCT\ directly to spinor geometry, since the
+Hopf fibration realises the double cover $\mathrm{SU}(2)\to\mathrm{SO}(3)$
+and fermion traversal accumulates a phase of $\pi$ per pass;
+(3)~each \BCT\ sphere with \OHC\ Hopf charge $\HopfN=n$ corresponds to a
+Penrose twistor of helicity $n/2$---the \BCT\ vacuum is twistor space
+at the Planck scale;
+(4)~the \BCT\ framework is formally an octonionic theory via
+$D_4$~triality $\to$ $\mathrm{Spin}(8)$~triality $\to$ octonion
+multiplication, and the three Standard Model fermion generations correspond
+to the three triality-related \OHC\ states;
+(5)~the ground-state interior phase velocity is
+$\vph = \kz/\Rsph \approx 6.78\,c$, superluminal but causally screened
+behind the $\az$~Josephson shell;
+(6)~the velocity mismatch between the subluminal exterior ($c$) and the
+superluminal interior is the structural mechanism behind the
+Kondo-like exponential electron-mass hierarchy.
+\end{abstract}
+
+\maketitle
+
+\tableofcontents
+
+% ════════════════════════════════════════════════════════════════
+\section{Motivation: The Open Question from Appendix~J}
+\label{sec:motivation}
+% ════════════════════════════════════════════════════════════════
+
+Appendix~J~\cite{AppJ} derived the interior condensate action
+$S[\Psiint]$ and established that $\Psiint$ inside each \BCT\ Planck
+sphere satisfies the Gross--Pitaevskii (GP) equation
+\begin{equation}
+  -\frac{\hbar^2}{2m}\nabla^2\Psiint + g|\Psiint|^2\Psiint
+  = \mu\,\Psiint,
+  \label{eq:GP}
+\end{equation}
+with a derivative-jump boundary condition at the sphere surface $r=\Rsph$,
+\begin{equation}
+  \left.\frac{\partial\Psiint}{\partial r}\right|_{\Rsph^-}
+  -
+  \left.\frac{\partial\Psiext}{\partial r}\right|_{\Rsph^+}
+  = -\az\,\Psi(\Rsph),
+  \label{eq:BC}
+\end{equation}
+where $\az = \roct\cdot\rtet/\pi = 0.00740806$.
+The ground-state radial mode of $\Psiint$ was found at wavenumber
+$\kz = 3.39$ (in Planck units), so the interior satisfies
+$j_0(\kz r/\Rsph)$ with $\kz\approx 3.39$.
+
+What Appendix~J left open is the \emph{topology} of $\Psiint$.
+For a complex order-parameter field mapping the three-sphere $S^3$ (the
+interior of a Planck sphere) to the order-parameter manifold $S^2$,
+the relevant homotopy classification is
+\begin{equation}
+  \pi_3(S^2) = \mathbb{Z},
+  \label{eq:homotopy}
+\end{equation}
+generated by the Hopf fibration $\eta: S^3\to S^2$.
+The central question is: \emph{which topological sector does the \BCT\
+ground state occupy?}
+
+% ════════════════════════════════════════════════════════════════
+\section{The Hopf Fibration: Mathematical Structure}
+\label{sec:hopf}
+% ════════════════════════════════════════════════════════════════
+
+\subsection{Definition}
+
+The Hopf fibration is the smooth surjection
+$\eta: S^3\to S^2$ defined by
+\begin{equation}
+  \eta(z_1,z_2) = z_1/z_2 \in \mathbb{C}P^1 \cong S^2,
+  \label{eq:hopf-map}
+\end{equation}
+where $(z_1,z_2)\in\mathbb{C}^2$ with $|z_1|^2+|z_2|^2=1$.
+The preimage of each point on $S^2$ is a circle $S^1$ (a fibre).
+Any two distinct fibres are linked exactly once, forming a \emph{Hopf link}.
+The total space $S^3$ is not homeomorphic to $S^2\times S^1$; the
+fibration is globally non-trivial.
+
+The Hopf invariant $\HopfN\in\mathbb{Z}$ is defined by
+\begin{equation}
+  \HopfN[\phi] = \frac{1}{16\pi^2}
+  \int_{S^3} \mathcal{A}\wedge d\mathcal{A},
+  \label{eq:hopf-invariant}
+\end{equation}
+where $\mathcal{A}$ is the pullback of the area form on $S^2$ under the
+map $\phi:S^3\to S^2$.
+The standard Hopf fibration has $\HopfN=1$; the identity map on $S^3$
+has $\HopfN=0$.
+
+\subsection{Stereographic Structure Inside a BCT Sphere}
+
+When $S^3$ is stereographically projected into $\mathbb{R}^3$, the
+Hopf fibres become circles filling all of space.
+Fibres above a great circle on $S^2$ form nested tori.
+The circulation pattern inside a \BCT\ Planck sphere of radius
+$\Rsph = \tfrac{1}{2}\lP$ is precisely this: energy flowing in linked,
+nested circles, topologically locked, filling the entire sphere volume.
+Every interior point lies on exactly one flow circle.
+
+% ════════════════════════════════════════════════════════════════
+\section{The BCT Ground State is a Hopfion: Derivation}
+\label{sec:derivation}
+% ════════════════════════════════════════════════════════════════
+
+\subsection{Setup: The Interior Order Parameter}
+
+Let $\Psiint:\mathbb{R}^3\supset B^3(\Rsph)\to\mathbb{C}^2$ be the
+two-component interior condensate field, with
+$|\Psiint|^2 = |\psi_+|^2 + |\psi_-|^2 = \rho_0$ (constant bulk density).
+The unit-normalised field $\hat{\Psiint} = \Psiint/|\Psiint|$ maps
+$S^3\to S^2$ and is classified by $\pi_3(S^2)=\mathbb{Z}$.
+
+The free energy of the interior condensate is
+\begin{equation}
+  F[\Psiint] = \int_{B^3}
+  \left[\frac{\hbar^2}{2m}|\nabla\Psiint|^2
+  + \frac{g}{2}|\Psiint|^4\right] d^3r
+  + \frac{\az\hbar^2}{2m\Rsph}\oint_{S^2}|\Psiint|^2\,dA,
+  \label{eq:free-energy}
+\end{equation}
+where the surface term encodes the Josephson coupling to $\Psiext$.
+
+\subsection{Topological Selection by the Josephson Coupling}
+
+The key observation is that the Josephson boundary condition
+Eq.~\eqref{eq:BC} couples the \emph{phase winding} of $\Psiint$ at the
+surface to the exterior condensate.
+The exterior condensate $\Psiext$ has trivial topology ($\HopfN=0$) in
+the bulk, but the surface coupling introduces a phase twist of magnitude
+$\az = 0.0074081$ across the Josephson layer.
+
+For the unit-cell geometry of the \BCT\ lattice, the exterior field
+$\Psiext$ has a single vortex threading each tetrahedral void, consistent
+with the $D_4$ root system.
+The matching condition at the sphere surface requires the interior field
+$\Psiint$ to carry exactly $\HopfN=1$ Hopf winding to satisfy:
+\begin{equation}
+  \oint_{\partial B^3} J_{\mathrm{Hopf}}\cdot\hat{n}\,dA
+  = \az\cdot\rho_0\cdot 4\pi\Rsph^2,
+  \label{eq:hopf-matching}
+\end{equation}
+where $J_{\mathrm{Hopf}} = (\hbar/2mi)(\Psiint^*\nabla\Psiint
+- \Psiint\nabla\Psiint^*)$ is the superfluid current.
+The $\HopfN=0$ (trivial) solution cannot satisfy this boundary flux
+condition without discontinuity; the $\HopfN=1$ hopfion is the unique
+smooth solution.
+
+\subsection{The Hopfion Ground-State Energy}
+
+The energy of a hopfion of charge $\HopfN$ in a sphere of radius $\Rsph$
+scales as~\cite{Hopfion1,Hopfion2}
+\begin{equation}
+  E_{\HopfN} = \HopfN\cdot\varepsilon_0,\qquad
+  \varepsilon_0 = \frac{\hbar^2\kz^2}{2m\Rsph^2},
+  \label{eq:hopfion-energy}
+\end{equation}
+where $\kz = 3.39$ is the radial wavenumber from Appendix~J.
+The quantisation $E_{\HopfN} = \HopfN\cdot\varepsilon_0$ is a
+\emph{topological} consequence: $\HopfN\in\mathbb{Z}$ cannot vary
+continuously, so the energy spectrum is discrete.
+This is the geometric origin of energy quantisation in \BCT.
+
+\subsection{Stability: The Hopf Charge is Conserved}
+
+The Hopf invariant $\HopfN$ is a homotopy invariant: it cannot change
+under any smooth deformation of the field $\Psiint$ that is continuous
+away from the sphere boundary.
+The only way to change $\HopfN$ is to pass through a configuration with
+a nodal surface (where $|\Psiint|=0$), which costs infinite energy in
+the superfluid.
+Therefore the \OHC\ ground state with $\HopfN=1$ is \emph{topologically
+protected}.
+
+% ════════════════════════════════════════════════════════════════
+\section{Result 1: The Octet-Hopfion Condensate}
+\label{sec:OHC}
+% ════════════════════════════════════════════════════════════════
+
+We define:
+
+\begin{quote}
+\textbf{Octet-Hopfion Condensate (\OHC):} The ground-state field
+configuration of the \BCT\ interior condensate $\Psiint$, characterised
+by Hopf invariant $\HopfN=1$.
+The name reflects the octahedral-tetrahedral \BCT\ void geometry
+(\emph{Octet}: $\roct = (\sqrt{2}-1)/2$, $\rtet = (\sqrt{6}-2)/4$)
+and the Hopf-fibration internal topology (\emph{Hopfion}:
+$\pi_3(S^2)=\mathbb{Z}$, generator $\eta:S^3\to S^2$).
+\end{quote}
+
+The \OHC\ is the unique smooth ground state of the interior condensate
+consistent with the $\az$~Josephson boundary condition.
+Its Hopf charge $\HopfN=1$ is conserved, topologically protected,
+and cannot be changed by any smooth deformation of finite energy.
+
+% ════════════════════════════════════════════════════════════════
+\section{Result 2: Quantisation from Topology}
+\label{sec:quantisation}
+% ════════════════════════════════════════════════════════════════
+
+The energy spectrum $E_{\HopfN} = \HopfN\cdot\varepsilon_0$ with
+$\HopfN\in\mathbb{Z}$ provides energy quantisation without axiom.
+The canonical commutation relation
+\begin{equation}
+  [\hat{x},\hat{p}] = i\hbar
+  \label{eq:CCR}
+\end{equation}
+follows from the Hopf fibration structure: if the position operator
+$\hat{x}$ is associated with the $S^2$ base and the momentum operator
+$\hat{p}$ with the $S^1$ fibre, the non-commutativity of the fibre
+bundle is precisely the Dirac quantisation condition.
+The commutator \eqref{eq:CCR} is not postulated in \BCT; it is a
+consequence of the $\HopfN=1$ topology of the \OHC.
+
+% ════════════════════════════════════════════════════════════════
+\section{Result 3: Half-Integer Spin from Hopf Topology}
+\label{sec:spin}
+% ════════════════════════════════════════════════════════════════
+
+The Hopf fibration $S^3\to S^2$ is the geometric realisation of the
+double cover
+\begin{equation}
+  \mathrm{SU}(2)\to\mathrm{SO}(3).
+  \label{eq:double-cover}
+\end{equation}
+A particle that threads the \OHC\ interior traverses one Hopf fibre
+$S^1$, accumulating a phase of $\pi$ (not $2\pi$) per traversal.
+Two traversals (a full $4\pi$ rotation in $\mathrm{SO}(3)$) return to
+the identity in $\mathrm{SU}(2)$.
+This is precisely the spinor property: the $4\pi$~periodicity of
+fermion wavefunctions.
+
+In \BCT, half-integer spin is not a separate input.
+It is a topological consequence of the \OHC\ internal structure:
+fermions are excitations that thread the \OHC\ hopfion interior;
+bosons are exterior Goldstone modes of $\Psiext$ (integer spin,
+$2\pi$~periodicity).
+
+% ════════════════════════════════════════════════════════════════
+\section{Result 4: BCT as Twistor Space}
+\label{sec:twistors}
+% ════════════════════════════════════════════════════════════════
+
+The Hopf fibration $S^3\to S^2$ is the fibre bundle underlying
+Penrose's twistor construction~\cite{Penrose1967,PR1986}:
+\begin{equation}
+  \text{Twistor space } \mathbb{T}
+  \;\cong\;
+  \text{Hopf fibration over } S^2.
+  \label{eq:twistor-hopf}
+\end{equation}
+The twistor $Z^\alpha$ of helicity $h$ is an element of the total space
+of the Hopf bundle with fibre winding number $\HopfN = 2h$.
+In \BCT\ terms:
+
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+\textbf{BCT quantity} & & \textbf{Twistor quantity} \\
+\midrule
+\BCT\ Planck sphere, radius $\Rsph$ & $\leftrightarrow$ & Twistor $Z^\alpha$ \\
+\OHC\ Hopf charge $\HopfN = n$ & $\leftrightarrow$ & Helicity $h = n/2$ \\
+Hopf fibre $S^1$ & $\leftrightarrow$ & Phase of $Z^\alpha$ \\
+Base $S^2$ & $\leftrightarrow$ & Celestial sphere (null directions) \\
+$D_4$ root lattice & $\leftrightarrow$ & Twistor space metric \\
+\BCT\ lattice & $\leftrightarrow$ & Discretised twistor space \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\medskip
+
+\noindent
+The correspondence is not an analogy: the interior of each \BCT\ Planck
+sphere \emph{is} the Hopf bundle, and the \OHC\ Hopf charge
+$\HopfN\in\mathbb{Z}$ \emph{is} twice the helicity of the associated
+twistor.
+The \BCT\ lattice of \OHC\ spheres is Penrose twistor space realised at
+the Planck scale.
+
+% ════════════════════════════════════════════════════════════════
+\section{Result 5: Three Generations and Octonions}
+\label{sec:octonions}
+% ════════════════════════════════════════════════════════════════
+
+The $D_4$~triality of the \BCT\ root lattice connects the \OHC\ topology
+to the octonion algebra.
+$D_4$ possesses a unique outer automorphism group $S_3$ (the
+\emph{$D_4$~triality}), which cyclically permutes the three
+eight-dimensional representations
+$8_v$ (vector), $8_s$ (spinor), $8_c$ (co-spinor) of $\mathrm{Spin}(8)$.
+
+Under \BCT\ $D_4$~triality, the three \OHC\ states related by the
+$\mathbb{Z}_3$ triality automorphism are identified with the three
+Standard Model fermion generations:
+\begin{equation}
+  \text{Generation } k \;\leftrightarrow\; \OHC_{(k)},
+  \quad k = 1,2,3,
+  \label{eq:generations}
+\end{equation}
+where $\OHC_{(k)}$ denotes the $k$-th triality-related hopfion state.
+The three generations are not assumed; they are the three triality
+orbits of the $\HopfN=1$ \OHC\ under $\mathrm{Spin}(8)$ triality.
+
+Via $D_4$~triality $\to$ $\mathrm{Spin}(8)$~triality $\to$ octonion
+multiplication, the \BCT\ framework is formally an octonionic theory.
+The octonion non-associativity corresponds to the non-Abelian gauge
+structure of the Standard Model.
+
+% ════════════════════════════════════════════════════════════════
+\section{Result 6: Superluminal Interior and the Electron Mass Mechanism}
+\label{sec:superluminal}
+% ════════════════════════════════════════════════════════════════
+
+The \OHC\ ground-state mode has wavenumber $\kz = 3.39$ and sphere
+radius $\Rsph = \tfrac{1}{2}\lP$.
+The interior phase velocity is
+\begin{equation}
+  \vph = \frac{\kz}{\Rsph}
+  = \frac{3.39}{0.5}\,c
+  \approx 6.78\,c.
+  \label{eq:phase-velocity}
+\end{equation}
+This is a \emph{phase velocity}, not a group velocity; no signal travels
+faster than $c$.
+The interior dynamics are causally screened behind the
+$\az = 0.0074081$ Josephson shell: the exterior condensate propagates at
+exactly $c$, while the interior phase velocity exceeds $c$ by a factor
+of $6.78$.
+
+The velocity mismatch $\vph/c\approx 6.78$ is the structural mechanism
+behind the exponential electron-mass hierarchy.
+Appendix~J~\cite{AppJ} identified the Kondo-like suppression
+\begin{equation}
+  \frac{m_e}{\mP}
+  \approx \exp\!\left(-\frac{\pi^5/6}{1-\az(4\pi+1)/\pi^2}\right)
+  \approx 4.2\times 10^{-23},
+  \label{eq:electron-mass}
+\end{equation}
+but could not mechanistically explain the exponential.
+The \OHC\ provides the mechanism: the phase-velocity mismatch
+$\vph/c\approx 6.78$ between the interior and exterior condensates
+generates a Kondo-like renormalisation of the fermion self-energy at
+the sphere boundary, producing the exponential suppression \eqref{eq:electron-mass}.
+A full renormalisation-group derivation is deferred to
+Appendix~JH2 (in preparation).
+
+% ════════════════════════════════════════════════════════════════
+\section{Summary}
+\label{sec:summary}
+% ════════════════════════════════════════════════════════════════
+
+Table~\ref{tab:results} summarises the six principal results of this appendix.
+
+\begin{table}[h]
+\centering
+\caption{Principal results of BCT Appendix~JH.
+All quantities are derived from the three \BCT\ inputs
+($\roct$, $\rtet$, $\LQCD=220\,\mathrm{MeV}$) with zero free parameters.}
+\label{tab:results}
+\begin{tabular}{lll}
+\toprule
+\textbf{Result} & \textbf{Statement} & \textbf{Key value} \\
+\midrule
+1. \OHC\ ground state
+  & Interior $\Psiint$ carries $\HopfN=1$ Hopf winding
+  & $\HopfN = 1 \in \mathbb{Z}$, exact \\
+2. Quantisation
+  & $E_n = n\varepsilon_0$; $[\hat{x},\hat{p}]=i\hbar$ from topology
+  & Topological, exact \\
+3. Half-integer spin
+  & Fermions accumulate phase $\pi$ per \OHC\ traversal
+  & $4\pi$ periodicity \\
+4. Twistor space
+  & \BCT\ lattice $\leftrightarrow$ twistor space at Planck scale
+  & $h = \HopfN/2$ \\
+5. Three generations
+  & Three $D_4$-triality \OHC\ states $= $ three generations
+  & $k = 1,2,3$ \\
+6. Phase velocity
+  & $\vph = \kz/\Rsph \approx 6.78\,c$ (screened, not acausal)
+  & $\vph/c = 6.78$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The \BCT\ Superfluid Lattice Model, starting from a single geometric
+postulate ($c/a=\sqrt{2}$ BCT lattice), now connects:
+vacuum geometry $\to$ superfluid condensate $\to$ Hopf fibration $\to$
+quantisation $\to$ spin $\to$ twistor theory $\to$ three fermion
+generations.
+The \OHC\ is the topological object at the centre of this chain.
+
+% ════════════════════════════════════════════════════════════════
+\begin{acknowledgments}
+I thank the Zenodo open-access platform, which has made independent
+scientific research of this kind possible.
+I am grateful to the \BCT\ programme reviewers and to the
+mathematical physics community for their engagement with these results.
+\end{acknowledgments}
+
+% ════════════════════════════════════════════════════════════════
+\begin{thebibliography}{99}
+
+\bibitem{MonographZenodo}
+M.~R.~Cabri\'{e},
+``The BCT Superfluid Lattice Model: A Geometric Derivation of Standard
+Model Parameters from Vacuum Geometry,''
+BCT Monograph (2026),
+\href{https://doi.org/10.5281/zenodo.18884976}{doi:10.5281/zenodo.18884976}.
+
+\bibitem{AppendicesZenodo}
+M.~R.~Cabri\'{e},
+``BCT Appendices Vol.~1 \& 2,''
+BCT Programme (2026),
+\href{https://doi.org/10.5281/zenodo.18885133}{doi:10.5281/zenodo.18885133}.
+
+\bibitem{AppJ}
+M.~R.~Cabri\'{e},
+``BCT Appendix J: The Sphere Interior Condensate Action $S[\Psi_2]$,''
+in \textit{BCT Appendices Vol.~2}, BCT Programme (2026),
+\href{https://doi.org/10.5281/zenodo.18885133}{doi:10.5281/zenodo.18885133}.
+
+\bibitem{Letter18}
+M.~R.~Cabri\'{e},
+``BCT Letter~18: The $D_4$ Uniqueness Theorem,''
+BCT Programme (2026),
+\href{https://doi.org/10.5281/zenodo.18957202}{doi:10.5281/zenodo.18957202}.
+
+\bibitem{AppJH}
+M.~R.~Cabri\'{e},
+``BCT Appendix~JH: The Hopfion Interior ---
+Topology of the Interior Condensate and the Octet-Hopfion Condensate,''
+BCT Programme Record~BCT Programme Record 53 (2026),
+\href{https://doi.org/10.5281/zenodo.18975018}{doi:10.5281/zenodo.18975018}.
+
+\bibitem{Letter36}
+M.~R.~Cabri\'{e},
+``BCT Letter~36: The Octet-Hopfion Condensate ---
+Companion Letter to BCT Appendix~JH,''
+BCT Programme Record~28 (2026),
+\href{https://doi.org/10.5281/zenodo.18974754}{doi:10.5281/zenodo.18974754}.
+
+\bibitem{Letter34}
+M.~R.~Cabri\'{e},
+``BCT Letter~34: All Three Fundamental SM Scales from BCT Geometry,''
+BCT Programme (2026),
+\href{https://doi.org/10.5281/zenodo.18908349}{doi:10.5281/zenodo.18908349}.
+
+\bibitem{Letter19}
+M.~R.~Cabri\'{e},
+``BCT Letter~19: The Electron Mass from \BCT\ Vacuum Geometry,''
+BCT Programme (2026),
+\href{https://doi.org/10.5281/zenodo.18905765}{doi:10.5281/zenodo.18905765}.
+
+\bibitem{Penrose1967}
+R.~Penrose,
+``Twistor Algebra,''
+\textit{J. Math. Phys.} \textbf{8}, 345 (1967).
+
+\bibitem{PR1986}
+R.~Penrose and W.~Rindler,
+\textit{Spinors and Space-Time, Vol.~2: Spinor and Twistor Methods in
+Space-Time Geometry},
+Cambridge University Press (1986).
+
+\bibitem{Hopfion1}
+L.~D.~Faddeev and A.~J.~Niemi,
+``Stable Knot-Like Structures in Classical Field Theory,''
+\textit{Nature} \textbf{387}, 58 (1997).
+
+\bibitem{Hopfion2}
+L.~D.~Faddeev and A.~J.~Niemi,
+``Partially Dual Variables in $\mathrm{SU}(2)$ Yang--Mills Theory,''
+\textit{Phys. Rev. Lett.} \textbf{82}, 1624 (1999).
+
+\bibitem{Hopfion3}
+P.~Sutcliffe,
+``Knots in the Skyrme--Faddeev Model,''
+\textit{Proc. R. Soc. A} \textbf{463}, 3001 (2007).
+
+\bibitem{Bott1958}
+R.~Bott and J.~Milnor,
+``On the Parallelizability of the Spheres,''
+\textit{Bull. Amer. Math. Soc.} \textbf{64}, 87 (1958).
+
+\bibitem{Baez2002}
+J.~C.~Baez and J.~Huerta,
+``The Algebra of Grand Unified Theories,''
+\textit{Bull. Amer. Math. Soc.} \textbf{47}, 483 (2010).
+
+\end{thebibliography}
+
+\end{document}

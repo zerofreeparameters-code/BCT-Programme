@@ -1,0 +1,215 @@
+% ================================================================
+% BCT LETTER 60
+% Dark PeVatrons as OHC Hopf Defects
+% ================================================================
+\documentclass[twocolumn,prl,showpacs,preprintnumbers,amsmath,amssymb]{revtex4-1}
+\usepackage{amsmath,amssymb,amsfonts,booktabs,hyperref}
+\begin{document}
+
+\title{BCT Superfluid Lattice Model --- Letter 60\\
+Dark PeVatrons as OHC Hopf Defects:\\
+A BCT Mechanism for Unidentified Ultra-High-Energy\\
+Gamma-Ray Sources}
+
+\author{Michel Robert Cabri\'e}
+\email{ZeroFreeParameters@gmail.com}
+\affiliation{Independent Researcher, Victoria, Australia\\
+ORCID: 0009-0007-9561-9859}
+\date{March 2026}
+
+\begin{abstract}
+The LHAASO collaboration has identified ultra-high-energy gamma-ray
+sources above 100\,TeV with no counterpart at any other wavelength ---
+so-called ``dark PeVatrons.'' The absence of radio, optical, and X-ray
+emission is anomalous for all standard acceleration mechanisms (pulsar
+wind nebulae, supernova remnants, stellar bow shocks), which require
+magnetic fields producing synchrotron radiation as a necessary
+by-product. We propose a BCT explanation: the dark PeVatron is a
+macroscopic Hopf topological defect in the Octet-Hopfion Condensate
+(OHC) vacuum. Particle acceleration proceeds via the Madelung quantum
+pressure gradient --- a charge-independent force that produces no
+synchrotron emission by construction. The BCT framework predicts a
+spectral index
+\begin{equation*}
+\Gamma = 2 + \alpha_0\,(r_\mathrm{oct}/r_\mathrm{tet})\,(4/\pi) = 2.017,
+\end{equation*}
+an acceleration quantum $E_{D_4} = \Lambda_\mathrm{QCD}\times S_{D_4}
+= 11.22\,\mathrm{GeV}$ per unit Hopf winding, and zero electromagnetic
+counterpart. Zero free parameters.
+\end{abstract}
+
+\maketitle
+
+\section{The Dark PeVatron Problem}
+
+The LHAASO (Large High Altitude Air Shower Observatory) collaboration
+has detected ultra-high-energy gamma-ray emission above 100\,TeV from
+a growing catalogue of galactic sources~\cite{LHAASO21}. Among these,
+a subset are classified as ``dark PeVatrons'': sources with significance
+above $8\sigma$ in gamma-rays but no identified counterpart at radio,
+optical, X-ray, or infrared wavelengths.
+
+The archetypal example is LASSO J2108+5157~\cite{LHAASO22} --- detected
+at $9.5\sigma$ in the 25--100\,TeV band and $8.5\sigma$ above 100\,TeV,
+point-like at the instrument PSF, and completely dark at all other
+wavelengths.
+
+Standard PeVatron mechanisms all require electromagnetic by-products.
+The dark PeVatron has none. BCT provides a mechanism in which this is
+not merely possible but required.
+
+\section{OHC Hopf Defects}
+
+The BCT vacuum ground state is the Octet-Hopfion Condensate (OHC):
+a field configuration $\Psi_2: S^3 \to S^2$ with Hopf invariant
+$H\in\mathbb{Z}$, classified by $\pi_3(S^2)=\mathbb{Z}$
+\cite{BCT_L45,BCT_JH}.
+
+The OHC is governed by the Gross-Pitaevskii equation:
+\begin{equation}
+i\hbar\,\partial_t\Psi = \left[-\frac{\hbar^2}{2m}\nabla^2 + g|\Psi|^2\right]\Psi.
+\end{equation}
+
+A Hopf defect of winding $H$ is a topological soliton where $\Psi\to 0$
+at the core. It is stable against decay: the tunnelling amplitude to
+$H=0$ is $\exp(-S_\mathrm{Hopf})\approx 10^{-2312}$~\cite{BCT_L45}.
+The radial healing profile satisfies:
+\begin{equation}
+f'' + \frac{1}{r}f' - \frac{H^2}{r^2}f + (1-f^2)f = 0,
+\end{equation}
+with $f(r)\to(r/\xi)^{|H|}$ near the core and $f\to 1$ at large $r$.
+The inner and outer radii of the acceleration zone are set by the
+BCT void geometry:
+\begin{equation}
+\frac{R_\mathrm{inner}}{R_\mathrm{outer}} = \frac{r_\mathrm{tet}}{r_\mathrm{oct}}
+= \frac{1}{1.8430}.
+\end{equation}
+
+\section{The Madelung Acceleration Mechanism}
+
+Writing $\Psi = \sqrt{\rho}\,e^{i\theta}$, the Madelung transformation
+separates the GP equation into a continuity equation and quantum Euler
+equation:
+\begin{equation}
+m\,\frac{Dv}{Dt} = -\nabla(g\rho) +
+\frac{\hbar^2}{2m}\nabla\!\left[\frac{\nabla^2\!\sqrt{\rho}}{\sqrt{\rho}}\right].
+\end{equation}
+
+The second term is the quantum pressure (Bohm potential). Near a Hopf
+defect core, where $\rho$ varies from 0 to $\rho_0$, this force
+dominates and is:
+\begin{itemize}
+\item \emph{Charge-independent}: acts on protons, neutrons, and
+electrons equally. No Lorentz force. No cyclotron motion.
+\item \emph{Synchrotron-free}: no magnetic field, no deflection,
+no radio or X-ray emission.
+\item \emph{Long-range}: extends continuously from $R_\mathrm{inner}$
+to $R_\mathrm{outer}$.
+\end{itemize}
+
+The only electromagnetic output is gamma-rays from hadronic $pp$
+interactions at the defect boundary. This is exactly the observed
+phenomenology.
+
+\section{Spectral Index from the Bogoliubov Spectrum}
+
+The Bogoliubov excitation spectrum on the Hopf defect background,
+with the $\tanh^{2|H|}$ core profile, gives an injection spectrum
+$dN/dE \propto E^{-\Gamma}$ with:
+\begin{equation}
+\Gamma_\mathrm{BCT} = 2 + \alpha_0\,\frac{r_\mathrm{oct}}{r_\mathrm{tet}}
+\cdot\frac{4}{\pi},
+\end{equation}
+where $\alpha_0 = r_\mathrm{oct}\times r_\mathrm{tet}/\pi$ is the BCT
+crystal coupling constant. Computing:
+\begin{align}
+\alpha_0 &= 0.0074081, \\
+r_\mathrm{oct}/r_\mathrm{tet} &= 1.8430, \\
+\Gamma_\mathrm{BCT} &= 2 + 0.0074081\times 1.8430\times(4/\pi) \notag\\
+&= \mathbf{2.017}.
+\end{align}
+
+Observed PeVatron spectral indices cluster in the range $2.0$--$2.4$.
+BCT places the dark PeVatron at the soft end, consistent with
+point-like hard-spectrum sources. Zero free parameters.
+
+\section{The D4 Instanton Acceleration Quantum}
+
+The D4 instanton action $S_{D_4} = \pi^5/6 = 51.003$ sets a natural
+energy quantum for Hopf defect excitations:
+\begin{equation}
+E_{D_4} = \Lambda_\mathrm{QCD}\times S_{D_4} = 220\,\mathrm{MeV}
+\times 51.003 = 11.22\,\mathrm{GeV}.
+\end{equation}
+
+A defect of winding $H$ carries total acceleration potential:
+\begin{equation}
+E_\mathrm{total}(H) = H\times E_{D_4}\times
+\left(1 - \frac{r_\mathrm{tet}}{r_\mathrm{oct}}\right)
+= H\times 11.22\,\mathrm{GeV}\times 0.4574.
+\end{equation}
+
+For $H\sim 2\times 10^4$, $E_\mathrm{total}\sim 100$\,TeV. These
+winding numbers are physically reasonable for galactic-scale OHC
+structures: a defect threading 1\,pc at Planck lattice spacing
+contains $\sim 10^{100}$ sites, and $H\sim 10^4$ represents fractional
+winding density $\sim 10^{-96}$.
+
+\section{Open Calculation: $H_\mathrm{opt}$ and $E_\mathrm{max}$}
+
+The quantitative prediction of $E_\mathrm{max}$ requires $H_\mathrm{opt}$
+from the OHC Green's function $G_H(r,r')$ on the Hopf defect background.
+The full calculation minimises:
+\begin{equation}
+E(H) = H^2\,E_\mathrm{core} - H\,E_\mathrm{boundary},
+\end{equation}
+subject to galactic boundary conditions, where $E_\mathrm{core}$ and
+$E_\mathrm{boundary}$ are determined by the Bogoliubov operator
+$\mathcal{L}_H$ on the curved condensate background.
+
+This is a priority open calculation in the BCT programme, directly
+analogous to the OHC density-of-states gap in the black hole entropy
+calculation (Letter 51~\cite{BCT_L51}). The mechanism and spectral
+index are established; the quantitative $E_\mathrm{max}$ awaits the
+full Bogoliubov treatment.
+
+\section{Predictions Summary}
+
+\begin{table}[h]
+\centering
+\caption{BCT predictions for dark PeVatrons.}
+\begin{tabular}{lll}
+\toprule
+Observable & BCT Prediction & Status \\
+\midrule
+Spectral index $\Gamma$ & $2.017$ (0 params) & Falsifiable \\
+EM counterpart & None & Confirmed \checkmark \\
+Accel.\ quantum & $11.22$\,GeV & Spectral break \\
+Max energy $E_\mathrm{max}$ & $H_\mathrm{opt}\times 5.13$\,GeV & Open \\
+Radio polarisation & Zero & Testable \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Conclusion}
+
+Dark PeVatrons are naturally explained in BCT as macroscopic Hopf
+topological defects in the OHC vacuum. The Madelung quantum pressure
+gradient accelerates particles without magnetic deflection, producing
+gamma-rays while remaining dark at all wavelengths. The spectral index
+\begin{equation}
+\Gamma = 2 + \alpha_0\,(r_\mathrm{oct}/r_\mathrm{tet})\,(4/\pi)
+= \mathbf{2.017}
+\end{equation}
+follows from BCT geometry with zero free parameters.
+
+\begin{thebibliography}{99}
+\bibitem{LHAASO21} LHAASO Collaboration, Science \textbf{373}, 425 (2021).
+\bibitem{LHAASO22} LHAASO Collaboration, Phys.\ Rev.\ Lett.\ \textbf{128}, 051102 (2022).
+\bibitem{BCT_L45} M.~R.~Cabri\'e, BCT Letter 45 (2026), Zenodo.
+\bibitem{BCT_JH}  M.~R.~Cabri\'e, BCT Appendix JH (2026), Zenodo:18975018.
+\bibitem{BCT_L51} M.~R.~Cabri\'e, BCT Letter 51 (2026), Zenodo.
+\bibitem{BCT_PRL} M.~R.~Cabri\'e, BCT PRL Letter (2026), Zenodo:18884415.
+\end{thebibliography}
+
+\end{document}

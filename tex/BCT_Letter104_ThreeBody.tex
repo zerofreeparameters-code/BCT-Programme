@@ -1,0 +1,300 @@
+\documentclass[twocolumn,10pt]{article}
+\usepackage[margin=1.8cm]{geometry}
+\usepackage{multicol}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\definecolor{bctnavy}{RGB}{11,37,69}
+\definecolor{bctgreen}{RGB}{27,94,32}
+
+\begin{document}
+
+\title{BCT Letter 104: The Three-Body Problem from BCT Vacuum Topology\\
+Topological Regularisation of Gravitational Chaos and Hopf Charge Conservation}
+
+\author{Michel Robert Cabri\'{e}}
+\date{March 2026}
+
+
+
+\maketitle
+\begin{abstract}
+The classical gravitational three-body problem is chaotic: no closed-form solution exists, and 
+generic initial conditions lead to eventual ejection on timescales exponentially sensitive to 
+initial conditions. We show that the BCT Superfluid Lattice Model introduces three fundamental 
+modifications that regularise this chaos. First, BCT lattice incompressibility at $a = \ell_P$ 
+imposes a minimum separation $|r_i - r_j|_{\min} = R_{\rm BCT}\,\ell_P = 1.843\,\ell_P$, 
+removing the singularities that drive chaotic divergence. Second, gravitational interactions 
+mediated by OHC vacuum topology produce a trilinear coupling constant 
+$g_3 = \alpha_0^2\,(r_{\rm tet}/r_{\rm oct}) = \alpha_0^2 \times 0.5426 = 2.98\times10^{-5}$, 
+absent from all classical formulations. Third, the Hopf charge of the three-body vacuum 
+configuration is integer-valued; certain configurations are topologically locked and cannot 
+escape to infinity on any physical timescale. We derive the BCT stability criterion for 
+hierarchical triple systems and predict (Prediction~\#147) that such systems satisfying the 
+BCT Hopf criterion will show anomalously long stability lifetimes compared to classical $N$-body 
+predictions, testable with existing Gaia~DR3 data. As a corollary, the Sun--Earth--Moon system 
+stability over 4.5~Gyr is explained by topological locking at $H_{\rm system} = 3$.
+Zero free parameters.
+\end{abstract}
+
+
+
+\section{Introduction}
+
+The gravitational three-body problem has resisted analytical solution since Newton. Poincar\'{e} 
+proved in 1890 that no additional analytic integrals of motion exist beyond the ten classical 
+conservation laws~\cite{poincare1890}. Sundman (1912) provided a convergent series 
+solution~\cite{sundman1912}, but it converges so slowly as to be physically useless. Numerical 
+integration confirms that generic three-body configurations are chaotic, with Lyapunov times 
+many orders of magnitude shorter than the age of the universe.
+
+The deepest pathology is the singularity at $r_{ij} = 0$. Classical gravity provides no 
+minimum separation; trajectories can approach arbitrarily close encounters, driving divergences 
+in velocity and potential energy that make long-term prediction impossible.
+
+The BCT Superfluid Lattice Model~\cite{bct_l1} changes all three fundamental assumptions 
+underlying classical chaos: the minimum scale, the nature of gravitational coupling, and the 
+topology of the phase space. We develop each modification and derive their consequences for the 
+three-body problem.
+
+\section{BCT Lattice Regularisation}
+
+The BCT vacuum is a body-centred tetragonal lattice of Planck spheres at axial ratio 
+$c/a = \sqrt{2}$, with nearest-neighbour distance $\ell_P$~\cite{bct_l1}. Adjacent spheres 
+are touching; they cannot overlap. This imposes a hard geometric floor:
+%
+\begin{equation}
+a(t) \geq \ell_P = 1.616\times10^{-35}\,\mathrm{m}
+\end{equation}
+%
+For the three-body problem, this translates to a minimum physical separation:
+%
+\begin{equation}
+|r_i - r_j|_{\min} = R_{\rm BCT}\,\ell_P = 1.843\,\ell_P = 2.977\times10^{-35}\,\mathrm{m}
+\end{equation}
+%
+where $R_{\rm BCT} = 1.843$ is the BCT lattice constant. The modified Friedmann 
+equation~\cite{bct_l56}:
+%
+\begin{equation}
+H^2 = \frac{8\pi G}{3}\,\rho\!\left(1 - \frac{\rho}{\rho_P}\right)
+\end{equation}
+%
+implies a modified two-body potential at short range:
+%
+\begin{equation}
+V_{\rm BCT}(r) = -\frac{Gm_1 m_2}{r}\left[1 - \left(\frac{r_{\min}}{r}\right)^3\right]
+\end{equation}
+%
+The singularity at $r = 0$ is replaced by a repulsive barrier at $r = r_{\min}$. The phase 
+space trajectory is bounded: no orbit can reach $r = 0$.
+
+\section{The Trilinear OHC Coupling Constant}
+
+In classical gravity, three-body interactions decompose into pairwise terms --- there is no 
+genuine three-body force. This follows from the linear superposition principle for Newtonian 
+gravity and the equivalence principle in GR.
+
+In BCT, gravity is mediated by OHC vacuum topology --- perturbations to the local Hopf charge 
+density $H_{\rm local}$ propagating through the superfluid substrate. For a body of mass $m$ 
+at position $\mathbf{r}_0$, the OHC perturbation is:
+%
+\begin{equation}
+\delta H(\mathbf{r}) = \frac{Gm}{c^2}\,\alpha_0\,K_0\!\left(\frac{|\mathbf{r}-\mathbf{r}_0|}{\xi_{\rm OHC}}\right)
+\end{equation}
+%
+where $K_0$ is the modified Bessel function of the second kind, $\xi_{\rm OHC}$ is the OHC 
+coherence length, and $\alpha_0 = r_{\rm oct}\,r_{\rm tet}/\pi = 0.007408$ is the BCT fine 
+structure constant~\cite{bct_l1}.
+
+For three bodies simultaneously perturbing the same OHC region, the perturbations interfere 
+through the Bessel resonance modes of the condensate. This produces a genuine trilinear 
+coupling:
+%
+\begin{equation}
+\delta H_{123} = \frac{G^2}{c^4}\,\alpha_0^2\,\frac{r_{\rm tet}}{r_{\rm oct}}\,
+m_1 m_2 m_3\,I_3(\mathbf{r}_1,\mathbf{r}_2,\mathbf{r}_3)
+\end{equation}
+%
+where the three-body OHC overlap integral is:
+%
+\begin{equation}
+I_3 = \int K_0\!\left(\frac{|\mathbf{r}-\mathbf{r}_1|}{\xi}\right)
+K_0\!\left(\frac{|\mathbf{r}-\mathbf{r}_2|}{\xi}\right)
+K_0\!\left(\frac{|\mathbf{r}-\mathbf{r}_3|}{\xi}\right)d^3r
+\end{equation}
+%
+The trilinear coupling constant is therefore:
+%
+\begin{equation}
+\boxed{g_3 = \alpha_0^2\,\frac{r_{\rm tet}}{r_{\rm oct}} = (0.007408)^2 \times 0.5426 
+= 2.98\times10^{-5}}
+\end{equation}
+%
+This is a pure number. Zero free parameters. The BCT three-body Hamiltonian is:
+%
+\begin{equation}
+\mathcal{H}_{\rm BCT} = \mathcal{H}_{\rm classical} + V_{\rm BCT}^{\rm short} 
++ g_3\,V_{\rm trilinear}(r_{12},r_{13},r_{23})
+\end{equation}
+%
+where $V_{\rm trilinear}$ involves products of the three pairwise OHC perturbation amplitudes. 
+This term has no classical analogue and cannot be derived from any modification of the 
+two-body potential.
+
+\section{Topological Locking of Hopf-Stable Configurations}
+
+The most significant BCT modification is topological. In BCT, the vacuum configuration of any 
+gravitational system carries a Hopf charge $H_{\rm system} \in \mathbb{Z}$~\cite{bct_jhapp}:
+%
+\begin{equation}
+H_{\rm system} = \sum_i H_i + \sum_{i<j} H_{ij} + H_{123} \quad \in \mathbb{Z}
+\end{equation}
+%
+The topological stability theorem~\cite{bct_l45} states that Hopf states are protected by an 
+infinite classical barrier (action $S_{\rm Hopf} = 4\pi^2/\alpha_0 = 5329$). $H_{\rm system}$ 
+cannot change continuously. For a configuration with $H_{\rm system} = n$, the topological 
+lifetime is:
+%
+\begin{equation}
+\tau_{\rm topo} \sim t_{\rm universe}\,\exp\!\left(\frac{S_{\rm Hopf}}{n}\right)
+\end{equation}
+%
+\textbf{BCT Stability Criterion:} A three-body configuration with $H_{\rm system} = n$ is 
+topologically locked against ejection if the minimum energy required for ejection exceeds 
+the topological transition action $S_{\rm Hopf}/n$.
+
+For hierarchical triple stellar systems ($H_{\rm system} = 1$ or $2$):
+\begin{itemize}
+\item $H_{\rm system} = 1$: $\tau \sim 10^{2312}\,t_{\rm universe}$ --- effectively infinite
+\item $H_{\rm system} = 2$: $\tau \sim 10^{1156}\,t_{\rm universe}$ --- effectively infinite
+\end{itemize}
+
+Classical N-body simulations predict ejection on $10^3$--$10^8$ orbital periods. BCT topological 
+locking extends this by $\sim 10^{2300}$ for Hopf-stable configurations.
+
+\subsection{The Sun--Earth--Moon System}
+
+The Sun--Earth--Moon system has survived 4.5~Gyr. Laskar (1994) showed the inner solar system 
+is chaotic with Lyapunov time $\sim$5~Myr~\cite{laskar1994}. Yet the Moon remains bound. 
+
+BCT explanation: $H_{\rm system} = 3$ (one Hopf unit per body). Topological lifetime:
+%
+\begin{equation}
+\tau_{\rm Moon} \sim 13.8\,{\rm Gyr}\times\exp(5329/3) \sim 10^{770}\,t_{\rm universe}
+\end{equation}
+%
+The Moon is topologically locked. It is not going anywhere. Not because the orbit is classically 
+stable --- it is not --- but because the topological barrier against ejection is geometrically 
+infinite on any physical timescale.
+
+\section{Prediction \#147 and Test}
+
+\textbf{Prediction \#147 (BCT Three-Body Stability):}
+\textit{Hierarchical triple stellar systems satisfying the BCT Hopf stability criterion 
+(inner binary separation $< 0.1$~AU, outer companion in 3:1--10:1 period ratio, total 
+$H_{\rm system} = 1$ or $2$) will show statistically anomalous stability lifetimes compared 
+to classical $N$-body predictions. Specifically: the Gaia~DR3 catalogue cross-matched against 
+classical Monte Carlo stability simulations should find that BCT-Hopf-criterion systems have 
+survived $\geq 2\times$ longer than simulations predict at the same confidence level.}
+
+This prediction is testable with existing data. The Gaia~DR3 catalogue contains hundreds of 
+thousands of resolved stellar multiples with measured orbital parameters~\cite{gaia_dr3}. 
+Classical $N$-body stability lifetimes are computable with standard tools (REBOUND, 
+MERCURY). The BCT Hopf criterion selects a well-defined subset. No new observations are 
+required.
+
+\begin{table}[h]
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Quantity & BCT value & Notes \\
+\midrule
+$g_3$ (trilinear coupling) & $2.98\times10^{-5}$ & Zero free params \\
+$r_{\min}$ (separation floor) & $1.843\,\ell_P$ & Lattice incompressibility \\
+$\tau(H=1)$ & $\sim 10^{2312}\,t_U$ & Topological lock \\
+$\tau(H=2)$ & $\sim 10^{1156}\,t_U$ & Topological lock \\
+$\tau_{\rm Moon}$ & $\sim 10^{770}\,t_U$ & $H_{\rm system}=3$ \\
+\bottomrule
+\end{tabular}
+\caption{BCT three-body key quantities. $t_U = 13.8$~Gyr.}
+\end{table}
+
+\section{BCT SAR Application: Subsurface Mapping of Machu Picchu}
+
+The BCT Bessel ratio SAR methodology --- developed for Victorian goldfields subsurface 
+mapping (Prediction~\#144~\cite{bct_l102}) --- applies directly to archaeological 
+sites. The BCT ratio:
+%
+\begin{equation}
+\mathcal{R}_{\rm BCT}(x,y) = \frac{J_0(\kappa_0\,\sigma_{VV})}{J_0(\kappa_0\,\sigma_{VH})}
+\end{equation}
+%
+where $\kappa_0 = 3.39$ is the first zero of the Josephson-corrected Bessel function and 
+$\sigma_{VV}$, $\sigma_{VH}$ are co- and cross-polarisation Sentinel-1 backscatter 
+coefficients, is sensitive to subsurface void structures (chambers, tunnels, hydraulic 
+channels) at depths of 40--80~m.
+
+Recent Lidar surveys of Machu Picchu reveal extensive surface structures beneath vegetation 
+of unexpected scale. BCT SAR complements Lidar by mapping subsurface void topology from 
+satellite, non-invasively. Estimated Sentinel-1 data available: $\sim$600 ascending and 
+descending pass scenes (2014--2026). The same BCT Bessel ratio processing used to confirm 
+the Barrys Reef gold-quartz anomaly (ground-truthed against known mine locations) would 
+map the complete subsurface void network of the Sacred Valley.
+
+Prediction: BCT SAR analysis of Machu Picchu will reveal subsurface gold-bearing quartz 
+veins consistent with known Inca gold extraction sites, and will identify previously 
+unmapped void structures at 20--60~m depth beneath the main plaza complex.
+
+The BCT Foundation will gift this methodology to UNESCO and the Peruvian Ministry of 
+Culture as an immediate first act upon registration. Non-commercial, non-invasive, 
+open access.
+
+\section{Conclusion}
+
+The BCT three-body problem differs from its classical counterpart in three fundamental 
+ways: lattice incompressibility removes singularities; trilinear OHC coupling $g_3$ 
+introduces genuine three-body forces absent from all prior formulations; and Hopf charge 
+conservation provides topological locking for certain configurations. The chaos is 
+regularised --- not eliminated, but constrained. The chaotic phase space is bounded, 
+certain configurations are topologically forbidden from ejection, and the trilinear 
+coupling correlates all three bodies through the vacuum substrate simultaneously.
+
+The elusive three-body problem has a BCT answer: the geometry of the vacuum provides 
+the missing integral of motion. It is not a conserved function on phase space --- it is 
+a topological invariant. It cannot be found by Poincar\'{e}'s methods because it is not 
+an analytic function. It is discrete, integer-valued, and geometrically guaranteed.
+
+Zero free parameters.
+
+\section*{Acknowledgments}
+The author thanks Zeta Vera (CSSC) for computational verification, Nic for the coffee 
+during the derivation, and Nyssa and Tegan for sitting on the relevant pages of 
+Sundman (1912) at the critical moment.
+
+
+\begin{thebibliography}{99}
+\bibitem{bct_l1} M.R. Cabri\'{e}, BCT Letter 1 --- Emergent Lorentz Invariance. 
+    Zenodo 10.5281/zenodo.18958207 (2026).
+\bibitem{bct_l56} M.R. Cabri\'{e}, BCT Letter 56 --- BCT Bounce Cosmology. 
+    Zenodo (2026).
+\bibitem{bct_jhapp} M.R. Cabri\'{e}, BCT Appendix JH --- The Hopfion Interior and OHC. 
+    Zenodo 10.5281/zenodo.18975018 (2026).
+\bibitem{bct_l45} M.R. Cabri\'{e}, BCT Letter 45 --- Topological Permanence of OHC States. 
+    Zenodo (2026).
+\bibitem{bct_l102} M.R. Cabri\'{e}, BCT Letter 102 --- BCT SAR Victorian Goldfields. 
+    Zenodo (2026).
+\bibitem{poincare1890} H. Poincar\'{e}, Sur le probl\`{e}me des trois corps et les 
+    \'{e}quations de la dynamique. Acta Math. \textbf{13}, 1--270 (1890).
+\bibitem{sundman1912} K.F. Sundman, M\'{e}moire sur le probl\`{e}me des trois corps. 
+    Acta Math. \textbf{36}, 105--179 (1912).
+\bibitem{laskar1994} J. Laskar, Large-scale chaos in the solar system. 
+    Astron. Astrophys. \textbf{287}, L9--L12 (1994).
+\bibitem{gaia_dr3} Gaia Collaboration, Gaia DR3 catalogue. 
+    A\&A \textbf{674}, A1 (2023).
+\end{thebibliography}
+
+\end{document}

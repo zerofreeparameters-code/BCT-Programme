@@ -1,0 +1,156 @@
+\documentclass[10pt,twocolumn]{article}
+
+\usepackage[margin=1.9cm,top=2.2cm,bottom=2.2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{times}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{parskip}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\titleformat{\section}{\normalfont\bfseries\small\centering}{}{0em}{}
+\titlespacing{\section}{0pt}{6pt}{3pt}
+
+\setlength{\columnsep}{0.5cm}
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{1em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\itshape BCT Superfluid Lattice Model --- Letter 25}
+\fancyhead[R]{\small\itshape March 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+\twocolumn[{%
+\begin{center}
+{\large\bfseries The Weinberg Angle to Sub-0.01\% from BCT Oblique Corrections:}\\[3pt]
+{\large\bfseries $\sin^2\theta_W = r_{\rm tet}^2/(r_{\rm oct}^2 + r_{\rm tet}^2)\,(1 + 9\alpha_0/4)$}\\[8pt]
+{\normalsize Michel Robert Cabri\'{e}$^{1,\,*}$}\\[2pt]
+{\small $^1$\textit{Independent Researcher;  ORCID: \href{https://orcid.org/0009-0007-9561-9859}{0009-0007-9561-9859}}}\\[2pt]
+{\small (Dated: March 2026)\quad BCT Letter 25}\\[6pt]
+\end{center}
+\begin{quotation}
+\small\noindent
+The weak mixing angle $\sin^2\theta_W$ is derived from BCT void geometry. The tree-level formula
+$\sin^2\theta_W^{(0)} = r_{\rm tet}^2/(r_{\rm oct}^2 + r_{\rm tet}^2) = 0.22744$ gives $-1.6\%$
+below the PDG on-shell value. The NLO oblique correction with universal BCT coefficient $N = 9/4$
+yields:
+\[
+  \sin^2\theta_W = \sin^2\theta_W^{(0)}\!\left(1 + \frac{9\alpha_0}{4}\right) = 0.231229\,,
+\]
+in agreement with the PDG value $0.23122(3)$ at $+0.004\%$ (Prediction \#99). The tree-level
+formula reveals that the Weinberg angle is the ratio of tetrahedral to total void areas in the
+BCT unit cell.
+\end{quotation}
+\smallskip
+{\small PACS: 12.15.Lk, 11.30.Qc, 12.10.-g, 12.15.-y}
+\vspace{6pt}
+}]
+
+\section{Introduction}
+
+In the BCT Superfluid Lattice Model~[3,\,4], electroweak symmetry breaking arises from the BCT
+void topology: the octahedral void hosts $\mathrm{SU}(2)_L$ gauge fields and the tetrahedral void
+hosts $\mathrm{U}(1)_Y$. The Weinberg angle is the ratio of these void coupling strengths.
+
+\section{Tree-Level Weinberg Angle}
+
+The geometric tree-level formula is:
+\begin{align}
+\sin^2\theta_W^{(0)}
+  &= \frac{r_{\rm tet}^2}{r_{\rm oct}^2 + r_{\rm tet}^2} \notag\\
+  &= \frac{(0.11237)^2}{(0.20711)^2 + (0.11237)^2}
+   = 0.22744\,.
+\label{eq:tree}
+\end{align}
+This is $-1.6\%$ below the PDG on-shell value, requiring an NLO correction.
+
+\section{NLO Oblique Correction}
+
+BCT NLO oblique corrections follow $O^{\rm NLO} = O^{(0)}(1 + N\alpha_0)$. For the Weinberg
+angle, the universal coefficient is $N = 9/4$:
+\begin{align}
+\sin^2\theta_W
+  &= \sin^2\theta_W^{(0)}\!\left(1 + \frac{9\alpha_0}{4}\right) \notag\\
+  &= 0.22744 \times 1.016668
+   = 0.231229\,.
+\label{eq:NLO}
+\end{align}
+
+\section{Prediction \#99}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{@{}lcc@{}}
+\toprule
+ & BCT & PDG~[1] \\
+\midrule
+$\sin^2\theta_W^{(0)}$ (tree) & 0.22744 & 0.23122(3) \\
+$\sin^2\theta_W^{(\rm NLO)}$  & 0.231229 & \\
+Error & $+0.004\%$ & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The BCT programme now counts 99 sub-1\% predictions from zero free parameters. The residual
+$+0.004\%$ ($+0.000009$ in $\sin^2\theta_W$) is at the level of two-loop electroweak corrections,
+within current experimental precision $\pm0.00003$.
+
+\section{The 9/4 Universality Class}
+
+The coefficient $N = 9/4$ belongs to a small set of universal BCT oblique coefficients:
+\begin{itemize}\setlength\itemsep{1pt}
+\item $N = 3/8$ --- deconfinement temperature $T_c$ (Letter~24 [6]); top quark NLO.
+\item $N = 9/4$ --- Weinberg angle; $\tau$ anomalous magnetic moment.
+\item $N = 4\alpha_0/\pi$ --- lepton hierarchy self-consistency (App.~AB).
+\end{itemize}
+The ratio $(9/4)/(3/8) = 6 = N_c!$ may reflect the structure of the BCT loop measure.
+
+\section{Conclusion}
+
+\begin{align}
+\sin^2\theta_W
+  &= \frac{r_{\rm tet}^2}{r_{\rm oct}^2 + r_{\rm tet}^2}
+    \left(1 + \frac{9\alpha_0}{4}\right) \notag\\
+  &= 0.231229\quad(+0.004\%).
+\label{eq:final}
+\end{align}
+
+Prediction \#99 from zero free parameters. The Weinberg angle is a direct consequence of the
+BCT void geometry.
+
+\bigskip
+\noindent$^*$ \href{mailto:ZeroFreeParameters@gmail.com}{\texttt{ZeroFreeParameters@gmail.com}}
+
+\begin{thebibliography}{6}
+
+\bibitem{PDG2022}
+R.~L. Workman et al.\ (PDG), Prog.\ Theor.\ Exp.\ Phys.\ \textbf{2022}, 083C01 (2022).
+
+\bibitem{ErlerFreitas2024}
+J.~Erler and A.~Freitas, PDG Electroweak Model Chapter (2024).
+
+\bibitem{BCT_PRL}
+M.~R. Cabri\'{e}, ``Zero Free Parameters\ldots'' \href{https://doi.org/10.5281/zenodo.18884415}{DOI:~10.5281/zenodo.18884415} (2026).
+
+\bibitem{BCT_Monograph}
+M.~R. Cabri\'{e}, ``The BCT Superfluid Lattice Model,'' \href{https://doi.org/10.5281/zenodo.18884976}{DOI:~10.5281/zenodo.18884976} (2026).
+
+\bibitem{BCT_StrongCP}
+M.~R. Cabri\'{e}, ``Geometric Resolution of the Strong CP Problem without an Axion,''
+\href{https://doi.org/10.5281/zenodo.18885628}{DOI:~10.5281/zenodo.18885628} (2026).
+
+\bibitem{BCT_L24}
+M.~R. Cabri\'{e}, BCT Letter~24 (2026).
+
+\end{thebibliography}
+
+\end{document}

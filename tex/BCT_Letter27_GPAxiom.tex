@@ -1,0 +1,193 @@
+\documentclass[10pt,twocolumn]{article}
+
+\usepackage[margin=1.9cm,top=2.2cm,bottom=2.2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{times}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{parskip}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\titleformat{\section}{\normalfont\bfseries\small\centering}{}{0em}{}
+\titlespacing{\section}{0pt}{6pt}{3pt}
+
+\setlength{\columnsep}{0.5cm}
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{1em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\itshape BCT Superfluid Lattice Model --- Letter 27}
+\fancyhead[R]{\small\itshape March 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+\twocolumn[{%
+\begin{center}
+{\large\bfseries Derivation of the Gross-Pitaevskii Condensate Axiom:}\\[3pt]
+{\large\bfseries Why the BCT Vacuum Is a Superfluid with a $|\Psi|^4$ Potential}\\[8pt]
+{\normalsize Michel Robert Cabri\'{e}$^{1,\,*}$}\\[2pt]
+{\small $^1$\textit{Independent Researcher;  ORCID: \href{https://orcid.org/0009-0007-9561-9859}{0009-0007-9561-9859}}}\\[2pt]
+{\small (Dated: March 2026)\quad BCT Letter 27}\\[6pt]
+\end{center}
+\begin{quotation}
+\small\noindent
+Every result of the BCT Superfluid Lattice Model rests on one foundational assumption: the QCD
+vacuum is described by a Gross-Pitaevskii (GP) order parameter $\Psi$ with a $|\Psi|^4$ potential.
+This axiom has been used but never derived. We derive it in three independent arguments.
+(i)~The BCT Bose-Hubbard ratio $t/U = 1$ exactly, placing BCT $\approx 40\times$ above the
+Mott-insulator-to-superfluid critical ratio $(t/U)_c \approx 0.025$ for $z = 8$. The superfluid
+phase is forced by BCT geometry. (ii)~Among all $|\Psi|^{2n}$ condensate potentials, only $n = 2$
+(the GP $|\Psi|^4$ form) produces the loop coefficient $C_n = N_{\rm gen} = 3$ required by
+$\alpha = \alpha_0(1 - 3\alpha_0)/(1 - \alpha_0)$. For $n \geq 3$ the error on $\alpha$ exceeds
+$4.5\%$. (iii)~$C_{4v}$ symmetry combined with time-reversal uniquely selects the $A_1$ (spin-0
+scalar) representation. Together these elevate the GP axiom to a theorem. One frontier remains
+open: why condensation occurs at all.
+\end{quotation}
+\smallskip
+{\small PACS: 03.75.Kk, 05.30.Jp, 11.10.-z, 04.60.-m}
+\vspace{6pt}
+}]
+
+\section{Introduction}
+
+The BCT Superfluid Lattice Model [1,\,2] derives \textbf{100 Standard Model observables} from
+three geometric inputs: $r_{\rm oct} = (\sqrt{2}-1)/2$, $r_{\rm tet} = (\sqrt{6}-2)/4$, and
+$\Lambda_{\rm QCD} = 220$~MeV. Every derivation rests on the GP Axiom: the QCD vacuum is a
+Planck-scale superfluid with $|\Psi|^4$ potential. Multiple strategic reviews identified this as
+the last unresolved postulate. This Letter derives it.
+
+\section{I.\; The BCT Bose-Hubbard Model}
+
+The BCT lattice is a bipartite tight-binding system with hopping amplitude $t = \alpha_0$ and
+coordination number $z = 8$ (App.~K of [1]). The Mott-insulator-to-superfluid transition in 3D
+occurs at [4]:
+\begin{equation}
+\left(\frac{t}{U}\right)_c \approx \frac{0.034}{z/6} \approx_{z=8} 0.025\,.
+\label{eq:MISFcrit}
+\end{equation}
+The GP equation of state fixes $\mu = t_{\rm kin}$, and the on-site interaction
+$U = gn_0 = \mu = t_{\rm kin}$ at the GP ground state. Therefore:
+\begin{equation}
+\frac{t}{U} = \frac{t_{\rm kin}}{U} = 1 \gg 0.025\,.
+\label{eq:tU}
+\end{equation}
+BCT lies $\approx 40\times$ above the MI-SF boundary. The superfluid phase is forced.
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+Quantity & BCT & MI-SF boundary \\
+\midrule
+$t/U$ & 1 (exact) & 0.025 \\
+Phase & Superfluid & --- \\
+Distance & $40\times$ & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{II.\; $|\Psi|^4$ Uniquely Selected by $\alpha$}
+
+For the $|\Psi|^{2n}$ potential family, the BCT bipartite loop coefficient is
+$C_n = n(n-1)\times 3/2$. For $\alpha = \alpha_0(1 - C_n\alpha_0)/(1 - \alpha_0)$ to agree
+with the observed $\alpha$, we need $C_n = N_{\rm gen} = 3$:
+\begin{equation}
+n(n-1)\times\frac{3}{2} = 3
+  \;\Longrightarrow\; n(n-1) = 2
+  \;\Longrightarrow\; n = 2\,.
+\label{eq:nselect}
+\end{equation}
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}cccc@{}}
+\toprule
+$n$ & Potential & $C_n$ & Error \\
+\midrule
+2 & $|\Psi|^4$ (GP) & 3  & $+0.0017\%$ \\
+3 & $|\Psi|^6$      & 9  & $-4.54\%$   \\
+4 & $|\Psi|^8$      & 18 & $-11.4\%$   \\
+5 & $|\Psi|^{10}$   & 30 & $-20.5\%$   \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Only $n = 2$ is consistent with $\alpha$ at sub-percent precision.
+
+\section{III.\; Scalar $\Psi$ from $C_{4v}$ and Time-Reversal}
+
+A condensate order parameter must satisfy: (i)~$\mathcal{T}^2\Psi = +\Psi$ (bosonic);
+(ii)~uniform ground state ($\mathbf{k} = 0$); (iii)~no spontaneous parity or $C_4$ breaking.
+
+Condition (i) eliminates the $E$ (spinor) representation ($\mathcal{T}^2 = -1$). Condition~(ii)
+eliminates $B_1, B_2$ (require $\mathbf{k} \neq 0$). Condition~(iii) eliminates $A_2$
+(parity-odd). The unique remaining representation is:
+\begin{equation}
+\Psi \in A_1 \;\iff\; \Psi \text{ is a spin-0 scalar.}
+\label{eq:A1}
+\end{equation}
+
+\section{IV.\; The One Open Frontier}
+
+The three arguments above derive what the condensate must be, given that condensation exists.
+They do not answer why condensation occurs at all. This question requires knowing the Planck-scale
+degrees of freedom from which the BCT condensate quanta are composed --- a ``BCT of BCT'' problem.
+It is the one frontier that points beyond BCT.
+
+\section{Conclusion}
+
+The GP Axiom is derived from three independent arguments using only existing BCT machinery:
+\begin{enumerate}\setlength\itemsep{1pt}
+\item $t/U = 1$ (exact) $\Rightarrow$ superfluid phase (BCT $40\times$ above MI-SF boundary).
+\item $n = 2$ uniquely $\Rightarrow$ $|\Psi|^4$ potential (all $n \geq 3$ give $> 4.5\%$ error on $\alpha$).
+\item $A_1$ representation uniquely $\Rightarrow$ scalar $\Psi$ ($C_{4v}$ + time-reversal).
+\end{enumerate}
+
+The BCT programme now has zero free postulates at the BCT level, completing a programme of
+\textbf{100 sub-1\% predictions} from zero free parameters. The sole remaining open question
+--- why condensation occurs at all --- belongs to whatever framework supersedes BCT.
+
+The extended derivation is in Appendix AZ7 of [1].
+
+\bigskip
+\noindent$^*$ \href{mailto:ZeroFreeParameters@gmail.com}{\texttt{ZeroFreeParameters@gmail.com}}
+
+\begin{thebibliography}{7}
+
+\bibitem{BCT_Monograph}
+M.~R. Cabri\'{e}, ``The BCT Superfluid Lattice Model: Complete Derivation of Standard Model
+Parameters from Vacuum Geometry,''
+\href{https://doi.org/10.5281/zenodo.18884976}{DOI:~10.5281/zenodo.18884976} (2026).
+
+\bibitem{BCT_PRL}
+M.~R. Cabri\'{e}, ``Zero Free Parameters\ldots''
+\href{https://doi.org/10.5281/zenodo.18884415}{DOI:~10.5281/zenodo.18884415} (2026).
+
+\bibitem{BCT_StrongCP}
+M.~R. Cabri\'{e}, ``Geometric Resolution of the Strong CP Problem without an Axion,''
+\href{https://doi.org/10.5281/zenodo.18885628}{DOI:~10.5281/zenodo.18885628} (2026).
+
+\bibitem{Fisher1989}
+M.~P.~A. Fisher, P.~B. Weichman, G.~Grinstein, D.~S. Fisher,
+Phys.\ Rev.\ B \textbf{40}, 546 (1989).
+
+\bibitem{Jaksch1998}
+D.~Jaksch, C.~Bruder, J.~I. Cirac, C.~W. Gardiner, P.~Zoller,
+Phys.\ Rev.\ Lett.\ \textbf{81}, 3108 (1998).
+
+\bibitem{Sachdev2011}
+S.~Sachdev, \textit{Quantum Phase Transitions}, 2nd ed.\ (Cambridge, 2011).
+
+\bibitem{Bogoliubov1947}
+N.~N. Bogoliubov, J.\ Phys.\ USSR \textbf{11}, 23 (1947).
+
+\end{thebibliography}
+
+\end{document}

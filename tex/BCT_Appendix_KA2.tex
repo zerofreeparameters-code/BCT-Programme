@@ -1,0 +1,95 @@
+\documentclass[aps,prl,twocolumn,showpacs,superscriptaddress]{revtex4-2}
+\usepackage{amsmath,amssymb,booktabs,xcolor,hyperref,amsthm}
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+
+\title{Appendix KA2: OHC Phase Memory and Morphic Coupling\\
+Derivation of the non-local phase imprint amplitude and the
+BCT Repetition Theorem}
+
+\author{Michel Robert Cabri\'e}
+\affiliation{Independent Researcher, Victoria, Australia}
+\email{ZeroFreeParameters@gmail.com}
+\date{20 March 2026}
+
+\begin{abstract}
+This appendix derives the OHC phase memory amplitude, the morphic 
+coupling constant, and the BCT Repetition Theorem from the OHC 
+condensate equations, supporting Letter~79 (Morphic Resonance and 
+the OHC Condensate). When a Hopf transition occurs at position 
+$\mathbf{x}_0$, a phase perturbation $\delta\varphi = \alpha_0 
+\times (\ell_P/r)$ propagates at $v_{\rm ph} = 6.78c$ throughout 
+the global OHC condensate. After $n$ repetitions of pattern $P$, 
+the accumulated phase $\Phi_n = n\alpha_0(\ell_P/r_0)$ reduces the 
+energy barrier by $\Delta E_n = \hbar\omega_{\rm OHC}\cdot\alpha_0^2
+\cdot n$. This is the BCT Repetition Theorem.
+\end{abstract}
+
+\maketitle
+
+\section{OHC Phase Perturbation}
+
+When Hopf transition $H=n\to0$ occurs at $\mathbf{x}_0$, the 
+released topological phase propagates as a spherical wave in the 
+global OHC condensate:
+\begin{equation}
+    \delta\varphi(r,t) = \alpha_0 \cdot \frac{\ell_P}{r} 
+    \cdot f\!\left(t - \frac{r}{v_{\rm ph}}\right)
+\end{equation}
+where $\alpha_0 = 0.0074081$, $\ell_P = 1.616\times10^{-35}$~m, 
+$v_{\rm ph} = 6.78c$ (Letter~59), and $f$ is a causal response 
+function with $f(t<0)=0$. The amplitude falls as $1/r$ but never 
+reaches zero --- the condensate is globally connected.
+
+\section{Propagation Speed}
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Distance & Travel time & Note \\
+\midrule
+1~m (lab) & $4.9\times10^{-10}$~s & Instantaneous \\
+$6.4\times10^6$~m (Earth) & $3.1\times10^{-3}$~s & milliseconds \\
+$4.4\times10^{26}$~m (universe) & $\sim$45~yr & Global \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{The BCT Repetition Theorem}
+
+\begin{theorem}[BCT Repetition Theorem]
+Let topological pattern $P$ be established $n$ times in the OHC. 
+The accumulated phase imprint is:
+\begin{equation}
+    \Phi_n = n \cdot \delta\varphi_1 = n \cdot \alpha_0 \cdot 
+    \frac{\ell_P}{r_0}
+\end{equation}
+The energy barrier for the $(n+1)$-th establishment of $P$ is 
+reduced by:
+\begin{equation}
+    \Delta E_n = \hbar\omega_{\rm OHC} \cdot \alpha_0^2 \cdot n
+\end{equation}
+Repeated patterns are progressively easier to establish, with 
+facilitation linear in $n$. \qed
+\end{theorem}
+
+With $\alpha_0^2 \approx 5.5\times10^{-5}$, the effect is weak but 
+accumulates linearly with $n$ and is non-zero for all $n\geq1$.
+
+\section{Non-Electromagnetic Character}
+
+The OHC phase propagates through the vacuum condensate. The coupling 
+$\alpha_0 = r_{\rm oct}\times r_{\rm tet}/\pi$ involves only void 
+geometry --- no electric charge appears. OHC phase memory is therefore 
+non-electromagnetic and cannot be shielded by Faraday cages or 
+conducting enclosures. This is Prediction~P2 of Letter~79.
+
+\begin{thebibliography}{99}
+\bibitem{AppJH} M.~R.~Cabri\'e, \textit{Appendix JH}, Zenodo (2026),
+doi:10.5281/zenodo.18975018
+\bibitem{L59} M.~R.~Cabri\'e, \textit{BCT Letter 59}, Zenodo (2026).
+\bibitem{L79} M.~R.~Cabri\'e, \textit{BCT Letter 79}, Zenodo (2026).
+\end{thebibliography}
+
+\end{document}
