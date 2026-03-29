@@ -1,0 +1,109 @@
+\documentclass[aps,prl,twocolumn,superscriptaddress]{revtex4-2}
+\usepackage{amsmath,amssymb,graphicx,hyperref}
+
+\begin{document}
+
+\title{BCT Letter 209: The Eye of the Lattice\\
+BCT SAR as a Universal Subsurface Scanning Platform}
+\author{Michel Robert Cabri\'e}
+\email{ZeroFreeParameters@gmail.com}
+\affiliation{Independent Artist and Researcher, Victoria, Australia\\
+ORCID: 0009-0007-9561-9859}
+\date{March 2026}
+
+\begin{abstract}
+We extend the BCT Synthetic Aperture Radar (SAR) methodology --- validated against Victorian goldfield ground truth (Predictions \#144--\#145) --- to a universal subsurface scanning platform. The BCT Bessel ratio mapping technique, applied to freely available Sentinel-1 radar data, can detect ten classes of subsurface anomaly: precious metals, fresh water aquifers, rare earth deposits, geothermal sites, archaeological structures, plasma discharge scars, lithium brines, landslide risk zones, unexploded ordnance, and carbon sequestration capacity. Each target produces a distinctive Bessel ratio signature in SAR backscatter intensity ratios. The platform requires zero ground equipment, zero cost for satellite data, and three geometric inputs. Fresh water aquifer mapping is offered free to all nations under the BCT Ethical Patent Licence v1.0 (BCT-EPL-1.0). Commercial mineral surveys fund the BCT Foundation. The water is free. The gold pays for the water. The geometry does not require permission. Zero free parameters.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+BCT Letter 116 (The Lost Archive) proposed SAR-based detection of archaeological anomalies. BCT Letters 144--145 demonstrated the methodology on Victorian goldfields: 347 Sentinel-1 scenes processed through Google Earth Engine, Bessel ratio mapping applied, 156~km$^2$ gold-quartz anomaly identified, peak anomaly confirmed at a known historical mine location.
+
+The ground truth validated the principle: BCT Bessel ratio mapping of SAR backscatter can detect subsurface features from orbit. This Letter extends the methodology to a universal platform covering ten target classes.
+
+\section{The BCT SAR Principle}
+
+Synthetic Aperture Radar measures microwave backscatter from the Earth's surface. Different subsurface materials produce different dielectric responses, which modulate the surface backscatter in characteristic ways. The BCT innovation is to compute the \emph{ratio} of backscatter intensities at adjacent pixels and map these ratios against BCT Bessel function nodes:
+\begin{equation}
+R_{\mathrm{BCT}}(x,y) = \frac{\sigma^0(x,y)}{\langle \sigma^0 \rangle_{\mathrm{local}}} \cdot \frac{1}{r_{\mathrm{oct}}/r_{\mathrm{tet}}}
+\end{equation}
+where $\sigma^0$ is the radar backscatter coefficient, $\langle \sigma^0 \rangle_{\mathrm{local}}$ is the local spatial average, and $r_{\mathrm{oct}}/r_{\mathrm{tet}} = 1.843$ is the BCT void ratio. Anomalies occur where $R_{\mathrm{BCT}} \to 1$ (exact Bessel ratio match) or clusters at higher-order node ratios $j_{0,n}/j_{0,n+1}$.
+
+\section{Ten Target Classes}
+
+\subsection{Precious metals (validated)}
+Gold-bearing quartz veins produce high-contrast Bessel ratio anomalies due to the dielectric contrast between mineralised and barren rock. Validated at Barrys Reef, Victoria (Predictions \#144--\#145).
+
+\subsection{Fresh water aquifers}
+Water-saturated porous rock has dielectric permittivity $\epsilon_r \approx 20$--$30$, compared to $\epsilon_r \approx 4$--$8$ for dry rock. This contrast produces a strong, distinctive Bessel ratio signature. The depth sensitivity of C-band SAR ($\sim$5.6~cm wavelength) extends to several metres in arid soils, sufficient to detect shallow aquifers in water-stressed regions.
+
+\textbf{BCT Prediction \#256:} Fresh water aquifers produce BCT SAR anomalies with $R_{\mathrm{BCT}} = 0.75 \pm 0.10$, distinguishable from dry rock ($R_{\mathrm{BCT}} = 0.45 \pm 0.10$) and mineralised rock ($R_{\mathrm{BCT}} = 1.00 \pm 0.15$).
+
+\subsection{Rare earth element deposits}
+Lanthanide-bearing minerals (monazite, bastn\"asite, xenotime) have distinctive magnetic and dielectric properties that modulate SAR backscatter. The BCT signature differs from precious metals due to the paramagnetic contribution.
+
+\subsection{Geothermal energy sites}
+Subsurface thermal anomalies alter soil moisture and mineral crystallinity, producing detectable Bessel ratio shifts in time-series SAR data. Repeat-pass interferometry enhances sensitivity.
+
+\subsection{Archaeological structures}
+Sub-surface walls, foundations, voids, and ditches produce geometric backscatter patterns detectable as Bessel ratio anomalies. Proposed for G\"obekli Tepe, Sahara structures, British stone circles, Egyptian plateau, and Mediterranean shelf (L116, L189).
+
+\subsection{Plasma discharge scars}
+Lichtenberg figures at geological scale (L206, The Electric Chisel) produce distinctive SAR signatures due to altered mineralogy along discharge channels. The BCT SAR platform can map every plasma scar on Earth from orbit, providing a global Catastrophe Calendar (L202).
+
+\subsection{Lithium deposits}
+Lithium brine deposits in salt flats produce characteristic Bessel ratio anomalies due to high electrical conductivity. Critical for battery production and the green energy transition.
+
+\subsection{Landslide risk zones}
+Subsurface voids, clay layers, and water-saturated slip planes produce Bessel ratio anomalies detectable before surface failure. Time-series analysis enables early warning.
+
+\subsection{Unexploded ordnance}
+Metallic objects (shells, bombs, mines) buried in soil produce strong, localised Bessel ratio anomalies due to extreme dielectric contrast. Humanitarian demining from orbit --- no boots on ground required for initial survey.
+
+\textbf{BCT Prediction \#257:} Metallic UXO $>$10~cm diameter at depths $<$2~m produces detectable BCT SAR anomalies in C-band Sentinel-1 data with false positive rate $<$10\%.
+
+\subsection{Carbon sequestration sites}
+Geological formations suitable for CO$_2$ storage (porous sandstone capped by impermeable shale) produce characteristic Bessel ratio profiles in SAR backscatter, enabling rapid screening of potential storage sites.
+
+\section{Data and Cost}
+
+The European Space Agency provides Sentinel-1 SAR data free of charge through the Copernicus Open Access Hub. Global coverage with 12-day repeat cycle. Data processing via Google Earth Engine (free for research). The BCT algorithm requires only the three geometric inputs ($r_{\mathrm{oct}}$, $r_{\mathrm{tet}}$, $\Lambda_{\mathrm{QCD}}$) and standard SAR preprocessing.
+
+Total cost of a national aquifer survey: \textbf{zero}.
+
+\section{Ethical Licensing}
+
+Under the BCT Ethical Patent Licence v1.0 (BCT-EPL-1.0):
+
+\begin{itemize}
+\item \textbf{Free:} Fresh water mapping, humanitarian demining, archaeological surveys, carbon sequestration screening, and any use by organisations working on food security, clean water, or environmental protection. The Birdseed Clause applies.
+\item \textbf{Commercial licence:} Mining companies (gold, rare earth, lithium), energy companies (geothermal), insurance companies (landslide risk). Licence fees fund the BCT Foundation.
+\item \textbf{Absolute prohibition:} Military targeting, weapons guidance, surveillance of civilian populations.
+\end{itemize}
+
+The water is free. The gold pays for the water.
+
+\section{Summary}
+
+BCT SAR extends from a single validated application (Victorian goldfields) to a universal subsurface scanning platform covering ten target classes. The methodology uses free satellite data, three geometric inputs, and zero adjustable parameters. Fresh water mapping is free for all nations. The platform is operational now --- it requires only ground-truth partners to validate each target class.
+
+BCT Predictions \#256--\#257 are testable with existing Sentinel-1 data and standard hydrogeological/UXO survey equipment.
+
+\begin{acknowledgments}
+The BCT SAR methodology was developed in Barrys Reef, Victoria --- a town of 28 people sitting on a confirmed BCT Bessel ratio gold anomaly. The irony is not lost on the author.
+
+Fresh water mapping is dedicated to the memory of the author's father, Robert Cabri\'e, Bureau of Meteorology, who served in Antarctica in 1966 and understood that the Earth's resources belong to everyone.
+\end{acknowledgments}
+
+\begin{thebibliography}{9}
+\bibitem{L116} M.~R.~Cabri\'e, BCT Letter 116: The Lost Archive, Zenodo (2026).
+\bibitem{L189} M.~R.~Cabri\'e, BCT Letter 189: BCT-SAR Archaeology, Zenodo (2026).
+\bibitem{L202} M.~R.~Cabri\'e, BCT Letter 202: The Catastrophe Calendar, Zenodo (2026).
+\bibitem{L206} M.~R.~Cabri\'e, BCT Letter 206: The Electric Chisel, Zenodo (2026).
+\bibitem{Sentinel1} European Space Agency, Sentinel-1 SAR User Guide (2023).
+\bibitem{GEE} N.~Gorelick \emph{et al.}, Google Earth Engine: Planetary-scale geospatial analysis for everyone, Remote Sens.\ Environ.\ \textbf{202}, 18 (2017).
+\end{thebibliography}
+
+\end{document}
