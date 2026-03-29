@@ -1,0 +1,77 @@
+\documentclass[aps,prl,twocolumn,superscriptaddress]{revtex4-2}
+\usepackage{amsmath,amssymb,graphicx,hyperref}
+
+\begin{document}
+
+\title{BCT Appendix App-L204a:\\
+Brain Oscillation Frequencies as OHC Bessel Subharmonics}
+\author{Michel Robert Cabri\'e}
+\email{ZeroFreeParameters@gmail.com}
+\affiliation{Independent Artist and Researcher, Victoria, Australia\\
+ORCID: 0009-0007-9561-9859}
+\date{March 2026}
+
+\begin{abstract}
+We derive the canonical brain oscillation bands --- delta, theta, alpha, beta, and gamma --- as subharmonics of the OHC Bessel resonance frequency $f_{\mathrm{BCT}} = 349.7$~Hz. The subharmonic ratios $1/N$ for $N = 8, 16, 32, 64, 128$ reproduce the five standard EEG bands to within the observed bandwidth of each. BCT Prediction \#248. Zero free parameters.
+\end{abstract}
+
+\maketitle
+
+\section{The OHC Fundamental}
+
+The OHC Bessel resonance frequency is derived in L101 (The Bee That Proves the Vacuum) from the first zero of the Bessel function $j_{0,1}$ applied to the BCT lattice:
+\begin{equation}
+f_{\mathrm{BCT}} = \frac{j_{0,1} \cdot c_s}{2\pi \cdot r_{\mathrm{oct}} \cdot \ell_P} \cdot \alpha_0 = 349.7~\text{Hz}
+\end{equation}
+where $c_s$ is the OHC sound speed, $r_{\mathrm{oct}} = (\sqrt{2}-1)/2$, $\ell_P$ is the Planck length, and $\alpha_0 = r_{\mathrm{oct}} \cdot r_{\mathrm{tet}} / \pi = 0.0074081$ is the BCT coupling constant.
+
+This frequency independently appears in blue-banded bee sonication (350~Hz), bell bronze cathedral partials, and beaver dam acoustic resonance (L198).
+
+\section{Neural Subharmonics}
+
+Neural tissue is coupled to the OHC vacuum through the electromagnetic interaction. The coupling is weak ($\sim \alpha_0$) but resonant: neural membranes preferentially oscillate at frequencies that are integer subharmonics of $f_{\mathrm{BCT}}$.
+
+The five canonical EEG bands correspond to subharmonic divisions:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lccc}
+\hline
+Band & $N$ & $f_{\mathrm{BCT}}/N$ (Hz) & Observed (Hz) \\
+\hline
+Gamma & 8 & 43.7 & 30--100 \\
+Beta & 16 & 21.9 & 13--30 \\
+Alpha & 32 & 10.9 & 8--13 \\
+Theta & 64 & 5.5 & 4--8 \\
+Delta & 128 & 2.7 & 0.5--4 \\
+\hline
+\end{tabular}
+\caption{Brain oscillation bands as $f_{\mathrm{BCT}}$ subharmonics. Each predicted frequency falls within the observed bandwidth.}
+\end{table}
+
+The subharmonic indices $N = 8, 16, 32, 64, 128 = 2^3, 2^4, 2^5, 2^6, 2^7$ are consecutive powers of 2, consistent with octave-based resonance division in a coupled oscillator system.
+
+\section{The 40 Hz Binding Frequency}
+
+The gamma band --- particularly the $\sim$40~Hz oscillation implicated in conscious binding~\cite{Crick1990} --- sits at $f_{\mathrm{BCT}}/8 = 43.7$~Hz, or more precisely at $f_{\mathrm{BCT}}/8.75 = 40.0$~Hz where $8.75 = 7 \times 5/4$ reflects the D4 root system factor 7 (cf.\ Antikythera mechanism, L191).
+
+This provides a geometric explanation for why 40~Hz gamma oscillations are specifically associated with conscious awareness: they are the highest-frequency subharmonic of $f_{\mathrm{BCT}}$ that neural tissue can sustain, and therefore carry the maximum OHC coupling strength of any brain oscillation.
+
+\section{Prediction}
+
+\textbf{BCT Prediction \#248:} The centre frequencies of EEG oscillation bands, measured across species, cluster at subharmonics of $349.7 \pm 2$~Hz. The ratio between adjacent bands is $2.0 \pm 0.2$.
+
+This prediction is testable using existing EEG datasets from multiple species. If brain oscillation frequencies were arbitrary (set by neural membrane time constants alone), there would be no reason for them to divide evenly into a frequency that independently appears in bee sonication, bell acoustics, and Planck-scale vacuum geometry.
+
+\begin{acknowledgments}
+The convergence of 349.7~Hz across bees, bells, brains, and beavers is either the most elaborate coincidence in the history of science, or the vacuum is telling us something. We prefer the latter.
+\end{acknowledgments}
+
+\begin{thebibliography}{4}
+\bibitem{Crick1990} F.~Crick and C.~Koch, Towards a neurobiological theory of consciousness, Seminars in Neuroscience \textbf{2}, 263 (1990).
+\bibitem{L101} M.~R.~Cabri\'e, BCT Letter 101: The Bee That Proves the Vacuum, Zenodo (2026).
+\bibitem{L198} M.~R.~Cabri\'e, BCT Letter 198: The Original BCT Engineers, Zenodo (2026).
+\bibitem{L204} M.~R.~Cabri\'e, BCT Letter 204: The Conscious Lattice, Zenodo (2026).
+\end{thebibliography}
+
+\end{document}

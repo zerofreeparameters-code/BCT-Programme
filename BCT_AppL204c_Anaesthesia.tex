@@ -1,0 +1,79 @@
+\documentclass[aps,prl,twocolumn,superscriptaddress]{revtex4-2}
+\usepackage{amsmath,amssymb,graphicx,hyperref}
+
+\begin{document}
+
+\title{BCT Appendix App-L204c:\\
+The Geometry of Anaesthesia --- Meyer-Overton Meets $r_{\mathrm{tet}}$}
+\author{Michel Robert Cabri\'e}
+\email{ZeroFreeParameters@gmail.com}
+\affiliation{Independent Artist and Researcher, Victoria, Australia\\
+ORCID: 0009-0007-9561-9859}
+\date{March 2026}
+
+\begin{abstract}
+We propose that general anaesthetic potency correlates with molecular fit to the BCT tetrahedral void radius $r_{\mathrm{tet}} = (\sqrt{6}-2)/4 = 0.11237$ expressed as a fraction of the synaptic membrane thickness. The classical Meyer-Overton correlation (anaesthetic potency $\propto$ lipid solubility) is reinterpreted: lipophilic molecules that fit the $r_{\mathrm{tet}}$ void geometry of lipid bilayers disrupt OHC Bessel mode coupling across the membrane, blocking the Hopf binding mechanism that sustains consciousness. BCT Prediction \#249. Zero free parameters.
+\end{abstract}
+
+\maketitle
+
+\section{The Meyer-Overton Correlation}
+
+Since 1899, it has been known that anaesthetic potency correlates with lipid solubility across an enormous range of molecules --- from noble gases (xenon) to complex organic molecules (propofol)~\cite{Meyer1899}. This correlation spans five orders of magnitude in potency and holds for structurally unrelated compounds, strongly suggesting a common physical mechanism rather than specific receptor binding.
+
+Yet the mechanism remains unclear. How does dissolving in a lipid membrane abolish consciousness?
+
+\section{BCT Mechanism}
+
+In the BCT framework, consciousness is sustained by OHC Bessel mode coupling across synaptic membranes (L204). The coupling channel traverses the lipid bilayer through void spaces whose geometry is determined by the lipid packing arrangement.
+
+The critical void radius in the lipid bilayer is:
+\begin{equation}
+r_{\mathrm{void}} = r_{\mathrm{tet}} \times d_{\mathrm{membrane}} = 0.11237 \times 4~\text{nm} \approx 0.45~\text{nm}
+\end{equation}
+where $d_{\mathrm{membrane}} \approx 4$~nm is the hydrophobic thickness of a typical lipid bilayer.
+
+Molecules whose van der Waals radius matches $r_{\mathrm{void}}$ insert preferentially into these coupling channels, disrupting OHC Bessel mode transmission. The result: Hopf binding (L204, Section 2) is pharmacologically disrupted below the $N_{\mathrm{collapse}}$ threshold, and consciousness switches off.
+
+\section{Why Lipid Solubility Predicts Potency}
+
+The Meyer-Overton correlation is explained geometrically:
+\begin{enumerate}
+\item Lipid-soluble molecules partition into the membrane's hydrophobic core.
+\item Those whose molecular dimensions match $r_{\mathrm{tet}} \times d_{\mathrm{membrane}}$ occupy the OHC coupling voids.
+\item OHC Bessel mode transmission is blocked proportionally to void occupancy.
+\item Higher lipid solubility $\Rightarrow$ higher void occupancy $\Rightarrow$ greater potency.
+\end{enumerate}
+
+The correlation holds across structurally diverse molecules because the mechanism is geometric (void-filling), not chemical (receptor-binding). Any molecule of the right size and lipophilicity will work.
+
+\section{Xenon: The Perfect Anaesthetic}
+
+Xenon is the cleanest general anaesthetic known --- rapid onset, rapid offset, no metabolism, minimal side effects. Its atomic radius is 0.216~nm, giving a van der Waals diameter of 0.432~nm.
+
+Compare with the BCT prediction: $r_{\mathrm{void}} = 0.45$~nm.
+
+The match is within 4\%. Xenon fits the tetrahedral coupling void almost exactly, providing near-perfect OHC channel blockade with no chemical reactivity.
+
+\section{Prediction}
+
+\textbf{BCT Prediction \#249:} Across all known general anaesthetics, potency (expressed as $1/\mathrm{MAC}$ or $1/\mathrm{EC}_{50}$) correlates with the molecular fit parameter:
+\begin{equation}
+\mathcal{F} = \exp\left(-\frac{(r_{\mathrm{mol}} - r_{\mathrm{void}})^2}{2\sigma^2}\right) \times P_{\mathrm{octanol/water}}
+\end{equation}
+where $r_{\mathrm{mol}}$ is the effective molecular radius, $r_{\mathrm{void}} = 0.45$~nm, $\sigma \sim 0.05$~nm, and $P_{\mathrm{octanol/water}}$ is the octanol-water partition coefficient.
+
+This refines the Meyer-Overton correlation by adding a geometric size-selectivity term centred on $r_{\mathrm{tet}}$.
+
+\begin{acknowledgments}
+The fact that xenon --- a noble gas with no chemistry whatsoever --- can abolish consciousness is one of the strongest indirect arguments that consciousness is geometric, not chemical.
+\end{acknowledgments}
+
+\begin{thebibliography}{4}
+\bibitem{Meyer1899} H.~Meyer, Zur Theorie der Alkoholnarkose, Arch.\ Exp.\ Pathol.\ Pharmakol.\ \textbf{42}, 109 (1899).
+\bibitem{L204} M.~R.~Cabri\'e, BCT Letter 204: The Conscious Lattice, Zenodo (2026).
+\bibitem{Franks1994} N.~P.~Franks and W.~R.~Lieb, Molecular and cellular mechanisms of general anaesthesia, Nature \textbf{367}, 607 (1994).
+\bibitem{Xenon2003} N.~P.~Franks \emph{et al.}, How does xenon produce anaesthesia?, Nature \textbf{396}, 324 (1998).
+\end{thebibliography}
+
+\end{document}

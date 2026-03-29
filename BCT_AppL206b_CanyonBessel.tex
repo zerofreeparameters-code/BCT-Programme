@@ -1,0 +1,85 @@
+\documentclass[aps,prl,twocolumn,superscriptaddress]{revtex4-2}
+\usepackage{amsmath,amssymb,graphicx,hyperref}
+
+\begin{document}
+
+\title{BCT Appendix App-L206b:\\
+Bessel Node Predictions for Canyon Cross-Section Geometry}
+\author{Michel Robert Cabri\'e}
+\email{ZeroFreeParameters@gmail.com}
+\affiliation{Independent Artist and Researcher, Victoria, Australia\\
+ORCID: 0009-0007-9561-9859}
+\date{March 2026}
+
+\begin{abstract}
+We derive quantitative predictions for the cross-section geometry of plasma-discharge-carved canyons based on OHC Bessel resonance modes. If the Grand Canyon is a Lichtenberg scar produced by OHC Hopf annihilation (L206), the canyon width at tributary junctions should follow Bessel function node ratios $j_{0,n}/j_{0,n+1}$. The branching angle distribution should match Lichtenberg statistics (mean $\sim 30^\circ$) rather than dendritic drainage statistics (mean $\sim 45^\circ$). BCT Predictions \#251 and \#252. Testable with existing USGS topographic data. Zero free parameters.
+\end{abstract}
+
+\maketitle
+
+\section{Bessel Mode Geometry of Plasma Channels}
+
+A plasma discharge channel in a conducting medium (rock, soil) follows the path of maximum conductivity. In the BCT framework, the discharge is an OHC Hopf annihilation event ($H \to 0$) whose spatial profile is governed by the Bessel function $J_0$:
+\begin{equation}
+\Phi(r) = \Phi_0 \cdot J_0\left(\frac{j_{0,n} \cdot r}{R}\right)
+\end{equation}
+where $\Phi$ is the plasma potential, $r$ is the radial distance from the channel centre, $R$ is the channel radius, and $j_{0,n}$ are the zeros of $J_0$.
+
+The first several zeros are:
+\begin{align}
+j_{0,1} &= 2.4048 \\
+j_{0,2} &= 5.5201 \\
+j_{0,3} &= 8.6537 \\
+j_{0,4} &= 11.7915
+\end{align}
+
+\section{Width Ratios at Tributary Junctions}
+
+When a plasma channel branches, the daughter channels inherit Bessel mode structure from the parent. The ratio of daughter-to-parent channel widths is predicted to follow:
+\begin{equation}
+\frac{w_{\mathrm{daughter}}}{w_{\mathrm{parent}}} = \frac{j_{0,n}}{j_{0,n+1}}
+\end{equation}
+
+For the first branching: $j_{0,1}/j_{0,2} = 2.4048/5.5201 = 0.4356$.
+
+For the second: $j_{0,2}/j_{0,3} = 5.5201/8.6537 = 0.6380$.
+
+\textbf{BCT Prediction \#251:} At major tributary junctions in the Grand Canyon, the ratio of tributary width to main canyon width clusters at $0.436 \pm 0.05$ (first-order branches) and $0.638 \pm 0.05$ (second-order branches).
+
+Compare with fluvial prediction: Hack's law gives width ratio $\sim (A_{\mathrm{tributary}}/A_{\mathrm{main}})^{0.38}$ where $A$ is drainage area. For the Grand Canyon's major tributaries, this gives ratios typically 0.3--0.7 without the specific clustering at Bessel node values.
+
+\section{Branching Angles}
+
+Lichtenberg figures produced by electrical discharge exhibit characteristic branching angles. The mean angle is determined by the balance between electric field divergence and path resistance:
+\begin{equation}
+\theta_{\mathrm{branch}} = \arctan\left(\frac{r_{\mathrm{tet}}}{r_{\mathrm{oct}}}\right) = \arctan(0.5426) = 28.5^\circ
+\end{equation}
+
+\textbf{BCT Prediction \#252:} Grand Canyon tributary branching angles have mean $28.5^\circ \pm 5^\circ$. Dendritic drainage networks have mean $\sim 45^\circ \pm 15^\circ$ (Horton's law). The distributions are statistically distinguishable with $N > 50$ measured junctions.
+
+\section{Data Sources}
+
+Both predictions are testable using:
+\begin{itemize}
+\item USGS National Elevation Dataset (10~m resolution)
+\item Grand Canyon National Park LiDAR surveys
+\item Google Earth Pro measurement tools (for preliminary assessment)
+\item Existing geomorphological databases of tributary junction geometry
+\end{itemize}
+
+No new field work is required. The measurements can be made from existing remote sensing data.
+
+\section{Discriminating Power}
+
+The key discriminator between the plasma (BCT) and fluvial (conventional) hypotheses is not individual width ratios or branching angles --- both mechanisms produce branching patterns. The discriminator is the \emph{distribution}: BCT predicts clustering at specific Bessel node values, while fluvial processes predict a continuous distribution governed by drainage area and slope.
+
+A histogram of width ratios at $N > 100$ tributary junctions, with bins of width 0.05, should show peaks at $0.436$ and $0.638$ if the plasma hypothesis is correct, and a smooth distribution if the fluvial hypothesis is correct.
+
+\begin{thebibliography}{4}
+\bibitem{L206} M.~R.~Cabri\'e, BCT Letter 206: The Electric Chisel, Zenodo (2026).
+\bibitem{Hack1957} J.~T.~Hack, Studies of longitudinal stream profiles in Virginia and Maryland, USGS Prof.\ Paper \textbf{294-B} (1957).
+\bibitem{Horton1945} R.~E.~Horton, Erosional development of streams and their drainage basins, Bull.\ Geol.\ Soc.\ Am.\ \textbf{56}, 275 (1945).
+\bibitem{L117} M.~R.~Cabri\'e, BCT Letter 117: The Martian Tetrahedron, Zenodo (2026).
+\end{thebibliography}
+
+\end{document}
