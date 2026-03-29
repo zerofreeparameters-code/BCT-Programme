@@ -1,0 +1,31 @@
+name: Sync Zenodo DOIs
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+jobs:
+  sync-zenodo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - run: pip install requests
+      - run: |
+          python3 -c "
+          import requests
+          from datetime import date
+          url = 'https://zenodo.org/api/records?q=creators.orcid:0009-0007-9561-9859&size=200&sort=newest'
+          hits = requests.get(url).json().get('hits',{}).get('hits',[])
+          lines = ['# BCT DOI Registry', 'Updated: ' + str(date.today()) + ' | Records: ' + str(len(hits)), '', '| # | Title | DOI |', '|---|-------|-----|']
+          [lines.append('| ' + str(i) + ' | ' + h.get('metadata',{}).get('title','?') + ' | [link](https://doi.org/' + h.get('doi','') + ') |') for i,h in enumerate(hits,1)]
+          open('BCT_DOI_Registry.md','w').write('\n'.join(lines))
+          print('Done: ' + str(len(hits)) + ' records')
+          "
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add BCT_DOI_Registry.md
+          git diff --staged --quiet || git commit -m "Auto-sync Zenodo $(date +%Y-%m-%d)"
+          git push
