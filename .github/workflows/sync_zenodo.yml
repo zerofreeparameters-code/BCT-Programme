@@ -16,8 +16,13 @@ jobs:
           python3 -c "
           import requests
           from datetime import date
-          url = 'https://zenodo.org/api/records?q=creators.orcid:0009-0007-9561-9859&size=200&sort=newest'
-          hits = requests.get(url).json().get('hits',{}).get('hits',[])
+          try:
+            url = 'https://zenodo.org/api/records?q=creators.orcid:0009-0007-9561-9859&size=200&sort=newest'
+            r = requests.get(url, timeout=30)
+            hits = r.json().get('hits',{}).get('hits',[])
+          except Exception as e:
+            print('Zenodo API unavailable:', e)
+            hits = []
           lines = ['# BCT DOI Registry', 'Updated: ' + str(date.today()) + ' | Records: ' + str(len(hits)), '', '| # | Title | DOI |', '|---|-------|-----|']
           [lines.append('| ' + str(i) + ' | ' + h.get('metadata',{}).get('title','?') + ' | [link](https://doi.org/' + h.get('doi','') + ') |') for i,h in enumerate(hits,1)]
           open('BCT_DOI_Registry.md','w').write('\n'.join(lines))
