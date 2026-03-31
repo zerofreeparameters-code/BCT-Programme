@@ -1,39 +1,30 @@
-# .github/workflows/sync-zenodo.yml
-# Fetches BCT programme DOIs from Zenodo API and updates ZENODO_DOIS.md
-# Requires ZENODO_TOKEN secret set in repo Settings > Secrets
-
 name: Sync Zenodo DOIs
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # Daily at 6am UTC (4pm AEST)
-  workflow_dispatch:       # Manual trigger
+    - cron: '0 6 * * *'
+  workflow_dispatch:
 
 jobs:
   sync-zenodo:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Fetch Zenodo records
-        env:
-          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
         run: |
-          # Query Zenodo API for all Cabrié records
-          # Using the public API - no token needed for public records
           curl -s "https://zenodo.org/api/records?q=cabri%C3%A9&size=200&sort=mostrecent" \
             -H "Accept: application/json" \
             > zenodo_response.json
 
-          # Check if we got a valid response
           if ! python3 -c "import json; json.load(open('zenodo_response.json'))" 2>/dev/null; then
-            echo "ERROR: Invalid JSON response from Zenodo API"
-            echo "Response content:"
+            echo "ERROR: Invalid JSON response"
             head -c 500 zenodo_response.json
             exit 1
           fi
 
-          # Parse and generate markdown table
           python3 << 'PYEOF'
           import json
           from datetime import datetime
@@ -45,41 +36,4 @@ jobs:
           total = data.get('hits', {}).get('total', 0)
 
           with open('ZENODO_DOIS.md', 'w') as out:
-              out.write("# BCT Programme — Zenodo DOI Registry\n\n")
-              out.write(f"**Last synced:** {datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}\n\n")
-              out.write(f"**Total records:** {total}\n\n")
-              out.write("| # | Title | DOI | Date | Type |\n")
-              out.write("|---|-------|-----|------|------|\n")
-
-              for i, hit in enumerate(hits, 1):
-                  meta = hit.get('metadata', {})
-                  title = meta.get('title', 'Untitled').replace('|', '\\|')
-                  doi = meta.get('doi', 'N/A')
-                  date = meta.get('publication_date', 'N/A')
-                  rtype = meta.get('resource_type', {}).get('title', 'N/A')
-                  doi_link = f"[{doi}](https://doi.org/{doi})" if doi != 'N/A' else 'N/A'
-
-                  # Truncate long titles
-                  if len(title) > 80:
-                      title = title[:77] + "..."
-
-                  out.write(f"| {i} | {title} | {doi_link} | {date} | {rtype} |\n")
-
-              out.write(f"\n---\n\n")
-              out.write(f"*Auto-generated from Zenodo API. ORCID: 0009-0007-9561-9859*\n")
-              out.write(f"*Programme: [pi2.institute](https://pi2.institute) | [GitHub](https://github.com/zerofreeparameters-code/BCT-Programme)*\n")
-
-          print(f"✓ Generated ZENODO_DOIS.md with {len(hits)} records (total: {total})")
-          PYEOF
-
-      - name: Commit and push
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add ZENODO_DOIS.md
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "chore: sync Zenodo DOIs [$(date -u +%Y-%m-%d)]"
-            git push
-          fi
+              out.write("# BCT Programme
