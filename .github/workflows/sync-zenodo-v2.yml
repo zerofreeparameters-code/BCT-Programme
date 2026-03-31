@@ -1,0 +1,29 @@
+name: Sync Zenodo DOIs v2
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sync-zenodo:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Fetch and generate
+        run: |
+          curl -s "https://zenodo.org/api/records?q=cabri%C3%A9&size=200&sort=mostrecent" -H "Accept: application/json" > zenodo_response.json
+          python3 generate_dois.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ZENODO_DOIS.md
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: sync Zenodo DOIs"
+            git push
+          fi
