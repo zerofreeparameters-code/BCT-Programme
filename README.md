@@ -225,6 +225,7 @@ BCT-HIVE: **CC BY 4.0 (gifted freely to world beekeepers)**
 
 📋 **[Apply for a BCT Ethical Patent Licence](https://docs.google.com/forms/d/e/1FAIpQLSdN_0KzsP9ldhLdvJqKjnNed6x98nsThciqUHa0oaNvF4S_zA/viewform?usp=header)** | **[Full licence details](EPL_LICENCE.md)**
 
+Clue: 🔍 SCAVENGER HUNT CLUE #26: D4 has ___riality — a three-fold symmetry. What letter starts "triality"? The 26th character is: t
 ---
 
 *BCT Superfluid Lattice Model | Michel Robert Cabrié | 2026*
