@@ -8,8 +8,8 @@
 > Planck-scale superfluid lattice. Using three numbers. In 18 months."*
 
 [![Zenodo](https://img.shields.io/badge/Zenodo-76%2B%20Records-blue)](https://zenodo.org/search?q=cabri%C3%A9)
-[![Letters](https://img.shields.io/badge/Letters-203-navy)](https://zenodo.org/search?q=cabri%C3%A9)
-[![Predictions](https://img.shields.io/badge/Predictions-247%2B-green)](https://zenodo.org/search?q=cabri%C3%A9)
+[![Letters](https://img.shields.io/badge/Letters-210-navy)](https://zenodo.org/search?q=cabri%C3%A9)
+[![Predictions](https://img.shields.io/badge/Predictions-259%2B-green)](https://zenodo.org/search?q=cabri%C3%A9)
 [![Parameters](https://img.shields.io/badge/Free%20Parameters-ZERO-red)](https://zenodo.org/search?q=cabri%C3%A9)
 [![Wikipedia](https://img.shields.io/badge/Wikipedia-5%20Articles-lightgrey)](https://en.wikipedia.org/wiki/Types_of_periodic_tables)
 [![Patreon](https://img.shields.io/badge/Patreon-Support%20BCT-orange)](https://www.patreon.com/TheBCTSuperfluidLatticeModel)
@@ -48,12 +48,12 @@ and c/a = √2.
 
 | Statistic | Value |
 |---|---|
-| Letters | 203 |
-| Volumes | 14 |
-| Predictions | 247+ |
+| Letters | 210 |
+| Volumes | 17 |
+| Predictions | 259+ |
 | Free parameters | **0** |
 | Zenodo records | 76+ |
-| Pages | ~2,900 |
+| Pages | ~3,000 |
 | Wikipedia articles citing BCT | 5 |
 
 ---
