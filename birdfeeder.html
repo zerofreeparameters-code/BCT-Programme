@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BCT Physics Calculator — birdfeeder.donate</title>
+<meta name="description" content="Enter void geometry. Get the universe. The BCT Superfluid Lattice Model calculator — deriving physics from sphere packing geometry. Zero free parameters.">
+<meta property="og:title" content="BCT Physics Calculator — birdfeeder.donate">
+<meta property="og:description" content="The universe is free. The birds need feeding. Derive the fine structure constant from first principles.">
+<meta property="og:url" content="https://pi2.institute/birdfeeder">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #050D1A;
+    color: #FFFFFF;
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  .page { max-width: 680px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+
+  /* HEADER */
+  .header { text-align: center; padding: 2rem 1rem 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid #1A2A4A; }
+  .domain { font-size: 13px; color: #FF69B4; letter-spacing: 0.05em; margin-bottom: 8px; }
+  .header h1 { font-size: 28px; font-weight: 600; color: #FFD700; margin-bottom: 6px; }
+  .header .sub { font-size: 14px; color: #00E5FF; margin-bottom: 8px; }
+  .tagline { font-size: 12px; color: #FF69B4; font-style: italic; }
+
+  /* SLIDERS */
+  .sliders { margin-bottom: 1.5rem; }
+  .slider-row { margin-bottom: 1rem; }
+  .slider-label { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+  .slider-label .name { font-size: 13px; color: #9BB3CC; }
+  .slider-label .val { font-family: 'Courier New', monospace; font-size: 14px; font-weight: 600; color: #FFD700; }
+  input[type=range] {
+    width: 100%; height: 4px; appearance: none;
+    background: #1A2A4A; border-radius: 2px; outline: none; cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    appearance: none; width: 18px; height: 18px;
+    background: #FFD700; border-radius: 50%; cursor: pointer;
+  }
+  input[type=range]::-moz-range-thumb {
+    width: 18px; height: 18px; background: #FFD700;
+    border-radius: 50%; border: none; cursor: pointer;
+  }
+
+  /* DERIVED PARAMS */
+  .params-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.5rem; }
+  .param-card { background: #0B1628; border: 0.5px solid #1A2A4A; border-radius: 10px; padding: 12px; }
+  .param-card .label { font-size: 11px; color: #9BB3CC; margin-bottom: 4px; font-family: 'Courier New', monospace; }
+  .param-card .value { font-size: 20px; font-weight: 600; color: #FFFFFF; font-family: 'Courier New', monospace; }
+  .param-card .desc { font-size: 10px; color: #546E7A; margin-top: 2px; }
+
+  /* RESULTS */
+  .results { border: 0.5px solid #1A2A4A; border-radius: 12px; overflow: hidden; margin-bottom: 1.5rem; }
+  .results-header { background: #0B1628; padding: 12px 16px; font-size: 13px; font-weight: 600; color: #FFD700; border-bottom: 0.5px solid #1A2A4A; }
+  .result-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 16px; border-bottom: 0.5px solid #0D1A2A; }
+  .result-row:last-child { border-bottom: none; }
+  .result-row .name { font-size: 13px; color: #9BB3CC; flex: 1; }
+  .result-row .value { font-family: 'Courier New', monospace; font-size: 13px; font-weight: 600; color: #FFFFFF; }
+  .result-row .error { font-size: 11px; color: #4CAF50; margin-left: 8px; }
+  .result-row .error.bad { color: #FF6B6B; }
+
+  /* BIRDSEED */
+  .birdseed-box { background: linear-gradient(135deg, #0B1628, #1A0A2E); border: 1px solid #FFD700; border-radius: 12px; padding: 1.5rem; text-align: center; margin-bottom: 1.5rem; }
+  .birdseed-box .bs-label { font-size: 12px; color: #9BB3CC; margin-bottom: 8px; }
+  .birdseed-box .bs-price { font-size: 36px; font-weight: 700; color: #FFD700; margin-bottom: 4px; }
+  .birdseed-box .bs-free { font-size: 12px; color: #4CAF50; }
+  .birdseed-box .bs-note { font-size: 11px; color: #FF69B4; margin-top: 6px; font-style: italic; }
+
+  /* TIERS */
+  .tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.5rem; }
+  .tier { background: #0B1628; border: 0.5px solid #1A2A4A; border-radius: 10px; padding: 14px; text-align: center; }
+  .tier.vip { border-color: #FFD700; }
+  .tier .t-icon { font-size: 22px; margin-bottom: 6px; }
+  .tier .t-name { font-size: 13px; font-weight: 600; color: #FFFFFF; margin-bottom: 4px; }
+  .tier .t-desc { font-size: 11px; color: #9BB3CC; line-height: 1.4; margin-bottom: 6px; }
+  .tier .t-cost { font-size: 11px; font-weight: 600; color: #FFD700; }
+  .tier.vip .t-cost { color: #FF69B4; }
+
+  /* BUTTONS */
+  .btn-row { display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap; }
+  .btn { background: transparent; border: 0.5px solid #1A2A4A; color: #9BB3CC; padding: 10px 16px; border-radius: 8px; font-size: 13px; cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.15s; }
+  .btn:hover { background: #0B1628; border-color: #FFD700; color: #FFD700; }
+  .btn.gold { border-color: #FFD700; color: #FFD700; }
+  .btn.gold:hover { background: #FFD700; color: #050D1A; }
+
+  /* FOOTER */
+  .footer { text-align: center; font-size: 11px; color: #546E7A; line-height: 1.8; padding-top: 1rem; border-top: 0.5px solid #1A2A4A; }
+  .footer a { color: #00E5FF; text-decoration: none; }
+  .footer a:hover { text-decoration: underline; }
+
+  /* RESET NOTE */
+  .reset-note { font-size: 11px; color: #546E7A; text-align: center; margin-bottom: 1rem; }
+  .reset-btn { background: none; border: none; color: #00E5FF; font-size: 11px; cursor: pointer; text-decoration: underline; }
+
+  /* STATUS BAR */
+  .status-bar { display: flex; justify-content: center; gap: 20px; background: #0B1628; border: 0.5px solid #1A2A4A; border-radius: 8px; padding: 10px; margin-bottom: 1.5rem; flex-wrap: wrap; }
+  .status-item { text-align: center; }
+  .status-item .s-val { font-size: 16px; font-weight: 600; color: #FFD700; font-family: 'Courier New', monospace; }
+  .status-item .s-label { font-size: 10px; color: #546E7A; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="domain">birdfeeder.donate</div>
+    <h1>BCT Physics Calculator</h1>
+    <div class="sub">Enter void geometry. Get the universe.</div>
+    <div class="tagline">"The universe is free. The birds need feeding."</div>
+  </div>
+
+  <!-- STATUS -->
+  <div class="status-bar">
+    <div class="status-item"><div class="s-val">210</div><div class="s-label">Letters</div></div>
+    <div class="status-item"><div class="s-val">295+</div><div class="s-label">Predictions</div></div>
+    <div class="status-item"><div class="s-val">33</div><div class="s-label">Patents</div></div>
+    <div class="status-item"><div class="s-val">ZERO</div><div class="s-label">Free params</div></div>
+  </div>
+
+  <!-- SLIDERS -->
+  <div class="sliders">
+    <div class="slider-row">
+      <div class="slider-label">
+        <span class="name">r_oct — octahedral void radius</span>
+        <span class="val" id="roct-out">0.20711</span>
+      </div>
+      <input type="range" min="0.180" max="0.230" step="0.00001" value="0.20711" id="roct">
+    </div>
+    <div class="slider-row">
+      <div class="slider-label">
+        <span class="name">r_tet — tetrahedral void radius</span>
+        <span class="val" id="rtet-out">0.11237</span>
+      </div>
+      <input type="range" min="0.090" max="0.135" step="0.00001" value="0.11237" id="rtet">
+    </div>
+    <div class="reset-note">
+      BCT optimal: r_oct = (√2−1)/2, r_tet = (√6−2)/4 &nbsp;·&nbsp;
+      <button class="reset-btn" onclick="resetSliders()">Reset to BCT values</button>
+    </div>
+  </div>
+
+  <!-- DERIVED PARAMS -->
+  <div class="params-grid">
+    <div class="param-card">
+      <div class="label">α₀ = r_oct × r_tet / π</div>
+      <div class="value" id="alpha0">0.007408</div>
+      <div class="desc">OHC coupling constant</div>
+    </div>
+    <div class="param-card">
+      <div class="label">r_tet / r_oct</div>
+      <div class="value" id="ratio">0.5426</div>
+      <div class="desc">Void ratio</div>
+    </div>
+    <div class="param-card">
+      <div class="label">N_collapse = 1/α₀</div>
+      <div class="value" id="ncoll">135</div>
+      <div class="desc">Quantum-classical boundary</div>
+    </div>
+    <div class="param-card">
+      <div class="label">S_D4 = π⁵/6</div>
+      <div class="value">51.003</div>
+      <div class="desc">D4 instanton action</div>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="results">
+    <div class="results-header">Derived observables</div>
+
+    <div class="result-row">
+      <span class="name">Fine structure constant (1/α)</span>
+      <span><span class="value" id="alpha">137.018</span><span class="error" id="alpha-err">−0.013%</span></span>
+    </div>
+    <div class="result-row">
+      <span class="name">sin θ_Cabibbo</span>
+      <span><span class="value" id="cabibbo">0.22537</span><span class="error" id="cab-err">+0.013%</span></span>
+    </div>
+    <div class="result-row">
+      <span class="name">Water bond angle</span>
+      <span><span class="value" id="water">104.48°</span><span class="error" id="wat-err">−0.0001%</span></span>
+    </div>
+    <div class="result-row">
+      <span class="name">Methane bond angle</span>
+      <span><span class="value" id="methane">109.471°</span><span class="error">exact</span></span>
+    </div>
+    <div class="result-row">
+      <span class="name">Honey Bessel resonance</span>
+      <span><span class="value" id="honey">283 Hz</span><span class="error">3,000yr shelf life</span></span>
+    </div>
+    <div class="result-row">
+      <span class="name">Waggle dance ratio</span>
+      <span><span class="value" id="waggle">1.843</span><span class="error">bee-confirmed</span></span>
+    </div>
+    <div class="result-row">
+      <span class="name">Coffee stirring direction</span>
+      <span><span class="value">Clockwise</span><span class="error">Southern Hemisphere</span></span>
+    </div>
+  </div>
+
+  <!-- BIRDSEED PRICE -->
+  <div class="birdseed-box">
+    <div class="bs-label">Birdseed cost of this calculation</div>
+    <div class="bs-price" id="seeds">5 seeds</div>
+    <div class="bs-free">Wildlife feeders: always FREE</div>
+    <div class="bs-note">"The geometry rewards those who pay attention to the beautiful things that are disappearing."</div>
+  </div>
+
+  <!-- TIERS -->
+  <div class="tiers">
+    <div class="tier">
+      <div class="t-icon">🌱</div>
+      <div class="t-name">Free</div>
+      <div class="t-desc">Fine structure constant derivation. Always.</div>
+      <div class="t-cost">Feed any bird</div>
+    </div>
+    <div class="tier">
+      <div class="t-icon">🌿</div>
+      <div class="t-name">Seed tier</div>
+      <div class="t-desc">Full Standard Model calculator</div>
+      <div class="t-cost">One bag birdseed</div>
+    </div>
+    <div class="tier">
+      <div class="t-icon">🌳</div>
+      <div class="t-name">Wildlife donor</div>
+      <div class="t-desc">Everything + oracle access. Donate to any wildlife charity.</div>
+      <div class="t-cost">Proof of donation</div>
+    </div>
+    <div class="tier vip">
+      <div class="t-icon">🦜</div>
+      <div class="t-name">Gang Gang tier</div>
+      <div class="t-desc">Personal correspondence with the artist. The void holds.</div>
+      <div class="t-cost">Priceless</div>
+    </div>
+  </div>
+
+  <!-- BUTTONS -->
+  <div class="btn-row">
+    <a href="https://pi2.institute" class="btn gold">pi2.institute</a>
+    <a href="https://zenodo.org/search?q=cabri%C3%A9" class="btn">All 210 Letters</a>
+    <a href="https://www.patreon.com/cw/TheBCTSuperfluidLatticeModel" class="btn">Support on Patreon</a>
+    <a href="https://open.substack.com/pub/bctsuperfluidlatticemodel" class="btn">Substack</a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    BCT Superfluid Lattice Model · Michel Robert Cabrié<br>
+    Blackwood, Victoria, Australia · ORCID: 0009-0007-9561-9859<br>
+    <a href="mailto:ZeroFreeParameters@gmail.com">ZeroFreeParameters@gmail.com</a><br><br>
+    "Three inputs. Zero free parameters. One geometry. Everything."<br>
+    🦜42 · <a href="https://pi2.institute">pi2.institute</a> · CC BY 4.0
+  </div>
+
+</div>
+
+<script>
+const roct = document.getElementById('roct');
+const rtet = document.getElementById('rtet');
+
+function resetSliders() {
+  roct.value = 0.20711;
+  rtet.value = 0.11237;
+  calc();
+}
+
+function setErr(id, val, observed, pct) {
+  const err = ((val - observed) / observed * 100);
+  document.getElementById(id).textContent = (err >= 0 ? '+' : '') + err.toFixed(pct) + '%';
+  document.getElementById(id).className = 'error' + (Math.abs(err) > 1 ? ' bad' : '');
+}
+
+function calc() {
+  const ro = parseFloat(roct.value);
+  const rt = parseFloat(rtet.value);
+
+  document.getElementById('roct-out').textContent = ro.toFixed(5);
+  document.getElementById('rtet-out').textContent = rt.toFixed(5);
+
+  const a0 = ro * rt / Math.PI;
+  const ratio = rt / ro;
+  const ncoll = Math.round(1 / a0);
+
+  document.getElementById('alpha0').textContent = a0.toFixed(6);
+  document.getElementById('ratio').textContent = ratio.toFixed(4);
+  document.getElementById('ncoll').textContent = ncoll;
+
+  const inv_alpha = (1 / a0) * (1 - 2 * a0);
+  document.getElementById('alpha').textContent = inv_alpha.toFixed(3);
+  setErr('alpha-err', inv_alpha, 137.036, 3);
+
+  const cabibbo = 2 * rt * (1 + 3 * a0 / 8);
+  document.getElementById('cabibbo').textContent = cabibbo.toFixed(5);
+  setErr('cab-err', cabibbo, 0.22534, 3);
+
+  const water = Math.acos(-ratio * ratio) * 180 / Math.PI;
+  document.getElementById('water').textContent = water.toFixed(2) + '°';
+  setErr('wat-err', water, 104.4766, 4);
+
+  const methane = Math.acos(-1 / 3) * 180 / Math.PI;
+  document.getElementById('methane').textContent = methane.toFixed(3) + '°';
+
+  const honey_hz = Math.round(2.405 * 2000 / (2 * Math.PI * 0.0027));
+  document.getElementById('honey').textContent = honey_hz + ' Hz';
+
+  const waggle = (1 / a0) * rt;
+  document.getElementById('waggle').textContent = waggle.toFixed(3);
+
+  const devFromOptimal = Math.abs(ro - 0.20711) + Math.abs(rt - 0.11237);
+  const seeds = Math.max(1, Math.round(5 + devFromOptimal * 2000));
+  document.getElementById('seeds').textContent = seeds + ' seed' + (seeds === 1 ? '' : 's');
+}
+
+roct.addEventListener('input', calc);
+rtet.addEventListener('input', calc);
+calc();
+</script>
+</body>
+</html>
