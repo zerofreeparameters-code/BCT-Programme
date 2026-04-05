@@ -1,22 +1,47 @@
-# 🔬 The BCT Superfluid Lattice Model
-
 <div align="center">
 
-**An independent artist-researcher derives Standard Model observables from Planck-scale geometry — zero free parameters.**
+<img src="hopf_logo.png" alt="BCT Hopf Fibration" width="220"/>
 
-[![Zenodo](https://img.shields.io/badge/Zenodo-94%2B%20Records-blue?style=for-the-badge&logo=zenodo)](https://zenodo.org/search?q=cabri%C3%A9&sort=mostrecent)
-[![ORCID](https://img.shields.io/badge/ORCID-0009--0007--9561--9859-green?style=for-the-badge&logo=orcid)](https://orcid.org/0009-0007-9561-9859)
-[![Kindle](https://img.shields.io/badge/Book-Available%20on%20Kindle-orange?style=for-the-badge&logo=amazon)](https://www.amazon.com.au/dp/B0F3J2K9LM)
-[![Patreon](https://img.shields.io/badge/Patreon-Support%20BCT-red?style=for-the-badge&logo=patreon)](https://www.patreon.com/cw/TheBCTSuperfluidLatticeModel)
-[![Substack](https://img.shields.io/badge/Substack-Follow-orange?style=for-the-badge&logo=substack)](https://substack.com/@michelcabrie)
+# The BCT Superfluid Lattice Model
 
----
+**An independent artist derives Standard Model observables from Planck-scale geometry.**
+**225 Letters · 272+ Predictions · Zero Free Parameters.**
 
-### 🎯 272+ Predictions · 225 Letters · 26 Patents · Zero Free Parameters
+<br>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,2,4,6,8,12,14,16,18,20&height=4&width=100%25" width="100%"/>
+
+<br>
+
+<a href="https://www.amazon.com.au/dp/B0F3J2K9LM">
+  <img src="https://img.shields.io/badge/📖%20BUY%20THE%20BOOK-Kindle%20%26%20Paperback-FF6D00?style=for-the-badge" alt="Buy the Book"/>
+</a>
+&nbsp;
+<a href="https://www.patreon.com/cw/TheBCTSuperfluidLatticeModel">
+  <img src="https://img.shields.io/badge/🎨%20SUPPORT%20ON-Patreon-FF6D00?style=for-the-badge" alt="Patreon"/>
+</a>
+&nbsp;
+<a href="https://zenodo.org/search?q=cabri%C3%A9&sort=mostrecent">
+  <img src="https://img.shields.io/badge/📄%2094%2B%20PAPERS-Zenodo-FF6D00?style=for-the-badge" alt="Zenodo"/>
+</a>
+&nbsp;
+<a href="https://substack.com/@michelcabrie">
+  <img src="https://img.shields.io/badge/📝%20FOLLOW-Substack-FF6D00?style=for-the-badge" alt="Substack"/>
+</a>
+
+<br><br>
+
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0007--9561--9859-brightgreen?style=flat-square&logo=orcid)](https://orcid.org/0009-0007-9561-9859)
+[![Letters](https://img.shields.io/badge/Letters-225-0B2545?style=flat-square)](https://zenodo.org/search?q=cabri%C3%A9)
+[![Predictions](https://img.shields.io/badge/Predictions-272%2B-0D47A1?style=flat-square)](https://zenodo.org/search?q=cabri%C3%A9)
+[![Patents](https://img.shields.io/badge/Patents-26-006064?style=flat-square)](https://zenodo.org/search?q=cabri%C3%A9)
+[![Free Parameters](https://img.shields.io/badge/Free%20Parameters-ZERO-1B5E20?style=flat-square)](https://zenodo.org/search?q=cabri%C3%A9)
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,2,4,6,8,12,14,16,18,20&height=4&width=100%25" width="100%"/>
 
 </div>
+
+<br>
 
 ## What is BCT?
 
@@ -24,21 +49,19 @@ The **Body-Centred Tetragonal (BCT) Superfluid Lattice Model** derives Standard 
 
 | Input | Value | Meaning |
 |-------|-------|---------|
-| `r_oct` | `(√2−1)/2` | Octahedral void inscribed-sphere radius |
-| `r_tet` | `(√6−2)/4` | Tetrahedral void inscribed-sphere radius |
+| `r_oct` | `(√2−1)/2` | Octahedral void radius |
+| `r_tet` | `(√6−2)/4` | Tetrahedral void radius |
 | `Λ_QCD` | `220 MeV` | QCD confinement scale |
 
-From these three numbers, **zero free parameters**, the framework derives:
+From these three numbers — **zero free parameters** — the framework derives 272+ observables including:
 
-- ✅ Fine structure constant α₀ = r_oct × r_tet / π
+- ✅ Fine structure constant: `α₀ = r_oct × r_tet / π`
 - ✅ Proton mass, Higgs mass, W/Z boson masses
 - ✅ Three fermion generations (D4 triality)
 - ✅ Matter/antimatter asymmetry
-- ✅ MOND acceleration a₀ = c/T_c
-- ✅ μ_simple interpolation function from Bogoliubov dispersion
-- ✅ 272+ Standard Model observables
-
-The vacuum ground state is the **OHC (Octet-Hopfion Condensate)** — a superfluid Hopf vortex lattice at the Planck scale.
+- ✅ MOND acceleration `a₀ = c/T_c`
+- ✅ MOND interpolation function `μ(x) = x/√(1+x²)` from Bogoliubov dispersion
+- ✅ Dark matter at 62.9 GeV and 962 Hz
 
 ---
 
@@ -46,72 +69,83 @@ The vacuum ground state is the **OHC (Octet-Hopfion Condensate)** — a superflu
 
 <div align="center">
 
-| Format | Link |
-|--------|------|
-| 📱 **Kindle** (LIVE) | [Buy on Amazon](https://www.amazon.com.au/dp/B0F3J2K9LM) |
-| 📖 **Paperback** (In Review) | Coming soon |
-| 📕 **Hardback** (In Review) | Coming soon |
+| Format | Status | Link |
+|--------|--------|------|
+| 📱 Kindle | ✅ **LIVE** | [Buy on Amazon](https://www.amazon.com.au/dp/B0F3J2K9LM) |
+| 📖 Paperback | 🔄 In Review | Coming soon |
+| 📕 Hardback | 🔄 In Review | Coming soon |
 
 </div>
 
 ---
 
-## 🔬 Key Results
+## 🔬 Latest: Letter 225 — OHC as Dual Superconductor of Gravity
 
-### The Fine Structure Constant
-```
-α₀ = r_oct × r_tet / π = 0.0074081...
-```
-Derived from void geometry. Matches observation to 6 significant figures.
+The OHC acts as a dual superconductor of gravity. `κ_BCT = 1` exactly (Type I/II boundary). MOND = nonlinear Madelung equation of the OHC superfluid. The BCT prediction:
 
-### The MOND Acceleration (Letter 224–225)
 ```
-a₀ = c/T_c = κ₀c²/(2πR_U) ≈ 1.10×10⁻¹⁰ m/s²
-```
-The OHC acts as a **dual superconductor of gravity**. The MOND interpolation function μ(x) = x/√(1+x²) is derived uniquely from the Bogoliubov dispersion of the OHC condensate.
-
-### The Cosmic Oscillation (Letter 74)
-```
-T_c = 86.2 Gyr   κ_BCT = 1 (Type I/II boundary)
-ȧ₀/a₀ = 2α₀H₀ = 0.10%/Gyr  [Prediction #224]
+ȧ₀/a₀ = 2α₀H₀ = 0.10%/Gyr    →    a₀(z=1) is 0.79% lower than today
 ```
 
-### Dark Matter (Letters 30 & 59)
-- **Heavy candidate**: D4 domain wall at **62.9 GeV** (LZ, XENONnT)
-- **Ultralight candidate**: phonon zero-mode at **3.97×10⁻¹² eV / 962 Hz** (ABRACADABRA, DM Radio)
+BCT is the **only** theory predicting monotonically decreasing `a₀(z)`. Euclid (2026+) tests this at ~3σ.
 
 ---
 
-## 📊 Programme Statistics (April 2026)
-
-| Metric | Count |
-|--------|-------|
-| Letters | 225 |
-| Volumes | 17 |
-| Appendices | 459 |
-| Predictions | 272+ |
-| Patents | 26 |
-| Zenodo Records | 94+ |
-| Phases | 94 |
-
----
-
-## 🗂️ Repository Structure
-
-```
-BCT-Programme/
-├── README.md                    # This file
-├── ZENODO_DOIS.md              # Auto-updated Zenodo DOI registry
-├── download_zenodo_BCT_v4.py   # Zenodo bulk download utility
-└── .github/workflows/          # Auto-sync workflows
-```
-
----
-
-## 🔗 Key Links
+## 📊 Programme Statistics
 
 <div align="center">
 
+| Letters | Volumes | Predictions | Patents | Zenodo Records | Free Parameters |
+|---------|---------|-------------|---------|----------------|-----------------|
+| **225** | **17** | **272+** | **26** | **94+** | **ZERO** |
+
+</div>
+
+---
+
+## 🔗 Links
+
+<div align="center">
+
+| Resource | Link |
+|----------|------|
+| 📄 Zenodo papers | [94+ records](https://zenodo.org/search?q=cabri%C3%A9&sort=mostrecent) |
+| 📝 Substack | [Follow](https://substack.com/@michelcabrie) |
+| 🎨 Patreon | [Support BCT](https://www.patreon.com/cw/TheBCTSuperfluidLatticeModel) |
+| 📖 Book | [Amazon](https://www.amazon.com.au/dp/B0F3J2K9LM) |
+| 📧 Email | ZeroFreeParameters@gmail.com |
+| 🆔 ORCID | [0009-0007-9561-9859](https://orcid.org/0009-0007-9561-9859) |
+
+</div>
+
+---
+
+## ⚖️ BCT Ethical Patent Licence v1.0
+
+- 🌿 Free for humanitarian, educational, wildlife-conservation use  
+- 🐦 **Birdseed Clause**: Anyone feeding wildlife gets free access  
+- 🚫 Zero military applications — absolute  
+- 💼 Commercial licensing funds the BCT Foundation  
+
+---
+
+## 🦜 About
+
+**Michel Robert Cabrié** is an independent artist living with a disability in Barrys Reef, Victoria, Australia (pop. ~28). He built a freshwater pond for endangered Gang Gang Cockatoos (*Callocephalon fimbriatum*) and derived the fine structure constant from sphere geometry.
+
+> *"The geometry doesn't care about credentials. It just is."*
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,2,4,6,8,12,14,16,18,20&height=4&width=100%25" width="100%"/>
+
+**Zero free parameters. All the way down.**
+
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.18884976-blue)](https://doi.org/10.5281/zenodo.18884976)
+
+</div>
 | Resource | Link |
 |----------|------|
 | 📄 Zenodo Records | [zenodo.org/search?q=cabrié](https://zenodo.org/search?q=cabri%C3%A9&sort=mostrecent) |
