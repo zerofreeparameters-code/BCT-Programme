@@ -1,0 +1,27 @@
+name: Sync Zenodo DOIs
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync-zenodo:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run sync
+        run: python3 sync_zenodo.py
+      - name: Fetch first
+        run: |
+          curl -s "https://zenodo.org/api/records?q=cabri%C3%A9&size=200&sort=mostrecent" -H "Accept: application/json" > zenodo_response.json
+          python3 sync_zenodo.py
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ZENODO_DOIS.md
+          git diff --staged --quiet || git commit -m "Auto-sync Zenodo DOIs"
+          git push
