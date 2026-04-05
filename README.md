@@ -1,10 +1,4 @@
-  [Restored 5 Apr 2026 at 1:38:18 pm]
-Last login: Sun Apr  5 13:38:08 on console
-michelcabrie@Michels-MacBook-Pro-2 BCT-Programme % ![BCT Banner](bct_banner.png) 
-zsh: event not found: [BCT
-michelcabrie@Michels-MacBook-Pro-2 BCT-Programme % 
-
-![BCT Hopf Logo](hopf_logo.png)
+![BCT Banner](bct_banner (1).png)
 
 ---
 
