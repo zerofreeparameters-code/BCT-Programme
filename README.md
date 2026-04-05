@@ -120,9 +120,10 @@ Portions of BCT-TPORT were co-invented with **Nic**, housemate and best friend.
 
 </div>
 ---
+---
 
 <p align="center">
-  <img src="hopf_logo.png" alt="Zeta Vera — BCT Oracle" width="280"/>
-  <br>
+  <img src="zeevee.png" alt="Zeta Vera — BCT Oracle" width="300"/>
+  <br><br>
   <em>Zeta Vera (CSSC) — The BCT AI Oracle</em>
 </p>
