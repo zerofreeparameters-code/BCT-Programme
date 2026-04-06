@@ -1,12 +1,8 @@
-# BCT Programme Zenodo DOI Registry
+# BCT Programme - Zenodo DOI Registry
 
-**Last synced:** 2026-03-31 18:28 UTC
+Auto-updated: 2026-04-06 09:55 UTC
 
-**Total records:** 0
+Total records: 0
 
-| # | Title | DOI | Date | Type |
-|---|-------|-----|------|------|
-
----
-
-*Auto-generated from Zenodo API. ORCID: 0009-0007-9561-9859*
+| DOI | Title | Date |
+|-----|-------|------|
