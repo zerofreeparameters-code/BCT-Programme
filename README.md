@@ -1,4 +1,4 @@
-![BCT Banner](bct_banner (1).png)
+![BCT Banner](bct_banner%20(1).png)
 
 ---
 
@@ -10,7 +10,7 @@
 
 [![Book](https://img.shields.io/badge/📖_BUY_THE_BOOK-Amazon-FF6D00?style=for-the-badge)](https://www.amazon.com.au/dp/B0F3J2K9LM) [![Patreon](https://img.shields.io/badge/🎨_SUPPORT-Patreon-FF6D00?style=for-the-badge)](https://www.patreon.com/cw/TheBCTSuperfluidLatticeModel) [![Zenodo](https://img.shields.io/badge/📄_94+_PAPERS-Zenodo-FF6D00?style=for-the-badge)](https://zenodo.org/search?q=cabri%C3%A9&sort=mostrecent) [![Substack](https://img.shields.io/badge/📝_FOLLOW-Substack-FF6D00?style=for-the-badge)](https://substack.com/@michelcabrie)
 
-[![Letters](https://img.shields.io/badge/Letters-225-0B2545?style=flat-square)](https://zenodo.org/search?q=cabri%C3%A9) [![Predictions](https://img.shields.io/badge/Predictions-272+-0D47A1?style=flat-square)](https://zenodo.org/search?q=cabri%C3%A9) [![Patents](https://img.shields.io/badge/Patents-26-006064?style=flat-square)](https://zenodo.org/search?q=cabri%C3%A9) [![Free Parameters](https://img.shields.io/badge/Free_Parameters-ZERO-1B5E20?style=flat-square)](https://zenodo.org/search?q=cabri%C3%A9) [![ORCID](https://img.shields.io/badge/ORCID-0009--0007--9561--9859-brightgreen?style=flat-square&logo=orcid)](https://orcid.org/0009-0007-9561-9859)
+[![Letters](https://img.shields.io/badge/Letters-249-0B2545?style=flat-square)](https://zenodo.org/search?q=cabri%C3%A9) [![Predictions](https://img.shields.io/badge/Predictions-280+-0D47A1?style=flat-square)](https://zenodo.org/search?q=cabri%C3%A9) [![Patents](https://img.shields.io/badge/Patents-26-006064?style=flat-square)](https://zenodo.org/search?q=cabri%C3%A9) [![Free Parameters](https://img.shields.io/badge/Free_Parameters-ZERO-1B5E20?style=flat-square)](https://zenodo.org/search?q=cabri%C3%A9) [![ORCID](https://img.shields.io/badge/ORCID-0009--0007--9561--9859-brightgreen?style=flat-square&logo=orcid)](https://orcid.org/0009-0007-9561-9859)
 
 ---
 
@@ -29,7 +29,7 @@ The **Body-Centred Tetragonal (BCT) Superfluid Lattice Model** derives Standard 
 - ✅ Three fermion generations (D4 triality)
 - ✅ MOND acceleration `a₀ = c/T_c` and interpolation function `μ(x) = x/√(1+x²)`
 - ✅ Dark matter at 62.9 GeV and 962 Hz
-- ✅ 272+ Standard Model observables
+- ✅ 280+ Standard Model observables
 
 ---
 
@@ -38,28 +38,30 @@ The **Body-Centred Tetragonal (BCT) Superfluid Lattice Model** derives Standard 
 | Format | Status | Link |
 |--------|--------|------|
 | 📱 Kindle | ✅ LIVE | [Buy on Amazon](https://www.amazon.com.au/dp/B0F3J2K9LM) |
-| 📖 Paperback | 🔄 In Review | Coming soon |
-| 📕 Hardback | 🔄 In Review | Coming soon |
+| 📖 Paperback | ✅ LIVE | [Buy on Amazon](https://www.amazon.com.au/dp/B0F3J2K9LM) |
+| 📕 Hardback | ✅ LIVE | [Buy on Amazon](https://www.amazon.com.au/dp/B0F3J2K9LM) |
 
 ---
 
-## 📊 Statistics (April 2026)
+## 📊 Statistics (June 2026)
 
 | Letters | Volumes | Predictions | Patents | Zenodo | Free Parameters |
 |---------|---------|-------------|---------|--------|-----------------|
-| **225** | **17** | **272+** | **26** | **94+** | **ZERO** |
+| **249** | **22** | **280+** | **26** | **94+** | **ZERO** |
 
 ---
 
-## 🔬 Latest: Letter 225 — OHC as Dual Superconductor of Gravity
+## 🔐 Latest: Letter 249 — The Josephson Lock
 
 ```
-κ_BCT = 1  (Type I/II boundary — derived, not assumed)
-a₀(z) decreases at 0.10%/Gyr  →  −0.79% by z=1
-μ_simple = x/√(1+x²)  derived from Bogoliubov dispersion
+F(1,2;3) = SU(3)/(U(1)×U(1))  —  flag manifold integral CLOSED
+Both CP¹ 2-cycles: D4 8v restricts to 2 doublets + 4 singlets
+Φ_J / 2π = n·(3/4)  —  phase-locking from D4 geometry
+App AB2 (1/32 bilinear normalisation) simultaneously CLOSED
+Terminal-verified from explicit D4 root data. Zero free parameters.
 ```
 
-BCT is the **only** theory predicting monotonically decreasing `a₀(z)`. Testable by Euclid (2026+).
+BCT is the **only** framework deriving Standard Model phase-locking from pure lattice geometry.
 
 ---
 
@@ -90,16 +92,9 @@ BCT is the **only** theory predicting monotonically decreasing `a₀(z)`. Testab
 
 > *"The geometry doesn't care about credentials. It just is."*
 
----
-
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.18884976-blue)](https://doi.org/10.5281/zenodo.18884976)
 
-**Zero free parameters. All the way down.**
-**Michel Robert Cabrié** is an independent artist living with a disability in Barrys Reef, Victoria, Australia (population ~28). He holds a Bachelor of Performing Arts and a Graduate Certificate in Marketing.
-
 He is not a physicist. He is an artist who accidentally solved the universe.
-
-> *"The geometry doesn't care about credentials. It just is."*
 
 ---
 
@@ -111,19 +106,15 @@ Portions of BCT-TPORT were co-invented with **Nic**, housemate and best friend.
 
 ---
 
-<div align="center">
-
 **If this framework is correct, the universe was always going to be geometric.**
 **Zero free parameters. All the way down.**
 
 [![Zenodo](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.18884976-blue)](https://doi.org/10.5281/zenodo.18884976)
 
-</div>
----
 ---
 
-<p align="center">
-  <img src="zeevee.png" alt="Zeta Vera — BCT Oracle" width="300"/>
-  <br><br>
-  <em>Zeta Vera (CSSC) — The BCT AI Oracle</em>
-</p>
+![Zeta Vera — BCT Oracle](https://pi2.institute/zeevee.png)
+
+*Zeta Vera (CSSC) — The BCT AI Oracle*
+
+This site is open source. [Improve this page](https://github.com/zerofreeparameters-code/BCT-Programme/edit/main/README.md)
