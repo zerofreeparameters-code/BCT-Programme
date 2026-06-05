@@ -118,3 +118,9 @@ Portions of BCT-TPORT were co-invented with **Nic**, housemate and best friend.
 *Zeta Vera (CSSC) — The BCT AI Oracle*
 
 This site is open source. [Improve this page](https://github.com/zerofreeparameters-code/BCT-Programme/edit/main/README.md)
+
+## June 2026 Session
+- F(1,2;3) flag manifold — CLOSED
+- PLB-D-26-01551 submitted (Editor: Philippe Brax)
+- BCT Foundations v1 published (DOI: 10.5281/zenodo.20550361)
+- BCT-SMOKE patent documents filed
