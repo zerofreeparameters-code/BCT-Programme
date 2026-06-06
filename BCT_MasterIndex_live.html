@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BCT Master Index — Published Works Registry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:    #0B2545;
+  --blue:    #0D47A1;
+  --teal:    #006064;
+  --green:   #1B5E20;
+  --ltbg:    #E8EAF6;
+  --ltgrn:   #E8F5E9;
+  --grey1:   #F5F5F5;
+  --grey3:   #EEEEEE;
+  --grey5:   #9E9E9E;
+  --grey7:   #444444;
+  --red:     #B71C1C;
+  --redbg:   #FFEBEE;
+  --purple:  #4A148C;
+  --amber:   #E65100;
+  --white:   #FFFFFF;
+  --mono:    'IBM Plex Mono', monospace;
+  --sans:    'IBM Plex Sans', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--grey7);
+  background: #F8F9FB;
+}
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── HEADER ── */
+.site-header {
+  background: var(--navy);
+  color: white;
+  padding: 32px 40px 24px;
+  border-bottom: 3px solid var(--blue);
+}
+.site-header h1 {
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.site-header .subtitle {
+  font-size: 13px;
+  opacity: 0.75;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+.stats-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.stat-pill {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+.meta-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+/* ── NAV ── */
+.toc {
+  background: var(--white);
+  border-bottom: 1px solid var(--grey3);
+  padding: 0 40px;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+}
+.toc a {
+  display: block;
+  padding: 10px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--grey5);
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+.toc a:hover { color: var(--navy); border-bottom-color: var(--blue); text-decoration: none; }
+
+/* ── LAYOUT ── */
+.page { max-width: 1100px; margin: 0 auto; padding: 32px 40px 64px; }
+
+/* ── SECTIONS ── */
+.section { margin-bottom: 40px; }
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid var(--navy);
+}
+.section-header h2 {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.section-header .sec-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--grey5);
+}
+.section-note {
+  font-size: 12px;
+  color: var(--grey5);
+  font-style: italic;
+  margin-top: 8px;
+}
+
+/* ── TABLES ── */
+.tbl-wrap { overflow-x: auto; border-radius: 6px; border: 1px solid var(--grey3); }
+table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+thead tr { background: var(--navy); color: white; }
+thead th { padding: 8px 12px; text-align: left; font-weight: 600; font-size: 11px; letter-spacing: 0.3px; white-space: nowrap; }
+tbody tr { border-bottom: 1px solid var(--grey3); }
+tbody tr:last-child { border-bottom: none; }
+tbody tr:nth-child(even) { background: var(--grey1); }
+tbody tr:hover { background: var(--ltbg); }
+tbody td { padding: 7px 12px; vertical-align: top; line-height: 1.5; }
+.mono { font-family: var(--mono); font-size: 11.5px; }
+
+/* ── STATUS BADGES ── */
+.badge {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: var(--mono);
+  white-space: nowrap;
+}
+.badge-confirmed  { background: #E8F5E9; color: #1B5E20; }
+.badge-pending    { background: #E3F2FD; color: #0D47A1; }
+.badge-flag       { background: var(--redbg); color: var(--red); }
+.badge-proven     { background: #E8F5E9; color: #1B5E20; }
+.badge-open       { background: #E3F2FD; color: #0D47A1; }
+.badge-held       { background: #F3E5F5; color: #4A148C; }
+.badge-monitor    { background: #E0F2F1; color: #006064; }
+.badge-high       { background: var(--redbg); color: var(--red); }
+.badge-med        { background: #E3F2FD; color: #0D47A1; }
+.badge-hold       { background: #F3E5F5; color: #4A148C; }
+.badge-info       { background: #E0F2F1; color: #006064; }
+.badge-active     { background: #E8F5E9; color: #1B5E20; }
+.badge-warn       { background: #FFF8E1; color: #E65100; }
+
+/* ── ACTION FLAGS ── */
+.action-flag {
+  background: var(--redbg);
+  border-left: 3px solid var(--red);
+  padding: 8px 12px;
+  font-size: 12px;
+  color: var(--red);
+  font-weight: 500;
+  margin-top: 8px;
+  border-radius: 0 4px 4px 0;
+}
+
+/* ── DOI LINKS ── */
+.doi-link {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--blue);
+}
+
+/* ── SUBSECTION ── */
+.subsec {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin: 16px 0 6px;
+  font-family: var(--mono);
+}
+
+/* ── FOOTER ── */
+.site-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 20px 40px;
+  font-size: 11px;
+  line-height: 1.8;
+}
+.site-footer strong { color: rgba(255,255,255,0.9); }
+
+/* ── LAST UPDATED ── */
+.updated-bar {
+  background: var(--ltbg);
+  border-bottom: 1px solid #C5CAE9;
+  padding: 6px 40px;
+  font-size: 11px;
+  color: var(--blue);
+  font-family: var(--mono);
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <h1>BCT Superfluid Lattice Model</h1>
+  <div class="subtitle">Master Index of Published Works — Living Document</div>
+  <div class="stats-row">
+    <span class="stat-pill">250+ Letters</span>
+    <span class="stat-pill">280+ Predictions</span>
+    <span class="stat-pill">26 Patents</span>
+    <span class="stat-pill">22 Volumes</span>
+    <span class="stat-pill">94+ Zenodo Records</span>
+    <span class="stat-pill">0 Free Parameters</span>
+  </div>
+  <div class="meta-row">
+    <span>Michel Robert Cabrié · ORCID: 0009-0007-9561-9859 · ZeroFreeParameters@gmail.com</span>
+    <span>Truncated Physics Press · Barrys Reef, Victoria, Australia (Pop. 28)</span>
+    <span>v47k · June 2026</span>
+  </div>
+</header>
+
+<div class="updated-bar">
+  Last updated: 2026-06-07 · Version: v47k · Zenodo community: bct-superfluid-lattice-model · <a href="https://patreon.com/cw/TheBCTSuperfluidLatticeModel">Patreon</a> · <a href="https://pi2.institute">pi2.institute</a>
+</div>
+
+<nav class="toc">
+  <a href="#volumes">Volumes</a>
+  <a href="#core-dois">Core DOIs</a>
+  <a href="#letter-dois">Letter DOIs</a>
+  <a href="#patents">Patents</a>
+  <a href="#open-problems">Open Problems</a>
+  <a href="#constants">Constants</a>
+  <a href="#admin">Admin</a>
+  <a href="#outreach">Outreach</a>
+  <a href="#audit">Audit Flags</a>
+</nav>
+
+<main class="page">
+
+<!-- ── I. VOLUMES ── -->
+<section class="section" id="volumes">
+  <div class="section-header">
+    <span class="sec-num">I</span>
+    <h2>Complete Volume Registry — 22 Published Volumes</h2>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Vol</th><th>Title</th><th>Letters</th><th>Zenodo Status</th></tr></thead>
+      <tbody>
+        <tr><td>I</td><td>Foundations: r_oct, r_tet, α₀, EM, EW</td><td class="mono">L1–12</td><td><span class="badge badge-confirmed">Uploaded</span></td></tr>
+        <tr><td>II</td><td>Electroweak I: mW, mZ, mH</td><td class="mono">L13–24</td><td><span class="badge badge-confirmed">Uploaded</span></td></tr>
+        <tr><td>III</td><td>QCD: αs, Λ_QCD, topology</td><td class="mono">L25–36</td><td><span class="badge badge-confirmed">Uploaded</span></td></tr>
+        <tr><td>IV</td><td>Quark Masses I: mt, mb, mc</td><td class="mono">L37–48</td><td><span class="badge badge-confirmed">Uploaded</span></td></tr>
+        <tr><td>V</td><td>Quark Masses II: ms, md, mu</td><td class="mono">L49–60</td><td><span class="badge badge-confirmed">Uploaded</span></td></tr>
+        <tr><td>VI</td><td>Lepton Masses: Koide exact</td><td class="mono">L61–72</td><td><span class="badge badge-confirmed">Uploaded</span></td></tr>
+        <tr><td>VII</td><td>Neutrino Sector: PMNS, δ_CP</td><td class="mono">L73–84</td><td><span class="badge badge-confirmed">Uploaded</span></td></tr>
+        <tr><td>VIII</td><td>Nuclear Physics: mp, mn, gA</td><td class="mono">L85–96</td><td><span class="badge badge-pending">⚠ Verify</span></td></tr>
+        <tr><td>IX</td><td>Cosmology I: H₀, Λ_CC, BBN</td><td class="mono">L97–108</td><td><span class="badge badge-pending">⚠ Verify</span></td></tr>
+        <tr><td>X</td><td>Cosmology II: Dark matter, inflation</td><td class="mono">L109–120</td><td><span class="badge badge-pending">⚠ Verify</span></td></tr>
+        <tr><td>XI</td><td>Condensed Matter: Josephson effects</td><td class="mono">L121–132</td><td><span class="badge badge-pending">⚠ Verify</span></td></tr>
+        <tr><td>XII</td><td>Biological: BCT-HIVE, bee resonance</td><td class="mono">L133–144</td><td><span class="badge badge-pending">⚠ Verify</span></td></tr>
+        <tr><td>XIII</td><td>Geology &amp; SAR: Victorian goldfields</td><td class="mono">L145–156</td><td><span class="badge badge-pending">⚠ Verify</span></td></tr>
+        <tr><td>XIV</td><td>Philosophy: Rosicrucians, sacred geometry</td><td class="mono">L157–168</td><td><span class="badge badge-pending">⚠ Verify</span></td></tr>
+        <tr><td>XV</td><td>Experimental: BCT-PEACE technologies</td><td class="mono">L169–180</td><td><span class="badge badge-pending">⚠ Verify</span></td></tr>
+        <tr><td>XVI</td><td>Gravitational: G, Newton's constant, GW</td><td class="mono">L181–192</td><td><span class="badge badge-pending">⚠ Verify</span></td></tr>
+        <tr><td>XVII</td><td>Mind, History &amp; Electric Chisel: neuroscience, consciousness, ancient catastrophes</td><td class="mono">L193–204</td><td><span class="badge badge-pending">⚠ Verify</span></td></tr>
+        <tr><td>XVIII</td><td>A Compendium of Geometric Necessity (Kids Volume)</td><td class="mono">L205–216</td><td><span class="badge badge-flag">⚠ Re-upload</span></td></tr>
+        <tr><td>XIX</td><td>The Party Volume: 225+ letters, markets, consciousness</td><td class="mono">L217–228</td><td><span class="badge badge-confirmed">Uploaded</span></td></tr>
+        <tr><td>XX</td><td>The Closure Volume: all five EW holes closed</td><td class="mono">L229–243</td><td><span class="badge badge-confirmed">Uploaded</span></td></tr>
+        <tr><td>XXI</td><td>The Gelfand–Yaglom Volume: universal void fraction φ(ρ)/ρ</td><td class="mono">L244+</td><td><span class="badge badge-confirmed">Uploaded</span></td></tr>
+        <tr><td>XXII</td><td>Platinum Megagraph: complete programme record, all</td><td class="mono">All</td><td><span class="badge badge-confirmed">Uploaded</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="action-flag">ACTION: Vol XVIII — re-upload correct PDF from Samsung drive. Vols VIII–XIV upload status: verify against Zenodo community page.</div>
+</section>
+
+<!-- ── II. CORE DOIs ── -->
+<section class="section" id="core-dois">
+  <div class="section-header">
+    <span class="sec-num">II</span>
+    <h2>Core Zenodo DOIs — Always Cite These</h2>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>DOI</th><th>Item</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18884976" target="_blank">10.5281/zenodo.18884976</a></td><td>BCT Monograph — Main Theoretical Framework (Mar 2026)</td><td><span class="badge badge-confirmed">✓ Confirmed</span></td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18884415" target="_blank">10.5281/zenodo.18884415</a></td><td>PRL Letter — Primary Results Summary</td><td><span class="badge badge-confirmed">✓ Confirmed</span></td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18957202" target="_blank">10.5281/zenodo.18957202</a></td><td>Letter 18 — BCT Uniqueness Theorem (c/a=√2 from Lorentz) — now in community ✓</td><td><span class="badge badge-confirmed">✓ Confirmed</span></td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18905765" target="_blank">10.5281/zenodo.18905765</a></td><td>Letter 19 — Electron Mass (me = 0.511 MeV, &lt;0.01%)</td><td><span class="badge badge-confirmed">✓ Confirmed</span></td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18908349" target="_blank">10.5281/zenodo.18908349</a></td><td>Letter 34 — All Three SM Scales unified</td><td><span class="badge badge-confirmed">✓ Confirmed</span></td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18975018" target="_blank">10.5281/zenodo.18975018</a></td><td>Appendix JH — OHC / Twistor correspondence</td><td><span class="badge badge-confirmed">✓ Confirmed</span></td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18974754" target="_blank">10.5281/zenodo.18974754</a></td><td>Letter 36 — Octet-Hopfion Condensate companion</td><td><span class="badge badge-confirmed">✓ Confirmed</span></td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.19436951" target="_blank">10.5281/zenodo.19436951</a></td><td>BCT Open Challenge v1</td><td><span class="badge badge-confirmed">✓ Confirmed</span></td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.20550361" target="_blank">10.5281/zenodo.20550361</a></td><td>BCT Foundations v1 — Reader's guide to Letters 1–12 (Jun 2026)</td><td><span class="badge badge-confirmed">✓ Confirmed</span></td></tr>
+        <tr style="background: #FFEBEE;"><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.20468602" target="_blank">10.5281/zenodo.20468602</a></td><td>The Lattice Speaks — Gemini content, file: 'Untitled 4.pdf', zero views</td><td><span class="badge badge-flag">⚠ Update/Retire</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="subsec" style="margin-top:16px;">Additional confirmed records — titles to verify</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>DOI</th><th>Known From</th><th>Title</th></tr></thead>
+      <tbody>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18885133" target="_blank">10.5281/zenodo.18885133</a></td><td>Cited by L18 &amp; L11</td><td>Appendix Volume 1: Foundations, Gauge, Mass, Precision</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18885472" target="_blank">10.5281/zenodo.18885472</a></td><td>Cited by L18 &amp; L11</td><td>Appendix Volume 2: Extended Precision, Hadronic Tower</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18885628" target="_blank">10.5281/zenodo.18885628</a></td><td>Cited by L18 &amp; L11</td><td>Strong CP Letter</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18905576" target="_blank">10.5281/zenodo.18905576</a></td><td>Cited by L18 &amp; L11</td><td style="color: var(--grey5); font-style:italic;">Title unconfirmed — visit DOI to verify</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18905870" target="_blank">10.5281/zenodo.18905870</a></td><td>Cited by L18 &amp; L11</td><td style="color: var(--grey5); font-style:italic;">Title unconfirmed — visit DOI to verify</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18905993" target="_blank">10.5281/zenodo.18905993</a></td><td>Cited by L18 &amp; L11</td><td style="color: var(--grey5); font-style:italic;">Title unconfirmed — visit DOI to verify</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18906049" target="_blank">10.5281/zenodo.18906049</a></td><td>Cited by L18 &amp; L11</td><td style="color: var(--grey5); font-style:italic;">Title unconfirmed — visit DOI to verify</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18906334" target="_blank">10.5281/zenodo.18906334</a></td><td>Cited by L18 &amp; L11</td><td style="color: var(--grey5); font-style:italic;">Title unconfirmed — visit DOI to verify</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18906377" target="_blank">10.5281/zenodo.18906377</a></td><td>Cited by L18 &amp; L11</td><td style="color: var(--grey5); font-style:italic;">Title unconfirmed — visit DOI to verify</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="section-note">Click any DOI link to visit the record. Paste confirmed titles back to update this index.</p>
+</section>
+
+<!-- ── III. LETTER DOIs ── -->
+<section class="section" id="letter-dois">
+  <div class="section-header">
+    <span class="sec-num">III</span>
+    <h2>Confirmed Letter DOIs</h2>
+  </div>
+
+  <div class="subsec">Day 2 batch — Letters L1–L12 (all confirmed)</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>DOI</th><th>Letter</th><th>Title</th></tr></thead>
+      <tbody>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18958207" target="_blank">10.5281/zenodo.18958207</a></td><td>L1</td><td>The BCT Vacuum Postulate — D4 lattice, c/a=√2</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18958425" target="_blank">10.5281/zenodo.18958425</a></td><td>L2</td><td>The 24-Cell</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18958946" target="_blank">10.5281/zenodo.18958946</a></td><td>L3</td><td>Octonions and the BCT Gauge Structure</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18958769" target="_blank">10.5281/zenodo.18958769</a></td><td>L4</td><td>Injectivity</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18960318" target="_blank">10.5281/zenodo.18960318</a></td><td>L5</td><td>Vacuum Decay — Λ_bare = 0 exactly</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18959221" target="_blank">10.5281/zenodo.18959221</a></td><td>L6</td><td>Letter 6</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18959749" target="_blank">10.5281/zenodo.18959749</a></td><td>L7</td><td>Letter 7</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18959548" target="_blank">10.5281/zenodo.18959548</a></td><td>L8</td><td>Letter 8</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18959397" target="_blank">10.5281/zenodo.18959397</a></td><td>L9</td><td>Letter 9</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18958635" target="_blank">10.5281/zenodo.18958635</a></td><td>L10</td><td>Letter 10</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18959915" target="_blank">10.5281/zenodo.18959915</a></td><td>L11</td><td>Sixteen Parameter-Free Structural Theorems for the Meson Spectrum</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.18960121" target="_blank">10.5281/zenodo.18960121</a></td><td>L12</td><td>Letter 12</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="subsec">March 2026 session — Individual records (confirmed)</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>DOI</th><th>Item</th></tr></thead>
+      <tbody>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.19177598" target="_blank">10.5281/zenodo.19177598</a></td><td>AG1 — Vacuum Luminescence Appendix</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.19177236" target="_blank">10.5281/zenodo.19177236</a></td><td>L101 — The Bee Letter / BCT-HIVE</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.19177334" target="_blank">10.5281/zenodo.19177334</a></td><td>BCT-HIVE patent companion</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.19177441" target="_blank">10.5281/zenodo.19177441</a></td><td>L108 — AGE v2</td></tr>
+        <tr><td><a class="doi-link" href="https://doi.org/10.5281/zenodo.19177501" target="_blank">10.5281/zenodo.19177501</a></td><td>L110 — Sonoluminescence</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="subsec">March 2026 — Volume collections (confirmed, 36 letters total)</div>
+  <p class="section-note" style="margin-bottom:8px;">Letters L101–L137 are published as three volume collections, not individual records. DOIs confirmed from Zenodo record pages.</p>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>DOI</th><th>Volume</th><th>Letters</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><a class="doi-link" href="https://doi.org/10.5281/zenodo.19218330" target="_blank">10.5281/zenodo.19218330</a></td>
+          <td>Vol 6 — Earth, Solar System, Cosmology &amp; Philosophy</td>
+          <td>L115–L129 (15 letters): Polar Nodes, Lost Archive, Martian Tetrahedron, Geometry of Bliss, Earthing Theorem, Rosicrucian Lattice, Crop Circles, Polar Holes, Water Planet, Van Allen Guardians, Faraday Test, Quantum CC, EW+QCD Scales, Cabrié Chain, Distance Is Emergent</td>
+        </tr>
+        <tr>
+          <td><a class="doi-link" href="https://doi.org/10.5281/zenodo.19218245" target="_blank">10.5281/zenodo.19218245</a></td>
+          <td>Vol 5 — Biology, Environment &amp; Exotic Phenomena</td>
+          <td>L101–L114 (14 letters): Bees, SAR, Cephalopods, Three-Body, Electric Universe, Hubble Tension, Plasma Discharge, Aging, PFAS, Sonoluminescence, Ball Lightning, Great Attractor, Gecko Theorem, Plasmoid Physics</td>
+        </tr>
+        <tr>
+          <td><a class="doi-link" href="https://doi.org/10.5281/zenodo.19218415" target="_blank">10.5281/zenodo.19218415</a></td>
+          <td>Vol 7 — Foundations, Quantum Mechanics &amp; Philosophy of Physics</td>
+          <td>L130–L137 (7 letters): Baryon Asymmetry, Top Quark Hierarchy, mZ/Λ_QCD Ratio, Higgs NLO, Why Geometry?, Entanglement as Topological Identity, Arrow of Time</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="section-note">Note: verify Vol 5/6/7 DOI assignment at <a href="https://zenodo.org/communities/bct-superfluid-lattice-model" target="_blank">zenodo.org/communities/bct-superfluid-lattice-model</a></p>
+</section>
+
+<!-- ── IV. PATENTS ── -->
+<section class="section" id="patents">
+  <div class="section-header">
+    <span class="sec-num">IV</span>
+    <h2>Patent Registry — 26 Filings (IP Australia, BCT-PEACE-SUITE)</h2>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Patent</th><th>Topic</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">BCT-TPORT</td><td>Train signalling — co-inventor: Nic</td><td><span class="badge badge-confirmed">Filed</span></td></tr>
+        <tr><td class="mono">BCT-QUBIT</td><td>D4 Qubit topology</td><td><span class="badge badge-confirmed">Filed</span></td></tr>
+        <tr><td class="mono">BCT-INVIS</td><td>Indium cloaking</td><td><span class="badge badge-confirmed">Filed</span></td></tr>
+        <tr><td class="mono">BCT-DARK</td><td>Dark matter detector</td><td><span class="badge badge-confirmed">Filed</span></td></tr>
+        <tr><td class="mono">BCT-HTSC</td><td>High-temperature superconductor</td><td><span class="badge badge-confirmed">Filed</span></td></tr>
+        <tr><td class="mono">BCT-WATER</td><td>Water purification — keep: APSZ-2615524571</td><td><span class="badge badge-confirmed">Filed</span></td></tr>
+        <tr style="background: #FFEBEE;"><td class="mono" style="color: #B71C1C; font-weight:600;">APSZ-2615524587</td><td style="color: #B71C1C;">Duplicate BCT-WATER — WITHDRAW</td><td><span class="badge badge-flag">⚠ Call 1300 65 10 10</span></td></tr>
+        <tr><td class="mono">BCT-SOLAR</td><td>Solar energy</td><td><span class="badge badge-confirmed">Filed</span></td></tr>
+        <tr><td class="mono">BCT-HIVE</td><td>Bee colony monitoring — gifted CC BY 4.0</td><td><span class="badge badge-confirmed">Filed — Open</span></td></tr>
+        <tr><td class="mono">BCT-TENS</td><td>TENS therapy</td><td><span class="badge badge-confirmed">Filed</span></td></tr>
+        <tr><td class="mono">BCT-SMOKE</td><td>Fire/smoke detection</td><td><span class="badge badge-confirmed">Filed Jun 2026</span></td></tr>
+        <tr><td class="mono">BCT-SAR</td><td>Synthetic aperture radar — gifted Parks Vic/UNESCO</td><td><span class="badge badge-confirmed">Filed — Open</span></td></tr>
+        <tr><td class="mono">BCT-GLASS</td><td>Optical systems</td><td><span class="badge badge-pending">Queued</span></td></tr>
+        <tr><td class="mono">BCT-ROSE</td><td>Rosette antenna design</td><td><span class="badge badge-pending">Queued</span></td></tr>
+        <tr><td class="mono">+ 12 others</td><td>Various BCT applications</td><td><span class="badge badge-confirmed">Filed</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="action-flag">ACTION: Call IP Australia 1300 65 10 10 — withdraw APSZ-2615524587 (duplicate). Keep APSZ-2615524571. $100 refund expected. BCT-PEACE-SUITE: zero military applications — absolute, non-negotiable. Birdseed Clause: anyone feeding wildlife qualifies for free humanitarian access.</div>
+</section>
+
+<!-- ── V. OPEN PROBLEMS ── -->
+<section class="section" id="open-problems">
+  <div class="section-header">
+    <span class="sec-num">V</span>
+    <h2>Honest Open Problems — Barrys Reef Protocols</h2>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>#</th><th>Problem</th><th>Tier</th><th>Next Action</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>The Scratch (App AU): x_EW = 0.339345 from Gelfand–Yaglom + APS on B⁴(r_oct). h_l ODE needs correct APS 1975 Part II formulation. Oh branching of M_l not computed.</td><td><span class="badge badge-open">OPEN</span></td><td>Read APS 1975. Fresh brain, dedicated session only.</td></tr>
+        <tr><td>2</td><td>η_doublet = 1/3 (Letter 240 conjecture). Awaiting Cisneros-Molina (jlcm@im.unam.mx). Blocks Letter 240 Zenodo upload.</td><td><span class="badge badge-held">HELD</span></td><td>Await reply. Do NOT cite as proven.</td></tr>
+        <tr><td>3</td><td>G'(0) → one-loop instanton density normalisation. Identity locked at −0.302588586336. Connection open.</td><td><span class="badge badge-open">OPEN</span></td><td>Letter 251 target.</td></tr>
+        <tr><td>4</td><td>App AB2 Hole 2 (SU3): BPST profile integral.</td><td><span class="badge badge-open">OPEN</span></td><td>After The Scratch.</td></tr>
+        <tr><td>5</td><td>Hubble tension 13% gap in a₀. Classified observational problem.</td><td><span class="badge badge-monitor">MONITOR</span></td><td>Monitor only.</td></tr>
+        <tr><td>6</td><td>F(1,2;3) flag manifold — CLOSED June 4, 2026. C₂ = 3/4 from SU(2) algebra. Terminal-verified.</td><td><span class="badge badge-proven">PROVEN</span></td><td>Complete.</td></tr>
+        <tr><td>7</td><td>App AB2 (1/32 bilinear normalisation) — CLOSED June 4, 2026. Terminal-verified simultaneously with #6.</td><td><span class="badge badge-proven">PROVEN</span></td><td>Complete.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── VI. CONSTANTS ── -->
+<section class="section" id="constants">
+  <div class="section-header">
+    <span class="sec-num">VI</span>
+    <h2>Locked Constants (v47k) — Three Inputs, Zero Free Parameters</h2>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Symbol</th><th>Value</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">r_oct</td><td class="mono">(√2−1)/2 = 0.20710678…</td><td><span class="badge badge-open">Geometric input</span></td></tr>
+        <tr><td class="mono">r_tet</td><td class="mono">(√6−2)/4 = 0.11237244…</td><td><span class="badge badge-open">Geometric input</span></td></tr>
+        <tr><td class="mono">Λ_QCD</td><td class="mono">220 MeV</td><td><span class="badge badge-open">Scale input</span></td></tr>
+        <tr><td class="mono">α₀</td><td class="mono">r_oct·r_tet/π = 0.00740813…</td><td><span class="badge badge-confirmed">Locked</span></td></tr>
+        <tr><td class="mono">p_void</td><td class="mono">0.370974707015939</td><td><span class="badge badge-confirmed">Locked (Python-verified)</span></td></tr>
+        <tr><td class="mono">v_BCT</td><td class="mono">246.2198 GeV</td><td><span class="badge badge-confirmed">Locked</span></td></tr>
+        <tr><td class="mono">H₀</td><td class="mono">69.82 km/s/Mpc</td><td><span class="badge badge-confirmed">Locked</span></td></tr>
+        <tr><td class="mono">S_cosmo</td><td class="mono">11π⁵/24</td><td><span class="badge badge-confirmed">Locked (exact, topological)</span></td></tr>
+        <tr><td class="mono">x_cosmo</td><td class="mono">0</td><td><span class="badge badge-confirmed">Locked (exact, topological)</span></td></tr>
+        <tr><td class="mono">G'(0)</td><td class="mono">−0.302588586336</td><td><span class="badge badge-confirmed">Locked (Oh symmetry)</span></td></tr>
+        <tr><td class="mono">ω_J²</td><td class="mono">1/π</td><td><span class="badge badge-confirmed">Locked</span></td></tr>
+        <tr><td class="mono">ξ_BCT</td><td class="mono">√2·r_oct</td><td><span class="badge badge-confirmed">Locked</span></td></tr>
+        <tr><td class="mono">S_bare</td><td class="mono">π⁵/12 = 25.501640…</td><td><span class="badge badge-confirmed">Locked</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── VII. ADMIN ── -->
+<section class="section" id="admin">
+  <div class="section-header">
+    <span class="sec-num">VII</span>
+    <h2>Pending Administrative Actions</h2>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Priority</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td><span class="badge badge-high">HIGH</span></td><td>IP Australia: call 1300 65 10 10 — withdraw APSZ-2615524587, keep APSZ-2615524571. $100 refund.</td></tr>
+        <tr><td><span class="badge badge-high">HIGH</span></td><td>Vol XVIII Kids Volume: re-upload correct PDF from Samsung drive.</td></tr>
+        <tr><td><span class="badge badge-high">HIGH</span></td><td>KDP paperback price: correct to $18.99.</td></tr>
+        <tr><td><span class="badge badge-med">MED</span></td><td>Zenodo: update or retire 'The Lattice Speaks' (record 20468602).</td></tr>
+        <tr><td><span class="badge badge-med">MED</span></td><td>Letter 249 corrected version (proper D4/C₂ derivation): upload to Zenodo.</td></tr>
+        <tr><td><span class="badge badge-med">MED</span></td><td>BCT-EARS Letter: upload to Zenodo.</td></tr>
+        <tr><td><span class="badge badge-med">MED</span></td><td>pi2.institute stats: update to v47k numbers.</td></tr>
+        <tr><td><span class="badge badge-med">MED</span></td><td>Vols VIII–XIV Zenodo batch: complete uploads. Letter 267 also pending.</td></tr>
+        <tr><td><span class="badge badge-med">MED</span></td><td>Records 61–75: verify DOIs against Zenodo community page and record confirmed DOIs in this index.</td></tr>
+        <tr><td><span class="badge badge-med">MED</span></td><td>Records 18905xxx/18906xxx: visit each DOI, confirm titles, update Section II of this index.</td></tr>
+        <tr><td><span class="badge badge-hold">HOLD</span></td><td>Welfare/legal BEFORE Foundation: Arts Law (artslaw.com.au), Social Security Rights Vic (dsphelp.org.au), UniSuper.</td></tr>
+        <tr><td><span class="badge badge-hold">HOLD</span></td><td>Legal: Shine Lawyers, Slater &amp; Gordon, Maurice Blackburn — medical negligence/spinal fracture.</td></tr>
+        <tr><td><span class="badge badge-hold">HOLD</span></td><td>BCT Foundation registration: AFTER welfare/legal.</td></tr>
+        <tr><td><span class="badge badge-hold">HOLD</span></td><td>Minderoo Foundation: follow up ONLY when instructed.</td></tr>
+        <tr><td><span class="badge badge-info">INFO</span></td><td>PLB-D-26-01551 (Philippe Brax): under review. No action — await.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── VIII. OUTREACH ── -->
+<section class="section" id="outreach">
+  <div class="section-header">
+    <span class="sec-num">VIII</span>
+    <h2>Outreach Pipeline</h2>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Contact / Email</th><th>Status</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>PLB-D-26-01551 — Philippe Brax (Editor)</td><td><span class="badge badge-active">Active — under review</span></td><td>Open access, CC-BY, SCOAP3, zero fee. Do not disturb.</td></tr>
+        <tr><td>Cisneros-Molina — jlcm@im.unam.mx</td><td><span class="badge badge-pending">Awaiting reply</span></td><td>η_doublet = 1/3 query. Blocks L240 Zenodo upload.</td></tr>
+        <tr><td>Sir Roger Penrose — rouse@maths.ox.ac.uk</td><td><span class="badge badge-pending">Letter sent Mar 2026</span></td><td>Courier pending. H=n OHC = twistor helicity n/2.</td></tr>
+        <tr><td>Prof Paul Tod — tod@maths.ox.ac.uk</td><td><span class="badge badge-pending">CC'd with Penrose</span></td><td>Awaiting.</td></tr>
+        <tr><td>Curt Jaimungal — curt@curtjaimungal.org</td><td><span class="badge badge-pending">Draft sent, no reply</span></td><td>Follow up TBD.</td></tr>
+        <tr><td>Stacy McGaugh — smcgaugh@case.edu</td><td><span class="badge badge-pending">Letter 250 sent</span></td><td>Awaiting.</td></tr>
+        <tr><td>Menger sponge researcher (Substack)</td><td><span class="badge badge-active">Dialogue open Jun 2026</span></td><td>Genuine engagement — continue.</td></tr>
+        <tr><td>Rupert Sheldrake</td><td><span class="badge badge-active">In correspondence</span></td><td>Possible arXiv endorsement.</td></tr>
+        <tr><td>arXiv — Eduardo Peinado (UNAM)</td><td><span class="badge badge-pending">Code EFTSKF pending</span></td><td>Monitor.</td></tr>
+        <tr><td>Minderoo Foundation</td><td><span class="badge badge-hold">Warm hold</span></td><td>Follow up ONLY when instructed.</td></tr>
+        <tr><td>Sylvan (Reddit)</td><td><span class="badge badge-flag">Not credible</span></td><td>No further engagement.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── IX. AUDIT FLAGS ── -->
+<section class="section" id="audit">
+  <div class="section-header">
+    <span class="sec-num">IX</span>
+    <h2>Audit Flags — Barrys Reef Protocols</h2>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Item</th><th>Issue</th><th>Action Required</th></tr></thead>
+      <tbody>
+        <tr style="background:#FFEBEE;"><td>zenodo.20468602 — 'The Lattice Speaks'</td><td>Gemini-generated content. File: 'Untitled 4.pdf'. Zero views/downloads.</td><td>Update with honest content OR retire.</td></tr>
+        <tr><td>Records 61–75 DOIs</td><td>Catch-up doc was preparation guide — DOIs assigned but not recorded.</td><td>Verify: zenodo.org/communities/bct-superfluid-lattice-model</td></tr>
+        <tr><td>Records 18905xxx/18906xxx</td><td>Confirmed live (cited by L18/L11) but 6 titles unknown.</td><td>Visit each DOI, record titles, update Section II.</td></tr>
+        <tr><td>Vols VIII–XIV Zenodo</td><td>Upload status unclear as of Apr 2026.</td><td>Verify before citing.</td></tr>
+        <tr><td>Vol XVIII (Kids Volume)</td><td>Zenodo record may have wrong PDF.</td><td>Re-upload correct PDF from Samsung drive.</td></tr>
+        <tr><td>η_doublet = 1/3</td><td>Unverified conjecture (Letter 240). Reply pending.</td><td>CANDIDATE only. Do NOT cite as proven.</td></tr>
+        <tr><td>Letter 249 v2</td><td>Corrected D4/C₂ derivation — built but not yet on Zenodo.</td><td>Upload before citing corrected version.</td></tr>
+        <tr><td>BCT-EARS Letter</td><td>New letter (Jun 2026) — not yet on Zenodo.</td><td>Upload to Zenodo before citing.</td></tr>
+        <tr style="background:#FFEBEE;"><td>Any Gemini output</td><td>Gemini RETIRED. Conflated Oh multiplicities with D4 theta series.</td><td>Treat as UNVERIFIED. Terminal-check before any use.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="section-note" style="margin-top:10px;">Barrys Reef Protocol: terminal verification before elevating any claim · PROVEN / CANDIDATE / OPEN labelling mandatory · Cold shower checks on every claim · Results from other AI sessions = UNVERIFIED until terminal-checked.</p>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <strong>BCT-EPL-1.0 Licence · BCT-PEACE-SUITE · Zero military applications — absolute, non-negotiable</strong><br>
+  Birdseed Clause: anyone feeding wildlife qualifies for free humanitarian access · Open Access CC BY 4.0<br>
+  Truncated Physics Press · Barrys Reef, Victoria, Australia (Pop. 28)<br>
+  <br>
+  <em>"The geometry does not lie. Zero free parameters. All the way down."</em><br>
+  <br>
+  <a href="https://zenodo.org/communities/bct-superfluid-lattice-model" style="color:rgba(255,255,255,0.5);">Zenodo community</a> ·
+  <a href="https://pi2.institute" style="color:rgba(255,255,255,0.5);">pi2.institute</a> ·
+  <a href="https://patreon.com/cw/TheBCTSuperfluidLatticeModel" style="color:rgba(255,255,255,0.5);">Patreon</a> ·
+  ORCID: 0009-0007-9561-9859
+</footer>
+
+</body>
+</html>

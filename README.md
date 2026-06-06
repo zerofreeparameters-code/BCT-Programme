@@ -70,6 +70,7 @@ BCT is the **only** framework deriving Standard Model phase-locking from pure la
 | | |
 |--|--|
 | 📄 Zenodo | [94+ records](https://zenodo.org/search?q=cabri%C3%A9&sort=mostrecent) |
+| 📋 Master Index | [Published Works Registry](https://zerofreeparameters-code.github.io/BCT-Programme/BCT_MasterIndex_live.html) — live, always current |
 | 📝 Substack | [substack.com/@michelcabrie](https://substack.com/@michelcabrie) |
 | 🎨 Patreon | [Support BCT](https://www.patreon.com/cw/TheBCTSuperfluidLatticeModel) |
 | 📖 Book | [Amazon](https://www.amazon.com.au/dp/B0F3J2K9LM) |
