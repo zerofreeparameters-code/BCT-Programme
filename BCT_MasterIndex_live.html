@@ -163,8 +163,8 @@ a:hover { text-decoration: underline; }
   tr { page-break-inside: avoid; }
   thead { display: table-header-group; }
 
-  /* Keep small sections (constants, open problems) intact */
-  #constants { page-break-inside: avoid; }
+  /* Keep small sections intact but allow them to follow previous content */
+  #constants { page-break-inside: avoid; page-break-before: avoid; }
   #open-problems { page-break-inside: avoid; }
 
   /* Don't break inside a note or flag */
