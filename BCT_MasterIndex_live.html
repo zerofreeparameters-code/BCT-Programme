@@ -150,8 +150,27 @@ a:hover { text-decoration: underline; }
     print-color-adjust: exact;
   }
   thead th { color: white !important; }
-  .section { page-break-inside: avoid; }
+
+  /* Allow sections to break freely across pages — no forced jumps */
+  .section { page-break-inside: auto; }
+
+  /* Keep section header with at least the first table row */
+  .section-header { page-break-after: avoid; }
+
+  /* Keep table rows together but allow tables to break between rows */
   tr { page-break-inside: avoid; }
+  thead { display: table-header-group; }
+
+  /* Keep small sections (constants, open problems) intact */
+  #constants { page-break-inside: avoid; }
+  #open-problems { page-break-inside: avoid; }
+
+  /* Don't break inside a note or flag */
+  .section-note { page-break-inside: avoid; }
+  .action-flag { page-break-inside: avoid; }
+
+  /* Avoid breaking immediately after a section header */
+  .tbl-wrap { page-break-before: avoid; }
 }
 .section-note {
   font-size: 12px;
