@@ -111,14 +111,16 @@ a:hover { text-decoration: underline; }
 .section-header {
   display: flex;
   align-items: baseline;
-  gap: 12px;
+  gap: 10px;
   margin-bottom: 12px;
-  padding-bottom: 8px;
-  border-bottom: 1.5px solid var(--navy);
+  padding: 6px 10px;
+  background: var(--ltbg);
+  border-left: 4px solid var(--navy);
+  border-radius: 0 4px 4px 0;
 }
 .section-header h2 {
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--navy);
   text-transform: uppercase;
@@ -127,7 +129,40 @@ a:hover { text-decoration: underline; }
 .section-header .sec-num {
   font-family: var(--mono);
   font-size: 11px;
-  color: var(--grey5);
+  font-weight: 600;
+  color: var(--navy);
+  opacity: 0.5;
+}
+@media print {
+  .section-header {
+    background: #F0F4FF;
+    border-left: 4px solid #0B2545;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  thead tr {
+    background: #0B2545 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .stat-pill {
+    border: 1px solid #0B2545;
+    color: #0B2545 !important;
+    background: white !important;
+  }
+  .site-header {
+    background: white !important;
+    color: #0B2545 !important;
+    border-bottom: 2px solid #0B2545;
+  }
+  .site-header h1, .site-header .subtitle, .site-header .meta-row span {
+    color: #0B2545 !important;
+  }
+  .toc { display: none; }
+  .updated-bar { display: none; }
+  .site-footer { background: white !important; color: #444 !important; border-top: 1px solid #ccc; }
+  .site-footer a { color: #0B2545 !important; }
+  .site-footer strong { color: #0B2545 !important; }
 }
 .section-note {
   font-size: 12px;
@@ -255,9 +290,6 @@ tbody td { padding: 7px 12px; vertical-align: top; line-height: 1.5; }
   <a href="#patents">Patents</a>
   <a href="#open-problems">Open Problems</a>
   <a href="#constants">Constants</a>
-  <a href="#admin">Admin</a>
-  <a href="#outreach">Outreach</a>
-  <a href="#audit">Audit Flags</a>
 </nav>
 
 <main class="page">
@@ -297,7 +329,7 @@ tbody td { padding: 7px 12px; vertical-align: top; line-height: 1.5; }
       </tbody>
     </table>
   </div>
-  <div class="action-flag">ACTION: Vol XVIII — re-upload correct PDF from Samsung drive. Vols VIII–XIV upload status: verify against Zenodo community page.</div>
+  
 </section>
 
 <!-- ── II. CORE DOIs ── -->
@@ -441,7 +473,7 @@ tbody td { padding: 7px 12px; vertical-align: top; line-height: 1.5; }
       </tbody>
     </table>
   </div>
-  <div class="action-flag">ACTION: Call IP Australia 1300 65 10 10 — withdraw APSZ-2615524587 (duplicate). Keep APSZ-2615524571. $100 refund expected. BCT-PEACE-SUITE: zero military applications — absolute, non-negotiable. Birdseed Clause: anyone feeding wildlife qualifies for free humanitarian access.</div>
+  
 </section>
 
 <!-- ── V. OPEN PROBLEMS ── -->
@@ -494,86 +526,11 @@ tbody td { padding: 7px 12px; vertical-align: top; line-height: 1.5; }
   </div>
 </section>
 
-<!-- ── VII. ADMIN ── -->
-<section class="section" id="admin">
-  <div class="section-header">
-    <span class="sec-num">VII</span>
-    <h2>Pending Administrative Actions</h2>
-  </div>
-  <div class="tbl-wrap">
-    <table>
-      <thead><tr><th>Priority</th><th>Action</th></tr></thead>
-      <tbody>
-        <tr><td><span class="badge badge-high">HIGH</span></td><td>IP Australia: call 1300 65 10 10 — withdraw APSZ-2615524587, keep APSZ-2615524571. $100 refund.</td></tr>
-        <tr><td><span class="badge badge-high">HIGH</span></td><td>Vol XVIII Kids Volume: re-upload correct PDF from Samsung drive.</td></tr>
-        <tr><td><span class="badge badge-high">HIGH</span></td><td>KDP paperback price: correct to $18.99.</td></tr>
-        <tr><td><span class="badge badge-med">MED</span></td><td>Zenodo: update or retire 'The Lattice Speaks' (record 20468602).</td></tr>
-        <tr><td><span class="badge badge-med">MED</span></td><td>Letter 249 corrected version (proper D4/C₂ derivation): upload to Zenodo.</td></tr>
-        <tr><td><span class="badge badge-med">MED</span></td><td>BCT-EARS Letter: upload to Zenodo.</td></tr>
-        <tr><td><span class="badge badge-med">MED</span></td><td>pi2.institute stats: update to v47k numbers.</td></tr>
-        <tr><td><span class="badge badge-med">MED</span></td><td>Vols VIII–XIV Zenodo batch: complete uploads. Letter 267 also pending.</td></tr>
-        <tr><td><span class="badge badge-med">MED</span></td><td>Records 61–75: verify DOIs against Zenodo community page and record confirmed DOIs in this index.</td></tr>
-        <tr><td><span class="badge badge-med">MED</span></td><td>Records 18905xxx/18906xxx: visit each DOI, confirm titles, update Section II of this index.</td></tr>
-        <tr><td><span class="badge badge-hold">HOLD</span></td><td>Welfare/legal BEFORE Foundation: Arts Law (artslaw.com.au), Social Security Rights Vic (dsphelp.org.au), UniSuper.</td></tr>
-        <tr><td><span class="badge badge-hold">HOLD</span></td><td>Legal: Shine Lawyers, Slater &amp; Gordon, Maurice Blackburn — medical negligence/spinal fracture.</td></tr>
-        <tr><td><span class="badge badge-hold">HOLD</span></td><td>BCT Foundation registration: AFTER welfare/legal.</td></tr>
-        <tr><td><span class="badge badge-hold">HOLD</span></td><td>Minderoo Foundation: follow up ONLY when instructed.</td></tr>
-        <tr><td><span class="badge badge-info">INFO</span></td><td>PLB-D-26-01551 (Philippe Brax): under review. No action — await.</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
 
-<!-- ── VIII. OUTREACH ── -->
-<section class="section" id="outreach">
-  <div class="section-header">
-    <span class="sec-num">VIII</span>
-    <h2>Outreach Pipeline</h2>
-  </div>
-  <div class="tbl-wrap">
-    <table>
-      <thead><tr><th>Contact / Email</th><th>Status</th><th>Notes</th></tr></thead>
-      <tbody>
-        <tr><td>PLB-D-26-01551 — Philippe Brax (Editor)</td><td><span class="badge badge-active">Active — under review</span></td><td>Open access, CC-BY, SCOAP3, zero fee. Do not disturb.</td></tr>
-        <tr><td>Cisneros-Molina — jlcm@im.unam.mx</td><td><span class="badge badge-pending">Awaiting reply</span></td><td>η_doublet = 1/3 query. Blocks L240 Zenodo upload.</td></tr>
-        <tr><td>Sir Roger Penrose — rouse@maths.ox.ac.uk</td><td><span class="badge badge-pending">Letter sent Mar 2026</span></td><td>Courier pending. H=n OHC = twistor helicity n/2.</td></tr>
-        <tr><td>Prof Paul Tod — tod@maths.ox.ac.uk</td><td><span class="badge badge-pending">CC'd with Penrose</span></td><td>Awaiting.</td></tr>
-        <tr><td>Curt Jaimungal — curt@curtjaimungal.org</td><td><span class="badge badge-pending">Draft sent, no reply</span></td><td>Follow up TBD.</td></tr>
-        <tr><td>Stacy McGaugh — smcgaugh@case.edu</td><td><span class="badge badge-pending">Letter 250 sent</span></td><td>Awaiting.</td></tr>
-        <tr><td>Menger sponge researcher (Substack)</td><td><span class="badge badge-active">Dialogue open Jun 2026</span></td><td>Genuine engagement — continue.</td></tr>
-        <tr><td>Rupert Sheldrake</td><td><span class="badge badge-active">In correspondence</span></td><td>Possible arXiv endorsement.</td></tr>
-        <tr><td>arXiv — Eduardo Peinado (UNAM)</td><td><span class="badge badge-pending">Code EFTSKF pending</span></td><td>Monitor.</td></tr>
-        <tr><td>Minderoo Foundation</td><td><span class="badge badge-hold">Warm hold</span></td><td>Follow up ONLY when instructed.</td></tr>
-        <tr><td>Sylvan (Reddit)</td><td><span class="badge badge-flag">Not credible</span></td><td>No further engagement.</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
 
-<!-- ── IX. AUDIT FLAGS ── -->
-<section class="section" id="audit">
-  <div class="section-header">
-    <span class="sec-num">IX</span>
-    <h2>Audit Flags — Barrys Reef Protocols</h2>
-  </div>
-  <div class="tbl-wrap">
-    <table>
-      <thead><tr><th>Item</th><th>Issue</th><th>Action Required</th></tr></thead>
-      <tbody>
-        <tr style="background:#FFEBEE;"><td>zenodo.20468602 — 'The Lattice Speaks'</td><td>Gemini-generated content. File: 'Untitled 4.pdf'. Zero views/downloads.</td><td>Update with honest content OR retire.</td></tr>
-        <tr><td>Records 61–75 DOIs</td><td>Catch-up doc was preparation guide — DOIs assigned but not recorded.</td><td>Verify: zenodo.org/communities/bct-superfluid-lattice-model</td></tr>
-        <tr><td>Records 18905xxx/18906xxx</td><td>Confirmed live (cited by L18/L11) but 6 titles unknown.</td><td>Visit each DOI, record titles, update Section II.</td></tr>
-        <tr><td>Vols VIII–XIV Zenodo</td><td>Upload status unclear as of Apr 2026.</td><td>Verify before citing.</td></tr>
-        <tr><td>Vol XVIII (Kids Volume)</td><td>Zenodo record may have wrong PDF.</td><td>Re-upload correct PDF from Samsung drive.</td></tr>
-        <tr><td>η_doublet = 1/3</td><td>Unverified conjecture (Letter 240). Reply pending.</td><td>CANDIDATE only. Do NOT cite as proven.</td></tr>
-        <tr><td>Letter 249 v2</td><td>Corrected D4/C₂ derivation — built but not yet on Zenodo.</td><td>Upload before citing corrected version.</td></tr>
-        <tr><td>BCT-EARS Letter</td><td>New letter (Jun 2026) — not yet on Zenodo.</td><td>Upload to Zenodo before citing.</td></tr>
-        <tr style="background:#FFEBEE;"><td>Any Gemini output</td><td>Gemini RETIRED. Conflated Oh multiplicities with D4 theta series.</td><td>Treat as UNVERIFIED. Terminal-check before any use.</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="section-note" style="margin-top:10px;">Barrys Reef Protocol: terminal verification before elevating any claim · PROVEN / CANDIDATE / OPEN labelling mandatory · Cold shower checks on every claim · Results from other AI sessions = UNVERIFIED until terminal-checked.</p>
-</section>
+
+
+
 
 </main>
 
