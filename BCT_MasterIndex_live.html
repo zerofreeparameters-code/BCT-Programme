@@ -41,33 +41,36 @@ a:hover { text-decoration: underline; }
 .site-header {
   background: var(--navy);
   color: white;
-  padding: 32px 40px 24px;
+  padding: 36px 40px 28px;
   border-bottom: 3px solid var(--blue);
+  text-align: center;
 }
 .site-header h1 {
   font-family: var(--mono);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 600;
   letter-spacing: -0.5px;
   margin-bottom: 4px;
+  color: white;
 }
 .site-header .subtitle {
   font-size: 13px;
-  opacity: 0.75;
+  color: rgba(255,255,255,0.8);
   font-style: italic;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 .stats-row {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
   margin-top: 16px;
+  justify-content: center;
 }
 .stat-pill {
   background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.25);
   border-radius: 4px;
-  padding: 4px 12px;
+  padding: 5px 14px;
   font-family: var(--mono);
   font-size: 12px;
   font-weight: 600;
@@ -79,7 +82,8 @@ a:hover { text-decoration: underline; }
   flex-wrap: wrap;
   margin-top: 12px;
   font-size: 11px;
-  opacity: 0.6;
+  color: rgba(255,255,255,0.65);
+  justify-content: center;
 }
 
 /* ── NAV ── */
@@ -134,35 +138,68 @@ a:hover { text-decoration: underline; }
   opacity: 0.5;
 }
 @media print {
-  .section-header {
-    background: #F0F4FF;
-    border-left: 4px solid #0B2545;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+
+  /* Header — white bg, navy text */
+  .site-header {
+    background: white !important;
+    border-bottom: 2px solid #0B2545 !important;
+    color: #0B2545 !important;
+    text-align: center;
   }
+  .site-header h1 {
+    color: #0B2545 !important;
+  }
+  .site-header .subtitle {
+    color: #333333 !important;
+  }
+  .meta-row {
+    color: #555555 !important;
+  }
+  .stat-pill {
+    background: white !important;
+    border: 1.5px solid #0B2545 !important;
+    color: #0B2545 !important;
+  }
+
+  /* Section headers — light bg, navy text, no white-on-navy */
+  .section-header {
+    background: #E8EAF6 !important;
+    border-left: 4px solid #0B2545 !important;
+  }
+  .section-header h2, .section-header .sec-num {
+    color: #0B2545 !important;
+  }
+
+  /* Table headers — keep navy bg but ensure text stays white */
   thead tr {
     background: #0B2545 !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
-  .stat-pill {
-    border: 1px solid #0B2545;
-    color: #0B2545 !important;
+  thead th {
+    color: white !important;
+  }
+
+  /* Hide nav and update bar */
+  .toc { display: none !important; }
+  .updated-bar { display: none !important; }
+
+  /* Footer */
+  .site-footer {
     background: white !important;
+    color: #444444 !important;
+    border-top: 1px solid #cccccc !important;
   }
-  .site-header {
-    background: white !important;
-    color: #0B2545 !important;
-    border-bottom: 2px solid #0B2545;
-  }
-  .site-header h1, .site-header .subtitle, .site-header .meta-row span {
+  .site-footer a, .site-footer strong, .site-footer em {
     color: #0B2545 !important;
   }
-  .toc { display: none; }
-  .updated-bar { display: none; }
-  .site-footer { background: white !important; color: #444 !important; border-top: 1px solid #ccc; }
-  .site-footer a { color: #0B2545 !important; }
-  .site-footer strong { color: #0B2545 !important; }
+
+  /* Page breaks */
+  .section { page-break-inside: avoid; }
+  .tbl-wrap { page-break-inside: auto; }
+  tr { page-break-inside: avoid; }
 }
 .section-note {
   font-size: 12px;
