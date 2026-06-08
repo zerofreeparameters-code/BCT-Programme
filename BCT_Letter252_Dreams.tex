@@ -3,7 +3,7 @@
 % Michel Robert Cabrié | June 2026
 
 \documentclass[aps,prl,twocolumn,showpacs,preprintnumbers]{revtex4-2}
-\usepackage{amsmath,amssymb,amsfonts,xcolor,booktabs,microtype,hyperref}
+\usepackage{amsmath,amssymb,amsfonts,xcolor,booktabs,microtype,hyperref,graphicx}
 
 \definecolor{bctnavy}{RGB}{11,37,69}
 \definecolor{bctblue}{RGB}{13,71,161}
@@ -153,6 +153,17 @@ Wake & 9302 & 4651.0 \\
 \end{table}
 
 \subsection{Results}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\columnwidth]{BCT_DreamHypothesis_Result}
+\caption{Infra-slow PSD by sleep stage (left) and power at BCT
+Josephson frequency $\fJ = 0.08979$~Hz per stage (right).
+REM shows elevated power vs N2 ($p=0.001$, ratio 1.19).
+Data: Sleep-EDF Expanded, $n=5$ subjects, 863 REM epochs.
+Red dashed line marks $\fJ$. Error bars = SEM.}
+\label{fig:rem}
+\end{figure}
 
 \begin{table}[h]
 \centering
