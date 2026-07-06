@@ -1,6 +1,6 @@
 # BCT Programme - Zenodo DOI Registry
 
-Auto-updated: 2026-07-05 08:45 UTC
+Auto-updated: 2026-07-06 10:04 UTC
 
 Total records: 0
 
