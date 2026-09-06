@@ -1,0 +1,5 @@
+# Built artefacts — PDFs live on Zenodo with DOIs, not in git
+*.pdf
+
+# macOS cruft
+.DS_Store
