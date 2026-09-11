@@ -1,13 +1,13 @@
 {
-  "session": 2,
+  "session": 3,
   "date": "2026-09-11",
   "digest": "NONE - inventory_prompt.md not archived, not recoverable",
-  "repo_tarball_sha256": "86aca2692650dd66fb2464c0825e7c9a160c1bc278666e6fd65796a85c2584d7",
+  "repo_tarball_sha256": "b68319e3cdbb8109 (re-pinned, repo moved)",
   "files_total": 164,
   "tex_total": 134,
-  "tex_done": 3,
-  "next_id": "INV-0019",
-  "resume_at": "tex/BCT_Appendix_KA4.tex",
+  "tex_done": 6,
+  "next_id": "INV-0035",
+  "resume_at": "tex/BCT_Appendix_KA1.tex",
   "order": "smallest .tex first by word count",
-  "note": "session 1 output (115 claims, state file, CSVs) LOST - not archived. This is a restart, not a resume. Mechanical layers regenerated from scratch."
+  "note": "Session 1 output lost. Session 2 restarted mechanical layers + 3 files. Session 3 +3 files."
 }

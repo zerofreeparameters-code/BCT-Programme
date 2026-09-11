@@ -17,3 +17,19 @@ INV-0015,tex/BCT_Appendix_KB1.tex,§2,C=C error vs observed,+2.0%,+2.01% (1.34/1
 INV-0016,tex/BCT_Appendix_KB1.tex,§2,C#C ratio 1-2r_tet,0.7753,0.77525513,Y,
 INV-0017,tex/BCT_Appendix_KB1.tex,§2,C#C error vs observed,-0.5%,-0.509% (1.20/1.54),Y,same caveat as INV-0015
 INV-0018,tex/BCT_Appendix_KB1.tex,§3,"half-fill series Z=6,14,32,50","C,Si,Ge,Sn",correct,Y,all four are 4-outer-electron elements
+INV-0019,tex/BCT_Appendix_KA4.tex,§2,alpha_0 value,0.0074081,0.00740805573,Y,
+INV-0020,tex/BCT_Appendix_KA4.tex,Thm 1,proof of |H| <= n,H*2pi*a0 <= 2pi*n*a0,alpha_0 cancels identically,N,"**The proof is vacuous.** alpha_0 appears on both sides and cancels, so the inequality reduces to H<=n by construction. The Josephson/Bessel content does no work in the derivation it is credited with. Result may still be true; it is not proved here."
+INV-0021,tex/BCT_Appendix_KA4.tex,§4,"""topology change requiring infinite energy""",infinite,finite,N,GP vortex cores are nodal at finite energy per unit length - that is the standard unwinding mechanism. Same false claim as App JH §3.4 (see CN-Psi2-12). REPEAT DEFECT across two documents.
+INV-0022,tex/BCT_Appendix_KA4.tex,Thm 1,"""mode sustains winding up to 2*pi*n*alpha_0""",--,--,FLAG,"asserted, not derived; no source given. This premise carries the whole theorem."
+INV-0023,tex/BCT_Letter62.tex,§1,S_D4 = pi^5/6,51.0033,51.0032808,Y,
+INV-0024,tex/BCT_Letter62.tex,§2,S_TVC = S_D4 * r_tet/r_oct,27.673468,27.673468,Y,exact to all printed digits
+INV-0025,tex/BCT_Letter62.tex,§3,Lambda_TVC = m_P exp(-S_TVC),11701610 GeV,11692984 GeV,FLAG,-0.074%. Reproduces only if m_P = 1.2215e19 GeV; the Letter quotes m_P = 1.22e19 in its own table and never states the value used. Unstated input.
+INV-0026,tex/BCT_Letter62.tex,§4,alpha_TVC = r_tet^2/pi,0.0040195,0.00401947856,Y,also verified = alpha_0 * r_tet/r_oct
+INV-0027,tex/BCT_Letter62.tex,§5,T_TVC,8297 TeV,8291.2 TeV,FLAG,"-0.074%, inherits INV-0025"
+INV-0028,tex/BCT_Letter62.tex,§5,m_DM(TVC) = Lambda*S/(2pi),51538 TeV,51500 TeV,FLAG,"-0.074%, inherits INV-0025"
+INV-0029,tex/BCT_Letter62.tex,§6,Lambda_QCD/Lambda_TVC = exp(-(S_D4-S_TVC)),7.3789e-11,7.37889e-11,N,"**Formula reproduces, but contradicts the Letter's own quoted scales.** Its table gives Lambda_QCD = 220 MeV and Lambda_TVC = 11701610 GeV, whose ratio is 1.881e-8 - a factor 255 from the printed 7.379e-11. Root cause: m_P*exp(-S_D4) = 0.8628 MeV, NOT 220 MeV. So Lambda_QCD is not obtained by the same dimensional-transmutation route as Lambda_TVC, and the ""three nested scales from one geometry, zero free parameters"" claim does not hold arithmetically as written."
+INV-0030,tex/BCT_Letter62.tex,§3 table,v_EW = 246 GeV from r_oct(1+r_oct)=1/4,246 GeV,identity = 0.25 exactly,CANNOT-EVALUATE,the identity is exact; the route from it to 246 GeV is not stated in this Letter
+INV-0031,tex/BCT_Appendix_KB2.tex,§2,"S_H(d) table, Sc..Zn",0.10..0.00,all 10 rows reproduce,Y,"min(n_d,10-n_d)/10 correct throughout"
+INV-0032,tex/BCT_Appendix_KB2.tex,§3,Delta E_HS(Cr),5.5e-6,5.48793e-5,N,**Factor-of-10 error.** The printed formula a0^2*(0.50-0.40)*10 gives 5.488e-5. The printed answer 5.5e-6 equals the same expression WITHOUT its own *10 factor. Formula and answer disagree.
+INV-0033,tex/BCT_Appendix_KB2.tex,§4,"""Zero exceptions across three periods""",zero,not supported,FLAG,"Period 6 half-fill is listed ""---"" (absent, not confirmed) yet counted as a period. Known Period-5 anomalies absent from the table: Nb 4d4 5s1, Ru, Rh, and Pd 4d10 5s0 - Pd breaks the ns1 pattern the table asserts."
+INV-0034,tex/BCT_Appendix_KB2.tex,§5,gold colour derivation,--,--,CANNOT-EVALUATE,"qualitative; no number to recompute. Relativistic 6s contraction is standard chemistry, not BCT-derived."
