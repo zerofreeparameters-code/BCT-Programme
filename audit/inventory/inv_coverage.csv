@@ -1,0 +1,165 @@
+path,ext,words,status,reason
+BCT_AppL204a_BrainBessel.tex,.tex,582,SKIPPED,not yet read
+BCT_AppL204b_NcollapseNeural.tex,.tex,670,SKIPPED,not yet read
+BCT_AppL204c_Anaesthesia.tex,.tex,583,SKIPPED,not yet read
+BCT_AppL204d_UniversalGrammar.tex,.tex,691,SKIPPED,not yet read
+BCT_AppL206a_EDMScaling.tex,.tex,561,SKIPPED,not yet read
+BCT_AppL206b_CanyonBessel.tex,.tex,607,SKIPPED,not yet read
+BCT_AppL207a_StonehengeAcoustic.tex,.tex,645,SKIPPED,not yet read
+BCT_AppL207b_PyramidAngle.tex,.tex,636,SKIPPED,not yet read
+BCT_AppL209a_AquiferBessel.tex,.tex,899,SKIPPED,not yet read
+BCT_CollaboratorBrief_v1.html,.html,1071,SKIPPED,not yet read
+BCT_FAQ.md,.md,238,SKIPPED,not yet read
+BCT_Gloaasry.md,.md,138,SKIPPED,not yet read
+BCT_GoFundMe.md,.md,57,SKIPPED,not yet read
+BCT_Letter204_ConsciousLattice.tex,.tex,1168,SKIPPED,not yet read
+BCT_Letter205_PhilosophersVoid.tex,.tex,1029,SKIPPED,not yet read
+BCT_Letter206_ElectricChisel.tex,.tex,1031,SKIPPED,not yet read
+BCT_Letter207_AncientGeometers.tex,.tex,1187,SKIPPED,not yet read
+BCT_Letter208_GeometryOfMarkets.tex,.tex,1062,SKIPPED,not yet read
+BCT_Letter209_EyeOfTheLattice.tex,.tex,1098,SKIPPED,not yet read
+BCT_Letter209_GrammarOfVacuum.tex,.tex,1366,SKIPPED,not yet read
+BCT_Letter210_GeometryOfUncertainty.tex,.tex,1665,SKIPPED,not yet read
+BCT_Letter252_Dreams.tex,.tex,1295,SKIPPED,not yet read
+BCT_Letter253_LucidDreaming.tex,.tex,1001,SKIPPED,not yet read
+BCT_Letter254_Entanglement.tex,.tex,1359,SKIPPED,not yet read
+BCT_MasterIndex_live.html,.html,2392,SKIPPED,not yet read
+BCT_NPB_Paper_v1.pdf,.pdf,5333,NOT-APPLICABLE,binary/config
+BCT_RepoIndex.md,.md,409,SKIPPED,not yet read
+BCT_SMOKE_Abstract.pdf,.pdf,3916,NOT-APPLICABLE,binary/config
+BCT_SMOKE_Appendix.pdf,.pdf,5064,NOT-APPLICABLE,binary/config
+BCT_SMOKE_Claims.pdf,.pdf,4039,NOT-APPLICABLE,binary/config
+BCT_SMOKE_Description.pdf,.pdf,4936,NOT-APPLICABLE,binary/config
+BCT_SMOKE_Letter_v1.pdf,.pdf,6476,NOT-APPLICABLE,binary/config
+BCT_Volume15_Patents.tex,.tex,1502,SKIPPED,not yet read
+BCT_Volume16_Philosophy.tex,.tex,1360,SKIPPED,not yet read
+BCT_Volume1_Foundations.tex,.tex,1379,SKIPPED,not yet read
+BCT_Volume2_Electroweak.tex,.tex,1219,SKIPPED,not yet read
+BCT_Volume3_QCD.tex,.tex,1269,SKIPPED,not yet read
+BCT_Volume4_QuarkMasses.tex,.tex,1292,SKIPPED,not yet read
+CNAME,,1,NOT-APPLICABLE,binary/config
+EPL_LICENCE.md,.md,280,SKIPPED,not yet read
+LICENSE,,156,NOT-APPLICABLE,binary/config
+README.md,.md,571,SKIPPED,not yet read
+Sync Zenodo DOIs,,77,NOT-APPLICABLE,binary/config
+ZENODO_DOIS.md,.md,22,SKIPPED,not yet read
+assets/hopf_logo.png,.png,9682,NOT-APPLICABLE,binary/config
+bct_banner (1).png,.png,9545,NOT-APPLICABLE,binary/config
+bct_banner.png,.png,9411,NOT-APPLICABLE,binary/config
+birdfeeder.html,.html,1448,SKIPPED,not yet read
+download_zenodo_BCT_v6.py,.py,254,SKIPPED,not yet read
+gate PSI2 prompt.md,.md,1061,SKIPPED,not yet read
+generate_dois.py,.py,171,SKIPPED,not yet read
+hopf_logo.png,.png,7906,NOT-APPLICABLE,binary/config
+main,,11,NOT-APPLICABLE,binary/config
+sync-zenodo-v2.yml,.yml,79,NOT-APPLICABLE,binary/config
+sync_zenodo.py,.py,111,SKIPPED,not yet read
+tex/BCT_Appendix_AF1.tex,.tex,1192,SKIPPED,not yet read
+tex/BCT_Appendix_AG1_VacuumLuminescence.tex,.tex,1168,SKIPPED,not yet read
+tex/BCT_Appendix_AG1_VacuumLuminescence_final.tex,.tex,666,SKIPPED,not yet read
+tex/BCT_Appendix_AH1_LostArchive.tex,.tex,1388,SKIPPED,not yet read
+tex/BCT_Appendix_AH1_LostArchive_final.tex,.tex,1379,SKIPPED,not yet read
+tex/BCT_Appendix_AZ6.tex,.tex,2768,SKIPPED,not yet read
+tex/BCT_Appendix_AZ7.tex,.tex,2774,SKIPPED,not yet read
+tex/BCT_Appendix_BB2_SMScalesComplete.tex,.tex,793,SKIPPED,not yet read
+tex/BCT_Appendix_FI_LeptonMasses.tex,.tex,709,SKIPPED,not yet read
+tex/BCT_Appendix_JH (1).tex,.tex,2369,SKIPPED,not yet read
+tex/BCT_Appendix_JH.tex,.tex,2302,SKIPPED,not yet read
+tex/BCT_Appendix_JH_FINAL.tex,.tex,2369,SKIPPED,not yet read
+tex/BCT_Appendix_JH_GRRRRRRRR.tex,.tex,2372,SKIPPED,not yet read
+tex/BCT_Appendix_KA1.tex,.tex,494,SKIPPED,not yet read
+tex/BCT_Appendix_KA2.tex,.tex,398,DONE,"read in full, all printed numbers recomputed"
+tex/BCT_Appendix_KA3.tex,.tex,361,DONE,"read in full, all printed numbers recomputed"
+tex/BCT_Appendix_KA4.tex,.tex,467,SKIPPED,not yet read
+tex/BCT_Appendix_KB1.tex,.tex,420,DONE,"read in full, all printed numbers recomputed"
+tex/BCT_Appendix_KB2.tex,.tex,481,SKIPPED,not yet read
+tex/BCT_Appendix_KB3.tex,.tex,898,SKIPPED,not yet read
+tex/BCT_Appendix_KC1.tex,.tex,810,SKIPPED,not yet read
+tex/BCT_Appendix_KC2.tex,.tex,1030,SKIPPED,not yet read
+tex/BCT_ChemistrySeries_VolK.tex,.tex,1115,SKIPPED,not yet read
+tex/BCT_HIVE_Patent.tex,.tex,803,SKIPPED,not yet read
+tex/BCT_Letter101_BlueBandedBees.tex,.tex,974,SKIPPED,not yet read
+tex/BCT_Letter103_Cephalopod.tex,.tex,1062,SKIPPED,not yet read
+tex/BCT_Letter104_ThreeBody.tex,.tex,1717,SKIPPED,not yet read
+tex/BCT_Letter105_ElectricUniverse (1).tex,.tex,2861,SKIPPED,not yet read
+tex/BCT_Letter105_ElectricUniverse.tex,.tex,2609,SKIPPED,not yet read
+tex/BCT_Letter106_HubbleTension.tex,.tex,2101,SKIPPED,not yet read
+tex/BCT_Letter106_StandingOnShoulders.tex,.tex,2700,SKIPPED,not yet read
+tex/BCT_Letter108_TopologicalAge.tex,.tex,1324,SKIPPED,not yet read
+tex/BCT_Letter113_GeckoTheorem.tex,.tex,1294,SKIPPED,not yet read
+tex/BCT_Letter114_PlasmoidPhysics.tex,.tex,1536,SKIPPED,not yet read
+tex/BCT_Letter115_PolarNodes_Richat_v2.tex,.tex,1688,SKIPPED,not yet read
+tex/BCT_Letter116_LostArchive.tex,.tex,1904,SKIPPED,not yet read
+tex/BCT_Letter117_MartianTetrahedron_final.tex,.tex,2131,SKIPPED,not yet read
+tex/BCT_Letter120_RosicrucianLattice.tex,.tex,2068,SKIPPED,not yet read
+tex/BCT_Letter121_CropCircles.tex,.tex,1266,SKIPPED,not yet read
+tex/BCT_Letter122_PolarHoles (1).tex,.tex,899,SKIPPED,not yet read
+tex/BCT_Letter122_PolarHoles.tex,.tex,904,SKIPPED,not yet read
+tex/BCT_Letter123_WaterPlanet (1).tex,.tex,882,SKIPPED,not yet read
+tex/BCT_Letter123_WaterPlanet.tex,.tex,887,SKIPPED,not yet read
+tex/BCT_Letter124_Guardians (1).tex,.tex,901,SKIPPED,not yet read
+tex/BCT_Letter124_Guardians.tex,.tex,906,SKIPPED,not yet read
+tex/BCT_Letter125_FaradayExperiment.tex,.tex,1481,SKIPPED,not yet read
+tex/BCT_Letter126_QuantumCC.tex,.tex,2133,SKIPPED,not yet read
+tex/BCT_Letter127_EWQCDScales.tex,.tex,1715,SKIPPED,not yet read
+tex/BCT_Letter127_EWQCDScales_v2.tex,.tex,1803,SKIPPED,not yet read
+tex/BCT_Letter128_ChainOfNecessity.tex,.tex,2318,SKIPPED,not yet read
+tex/BCT_Letter129_EmergentDistance.tex,.tex,1440,SKIPPED,not yet read
+tex/BCT_Letter135_WhyGeometry.tex,.tex,2416,SKIPPED,not yet read
+tex/BCT_Letter137_ArrowOfTime.tex,.tex,2105,SKIPPED,not yet read
+tex/BCT_Letter19_ElectronMass.tex,.tex,1894,SKIPPED,not yet read
+tex/BCT_Letter201_ANU_Atoms.tex,.tex,1226,SKIPPED,not yet read
+tex/BCT_Letter20_GR_AllOrders.tex,.tex,2518,SKIPPED,not yet read
+tex/BCT_Letter25_WeinbergAngle.tex,.tex,529,SKIPPED,not yet read
+tex/BCT_Letter27_GPAxiom.tex,.tex,872,SKIPPED,not yet read
+tex/BCT_Letter28_ProtonMass.tex,.tex,1737,SKIPPED,not yet read
+tex/BCT_Letter28_ProtonMass_tex.tex,.tex,1740,SKIPPED,not yet read
+tex/BCT_Letter29_NLO_KPN.tex,.tex,1866,SKIPPED,not yet read
+tex/BCT_Letter29_NLO_KPN_tex.tex,.tex,1858,SKIPPED,not yet read
+tex/BCT_Letter30_DeltamN.tex,.tex,1227,SKIPPED,not yet read
+tex/BCT_Letter30_DeltamN_tex.tex,.tex,1243,SKIPPED,not yet read
+tex/BCT_Letter31_ElectronMass.tex,.tex,1307,SKIPPED,not yet read
+tex/BCT_Letter31_ElectronMass_tex.tex,.tex,1344,SKIPPED,not yet read
+tex/BCT_Letter36_D4Qubit (1).tex,.tex,1127,SKIPPED,not yet read
+tex/BCT_Letter36_D4Qubit.tex,.tex,1135,SKIPPED,not yet read
+tex/BCT_Letter36_OHC_tex.tex,.tex,1137,SKIPPED,not yet read
+tex/BCT_Letter37_NewtonsConstant (1).tex,.tex,1013,SKIPPED,not yet read
+tex/BCT_Letter37_NewtonsConstant.tex,.tex,1020,SKIPPED,not yet read
+tex/BCT_Letter38_DarkMatter (1).tex,.tex,904,SKIPPED,not yet read
+tex/BCT_Letter38_DarkMatter.tex,.tex,904,SKIPPED,not yet read
+tex/BCT_Letter39_Addendum_Indium.tex,.tex,1854,SKIPPED,not yet read
+tex/BCT_Letter39_TopologicalSemimetal (1).tex,.tex,929,SKIPPED,not yet read
+tex/BCT_Letter39_TopologicalSemimetal.tex,.tex,934,SKIPPED,not yet read
+tex/BCT_Letter40_Inflation (1).tex,.tex,1078,SKIPPED,not yet read
+tex/BCT_Letter40_Inflation.tex,.tex,1084,SKIPPED,not yet read
+tex/BCT_Letter59.tex,.tex,1086,SKIPPED,not yet read
+tex/BCT_Letter60.tex,.tex,977,SKIPPED,not yet read
+tex/BCT_Letter62.tex,.tex,476,SKIPPED,not yet read
+tex/BCT_Letter64.tex,.tex,1671,SKIPPED,not yet read
+tex/BCT_Letter65.tex,.tex,1804,SKIPPED,not yet read
+tex/BCT_Letter67.tex,.tex,2027,SKIPPED,not yet read
+tex/BCT_Letter68.tex,.tex,2218,SKIPPED,not yet read
+tex/BCT_Letter69.tex,.tex,2895,SKIPPED,not yet read
+tex/BCT_Letter70_CosmicPersistence.tex,.tex,1902,SKIPPED,not yet read
+tex/BCT_Letter71_Baryogenesis.tex,.tex,1199,SKIPPED,not yet read
+tex/BCT_Letter72_Measurement.tex,.tex,1290,SKIPPED,not yet read
+tex/BCT_Letter72_MeasurementProblem.tex,.tex,1437,SKIPPED,not yet read
+tex/BCT_Letter73_GravitationalWaves.tex,.tex,1273,SKIPPED,not yet read
+tex/BCT_Letter74_CosmicExhale.tex,.tex,1146,SKIPPED,not yet read
+tex/BCT_Letter75_UnreasonableSimplicity.tex,.tex,1198,SKIPPED,not yet read
+tex/BCT_Letter76_DarkEnergy.tex,.tex,963,SKIPPED,not yet read
+tex/BCT_Letter77_ArrowOfTime.tex,.tex,934,SKIPPED,not yet read
+tex/BCT_Letter78_AtomicStructure.tex,.tex,957,SKIPPED,not yet read
+tex/BCT_Letter80_MolecularGeometry.tex,.tex,738,SKIPPED,not yet read
+tex/BCT_Letter81_TwoTheorems.tex,.tex,883,SKIPPED,not yet read
+tex/BCT_Letter82_Carbon.tex,.tex,779,SKIPPED,not yet read
+tex/BCT_Letter83_TransitionMetals.tex,.tex,850,SKIPPED,not yet read
+tex/BCT_Letter84_PeriodicTable.tex,.tex,875,SKIPPED,not yet read
+tex/BCT_Letter85_Electronegativity.tex,.tex,1006,SKIPPED,not yet read
+tex/BCT_Letter88_ThreeDimensions (1).tex,.tex,1950,SKIPPED,not yet read
+tex/BCT_Letter88_ThreeDimensions.tex,.tex,1948,SKIPPED,not yet read
+tex/BCT_Letters_Vol2b.tex,.tex,587,SKIPPED,not yet read
+tex/BCT_Letters_Vol3.tex,.tex,1137,SKIPPED,not yet read
+tex/BCT_Monograph_PLB.tex,.tex,8679,SKIPPED,not yet read
+tex/BCT_PRL_Letter.tex,.tex,1441,SKIPPED,not yet read
+tools/download_zenodo_BCT_v6.py,.py,254,SKIPPED,not yet read

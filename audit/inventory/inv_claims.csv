@@ -1,0 +1,19 @@
+id,file,section,claim,printed,recomputed,verdict,note
+INV-0001,tex/BCT_Appendix_KA3.tex,Thm 1,r_tet(1+r_tet)=1/8,1/8,0.125 exact,Y,proof by difference of squares is valid
+INV-0002,tex/BCT_Appendix_KA3.tex,§3,n_lp=0 CH4 angle,109.471,109.4712206,Y,
+INV-0003,tex/BCT_Appendix_KA3.tex,§3,n_lp=1 NH3 angle,106.958,106.9577633,Y,formula value reproduces
+INV-0004,tex/BCT_Appendix_KA3.tex,§3,NH3 error -0.78%,-0.78%,-0.781% vs 107.8 deg,FLAG,"observed value never stated in the paper; error only reproduces against 107.8, not against the 106.7 also in common use"
+INV-0005,tex/BCT_Appendix_KA3.tex,§3,n_lp=2 H2O angle,104.4775,104.477512186,Y,
+INV-0006,tex/BCT_Appendix_KA3.tex,§4,H2O error,-0.000084%,-8.41e-5%,Y,"abstract and table print -0.0001%, §4 prints -0.000084%; same number, two roundings"
+INV-0007,tex/BCT_Appendix_KA3.tex,§3,n_lp=3 F2O angle,102.025,102.0246992,Y,"labelled theoretical, no comparison"
+INV-0008,tex/BCT_Appendix_KA2.tex,§2,1 m travel time at 6.78c,4.9e-10 s,4.91982e-10 s,Y,
+INV-0009,tex/BCT_Appendix_KA2.tex,§2,Earth 6.4e6 m travel time,3.1e-3 s,3.14869e-3 s,Y,
+INV-0010,tex/BCT_Appendix_KA2.tex,§2,universe 4.4e26 m travel time,~45 yr,6.85959e9 yr,N,**ERROR: off by 1.524e8.** 4.4e26 m / (6.78 x 2.998e8 m/s) = 2.165e17 s = 6.86 billion yr. Printed 45 yr. No alternative reading of the row produces 45.
+INV-0011,tex/BCT_Appendix_KA2.tex,§3,alpha_0^2,~5.5e-5,5.48793e-5,Y,
+INV-0012,tex/BCT_Appendix_KB1.tex,§1,"S_H table, Li..Ne",0.25..0.00,all reproduce,Y,"min(n,8-n)/4 arithmetic correct for all 8 rows"
+INV-0013,tex/BCT_Appendix_KB1.tex,Thm 1,carbon uniqueness S_H=1,unique at Z=6,valid,Y,proof correct given the stated shell model
+INV-0014,tex/BCT_Appendix_KB1.tex,§2,C=C ratio 1-r_tet,0.8876,0.88762756,Y,
+INV-0015,tex/BCT_Appendix_KB1.tex,§2,C=C error vs observed,+2.0%,+2.01% (1.34/1.54),Y,observed bond lengths not stated in paper; inferred standard values
+INV-0016,tex/BCT_Appendix_KB1.tex,§2,C#C ratio 1-2r_tet,0.7753,0.77525513,Y,
+INV-0017,tex/BCT_Appendix_KB1.tex,§2,C#C error vs observed,-0.5%,-0.509% (1.20/1.54),Y,same caveat as INV-0015
+INV-0018,tex/BCT_Appendix_KB1.tex,§3,"half-fill series Z=6,14,32,50","C,Si,Ge,Sn",correct,Y,all four are 4-outer-electron elements
