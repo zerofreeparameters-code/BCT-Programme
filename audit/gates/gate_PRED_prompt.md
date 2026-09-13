@@ -1,165 +1,148 @@
-# GATE PRED — HOW SURPRISING ARE THE NUMBERS?
+# GATE PRED — ARE THE PREDICTIONS SURPRISING?
 ## Cold Ledger gate. Fresh thread. Pre-register by SHA-256 **from the file the session receives.**
 
 **The question.**
 
-> Gate STAT scored the identity family (π⁵/6 and its relatives) at 3.3 bits of surprise. The
-> numerical predictions — α, m_e, m_P, G, the Koide relation, the quark and lepton mass ratios,
-> sin²θ_W, the Wolfenstein and CP phases — are unscored, and they are what the programme stands
-> on in public. **For each published prediction: given the grammar of constants and operations
-> the corpus actually uses, how many expressions of equal or lower complexity land as close to
-> the measured value as the corpus's expression does, and how many bits of surprise remain after
-> that look-elsewhere count and after every post-hoc correction factor is charged for?**
+> The corpus reports on the order of ninety numerical predictions, many sub-1%, built from π, α₀,
+> the void radii and small integers. **How many expressions of that kind land that close to *some*
+> measured quantity by construction rather than by derivation — and against that baseline, is the
+> BCT record surprising?**
 
-Notices **CN-PRED-01** onward.
+This is the gate the programme stands on. Notices **CN-PRED-01** onward.
 
 ## 0 — HANDOFF, QUARANTINE, SCOPE
 
 **0.1 — HANDOFF.** Receive as a file at a commit-pinned `raw.githubusercontent.com` URL. `curl` to
 disk, `sha256sum`, record the digest, **then** read. If pasted, claim no digest and say so in §1.
 
-**0.2 — QUARANTINE.** Do not consult the 9–13 Sep 2026 threads, BCT-X / Sandbox TOP, or any
-concurrent gate. Do not read `audit/notes/` **except** the scoring-definition section of
-`notes/note_identities.md` (Gate STAT), which may be read once, **after §2 below is written and
-committed to the transcript**, solely so the bits reported here are commensurable with STAT's.
-Do not read STAT's verdict or its per-identity scores. The Cold Ledger auto-loads and cannot be
-partially read — if you read it, **declare it** and name the unpermitted summaries you saw.
+**0.2 — QUARANTINE.** Do not consult the 9–12 Sep 2026 threads, BCT-X / Sandbox TOP, or any
+concurrent gate. Do not read `audit/notes/`. The Cold Ledger auto-loads and cannot be partially
+read — if you read it, **declare it** and name the unpermitted summaries you saw.
 
-**0.3 — INHERITANCE.** Nothing numerical is inherited. Every predicted value, every measured value
-and every stated error is **recomputed** from the expression as printed and from a CODATA / PDG
-value fetched and cited in this session. If a recomputed error disagrees with the corpus's printed
-error, that is a finding and is charged to the prediction, not silently corrected.
+**0.3 — INHERITANCE.** A prior note scored one family of *algebraic identities* at a low bit count.
+That is a different object from the numerical predictions and **must not be carried over**. Build
+your own baseline. If the note reaches you, declare it in §8.
 
-**0.4** Construction permitted and expected — §2 asks you to build a grammar and enumerate it.
+**0.4** Construction required — this gate is mostly construction.
 
 **0.5 — SEARCH-SPACE AUDIT, MANDATORY, REPORTED BEFORE ANY CONCLUSION.**
-- **Repo:** tarball, digest recorded. **134 `.tex`, 26 at the tree root outside `tex/`.**
-- **Mount:** 33 ZIP archives of page images with `.txt` layers, 14 true PDFs, **2 raw UTF-8 text
-  files** that `file` reports as `data`. `BCT_CompleteRegistry.pdf`, `BCT_LetterList_v4.pdf`,
-  One Medium §§10–11, Monograph v2.1 tables, and App D.2–D.4, AL2, AD–AG are in the mount.
-  **Type every file with `file`.** Report page-level coverage.
-- **The prediction census is part of the search space.** Before scoring anything, list **every**
-  numerical prediction the corpus publishes with a stated error, with its printed expression,
-  printed value, printed error, and source. Report the count. A prediction not in this list is
-  not scored; a prediction the corpus prints in two incompatible forms is listed twice.
+- 134 `.tex`, **26 at the tree root outside `tex/`**.
+- **Appendices Vol 1**: three PDFs, 240,670 words, 137 appendices.
+- **Appendices Vol 2**: a `.zip` holding an 18 MB PDF, 582 pages, 151,710 words, 108 appendices.
+  **Invisible to every gate before 12 Sep.**
+- `audit/APPENDIX_INDEX.md` lists all 245 by volume, code, title, line, and **flags 82 that state
+  their own error figure — that is your candidate list.** Codes V, W, X, Y, Z collide across
+  volumes; cite by volume and line.
+- Type every file with `file` before choosing a reader.
 
-**0.6 — EXTERNAL LITERATURE AND TOOLS PERMITTED.** The look-elsewhere effect; Wyler (1969, 1971)
-and its published critiques as the benchmark near-miss; inverse-symbolic search (RIES, Plouffe's
-Inverter, Bailey–Borwein on numerical coincidences); minimum-description-length arguments.
-Running an inverse-symbolic search in-session is permitted and expected. **Cite only what you
-read; run only what you can show.**
+## 0.6 — WHAT PASSING THIS BUYS. Reproduce verbatim in the deliverable, whatever the verdict.
 
-## 0.7 — WHAT PASSING THIS BUYS. Reproduce verbatim in the deliverable, whatever the verdict.
+> A high surprise score would mean the predictions are **unlikely to arise from undirected search**.
+> It would **not** establish that BCT's mechanisms are correct, that its derivations are valid, or
+> that any particular appendix is sound — gates have already found mechanism failures that a good
+> score would not repair. Conversely a low score would **not** show any individual prediction is
+> wrong; it would show the collection carries little evidential weight. **Gate PRED measures
+> evidential weight, not truth.** Either verdict leaves the mechanism questions exactly where they
+> are.
 
-> A prediction that scores high after the look-elsewhere charge is evidence that the corpus's
-> expression is not a coincidence of its own grammar. It is **not** evidence that the derivation
-> printed beside it is correct, that the mechanism is physical, or that the framework is
-> unified — a true formula with a false derivation is still a true formula, and this gate cannot
-> tell them apart. A prediction that scores low is not thereby false; it is thereby **unsurprising**,
-> and the programme should stop citing it as evidence. **Gate PRED cannot deliver physics. At
-> most it delivers a ranked list of which numbers are worth defending and which are noise the
-> grammar produces for free.** A favourable verdict is a ticket to a harder gate on the one or two
-> expressions that survive.
+## 1 — STEP 0: THE PREDICTION SET
 
-## 1 — STEP 0: THE CENSUS AND THE RECOMPUTATION
+Build the list from primary source. For each prediction record: quantity, BCT formula **exactly as
+printed**, predicted value, comparison value, stated error, and volume + line.
 
-From primary source, quoting the printed expression each time:
+Then recompute every one. **Report the recomputation before any scoring**: how many reproduce their
+printed value, how many do not, how many cannot be evaluated. A prediction that does not reproduce
+is excluded from scoring and reported separately.
 
-- The full prediction list of §0.5, with for each: (a) the expression as printed, (b) the corpus's
-  printed value and error, (c) the value recomputed here from the printed expression to 12
-  significant figures, (d) the measured value with its source and date, (e) the recomputed
-  relative error ε, (f) the **number of distinct correction factors** between the bare geometric
-  expression and the final one (e.g. α: α₀ → α₀(1−2α₀) → α₀(1−3α₀)/(1−α₀) is two; m_e: S_D4 →
-  S_D4/(1−x_lep) → the (4π+1)/π² dressing is two), and (g) the **date order**: was the expression's
-  final form printed before or after the corpus records the discrepancy it closes?
-- Flag every case where (c) ≠ (b), or where the same target has more than one printed final form.
-- Flag every prediction whose target is not a measured number (e.g. "no QCD axion", "δ_CP = −π/2
-  exact" before DUNE) as **unscorable here** and set it aside without judgement.
+Record for each comparison value whether it is **a measurement** (with its experimental
+uncertainty) or **a BCT-chosen input**. Any comparison against a chosen value is excluded from
+scoring and reported separately. This distinction is load-bearing.
 
-## 2 — STEP 1: THE GRAMMAR, WRITTEN BEFORE ANY SCORE
+## 2 — STEP 1: THE INGREDIENT SET
 
-**Write this section in full, with its enumeration counts, before evaluating any target in §3.**
-The deliverable must show that ordering.
+From the prediction set, enumerate what actually appears: constants (π, α₀, r_oct, r_tet, N_c,
+Λ_QCD, m_P, √2 …), operations, and the exponent/correction patterns in use (e.g. `X·(1+nα₀)`,
+`X·exp(−S)`, ratios of void radii).
 
-- **Atoms.** The constants the corpus draws on, listed from the census: at minimum
-  {1, 2, 3, 4, 6, 8, 12, 24, 48, π, √2, √3, √6, e, α₀, r_tet, r_oct, R, S_D4 = π⁵/6, x_lep = 4α₀/π,
-  N_gen = 3, ℓ_P-normalised void quantities}. Add any atom the census shows the corpus using; do
-  not add atoms it does not use.
-- **Operations.** {+, −, ×, ÷, √, x^n for |n| ≤ 5, exp, ln, 1/(1−x)} — again, only those the
-  census shows in use.
-- **Complexity measure.** Node count of the expression tree. State it. Record the complexity of
-  each corpus expression under it.
-- **Enumeration.** For complexity C = 1 … C_max (C_max ≥ the largest corpus expression), count
-  N(C), the number of distinct real values the grammar generates, by exhaustive enumeration where
-  feasible and by sampling with a stated confidence interval where not. Report N(C) as a table.
-- **Density.** For each target value T and complexity C, estimate the number of grammar
-  expressions with |x − T|/T ≤ ε, either directly from the enumeration or as N(C) × 2ε × ρ(T),
-  where ρ is the local density of grammar values per unit log-value near T, measured from the
-  enumeration. State which.
-- **Pre-registered thresholds.** Before §3: **≥ 10 bits after all charges = "surprising";
-  3–10 bits = "suggestive"; < 3 bits = "unsurprising — the grammar produces this for free".**
-  These numbers are fixed now and may not be moved after the scores are seen.
+**Derive the ingredient set from the corpus, not from this prompt.** Report it in full — it is the
+alphabet of the null model and every later number depends on it.
 
-## 3 — STEP 2: THE SCORES
+## 3 — STEP 2: THE NULL MODEL
 
-For each scorable prediction, in the order of the census:
+Construct the space of expressions buildable from that alphabet, bounded by the complexity actually
+observed (state the bound and how you chose it). Then:
 
-- **Raw bits** = −log₂ P(a grammar expression of complexity ≤ C_expr lands within ε of T).
-- **Look-elsewhere charge**: −log₂ of the number of targets the corpus tried a geometric formula
-  for (the census count, not the number it published successes for), and −log₂ of the number of
-  candidate expressions the corpus itself reports testing for that target (App D.2 §3 reports
-  four approaches and an "exhaustive systematic search over all two-quantity products"; charge
-  that search).
-- **Correction-factor charge**: each post-hoc factor in §1(f) is a further draw from the grammar
-  at its own complexity; charge its bits.
-- **Date-order charge**: a factor introduced after the discrepancy it closes was recorded is
-  charged at full grammar cost; a factor printed before is not.
-- **Net bits**, and the bin. Show the arithmetic per prediction.
-- **Benchmark.** Score Wyler's α formula under the same grammar and charges, so the reader can see
-  what a celebrated near-miss scores.
-- **Inverse-symbolic control.** For each target, run an inverse-symbolic search restricted to the
-  §2 grammar at complexity ≤ C_expr and report the **best** expression it finds and its ε. If the
-  control beats or ties the corpus expression, say so.
+- Enumerate or sample it — say which, and if sampling, give the size and method.
+- For each expression, ask whether it lands within the corpus's typical tolerance of **any** entry
+  in a fixed target list of measured physical quantities.
+- **Fix the target list before running the search, and state it.** Post-hoc target selection is the
+  error this gate exists to detect; do not commit it while detecting it.
+- Report the **hit rate**: what fraction of random expressions match something.
 
-## 4 — STEP 3: THE OBSTRUCTION CHECK
+## 4 — STEP 3: SCORING
 
-Independently of the scoring, establish whether the corpus **anywhere** pre-registered a
-prediction before the relevant measurement, or predicts a quantity not yet measured to the stated
-precision (the neutron EDM bound, δ_CKM at degree precision, the 62.9 GeV scalar, r = 0.0046).
-Quote it if it exists. **A genuine out-of-sample prediction is not scored by §3 at all**; it is
-listed separately with its falsification date, because surprise-scoring is a substitute for
-out-of-sample testing, not a replacement for it.
+For the corpus's record against that baseline, compute and report:
 
-## 5 — STOP CONDITIONS
+- expected number of sub-1% matches by chance, for a search of the size the corpus performed;
+- the observed number;
+- surprise in bits, −log₂ P, with P stated and its derivation shown;
+- sensitivity: how the score moves under reasonable alternative choices of alphabet, complexity
+  bound and tolerance. **A score that swings by orders of magnitude under a defensible alternative
+  is not a score; say so if that is what you find.**
 
-**SC-PRED-1.** At least one scorable prediction nets ≥ 10 bits. → Report it with its full charge
-sheet; it is the candidate for a derivation-audit gate. Favourable outcome; report it as plainly
-as any other.
-**SC-PRED-2.** Every scorable prediction nets < 3 bits. → Report; the programme's public evidence
-is grammar noise, and the deliverable says which sentences in One Medium §10 and the Monograph
-tables should stop being cited.
-**SC-PRED-3.** All predictions land in the 3–10 bit band. → Report; recommend the two highest for
-a derivation audit and the rest for retirement from public claims.
-**SC-PRED-4.** The grammar cannot be bounded — the corpus's correction factors are open-ended, so
-C_max has no ceiling and P cannot be estimated. → **Halt and report** with the list of unbounded
-factors. Legitimate outcome.
-**SC-PRED-5.** Recomputation (§1c) contradicts the printed values for a material fraction of the
-census. → Report the recount first; score only what recomputes.
+## 5 — STEP 4: THE SEARCH-EFFORT CORRECTION
 
-**If the outcome matches no stop condition, record it as a prompt defect** rather than force-fitting
-it. **No stop condition licenses a favourable conclusion, and none licenses an unfavourable one.**
+The corpus records its own iteration: phase numbering, running prediction totals, and quantities
+revisited many times across phases — one is addressed in eight separate appendices and twice
+declared definitive.
 
-## 6 — DELIVERABLE
+Estimate the number of expressions actually tried, from that record. **A prediction retained after
+N attempts is not evidence of the same weight as one obtained first time**, and the corpus's own
+phase structure is the best available measure of N. Report the correction and its uncertainty.
 
-Digest or explicit refusal · **search-space coverage and the prediction census before any other
-number** · verdict first · the recomputation table · **the grammar and enumeration counts, shown
-to have been written before any score** · the per-prediction charge sheets with net bits and bins ·
-the Wyler benchmark · the inverse-symbolic controls · the §4 out-of-sample list · CN-PRED notices
-tiered PROVEN / CONJECTURE / ASSERTED · scripts (enumerator, scorer, inverse-symbolic search) ·
-external citations, each actually read · contamination statement · **§0.7 reproduced verbatim** ·
-what the gate did **not** establish.
+## 6 — STEP 5: THE STRONGEST CASE FOR THE CORPUS
 
-**Revise notices clause by clause.** **Commit deliverable, scripts and as-run prompt to
-`audit/gates/PRED/` at close, and update `audit/NEXT.md`.**
+**Required, not optional.** Identify the predictions that score best — narrowest tolerance, most
+constrained formula, least evidence of iteration, comparison against a genuine measurement with a
+small experimental error. **Score those separately.** If a subset survives the baseline, that subset
+is the real result of this gate and must be reported as prominently as the aggregate.
 
-*Written 13 September 2026. Not executed. Pre-register before use.*
+Do the same for any prediction that was **fixed in advance and later confirmed** by measurement —
+that is a different and stronger kind of evidence, and if the corpus has one it must be found.
+
+## 7 — STOP CONDITIONS
+
+**SC-PRED-1.** Observed matches are within chance expectation. → Report; the collection carries
+little evidential weight, and §6's subset is the remaining result.
+**SC-PRED-2.** Observed matches exceed chance by a stated margin. → **Favourable.** Report the bits,
+the sensitivity, and what it does and does not establish per §0.6.
+**SC-PRED-3.** The null model cannot be bounded — the alphabet or complexity cannot be fixed
+non-arbitrarily. → **Halt and report.** State what would fix it. Legitimate outcome; an unbounded
+null is not a licence to score anyway.
+**SC-PRED-4.** Too few predictions reproduce, or too many compare against chosen rather than
+measured values, for scoring to be meaningful. → Report the fractions; that is the finding.
+**SC-PRED-5.** A prediction is found that was published before its measurement and confirmed. →
+Report it first, whatever the aggregate says.
+
+**If the outcome matches no stop condition, record it as a prompt defect** rather than
+force-fitting. **No stop condition licenses a favourable conclusion, and none licenses an
+unfavourable one. This gate must be able to vindicate the programme.**
+
+## 8 — DELIVERABLE
+
+Digest or explicit refusal · **search-space coverage before any other number** · the recomputation
+result before any scoring · verdict · the prediction table · the ingredient set · the null model
+with its bounds and method · the score with sensitivity · the search-effort correction · **§6's
+strongest-case subset, prominently** · CN-PRED notices tiered PROVEN / CONJECTURE / ASSERTED ·
+scripts · contamination statement · **§0.6 reproduced verbatim** · what the gate did **not**
+establish.
+
+**Revise notices clause by clause, not headline by headline.**
+**Commit deliverable, scripts and as-run prompt to `audit/gates/PRED/` at close, and update
+`audit/NEXT.md`.**
+
+**A note on care.** This gate can do more damage than any other in the series, in both directions —
+by scoring a real result as noise, or by crediting search as discovery. Where a judgement call
+arises, state it as a judgement, show the alternative, and report how the verdict moves under it.
+
+*Written 12 September 2026. Not executed. Pre-register before use.*
