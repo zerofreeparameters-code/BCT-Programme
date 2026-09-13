@@ -1,0 +1,24 @@
+baseline (17 atoms)                                            |S2|= 90755 tol=0.01   N=False p_hit=0.1093 cov=48/48
+baseline (17 atoms)                                            |S2|= 90755 tol=0.01   N=True  p_hit=0.5005 cov=48/48
+baseline (17 atoms)                                            |S2|= 90755 tol=0.005  N=False p_hit=0.0571 cov=48/48
+baseline (17 atoms)                                            |S2|= 90755 tol=0.005  N=True  p_hit=0.4648 cov=48/48
+baseline (17 atoms)                                            |S2|= 90755 tol=0.001  N=False p_hit=0.0119 cov=47/48
+baseline (17 atoms)                                            |S2|= 90755 tol=0.001  N=True  p_hit=0.2298 cov=48/48
+reduced: drop 5,8,9,12,sqrt3 (12 atoms)                        |S2|= 46302 tol=0.01   N=False p_hit=0.1179 cov=48/48
+reduced: drop 5,8,9,12,sqrt3 (12 atoms)                        |S2|= 46302 tol=0.01   N=True  p_hit=0.5278 cov=48/48
+reduced: drop 5,8,9,12,sqrt3 (12 atoms)                        |S2|= 46302 tol=0.005  N=False p_hit=0.0616 cov=48/48
+reduced: drop 5,8,9,12,sqrt3 (12 atoms)                        |S2|= 46302 tol=0.005  N=True  p_hit=0.4924 cov=48/48
+reduced: drop 5,8,9,12,sqrt3 (12 atoms)                        |S2|= 46302 tol=0.001  N=False p_hit=0.0124 cov=46/48
+reduced: drop 5,8,9,12,sqrt3 (12 atoms)                        |S2|= 46302 tol=0.001  N=True  p_hit=0.2482 cov=48/48
+geometry-only: pi,sqrt2,sqrt6,roct,rtet,a0 + 1,2,3,4 (10 atoms) |S2|= 33112 tol=0.01   N=False p_hit=0.1264 cov=48/48
+geometry-only: pi,sqrt2,sqrt6,roct,rtet,a0 + 1,2,3,4 (10 atoms) |S2|= 33112 tol=0.01   N=True  p_hit=0.5541 cov=48/48
+geometry-only: pi,sqrt2,sqrt6,roct,rtet,a0 + 1,2,3,4 (10 atoms) |S2|= 33112 tol=0.005  N=False p_hit=0.0672 cov=48/48
+geometry-only: pi,sqrt2,sqrt6,roct,rtet,a0 + 1,2,3,4 (10 atoms) |S2|= 33112 tol=0.005  N=True  p_hit=0.5183 cov=48/48
+geometry-only: pi,sqrt2,sqrt6,roct,rtet,a0 + 1,2,3,4 (10 atoms) |S2|= 33112 tol=0.001  N=False p_hit=0.0134 cov=41/48
+geometry-only: pi,sqrt2,sqrt6,roct,rtet,a0 + 1,2,3,4 (10 atoms) |S2|= 33112 tol=0.001  N=True  p_hit=0.2646 cov=48/48
+enlarged: +7,+10,+sqrt5,+e (21 atoms)                          |S2|=138473 tol=0.01   N=False p_hit=0.1086 cov=48/48
+enlarged: +7,+10,+sqrt5,+e (21 atoms)                          |S2|=138473 tol=0.01   N=True  p_hit=0.4983 cov=48/48
+enlarged: +7,+10,+sqrt5,+e (21 atoms)                          |S2|=138473 tol=0.005  N=False p_hit=0.0561 cov=48/48
+enlarged: +7,+10,+sqrt5,+e (21 atoms)                          |S2|=138473 tol=0.005  N=True  p_hit=0.4624 cov=48/48
+enlarged: +7,+10,+sqrt5,+e (21 atoms)                          |S2|=138473 tol=0.001  N=False p_hit=0.0116 cov=48/48
+enlarged: +7,+10,+sqrt5,+e (21 atoms)                          |S2|=138473 tol=0.001  N=True  p_hit=0.2285 cov=48/48
