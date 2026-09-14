@@ -1,0 +1,185 @@
+\documentclass[twocolumn,10pt,a4paper]{article}
+
+\usepackage[margin=1.8cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{enumitem}
+
+\hypersetup{colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black}
+
+\titleformat{\section}[block]{\normalsize\bfseries}{\thesection.}{0.6em}{}
+\titleformat{\subsection}[block]{\normalsize\itshape}{\thesubsection.}{0.6em}{}
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textit{BCT Appendix JH4 --- Yang--Mills (Corrected Scope, v2)}}
+\fancyhead[R]{\small\textit{27 July 2026}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+\twocolumn[{%
+\begin{center}
+{\large\bfseries Appendix JH4 (v2): A Geometrically-Fixed Lattice Gauge Theory\\[2pt]
+for the D4-Superfluid Vacuum --- Scope Corrected}\\[8pt]
+{\normalsize Michel Robert Cabri\'e$^{1,\ast}$}\\[4pt]
+{\small $^1$Independent Researcher; ORCID: 0009-0007-9561-9859}\\[2pt]
+{\small Originally dated 13 March 2026 \quad Correction issued 27 July 2026}\\[10pt]
+\end{center}
+\begin{center}
+\begin{minipage}{0.85\textwidth}
+\small
+\textbf{Notice of correction.} The original version of this appendix (13 March
+2026) presented its results as a complete proof of the Clay Mathematics
+Institute Yang--Mills existence and mass gap problem. This version corrects
+that claim. What is proven below --- rigorously, and unchanged from the
+original --- is the existence of a well-defined lattice gauge theory on the
+BCT D4 lattice, at a geometrically-fixed bare coupling $g^2=\pi^5/24$,
+satisfying the Osterwalder--Schrader axioms at finite lattice spacing, with a
+positive spectral gap $\delta_{\mathrm{latt}}>0$ at every such spacing. What
+is \emph{not} proven, and what the original version's abstract and title
+overstated, is a rigorous non-perturbative continuum limit: the paper never
+establishes, with the control the Millennium Problem requires, that
+$\delta_{\mathrm{latt}}\to C\Lambda_{\mathrm{QCD}}$ with $C>0$ as $a\to0$.
+This is stated candidly in the original's own Remark~JH4.2 and Open
+Question~3, which this correction brings to the front rather than leaving in
+the closing sections. The lattice construction is genuine, correctly executed
+mathematical physics; it is a mass-gap-bearing lattice theory at one fixed
+coupling, not a solution to the Millennium Problem.
+\end{minipage}
+\end{center}
+\vspace{4pt}
+}]
+
+\section{What this appendix actually establishes}
+
+The BCT Superfluid Lattice Model proposes that the SU(3) bare coupling on
+the D4-derived lattice is fixed geometrically rather than free:
+\begin{equation}
+g^2_{\mathrm{bare}} = \frac{S_{D_4}}{4} = \frac{\pi^5}{24} = 12.750820\ldots,
+\end{equation}
+the action of an SU(3) instanton traversing the six positive roots of the
+$A_2\subset D_4$ subsystem. This section states, precisely, what follows
+from that proposal and what does not.
+
+\subsection{Established: the finite-lattice theory exists and has a positive
+gap}
+At the fixed coupling above, on the BCT lattice at any spacing $a>0$:
+\begin{enumerate}[leftmargin=*]
+\item The Wilson partition function $Z=\int\!\prod_\ell dU_\ell\,e^{-S_W[U]}$
+exists as a well-defined probability measure on $\mathrm{SU}(3)^{|\Lambda|}$,
+by compactness of SU(3) and boundedness of the Wilson action.
+\item Reflection positivity holds, via the Osterwalder--Seiler criterion:
+$D_4$ self-duality ($D_4^*=D_4$) makes time-reflection a symmetry of the
+lattice itself, and $\tfrac13\mathrm{Re}\,\mathrm{tr}\,U$ is positive-definite
+on SU(3) by the Peter--Weyl theorem.
+\item OS0 (temperedness) holds because $Z_{\mathrm{BCT}}=\Theta_{D_4}(\tau)/\eta(\tau)^8$
+is a modular form, hence analytic; OS1 (Euclidean invariance) holds by the
+isotropy of the 24 equal-length $D_4$ roots; OS3 (gauge invariance) holds by
+construction of the Wilson action.
+\item By the Osterwalder--Schrader reconstruction theorem, a Hilbert space
+$\mathcal H$, a positive Hamiltonian $H\ge0$, and a vacuum $|\Omega\rangle$
+with $H|\Omega\rangle=0$ exist for this \emph{finite-lattice-spacing} theory.
+\item The transfer matrix $T$ is strictly positive on $\mathcal H_{\mathrm{phys}}$
+(Jentzsch's theorem), giving a unique largest eigenvalue and hence a genuine
+spectral gap $\delta_{\mathrm{latt}}=-a^{-1}\ln(\lambda_1/\lambda_0)>0$ at
+\emph{every fixed} lattice spacing $a>0$, via a convergent cluster expansion
+at $g^2=\pi^5/24$ (expansion parameter $u=e^{-144/\pi^5}\approx0.624<1$).
+\end{enumerate}
+Items 1--5 above are correctly proven and are not in question. They
+constitute a legitimate, self-contained mathematical result: a specific
+four-dimensional SU(3) lattice gauge theory, at a single geometrically-motivated
+coupling, is well-defined and has a positive mass gap at every finite lattice
+spacing.
+
+\subsection{Not established: the rigorous continuum limit}
+
+The Clay Millennium Problem requires more than the above: it requires a
+probability measure on gauge connections on $\mathbb R^4$ (not a fixed
+lattice), satisfying the OS axioms in the continuum, with
+$\mathrm{spec}(H)\cap(0,\Delta)=\emptyset$ for some $\Delta>0$. Reaching this
+from a lattice theory requires controlling, non-perturbatively, the limit
+$a\to0$: showing that physical quantities converge to finite values along
+some renormalisation-group trajectory $g(a)$. This is precisely the
+obstacle that has resisted rigorous solution for seventy years, including in
+Balaban's substantial but incomplete programme \cite{balaban1988,balaban1989}.
+
+This appendix does not close that gap, and --- read carefully --- its own
+original text says so. The dimensional transmutation relation
+\begin{equation}
+\Lambda_{\mathrm{QCD}} = m_P \exp\!\left[-\frac{g^2_{\mathrm{bare}}/(1-x_{\mathrm{SU(3)}})}{1}\right] = 220\text{ MeV}
+\end{equation}
+is a single-point calculation at $a=\ell_P$, $g^2=\pi^5/24$ --- not a
+statement about a trajectory $g(a)$ as $a\to0$. The original appendix's own
+Remark JH4.2 states this directly: \emph{``In BCT, the statement becomes:
+`the specific trajectory $g(a=\ell_P)=\pi^5/24$ gives $\Lambda_{\mathrm{QCD}}=220$
+MeV.' This is a calculation \ldots not an existence proof about an
+infinite-dimensional flow.''} And its own Open Question 3 states plainly:
+\emph{``The continuum limit \ldots is established physically but would
+benefit from the rigorous renormalisation group construction of Balaban
+\ldots applied to the BCT fixed-point coupling.''} A result that ``would
+benefit from'' a construction that does not yet exist is a result for which
+that construction has not been carried out. The original abstract's claim
+of a complete existence-and-mass-gap proof did not accurately represent
+this.
+
+\section{What would be needed to close the gap}
+
+A genuine resolution would require demonstrating, with the rigor Balaban's
+programme aims at but has not completed, that the sequence of finite-lattice
+gaps $\delta_{\mathrm{latt}}(a)$ --- each individually positive, as
+established above --- converges to a strictly positive limit as $a\to0$,
+along the trajectory fixed by $g^2(\ell_P)=\pi^5/24$. The BCT proposal
+supplies a candidate UV boundary condition for that trajectory; it does not
+supply the non-perturbative control of the flow itself. This is named here
+as the open problem it is, not folded into a closing remark.
+
+\section{Value of the result as it stands}
+
+The finite-lattice result is not without content. It exhibits a specific,
+motivated, geometrically-fixed coupling at which a four-dimensional SU(3)
+lattice gauge theory is rigorously well-defined with a positive gap at every
+spacing, and for which the resulting $\Lambda_{\mathrm{QCD}}$ and $\alpha_s(m_Z)$
+agree with observation to sub-percent precision (BCT Letters 22, 32). This is
+a legitimate and interesting result in lattice gauge theory. It is offered
+here at the tier the evidence supports: a candidate UV completion whose
+continuum behaviour remains an open mathematical question, not a solved
+Millennium Problem.
+
+\section*{Tier statement}
+
+\textbf{Finite-lattice existence and mass gap: PROVEN}, unchanged from the
+original derivation (\S1.1 above). \textbf{Rigorous continuum limit: OPEN},
+corrected from the original's claim of completeness. The Clay Millennium
+Problem for Yang--Mills existence and mass gap remains unsolved by this
+appendix.
+
+\begin{thebibliography}{9}
+\bibitem{balaban1988} T.~Balaban, Commun.\ Math.\ Phys.\ \textbf{119}, 243 (1988).
+\bibitem{balaban1989} T.~Balaban, Commun.\ Math.\ Phys.\ \textbf{122}, 175 (1989).
+\bibitem{jaffewitten} A.~Jaffe and E.~Witten, \emph{Quantum Yang--Mills Theory},
+Clay Mathematics Institute Millennium Problems (2000).
+\bibitem{os1} K.~Osterwalder and R.~Schrader, Commun.\ Math.\ Phys.\ \textbf{31},
+83 (1973); \textbf{42}, 281 (1975).
+\bibitem{monograph} M.~R.~Cabri\'e, \emph{BCT Superfluid Lattice Model
+Monograph} v2.1, Zenodo, DOI: 10.5281/zenodo.18884976 (2026).
+\bibitem{jh4v1} M.~R.~Cabri\'e, \emph{Appendix JH4 (v1): Yang--Mills Existence
+and Mass Gap}, BCT Programme, 13 March 2026. Superseded by this version.
+\end{thebibliography}
+
+\vspace{6pt}
+\begin{center}
+{\footnotesize BCT Programme --- monograph v2.1 era \,\textperiodcentered\,
+CC BY 4.0 \,\textperiodcentered\, Zero military applications --- absolute}
+\end{center}
+
+\end{document}
