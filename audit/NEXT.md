@@ -23,11 +23,15 @@ a result, and either gate may overturn it.
 | MP | 13 Sep | SC-MP-1 (qualified: HF4's m_P = M_R/α₀² is an identity on GG2's M_R = m_P·α₀²; the −0.08% is input rounding) + SC-MP-3 (input set, M_R, G_BCT all inconsistent across documents). Scale a = ℓ_P is assumed and declared. JB6 and L128 "derivations" of m_P are inverted fits, not circular. 12 notices. | `gates/MP/` |
 | PRED | 13 Sep | SC-PRED-1: observed matches are within chance expectation; 39/40 closed forms reproduce; 28 eligible sub-1% vs E≈100–130 by construction; best single item 1/α ≈ 6 bits; m_P = M_R/α₀² circular (CN-PRED-01); "92" not reconstructible (CN-PRED-02). Prompt as run: `7e7675da…` (see `gates/PRED/gate_PRED_prompt_asrun.md`). | `gates/PRED/` |
 | MAD | 14 Sep | SC-MAD-1 (verdict recorded in-thread; deliverable not yet written) | **MISSING** |
+| LINK | 14 Sep | SC-LINK-2: the U(1) sector's only canonical variable is site-valued (θ_i); the compact-U(1) link reformulation is available and nothing blocks it, but it costs the phonon identification, c_s = c, and the transfer-matrix derivation of α₀. Constructed link theory gives 2 transverse modes + 3 gapped + 1 gauge, continuum limit Maxwell. SC-LINK-5 does not fire: no obstruction exists. SC-LINK-4 fires at corpus level — three field contents live (θ_i, ξ_i, SU(3) links). Kalb–Ramond duality cannot supply the second polarisation. 11 notices. Prompt `d9dba4c8…`. | `gates/LINK/` |
 
 ## Queued, in order
-1. **Gate LINK** — `gates/gate_LINK_prompt.md`. Site or link variables, and is
-   the second photon polarisation reachable? Includes an itemised price tag for
-   the reformulation. The only pinned prompt not yet run.
+1. **Gate XI (new, proposed)** — the ξ_i reading. Gate LINK's CN-LINK-06: One
+   Medium App C.1 gets the photon's 2 polarisations from a three-component
+   octahedral-void *displacement* field, with no Hamiltonian written for it
+   anywhere, and in tension with One Medium §5.3's own exclusion of an elastic
+   vacuum. This is the third field content and the cheapest remaining route to 2
+   polarisations. Write and pre-register before running.
 2. **Gate PRED2** — `gates/gate_PRED2_prompt.md` (`69b7b7ea…`, pre-registered at
    `23bf80b`, 13 Sep). Per-prediction surprise scoring under an enumerated grammar
    with look-elsewhere, correction-factor and date-order charges, and a Wyler
