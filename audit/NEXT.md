@@ -1,6 +1,6 @@
 # NEXT — what is queued, running, and closed
 
-Last updated 14 September 2026 (ledger reconciliation). **Update this file at the close of every session.**
+Last updated 14 September 2026 (ledger reconciliation; Gate RATIO closed). **Update this file at the close of every session.**
 It exists because sessions have independently invented their own gate order, and
 one spent a turn treating a committed prompt as a mystery file.
 
@@ -24,6 +24,7 @@ a result, and either gate may overturn it.
 | PRED | 13 Sep | SC-PRED-1: observed matches are within chance expectation; 39/40 closed forms reproduce; 28 eligible sub-1% vs E≈100–130 by construction; best single item 1/α ≈ 6 bits; m_P = M_R/α₀² circular (CN-PRED-01); "92" not reconstructible (CN-PRED-02). Prompt as run: `7e7675da…` (see `gates/PRED/gate_PRED_prompt_asrun.md`). | `gates/PRED/` |
 | MAD | 14 Sep | SC-MAD-1 (verdict recorded in-thread; deliverable not yet written) | **MISSING** |
 | LINK | 14 Sep | SC-LINK-2: the U(1) sector's only canonical variable is site-valued (θ_i); the compact-U(1) link reformulation is available and nothing blocks it, but it costs the phonon identification, c_s = c, and the transfer-matrix derivation of α₀. Constructed link theory gives 2 transverse modes + 3 gapped + 1 gauge, continuum limit Maxwell. SC-LINK-5 does not fire: no obstruction exists. SC-LINK-4 fires at corpus level — three field contents live (θ_i, ξ_i, SU(3) links). Kalb–Ramond duality cannot supply the second polarisation. 11 notices. Prompt `d9dba4c8…`. | `gates/LINK/` |
+| RATIO | 14 Sep | SC-RATIO-2: every observable of the minimal theory (one complex scalar, GP, §1.2) depends on r_oct, r_tet only via their product, through ξ = 1/√(8·r_oct·r_tet). Sharper than the stop condition — r_oct/r_tet = 1.8430 is a fixed FCC constant (both radii = R·const, verified 15 digits), not a free input; dimensionful content needs an external anchor (a = ℓ_P, assumed). Lattice route to the ratio (scalar phonon c_z/c_x = η) cancels at the FCC point the radii pin → isotropic; residual anisotropy a fixed O(k⁴) constant. Steelman (α₂ = r_oct²/π → v_BCT; x_EW ∝ r_oct; ξ/r_oct = 11.19) uses the radii separately but is unsupported by the minimal action — N-class. One open thread: CN-RATIO-07. 7 notices. Model Opus 4.8. Prompt `5a0c0877…`, corpus `e4f5baf1…`. | `gates/RATIO/` |
 
 ## Queued, in order
 1. **Gate XI (new, proposed)** — the ξ_i reading. Gate LINK's CN-LINK-06: One
@@ -48,6 +49,20 @@ a result, and either gate may overturn it.
    reconstruct the TANH and INT deliverables, or record them as lost.
 5. **Census** — resume at `tex/BCT_Appendix_KA1.tex`, next id INV-0035.
    Coverage 6 of 134 .tex = 4.5%. See `inventory/inv_state.json`.
+6. **Gate RATIO-OBS (new, proposed)** — the CN-RATIO-07 thread, the one item
+   Gate RATIO left open. Does the minimal action provide any observable that
+   resolves r_oct from r_tet — i.e. is the substrate void radius in-principle
+   observable? The minimal theory contains only ξ (the product); the corpus's
+   ξ/r_oct = 11.19 "structural invariant" (Letter 19) depends on the radii
+   separately and is testable, it claims, only by "a sub-Planckian probe of the
+   electron's internal structure." **If no** — SC-RATIO-2 is final and the
+   individual-radius citation family (CN-RATIO-06: α₂ = r_oct²/π → v_BCT,
+   x_EW ∝ r_oct, x_SU(3) ∝ r_tet, cos θ_K = r_oct − ½, ξ/r_oct) retires with it,
+   alongside the PRED2 §5 retirement list. **If yes** — the ratio does two
+   numbers' work for a *non-minimal* theory that includes the substrate, but the
+   ratio it fixes is FCC-determined, so it is a prediction, not a free parameter.
+   Despite its position here it is the direct finaliser of Gate RATIO; slot by
+   priority. Write and pre-register before running.
 
 ## Parked
 - **Gate PV** — prompt lost; ledger holds digest `ca214df4...4062`. Find and
@@ -132,3 +147,69 @@ SC-PRED-1 does not anticipate the case that fired — the single ≥10-bit resul
 corpus and reproduced by a blind control. Future PRED-class prompts should split the census into
 *claimed-as-derived* vs *published-with-disclaimer*, and require the control result to be reported
 alongside the score.
+
+---
+
+## Gate RATIO — closed 14 Sep 2026
+
+Prompt SHA-256 `5a0c08773431c4b9de7fd69a7346c2cb087a283c49b8c1c256431b6a27aec2f3`
+(matched pre-registration, 7008 B). Corpus tarball
+`e4f5baf1e2e13ec53192bb47c6552052a674c1d36c92d66831d0255abe66ed64` at commit
+`68ffd73641f237f5eb1de0a41785ca940a707881`. Deliverable:
+`audit/gates/RATIO/gate_RATIO_deliverable.md`. Model: Claude Opus 4.8.
+
+**Verdict: SC-RATIO-2.** Every observable of the minimal theory (one complex scalar, GP action,
+MINIMAL_BCT §1.2) depends on r_oct and r_tet only through their product, via ξ = 1/√(8·r_oct·r_tet).
+The geometry supplies one number — one length scale.
+
+**Sharper than the stop condition.** The ratio r_oct/r_tet = 1.8430 was never a free datum:
+r_oct = (√2−1)R and r_tet = (√(3/2)−1)R are the octahedral and tetrahedral interstitial inradii of
+a *single* sphere radius R = a/2 (verified to 15 digits), so the ratio is a fixed FCC constant,
+identical at any scale. The model has one scale and one packing choice (FCC), not two independent
+radii. Dimensionful content additionally needs an external anchor — a = ℓ_P, assumed (App JH4
+"single-point calculation at a=ℓ_P"; the corpus ties Λ_QCD to the same choice). Same epistemic
+situation as INV-0120 (Λ_QCD as input).
+
+**The lattice route, closed by calculation.** The continuum GP action is rotation-invariant →
+isotropic dispersion, no ratio. A scalar phonon on the lattice gives c_z/c_x = η (axial ratio) in
+the coordination-8 regime — so if the shape were free the ratio would do genuine work. But the
+model's radii pin η = √2 (FCC); at that point close-packing brings the in-plane bonds into the same
+shell → 12-fold cubic coordination → the sound tensor is exactly isotropic (D_xx=D_yy=D_zz).
+Residual anisotropy is a fixed O(k⁴) FCC constant with no independent r-content. The model cannot
+hold the shape fixed (zero parameters) AND have the ratio do observable work; the specific radii
+choose the inert horn.
+
+**Steelman, reported and failed for the minimal theory.** The full corpus uses individual radii
+extensively — α₂ = r_oct²/π → v_BCT = 246.22 GeV (Volume2); x_EW ∝ r_oct, x_SU(3) ∝ r_tet
+(Letter127); cos θ_K = r_oct − ½ (Monograph); and ξ/r_oct = 1/(√8·r_oct^{3/2}·r_tet^{1/2}) = 11.19
+(Letter19), which does depend on the radii with unequal powers. None is derivable from the minimal
+GP action, whose sole geometric input is ξ (the product); each is a standalone geometry→observable
+posit layered with α₀/α₂/NLO factors and external scales — structurally the N-class scored ≈0 bits
+by PRED2.
+
+### Open items this gate created, in priority order
+
+1. **CN-RATIO-07 [CONJECTURE] — is the substrate radius r_oct in-principle observable?** The one
+   thread the gate left open, and the direct finaliser of the verdict. See queued Gate RATIO-OBS.
+   If the minimal theory provides no operator that resolves r_oct from r_tet, SC-RATIO-2 is final.
+   Even if the substrate is observable, r_oct/r_tet is FCC-fixed → a prediction, not a parameter.
+2. **CN-RATIO-06 [ASSERTED] — retire or reclassify the individual-radius citations** (α₂ = r_oct²/π
+   → v_BCT, x_EW ∝ r_oct, x_SU(3) ∝ r_tet, cos θ_K = r_oct − ½, ξ/r_oct = 11.19). They use the
+   radii separately but are not consequences of the minimal action; resolve alongside the PRED2 §5
+   "retire from public citation" list, not separately — same N-class family.
+3. **Naming for the reachable claim.** Per MINIMAL_BCT §4 the publishable statement is "a lattice
+   superfluid whose coupling is fixed by void geometry" — one geometric number (ξ/a = 2.3175) plus
+   an external scale. SC-RATIO-2 is the evidence for that framing; "two radii, zero parameters"
+   should not be used as stated.
+
+### Notices
+CN-RATIO-01..05 PROVEN (product-only dependence; FCC-constant ratio; continuum isotropy; lattice
+cancellation at η=√2; external-scale requirement). CN-RATIO-06 ASSERTED (corpus individual-radius
+formulas, unsupported by minimal action). CN-RATIO-07 CONJECTURE (substrate observability). Full
+tiering and scripts in the deliverable.
+
+### Queue reconciliation noticed while filing (not acted on here)
+- **PRED2** appears both as queued item 2 and as a closed block above — it has closed (SC-PRED-1).
+- **Gate XI** appears as queued item 1 "(new, proposed)", but MINIMAL_BCT §0 cites "Gate XI,
+  SC-XI-3" as run. Looks like a stale queue entry.
+Both left for a deliberate reconciliation pass rather than edited blind.
