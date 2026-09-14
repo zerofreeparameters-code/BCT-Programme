@@ -1,0 +1,765 @@
+One Medium — BCT companion synthesis (Journal Edition) July 2026
+One Medium
+The Common Origin of the Maxwell, Dirac and Einstein Equations
+in the Octet-Hopfion Condensate
+A companion synthesis of The BCT Superfluid Lattice Model
+(Journal Edition — technical register only)
+Michel Robert Cabri´e
+Independent Researcher · Barrys Reef, Victoria, Australia
+ORCID: 0009-0007-9561-9859 · ZeroFreeParameters@gmail.com · pi2.institute
+Journal Edition — 21 July 2026 · BCT Programme (monograph v2.0 era)
+Abstract. The three great field equations of physics — Maxwell’s equations of electromagnetism,
+the Dirac equation of relativistic quantum matter, and Einstein’s field equations of gravitation —
+are conventionally postulated as independent starting points. We show that in the Body-Centred
+Tetragonal (BCT) Superfluid Lattice Model all three arise as descriptions of a single physical
+object: the Octet-Hopfion Condensate (OHC), the superfluid crystalline ground state of the
+quantum vacuum. Maxwell’s equations are the long-wavelength dynamics of the octahedral-void
+phonon mode; light itself is identified as the sound of the vacuum, with cs = c forced exactly by
+the BCT equation of state and full directional isotropy guaranteed by the Superfluid Necessity
+Theorem (Letter 259). The Dirac equation is the effective equation of quantised vortex excitations,
+with spinor structure, Fermi statistics and three generations arising from lattice topology and
+D4 triality. The Einstein equations emerge as the hydrodynamics of the condensate — linearised
+via the acoustic metric, and to all orders in hµν via the Jacobson–Parentani correspondence,
+with Newton’s constant predicted as G = 6.684 × 10−11 m3 kg−1s
+−2
+(0.151%). The unification
+claimed here is precisely scoped: the three field equations and the gauge structure are derived
+from one quantum medium; quantum mechanics itself is the language of the construction, not
+an output of it. Every quantitative statement is parameter-free, resting on two exact void radii,
+roct = (√2 − 1)/2 and rtet = (√6 − 2)/4, and one dimensionful anchor, ΛQCD = 220 MeV.
+Contents
+1 The problem: three languages, no dictionary 2
+2 Scope statement (read first) 3
+3 The medium: the Octet-Hopfion Condensate 3
+3.1 The lattice and its unique ratio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+3.2 The ground state and its name . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+3.3 The two voids . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+4 Maxwell: the medium’s sound 4
+4.1 The identification . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+4.2 The homogeneous pair . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+4.3 The inhomogeneous pair . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+4.4 The coupling as output . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+4.5 The weak mixing angle: two channels, one ratio . . . . . . . . . . . . . . . . . . . . 4
+4.6 The electroweak scale and the boson masses . . . . . . . . . . . . . . . . . . . . . . 4
+5 What light is 4
+5.1 A photon is a phonon of the condensate . . . . . . . . . . . . . . . . . . . . . . . . 5
+5.2 Why the speed of light is the speed it is . . . . . . . . . . . . . . . . . . . . . . . . 5
+5.3 Why the speed is the same in every direction . . . . . . . . . . . . . . . . . . . . . 5
+5.4 Why no experiment inside the medium detects the medium . . . . . . . . . . . . . 5
+1One Medium — BCT companion synthesis (Journal Edition) July 2026
+12. Honest open problems
+Named precisely, per programme protocol. (i) The quantum formalism itself : ℏ and the Hilbertspace postulates are inputs (§3); their derivation from something deeper is the outermost frontier.
+(ii) “The Scratch” (Appendix C.3): xEW = 0.339345 from the Gelfand–Yaglom functional determinant of the BPST-coupled Dirac operator on B4
+(roct) with APS boundary conditions: open. (iii)
+ηdoublet = 1/3: conjecture; mechanism identified, first-principles proof incomplete. (iv) The topological invariant ν0 fixing the Chern–Simons level (§9): the TRIM-parity calculation supporting
+ν0 = 1 is under re-verification, as two of the four evaluation points used coincide with the model’s
+own nodal planes; the A2 representation-theoretic argument for a parity-odd Chern–Simons term
+remains sound independent of this recheck. The electron mass, formerly listed here, is now derived
+to −0.014% (Appendix C.2) and is no longer an open problem of the programme.
+13. Conclusion
+One medium. Its sound is electromagnetism, and light is that sound heard from inside. Its knots
+are matter, tied in either direction, in exactly three generational registers. Its flow is gravity, to all
+orders, with Newton’s constant as its stiffness. Its topology is the gauge group, its handedness is
+parity violation, and its superfluidity — provably, and uniquely among media — is the constancy
+of the speed of light. The three field equations of twentieth-century physics are not three laws
+but three chapters of the hydrodynamics of the Octet-Hopfion Condensate, with the couplings
+emerging, for the first time, as outputs: α to 0.013%, G to 0.151%, and ninety further observables
+at sub-percent precision from two void radii and one scale.
+For the reader who stepped over every equation: the claim of this document is that light, matter
+and gravity are the ripples, the knots and the currents of one quantum liquid; that the liquid’s
+geometry fixes the numbers physicists have measured but never explained; and that all of this is
+checked, where it can be checked, to fractions of a percent — with the open questions listed, not
+hidden.
+The equations were never speaking different languages. They were describing the same water.
+10One Medium — BCT companion synthesis (Journal Edition) July 2026
+A. Worked example: the strange quark mass
+The Td orbit mass formula (§6.3) states mq = mt exp(−STd nq/24), with STd = 15.015 and orbit
+numbers nq fixed by the representation theory of the tetrahedral group Td acting on the D4
+instanton moduli space. This appendix works the formula through for one flavour, start to finish,
+so the shape of the derivation is visible rather than asserted.
+Step 1 — the orbit number. Td has order 24 and five conjugacy classes (§2.4: identity,
+8C3, 3C2, 6S4, 6σd). Each quark flavour is associated with one orbit of Td acting on the moduli
+space of D4 instanton configurations; the orbit size for the strange quark is ns = 12 (the orbit
+corresponding to the 3C2 class combined with its 6σd reflection partners — a group-theoretic fact,
+not a fitted number).
+Step 2 — the exponent. With STd = 15.015 and ns = 12:
+STd ns
+24
+=
+15.015 × 12
+24
+= 7.5075. (14)
+Step 3 — the mass. With the top mass mt = 172,000 MeV (itself derived from the Yukawa
+criticality condition, §4.6):
+ms = 172,000 × e
+−7.5075 MeV = 93.0 MeV. (15)
+Observed (MS scheme, 2 GeV): 93.4 MeV. Error: −0.43%.
+B. The Jacobson–Parentani closure, in full
+§8.2 states the three-step argument; this appendix shows the working, including the step most
+load-bearing for the entire gravity claim: why cs = c, shown rather than asserted.
+Step 1: reduction to the superfluid action. The BCT Gross–Pitaevskii action,
+SGP =
+Z
+d
+4x
+h
+iℏ
+2
+(Ψ∗∂tΨ − Ψ∂tΨ
+∗
+) −
+ℏ
+2
+2m
+|∇Ψ|
+2 − V (|Ψ|2
+)
+i
+, (16)
+is expanded in the Thomas–Fermi (hydrodynamic) limit, valid at scales r ≫ ξ where ξ ≈ 2.32 ℓP
+is the BCT healing length. At these scales the quantum-pressure term ℏ
+2
+|∇Ψ|
+2/(2m) is negligible
+against the interaction energy, and writing Ψ = √ρ eiθ reduces the action exactly to the irrotational
+superfluid form
+Ssf =
+Z
+d
+4x
+h
+−ρ
+
+∂tθ +
+v
+2
+2
+
+− ε(ρ)
+i
+, v =
+ℏ
+m
+∇θ, (17)
+with ε(ρ) the internal energy density. Varying with respect to ρ and θ returns the ordinary
+continuity and Euler equations of a perfect fluid.
+Step 2: the acoustic metric and the Jacobson–Parentani identity. Linearising density
+fluctuations δρ about the uniform ground state ρ0, the fluctuation equation of motion is exactly
+the wave equation for a massless scalar on the effective (acoustic) metric
+gµν ∝
+ 
+−(c
+2
+s − v
+2
+) −vj
+−vi δij !
+, c2
+s =
+∂P
+∂ρ
+
+
+
+
+ρ0
+. (18)
+Jacobson and Parentani proved that for any barotropic, irrotational, inviscid fluid satisfying cs = c,
+the fluid’s own hydrodynamic action, re-expressed in these variables, is identically equal to the
+Einstein–Hilbert action of that effective geometry — not an approximation, valid to all orders in
+hµν = gµν − ηµν, weak field or strong. This is a general mathematical fact about barotropic fluids;
+it does not by itself pick out any particular fluid, and it does not by itself give cs = c.
+11One Medium — BCT companion synthesis (Journal Edition) July 2026
+Step 3: the BCT equation of state forces cs = c — shown. This is BCT’s own contribution,
+and the step this synthesis owes the reader in full. The BCT Gross–Pitaevskii potential is a
+stiff quartic condensate, V (|Ψ|
+2
+) = g
+2
+(|Ψ|
+2 − n0)
+2
+, and the ground-state pressure vanishes exactly,
+P0 = 0 (the same equilibrium condition that gives Λ = 0, §8.1). The adiabatic sound speed of this
+equation of state is
+c
+2
+s =
+∂P
+∂ρ
+
+
+
+
+ρ0
+=
+g n0
+m
+, (19)
+where m = ℏωP /c2is the condensate’s phonon mass, fixed by its plasma frequency ωP . The
+interaction strength g is not free: the Josephson condition on the BCT lattice — the same phaselocking condition that fixes the crystal coupling α0 = roctrtet/π (§2.3) — requires g = mc2/n0.
+Substituting,
+c
+2
+s =
+g n0
+m
+=
+(mc2/n0) n0
+m
+= c
+2 =⇒ cs = c, (20)
+identically, with no free parameter and no fine-tuning: the same Josephson coupling that fixes α0
+also fixes the condensate to propagate disturbances at exactly c. With cs = c established, the
+Jacobson–Parentani identity of Step 2 applies without qualification, and the BCT condensate’s
+action is the Einstein–Hilbert action, to all orders.
+On the value of G — two routes, now consistent. Two derivations of Newton’s constant
+appear in the technical record. The structural route matches the second-order expansion of the
+BCT fluid action against the second-order Einstein–Hilbert action, giving G = c
+4/(8πKBCT)
+with KBCT = ρ0c
+2
+the condensate bulk modulus; its direct numerical evaluation requires the
+electron mass as an input. The numerical prediction quoted in §8.2, G = 6.684×10−11 m3kg−1
+s
+−2
+(0.151%), is obtained by exponentiating the residual of the two-loop hierarchy formula ln(mP /me)
+(Appendix C.2). With the electron mass now derived to −0.014% rather than left open, both
+routes rest on the same closed input, and the earlier concern that the numerical route depended
+on an unclosed quantity no longer applies.
+C. Three supporting mechanics, sketched
+C.1 C.1 — Maxwell source terms and photon polarisation
+The octahedral void displacement field ξi couples to a vortex at position x0 through the phase
+winding condition H∇θ · dl = 2πn around the vortex core. Varying the long-wavelength action
+with respect to ξiin the presence of this winding produces source terms of exactly the form
+ρ = n δ3(x − x0) and J = nv δ
+3
+(x − x0) in the resulting wave equation for ξi — charge and
+current density as the winding number and its motion. Gauge invariance of the resulting U(1)
+action (invariance under θ → θ + f(x, t) for the massless mode) removes one of the three naive
+polarisation components of ξi, leaving exactly two transverse propagating modes: the photon’s
+two polarisation states.
+C.2 C.2 — The electron mass: derived, to −0.014%
+An early candidate identified the electron’s rest energy with the Casimir (zero-point) energy of
+the octahedral-void phonon field around the vortex core: mec
+2 = (ℏc/roct) Ξgeom. Computed
+three independent ways — analytic Boyer–Milton, direct numerical eigenmode computation, and
+heat-kernel regularisation — all three agreed on Ξgeom = 0.050 ± 0.010, predicting me ≈ 0.24 mP ,
+some 6 × 1012 times too large. This mechanism was correctly retired: a Casimir energy of a
+Planck-scale region is provably confined to O(ℏc/roct), and no refinement within that class can
+close a gap of that size.
+The working mechanism instead follows the same dimensional-transmutation route already used
+for the Planck mass and the QCD scale: the electron mass arises from D4-instanton tunnelling,
+12One Medium — BCT companion synthesis (Journal Edition) July 2026
+me = mP e
+−Se
+, with Se built up in three independently derived steps. First, the bare D4
+instanton action SD4 = π
+5/6 = 51.003281, from four Brillouin-zone integrals. Second, a oneloop electroweak back-reaction, resumming the root-ladder to all orders in xlep = 4α0/π, giving
+S
+(1)
+e = SD4
+/(1 − xlep) = 51.4889 (+3.97%). Third, the field-fluctuation determinant of this same
+instanton background is proved exactly zero by the Gelfand–Yaglom identity on the BCT bipartite
+lattice — the corner-group and body-centre-group sublattices of the octahedral void (§2.3) are
+precisely the two halves of this identity, and their contributions cancel completely, leaving no
+residual correction from that sector.
+What remained was a second, independent factor of the instanton path integral: the moduli-space
+Jacobian, dressed by the universal 1/(4π) loop-measure factor that appears in all four-dimensional
+instanton calculus, regardless of field content. Applying it,
+Se =
+π
+5/6
+1 −
+α0(4π + 1)
+π
+2
+= 51.527981, (21)
+against the observed ln(mP /me) = 51.527840 — a residual of 0.00027%. This gives
+me = mP e
+−Se = 0.510927 MeV (observed 0.510999 MeV; −0.014%). (22)
+The structural theorem salvaged from the earlier, retired Casimir attempt still stands independently:
+the same symmetry argument that forbids a perturbative electron mass by that route also proves
+the photon and graviton remain exactly massless, with no fine-tuning required.
+C.3 C.3 — “The Scratch”: what remains
+xEW = 0.339345 is conjectured to arise from the Gelfand–Yaglom functional determinant of the
+BPST-instanton-coupled Dirac operator on the four-ball B4(roct), with Atiyah–Patodi–Singer
+(APS) spectral boundary conditions on the bounding three-sphere. The Gelfand–Yaglom method
+evaluates such determinants via a boundary-value problem for a single ordinary differential
+equation, which is in principle tractable; the APS boundary condition on a curved instanton
+background has, to date, resisted closed-form evaluation. This is the single most technically
+demanding open calculation in the programme, reserved for a dedicated session (per the Whopper
+Protocol).
+Key references
+1. M. R. Cabri´e, BCT Monograph v2.0, Zenodo, DOI: 10.5281/zenodo.18884976 (2026).
+2. M. R. Cabri´e, Letter 26: General Relativity to All Orders from the BCT Condensate (2026).
+3. M. R. Cabri´e, Letter 259: The Superfluid Necessity Theorem (2026); companion App HO6.
+4. M. R. Cabri´e, Technical Appendices, Volumes 1–2, Zenodo, DOIs: 10.5281/zenodo.18885133,
+10.5281/zenodo.18885472.
+5. T. Jacobson, “Thermodynamics of Spacetime: The Einstein Equation of State,” Phys. Rev. Lett. 75,
+1260 (1995).
+6. T. Jacobson and R. Parentani, Sci. Am. 293, 68 (2005).
+7. W. G. Unruh, Phys. Rev. Lett. 46, 1351 (1981); M. Visser, Class. Quant. Grav. 15, 1767 (1998).
+8. J. H. Conway and N. J. A. Sloane, Sphere Packings, Lattices and Groups, 3rd ed., Springer (1999).
+BCT Programme — monograph v2.0 era · CC BY 4.0 · Zero military applications — absolute · Birdseed
+Clause: free humanitarian access for anyone feeding wildlife
+13One Medium — BCT companion synthesis (Journal Edition) July 2026
+5.5 Polarisation and the photon’s two states . . . . . . . . . . . . . . . . . . . . . . . . 5
+5.6 Where the picture becomes falsifiable . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+6 Dirac: the medium’s knots 6
+6.1 Fermions as quantised vortices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+6.2 The Dirac structures, supplied rather than postulated . . . . . . . . . . . . . . . . 6
+6.3 Masses as geometry . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+6.4 The neutrino sector . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+7 Interlude: why it had to be a superfluid 7
+8 Einstein: the medium’s flow — to all orders 7
+8.1 Linearised: the acoustic metric . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+8.2 All orders: the Jacobson–Parentani closure . . . . . . . . . . . . . . . . . . . . . . 7
+8.3 Black holes and gravitational waves: the closure pays rent . . . . . . . . . . . . . . 8
+8.4 The equation-of-state reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+9 Structural consequences: gauge group, parity, charge 8
+10 One table 9
+11 How to kill this picture: consolidated falsifiable predictions 9
+12 Honest open problems 9
+13 Conclusion 10
+A Worked example: the strange quark mass 11
+B The Jacobson–Parentani closure, in full 11
+C Three supporting mechanics, sketched 12
+C.1 C.1 — Maxwell source terms and photon polarisation . . . . . . . . . . . . . . . . 12
+C.2 C.2 — The electron mass: derived, to −0.014% . . . . . . . . . . . . . . . . . . . . 12
+C.3 C.3 — “The Scratch”: what remains . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+1. The problem: three languages, no dictionary
+Physics rests on three towering descriptions that do not speak to one another. An analogy before
+the formal statement: imagine three flawless field guides — one describing the waves of the ocean,
+one its whirlpools, one its currents — written in three different languages, each denying the others’
+subject exists. The guides work. The ocean is missing.
+Maxwell’s equations (1865) describe electric and magnetic fields propagating through space, unified
+with optics in a single stroke. The Dirac equation (1928) describes relativistic quantum matter,
+with spin and antimatter built into its algebra before either was understood. Einstein’s field
+equations (1915) describe gravitation as the curvature of spacetime itself. Each is spectacularly
+confirmed within its domain. Each is, in its standard formulation, postulated: written down as a
+starting point, justified by its consequences, derived from nothing deeper.
+The couplings threading these equations — the fine structure constant α, the weak mixing angle,
+Newton’s constant G, nineteen free parameters of the Standard Model in all — share the same
+status. They are measured and inserted by hand. No accepted framework explains why they take
+the values they do.
+2One Medium — BCT companion synthesis (Journal Edition) July 2026
+A century of unification programmes has sought the common origin. The present document states,
+in one place and in deliberate order, the answer proposed by the BCT Superfluid Lattice Model:
+the three equations are three behaviours of one medium, and the couplings are that
+medium’s geometry showing through.
+The full evidentiary record — 92 observables derived to sub-percent precision, 280+ predictions, 459
+technical appendices — lives in the monograph and its supplementary volumes. This companion
+does one job the monograph’s architecture does not: it places the unification result at the centre
+of the page and walks through it from a single starting point.
+2. Scope statement (read first)
+Precision about the word “unification” is a duty, not a disclaimer.
+What is derived below: the field equations of electromagnetism (§4), the identity and behaviour
+of light (§5), relativistic quantum matter (§6), gravitation to all orders (§8), the Standard Model
+gauge group, parity violation, charge quantisation and the strong-CP resolution (§9) — from one
+condensate, with couplings as outputs.
+What is not derived: quantum mechanics itself. The Gross–Pitaevskii description of the OHC is
+a quantum object from its first line; ℏ, the superposition principle and the Hilbert-space postulates
+are inputs. In one sentence: quantum mechanics is the language; what is unified is everything said
+in it. The derivation of the quantum formalism from something deeper is an open frontier of the
+programme, named honestly in §11 alongside the other open problems.
+3. The medium: the Octet-Hopfion Condensate
+3.1 The lattice and its unique ratio
+The BCT vacuum is a Planck-scale superfluid crystal: identical Hopfion-bearing cells packed in
+the body-centred tetragonal arrangement with basal parameter a and axial parameter c. Among
+all axial ratios, one is singled out. The octahedral interstitial void at (a/2, a/2, 0) is bounded by
+four corner sites at distance a/√2 and two body-centre sites at distance c/2; the void is perfectly
+regular if and only if
+a
+√
+2
+=
+c
+2
+⇐⇒
+c
+a
+=
+√
+2. (1)
+At this unique ratio all twelve nearest-neighbour distances become equal, and the long-wavelength
+sound of the medium becomes exactly isotropic (Letter 259). This is the BCT Uniqueness Theorem.
+3.2 The ground state and its name
+The ground state of this crystal is the Octet-Hopfion Condensate (OHC). Each cell contains a
+Hopfion: a stable topological knot in the condensate field. Octet is a portmanteau of octahedral
+and tetrahedral — the two shapes of gap between the spheres — and Condensate because the
+whole settles into a single coherent quantum ground state.
+3.3 The two voids
+Packing identical spheres leaves two kinds of gap: one surrounded by six neighbouring spheres,
+shaped like an octahedron, and one surrounded by four, shaped like a tetrahedron. At c/a =
+√
+2
+the two void radii are exact algebraic numbers (in units of the sphere radius):
+roct =
+1
+√
+2
+−
+1
+2
+=
+√
+2 − 1
+2
+= 0.20710678 . . . , rtet =
+r
+3
+8
+−
+1
+2
+=
+√
+6 − 2
+4
+= 0.11237244 . . . (2)
+3One Medium — BCT companion synthesis (Journal Edition) July 2026
+The tetrahedral void is perfectly regular at every axial ratio; only the octahedral void selects √2
+uniquely. From these two numbers, the only dimensionless coupling of the theory is built:
+α0 =
+roct rtet
+π
+=
+(
+√
+2 − 1)(√6 − 2)
+8π
+= 0.0074081 . . . (3)
+4. Maxwell: the medium’s sound
+4.1 The identification
+The electromagnetic field is identified with the irrotational phonon mode of the octahedral-void
+condensate. The gauge potential Aµ is the long-wavelength collective coordinate of the void phase
+field; the field strength Fµν is its curl.
+4.2 The homogeneous pair
+∇·B = 0 and ∇×E = −∂tB are Bianchi identities of the lattice gauge connection — true by
+construction, exactly as in the continuum theory. No dynamics is required to obtain them; they
+express only that Fµν is a curl.
+4.3 The inhomogeneous pair
+Gauss’s and Amp`ere–Maxwell’s laws arise as the Euler–Lagrange equations of the octahedral void
+displacement field in the long-wavelength limit, with vortex excitations (§6) appearing as the
+source terms ρ and J. The full derivation is given in Appendix C.1.
+4.4 The coupling as output
+The strength of the interaction is not free. The tree-level coupling between the phonon mode
+and a charged vortex is the crystal coupling α0 of Eq. (3). One-loop vacuum polarisation — the
+Dyson resummation of virtual vortex–antivortex bubbles, the factor 2 counting the two vortex
+helicities — dresses it:
+α = α0 (1 − 2α0) = 1
+137.018
+(observed 1/137.036; error − 0.013%). (4)
+The residual is consistent with higher-order QED running from the lattice scale to Q = 0.
+4.5 The weak mixing angle: two channels, one ratio
+The same two voids that build α0 fix the electroweak mixing. The SU(2) coupling is carried by
+the octahedral channel and the U(1)Y hypercharge by the tetrahedral channel, giving tan θW =
+g
+′/g = rtet/roct and hence, at tree level,
+sin2θW =
+r
+2
+tet
+r
+2
+oct + r
+2
+tet
+= 0.22744. (5)
+4.6 The electroweak scale and the boson masses
+The Higgs sector is fixed by a criticality condition — the quartic coupling vanishes at the lattice
+scale, λ(mP ) = 0, a property of the ground state rather than an assumption — which, run down to
+laboratory energies with BCT inputs, yields mH = 124,916 MeV at next-to-leading order (−0.27%),
+tightening to 125,216 MeV at next-to-next-to-leading order (−0.027%, a tenfold improvement
+as expected when one more order of correction is included), mW = 80,370 MeV (+0.004%),
+mZ = 91,188 MeV (< 0.01%), and the electroweak scale vBCT = 246.2198 GeV (−0.002%) from
+the D4 instanton action SD4 = π
+5/6.
+4One Medium — BCT companion synthesis (Journal Edition) July 2026
+5. What light is
+The previous section derived Maxwell’s equations. This section asks the plainer question the
+equations describe: what is light? The BCT answer is one sentence — light is the sound of the
+vacuum — and every familiar property of light follows from taking that sentence literally.
+5.1 A photon is a phonon of the condensate
+A photon is a propagating quantum of the octahedral-void phase mode: a ripple of the OHC,
+travelling at the medium’s characteristic speed, carrying energy ℏω because the medium is quantum
+from the ground up. Nothing travels through the vacuum when light passes; the vacuum itself is
+what moves. The nineteenth century asked what medium carries light and could not find one; the
+question was sound, the candidate media were not (§7).
+5.2 Why the speed of light is the speed it is
+The dispersion of the scalar phase mode at long wavelength is ω = cs |k|, with cs fixed by the
+condensate’s equation of state — its stiffness against compression. The central structural fact,
+proven in the gravity sector (Letter 26, §8 below), is that the BCT equation of state forces
+cs = c exactly. (6)
+5.3 Why the speed is the same in every direction
+This is the Superfluid Necessity Theorem (Letter 259), and it is the reason this chapter can exist
+at all. To leading order in k, the phase-mode dispersion is governed by the second-moment tensor
+of the twelve neighbour vectors, Mij =
+P
+δ
+δiδj . At c/a =
+√
+2,
+M = 4a
+2 ⊮ exactly, (7)
+because cubic point symmetry admits no invariant second-rank tensor other than multiples of the
+identity.
+The same theorem shows what light is not: a wave in an elastic solid. On the identical lattice, a
+central-force solid — whose waves are governed by the fourth-rank elastic tensor, which cubic
+symmetry does not tame — shows directional speed variations of order 15%. Observed isotropy of
+c is constrained below 10−17. An elastic vacuum is not in tension with experiment; it is annihilated
+by it.
+5.4 Why no experiment inside the medium detects the medium
+The Michelson–Morley null result, fatal to the Victorian aether, is a prediction of the condensate
+picture rather than an embarrassment to it. The reason is the acoustic metric (§8.1): excitations
+of the medium — which is what interferometers, rulers, clocks and physicists are (§6) — propagate
+on the effective geometry defined by the medium’s own sound cone, and can perform measurements
+only with that same sound. An apparatus built of vortices, measuring phonons, in a condensate
+whose phonon speed is exactly isotropic, returns a null result as a matter of structure.
+5.5 Polarisation and the photon’s two states
+The physical photon carries two transverse polarisation states. In the BCT construction these
+arise from the emergent U(1) gauge structure of the void phase field: gauge invariance removes
+the longitudinal degree of freedom, as in the continuum theory, leaving the two transverse modes
+of the octahedral channel (Appendix C.1). The counting is inherited from the gauge structure
+derived in §9, not imposed.
+5One Medium — BCT companion synthesis (Journal Edition) July 2026
+5.6 Where the picture becomes falsifiable
+Isotropy is exact only as k → 0. At finite wavevector the lattice’s cubic structure enters at
+O((ka)
+2
+) in the phase velocity — numerically 5.8 × 10−6 at ka = 0.1, rising to 2.1 × 10−3 at
+ka = 2. With a at the Planck length this is a Planck-suppressed Lorentz-violation signature in
+photon propagation: dispersion of ultra-high-energy light over cosmological baselines, in principle
+accessible to astrophysical timing of gamma-ray bursts. Light, on this picture, is not merely
+explained; it is the instrument by which the picture can be broken.
+6. Dirac: the medium’s knots
+6.1 Fermions as quantised vortices
+Matter is what the medium does when it knots. Fermions are quantised vortex excitations
+of the superfluid, their cores threading the interstitial voids. The Dirac equation emerges as
+the low-energy effective equation of a vortex propagating through the lattice — a result with
+honourable condensed-matter precedent (superfluid 3He, topological insulators, Weyl semimetals
+all exhibit emergent relativistic fermions on non-relativistic substrates), here extended to the
+vacuum itself.
+6.2 The Dirac structures, supplied rather than postulated
+• Four-component spinor: two void types (octahedral, tetrahedral) × two winding chiralities.
+The famous “two full turns to return” of the spinor is the lattice’s own requirement.
+• Fermi statistics: a vortex acquires a topological π phase under 2π rotation; exchange
+antisymmetry — the Pauli principle, and with it chemistry — is a winding fact.
+• Antimatter: the opposite winding number. Dirac’s 1928 prediction, four years before the
+positron, is in BCT the trivial statement that a knot can be tied either way.
+• Exactly three generations: D4 triality cycles the three eight-dimensional representations
+8v, 8s, 8c; each triality sector is one generation. Ngen = 3 is structural — a theorem about a
+Dynkin diagram, not a fit.
+6.3 Masses as geometry
+The mass spectrum threading this sector is derived in the monograph at sub-percent precision with
+zero free parameters. All six quark masses follow from a single orbit formula on the tetrahedral
+symmetry group,
+mq = mt exp−STd
+nq
+24
+
+, STd = SD4
+ rtet
+roct
+2
+= 15.015, (8)
+with orbit numbers nq fixed by representation theory, not fitted.
+cos θK = roct −
+1
+2 =
+√
+2 − 2
+2
+,
+me + mµ + mτ
+(
+√me +
+√mµ +
+√mτ )
+2
+=
+2
+3
+, (9)
+6.4 The neutrino sector
+The lepton mixing (PMNS) matrix carries the same geometric signature. At tree level, sin2θ13 =
+3α0 = 0.02222 (observed 0.02200; +1.0%) — the reactor angle as three times the bare crystal
+coupling α0 (§2.3), the factor 3 counting the triality generations. Applying the same one-loop
+dressing used for α itself (§4.4), sin2θ13 = 3α = 3/137.018 = 0.02190, tightens this to −0.48%.
+6One Medium — BCT companion synthesis (Journal Edition) July 2026
+Solar and atmospheric angles as tribimaximal values shifted by ± rtetroct; and a leptonic CP phase
+that is exact,
+δ
+PMNS
+CP = −
+π
+2
+, (10)
+inherited from the quaternionic structure of the void symmetry group and consistent with current
+T2K/NOνA data.
+7. Interlude: why it had to be a superfluid
+Before gravity, pause on the theorem that binds §5 to everything else, because it settles a 150-
+year-old question. The Victorian aether programme failed not for want of ingenuity but for a
+reason its architects could not have named: they only knew about solids, and solids cannot do this
+job. Rigidity brings the full fourth-rank elastic tensor; cubic symmetry leaves it three independent
+constants and no isotropy guarantee; the terminal verification of Letter 259 shows the failure
+is O(15%) on the best lattice at its unique symmetric ratio. The one medium that passes — a
+quantum superfluid supporting a single scalar phase mode, whose sound speed is a second-rank
+object that cubic symmetry does tame — became physically conceivable only after 1938, four
+decades after the aether was buried. The BCT programme is not an aether revival. It is the aether
+post-mortem, concluded with the identification of the one medium the Victorians never had.
+8. Einstein: the medium’s flow — to all orders
+8.1 Linearised: the acoustic metric
+Long-wavelength excitations of a moving superfluid propagate not on flat space but on an effective
+curved geometry — the acoustic (Unruh–Visser) metric, with line element of the form
+ds2 ∝ −c
+2
+s − v
+2
+
+dt2 − 2 v·dx dt + dx
+2
+, (11)
+where v is the condensate flow. Applied to the OHC this yields the linearised Einstein equations,
+with the graviton identified as the transverse-traceless strain mode of the lattice and the cosmological constant vanishing exactly at the equilibrium ground state, Λ = 0, since the ground state
+sits at the pressure minimum of the c/a =
+√
+2 configuration (App E3).
+8.2 All orders: the Jacobson–Parentani closure
+The full nonlinear result proceeds in three steps, worked through in full in Appendix B; the shape
+of the argument is:
+1. The BCT Gross–Pitaevskii action,
+SGP =
+Z
+d
+4x
+h
+iℏ
+2
+
+Ψ
+∗
+∂tΨ − Ψ∂tΨ
+∗
+
+−
+ℏ
+2
+2m
+|∇Ψ|
+2 − V (|Ψ|2
+)
+i
+, (12)
+reduces exactly to the irrotational superfluid action in the Thomas–Fermi (hydrodynamic)
+limit.
+2. The Madelung transformation Ψ = √ρ eiθ — writing the condensate wavefunction as a
+density and a phase, so that the phase gradient becomes a velocity field, v = (ℏ/m)∇θ —
+recasts the quantum action as the action of a barotropic fluid. This is the Jacobson–Parentani
+form, proven equal to the Einstein–Hilbert action to all orders in hµν for any such fluid with
+sound speed cs = c — no perturbative truncation.
+3. The BCT equation of state forces cs = c exactly — the same condition that made §5 possible
+— closing the proof.
+7One Medium — BCT companion synthesis (Journal Edition) July 2026
+G = 6.684 × 10−11 m3kg−1s
+−2
+(CODATA 6.67430(15) × 10−11; 0.151%), (13)
+Prediction #100 of the programme, is obtained via a second, independent route rather than by
+direct numerical evaluation of KBCT; Appendix B states plainly which route gives the number and
+what it still depends on. Independently, the Planck mass is derived as mP = MR/α2
+0
+(−0.08%),
+and gravity’s weakness receives a structural explanation: the spin-2 strain mode requires two void
+vertices, each contributing α0.
+8.3 Black holes and gravitational waves: the closure pays rent
+Two consequences certify that the all-orders result is physics rather than formalism. First, because
+the correspondence survives at strong fields, the horizon thermodynamics of general relativity is
+recovered: the Bekenstein–Hawking entropy S = kBc
+3A/4Gℏ emerges with the derived G, tying
+the condensate picture to the one quantum-gravitational formula every approach must reproduce
+(Letter 26). Second, the same cs = c condition that fixes light fixes gravity’s waves: gravitational
+waves propagate at exactly c, as confirmed to ∼10−15 by GW170817, and the framework predicts
+no dispersion of the kind parameterised in post-Einsteinian tests accessible to LISA and the
+Einstein Telescope.
+8.4 The equation-of-state reading
+Jacobson showed in 1995 that the Einstein equation can be derived from thermodynamics alone —
+entropy proportional to horizon area plus the Clausius relation on local Rindler horizons — and is
+therefore an equation of state: a bulk description, like the ideal gas law, of microscopic degrees of
+freedom it does not identify — a steam table written by someone who has never heard of water
+molecules, perfectly accurate and silent about what steam is made of. The OHC is the proposed
+substance whose state that equation describes. In this precise sense the BCT condensate is a UV
+completion of general relativity; and Jacobson’s own 1995 closing suggestion — that quantising
+the Einstein equation may be as inappropriate as quantising the wave equation of sound in air —
+is the sentence this framework takes literally. There is no graviton to quantise fundamentally, for
+the same reason there is no “sound particle” in air more fundamental than the molecules: the
+medium is already quantum, and gravity is its hydrodynamics.
+9. Structural consequences: gauge group, parity, charge
+From the same medium, with no further input:
+• SU(3)C from tetrahedral void topology: the void’s three pairs of opposite edges give three
+independent winding axes — the three colours — with the eight Gell-Mann generators
+arising as the eight traceless bilinear recombination amplitudes.
+• SU(2)L from the two-component order parameter of the octahedral void condensate.
+• U(1)Y from the conserved vortex winding number about the void channel axis.
+• Parity violation, partially derived: the lattice Chern–Simons term transforms in the
+parity-odd A2 representation of the C4v point group — a representation-theoretic result
+independently verified and solid. This mechanism would select left chirality at each nodal
+plane if the topological invariant fixing the Chern–Simons level is confirmed at ν0 = 1. That
+confirmation currently rests on a TRIM-parity calculation under re-verification: evaluating
+the BCT gap function at the stated high-symmetry momenta returns zero at two of the
+four points used, which coincide with the model’s own nodal planes and cannot serve as
+valid TRIM points. Pending resolution, the specific claim that BCT’s topology forces
+left- rather than right-handed selection is not yet independently confirmed, though the
+representation-theoretic scaffolding around it is sound.
+8One Medium — BCT companion synthesis (Journal Edition) July 2026
+• Charge quantisation and confinement: fractional charge q = 1/3 from Chern–Simons
+level kBCT = 1; an isolated fractional-winding vortex has logarithmically divergent energy,
+so only integer-winding composites (the proton) propagate freely.
+• Strong CP, resolved without an axion: three independent mechanisms — the D4
+Z2 centre, reality of Yukawa couplings under the Td improper rotations, and D4 modular
+self-duality (Z(τ ) = Z(−1/τ ), S : θ → −θ) — each force ¯θQCD = 0 exactly. Predicted
+neutron EDM dn ≈ 10−32 e cm; no QCD axion exists.
+10. One table
+Result OHC origin Key output Error
+Maxwell equations octahedral phonon mode derived —
+Fine structure constant α0(1 − 2α0) α
+−1 = 137.018 −0.013%
+Light speed constancy superfluid EOS: cs = c exact —
+Light-speed isotropy L259: M = 4a
+2⊮ exact as k → 0 8 × 10−9
+(num.)
+Dirac equation quantised vortices derived —
+Three generations D4 triality Ngen = 3 exact
+Einstein (linearised) acoustic metric Λ = 0 (ground state) exact
+Einstein (all orders) Jacobson–Parentani, cs = c G = 6.684 × 10−11 0.151%
+Planck mass mP = MR/α2
+0 1.220 × 1019 GeV −0.08%
+Gauge group void topology & winding SU(3)×SU(2)L×U(1)Y derived
+Parity violation Chern–Simons (A2 rep.) left chirality (proposed) partial
+Strong CP D4 self-duality ¯θ = 0 exact
+11. How to kill this picture: consolidated falsifiable predictions
+A framework that cannot fail is not physics. The one-medium picture fails if any of the following
+is observed:
+• Photon dispersion (light from distant explosions arriving with a tiny, calculable directiondependent delay): Planck-suppressed, direction-dependent velocity corrections at O((ka)
+2
+)
+(§5.6); absence at sensitivities probing the lattice scale, or presence with the wrong scaling,
+discriminates.
+• Gravitational-wave speed (ripples of space and ripples of light should arrive together):
+cGW = c exactly; any confirmed deviation falsifies the common-medium identity (§8.3).
+• Neutron electric dipole moment (a tiny lopsidedness in the neutron’s charge, predicted
+to be almost exactly zero): predicted dn ≈ 10−32 e cm from the exact ¯θ = 0; a measurement
+|dn| > 3 × 10−31 e cm falsifies the strong-CP mechanism (n2EDM, ∼2028).
+• No QCD axion (a hypothetical particle other theories invoke to solve the same puzzle this
+framework solves with geometry): an anti-prediction; discovery of the axion at ADMX/IAXO
+falsifies the D4 self-duality resolution.
+• CKM phase (how differently matter and antimatter behave in quark mixing): δCKM =
+arccos(1/3) = 70.53◦exact; LHCb/Belle II precision at the degree level tests it.
+• Leptonic CP phase (the same matter/antimatter asymmetry question, for neutrinos):
+δCP = −π/2 exact (Hyper-Kamiokande, DUNE).
+• Dark matter (the unseen mass astronomers infer from galaxy rotation): a D4 Z2-stable
+scalar at 62.9 GeV; exclusion of the Higgs-funnel window at that mass falsifies.
+• Tensor-to-scalar ratio (how strongly the Big Bang’s initial ripples of space compare to its
+ripples of density): r = 8/S2
+D4 = 0.0046 (LiteBIRD, CMB-S4).
+9
