@@ -64,7 +64,7 @@ entry with a new date, and the original remains on the record as registered and 
 | BCT value | **≈ 10^35.9 yr**, from M_R = 6.695×10¹⁴ GeV (App HP4) |
 | Tests it | Hyper-Kamiokande |
 | **Fails if** | proton decay observed at **τ < 10^35 yr**, or excluded above **10^37 yr**. |
-| **Registered caveat** | Gate MP found M_R is defined as m_P·α₀² with m_P an input (App GG2), so M_R is not independently derived. **P-3's input is circular and this is recorded at registration**, not discovered later. |
+| **Registered caveat** | **Two independent gates — MP and PRED2 — found M_R is defined as M_R ≡ m_P·α₀² in App GG2, with m_P supplied as an input. Substituting gives m_P = m_P: an identity, not a derivation.** P-3's input is therefore circular, and the gravity sector has no independent content. Recorded at registration, not discovered later. **A prediction resting on a circular input should arguably not be registered at all; it is retained here only because τ_p is independently testable and the caveat is visible.** |
 
 ### P-4 — Neutron electric dipole moment
 
@@ -76,15 +76,28 @@ entry with a new date, and the original remains on the record as registered and 
 | **Fails if** | any nonzero d_n measured at ≥3σ. |
 | Note | This is the **sharpest** entry: an exact zero, falsifiable by a single positive detection, with no correction factor available to rescue it. **It is the best prediction in the corpus by this criterion.** |
 
-### P-5 — CKM CP-violating phase
+### P-5 — CKM CP-violating phase — **WITHDRAWN, ALREADY FALSIFIED**
 
 | | |
 |---|---|
 | Quantity | δ_CKM |
-| BCT value | **arccos(1/3) = 70.5288°** (App BY) |
-| Tests it | LHCb, Belle II global CKM fits |
-| **Fails if** | δ_CKM converges outside **68°–73°**. |
-| **Registered conflict** | The corpus **also** states δ = −π/2 as "exact" elsewhere. Two incompatible values. **Registering arccos(1/3); the conflict is recorded and must be resolved by a Cold Ledger gate before either is claimed.** |
+| BCT value | arccos(1/3) = 70.5288° (App BY) |
+| Measured | γ = 65.75 ± 1.07° (LHCb / Belle II global fits) |
+| **Status** | **FALSIFIED — 4.5σ.** Identified by Gate PRED2, 14 September 2026, after this document was drafted and before it was deposited anywhere. |
+
+**This entry is withdrawn and retained on the record rather than deleted.**
+
+It was drafted as a live prediction on 13 September. Gate PRED2 found the next day that
+arccos(1/3) sits 4.5σ from the measured γ. It was therefore already dead at the moment of
+drafting — not falsified *by* a later measurement, but falsified by a measurement that
+already existed and had not been checked against.
+
+Retaining it visibly is the point. A pre-registration that quietly drops a failed entry is
+worth nothing, because a reader cannot tell what else was dropped. **The record must show what
+was registered, what failed, and when it was found to fail.**
+
+The corpus also states δ = −π/2 elsewhere. That conflict is now moot for registration purposes:
+neither value is registered, and both require a Cold Ledger gate before either is claimed again.
 
 ### Not registered — and why
 
@@ -93,6 +106,25 @@ entry with a new date, and the original remains on the record as registered and 
 until one value is fixed and registered.** Recording the exclusion is part of the registration.
 
 ---
+
+## 1b — REVIEW AGAINST GATE PRED2 (14 September 2026)
+
+This document was drafted 13 September. Gate PRED2 closed the following day and its findings
+are applied here rather than left to be discovered by a reader.
+
+| entry | PRED2 finding | action |
+|---|---|---|
+| P-1 Σm_ν | no closed form located; registered as a bare number | **stands, weakened** — must not be counted as a formula-level prediction |
+| P-2 r | two printed values (0.004624, 0.004668) | **stands**; the first is registered, the conflict is on the record |
+| P-3 τ_p | M_R circular, confirmed by two gates | **stands with an explicit warning** — see the caveat above |
+| P-4 d_n = 0 | no correction factor available; nothing to tune | **stands, and is the strongest entry** |
+| P-5 δ_CKM | 4.5σ from measured γ | **WITHDRAWN — falsified** |
+
+**The general lesson PRED2 supplies, and the reason it belongs in a registration document:**
+the four BCT expressions that scored positively were exactly the four carrying **no post-hoc
+correction factor**. Every expression with a dressing term scored negatively, the worst at
+−17.1 bits because 126,661 grammar candidates were available to it. Rule 3 below is therefore
+not a formality — it is the difference between a prediction and a fit.
 
 ## 2 — THE RULES THIS REGISTRATION BINDS ITSELF TO
 
