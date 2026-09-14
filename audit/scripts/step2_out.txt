@@ -1,0 +1,64 @@
+distinct values: 1-atom 102, 2-atom 90755, 3-atom 20158524
+targets fixed: 48
+2-atom  tol=0.01   N-layer=False  P(random expr hits some target)=0.1093   targets covered=48/48
+2-atom  tol=0.01   N-layer=True   P(random expr hits some target)=0.5005   targets covered=48/48
+2-atom  tol=0.001  N-layer=False  P(random expr hits some target)=0.0119   targets covered=47/48
+2-atom  tol=0.001  N-layer=True   P(random expr hits some target)=0.2298   targets covered=48/48
+3-atom  tol=0.01   N-layer=False  P(random expr hits some target)=0.1078   targets covered=48/48
+3-atom  tol=0.01   N-layer=True   P(random expr hits some target)=0.5034   targets covered=48/48
+3-atom  tol=0.001  N-layer=False  P(random expr hits some target)=0.0115   targets covered=48/48
+3-atom  tol=0.001  N-layer=True   P(random expr hits some target)=0.2296   targets covered=48/48
+
+Per-target coverage, 3-atom, tol 0.1%: (no-N / with-N)
+  1/alpha                Y / Y
+  sin2thW(MSbar,mZ)      Y / Y
+  sin2th12               Y / Y
+  sin2th13               Y / Y
+  sin2th23               Y / Y
+  n_s                    Y / Y
+  alpha_s(mZ)            Y / Y
+  Omega_L                Y / Y
+  Y_p                    Y / Y
+  m_p/m_e                Y / Y
+  m_mu/m_e               Y / Y
+  m_tau/m_mu             Y / Y
+  Koide_Q                Y / Y
+  m_rho/m_pi0            Y / Y
+  m_K/m_pi0              Y / Y
+  m_eta/m_pi0            Y / Y
+  m_eta'/m_pi0           Y / Y
+  m_omega/m_rho          Y / Y
+  m_K*/m_rho             Y / Y
+  m_phi/m_rho            Y / Y
+  m_p/m_rho              Y / Y
+  m_n/m_p                Y / Y
+  m_Delta/m_p            Y / Y
+  m_p/Lam                Y / Y
+  m_rho/Lam              Y / Y
+  T_c/Lam                Y / Y
+  r_p*m_rho/hbarc        Y / Y
+  r_pi*m_rho/hbarc       Y / Y
+  m_b/m_t                Y / Y
+  m_c/m_t                Y / Y
+  m_s/m_c                Y / Y
+  m_d/m_u                Y / Y
+  m_s/m_d                Y / Y
+  m_H/v                  Y / Y
+  m_t/v                  Y / Y
+  m_W/m_Z                Y / Y
+  g_A                    Y / Y
+  mu_p                   Y / Y
+  V_us                   Y / Y
+  V_cb                   Y / Y
+  V_ub                   Y / Y
+  ln(mP/me)              Y / Y
+  ln(mP/mp)              Y / Y
+  ln(mP/v)               Y / Y
+  ln(mP/Lam)             Y / Y
+  sigma8                 Y / Y
+  H0/100                 Y / Y
+  Omega_m                Y / Y
+
+N-layer reach: a base value with fractional offset d from a target can be brought within tol if some (1+N a0) closes it.
+  tol=0.01: fraction of base offsets in [-10%,+10%] that the menu can fix = 0.770; widest contiguous fixable band ≈ ±8.2%
+  tol=0.001: fraction of base offsets in [-10%,+10%] that the menu can fix = 0.247; widest contiguous fixable band ≈ ±7.3%
