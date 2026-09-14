@@ -1,0 +1,38 @@
+
+Look-elsewhere over targets: -log2(92) = 6.52 bits (corpus's own 280-prediction claim would give 8.13)
+
+prediction                                    raw    LE  srch   corr     net  bin
+alpha  = a0(1-2a0)                          18.23  6.52  6.07   7.41   -1.77  unsurprising
+alpha  = a0(1-3a0)/(1-a0)                   20.93  6.52  6.07  13.92   -5.57  unsurprising
+m_e/m_P = exp(-(pi^5+pi)/6)                 19.96  6.52  2.00  14.13   -2.70  unsurprising
+m_e/m_P = exp(-S/(1-a0(4pi+1)/pi^2))        22.48  6.52  2.00  31.08  -17.12  unsurprising
+sin2thW(tree)                                9.91  6.52  0.00   0.00    3.38  suggestive
+sin2th13 = 3a0                              11.13  6.52  0.00   0.00    4.61  suggestive
+sin2th12 = 1/3 - r_tet r_oct                10.54  6.52  0.00   0.00    4.02  suggestive
+lambda = 2r_tet(1+3a0/8)                    13.50  6.52  0.00  14.06   -7.09  unsurprising
+A = (1+r_oct)^-1 (1-a0/2)                   10.24  6.52  0.00  13.88  -10.17  unsurprising
+etabar = 3 r_tet                             7.30  6.52  0.00   0.00    0.77  unsurprising
+beta = acos(2 r_oct) [deg]                  13.22  6.52  0.00   0.00    6.70  suggestive
+delta_CKM = acos(1/3) [deg]                  7.83  6.52  0.00   0.00    1.31  unsurprising
+m_s/m_t (Td orbit n=12)                      9.49  6.52  0.00   0.00    2.96  unsurprising
+m_d/m_t (n=17-r_tet(1+r_tet/r_oct))         12.33  6.52  0.00  16.32  -10.52  unsurprising
+m_u/m_t (n=18+r_tet-r_tet^2/r_oct)          13.52  6.52  0.00  15.89   -8.89  unsurprising
+m_b/m_t = pi a0 (1+5a0)                     12.21  6.52  1.58  14.86  -10.76  unsurprising
+m_rho/m_pi0 = (2 sqrt a0)^-1 (1-3a0/2)      15.26  6.52  0.00  15.00   -6.26  unsurprising
+m_p/m_e = 6 pi^5                            22.09  6.52  0.00   0.00   15.56  SURPRISING
+Koide phase delta (LO+NLO)                  18.88  6.52  1.00  15.01   -3.66  unsurprising
+
+correction-factor detail (required factor, residual window closed, complexity, #grammar candidates in window):
+  alpha  = a0(1-2a0)                         f=0.985060 win=±0.0152 C_f=3 candidates=170
+  alpha  = a0(1-3a0)/(1-a0)                  f=0.985060 win=±0.0152 C_f=3 candidates=170
+  alpha  = a0(1-3a0)/(1-a0)                  f=1.000000 win=±0.0002 C_f=3 candidates=91
+  m_e/m_P = exp(-(pi^5+pi)/6)                f=1.010266 win=±0.6880 C_f=4 candidates=17906
+  m_e/m_P = exp(-S/(1-a0(4pi+1)/pi^2))       f=1.010266 win=±0.6880 C_f=4 candidates=17906
+  m_e/m_P = exp(-S/(1-a0(4pi+1)/pi^2))       f=1.000003 win=±0.0397 C_f=10 candidates=126661
+  lambda = 2r_tet(1+3a0/8)                   f=1.002778 win=±0.0028 C_f=5 candidates=17096
+  A = (1+r_oct)^-1 (1-a0/2)                  f=0.996296 win=±0.0037 C_f=5 candidates=15101
+  m_d/m_t (n=17-r_tet(1+r_tet/r_oct))        f=1.107600 win=±0.1080 C_f=6 candidates=81663
+  m_u/m_t (n=18+r_tet-r_tet^2/r_oct)         f=0.976500 win=±0.0240 C_f=7 candidates=60587
+  m_b/m_t = pi a0 (1+5a0)                    f=1.037040 win=±0.0370 C_f=5 candidates=29783
+  m_rho/m_pi0 = (2 sqrt a0)^-1 (1-3a0/2)     f=0.988890 win=±0.0111 C_f=7 candidates=32711
+  Koide phase delta (LO+NLO)                 f=1.017810 win=±0.0175 C_f=8 candidates=33088

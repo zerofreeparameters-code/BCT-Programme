@@ -1,0 +1,13 @@
+CORRECTION (14 Sep 2026): the first four lines of this file, as originally generated, printed
+two WRONG Wyler prefactors (9/(16 pi^3) and 9/(16 pi^4), giving 1/alpha = 87.2 and 274.1).  Those
+are not Wyler's formula and have been removed.  The correct form, alpha = (9/(8 pi^4)) *
+(pi^5/(2^4 5!))^(1/4) = 1/137.036082, is computed and scored in wyler.txt.  Nothing below this
+line is affected: the inverse-symbolic control never used the Wyler value.
+
+inverse-symbolic control (1,500,000 random grammar expressions per target, complexity <= C_corpus)
+target         C  corpus eps  best eps found  best expression
+alpha          7   1.294e-04       3.695e-05  (a0/(^5(sqrt(e))/12)) <-- control BEATS corpus
+m_e/m_P        8   9.608e-04       2.955e-03  exp((tan(exp(cos(r_oct)))-S_D4))
+sin2thW        8   1.635e-02       3.891e-05  (^-3(sqrt2)/atan((24-x_lep))) <-- control BEATS corpus
+sin2th13       3   8.814e-03       8.814e-03  (3*a0) <-- control BEATS corpus
+sin2th12       6   9.968e-03       1.696e-05  sqrt(^3(sqrt(r_oct))) <-- control BEATS corpus

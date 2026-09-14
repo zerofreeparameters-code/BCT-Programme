@@ -1,0 +1,33 @@
+C=2: generated 325 values, 279 distinct at 12 s.f.
+C=3: generated 6782 values, 3782 distinct at 12 s.f.
+C=4: generated 158430 values, 68000 distinct at 12 s.f.
+C=5: generated 3972057 values, 1229750 distinct at 12 s.f.
+N(C) = number of grammar expressions of complexity exactly C (structural count)
+  C               N(C)   distinct values (exhaustive)
+  1                 20                             20
+  2                340                            279
+  3              7,380                          3,782
+  4            179,860                         68,000
+  5          4,700,820                      1,229,750
+  6        128,765,140          (sampled - see below)
+  7      3,648,215,380          (sampled - see below)
+  8    106,027,248,660          (sampled - see below)
+  9  3,143,353,760,020          (sampled - see below)
+ 10 94,690,729,286,740          (sampled - see below)
+ 11 2,890,132,171,200,980          (sampled - see below)
+ 12 89,184,292,693,728,660          (sampled - see below)
+ 13 2,777,775,676,086,729,620          (sampled - see below)
+ 14 87,211,706,147,058,397,140          (sampled - see below)
+ 15 2,757,175,920,497,671,364,180          (sampled - see below)
+ 16 87,698,917,092,358,597,251,860          (sampled - see below)
+ 17 2,804,509,960,658,032,791,257,620          (sampled - see below)
+ 18 90,114,846,814,175,756,580,800,340          (sampled - see below)
+ 19 2,908,010,769,769,166,708,515,808,980          (sampled - see below)
+ 20 94,204,534,518,060,361,900,860,378,260          (sampled - see below)
+sampled C=6: 161368/200000 finite; distinct 126,189
+sampled C=7: 154523/200000 finite; distinct 127,139
+sampled C=8: 148511/200000 finite; distinct 124,823
+sampled C=9: 141730/200000 finite; distinct 119,774
+sampled C=10: 135848/200000 finite; distinct 114,976
+sampled C=11: 129701/200000 finite; distinct 109,732
+sampled C=12: 124289/200000 finite; distinct 105,055
