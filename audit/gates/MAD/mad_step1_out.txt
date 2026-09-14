@@ -1,0 +1,9 @@
+Im(E) = +(hbar/(2 rho)) * continuity : True
+Re(E) =  HJ (with quantum potential)  : True
+Q(AZ6 closed form) == -(hbar^2/2m) (sqrt rho)''/sqrt rho : True
+Reverse: E == HJ + i (hbar/2rho) cont  : True
+=> The map (Psi) <-> (rho, theta) is an algebraic identity in both directions.
+   Nothing is added going GP -> fluid.  Going fluid -> GP requires the EXTRA data that
+   theta is a single-valued function (equivalently: circulation quantised in 2 pi hbar/m),
+   which is not implied by the fluid equations on (rho, v) alone [Wallstrom 1994].
+3D numerical check |lhs-rhs| = 1.1085e-25

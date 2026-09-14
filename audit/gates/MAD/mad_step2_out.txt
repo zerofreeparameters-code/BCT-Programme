@@ -1,0 +1,34 @@
+r_oct = 0.2071067811865475244008443621048490392848
+r_tet = 0.1123724356957945245493210186764728479915
+alpha_0 = 0.007408055727547908079640101104499873415571
+(a) H=0 field: surface flux = 0.09309237380419319562711557994322859239016  target = 0.09309237380419319562711557994322859239016  |diff| = 0.0
+    -> JH's 'H=1 is the unique smooth solution of the flux condition' is false; the overall U(1)
+       phase carries the flux and is invisible to the S^2 map that carries the Hopf charge.
+(b) N=1: linear ratio E_N/E_1 = 1   ;  N^(3/4) = 1.0
+(b) N=2: linear ratio E_N/E_1 = 2   ;  N^(3/4) = 1.6817928305
+(b) N=3: linear ratio E_N/E_1 = 3   ;  N^(3/4) = 2.2795070569
+(b) N=4: linear ratio E_N/E_1 = 4   ;  N^(3/4) = 2.8284271247
+(b) N=5: linear ratio E_N/E_1 = 5   ;  N^(3/4) = 3.3437015248
+(b) N=6: linear ratio E_N/E_1 = 6   ;  N^(3/4) = 3.8336586254
+    -> at N=2 the two laws differ by 2/2^0.75 = 1.189 (18.9%); at N=6 by 6/6^0.75 = 1.565.
+    -> JH's own functional (|grad Psi|^2 + g|Psi|^4, no 4th-order term) admits NO stationary
+       nonzero-H soliton at all (Ward 2005 eq.(2) remark; Derrick scaling), so the linear law
+       is not a computation inside JH; it is asserted against the cited literature.
+(c) mode n=1, hopfions (+1): |H_total| = 1  allowed by |H|<=n ? True
+(c) mode n=1, hopfions (+1,+1): |H_total| = 2  allowed by |H|<=n ? False
+(c) mode n=1, hopfions (+1,-1): |H_total| = 0  allowed by |H|<=n ? True
+(c) mode n=1, hopfions (+1,-1,+1): |H_total| = 1  allowed by |H|<=n ? True
+(c) mode n=1, hopfions (+1,-1,+1,-1): |H_total| = 0  allowed by |H|<=n ? True
+    -> the stated rule admits 3 (indeed any odd number of) hopfions per n=1 mode; 'at most two'
+       does not follow from the premise.  The theorem is not proved by its proof.
+(d) N_c = 1/alpha_0 = 134.9881853994  printed 134.99 -> OK
+    1/alpha = 1/[alpha_0(1-2alpha_0)] = 137.01826325  printed 137.018 -> OK
+    1/alpha - N_c = 2.0300778598  (printed 'approximately 2': it is 2/(1-2a0) =  2.03007785 )
+    tau_D = R_s/(alpha_0^2 c) with R_s = 12 l_P : 1.17886e-38 s   printed 1.18e-38 s -> OK
+    m_classical = m_P/(alpha_0 eta) : 3.97017e-6 kg   printed 3.97e-6 kg -> OK
+    -> arithmetic reproduces; the theorem's premise (sum alpha_0 >= 1 forces integer H) is asserted.
+(e) 2 r_oct + 1 = 1.414213562373095048  sqrt(2) = 1.414213562373095048  -> identity holds by definition of r_oct = (sqrt2-1)/2
+    cos(pi/4) = 1/sqrt2: the Tsirelson bound 2 sqrt 2 is a theorem of Hilbert-space QM (assumed), r_oct adds nothing.
+(f) AZ6 lemma writes -rho hbar d_t theta - rho hbar^2 (grad theta)^2/(2m) = -rho(d_t theta + v^2/2);
+    with v = (hbar/m) grad theta the RHS second term is rho m v^2/2 -> equality needs hbar = m = 1.
+    Not an obstruction (SC-MAD-3 does not fire): units restore uniquely; recorded as a convention defect.
