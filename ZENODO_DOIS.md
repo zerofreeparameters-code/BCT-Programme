@@ -1,12 +1,13 @@
 # BCT Programme - Zenodo DOI Registry
 
-Auto-updated: 2026-09-14 11:28 UTC
+Auto-updated: 2026-09-15 10:50 UTC
 
-Total records: 134
+Total records: 135
 
 | DOI | Title | Date |
 |-----|-------|------|
-| [10.5281/zenodo.21781545](https://doi.org/10.5281/zenodo.21781545) | BCT Appendix JH4: Yang–Mills Existence and Mass Gap — Complete Proof from BCT D4 | 2026-08-03 |
+| [10.5281/zenodo.22749037](https://doi.org/10.5281/zenodo.22749037) | BCT: Pre-Registration of Untested Predictions | 2026-09-14 |
+| [10.5281/zenodo.21781545](https://doi.org/10.5281/zenodo.21781545) | BCT Appendix JH4 (v2): A Geometrically-Fixed Lattice Gauge Theory for the D4-Sup | 2026-08-03 |
 | [10.5281/zenodo.21781526](https://doi.org/10.5281/zenodo.21781526) | One Medium: The Common Origin of the Maxwell, Dirac and Einstein Equations in th | 2026-08-03 |
 | [10.5281/zenodo.21781506](https://doi.org/10.5281/zenodo.21781506) | The BCT Superfluid Lattice Model monograph: Complete Derivation of Standard Mode | 2026-08-03 |
 | [10.5281/zenodo.21579645](https://doi.org/10.5281/zenodo.21579645) | BCT Letter 26: General Relativity to All Orders from the BCT Condensate | 2026-07-26 |
@@ -30,4 +31,3 @@ Total records: 134
 | [10.5281/zenodo.20499173](https://doi.org/10.5281/zenodo.20499173) | BCT Programme v47j Letter 249: The Josephson Loop Integral over the Flag Manifol | 2026-06-01 |
 | [10.5281/zenodo.20469589](https://doi.org/10.5281/zenodo.20469589) | APPENDIX VOLUME 2:  THE BCT SUPERFLUID LATTICE - Mode Sums and Loop Integrals | 2026-03-28 |
 | [10.5281/zenodo.20469524](https://doi.org/10.5281/zenodo.20469524) | APPENDIX VOLUME 1: THE BCT SUPERFLUID LATTICE - Appendix Volume 1: Stability Lem | 2026-05-31 |
-| [10.5281/zenodo.20469561](https://doi.org/10.5281/zenodo.20469561) | THE BCT SUPERFLUID LATTICE: Main Monograph - Foundations of Emergent Geometry | 2026-05-31 |
