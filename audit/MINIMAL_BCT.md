@@ -76,7 +76,7 @@ Vacuum manifold S¹. Circulation quantised in units of 2π — integer charge, w
 π₂(S¹) = π₃(S¹) = 0, so no monopoles and no hopfions. In 3+1 dimensions vortices are
 **strings**, not points. Core radius ~ξ = 2.32a, spanning 4.6 sphere radii.
 
-### 1.6 Long-wavelength kinematics [CONJECTURE — Gate QP raised CN-QP-01, unresolved]
+### 1.6 Long-wavelength kinematics [Gate QP CLOSED NEGATIVE 9 Sep — CN-QP-01/02; kinematics is prior art (Barceló–Liberati–Visser gr-qc/0011026), dynamics falsified]
 
 Phonon propagation on a flowing background defines an acoustic metric, giving curved-space
 *kinematics*. This does **not** give Einstein dynamics; Gate N found h^TT ≡ 0 identically.
