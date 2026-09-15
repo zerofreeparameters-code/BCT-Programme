@@ -1,0 +1,421 @@
+% ============================================================================
+% BCT Appendix J — The Sphere Interior Action S[Psi_2]
+%
+% RECONSTRUCTED FROM DRAFT. Transcribed into LaTeX from the draft PDF
+% "BCT_Appendix_J_SphereAction" (headed "Appendix J — The Lattice of Resonance
+% — Draft"); a Word doc of the same draft also exists. No original .tex was
+% located in the repository or on the author's machine as of 15 September 2026.
+% This file is a faithful transcription of that DRAFT for archival and
+% compilation. It is NOT a canonical source, and its physics is unaudited /
+% author-declared draft. See audit/desk/appJ_source.md for audit status:
+%   - the interior field is one complex scalar (S^1); App JH later redeclares
+%     the same interior field as C^2 (S^2) — a live S^1/S^2 contradiction;
+%   - the m_e/m_P = alpha_0^(21/2) result is self-declared UNPROVEN by the
+%     draft itself (a 2.4% numerical coincidence), retained here verbatim.
+% Preamble mirrors the App JH appendix so this compiles as a drop-in sibling.
+% ============================================================================
+
+\documentclass[aps,prl,preprint,superscriptaddress,floatfix]{revtex4-2}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{xcolor}
+
+% Numbered sections with J prefix (matching the appendix series style)
+\renewcommand{\thesection}{J.\arabic{section}}
+\renewcommand{\thesubsection}{J.\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{J.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!70!black,
+  citecolor=blue!70!black,
+  urlcolor=blue!70!black
+}
+
+% BCT standard macros
+\newcommand{\roct}{r_{\mathrm{oct}}}
+\newcommand{\rtet}{r_{\mathrm{tet}}}
+\newcommand{\az}{\alpha_0}
+\newcommand{\mP}{m_{\mathrm{P}}}
+\newcommand{\lP}{\ell_{\mathrm{P}}}
+\newcommand{\BCT}{\textsc{bct}}
+\newcommand{\Psiint}{\Psi_2}
+\newcommand{\Rsph}{R}
+
+\begin{document}
+
+\title{%
+  Appendix J\\
+  The Sphere Interior Action $S[\Psiint]$:\\
+  What Field Theory Lives Inside a Double-Layered
+  Planck-Scale Plasma Sphere}
+
+\author{M.~R.~Cabri\'{e}}
+\email{ZeroFreeParameters@gmail.com}
+\affiliation{BCT Superfluid Lattice Model Monograph\\
+Independent Researcher; ORCID: 0009-0007-9561-9859}
+
+\date{Draft --- \textit{The Lattice of Resonance}. Reconstructed from draft PDF (no original \texttt{.tex} located).}
+
+\begin{abstract}
+\textbf{Abstract.}
+Appendix~I established that the \BCT\ vacuum is a dual-phase medium: the same
+Gross--Pitaevskii condensate fills both the interstitial void space (exterior)
+and the sphere interiors, with a surface-charge double layer at each sphere
+boundary. This appendix derives the interior action $S[\Psiint]$ from first
+principles. The result is that $S[\Psiint]$ is the same GP action as the
+exterior, with the double-layer shell imposing a derivative-jump boundary
+condition at $r=\Rsph$. The interior mode spectrum is computed; the ground-state
+mode lies at $\kappa_0 = 3.39$ (Planck units). The dimensionless Josephson
+coupling between the sphere interior and the surrounding octahedral void is
+found to equal $\az$, the fine-structure constant derived in Appendix~D: the
+sphere--void coupling and the electromagnetic coupling share the same geometric
+origin. A numerical survey finds $m_e/\mP \approx \az^{21/2}$ to $2.4\%$
+accuracy --- suggestive but not precise enough to claim an exact formula. The
+mechanism by which a coupling of order $\az$ generates a mass of order
+$10^{-23}\,\mP$ remains the central open problem. Three candidate mechanisms are
+assessed: second-order perturbation theory ($\az^2/\kappa_0 \approx 10^{-5}$,
+too large), Kondo-like RG ($\exp(-1/[\rho\az])$, exponentially too small), and a
+fermionic loop expansion ($\az^{n/2}$, matching at $n=21$). The fermionic-loop
+mechanism is the most natural but requires counting exactly $21$ fermionic
+vertices in the \BCT\ lattice path integral, which is not yet established.
+\end{abstract}
+
+\maketitle
+
+\tableofcontents
+
+% ============================================================================
+\section{Deriving $S[\Psiint]$ from First Principles}
+\label{sec:derivation}
+% ============================================================================
+
+\subsection{The Physical Setup}
+
+The \BCT\ condensate field $\Psi$ fills all of space. It satisfies the
+Gross--Pitaevskii (GP) equation
+\begin{equation}
+  -\xi^2\nabla^2\Psi + \frac{g}{J}|\Psi|^2\Psi = \Psi
+  \label{eq:GP}
+\end{equation}
+everywhere, with one modification: at each sphere surface $r=\Rsph$ there is a
+double-layer charge sheet imposing a jump in the normal derivative of $\Psi$. In
+the thin-shell limit (shell thickness $d \ll \Rsph$) the double layer acts as a
+delta-function potential
+\begin{equation}
+  V(r) = \sigma_s\,\delta(r-\Rsph),
+  \label{eq:deltashell}
+\end{equation}
+where $\sigma_s$ is the surface potential (units: energy $\times$ length), the
+product of the potential step $\Delta V$ and the shell thickness $d$. This is
+identical to the quantum mechanics of a particle encountering a spherical
+delta-shell potential.
+
+\subsection{The Boundary Condition}
+
+Integrating the GP equation across the thin shell at $r=\Rsph$,
+\begin{equation}
+  \big[\partial_r\Psi\big]_{\Rsph^-}^{\Rsph^+}
+  = -\frac{\sigma_s}{J}\,\Psi(\Rsph).
+  \label{eq:BC}
+\end{equation}
+The field $\Psi$ itself is continuous; only its radial derivative jumps. This is
+the transfer-matrix condition for the sphere shell.
+
+Inside the sphere ($r<\Rsph$) the GP equation~\eqref{eq:GP} holds with no volume
+potential (the double layer is on the shell, not in the volume). The interior
+action is therefore
+\begin{equation}
+  S[\Psiint] = \int_{r<\Rsph} d^4x
+  \left[\, J(\partial_\mu\Psi)^2
+  + \frac{J}{\xi^2}\frac{(|\Psi|^2 - \Psi_0^2)^2}{4}\,\right].
+  \label{eq:action}
+\end{equation}
+The interior action $S[\Psiint]$ is the same GP action as the exterior
+condensate (same $J$, same $\xi$, same nonlinear coupling), restricted to
+$r<\Rsph$. The only difference from the exterior is the boundary
+condition~\eqref{eq:BC} at $r=\Rsph$: a derivative jump of magnitude
+$(\sigma_s/J)\,\Psi(\Rsph)$ imposed by the double-layer shell. There is no new
+field, no new coupling, and no new free parameter; $S[\Psiint]$ is completely
+determined by the \BCT\ model's existing ingredients.
+
+\subsection{What Determines $\sigma_s$?}
+
+The surface potential $\sigma_s$ is the product of the double-layer potential
+step $\Delta V$ and the shell thickness $d$. For a spherical capacitor with
+charge $Q$ and shell thickness $d$,
+\begin{equation}
+  \sigma_s = \Delta V \cdot d \approx \frac{Q\,d^2}{4\pi \Rsph^2}.
+  \label{eq:sigma}
+\end{equation}
+Comparing with the \BCT\ fine-structure-constant formula from Appendix~D,
+\begin{equation}
+  \az = \frac{\rtet\,\roct}{4\pi \Rsph^2},
+  \label{eq:alpha0}
+\end{equation}
+the structure is identical. If the double-layer charge $Q=1$ (one Planck charge
+unit) and the shell thickness $d=\sqrt{\rtet\,\roct}$, then
+\begin{equation}
+  \sigma_s = \frac{\rtet\,\roct}{4\pi \Rsph^2} = \az\,(J/J_0),
+\end{equation}
+where $J_0$ is a reference stiffness. In units where $J=1$,
+\begin{equation}
+  \boxed{\ \sigma_s = \az\ }.
+\end{equation}
+The surface potential of the double layer equals the fine-structure constant.
+This follows from the same geometric ratio $\rtet\,\roct/(4\pi \Rsph^2)$ that
+defined $\az$ in Appendix~D. \emph{(The choice $Q=1$, $d=\sqrt{\rtet\,\roct}$ is
+an input to this identification.)}
+
+% ============================================================================
+\section{The Interior Mode Spectrum}
+\label{sec:spectrum}
+% ============================================================================
+
+\subsection{Spherical Bessel Equation}
+
+The interior condensate modes solve the linearised GP equation inside the
+sphere. For spherically symmetric ($l=0$) modes,
+\begin{equation}
+  \Psi_{\mathrm{in}}(r) = A\,\frac{\sin(\kappa r)}{\kappa r},
+\end{equation}
+where $\kappa$ is the interior wavenumber, fixed by the boundary condition at
+$r=\Rsph$. Setting the exterior solution near the sphere to
+$\Psi_{\mathrm{out}} \approx \Psi_0\,[1-(\Rsph/r)\exp(-(r-\Rsph)/\xi)]$, the
+eigenvalue equation is
+\begin{equation}
+  \kappa\cot(\kappa \Rsph) = -\frac{1}{\xi} + \frac{\sigma_s}{J}.
+\end{equation}
+With $\sigma_s = \az J$,
+\begin{equation}
+  \kappa\cot(\kappa \Rsph) = -\frac{1}{\xi} + \az = -0.424083.
+\end{equation}
+
+\subsection{Computed Mode Energies}
+
+Solving numerically for the lowest interior modes:
+\begin{table}[h]
+\centering
+\caption{Interior condensate mode spectrum ($l=0$, s-wave).}
+\label{tab:spectrum}
+\begin{tabular}{cccc}
+\toprule
+Mode $n$ & Symmetry & $\kappa_n$ (Planck units) & Energy $E_n=\hbar c\kappa_n$ \\
+\midrule
+1 & $A_1$ (s-wave) & 3.3905 & $3.39\,\mP c^2$ \\
+2 & $A_1$ (s-wave) & 9.5139 & $9.51\,\mP c^2$ \\
+3 & $A_1$ (s-wave) & 15.762 & $15.8\,\mP c^2$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All interior modes have energies of order $c/\Rsph = 2\,\mP c^2$. The Higgs gap
+of the exterior condensate is $2/\xi = 0.8630\,\mP c^2$. The ground-state
+interior mode ($\kappa_0=3.3905$) lies above this gap, so it sits in the
+continuum of the exterior spectrum: it is a resonance, not an isolated bound
+state. No interior mode lies below the exterior Higgs gap.
+
+% ============================================================================
+\section{The Josephson Coupling: Sphere Interior $\leftrightarrow$ Oct Void}
+\label{sec:josephson}
+% ============================================================================
+
+\subsection{The Coupling Strength}
+
+The electron vortex lives in the octahedral void (Appendix~E.2). The oct void is
+surrounded by $6$ spheres; the coupling between the electron vortex and each
+surrounding sphere interior is mediated by the double-layer shell. The coupling
+Hamiltonian is
+\begin{equation}
+  H_{\mathrm{int}} = \sigma_s \oint_{r=\Rsph}|\Psi|^2\,dS
+  = \sigma_s\,4\pi \Rsph^2\,|\Psi(\Rsph)|^2 .
+\end{equation}
+The dimensionless Josephson coupling $g$ (in units of the energy denominator
+$J/\Rsph$) is
+\begin{equation}
+  g = \frac{H_{\mathrm{int}}}{J/\Rsph}
+  = \frac{\sigma_s\,4\pi \Rsph^2}{J\,\Rsph}\,
+    \frac{|\Psi(\Rsph)|^2}{\Psi_0^2}.
+\end{equation}
+Substituting $\sigma_s=\az J$ and $|\Psi(\Rsph)|/\Psi_0 = \tanh(\roct/\xi)$ (the
+condensate amplitude at the oct-void / sphere interface),
+\begin{align}
+  g &= \az\,\frac{4\pi \Rsph^2}{\Rsph}\,\tanh^2(\roct/\xi) \nonumber\\
+    &= \az \cdot 4\pi \Rsph \cdot \tanh^2(0.0894) \nonumber\\
+    &= 0.00740806 \times 6.2832 \times 0.007944 \nonumber\\
+    &= 0.00036975 .
+\end{align}
+At leading order in the $\tanh$ suppression, $g \approx \az$. The dimensionless
+Josephson coupling between the sphere interior and the oct-void electron vortex
+is $g=\az$ to leading order, from the same geometric ratio
+$\rtet\,\roct/(4\pi \Rsph^2)$ that defines the fine-structure constant: the
+coupling and the electromagnetic coupling share a geometric origin.
+
+\subsection{What This Coupling Does and Does Not Do}
+
+The Josephson coupling $g=\az$ between the sphere interior (energy
+$\kappa_0\sim 3.4\,\mP$) and the electron vortex (energy
+$\xi_{\mathrm{geom}}\sim 0.05\,\mP$) produces, by second-order perturbation
+theory, an energy shift
+\begin{align}
+  \delta E &= -\frac{g^2}{\kappa_0-\xi_{\mathrm{geom}}}
+  = -\frac{\az^2}{3.39-0.05} \nonumber\\
+  &= -1.6429\times10^{-5}\,\mP c^2 .
+\end{align}
+The target electron mass is $m_e = 4.2\times10^{-23}\,\mP c^2$. The second-order
+shift is $\sim 1.6\times10^{-5}\,\mP$, which is $18$ orders of magnitude too
+large. All-orders (Jaynes--Cummings) resummation gives a similar result: the
+dressed vortex energy shifts by order $\az^2/\kappa_0 \sim 10^{-5}\,\mP$, not
+$10^{-23}\,\mP$. The sphere interior alone, treated perturbatively, does not
+explain the electron mass.
+
+% ============================================================================
+\section{Three Candidate Mass-Generation Mechanisms}
+\label{sec:mechanisms}
+% ============================================================================
+
+\subsection{Mechanism 1: Kondo-Like RG (Does Not Work)}
+
+In the Kondo problem a coupling $g$ between a local impurity and a gapless bath
+generates an exponentially small mass scale
+$m_{\mathrm{Kondo}} = \mP\exp(-1/[\rho(E)\,g])$, where $\rho(E)$ is the density
+of states at the resonance. For \BCT\ the impurity is the sphere-interior mode
+at $\kappa_0$, the bath is the exterior quasiparticles, $g=\az$, and
+$\rho(\kappa_0) = V_{\mathrm{oct}}/(2\pi^2\kappa_0^2) \approx 1.6\times10^{-4}$.
+Then
+\begin{align}
+  m_{\mathrm{Kondo}} &= \mP\exp\!\big(-1/[\rho\az]\big)
+   = \mP\exp\!\big(-1/[1.2149\times10^{-6}]\big) \nonumber\\
+  &= \mP\exp(-823{,}000) \approx 10^{-357{,}000}\,\mP .
+\end{align}
+This is absurdly small. The \BCT\ density of states at the Planck scale is too
+low for the Kondo mechanism to give $m_e$; it is ruled out.
+
+\subsection{Mechanism 2: Higher-Order Perturbation Theory}
+
+Perhaps $m_e$ comes from a specific order in $\az$. The required order is
+\begin{equation}
+  n = \frac{\ln(m_e/\mP)}{\ln \az} = 10.504765 .
+\end{equation}
+This is not an integer, but is close to $21/2 = 10.5$.
+\begin{table}[h]
+\centering
+\caption{Candidate power-law expressions for $m_e/\mP$.}
+\label{tab:powers}
+\begin{tabular}{lll}
+\toprule
+Formula & Value & Comparison to $m_e/\mP$ \\
+\midrule
+$\az^{10}$ & $4.9779\times10^{-22}$ & ratio 11.89 (too large $\times12$) \\
+$\az^{11}$ & $3.6876\times10^{-24}$ & ratio 0.0881 (too small $\times11$) \\
+$\az^{21/2}=\sqrt{\az^{21}}$ & $4.2844\times10^{-23}$ & ratio 1.0236 ($\pm2.36\%$) \\
+$\az^{10}/(4\pi)$ & $3.9613\times10^{-23}$ & ratio 0.9464 ($\pm5.36\%$) \\
+$m_e/\mP$ (CODATA) & $4.1855\times10^{-23}$ & exact \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The closest match is $\az^{21/2}$, with $2.4\%$ error. For comparison the
+$m_p/m_e = 6\pi^5$ formula has $0.002\%$ error. \textbf{The $2.4\%$ discrepancy
+means $\az^{21/2}$ cannot be claimed as the exact formula} --- it is suggestive,
+not exact.
+
+\subsection{Mechanism 3: Fermionic Loop Expansion (Most Promising)}
+
+The $2.4\%$ proximity of $\az^{21/2}$ has a natural home in field theory. The
+electron vortex is a fermion (spin $1/2$, Appendices~E.2 and~G). Fermionic
+fields enter the path integral through Grassmann integrals,
+$\det(D_{\mathrm{fermion}}) = \exp\mathrm{Tr}\ln D_{\mathrm{fermion}}$; in
+perturbation theory each fermionic loop of length $\ell$ contributes a factor
+$\az^{\ell/2}$ --- a half-integer power of $\az$ per loop vertex. If $m_e$ is
+generated by a specific fermionic loop with exactly $21$ vertices
+(sphere--void couplings), then
+\begin{equation}
+  m_e = \mP\,\az^{21/2}\qquad\text{[from a 21-vertex fermionic loop]},
+\end{equation}
+and the $2.4\%$ discrepancy would be subleading corrections. The question is
+whether the \BCT\ lattice graph contains a loop of exactly $21$ fermionic
+vertices. Counting the coordination structure of the unit cell: a minimum closed
+loop of $3$ (triangle of three mutually touching spheres), $6$ (oct-void
+neighbourhood), and $12$ (sphere FCC coordination) gives
+\begin{equation}
+  3+6+12 = 21 .
+\end{equation}
+If the dominant fermionic loop visits all three scales once each it has $21$
+vertices, and $m_e = \mP\,\az^{21/2}$ at leading order. Whether such a loop is
+the dominant contribution in the \BCT\ path integral --- requiring the explicit
+\BCT\ lattice Green's function, the dominant loop topology, and the loop
+amplitude with all geometric factors --- is the central unresolved question,
+deferred to Appendix~K.
+
+% ============================================================================
+\section{Summary}
+\label{sec:summary}
+% ============================================================================
+
+\begin{table}[h]
+\centering
+\caption{Status of the Appendix~J results.}
+\label{tab:summary}
+\small
+\begin{tabular}{lll}
+\toprule
+\textbf{Result} & \textbf{Status} & \textbf{Notes} \\
+\midrule
+$S[\Psiint]$ = same GP action, modified BC & Derived & No new field/coupling \\
+Double layer $\Rightarrow$ derivative jump at $r=\Rsph$ & Derived & Transfer-matrix condition \\
+$\sigma_s = \az J$ (shell potential) & Derived$^\ast$ & From geometric ratio; inputs $Q,d$ \\
+$\kappa_0 = 3.39\,\mP c^2$ (interior ground state) & Computed & Eigenvalue equation \\
+Josephson coupling $g=\az$ & Derived & Same geometric origin as EM \\
+$\delta m$ (2nd order) $=\az^2/\kappa_0\sim10^{-5}\mP$ & Computed & Not $m_e$ ($10^{18}$ too large) \\
+$m_e/\mP \approx \az^{21/2}$ & Numerical hint & $2.4\%$; unproven \\
+Electron mass (exact) & Open & Requires lattice path integral (K) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent$^\ast$ The $\sigma_s=\az J$ identification uses $Q=1$ and
+$d=\sqrt{\rtet\,\roct}$ as inputs (\S\ref{sec:derivation}.3).
+
+\medskip
+
+\noindent\textbf{Status of Appendix~J.} The sphere-interior action $S[\Psiint]$
+is a single-component GP action, the same as the exterior, with a derivative
+jump at $r=\Rsph$ of strength $\sigma_s=\az J$. The Josephson coupling between
+sphere interior and oct-void electron vortex is $g=\az$ to leading order.
+Second-order perturbation theory gives a mass shift $10^{18}$ times too large;
+the Kondo mechanism is ruled out; a fermionic-loop expansion naturally produces
+half-integer powers of $\az$, and the electron mass would require an exponent
+$21/2$, coinciding with the sum $3+6+12$ of the \BCT\ coordination numbers.
+Whether the $21$-vertex loop exists in the \BCT\ path integral, and reproduces
+$m_e$ to better than $2.4\%$, is the subject of Appendix~K.
+
+% ============================================================================
+\begin{acknowledgments}
+Draft appendix in \textit{The Lattice of Resonance} series. Reconstructed into
+LaTeX from a draft PDF; no original source was located.
+\end{acknowledgments}
+
+\begin{thebibliography}{9}
+
+\bibitem{MonographZenodo}
+M.~R.~Cabri\'{e},
+``The BCT Superfluid Lattice Model: A Geometric Derivation of Standard Model
+Parameters from Vacuum Geometry,''
+BCT Monograph (2026),
+\href{https://doi.org/10.5281/zenodo.18884976}{doi:10.5281/zenodo.18884976}.
+
+\bibitem{AppendicesZenodo}
+M.~R.~Cabri\'{e},
+``BCT Appendices Vol.~1 \& 2,''
+BCT Programme (2026),
+\href{https://doi.org/10.5281/zenodo.18885133}{doi:10.5281/zenodo.18885133}.
+
+\end{thebibliography}
+
+\end{document}
