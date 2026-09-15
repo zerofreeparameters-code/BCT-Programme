@@ -1,0 +1,196 @@
+% ============================================================================
+% BCT Appendix K — The BCT Lattice Green's Function (Phase: loop programme)
+%
+% RECOVERED DRAFT. Transcribed into LaTeX from the draft PDF
+% "BCT_Appendix_K_GreenFunction". App K was cited as App J's deferred
+% calculation and had no .tex; recovered as a draft PDF 15 Sep 2026.
+% This is genuine, honest work (it kills App J's 21-loop and correctly calls
+% the a16 proximity a numerical accident). It is archived as source.
+%
+% *** AUDIT NOTE (see banner in body): Theorems 1 and 2 assume coordination 8
+% and a bipartite lattice. At c/a=sqrt(2) the lattice is FCC, coordination 12,
+% NON-bipartite (Gate KND). On the correct lattice T1 and T2 do not hold as
+% written; the 21-loop is still excluded but by low-order dominance, not
+% parity; the electron is NOT PH-protected and the diagnosis inverts. See
+% Gate KAUDIT for the live audit. The banner is an audit addition, not the
+% author's text. ***
+% ============================================================================
+
+\documentclass[aps,prl,preprint,superscriptaddress,floatfix]{revtex4-2}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage[colorlinks=true,linkcolor=blue!70!black,citecolor=blue!70!black,urlcolor=blue!70!black]{hyperref}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+
+\definecolor{bctnavy}{HTML}{0B2545}
+
+\renewcommand{\thesection}{K.\arabic{section}}
+\renewcommand{\thesubsection}{K.\arabic{section}.\arabic{subsection}}
+
+\newcommand{\az}{\alpha_0}
+\newcommand{\mP}{m_{\mathrm{P}}}
+\newcommand{\me}{m_e}
+\newcommand{\BCT}{\textsc{bct}}
+\newcommand{\roct}{r_{\mathrm{oct}}}
+\newcommand{\rtet}{r_{\mathrm{tet}}}
+\newcommand{\Gloc}{G_{\mathrm{loc}}}
+
+\begin{document}
+
+\title{Appendix K\\ The BCT Lattice Green's Function:\\
+Fermionic Loop Expansion and the Non-Renormalization Theorem}
+\author{M.~R.~Cabri\'{e}}
+\email{ZeroFreeParameters@gmail.com}
+\affiliation{BCT Superfluid Lattice Model Monograph\\
+Independent Researcher; ORCID: 0009-0007-9561-9859}
+\date{Draft --- \textit{The Lattice of Resonance}. Reconstructed from draft PDF (no original \texttt{.tex}).}
+
+\begin{abstract}
+\textbf{Abstract (as written in the draft).}
+Appendix~J conjectured that a 21-vertex fermionic loop might generate
+$\me\approx\az^{21/2}$. This appendix constructs the BCT lattice Green's
+function and derives three theorems. \textbf{T1 (Bipartite):} the lattice is
+bipartite; all closed walks are even, so the 21-vertex loop does not exist (21
+is odd). \textbf{T2 (Non-Renormalization):} exact particle-hole (PH) symmetry
+gives $\Gloc(0)=0$, so a zero-energy fermion acquires zero self-energy at all
+orders. \textbf{T3 (Gap Equation):} the Schwinger--Dyson gap equation needs
+$c\,t^2\approx0.02$, but BCT gives $\approx0.001$ (20$\times$ too weak). The
+$a_{16}\approx\me/4$ proximity is a numerical accident. \emph{See the audit
+notice: T1 and T2 assume coordination 8; the correct $c/a=\sqrt2$ lattice is
+FCC (coordination 12, non-bipartite), on which T1 and T2 fail.}
+\end{abstract}
+
+\maketitle
+
+% ---------------- AUDIT BANNER (audit addition, not the author's text) --------
+\begin{tcolorbox}[colback=white,colframe=bctnavy,boxrule=1.2pt,arc=2pt,
+  title=\textbf{COLD LEDGER AUDIT NOTICE --- COORDINATION 8 vs 12}]
+\small
+This appendix is honest, valuable work: it correctly discards App~J's 21-loop and correctly
+identifies the $a_{16}\approx\me/4$ proximity as a numerical accident. However, \textbf{Theorems 1
+and 2 rest on a premise Gate KND has falsified.} App~K assumes each site has \textbf{8} nearest
+neighbours ($\delta=(\pm\tfrac12,\pm\tfrac12,\pm\tfrac{\sqrt2}{2})$) and hence a \emph{bipartite}
+A/B lattice. At $c/a=\sqrt2$ the four in-plane corner--corner bonds $(\pm1,0,0),(0,\pm1,0)$ sit at
+the \emph{same} distance $1$, so the coordination is \textbf{12} (the lattice is FCC), the bond
+graph is \textbf{non-bipartite} (an explicit length-3 triangle exists, $C_A(3)\neq0$), and the band
+is $[-4t,+12t]$, \textbf{PH-asymmetric}. Consequences:
+\begin{itemize}\itemsep0pt
+\item \textbf{T1 fails:} odd closed walks exist. The 21-loop is still excluded, but by
+\emph{low-order dominance} (the length-3 triangle dominates, giving $\sim\az^{3/2}$), not by parity.
+\item \textbf{T2 fails:} the band is not PH-symmetric, so $\Gloc(0)\neq0$; the zero mode is
+\emph{not} protected. The electron acquires a leading perturbative self-energy $\sim\az^{3/2}\sim
+10^{-4}$ (band units) --- $\sim$19 orders \emph{too large}. The diagnosis \textbf{inverts}: the
+problem is not ``too weak to switch the mass on'' but the ordinary hierarchy problem (why is $\me$
+so tiny). App~K's corollary that the photon/graviton are \emph{exactly} massless by PH protection
+loses its proof.
+\item \textbf{T3:} the DOS $\rho(E)\sim E\ln(1/E)$ came from the (incorrect) 8-coordination nodal
+structure and must be recomputed on the FCC band.
+\end{itemize}
+Live audit: Gate KAUDIT. The three symmetry-breaking candidates (\S K.7) remain reasonable future
+directions independently of the above.
+\end{tcolorbox}
+
+\section{The BCT Lattice Hamiltonian (as written)}
+Two sublattices: A (corners) at $(n_1,n_2,n_3\sqrt2)$, B (body centres) at
+$(n_1+\tfrac12,n_2+\tfrac12,(n_3+\tfrac12)\sqrt2)$. The draft takes each A site to have 8 NN B
+sites via $\delta_{\pm\pm\pm}=(\pm\tfrac12,\pm\tfrac12,\pm\tfrac{\sqrt2}{2})$, each of length
+$1\,\ell_P$. \emph{[Audit: the 4 in-plane A--A bonds at distance 1 are omitted; see banner.]}
+The fermion hops with amplitude $t=\az$ (the App~J Josephson coupling):
+\begin{align}
+  H(k) &= t\,\gamma(k)\,\sigma_+ + t\,\gamma^*(k)\,\sigma_-,\\
+  \gamma(k) &= \textstyle\sum_\delta e^{ik\cdot\delta}
+    = 8\cos(k_x/2)\cos(k_y/2)\cos(k_z/\sqrt2),\\
+  E_\pm(k) &= \pm t\,|\gamma(k)| = \pm 8\az\,|\cos(k_x/2)\cos(k_y/2)\cos(k_z/\sqrt2)|.
+\end{align}
+Bandwidth $16\az=0.11853$ (Planck units); spectrum symmetric about $E=0$ \emph{in this
+(8-coordination) model}.
+
+\section{The Green's Function (as written)}
+\begin{align}
+  G_{AA}(k,\omega)=G_{BB}(k,\omega) &= \frac{\omega}{\omega^2-\az^2|\gamma(k)|^2},\\
+  G_{AB}(k,\omega) &= \frac{\az\gamma(k)}{\omega^2-\az^2|\gamma(k)|^2}.
+\end{align}
+The structure factor vanishes on three nodal planes $k_x=\pi$, $k_y=\pi$, $k_z=\pi/\sqrt2$; near
+them $E\approx v_\perp|k_\perp|$ with $v_\perp=4\az$, giving $\rho(E)\sim E\ln(1/E)$ (a 3D
+graphene-like linear-with-log DOS). The draft concludes, by the assumed PH symmetry,
+\begin{equation}
+  \Gloc(0)=2\omega\!\int_0^\Lambda\!\frac{\rho(E)\,dE}{\omega^2-E^2}\Big|_{\omega=0}=0,\qquad
+  G_{AB,\mathrm{loc}}(0)=0.
+\end{equation}
+\emph{[Audit: on the correct FCC band $[-4t,+12t]$ the DOS is PH-asymmetric and $\Gloc(0)\neq0$.]}
+
+\section{Theorem 1 --- No Odd-Length Closed Walks (as written)}
+\textbf{Claim.} The lattice is bipartite (A$\leftrightarrow$B only), so all closed walks have even
+length and $C_A(n)=0$ for odd $n$; the 21-vertex loop (21 odd) does not exist.
+\emph{[Audit: FALSE on the real lattice --- the in-plane A--A bonds make it non-bipartite; a
+length-3 triangle exists. The 21-loop is excluded instead by low-order dominance.]}
+Even-$n$ closed-walk counts $C_A(n)$ and loop amplitudes $a_n=t^nC_A(n)/n$ (draft, $N_k=100^3$):
+\begin{table}[h]\centering
+\begin{tabular}{rrll}
+\toprule
+$n$ & $C_A(n)$ & $t^nC_A(n)$ & $a_n=t^nC_A(n)/n$ \\
+\midrule
+2 & 8 & $4.3903\times10^{-4}$ & $2.1952\times10^{-4}$ \\
+4 & 216 & $6.5054\times10^{-7}$ & $1.6263\times10^{-7}$ \\
+6 & 8000 & $1.3223\times10^{-9}$ & $2.2038\times10^{-10}$ \\
+8 & 343000 & $3.1112\times10^{-12}$ & $3.8890\times10^{-13}$ \\
+10 & 16003008 & $7.9646\times10^{-15}$ & $7.9646\times10^{-16}$ \\
+14 & $4.04\times10^{11}$ & $6.0568\times10^{-20}$ & $4.3263\times10^{-21}$ \\
+16 & $2.13\times10^{12}$ & $1.7525\times10^{-22}$ & $1.0962\times10^{-26}$ \\
+odd & 0 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Theorem 2 --- Non-Renormalization of the Zero Mode (as written)}
+\textbf{Claim.} $\Sigma^{(n)}(\omega{=}0)=0$ for all $n\ge1$: the zero-energy fermion acquires zero
+mass from the sphere--void coupling at all orders, because each self-energy term carries a factor
+$\Gloc(0)=0$. The draft reads this as protection identical to graphene/Weyl nodes, and adds the
+corollary that the photon and graviton (also zero modes) are \emph{exactly} massless.
+\emph{[Audit: the protection relied on PH symmetry, which fails on the FCC band; $\Gloc(0)\neq0$, so
+the zero mode is unprotected and the electron gets a (too-large) perturbative mass. The
+exactly-massless photon/graviton corollary loses its proof.]}
+
+\section{Theorem 3 --- The Schwinger--Dyson Gap Equation (as written)}
+In the local approximation the gap equation $1=t^2\!\int dE\,\rho(E)/(E^2+\me^2)$ with the linear
+DOS gives $\me=\Lambda\exp(-\sqrt{2/(ct^2)})$, $\Lambda=8t$. The draft finds $c\,t^2\approx0.02$ is
+required but BCT provides $\approx0.001$ --- a factor $\sim20$ too weak for dynamical mass
+generation. \emph{[Audit: the DOS input is from the 8-coordination model; recompute on the FCC
+band --- Gate KAUDIT.]}
+
+\section{The $n=16$ Near-Coincidence --- Explained as an Accident (as written)}
+$a_{16}=\az^{16}C_A(16)/16=1.0962\times10^{-26}\approx\me/4$. The draft correctly attributes this
+to the monotone series $a_{2m}\approx(8\az^2)(1/15)^{m-1}$ inevitably passing through the scale of
+$\me/\mP=4.2\times10^{-23}$ near $n\approx16$, with \emph{no physical content} --- and notes T2
+sums the series to zero anyway. \emph{[Audit: this anti-numerology conclusion is correct and
+commendable.]}
+
+\section{What Must Break the Symmetry (three candidates, as written)}
+\begin{enumerate}\itemsep0pt
+\item \textbf{Quark--lepton asymmetry:} the unit cell holds one lepton (oct void) and two quarks
+(tet voids) at different energies ($\rtet\neq\roct$); the coupled three-body gap equation
+$\Sigma_e=t^2[G_e+G_u+G_d]$ breaks PH symmetry via the geometric asymmetry. (Most promising.)
+\item \textbf{Chern--Simons term:} the $k=1$ CS level (App~G) is odd under PH conjugation and
+breaks the symmetry; the induced mass $\sim\az\times$(flux through the oct void) is unevaluated.
+\item \textbf{Wilson/temporal mass:} the 3+1D Dirac operator (App~E.2) can carry a Wilson mass
+$m_W\approx r_W/a_t^2$; the temporal structure and $r_W$ are unspecified.
+\end{enumerate}
+\emph{[Audit: these remain reasonable directions; each is a separate later gate. Candidate 1's
+$\rtet\neq\roct$ asymmetry is real geometry.]}
+
+\section*{Status (as written)}
+Green's function derived (exact, in the 8-coordination model); the 21-loop conjecture disproved;
+the perturbative route to $\me$ ruled out by non-renormalization; the gap equation 20$\times$ too
+weak; three PH-breaking candidates identified. \textbf{Electron mass: OPEN.}
+
+\medskip
+\noindent\textbf{Audit status.} Recovered draft, archived for provenance. Theorems 1 and 2 are
+unsound on the correct $c/a=\sqrt2$ FCC lattice (coordination 12, non-bipartite, PH-asymmetric); the
+headline (no perturbative $\me$) likely survives but for the opposite reason (a too-large mass, not
+protection). See Gate KAUDIT for the live re-derivation.
+
+\end{document}

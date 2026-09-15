@@ -1,0 +1,125 @@
+% ============================================================================
+% BCT Appendix FG — Electron Mass (Phase 34D)
+%
+% RECOVERED PHANTOM + FALSIFIED. Transcribed into LaTeX from the draft PDF
+% "BCT_AppendixFG_ElectronMass_Phase34D". App FG was a phantom citation
+% (cited incl. a \bibitem, no .tex in the repo); recovered as a draft PDF on
+% the author's machine 15 Sep 2026 and archived here for provenance ONLY.
+%
+% *** THIS RESULT IS FALSIFIED. DO NOT CITE AS LIVE. ***  Reasons (Cold Ledger):
+%  1. Honest error is +0.096% (App FG's own s3 admits this), not +0.0229%.
+%  2. Leading term pi^5/6 carries ZERO evidential bits vs ln(m_P/m_e)
+%     (Gate STAT, rank 38-79 of 30,771); the pi/6 residual is fit to the
+%     leftover, and its "/6 = coordination" story is internally inconsistent
+%     (hexagonal vs octahedral) and contradicted by Gate KND (coordination 12).
+%  3. DECISIVE: the appendix's own muon/tau extension predicts the heavier
+%     leptons are LIGHTER than the electron (muon ~0.30 MeV, tau ~0.18 MeV) --
+%     directionally false. The mechanism self-falsifies.
+%  4. One of >=4 mutually-incompatible zero-parameter m_e formulas in the
+%     corpus -- the multiplicity is an overfitting signature.
+% The audit banner in the body is an audit addition, not the author's text.
+% ============================================================================
+
+\documentclass[aps,prl,preprint,superscriptaddress,floatfix]{revtex4-2}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage[colorlinks=true,linkcolor=blue!70!black,citecolor=blue!70!black,urlcolor=blue!70!black]{hyperref}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+
+\definecolor{bctnavy}{HTML}{0B2545}
+
+\renewcommand{\thesection}{FG.\arabic{section}}
+\renewcommand{\thesubsection}{FG.\arabic{section}.\arabic{subsection}}
+
+\newcommand{\az}{\alpha_0}
+\newcommand{\mP}{m_{\mathrm{P}}}
+\newcommand{\me}{m_e}
+\newcommand{\BCT}{\textsc{bct}}
+\newcommand{\roct}{r_{\mathrm{oct}}}
+\newcommand{\rtet}{r_{\mathrm{tet}}}
+
+\begin{document}
+
+\title{Appendix FG\\ BCT Electron Mass from First Principles (Phase 34D)}
+\author{M.~R.~Cabri\'{e}}
+\email{ZeroFreeParameters@gmail.com}
+\affiliation{BCT Superfluid Lattice Model Monograph\\
+Independent Researcher; ORCID: 0009-0007-9561-9859}
+\date{Draft --- \textit{The Lattice of Resonance}. Reconstructed from draft PDF (no original \texttt{.tex}).}
+
+\begin{abstract}
+\textbf{Abstract (as written in the draft).}
+This appendix proposes $\me = \mP\,\exp(-(\pi^5+\pi)/6) = 0.511117$~MeV
+(claimed error $+0.0229\%$), decomposing the exponent as
+$S_{D4}=\pi^5/6$ (a $D_4$ single-instanton action) plus $\pi/6$ (a single
+U(1) vortex action normalised by a coordination number~6). \emph{See the audit
+notice below: this result is falsified and archived for provenance only.}
+\end{abstract}
+
+\maketitle
+
+% ---------------- AUDIT BANNER (audit addition, not the author's text) --------
+\begin{tcolorbox}[colback=white,colframe=bctnavy,boxrule=1.2pt,arc=2pt,
+  title=\textbf{COLD LEDGER AUDIT NOTICE --- RESULT FALSIFIED --- DO NOT CITE AS LIVE}]
+\small
+This appendix was a \emph{phantom citation} (referenced, no source file) recovered as a draft
+PDF on 15 September 2026 and archived for provenance. Its central result is \textbf{falsified}:
+\begin{enumerate}\itemsep0pt
+\item The honest error is $+0.096\%$ (the draft's own \S3 concedes this), not the headline $+0.0229\%$.
+\item The leading term $\pi^5/6$ carries \textbf{zero evidential bits} against $\ln(\mP/\me)$
+(Gate STAT: rank 38--79 of 30{,}771); the $\pi/6$ residual is fit to the leftover, and its
+``$/6 =$ coordination number'' justification is internally inconsistent (hexagonal vs octahedral)
+and contradicted by Gate KND (coordination at $c/a=\sqrt2$ is 12, not 6).
+\item \textbf{Decisive:} the draft's own muon/tau extension $m_\ell=\mP\exp(-(\pi^5+n\pi)/6)$
+($n=2,3$) predicts $m_\mu\approx0.30$~MeV and $m_\tau\approx0.18$~MeV --- the heavier leptons come
+out \emph{lighter} than the electron. The mechanism self-falsifies.
+\item It is one of $\ge 4$ mutually-incompatible ``zero-parameter'' electron-mass formulas in the
+corpus; the multiplicity is an overfitting signature.
+\end{enumerate}
+\end{tcolorbox}
+
+\section{The Claimed Formula}
+The draft's result and decomposition:
+\begin{align}
+  \me &= \mP\,\exp\!\big(-(\pi^5+\pi)/6\big) = \mP\,\exp\!\big(-\pi(\pi^4+1)/6\big),\\
+  S_{D4} &= \pi^5/6 = 51.0033 \quad(\text{claimed } D_4 \text{ single-instanton action}),\\
+  \pi/6 &= 0.523599 \quad(\text{claimed single U(1) vortex, coordination 6}).
+\end{align}
+Motivation (draft \S1): $\ln(\mP/\me)=51.5271$ is numerically close to $S_{D4}=51.0033$
+($-1.02\%$); the residual $0.52383$ is identified with $\pi/6$. \emph{This is a
+leading-plus-fitted-residual construction (Gate STAT's correction-map objection); see the audit
+banner.}
+
+\section{Numbers and the Muon/Tau Falsification}
+\begin{table}[h]
+\centering
+\caption{Draft values and the audit's falsifying extension.}
+\begin{tabular}{lll}
+\toprule
+Quantity & Value & Note \\
+\midrule
+$\mP\exp(-(\pi^5+\pi)/6)$ & $0.51149$ MeV & honest error $+0.096\%$ (not $+0.0229\%$) \\
+$\me$ (observed) & $0.510999$ MeV & --- \\
+$\pi^5/6$ vs $\ln(\mP/\me)$ & $51.003$ vs $51.528$ & Gate STAT: zero bits \\
+muon (draft $n=2$) & $\approx 0.30$ MeV & observed $105.66$ --- wrong by $350\times$, wrong sign \\
+tau (draft $n=3$) & $\approx 0.18$ MeV & observed $1776.9$ --- wrong by $10^4\times$, wrong sign \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent
+The draft's own generalisation to the muon and tau assigns each heavier lepton \emph{more} vortex
+winding, i.e.\ \emph{more} exponential suppression, so it predicts the heavier charged leptons to
+be lighter than the electron. This inverts the observed mass ordering and falsifies the proposed
+mechanism independently of the electron-mass numerology.
+
+\section*{Status}
+\textbf{FALSIFIED.} Archived for provenance and to resolve the App~FG phantom-citation flag. The
+electron mass remains OPEN; see the Cold Ledger (Gate KAUDIT and the App~J/App~K cluster) for the
+live treatment.
+
+\end{document}
