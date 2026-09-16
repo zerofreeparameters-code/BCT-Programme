@@ -66,15 +66,16 @@ entry with a new date, and the original remains on the record as registered and 
 | **Fails if** | proton decay observed at **τ < 10^35 yr**, or excluded above **10^37 yr**. |
 | **Registered caveat** | **Two independent gates — MP and PRED2 — found M_R is defined as M_R ≡ m_P·α₀² in App GG2, with m_P supplied as an input. Substituting gives m_P = m_P: an identity, not a derivation.** P-3's input is therefore circular, and the gravity sector has no independent content. Recorded at registration, not discovered later. **A prediction resting on a circular input should arguably not be registered at all; it is retained here only because τ_p is independently testable and the caveat is visible.** |
 
-### P-4 — Neutron electric dipole moment
+### P-4 — Neutron electric dipole moment — **CORRECTED 16 Sep 2026 (Gate EDM / Gate THETA)**
 
 | | |
 |---|---|
 | Quantity | d_n |
-| BCT value | **d_n = 0** (App DM; App HO4) |
+| BCT value (as drafted) | ~~**d_n = 0** (App DM; App HO4)~~ — **withdrawn, see below** |
+| **Corrected BCT value** | **d_n ≲ 10⁻³⁰ e·cm** — a CONJECTURE-tier floor (no QCD contribution; CKM/EW only; θ_QCD = 0 at CONJECTURE tier) |
 | Tests it | n2EDM at PSI, TUCAN, SNS nEDM |
-| **Fails if** | any nonzero d_n measured at ≥3σ. |
-| Note | This is the **sharpest** entry: an exact zero, falsifiable by a single positive detection, with no correction factor available to rescue it. **It is the best prediction in the corpus by this criterion.** |
+| **Fails if** | d_n detected at ≳ 10⁻²⁸ e·cm (≥3σ). |
+| Note | The drafted "d_n = 0 exact" is **demoted, not deleted** (Rule 1). Gate EDM (16 Sep) found the "exact" attaches to θ_QCD, not d_n — d_n itself is nonzero and is quoted three ways in the corpus (1×10⁻³² App EU/HX2 / 3.2×10⁻³¹ App DM / 3.4×10⁻³⁰ App FZ); **one value must be pinned.** Gate THETA (16 Sep) found θ_QCD = 0 is **imported, not derived**: "real quark masses ⇒ arg det M_q = 0" is a non-sequitur (that is the Barr criterion, needed for J_CKM ≠ 0, not read off real eigenvalues); the D4 Z₂ / T_d symmetry fixes θ only to {0, π}, and π is excluded by observation, not by the geometry; and App HO4 (Phase 62B) records the geometry's own natural value θ_QCD = r_tet/r_oct·α₀ ≈ 4×10⁻³ "or… 0?" — i.e. 0 was selected to meet the bound. So this is a **CONJECTURE-tier floor**, not an exact zero. The near-term falsifier (a detection ≳ 10⁻²⁸) is still real, which is why the entry is retained in corrected form rather than withdrawn like P-5. |
 
 ### P-5 — CKM CP-violating phase — **WITHDRAWN, ALREADY FALSIFIED**
 
@@ -117,7 +118,7 @@ are applied here rather than left to be discovered by a reader.
 | P-1 Σm_ν | no closed form located; registered as a bare number | **stands, weakened** — must not be counted as a formula-level prediction |
 | P-2 r | two printed values (0.004624, 0.004668) | **stands**; the first is registered, the conflict is on the record |
 | P-3 τ_p | M_R circular, confirmed by two gates | **stands with an explicit warning** — see the caveat above |
-| P-4 d_n = 0 | no correction factor available; nothing to tune | **stands, and is the strongest entry** |
+| P-4 d_n = 0 | no correction factor available; nothing to tune | **CORRECTED 16 Sep (Gate EDM/THETA): "d_n = 0 exact" is overstated — θ_QCD = 0 is imported not derived, and the d_n floor is nonzero. Demoted to CONJECTURE-tier floor d_n ≲ 10⁻³⁰; see P-4.** |
 | P-5 δ_CKM | 4.5σ from measured γ | **WITHDRAWN — falsified** |
 
 **The general lesson PRED2 supplies, and the reason it belongs in a registration document:**
@@ -142,10 +143,9 @@ not a formality — it is the difference between a prediction and a fit.
 
 ## 3 — WHAT A HIT WOULD BE WORTH, HONESTLY
 
-**P-4 is the strongest.** An exact zero with no free parameter, falsifiable by one detection. If
-n2EDM reaches 10⁻²⁷ e·cm and finds nothing, that is a genuine confirmed prediction — though note
-the Standard Model also predicts d_n far below current sensitivity, so a null result is **weakly**
-discriminating. It becomes strong only if the SM prediction and BCT's differ measurably.
+**P-4, as corrected 16 Sep, is a CONJECTURE-tier floor, not an exact zero** (Gate EDM/THETA — see P-4). The registrable claim is d_n ≲ 10⁻³⁰ e·cm; a detection ≳ 10⁻²⁸ falsifies it. If
+n2EDM reaches 10⁻²⁷ e·cm and finds nothing, that is consistent but **weakly**
+discriminating — the Standard Model also predicts d_n far below current sensitivity. It becomes strong only if the SM prediction and BCT's differ measurably. The originally-drafted "exact zero" rested on θ_QCD = 0 being a proven geometric output, which Gate THETA showed it is not.
 
 **P-2 and P-5 are the most discriminating** — both are specific numbers in ranges where competing
 theories predict differently, and both are testable this decade.

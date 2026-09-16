@@ -718,7 +718,7 @@ so only integer-winding composites (the proton) propagate freely.
 • Strong CP, resolved without an axion: three independent mechanisms — the D4
 Z2 centre, reality of Yukawa couplings under the Td improper rotations, and D4 modular
 self-duality (Z(τ ) = Z(−1/τ ), S : θ → −θ) — each force ¯θQCD = 0 exactly. Predicted
-neutron EDM dn ≈ 10−32 e cm; no QCD axion exists.
+neutron EDM dn ≈ 10−32 e cm; no QCD axion exists.  [Cold Ledger correction, 16 Sep 2026 - Gate EDM/THETA: this is CONJECTURE, not proven. The three mechanisms fix theta-bar only to {0, pi}; pi is excluded by observation, not geometry. The 'real Yukawa couplings => arg det M_q = 0' step is a non-sequitur (the Barr criterion, imposed not derived). The neutron-EDM claim is a CONJECTURE-tier floor d_n <~ 1e-30 e.cm - a detection >~ 1e-28 falsifies - not d_n = 0 exact; 'no QCD axion' inherits this tier.]
 10. One table
 Result OHC origin Key output Error
 Maxwell equations octahedral phonon mode derived —
