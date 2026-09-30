@@ -1,0 +1,1 @@
+REOPEN TRIGGER: if any work gives voids/hopfions/windings a preferred orientation that differs between corner (A) and body-centre (B) sites, or selects one axis as c, re-run Gate ALTER against it. Target: 90-degree-rotated A/B pattern (4_2 screw), no A->B translation or inversion. App L sec 4.3 already ruled out.
