@@ -54,3 +54,7 @@ Not verified: the corpus search. The absence finding rests on the runner's searc
 - No prediction moves. Nothing is un-killed.
 - **Reopen tripwire:** App Q.5 (NM-5) and the oct/tet labelling (NM-4) are logged here as degenerate. Rediscovering either, or App L §4.3, does not trigger a reopen.
 - **Coverage unchanged:** the verdict covers the pinned tree only. The Project-attached PDFs outside the repository remain unsearched, as do Letters the tree cites but does not contain (Letter 18 among them).
+
+## 7. Addendum, 2026-10-01
+
+File-count difference (§3 item 7) reconciled. `git ls-tree` on `0d9600a` excluding `audit/` gives 290 files: 138 tex, 9 pdf, 1 zip (= 148) and 123 md, 1 txt (= 124), total 272 documents, plus 18 non-document files (4 py, 4 png, 3 html, 2 yml, .gitignore, LICENSE, CNAME, main, Sync Zenodo DOIs). The first run counted documents only. Totals match; file lists were not compared.
