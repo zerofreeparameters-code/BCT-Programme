@@ -1,0 +1,10 @@
+strong branch: 9 points, beta 0.600-0.610
+weak branch: 9 points, beta 0.615-0.625
+beta=0.61250: strong 0.4870-0.4907   weak 0.4135-0.4162
+beta=0.61375: strong 0.4801-0.4857   weak 0.4107-0.4122
+beta=0.61500: strong 0.4728-0.4807   weak 0.4079-0.4085
+beta=0.61625: strong 0.4653-0.4757   weak 0.4049-0.4051
+gap at 0.615: 0.0644-0.0728
+L=12 beta=0.6125: E_last500=0.4812, below strong branch by 0.0058-0.0095; readings from sweep 50: 0.469-0.491
+L=16 beta=0.61375: E_last500=0.4667, below strong branch by 0.0134-0.0190; readings from sweep 50: 0.457-0.473
+pure-phase expectation for the two L=16 runs: 0.0750-0.0808; measured dE=0.0609; shortfall 0.0140-0.0199

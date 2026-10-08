@@ -1,0 +1,9 @@
+== Check 1: gauge invariance of E ==
+d4: max|dE|=2.22e-16  max|d cos_p|=3.55e-15  pass=True
+hc: max|dE|=4.44e-16  max|d cos_p|=4.11e-15  pass=True
+== Check 2: limits, L = 4 ==
+d4 beta=0.1 hot: <cos>=0.050271 +- 0.000097  target beta/2=0.05  rel.dev=+0.54%  pass=True  (seed 32676)
+d4 beta=20 cold: E=0.0086121 +- 0.0000041  target=0.0085938 (= 11/(64b))  rel.dev=+0.21%  pass=True  (seed 231677)
+hc beta=0.1 hot: <cos>=0.050028 +- 0.000170  target beta/2=0.05  rel.dev=+0.06%  pass=True  (seed 32676)
+hc beta=20 cold: E=0.0125263 +- 0.0000071  target=0.0125000 (= 1/(4b))  rel.dev=+0.21%  pass=True  (seed 231677)
+CHECK 1: PASS   CHECK 2: PASS

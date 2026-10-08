@@ -1,0 +1,9 @@
+[s54b] 5 runs in 867s
+   beta=0.60875  E_last500=0.50497  E*=0.45482  -> strong
+   beta=0.61125  E_last500=0.49101  E*=0.45482  -> strong
+   beta=0.61375  E_last500=0.46668  E*=0.45482  -> strong
+   beta=0.61625  E_last500=0.40573  E*=0.45482  -> weak
+   beta=0.61875  E_last500=0.39934  E*=0.45482  -> weak
+L=16 flip: pattern=[(0.60875, 'S'), (0.61125, 'S'), (0.61375, 'S'), (0.61625, 'W'), (0.61875, 'W')]  beta_mix(16)=0.615  interval=[0.61375, 0.61625]
+beta_inf = 0.615 +- 0.00125  (beta_KN = 1.23000 +- 0.00250);  Delta E(L=16) = 0.06095 (strong 0.61375 -> weak 0.61625) 
+[s54b] done in 867s

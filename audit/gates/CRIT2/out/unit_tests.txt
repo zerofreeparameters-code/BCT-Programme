@@ -1,0 +1,27 @@
+== lattice counts ==
+d4 L=4: sites=128 links=1536 plaq=4096 plaq/site=32 links/site=12 plaq/link=8..8
+d4 L=6: sites=648 links=7776 plaq=20736 plaq/site=32 links/site=12 plaq/link=8..8
+d4 L=8: sites=2048 links=24576 plaq=65536 plaq/site=32 links/site=12 plaq/link=8..8
+hc L=4: sites=256 links=1024 plaq=1536 plaq/site=6 links/site=4 plaq/link=6..6
+hc L=6: sites=1296 links=5184 plaq=7776 plaq/site=6 links/site=4 plaq/link=6..6
+hc L=8: sites=4096 links=16384 plaq=24576 plaq/site=6 links/site=4 plaq/link=6..6
+D4 triangle translation classes: 32
+ordered (r1,r2) pairs from a site: 192  -> triangles touching a site: 96
+== von Mises sampler: <cos psi> vs I1/I0 ==
+kappa=1e-09    <cos>=-0.000294 exact=0.000000 diff/sigma=-0.59  <sin>=-0.00006
+kappa=0.0001   <cos>=-0.000224 exact=0.000050 diff/sigma=-0.55  <sin>=-0.00034
+kappa=0.05     <cos>=0.024758 exact=0.024992 diff/sigma=-0.47  <sin>=+0.00096
+kappa=0.5      <cos>=0.242503 exact=0.242500 diff/sigma=+0.01  <sin>=-0.00029
+kappa=2        <cos>=0.698410 exact=0.697775 diff/sigma=+1.77  <sin>=-0.00033
+kappa=8        <cos>=0.935252 exact=0.935235 diff/sigma=+0.10  <sin>=+0.00030
+kappa=40       <cos>=0.987428 exact=0.987420 diff/sigma=+0.10  <sin>=-0.00012
+kappa=160      <cos>=0.996871 exact=0.996870 diff/sigma=+0.02  <sin>=+0.00000
+== staple consistency: local Delta S vs global recompute ==
+d4: max |dS_global - dS_staple| over 200 trials = 2.64e-12
+hc: max |dS_global - dS_staple| over 200 trials = 7.13e-13
+== timing (heat-bath sweep) ==
+d4 L=8: 9.8 ms per sweep+measure, 399 ns/link
+d4 L=12: 49.9 ms per sweep+measure, 401 ns/link
+d4 L=16: 169.4 ms per sweep+measure, 431 ns/link
+hc L=8: 5.5 ms per sweep+measure, 335 ns/link
+hc L=12: 28.3 ms per sweep+measure, 341 ns/link

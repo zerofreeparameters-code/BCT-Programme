@@ -1,0 +1,8 @@
+[check4] 5 runs in 153s
+   beta=1.00200  E_last500=0.40746  E*=0.38074  -> strong
+   beta=1.00700  E_last500=0.39272  E*=0.38074  -> strong
+   beta=1.01200  E_last500=0.34499  E*=0.38074  -> weak
+   beta=1.01700  E_last500=0.33694  E*=0.38074  -> weak
+   beta=1.02200  E_last500=0.32971  E*=0.38074  -> weak
+flip interval [1.007, 1.012] (strong<= 1.007, weak>= 1.012), beta_mix=1.0095; must contain a point within 0.006 of 1.0111 -> PASS
+[check4] done in 153s

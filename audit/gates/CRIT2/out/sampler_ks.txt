@@ -1,0 +1,14 @@
+seed=101 kappa=0.05  KS p=0.586  <cos> z=+0.76
+seed=101 kappa=0.5   KS p=0.104  <cos> z=-0.61
+seed=101 kappa=1     KS p=0.096  <cos> z=-1.32
+seed=101 kappa=2     KS p=0.149  <cos> z=-0.25
+seed=101 kappa=3     KS p=0.925  <cos> z=-0.45
+seed=101 kappa=8     KS p=0.704  <cos> z=-0.61
+seed=101 kappa=40    KS p=0.519  <cos> z=-0.12
+seed=202 kappa=0.05  KS p=0.018  <cos> z=+1.54
+seed=202 kappa=0.5   KS p=0.793  <cos> z=+0.40
+seed=202 kappa=1     KS p=0.372  <cos> z=+2.10
+seed=202 kappa=2     KS p=0.544  <cos> z=-0.85
+seed=202 kappa=3     KS p=0.260  <cos> z=+0.28
+seed=202 kappa=8     KS p=0.444  <cos> z=-0.47
+seed=202 kappa=40    KS p=0.060  <cos> z=-1.22

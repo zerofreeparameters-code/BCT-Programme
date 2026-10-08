@@ -1,0 +1,10 @@
+[s54a] 7 runs in 363s
+   beta=0.60500  E_last500=0.52330  E*=0.45482  -> strong
+   beta=0.60750  E_last500=0.51235  E*=0.45482  -> strong
+   beta=0.61000  E_last500=0.49981  E*=0.45482  -> strong
+   beta=0.61250  E_last500=0.48119  E*=0.45482  -> strong
+   beta=0.61500  E_last500=0.41193  E*=0.45482  -> weak
+   beta=0.61750  E_last500=0.40082  E*=0.45482  -> weak
+   beta=0.62000  E_last500=0.39665  E*=0.45482  -> weak
+L=12 flip: pattern=[(0.605, 'S'), (0.6075, 'S'), (0.61, 'S'), (0.6125, 'S'), (0.615, 'W'), (0.6175, 'W'), (0.62, 'W')]  beta_mix(12)=0.61375  interval=[0.6125, 0.615]
+[s54a] done in 363s
