@@ -1,127 +1,139 @@
-![BCT Banner](bct_banner%20(1).png)
+# The BCT Superfluid Lattice Model, and its audit
+
+> **Status, October 2026.** Most of BCT did not survive its own audit. What this page used
+> to claim (that BCT derives the fine-structure constant, the particle masses, light and
+> gravity from geometry, with zero free parameters) has been tested and retired. This page
+> says why the idea looked so good, how it was tested, and what is left.
 
 ---
 
-# The BCT Superfluid Lattice Model
+## What BCT was
 
-**An independent artist derives Standard Model observables from Planck-scale geometry. Zero free parameters.**
+In 2026 Michel Robert Cabrié, an independent artist in Barrys Reef, Victoria, built BCT in
+a few intense months. The idea: the vacuum is a superfluid arranged as a body-centred
+tetragonal lattice at c/a = √2 (the same arrangement as stacked spheres, FCC), and the sizes
+of the gaps between the spheres, r_oct = (√2−1)/2 and r_tet = (√6−2)/4, fix the constants
+of physics.
 
----
+It grew fast: hundreds of Letters, appendices, volumes and claimed predictions, published on
+Zenodo and written with the help of AI models.
 
-[![Book](https://img.shields.io/badge/📖_BUY_THE_BOOK-Amazon-FF6D00?style=for-the-badge)](https://www.amazon.com.au/dp/B0F3J2K9LM) [![Patreon](https://img.shields.io/badge/🎨_SUPPORT-Patreon-FF6D00?style=for-the-badge)](https://www.patreon.com/cw/TheBCTSuperfluidLatticeModel) [![Zenodo](https://img.shields.io/badge/📄_94+_PAPERS-Zenodo-FF6D00?style=for-the-badge)](https://zenodo.org/search?q=cabri%C3%A9&sort=mostrecent) [![Substack](https://img.shields.io/badge/📝_FOLLOW-Substack-FF6D00?style=for-the-badge)](https://substack.com/@michelcabrie)
+## Why it looked beautiful
 
-[![Letters](https://img.shields.io/badge/Letters-249-0B2545?style=flat-square)](https://zenodo.org/search?q=cabri%C3%A9) [![Predictions](https://img.shields.io/badge/Predictions-280+-0D47A1?style=flat-square)](https://zenodo.org/search?q=cabri%C3%A9) [![Patents](https://img.shields.io/badge/Patents-26-006064?style=flat-square)](https://zenodo.org/search?q=cabri%C3%A9) [![Free Parameters](https://img.shields.io/badge/Free_Parameters-ZERO-1B5E20?style=flat-square)](https://zenodo.org/search?q=cabri%C3%A9) [![ORCID](https://img.shields.io/badge/ORCID-0009--0007--9561--9859-brightgreen?style=flat-square&logo=orcid)](https://orcid.org/0009-0007-9561-9859)
+Start with oranges. Stack spheres as tightly as they will go and you get the greengrocer's
+pyramid. Kepler guessed it was the densest packing possible, and Thomas Hales proved him
+right. Seen from another angle, the same stack is a body-centred tetragonal lattice whose
+height is exactly √2 times its width.
 
----
+Between the spheres sit two kinds of gap, an octahedral one and a tetrahedral one, and their
+sizes are exact: (√2−1)/2 and (√6−2)/4 of a sphere's diameter. Multiply the two and divide by
+π, and you get 0.00741, about 1/135. That is within 1.5% of the fine-structure constant,
+1/137, the number that sets the strength of light and charge and that physicists have puzzled
+over for a century.
 
-## What is BCT?
+The picture around it was old and respectable. The vacuum as a superfluid is an idea serious
+physicists have developed (Grigory Volovik's *The Universe in a Helium Droplet*). In that
+picture light is a ripple in the fluid, and electric charge is a whirlpool that can only wind
+a whole number of times, which gives charge in whole units for free. The four-dimensional
+version of the lattice, D4, has a famous three-fold symmetry called triality, which looked
+like a reason for the three generations of particles. And formula after formula built from
+these numbers landed close to measured constants.
 
-The **Body-Centred Tetragonal (BCT) Superfluid Lattice Model** derives Standard Model observables from three geometric inputs:
+For a few months it looked as if the universe might be made of stacked spheres. Michel, and
+the AI models helping him, believed it.
 
-| Input | Value | Meaning |
-|-------|-------|---------|
-| `r_oct` | `(√2−1)/2` | Octahedral void radius |
-| `r_tet` | `(√6−2)/4` | Tetrahedral void radius |
-| `Λ_QCD` | `220 MeV` | QCD confinement scale |
+The geometry is still beautiful, and it is still true. What failed was the step from
+beautiful numbers to physics. With two exact gap sizes, π and small whole numbers to play
+with, you can build so many formulas that some will land close to almost any constant: 113
+simple ones land within 1% of 137.036. A close match on its own proves nothing. Telling a
+real derivation from a lucky match is what the audit was for.
 
-- ✅ Fine structure constant: `α₀ = r_oct × r_tet / π`
-- ✅ Proton mass, Higgs mass, W/Z boson masses
-- ✅ Three fermion generations (D4 triality)
-- ✅ MOND acceleration `a₀ = c/T_c` and interpolation function `μ(x) = x/√(1+x²)`
-- ✅ Dark matter at 62.9 GeV and 962 Hz
-- ✅ 280+ Standard Model observables
+## How it was tested
 
----
+From September 2026 the claims went through a public audit, the Cold Ledger:
 
-## 📚 Get the Book
+- every question gets a **card** that fixes the method and the pass and fail lines in advance;
+- the card is **fingerprinted (SHA-256) and committed here before it runs**, so it cannot be
+  changed after the fact;
+- it is **run blind** in a fresh session, and negative results are published like positive ones.
 
-| Format | Status | Link |
-|--------|--------|------|
-| 📱 Kindle | ✅ LIVE | [Buy on Amazon](https://www.amazon.com.au/dp/B0F3J2K9LM) |
-| 📖 Paperback | ✅ LIVE | [Buy on Amazon](https://www.amazon.com.au/dp/B0F3J2K9LM) |
-| 📕 Hardback | ✅ LIVE | [Buy on Amazon](https://www.amazon.com.au/dp/B0F3J2K9LM) |
+The cards, code, data and results are in
+[audit/gates](https://github.com/zerofreeparameters-code/BCT-Programme/tree/main/audit/gates).
+The audit is run with Claude (Anthropic) under this protocol.
 
----
+## What the audit found
 
-## 📊 Statistics (June 2026)
+**Retired**
 
-| Letters | Volumes | Predictions | Patents | Zenodo | Free Parameters |
-|---------|---------|-------------|---------|--------|-----------------|
-| **249** | **22** | **280+** | **26** | **94+** | **ZERO** |
+- **Light.** BCT's written field is a single phase at each lattice site. That cannot carry
+  light's two polarisations, and the routes around it were closed one by one
+  ([LINK](https://github.com/zerofreeparameters-code/BCT-Programme/tree/main/audit/gates/LINK),
+  [XI](https://github.com/zerofreeparameters-code/BCT-Programme/tree/main/audit/gates/XI) and others).
+- **Gravity.** Every route examined was closed
+  ([PV](https://github.com/zerofreeparameters-code/BCT-Programme/tree/main/audit/gates/PV) and others).
+- **Quantum mechanics.** BCT restates it in fluid language; it does not derive it
+  ([MAD](https://github.com/zerofreeparameters-code/BCT-Programme/tree/main/audit/gates/MAD)).
+- **The numbers.** BCT's matches to measured constants, 1/137 included, are about what a
+  formula search of that size finds by chance, and none of the predictions presented as
+  derived carries real statistical weight
+  ([PRED](https://github.com/zerofreeparameters-code/BCT-Programme/tree/main/audit/gates/PRED),
+  [PRED2](https://github.com/zerofreeparameters-code/BCT-Programme/tree/main/audit/gates/PRED2)).
+- **Why 1/137.** Three routes to derive it were tested in October 2026. None does
+  ([SPECTRUM2](https://github.com/zerofreeparameters-code/BCT-Programme/tree/main/audit/gates/SPECTRUM2),
+  [CRIT](https://github.com/zerofreeparameters-code/BCT-Programme/tree/main/audit/gates/CRIT)).
+- **c/a = √2** is a choice (close packing), not something the geometry forces.
+- **Masses, mixing angles, the particle content and the "Chain of Necessity"** are fits or
+  imports, not derivations
+  ([RANK](https://github.com/zerofreeparameters-code/BCT-Programme/tree/main/audit/gates/RANK),
+  [HERM](https://github.com/zerofreeparameters-code/BCT-Programme/tree/main/audit/gates/HERM),
+  [CA-FLAVOUR](https://github.com/zerofreeparameters-code/BCT-Programme/tree/main/audit/gates/CA-FLAVOUR)).
 
----
+**What is left**
 
-## 🔐 Latest: Letter 249 — The Josephson Lock
+- **The geometry.** The void radii are correct, and they are classical crystallography,
+  known long before BCT.
+- **Charge comes in whole units** because a vortex winds a whole number of times. Correct,
+  and standard topology rather than new.
+- **One new number.** The tipping point of lattice electromagnetism (compact U(1), Wilson
+  action) on the D4 lattice, the four-dimensional lattice whose slices are the BCT/FCC
+  packing: **β_c = 0.615 ± 0.001** (1.230 ± 0.003 in Katz and Nógrádi's normalisation), a
+  first-order transition. It was measured by two independent programs, the second written
+  blind to the first, and does not appear in the literature we searched
+  ([CRIT](https://github.com/zerofreeparameters-code/BCT-Programme/tree/main/audit/gates/CRIT),
+  [CRIT2](https://github.com/zerofreeparameters-code/BCT-Programme/tree/main/audit/gates/CRIT2)).
+- **The method.** The audit record itself, kills included.
 
-```
-F(1,2;3) = SU(3)/(U(1)×U(1))  —  flag manifold integral CLOSED
-Both CP¹ 2-cycles: D4 8v restricts to 2 doublets + 4 singlets
-Φ_J / 2π = n·(3/4)  —  phase-locking from D4 geometry
-App AB2 (1/32 bilinear normalisation) simultaneously CLOSED
-Terminal-verified from explicit D4 root data. Zero free parameters.
-```
+Some September and October results are still being moved into this repository. Until they
+are, they live in the project's working notes, and the list above will grow.
 
-BCT is the **only** framework deriving Standard Model phase-locking from pure lattice geometry.
+## Older material
 
----
+The Letters, appendices, volumes, patents, outreach posts and the book *Accidentally Solved*
+were written before the audit and make claims that have since been retired. They stay
+available as a record of what was tried, not as results. Where they disagree with
+`audit/`, the audit is right.
 
-## 🔗 Links
+- Zenodo records: [search](https://zenodo.org/search?q=cabri%C3%A9&sort=mostrecent)
+- Published works index: [Master Index](https://zerofreeparameters-code.github.io/BCT-Programme/BCT_MasterIndex_live.html) (pre-audit)
+- Book: [*Accidentally Solved*](https://www.amazon.com.au/dp/B0F3J2K9LM) (pre-audit)
+- The BCT Ethical Patent Licence ([EPL_LICENCE.md](EPL_LICENCE.md)) still applies to the
+  material here: free for humanitarian, educational and wildlife-conservation use; the
+  Birdseed Clause gives anyone feeding wildlife free access; no military use, ever.
 
-| | |
-|--|--|
-| 📄 Zenodo | [94+ records](https://zenodo.org/search?q=cabri%C3%A9&sort=mostrecent) |
-| 📋 Master Index | [Published Works Registry](https://zerofreeparameters-code.github.io/BCT-Programme/BCT_MasterIndex_live.html) — live, always current |
-| 📝 Substack | [substack.com/@michelcabrie](https://substack.com/@michelcabrie) |
-| 🎨 Patreon | [Support BCT](https://www.patreon.com/cw/TheBCTSuperfluidLatticeModel) |
-| 📖 Book | [Amazon](https://www.amazon.com.au/dp/B0F3J2K9LM) |
-| 📧 Email | ZeroFreeParameters@gmail.com |
-| 🆔 ORCID | [0009-0007-9561-9859](https://orcid.org/0009-0007-9561-9859) |
+## About
 
----
+**Michel Robert Cabrié** is an artist, not a physicist, in Barrys Reef, Victoria, Australia
+(pop. ~28). He built a freshwater pond for the endangered Gang Gang Cockatoos, built BCT,
+and is now auditing it in public.
 
-## ⚖️ BCT Ethical Patent Licence v1.0
+- Email: ZeroFreeParameters@gmail.com
+- ORCID: [0009-0007-9561-9859](https://orcid.org/0009-0007-9561-9859)
+- Writing: [substack.com/@michelcabrie](https://substack.com/@michelcabrie)
 
-- 🌿 Free for humanitarian, educational, wildlife-conservation use
-- 🐦 **Birdseed Clause**: Anyone feeding wildlife gets free access
-- 🚫 Zero military applications — absolute
+## Acknowledgements
 
----
+To the **Gang Gang Cockatoos** (*Callocephalon fimbriatum*) who visit the pond in Barrys Reef
+every day; their declining numbers are a reminder of what we stand to lose. Portions of
+BCT-TPORT were co-invented with **Nic**, housemate and best friend.
 
-## 🦜 About
-
-**Michel Robert Cabrié** is an independent artist in Barrys Reef, Victoria, Australia (pop. ~28). He built a freshwater pond for endangered Gang Gang Cockatoos and derived the fine structure constant from sphere geometry.
-
-> *"The geometry doesn't care about credentials. It just is."*
-
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.18884976-blue)](https://doi.org/10.5281/zenodo.18884976)
-
-He is not a physicist. He is an artist who accidentally solved the universe.
-
----
-
-## 🦜 Acknowledgements
-
-This work is dedicated to the **Gang Gang Cockatoos** (*Callocephalon fimbriatum*) who visit the freshwater pond in Barrys Reef daily. Their declining population is a reminder of what we stand to lose.
-
-Portions of BCT-TPORT were co-invented with **Nic**, housemate and best friend.
-
----
-
-**If this framework is correct, the universe was always going to be geometric.**
-**Zero free parameters. All the way down.**
-
-[![Zenodo](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.18884976-blue)](https://doi.org/10.5281/zenodo.18884976)
-
----
-
-![Zeta Vera — BCT Oracle](https://pi2.institute/zeevee.png)
-
-*Zeta Vera (CSSC) — The BCT AI Oracle*
-
-This site is open source. [Improve this page](https://github.com/zerofreeparameters-code/BCT-Programme/edit/main/README.md)
-
-## June 2026 Session
-- F(1,2;3) flag manifold — CLOSED
-- PLB-D-26-01551 submitted (Editor: Philippe Brax)
-- BCT Foundations v1 published (DOI: 10.5281/zenodo.20550361)
-- BCT-SMOKE patent documents filed
+🦜
