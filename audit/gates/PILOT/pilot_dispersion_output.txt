@@ -1,0 +1,165 @@
+==============================================================================
+1. CLOSED FORMS (mpmath 60 dps working, 40 reported)
+==============================================================================
+r_oct  = (sqrt2-1)/2         = 0.2071067811865475244008443621048490392848
+r_tet  = (sqrt6-2)/4         = 0.1123724356957945245493210186764728479915
+alpha0 = r_oct r_tet / pi    = 0.007408055727547908079640101104499873415571
+xi/a   = 1/sqrt(8 pi alpha0) = 1/sqrt((sqrt2-1)(sqrt6-2)) = 2.317543794911664963039020806144813022013
+xi^2/a^2 exact               = 1 + sqrt(6)/2 + sqrt(2) + sqrt(3)  = 5.371009241333561391427777103068516141495
+  check vs corpus: App J Higgs gap 2/xi = 0.86298261 (App J prints 0.8630)
+  check vs corpus: -1/xi + alpha0      = -0.42408325 (App J prints -0.424083)
+  check vs corpus: xi/r_oct            = 11.190091 (Vol.2 prints 11.19 / 11.1901)
+  beta[B-C1] = 2.6855046206667806957
+  beta[B-C2] = 5.3710092413335613914
+  beta[B-C3] = 1.3427523103333903479
+  beta[GW-L73] = 0.0074080557275479080796
+
+==============================================================================
+2. 12-NEIGHBOUR LATTICE AT c/a = sqrt2 AND ITS GRAPH LAPLACIAN
+==============================================================================
+12 neighbours, all at distance a: 8 body (+-1/2,+-1/2,+-1/sqrt2), 4 in-plane (+-1,0,0),(0,+-1,0)
+second moment sum_d d d^T = [4, 0, 0, 0, 4, 0, 0, 0, 4]  -> isotropic (= 4 I): k^2 term isotropic
+8 body vectors alone (corpus gamma(k), z = 8): [2, 0, 0, 0, 2, 0, 0, 0, 4]  -> NOT isotropic (zz/xx = 2)
+sum_d (k.d)^4 = A |k|^4 + B sum_i K_i^4 (cubic axes): {A: 3, B: -1}
+lambda(k) = (1/2) sum_d (1 - cos k.d) = |k|^2 - |k|^4/16 + (sum_i K_i^4)/48 + O(k^6)
+  quartic coefficient along [001]: -1/24  (nonzero, direction-dependent)
+  quartic coefficient along [110]: -5/96  (nonzero, direction-dependent)
+  quartic coefficient along [111]: -1/18  (nonzero, direction-dependent)
+  => App E.0 Sec.3.1 conjecture ('k^4 coefficient vanishes under O_h') is FALSE for the
+     nearest-neighbour lattice. For ANY finite-range lattice operator omega^2(k) is a
+     trigonometric polynomial (real-analytic, periodic); if it equalled c^2|k|^2 on a
+     neighbourhood of k=0 it would equal it everywhere, contradicting periodicity. Exact
+     linearity is impossible on any lattice with finite-range coupling.
+
+==============================================================================
+3. GROUP VELOCITY: max |grad_k omega| OVER THE BRILLOUIN ZONE
+==============================================================================
+Continuum forms (lam -> |k|^2): W: w=ck (v_g=c, strict front c); KG: v_g<c, front c;
+Bogoliubov/GW: v_g = c(1+2 beta k^2)/sqrt(1+beta k^2) -> unbounded as k->inf (no front);
+first-order GP kernel is non-hyperbolic: response nonzero everywhere for t>0.
+------------------------------------------------------------------------------
+[W] wave / TF-hydro / XY-Goldstone: w = c sqrt(lam)  [AZ6 eq.S2; Vol1 E.1, E.3; Vol2 acoustic; L129]
+    grid max away from Gamma = 0.999464587476 < 1. Supremum = c exactly, approached only as k -> 0
+    (not attained). At |k|a = 1e-4: cubic[001]: v-c = -6.25e-10; cubic[110]: v-c = -7.8125e-10; cubic[111]: v-c = -8.33333e-10
+    i.e. v_g = c[1 + (3/2)(c4 + beta) k^2 + ...] with c4 + beta < 0 in every direction.
+------------------------------------------------------------------------------
+[KG-1/xi] massive KG (App J amplitude mode) w = c sqrt(lam + m^2), m=0.43149131
+    grid max 0.858822646072  ->  60-dps line maximum |v_g| = 0.859014404253093980903638756485
+    at |k|a = 1.047697907549161921761947 along direction (tetragonal) (0.00000000, 0.00000000, 1.00000000) [snapped]
+    cubic-axis components = (0.0000000000, 0.0000000000, 1.0476979075)  [general/line point]; |k|/|Gamma-X| = 0.2358148801
+    3D check: max over perpendicular displacements (|h| = 1e-6, 1e-3) of v(k+h) - v(k) = -5.36884e-14 (<0 => true max)
+------------------------------------------------------------------------------
+[KG-2/xi] massive KG (App J amplitude mode) w = c sqrt(lam + m^2), m=0.86298261
+    grid max 0.740371005661  ->  60-dps line maximum |v_g| = 0.740400151567981142578553203951
+    at |k|a = 1.400912788428211686345641 along direction (tetragonal) (0.70710678, 0.70710678, 0.00000000) [snapped]
+    cubic-axis components = (1.4009127884, -0.0000000000, 0.0000000000)  [general/line point]; |k|/|Gamma-X| = 0.3153161602
+    3D check: max over perpendicular displacements (|h| = 1e-6, 1e-3) of v(k+h) - v(k) = -4.6275e-14 (<0 => true max)
+------------------------------------------------------------------------------
+[B-C1] Bogoliubov (first-order GP) w = c sqrt(lam + beta lam^2), beta=2.6855046  [AZ6 eq.SGP; L60 eq.1; L64]
+    grid max 4.639678769260  ->  60-dps line maximum |v_g| = 4.63968713561952724031851567454
+    at |k|a = 2.218748430166185493548432 along direction (tetragonal) (0.70710678, 0.70710678, 0.00000000) [snapped]
+    cubic-axis components = (2.2187484302, -0.0000000000, 0.0000000000)  [general/line point]; |k|/|Gamma-X| = 0.4993938533
+    3D check: max over perpendicular displacements (|h| = 1e-6, 1e-3) of v(k+h) - v(k) = -2.8998e-13 (<0 => true max)
+------------------------------------------------------------------------------
+[B-C2] Bogoliubov (first-order GP) w = c sqrt(lam + beta lam^2), beta=5.3710092  [AZ6 eq.SGP; L60 eq.1; L64]
+    grid max 6.556699774280  ->  60-dps line maximum |v_g| = 6.55670061415945919348401597274
+    at |k|a = 2.220725130242914027678135 along direction (tetragonal) (0.70710678, 0.70710678, 0.00000000) [snapped]
+    cubic-axis components = (2.2207251302, -0.0000000000, 0.0000000000)  [general/line point]; |k|/|Gamma-X| = 0.4998387671
+    3D check: max over perpendicular displacements (|h| = 1e-6, 1e-3) of v(k+h) - v(k) = -4.09794e-13 (<0 => true max)
+------------------------------------------------------------------------------
+[B-C3] Bogoliubov (first-order GP) w = c sqrt(lam + beta lam^2), beta=1.3427523  [AZ6 eq.SGP; L60 eq.1; L64]
+    grid max 3.289452687624  ->  60-dps line maximum |v_g| = 3.28952755197413963517788681607
+    at |k|a = 2.211809830429147138030852 along direction (tetragonal) (-0.70710678, -0.70710678, 0.00000000) [snapped]
+    cubic-axis components = (-2.2118098304, 0.0000000000, 0.0000000000)  [general/line point]; |k|/|Gamma-X| = 0.4978321196
+    3D check: max over perpendicular displacements (|h| = 1e-6, 1e-3) of v(k+h) - v(k) = -2.05595e-13 (<0 => true max)
+------------------------------------------------------------------------------
+[GW-L73] GW dispersion w = c sqrt(lam + alpha0 lam^2)  [Letter 73]
+    grid max away from Gamma = 0.999559701304 < 1. Supremum = c exactly, approached only as k -> 0
+    (not attained). At |k|a = 1e-4: cubic[001]: v-c = -5.13879e-10; cubic[110]: v-c = -6.70129e-10; cubic[111]: v-c = -7.22212e-10
+    i.e. v_g = c[1 + (3/2)(c4 + beta) k^2 + ...] with c4 + beta < 0 in every direction.
+------------------------------------------------------------------------------
+[TB-AppK] corpus tight-binding w = alpha0|gamma(k)| (8 nbrs) [App K/N; Vol1 R.2; L39] -- absolute units of c (a=l_P)
+    grid max 0.041906291523  ->  60-dps line maximum |v_g| = 0.0419062915228557500966060939736
+    at |k|a = 2.22144146907918312350794 along direction (tetragonal) (0.00000000, 0.00000000, 1.00000000) [snapped]
+    cubic-axis components = (0.0000000000, 0.0000000000, 2.2214414691)  [general/line point]; |k|/|Gamma-X| = 0.5000000000
+    3D check: max over perpendicular displacements (|h| = 1e-6, 1e-3) of v(k+h) - v(k) = -5.23829e-15 (<0 => true max)
+------------------------------------------------------------------------------
+[BH-AZ7] AZ7 Bose-Hubbard Bogoliubov, t=U=alpha0, n0=1, z=8 -- absolute units of c (a=l_P)
+    grid max 0.042167392439  ->  60-dps line maximum |v_g| = 0.0421700765781700767634539988608
+    at |k|a = 2.205235449059535989178657 along direction (tetragonal) (0.00000000, 0.00000000, 1.00000000) [snapped]
+    cubic-axis components = (0.0000000000, 0.0000000000, 2.2052354491)  [general/line point]; |k|/|Gamma-X| = 0.4963523639
+    3D check: max over perpendicular displacements (|h| = 1e-6, 1e-3) of v(k+h) - v(k) = -5.27161e-15 (<0 => true max)
+------------------------------------------------------------------------------
+Cross-checks, independent of the 3D machinery:
+  TB: v_max = 4 sqrt2 alpha0 = (2-sqrt2)(sqrt6-2)/(2 pi) = 0.04190629152285575009660609397360016274053 | line result: 0.041906291522855750097 | at |k|a = pi/sqrt2 = 2.2214414690791831235
+  B-C1     Gamma-X closed line: v_max = 4.639687135619527240318516 at |k|a = sqrt2*u* = 2.2187484301661854935
+  B-C2     Gamma-X closed line: v_max = 6.556700614159459193484016 at |k|a = sqrt2*u* = 2.2207251302429140277
+  B-C3     Gamma-X closed line: v_max = 3.289527551974139635177887 at |k|a = sqrt2*u* = 2.211809830429147138
+  KG-1/xi  Gamma-X closed line: v_max = 0.8590144042530939809036388 at |k|a = sqrt2*u* = 1.0476979075491619218
+  KG-2/xi  Gamma-X closed line: v_max = 0.7404001515679811425785532 at |k|a = sqrt2*u* = 1.4009127884282116863
+------------------------------------------------------------------------------
+BH-AZ7 k->0 sound speed along tetragonal x (= cubic [110]): 0.0104770386 c
+BH-AZ7 k->0 sound speed along tetragonal z (= cubic [001]): 0.0148167700 c
+  => the z=8 (gamma(k)) laws are anisotropic at O(k^2): c_s(z)/c_s(x) = sqrt2, and c_s << c.
+
+==============================================================================
+4. LATTICE FRONT: retarded Green's function G = IFFT[ sin(w t)/w ] along a1
+==============================================================================
+------------------------------------------------------------------------------
+[W] t = 8.0 a/c, v_max = 1.000000 c, cone radius v_max t = 8.000 a; max|G| = 7.609e-02
+    r =  6 a   |G| = 1.243e-04   (inside)
+    r =  8 a   |G| = 2.894e-03   (OUTSIDE cone)
+    r = 10 a   |G| = 1.308e-04   (OUTSIDE cone)
+    r = 12 a   |G| = 1.425e-06   (OUTSIDE cone)
+    r = 14 a   |G| = 5.937e-09   (OUTSIDE cone)
+    r = 16 a   |G| = 1.176e-11   (OUTSIDE cone)
+    r = 18 a   |G| = 1.266e-14   (OUTSIDE cone)
+    r = 20 a   |G| = 1.084e-17   (OUTSIDE cone)  [~float floor]
+    r = 22 a   |G| = 8.646e-19   (OUTSIDE cone)  [~float floor]
+    r = 24 a   |G| = 6.396e-19   (OUTSIDE cone)  [~float floor]
+    r = 26 a   |G| = 2.796e-18   (OUTSIDE cone)  [~float floor]
+    r = 28 a   |G| = 1.989e-18   (OUTSIDE cone)  [~float floor]
+    r = 30 a   |G| = 4.801e-18   (OUTSIDE cone)  [~float floor]
+    r = 32 a   |G| = 6.939e-18   (OUTSIDE cone)  [~float floor]
+    r = 34 a   |G| = 1.287e-18   (OUTSIDE cone)  [~float floor]
+    fit outside cone: ln|G| = -2.645 r ln r + 6.699 r + -15.01  (r ln r term < 0 => superexponential)
+------------------------------------------------------------------------------
+[B-C1] t = 4.0 a/c, v_max = 4.639687 c, cone radius v_max t = 18.559 a; max|G| = 5.929e-03
+    r = 16 a   |G| = 8.011e-04   (inside)
+    r = 18 a   |G| = 1.580e-04   (inside)
+    r = 20 a   |G| = 1.240e-05   (OUTSIDE cone)
+    r = 22 a   |G| = 4.894e-06   (OUTSIDE cone)
+    r = 24 a   |G| = 3.837e-07   (OUTSIDE cone)
+    r = 26 a   |G| = 5.788e-09   (OUTSIDE cone)
+    r = 28 a   |G| = 7.676e-10   (OUTSIDE cone)
+    r = 30 a   |G| = 5.098e-11   (OUTSIDE cone)
+    r = 32 a   |G| = 1.294e-12   (OUTSIDE cone)
+    r = 34 a   |G| = 5.100e-15   (OUTSIDE cone)
+    r = 36 a   |G| = 6.220e-16   (OUTSIDE cone)
+    r = 38 a   |G| = 2.050e-17   (OUTSIDE cone)
+    r = 40 a   |G| = 1.897e-19   (OUTSIDE cone)  [~float floor]
+    r = 42 a   |G| = 3.388e-19   (OUTSIDE cone)  [~float floor]
+    r = 44 a   |G| = 1.193e-18   (OUTSIDE cone)  [~float floor]
+    fit outside cone: ln|G| = -1.711 r ln r + 5.874 r + -25.90  (r ln r term < 0 => superexponential)
+------------------------------------------------------------------------------
+[GW-L73] t = 8.0 a/c, v_max = 1.000000 c, cone radius v_max t = 8.000 a; max|G| = 5.125e-02
+    r =  6 a   |G| = 9.653e-04   (inside)
+    r =  8 a   |G| = 3.037e-03   (OUTSIDE cone)
+    r = 10 a   |G| = 1.147e-04   (OUTSIDE cone)
+    r = 12 a   |G| = 7.879e-07   (OUTSIDE cone)
+    r = 14 a   |G| = 1.352e-09   (OUTSIDE cone)
+    r = 16 a   |G| = 3.637e-13   (OUTSIDE cone)
+    r = 18 a   |G| = 1.993e-16   (OUTSIDE cone)
+    r = 20 a   |G| = 1.172e-18   (OUTSIDE cone)  [~float floor]
+    r = 22 a   |G| = 4.390e-19   (OUTSIDE cone)  [~float floor]
+    r = 24 a   |G| = 6.637e-19   (OUTSIDE cone)  [~float floor]
+    r = 26 a   |G| = 9.632e-19   (OUTSIDE cone)  [~float floor]
+    r = 28 a   |G| = 1.708e-18   (OUTSIDE cone)  [~float floor]
+    r = 30 a   |G| = 2.861e-18   (OUTSIDE cone)  [~float floor]
+    r = 32 a   |G| = 8.674e-19   (OUTSIDE cone)  [~float floor]
+    r = 34 a   |G| = 9.893e-19   (OUTSIDE cone)  [~float floor]
+    fit outside cone: ln|G| = -5.583 r ln r + 16.607 r + -46.72  (r ln r term < 0 => superexponential)
+No strict front on the lattice for ANY law: a continuous-time evolution generated by a
+bounded nearest-neighbour operator gives G(r,t) entire in t and nonzero at every r for t>0,
+but outside the cone it decays faster than any exponential (Lieb-Robinson / Bessel-type).
+Continuum: W and KG have a strict front at c; Bogoliubov and GW-L73 have none.

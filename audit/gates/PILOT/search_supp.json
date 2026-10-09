@@ -1,0 +1,209 @@
+{
+ "\\hat{a}": {
+  "tex_hits": 7,
+  "tex_files": 1,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {
+   "tex/BCT_Appendix_AZ7.tex": 7
+  },
+  "pdf": {}
+ },
+ "creation": {
+  "tex_hits": 14,
+  "tex_files": 9,
+  "pdf_hits": 7,
+  "pdf_files": 2,
+  "tex": {
+   "BCT_Letter208_GeometryOfMarkets.tex": 3,
+   "tex/BCT_Letter105_ElectricUniverse (1).tex": 2,
+   "tex/BCT_Letter137_ArrowOfTime.tex": 2,
+   "tex/BCT_Letter105_ElectricUniverse.tex": 2,
+   "BCT_Letter254_Entanglement.tex": 1,
+   "tex/BCT_Letter120_RosicrucianLattice.tex": 1,
+   "tex/BCT_Letter106_StandingOnShoulders.tex": 1,
+   "tex/BCT_Letter106_HubbleTension.tex": 1,
+   "tex/BCT_Appendix_AZ7.tex": 1
+  },
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part1.txt": 3,
+   "PDF:BCT_Appendices_Volume2_2026__1_-compressed.txt": 4
+  }
+ },
+ "annihilation": {
+  "tex_hits": 37,
+  "tex_files": 15,
+  "pdf_hits": 33,
+  "pdf_files": 3,
+  "tex": {
+   "tex/BCT_Letter137_ArrowOfTime.tex": 7,
+   "BCT_AppL206a_EDMScaling.tex": 4,
+   "BCT_Letter206_ElectricChisel.tex": 4,
+   "BCT_Letter208_GeometryOfMarkets.tex": 4,
+   "tex/BCT_Letter77_ArrowOfTime.tex": 3,
+   "BCT_Letter207_AncientGeometers.tex": 2,
+   "BCT_AppL206b_CanyonBessel.tex": 2,
+   "tex/BCT_Letter105_ElectricUniverse (1).tex": 2,
+   "tex/BCT_Letters_Vol3.tex": 2,
+   "tex/BCT_Letter105_ElectricUniverse.tex": 2,
+   "BCT_Letter205_PhilosophersVoid.tex": 1,
+   "tex/BCT_Monograph_PLB.tex": 1,
+   "tex/BCT_Letter106_StandingOnShoulders.tex": 1,
+   "tex/BCT_Letter106_HubbleTension.tex": 1,
+   "tex/BCT_Appendix_AZ7.tex": 1
+  },
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part1.txt": 1,
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part2.txt": 8,
+   "PDF:BCT_Appendices_Volume2_2026__1_-compressed.txt": 24
+  }
+ },
+ "Hilbert": {
+  "tex_hits": 14,
+  "tex_files": 5,
+  "pdf_hits": 19,
+  "pdf_files": 2,
+  "tex": {
+   "tex/BCT_Letter20_GR_AllOrders.tex": 5,
+   "tex/BCT_Appendix_AZ6.tex": 5,
+   "tex/BCT_Letter106_StandingOnShoulders.tex": 2,
+   "BCT_Volume2_Electroweak.tex": 1,
+   "tex/BCT_Appendix_JH4_YangMills_v2_CORRECTED.tex": 1
+  },
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part1.txt": 18,
+   "PDF:BCT_Appendices_Volume2_2026__1_-compressed.txt": 1
+  }
+ },
+ "wavefunction": {
+  "tex_hits": 25,
+  "tex_files": 10,
+  "pdf_hits": 47,
+  "pdf_files": 3,
+  "tex": {
+   "tex/BCT_Letter72_Measurement.tex": 7,
+   "tex/BCT_Letter72_MeasurementProblem.tex": 6,
+   "tex/BCT_Letter201_ANU_Atoms.tex": 3,
+   "tex/BCT_Letter106_StandingOnShoulders.tex": 2,
+   "tex/BCT_Letters_Vol3.tex": 2,
+   "tex/BCT_Letter77_ArrowOfTime.tex": 1,
+   "tex/BCT_Appendix_JH_FINAL.tex": 1,
+   "tex/BCT_Appendix_JH (1).tex": 1,
+   "tex/BCT_Appendix_JH.tex": 1,
+   "tex/BCT_Appendix_JH_GRRRRRRRR.tex": 1
+  },
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part1.txt": 13,
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part2.txt": 18,
+   "PDF:BCT_Appendices_Volume2_2026__1_-compressed.txt": 16
+  }
+ },
+ "wave function": {
+  "tex_hits": 2,
+  "tex_files": 2,
+  "pdf_hits": 8,
+  "pdf_files": 3,
+  "tex": {
+   "tex/BCT_Letter30_DeltamN_tex.tex": 1,
+   "tex/BCT_Letter30_DeltamN.tex": 1
+  },
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part1.txt": 3,
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part2.txt": 4,
+   "PDF:BCT_Appendices_Volume2_2026__1_-compressed.txt": 1
+  }
+ },
+ "second-quantis": {
+  "tex_hits": 1,
+  "tex_files": 1,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {
+   "tex/BCT_Appendix_AZ7.tex": 1
+  },
+  "pdf": {}
+ },
+ "second quantiz": {
+  "tex_hits": 0,
+  "tex_files": 0,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {},
+  "pdf": {}
+ },
+ "second-quantiz": {
+  "tex_hits": 0,
+  "tex_files": 0,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {},
+  "pdf": {}
+ },
+ "quantum field": {
+  "tex_hits": 8,
+  "tex_files": 7,
+  "pdf_hits": 19,
+  "pdf_files": 3,
+  "tex": {
+   "tex/BCT_Letter126_QuantumCC.tex": 2,
+   "tex/BCT_Letter129_EmergentDistance.tex": 1,
+   "tex/BCT_Letter75_UnreasonableSimplicity.tex": 1,
+   "tex/BCT_Letter76_DarkEnergy.tex": 1,
+   "tex/BCT_Letter31_ElectronMass_tex.tex": 1,
+   "tex/BCT_Letter19_ElectronMass.tex": 1,
+   "tex/BCT_Letter31_ElectronMass.tex": 1
+  },
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part1.txt": 10,
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part2.txt": 2,
+   "PDF:BCT_Appendices_Volume2_2026__1_-compressed.txt": 7
+  }
+ },
+ "Bose-Hubbard": {
+  "tex_hits": 8,
+  "tex_files": 3,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {
+   "tex/BCT_Appendix_AZ7.tex": 5,
+   "tex/BCT_Letter27_GPAxiom.tex": 2,
+   "tex/BCT_Letter128_ChainOfNecessity.tex": 1
+  },
+  "pdf": {}
+ },
+ "path integral": {
+  "tex_hits": 8,
+  "tex_files": 4,
+  "pdf_hits": 22,
+  "pdf_files": 3,
+  "tex": {
+   "tex/BCT_Appendix_J_SphereAction.tex": 5,
+   "BCT_Volume2_Electroweak.tex": 1,
+   "tex/BCT_Letter31_ElectronMass_tex.tex": 1,
+   "tex/BCT_Letter31_ElectronMass.tex": 1
+  },
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part1.txt": 9,
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part2.txt": 5,
+   "PDF:BCT_Appendices_Volume2_2026__1_-compressed.txt": 8
+  }
+ },
+ "commutat": {
+  "tex_hits": 15,
+  "tex_files": 7,
+  "pdf_hits": 6,
+  "pdf_files": 1,
+  "tex": {
+   "tex/BCT_Appendix_JH_FINAL.tex": 3,
+   "tex/BCT_Appendix_JH (1).tex": 3,
+   "tex/BCT_Appendix_JH.tex": 3,
+   "tex/BCT_Appendix_JH_GRRRRRRRR.tex": 3,
+   "BCT_Volume4_QuarkMasses.tex": 1,
+   "tex/BCT_Letter36_OHC_tex.tex": 1,
+   "tex/BCT_Letter72_Measurement.tex": 1
+  },
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part1.txt": 6
+  }
+ }
+}

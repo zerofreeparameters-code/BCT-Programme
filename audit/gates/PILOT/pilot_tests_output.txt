@@ -1,0 +1,68 @@
+==============================================================================
+T1 -- CHSH
+==============================================================================
+max |S| over all 16 local deterministic strategies = 2 (convex hull => every LHV mixture <= 2)
+Tsirelson settings for S = E(a,b) - E(a,b') + E(a',b) + E(a',b'): a=0, a'=pi/2, b=pi/4, b'=3pi/4:
+  quantum singlet E=-cos(a-b):          |S| = 2.828427124746  (2 sqrt2 = 2.828427124746)
+  L254 'local readout of shared Hopf geometry': |S| = 2.000000000000
+  L254 model, max |S| over 3000 random setting quadruples = 2.000000000000 (never > 2: Bell)
+  r_oct identity 1/(2 r_oct + 1) = 1/sqrt2 = cos(pi/4): algebraically true; supplies no setting-
+  dependence term, no correlation function, no bound -> scored ZERO (card Sec.5 guard).
+
+==============================================================================
+T4 -- MERMIN (three defects) AND COUNTING
+==============================================================================
+max |M| over all 64 local deterministic strategies = 2
+GHZ (|000>+|111>)/sqrt2: <M> = 4.000000000000
+product (mean-field) states, max |<M>| over 2000 random = 0.975164  (<= 2: a condensate in one
+  classical field is a product state; it cannot reach 4)
+Counting (real parameters):
+  GP / complex scalar Psi (AZ6, L60)     supplies 2 real numbers per site -> 2 N_s for N_s sites
+  XY phase theta (Vol1 E.1)              supplies 1 real numbers per site -> 1 N_s for N_s sites
+  App JH interior C^2                    supplies 4 real numbers per site -> 4 N_s for N_s sites
+  pure joint state of N=2 defects on N_s=1e+03 sites: 2 N_s^N - 2 = 2.000e+06 reals; field: 2 N_s = 2.0e+03
+  pure joint state of N=3 defects on N_s=1e+03 sites: 2 N_s^N - 2 = 2.000e+09 reals; field: 2 N_s = 2.0e+03
+  pure joint state of N=2 defects on N_s=1e+06 sites: 2 N_s^N - 2 = 2.000e+12 reals; field: 2 N_s = 2.0e+06
+  pure joint state of N=3 defects on N_s=1e+06 sites: 2 N_s^N - 2 = 2.000e+18 reals; field: 2 N_s = 2.0e+06
+  three qubits: product 3x2 = 6 reals; general pure state 2*8-2 = 14 reals (GHZ needs the 14-dim space).
+  Escape route (Norsen 2010; Norsen-Marian-Oriols 2015): physical-space fields CAN carry this, but
+  only with an infinite network of added interacting fields -> added structure, not the written field.
+
+==============================================================================
+T5 -- SPEED: Salart et al. (Nature 454, 861) Eq.(3) vs lattice v_max
+==============================================================================
+Eq.(3): (V/c)^2 >= 1 + (1-beta^2)(1-rho^2)/(rho+|beta_par|)^2,  rho = 5.4e-6 (18 km, 323 ps)
+Paper's stated result: V > 1e4 c for privileged frames with Earth speed beta <= 1e-3 (Earth-rotation analysis).
+  worst case |beta_par| = beta = 0.0001 : V/c >= 9487.67
+  worst case |beta_par| = beta = 0.001 : V/c >= 994.629
+  worst case |beta_par| = beta = 0.01 : V/c >= 99.946
+  worst case |beta_par| = beta = 0.1 : V/c >= 9.99947
+  B-C1 (GP, AZ6 xi)                  v_max/c = 4.6396871  excluded as the carrier of the 18-km correlations for EVERY
+                                     privileged frame with Earth speed beta < 0.215527 (worst-case alignment)
+  B-C2 (GP, L64 dispersion xi)       v_max/c = 6.5567006  excluded as the carrier of the 18-km correlations for EVERY
+                                     privileged frame with Earth speed beta < 0.15251 (worst-case alignment)
+  B-C3 (GP, L64 text xi)             v_max/c = 3.2895276  excluded as the carrier of the 18-km correlations for EVERY
+                                     privileged frame with Earth speed beta < 0.30399 (worst-case alignment)
+  KA2 asserted phase-imprint speed   v_max/c = 6.78       excluded as the carrier of the 18-km correlations for EVERY
+                                     privileged frame with Earth speed beta < 0.147487 (worst-case alignment)
+Bancal et al. (Nat. Phys. 8, 867): ANY finite v (c < v < inf) v-causal model reproducing quantum
+  4-party correlations permits superluminal signalling; for 2 parties only experimental bounds on v
+  (as above) exclude it.
+
+==============================================================================
+READING P -- vortex-core beable vs quantum equilibrium (Letter 60 radial equation, H = 1)
+==============================================================================
+solve_bvp status: 0 (0 = converged); core slope f'(0) = 0.583189 (dimensionless GP vortex, Letter 60 normalisation)
+  r/xi = 0.01  |Psi|^2/n0 = f^2 = 3.401e-05   Madelung speed |v| = (hbar/m)/r = 100.0 (hbar/(m xi))
+  r/xi = 0.1   |Psi|^2/n0 = f^2 = 3.393e-03   Madelung speed |v| = (hbar/m)/r = 10.0 (hbar/(m xi))
+  r/xi = 0.5   |Psi|^2/n0 = f^2 = 7.999e-02   Madelung speed |v| = (hbar/m)/r = 2.0 (hbar/(m xi))
+  r/xi = 1.0   |Psi|^2/n0 = f^2 = 2.705e-01   Madelung speed |v| = (hbar/m)/r = 1.0 (hbar/(m xi))
+  r/xi = 2.0   |Psi|^2/n0 = f^2 = 6.480e-01   Madelung speed |v| = (hbar/m)/r = 0.5 (hbar/(m xi))
+  equilibrium weight |Psi|^2 inside r < 0.1 xi relative to bulk: 1.698e-03
+  => if the defect core were the beable and Psi its pilot wave, quantum equilibrium rho = |Psi|^2
+     would assign it ~zero probability of being where the defect is, and the guidance velocity
+     (hbar/m) Im(grad Psi / Psi) diverges there. Psi cannot pilot its own defects.
+Order in time of the defect (node) motion, from Psi(X(t),t) = 0:
+  first-order GP:  X'.grad Psi = -(i hbar/2m) lap Psi at the node -> X' fixed by Psi alone: FIRST order
+  second-order (wave/KG/XY): X'.grad Psi = -d_t Psi, and d_t Psi is independent Cauchy data
+                   -> X' is extra initial data; differentiating again gives X'': SECOND order

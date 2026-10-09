@@ -1,0 +1,18 @@
+# .tex files searched: 138; PDF text layers: 4
+'entangle'             tex    51 hits/  7 files | PDF    13 hits/2 vols
+'Bell'                 tex    20 hits/  3 files | PDF     0 hits/0 vols
+'CHSH'                 tex     2 hits/  1 files | PDF     0 hits/0 vols
+'Tsirelson'            tex     4 hits/  1 files | PDF     0 hits/0 vols
+'nonlocal'             tex     0 hits/  0 files | PDF     0 hits/0 vols
+'non-local'            tex    10 hits/  9 files | PDF     0 hits/0 vols
+'pilot'                tex     3 hits/  2 files | PDF     0 hits/0 vols
+'Bohm'                 tex    12 hits/  4 files | PDF    14 hits/2 vols
+'de Broglie'           tex     0 hits/  0 files | PDF     2 hits/2 vols
+'hidden variable'      tex     5 hits/  4 files | PDF     0 hits/0 vols
+'configuration space'  tex     1 hits/  1 files | PDF     2 hits/2 vols
+'Born'                 tex     2 hits/  1 files | PDF     0 hits/0 vols
+'collapse'             tex   122 hits/ 25 files | PDF     1 hits/1 vols
+'superposition'        tex    38 hits/  7 files | PDF     0 hits/0 vols
+'wave functional'      tex     0 hits/  0 files | PDF     0 hits/0 vols
+'Fock'                 tex     0 hits/  0 files | PDF     0 hits/0 vols
+'second quantis'       tex     0 hits/  0 files | PDF     0 hits/0 vols

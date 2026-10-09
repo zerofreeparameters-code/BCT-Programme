@@ -1,0 +1,211 @@
+{
+ "\\partial_t": {
+  "tex_hits": 12,
+  "tex_files": 3,
+  "pdf_hits": 23,
+  "pdf_files": 2,
+  "tex": {
+   "tex/BCT_Appendix_AZ6.tex": 10,
+   "tex/BCT_Letter60.tex": 1,
+   "tex/BCT_Letter20_GR_AllOrders.tex": 1
+  },
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part1.txt": 22,
+   "PDF:BCT_Appendices_Volume2_2026__1_-compressed.txt": 1
+  }
+ },
+ "\\dot": {
+  "tex_hits": 0,
+  "tex_files": 0,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {},
+  "pdf": {}
+ },
+ "i\\hbar": {
+  "tex_hits": 13,
+  "tex_files": 8,
+  "pdf_hits": 1,
+  "pdf_files": 1,
+  "tex": {
+   "tex/BCT_Appendix_JH_FINAL.tex": 2,
+   "tex/BCT_Appendix_JH (1).tex": 2,
+   "tex/BCT_Appendix_JH.tex": 2,
+   "tex/BCT_Appendix_JH_GRRRRRRRR.tex": 2,
+   "tex/BCT_Appendix_AZ6.tex": 2,
+   "tex/BCT_Letter36_OHC_tex.tex": 1,
+   "tex/BCT_Letter60.tex": 1,
+   "tex/BCT_Letter72_Measurement.tex": 1
+  },
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part1.txt": 1
+  }
+ },
+ "\\partial_\\mu": {
+  "tex_hits": 7,
+  "tex_files": 3,
+  "pdf_hits": 44,
+  "pdf_files": 2,
+  "tex": {
+   "tex/BCT_Letter20_GR_AllOrders.tex": 4,
+   "tex/BCT_Appendix_AZ6.tex": 2,
+   "tex/BCT_Appendix_J_SphereAction.tex": 1
+  },
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part1.txt": 43,
+   "PDF:BCT_Appendices_Volume2_2026__1_-compressed.txt": 1
+  }
+ },
+ "\\Box": {
+  "tex_hits": 0,
+  "tex_files": 0,
+  "pdf_hits": 25,
+  "pdf_files": 2,
+  "tex": {},
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part1.txt": 11,
+   "PDF:BCT_Appendices_Volume2_2026__1_-compressed.txt": 14
+  }
+ },
+ "Bogoliubov": {
+  "tex_hits": 16,
+  "tex_files": 6,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {
+   "tex/BCT_Appendix_AZ7.tex": 6,
+   "tex/BCT_Letter60.tex": 4,
+   "tex/BCT_Letter64.tex": 2,
+   "tex/BCT_Letter27_GPAxiom.tex": 2,
+   "tex/BCT_Letter78_AtomicStructure.tex": 1,
+   "tex/BCT_Appendix_AZ6.tex": 1
+  },
+  "pdf": {}
+ },
+ "dispersion": {
+  "tex_hits": 35,
+  "tex_files": 12,
+  "pdf_hits": 63,
+  "pdf_files": 3,
+  "tex": {
+   "tex/BCT_Letter129_EmergentDistance.tex": 6,
+   "tex/BCT_Letter39_TopologicalSemimetal.tex": 6,
+   "tex/BCT_Letter67.tex": 6,
+   "tex/BCT_Letter39_TopologicalSemimetal (1).tex": 6,
+   "tex/BCT_Letter73_GravitationalWaves.tex": 3,
+   "tex/BCT_Letter20_GR_AllOrders.tex": 2,
+   "tex/BCT_Letter38_DarkMatter.tex": 1,
+   "tex/BCT_Letter64.tex": 1,
+   "tex/BCT_Letter59.tex": 1,
+   "tex/BCT_Letter128_ChainOfNecessity.tex": 1,
+   "tex/BCT_Letter38_DarkMatter (1).tex": 1,
+   "tex/BCT_Appendix_AZ7.tex": 1
+  },
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part1.txt": 40,
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part2.txt": 4,
+   "PDF:BCT_Appendices_Volume2_2026__1_-compressed.txt": 19
+  }
+ },
+ "omega(k)": {
+  "tex_hits": 4,
+  "tex_files": 4,
+  "pdf_hits": 10,
+  "pdf_files": 2,
+  "tex": {
+   "tex/BCT_Letter38_DarkMatter.tex": 1,
+   "tex/BCT_Letter64.tex": 1,
+   "tex/BCT_Letter59.tex": 1,
+   "tex/BCT_Letter38_DarkMatter (1).tex": 1
+  },
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part1.txt": 7,
+   "PDF:BCT_Appendices_Volume2_2026__1_-compressed.txt": 3
+  }
+ },
+ "group velocity": {
+  "tex_hits": 4,
+  "tex_files": 4,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {
+   "tex/BCT_Appendix_JH_FINAL.tex": 1,
+   "tex/BCT_Appendix_JH (1).tex": 1,
+   "tex/BCT_Appendix_JH.tex": 1,
+   "tex/BCT_Appendix_JH_GRRRRRRRR.tex": 1
+  },
+  "pdf": {}
+ },
+ "phase velocity": {
+  "tex_hits": 33,
+  "tex_files": 13,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {
+   "tex/BCT_Appendix_JH_FINAL.tex": 5,
+   "tex/BCT_Appendix_JH (1).tex": 5,
+   "tex/BCT_Appendix_JH.tex": 5,
+   "tex/BCT_Appendix_JH_GRRRRRRRR.tex": 5,
+   "tex/BCT_Letter36_OHC_tex.tex": 4,
+   "tex/BCT_Letter73_GravitationalWaves.tex": 2,
+   "BCT_Letter254_Entanglement.tex": 1,
+   "BCT_Volume3_QCD.tex": 1,
+   "tex/BCT_Letter103_Cephalopod.tex": 1,
+   "tex/BCT_Letter105_ElectricUniverse (1).tex": 1,
+   "tex/BCT_Letter64.tex": 1,
+   "tex/BCT_Letter70_CosmicPersistence.tex": 1,
+   "tex/BCT_Letter105_ElectricUniverse.tex": 1
+  },
+  "pdf": {}
+ },
+ "superlumin": {
+  "tex_hits": 21,
+  "tex_files": 7,
+  "pdf_hits": 1,
+  "pdf_files": 1,
+  "tex": {
+   "tex/BCT_Appendix_JH_FINAL.tex": 4,
+   "tex/BCT_Appendix_JH (1).tex": 4,
+   "tex/BCT_Appendix_JH.tex": 4,
+   "tex/BCT_Appendix_JH_GRRRRRRRR.tex": 4,
+   "tex/BCT_Letter36_OHC_tex.tex": 3,
+   "tex/BCT_Letter64.tex": 1,
+   "tex/BCT_Letter70_CosmicPersistence.tex": 1
+  },
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part1.txt": 1
+  }
+ },
+ "v_{\\rm ph}": {
+  "tex_hits": 9,
+  "tex_files": 5,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {
+   "tex/BCT_Letter103_Cephalopod.tex": 3,
+   "tex/BCT_Appendix_KA2.tex": 3,
+   "tex/BCT_Letter105_ElectricUniverse (1).tex": 1,
+   "tex/BCT_Letter64.tex": 1,
+   "tex/BCT_Letter105_ElectricUniverse.tex": 1
+  },
+  "pdf": {}
+ },
+ "healing": {
+  "tex_hits": 9,
+  "tex_files": 5,
+  "pdf_hits": 18,
+  "pdf_files": 3,
+  "tex": {
+   "tex/BCT_Letter64.tex": 3,
+   "tex/BCT_Appendix_AZ6.tex": 2,
+   "tex/BCT_Appendix_AZ7.tex": 2,
+   "tex/BCT_Letter60.tex": 1,
+   "tex/BCT_Letter19_ElectronMass.tex": 1
+  },
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part1.txt": 10,
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part3.txt": 1,
+   "PDF:BCT_Appendices_Volume2_2026__1_-compressed.txt": 7
+  }
+ }
+}

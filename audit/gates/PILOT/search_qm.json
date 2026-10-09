@@ -1,0 +1,229 @@
+{
+ "entangle": {
+  "tex_hits": 51,
+  "tex_files": 7,
+  "pdf_hits": 13,
+  "pdf_files": 2,
+  "tex": {
+   "tex/BCT_Letter201_ANU_Atoms.tex": 18,
+   "BCT_Letter254_Entanglement.tex": 17,
+   "tex/BCT_Letter72_Measurement.tex": 8,
+   "tex/BCT_Appendix_AZ6.tex": 3,
+   "tex/BCT_Letter72_MeasurementProblem.tex": 2,
+   "tex/BCT_Letter137_ArrowOfTime.tex": 2,
+   "tex/BCT_Letter125_FaradayExperiment.tex": 1
+  },
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part1.txt": 8,
+   "PDF:BCT_Appendices_Volume2_2026__1_-compressed.txt": 5
+  }
+ },
+ "Bell": {
+  "tex_hits": 20,
+  "tex_files": 3,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {
+   "tex/BCT_Letter201_ANU_Atoms.tex": 10,
+   "BCT_Letter254_Entanglement.tex": 9,
+   "tex/BCT_Letter101_BlueBandedBees.tex": 1
+  },
+  "pdf": {}
+ },
+ "CHSH": {
+  "tex_hits": 2,
+  "tex_files": 1,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {
+   "BCT_Letter254_Entanglement.tex": 2
+  },
+  "pdf": {}
+ },
+ "Tsirelson": {
+  "tex_hits": 4,
+  "tex_files": 1,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {
+   "BCT_Letter254_Entanglement.tex": 4
+  },
+  "pdf": {}
+ },
+ "nonlocal": {
+  "tex_hits": 0,
+  "tex_files": 0,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {},
+  "pdf": {}
+ },
+ "non-local": {
+  "tex_hits": 10,
+  "tex_files": 9,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {
+   "tex/BCT_Letter201_ANU_Atoms.tex": 2,
+   "BCT_Letter254_Entanglement.tex": 1,
+   "tex/BCT_Letter103_Cephalopod.tex": 1,
+   "tex/BCT_Letter105_ElectricUniverse (1).tex": 1,
+   "tex/BCT_Letter106_StandingOnShoulders.tex": 1,
+   "tex/BCT_Letter64.tex": 1,
+   "tex/BCT_Appendix_KA2.tex": 1,
+   "tex/BCT_Letter72_Measurement.tex": 1,
+   "tex/BCT_Letter105_ElectricUniverse.tex": 1
+  },
+  "pdf": {}
+ },
+ "pilot": {
+  "tex_hits": 3,
+  "tex_files": 2,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {
+   "tex/BCT_Letter106_StandingOnShoulders.tex": 2,
+   "tex/BCT_Letter72_Measurement.tex": 1
+  },
+  "pdf": {}
+ },
+ "Bohm": {
+  "tex_hits": 12,
+  "tex_files": 4,
+  "pdf_hits": 14,
+  "pdf_files": 2,
+  "tex": {
+   "tex/BCT_Letter106_StandingOnShoulders.tex": 8,
+   "tex/BCT_Letter20_GR_AllOrders.tex": 2,
+   "BCT_Letter254_Entanglement.tex": 1,
+   "tex/BCT_Letter60.tex": 1
+  },
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part1.txt": 12,
+   "PDF:BCT_Appendices_Volume2_2026__1_-compressed.txt": 2
+  }
+ },
+ "de Broglie": {
+  "tex_hits": 0,
+  "tex_files": 0,
+  "pdf_hits": 2,
+  "pdf_files": 2,
+  "tex": {},
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part2.txt": 1,
+   "PDF:BCT_Appendices_Volume2_2026__1_-compressed.txt": 1
+  }
+ },
+ "hidden variable": {
+  "tex_hits": 5,
+  "tex_files": 4,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {
+   "tex/BCT_Letter72_MeasurementProblem.tex": 2,
+   "BCT_Letter254_Entanglement.tex": 1,
+   "tex/BCT_Letter106_StandingOnShoulders.tex": 1,
+   "tex/BCT_Letter72_Measurement.tex": 1
+  },
+  "pdf": {}
+ },
+ "configuration space": {
+  "tex_hits": 1,
+  "tex_files": 1,
+  "pdf_hits": 2,
+  "pdf_files": 2,
+  "tex": {
+   "tex/BCT_Letter64.tex": 1
+  },
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part1.txt": 1,
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part2.txt": 1
+  }
+ },
+ "Born": {
+  "tex_hits": 2,
+  "tex_files": 1,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {
+   "tex/BCT_Letter72_MeasurementProblem.tex": 2
+  },
+  "pdf": {}
+ },
+ "collapse": {
+  "tex_hits": 122,
+  "tex_files": 25,
+  "pdf_hits": 1,
+  "pdf_files": 1,
+  "tex": {
+   "tex/BCT_Letter72_MeasurementProblem.tex": 19,
+   "tex/BCT_Letter201_ANU_Atoms.tex": 19,
+   "tex/BCT_Letter72_Measurement.tex": 16,
+   "BCT_AppL204b_NcollapseNeural.tex": 9,
+   "BCT_Letter204_ConsciousLattice.tex": 7,
+   "BCT_Letter254_Entanglement.tex": 6,
+   "BCT_Letter205_PhilosophersVoid.tex": 6,
+   "tex/BCT_Appendix_AG1_VacuumLuminescence.tex": 5,
+   "tex/BCT_Letter114_PlasmoidPhysics.tex": 5,
+   "BCT_Volume16_Philosophy.tex": 4,
+   "tex/BCT_Letter69.tex": 4,
+   "tex/BCT_Appendix_AG1_VacuumLuminescence_final.tex": 3,
+   "BCT_Letter207_AncientGeometers.tex": 2,
+   "BCT_Letter209_GrammarOfVacuum.tex": 2,
+   "BCT_Letter253_LucidDreaming.tex": 2,
+   "tex/BCT_Letter106_StandingOnShoulders.tex": 2,
+   "tex/BCT_Letters_Vol3.tex": 2,
+   "tex/BCT_Letter135_WhyGeometry.tex": 2,
+   "BCT_AppL204c_Anaesthesia.tex": 1,
+   "BCT_Letter208_GeometryOfMarkets.tex": 1,
+   "BCT_Letter252_Dreams.tex": 1,
+   "tex/BCT_Letter77_ArrowOfTime.tex": 1,
+   "tex/BCT_Letter70_CosmicPersistence.tex": 1,
+   "tex/BCT_Letter108_TopologicalAge.tex": 1,
+   "tex/BCT_Letter137_ArrowOfTime.tex": 1
+  },
+  "pdf": {
+   "PDF:BCT_Appendices_Volume1_2026_compressed_Part1.txt": 1
+  }
+ },
+ "superposition": {
+  "tex_hits": 38,
+  "tex_files": 7,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {
+   "tex/BCT_Letter72_MeasurementProblem.tex": 11,
+   "tex/BCT_Letter72_Measurement.tex": 11,
+   "tex/BCT_Letter201_ANU_Atoms.tex": 8,
+   "BCT_Letter254_Entanglement.tex": 3,
+   "BCT_AppL204b_NcollapseNeural.tex": 3,
+   "tex/BCT_Letter137_ArrowOfTime.tex": 1,
+   "tex/BCT_Letter104_ThreeBody.tex": 1
+  },
+  "pdf": {}
+ },
+ "wave functional": {
+  "tex_hits": 0,
+  "tex_files": 0,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {},
+  "pdf": {}
+ },
+ "Fock": {
+  "tex_hits": 0,
+  "tex_files": 0,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {},
+  "pdf": {}
+ },
+ "second quantis": {
+  "tex_hits": 0,
+  "tex_files": 0,
+  "pdf_hits": 0,
+  "pdf_files": 0,
+  "tex": {},
+  "pdf": {}
+ }
+}
