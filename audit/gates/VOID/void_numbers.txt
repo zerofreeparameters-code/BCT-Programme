@@ -1,0 +1,68 @@
+# Gate VOID — void_numbers.txt
+# Every quantity in §1 of audit/gates/gate_VOID_prompt.md, as computed by the run.
+# Conventions: FCC packing, sphere radius 1/2, nearest-neighbour distance 1, conventional cubic cell edge sqrt(2).
+# Exact quantities: sympy closed form, evaluated with mpmath at 60 dps (50 digits printed).
+# Eigenvalues: finite-difference, periodic cell, Dirichlet on grid points inside spheres; three grids N=48,64,96;
+#   extrapolation rule fixed in void_eigen.py (3-point fitted order if in [0.5,3], else 2-point p=1 on finest pair).
+# This file is hashed (SHA-256) before any comparison with corpus targets; the digest is recorded in gate_VOID_RESULT.md.
+# Commit under audit: e734f933f20d518823bd6a1e46a83ce8fbd9a498 ; prompt SHA-256 e04f69db573dc8f1e3f45884508fe4cb7a75abbaf9c4cfc5f333419484b969a0
+
+## Q1 — geometry (exact)
+Omega_t = acos(23/27)                     = 0.55128559843253080794214415146445924293385062869018
+Omega_o = 4 asin(1/3)                     = 1.3593476378164877483855700535670562655529787613298
+solid-angle identity 8 Omega_t + 6 Omega_o = 4 pi   : PROVEN (sin(3 asin(1/3)) = 23/27)
+V_tet_poly = sqrt2/12                     = 0.11785113019775792073347406035080817321413932294808
+V_oct_poly = sqrt2/3                      = 0.47140452079103168293389624140323269285655729179232
+A_tet_poly = sqrt3                        = 1.7320508075688772935274463415058723669428052538104
+A_oct_poly = 2 sqrt3                      = 3.4641016151377545870548926830117447338856105076208
+V_tet_chamber = sqrt2/12 - acos(23/27)/6  = 0.025970197125669452743116701773398299391830884833049
+V_oct_chamber = sqrt2/3 - asin(1/3)       = 0.13156761133690974583750372801146862646831260145986
+wall_tet_chamber = acos(23/27)            = 0.55128559843253080794214415146445924293385062869018
+wall_oct_chamber = 6 asin(1/3)            = 2.0390214567247316225783550803505843983294681419947
+A_window = sqrt3/4 - pi/8                 = 0.040313620193495168574031162466530231211055138530707
+r_tet = sqrt6/4 - 1/2                     = 0.11237243569579452454932101867647284799148687016417
+r_oct = 1/sqrt2 - 1/2                     = 0.20710678118654752440084436210484903928483593768847
+V_ball_tet = 4 pi r_tet^3/3               = 0.0059438520735504130499920412535534486205978859253607
+V_ball_oct = 4 pi r_oct^3/3               = 0.037211019277213094306816877891158050615487108542118
+A_ball_tet = 4 pi r_tet^2                 = 0.15868265300329852289239030017271874168935949305321
+A_ball_oct = 4 pi r_oct^2                 = 0.53901208445264722135616816971712125536226481937394
+V_interstitial_per_sphere = 1/sqrt2-pi/6  = 0.18350800558824865132373713155826522525197437112596
+V_oct_chamber + 2 V_tet_chamber           = 0.18350800558824865132373713155826522525197437112596   [CHECK 2.1: PASS, exact]
+packing_fraction = pi/(3 sqrt2)           = 0.74048048969306104116931349834344894976910361489595
+void_fraction_geom = 1 - pi/(3 sqrt2)     = 0.25951951030693895883068650165655105023089638510405
+V_tet_chamber / V_ball_tet                = 4.369253609327595144849420861788976700751680821038
+V_oct_chamber / V_ball_oct                = 3.5357164058517951464847125322814672244722174069871
+wall_tet / A_ball_tet                     = 3.4741390315743667382164919747968694194803283163083
+wall_oct / A_ball_oct                     = 3.7828863499327755842577862647995994406433206095998
+MC (1e7 pts, seed 17): tet 0.0259627 +- 1.54e-05 (z=-0.48); oct 0.1315607 +- 6.69e-05 (z=-0.10); cell/sphere 0.1834354 +- 9.80e-05 (z=-0.74)   [CHECK 2.1 MC: PASS]
+
+## Q2 — eigenvalues (finite difference; h = sqrt2/N)
+mu_ball_tet = pi^2/r_tet^2 (exact)        = 781.59209197631187382536495972478631116746914789047
+mu_ball_oct = pi^2/r_oct^2 (exact)        = 230.09708000729437597253486697722429826248225322206
+VALIDATION ball R=1/2: N=48 38.13837166 ; N=64 38.40793613 ; N=96 38.81979542 ; extrapolated 39.64351398 ; target 4pi^2 = 39.47841760 ; rel.err 0.418 %   [CHECK 2.2: PASS]
+network (periodic interstitial region):   N=48 129.71333018 ; N=64 142.30677144 ; N=96 143.58282120 ; extrapolated 146.13492073  (p=1, finest pair)
+oct chamber (Neumann windows):            N=48 129.95746291 ; N=64 142.27521077 ; N=96 143.59565712 ; extrapolated 146.23654983  (p=1, finest pair)
+tet chamber (Neumann windows):            N=48 373.33508936 ; N=64 382.56375926 ; N=96 400.03490510 ; extrapolated 434.97719680  (p=1, finest pair)
+ratio network / mu_ball_oct               = 0.63510
+ratio oct chamber / mu_ball_oct           = 0.63554
+ratio tet chamber / mu_ball_tet           = 0.55652
+supplementary (outside the pre-registered grids, convergence check only): oct N=128 148.19375709, N=192 149.82251532 ; tet N=128 413.69725565, N=192 421.60732787 ; network N=128 148.21963439
+supplementary uncertainty estimate: oct/network extrapolated value 146 is likely 3-6 % low (finer grids converge from below to ~150-155); tet 435 +- ~10.
+
+## Q3 — Letter 127 re-evaluation (S_EW=pi^5/12, S_QCD=pi^5/24, NLO=alpha0(4pi+1)/pi^2, factor 2, NNLO factor as in corpus)
+alpha0 = r_oct r_tet/pi                   = 0.00740805572755
+NLO                                       = 0.0101828224767
+NNLO factor 1 - NLO(1-8 alpha0)/4         = 0.997605164214
+(i)   corpus (ball mu, ball V):           x_EW = 0.3391677385 ; x_SU3(NLO) = 0.7212652511 ; x_SU3(NNLO) = 0.7195379392
+(ii)  true V, ball mu:                    x_EW = 1.199200937  ; x_SU3(NLO) = 3.151390802  ; x_SU3(NNLO) = 3.143843738
+(iii) true V, per-chamber mu:             x_EW = 0.7621435596 ; x_SU3(NLO) = 1.75383445   ; x_SU3(NNLO) = 1.749634305
+shift factors: (ii)/(i) x_EW 3.5357 ; x_SU3 4.3693 ;  (iii)/(i) x_EW 2.2471 ; x_SU3 2.4315
+Letter 127 v2 boxed x_EW = 1/3 + pi alpha0/7 (not a GP-integral expression) = 0.336658061
+
+## Q4 — p_void (40 digits)
+tanh^2(1/sqrt2) + r_tet^2 r_oct/pi^2      = 0.3709747070159393351875407849212764086918
+tanh^2(1/sqrt2)                           = 0.3707097263651463325128276099624832226193
+r_tet^2 r_oct/pi^2                        = 0.0002649806507930026747131749587931860725139
+geometric interstitial fraction           = 0.2595195103069389588306865016565510502309
+p_void / geometric fraction               = 1.4295
+Zenodo lookup (Letters 243, 244, App AU under ORCID 0009-0007-9561-9859): NOT RETRIEVED — zenodo.org refused by the run's egress allowlist and the fetch permission lapsed; finding rests on BCT_L244_ZenodoKit.md, BCT_AppAB2_Zenodo_Kit.md, BCT_SessionHandover_June2026.md only.
