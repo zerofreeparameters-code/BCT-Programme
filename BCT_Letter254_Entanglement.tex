@@ -26,7 +26,7 @@ Spooky Action Was Never Action}
 Victoria, Australia (Pop.\ 28)}
 \email{ZeroFreeParameters@gmail.com}
 
-\date{June 2026}
+\date{June 2026 (revised 25 October 2026)}
 
 \begin{abstract}
 We present the BCT interpretation of quantum entanglement.
@@ -133,7 +133,11 @@ The CHSH inequality~\cite{chsh}:
 \end{equation}
 is violated up to $2\sqrt{2}$ (Tsirelson bound~\cite{tsirelson})
 in quantum mechanics. This maximum arises when measurement
-directions are separated by $45°$ in the Hopf fibre bundle.
+directions are separated by $45^\circ$ in the Hopf fibre bundle.
+Geometric treatments of entanglement through Hopf fibrations
+go back at least to Mosseri and Dandoloff~\cite{mosseri},
+and Christian~\cite{christian} has argued that the value
+$2\sqrt{2}$ follows from the geometry of $S^3$.
 
 In BCT, the optimal measurement angle carries a precise
 geometric signature. The CHSH optimum requires:
@@ -148,14 +152,30 @@ immediately from $\roct = (\sqrt{2}-1)/2$:
 \Rightarrow\quad \frac{1}{2\roct+1} &= \frac{1}{\sqrt{2}} = \cos\frac{\pi}{4}
 \end{align}
 The Tsirelson bound follows:
-$2/\cos(45°) = 2\sqrt{2}$.
+$2/\cos(45^\circ) = 2\sqrt{2}$.
 
 The optimal Bell measurement angle is geometrically encoded
 in the BCT octahedral void radius. This is not a free
 parameter: $\roct$ is fixed by Lorentz invariance and the
 requirement of isotropic phonon propagation in the BCT
 lattice~\cite{monograph}. Terminal-verified to 10 significant
-figures. Tier: \textsc{Proven} (algebraic identity).
+figures.
+
+\textit{Status.} The identity in Eq.~(\ref{eq:tsirelson}) is
+exact but definitional: $\roct$ is built from $\sqrt{2}$, and
+the $45^\circ$ optimum is taken from standard quantum
+mechanics, so the identity does not by itself derive the
+Tsirelson bound. Moreover, the mechanism described above ---
+a configuration fixed at creation and read locally at each
+wing --- is a local-hidden-variable model in Bell's sense,
+and Bell's theorem~\cite{bell} caps any such model at
+$\mathrm{CHSH} \leq 2$ (BCT audit, Gate MAD, notice
+CN-MAD-04). The claim that a single extended Hopf
+configuration reproduces the quantum violation is therefore
+withdrawn as stated. Reaching $E(\theta) = -\cos\theta$
+requires an OHC mechanism that gives up one of Bell's
+assumptions; that is the subject of a planned follow-up
+gate.
 
 \subsection{Entanglement Entropy as Hopf Complexity}
 
@@ -224,10 +244,12 @@ points. There is no action, no communication, and no paradox.
 Bell's inequality violations are a geometric theorem about
 Hopf fibrations, not a mystery about instantaneous influence.
 
-The BCT Tsirelson bound derivation (Eq.~\ref{eq:tsirelson})
-connects the maximum quantum violation to BCT void geometry.
-This is flagged as \textsc{Candidate} pending terminal
-verification.
+The identity in Eq.~(\ref{eq:tsirelson}) relates the BCT
+octahedral void radius to $\cos 45^\circ$, but it does not
+derive the Tsirelson bound, and the mechanism as stated
+cannot exceed the classical bound of 2 (see the Status
+paragraph above). Deriving $E(\theta) = -\cos\theta$ from
+the OHC remains open.
 
 Einstein was right that something was wrong with the
 standard account. He was looking for local hidden variables.
@@ -236,7 +258,31 @@ $H \in \mathbb{Z}$. The charge was never local.
 
 Zero free parameters.
 
-\begin{thebibliography}{9}
+\textit{Note added.} After this Letter was posted
+(9 June 2026), Hsieh~\cite{hsiehHFT,hsiehZ2} independently
+obtained the singlet correlation $E(\theta) = -\cos\theta$
+and $\mathrm{CHSH} = 2\sqrt{2}$ from a local discrete Markov
+process on a Hopf-bundle substrate carrying a single
+$\mathbb{Z}_2$ holonomy, read out through a signed pairing
+measure. That route computes the full correlation curve by
+giving up a positive joint probability over the hidden
+configuration; the mechanism of this Letter, as stated,
+gives up none of Bell's assumptions and so cannot (see the
+Status paragraph). Any future BCT derivation of $E(\theta)$
+should be compared with it.
+
+\textit{Revision, 25 October 2026.} The status of
+Eq.~(\ref{eq:tsirelson}) is corrected: the identity is
+exact but definitional, and the claim that this Letter's
+mechanism reproduces the quantum violation is withdrawn as
+stated, following Gate MAD (CN-MAD-04). This replaces
+inconsistent labels (\textsc{Proven} in the Bell section,
+\textsc{Candidate} in the Conclusion). Degree signs that did
+not render are fixed.
+References~\cite{mosseri,christian,hsiehHFT,hsiehZ2}
+were added.
+
+\begin{thebibliography}{99}
 
 \bibitem{epr}
 A.~Einstein, B.~Podolsky, N.~Rosen,
@@ -265,6 +311,20 @@ B.~S.\ Tsirelson,
 Quantum Generalizations of Bell's Inequality,
 \textit{Lett. Math. Phys.} \textbf{4}, 93 (1980).
 
+\bibitem{mosseri}
+R.~Mosseri and R.~Dandoloff,
+Geometry of entangled states, Bloch spheres and Hopf
+fibrations,
+\textit{J. Phys. A: Math. Gen.} \textbf{34}, 10243 (2001),
+\href{https://doi.org/10.1088/0305-4470/34/47/324}{10.1088/0305-4470/34/47/324}.
+
+\bibitem{christian}
+J.~Christian,
+Quantum correlations are weaved by the spinors of the
+Euclidean primitives,
+\textit{R. Soc. Open Sci.} \textbf{5}, 180526 (2018),
+\href{https://doi.org/10.1098/rsos.180526}{10.1098/rsos.180526}.
+
 \bibitem{l36}
 M.~R.\ Cabri\'e,
 \textit{BCT Letter 36: The Octet-Hopfion Condensate},
@@ -281,6 +341,21 @@ Zenodo (2026),
 M.~R.\ Cabri\'e,
 \textit{BCT Letter 204: The Conscious Lattice},
 in \textit{BCT Volume XVII}, Zenodo (2026).
+
+\bibitem{hsiehHFT}
+C.~Y.\ Hsieh,
+\textit{Holographic Fiber Theory: Topological Weaving Rule
+for the Standard Model}, v22, App.~H,
+Zenodo (7 July 2026),
+\href{https://doi.org/10.5281/zenodo.21207025}{10.5281/zenodo.21207025}.
+
+\bibitem{hsiehZ2}
+C.~Y.\ Hsieh,
+\textit{Spinor Inner Products, Fermi Statistics, and
+Tsirelson's Bound from a Single $\mathbb{Z}_2$ Holonomy on
+a Local Discrete Markov Process},
+Zenodo (10 July 2026),
+\href{https://doi.org/10.5281/zenodo.21301391}{10.5281/zenodo.21301391}.
 
 \end{thebibliography}
 
