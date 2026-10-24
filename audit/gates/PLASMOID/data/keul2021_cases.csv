@@ -1,0 +1,25 @@
+id,observer,event_year,section,kind,values_native,unit,core_values_native,angular_derived,verbatim_fragment,coding_note
+K01,Marsh,1878,core,range,4;5,in,,0,"4 or 5 in. (10-13 cm) in diameter",diameter used (length 6-8 in not used); inches converted exactly
+K02,Rotch,1903,core,single,100,cm,,0,"size 1 m",
+K03,Durward (Loch Tummel),1934,core,single,12,in,,0,"12 in. [30.5 cm] ball",inches converted exactly
+K04,Jennison,1963,core,single,22,cm,,0,"its diameter as 22 cm","later explicit value used ('a little more than 20 cm' first)"
+K05,Dmitriev,1965,core,range,11;16,cm,6;8,0,"core of 6-8 cm ... outside shell of 11-16 cm",primary = outer shell; sensitivity = core
+K06,Mickelson,1967,core,single,20,cm,,0,"diameter about 20 cm",
+K07,Dunford,1968,core,range,400;800,cm,,1,"true diameter could have been 4-8 m",derived from angular size and distance
+K08,Geiswinkler,1968,core,single,20,cm,,0,"a bright shining ball of about 20 cm",
+K09,Wagner,1978,core,range,200;300,cm,100,0,"1 m compact ... core in a blurred foggy shape of 2-3 m",primary = outer; sensitivity = core
+K10,Millitzer,1984,core,range,30;40,cm,,0,"30-40 cm",
+K11,Seattle engineer,1993,core,range,9;12,in,,0,"9-12 in. [23-30 cm] diameter",inches converted exactly
+K12,Kuzmin,1997,core,range,10;12,cm,,0,"10-12 cm in diameter","first object; second ('more than a meter') is a lower bound, not used"
+K13,Bychkov,2002,core,range,30;40,cm,,0,"approximate size 30-40 cm",
+K14,Belokon,1941,core,range,20;50,cm,,0,"20-50 cm",
+K15,Naboko,1948,core,range,15;20,cm,,0,"15-20 cm in size",
+K16,Nikitin,1948,core,single,15,cm,,0,"about 15 cm in diameter",
+K17,Wittmann,1951,core,range,50;100,cm,,0,"diameter of 50 to 100 cm","main body; 12-15 cm fragments not used"
+K18,Rubisoier,1947,core,single,100,cm,,0,"yellow fiery ball of 1 m",
+K19,Rubisoier,1949,core,single,100,cm,,0,"Another yellow ball of 1 m",
+K20,Neuruppin witnesses,1994,core,range,20;100,cm,,0,"between 0.2 and 1 m",range across 14 witnesses
+K21,Bagnall,1974,core,single,15,cm,,0,"orange sphere of 15 cm",
+K22,Wilhelm,2020,core,single,350,cm,,1,"3.5 m large",derived from 0.1 deg at 45 deg elevation
+K23,Krajcik (Poughquag),2008,notable,single,14,cm,,0,"14 cm in diameter",Section 6 notable case; sensitivity only
+K24,Mitino (Nikitin et al.),2015,notable,single,75,cm,,0,"about 75 cm",Section 6 notable case; sensitivity only

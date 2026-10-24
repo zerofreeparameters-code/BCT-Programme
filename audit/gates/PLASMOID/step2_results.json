@@ -1,0 +1,138 @@
+{
+  "A_primary": {
+    "name": "A primary",
+    "n": 22,
+    "R_obs": 0.08790988609019744,
+    "p": 0.8516,
+    "p_plus1": 0.8516148385161484,
+    "null_median": 0.18625673432682893,
+    "null_p99": 0.4981878251333983,
+    "span_periods": 8.467185244466723,
+    "p_uniform": 0.8465811140387126,
+    "pg_peak_ratio": 1.492,
+    "pg_peak_R": 0.37959856672989584,
+    "p_global": 0.9337,
+    "R_competitors": {
+      "j11/j01 (#162)": 0.08790988609019745,
+      "phi": 0.1400762256459654,
+      "R5 = 10^(1/5)": 0.07635297430618038,
+      "sqrt(e)": 0.14139576423164327,
+      "1.5": 0.37329019854191486,
+      "2": 0.005916558298926338
+    },
+    "rounding_audit": {
+      "n_reports": 22,
+      "n_numbers": 34,
+      "share_range_reports": 0.5454545454545454,
+      "share_object_reports": 0.0,
+      "cm: share multiple of 10 cm": 0.7586206896551724,
+      "cm: share multiple of 5 (not 10) cm": 0.10344827586206896,
+      "cm: share on 1-2-5 sequence (x10^k)": 0.4827586206896552,
+      "in: share multiple of 12 in (whole feet)": 0.4,
+      "in: share multiple of 3 in": 0.6,
+      "share of numbers with c = 1 (value is itself a grid step)": 0.47058823529411764,
+      "ranges: share whose endpoints are half/double (b/a = 2)": 0.16666666666666666
+    }
+  },
+  "A_core": {
+    "name": "A core",
+    "n": 22,
+    "R_obs": 0.0485457350744874,
+    "p": 0.952,
+    "p_plus1": 0.952004799520048,
+    "null_median": 0.18501249723883184,
+    "null_p99": 0.5048650260035418,
+    "span_periods": 9.450682769669196,
+    "p_uniform": 0.9505413890854125
+  },
+  "A_no_angular": {
+    "name": "A no_angular",
+    "n": 20,
+    "R_obs": 0.051313235218996715,
+    "p": 0.9536,
+    "p_plus1": 0.9536046395360464,
+    "null_median": 0.20530382779553918,
+    "null_p99": 0.5420572563441238,
+    "span_periods": 6.670428361094569,
+    "p_uniform": 0.9498902964355624
+  },
+  "A_plus_notable": {
+    "name": "A plus_notable",
+    "n": 24,
+    "R_obs": 0.09119516188496415,
+    "p": 0.8288,
+    "p_plus1": 0.8288171182881712,
+    "null_median": 0.17909629370047178,
+    "null_p99": 0.47729602709316,
+    "span_periods": 8.467185244466723,
+    "p_uniform": 0.8220815925271587
+  },
+  "A_kde": {
+    "name": "A KDE density (bw >= P0)",
+    "n": 22,
+    "R_obs": 0.08790988609019744,
+    "p": 0.8568,
+    "p_plus1": 0.8568143185681432,
+    "null_median": 0.18670618422393293,
+    "null_p99": 0.502144448880742,
+    "span_periods": 8.467185244466723,
+    "p_uniform": 0.8465811140387126
+  },
+  "A2_primary": {
+    "name": "A2 primary",
+    "n": 29,
+    "R_obs": 0.5602056481948492,
+    "p": 0.1094,
+    "p_plus1": 0.10948905109489052,
+    "null_median": 0.41524933524504914,
+    "null_p99": 0.6917792035675696,
+    "span_periods": 6.717837240599745,
+    "p_uniform": 5.8124545603078045e-05,
+    "pg_peak_ratio": 1.5565,
+    "pg_peak_R": 0.6476309302532036,
+    "p_global": 0.2797,
+    "R_competitors": {
+      "j11/j01 (#162)": 0.5602056481948485,
+      "phi": 0.4500497997453703,
+      "R5 = 10^(1/5)": 0.5924880607252049,
+      "sqrt(e)": 0.3278014134625094,
+      "1.5": 0.4381209577223358,
+      "2": 0.45088381073257994
+    },
+    "rounding_audit": {
+      "n_reports": 29,
+      "n_numbers": 14,
+      "share_range_reports": 0.13793103448275862,
+      "share_object_reports": 0.6551724137931034,
+      "cm: share multiple of 10 cm": 0.625,
+      "cm: share multiple of 5 (not 10) cm": 0.25,
+      "cm: share on 1-2-5 sequence (x10^k)": 0.375,
+      "in: share multiple of 12 in (whole feet)": 0.6666666666666666,
+      "in: share multiple of 3 in": 0.8333333333333334,
+      "share of numbers with c = 1 (value is itself a grid step)": 0.5714285714285714,
+      "ranges: share whose endpoints are half/double (b/a = 2)": 0.25
+    }
+  },
+  "A2_numeric_only": {
+    "name": "A2 numeric only",
+    "n": 10,
+    "R_obs": 0.3613595286407653,
+    "p": 0.2756,
+    "p_plus1": 0.2756724327567243,
+    "null_median": 0.26158789201841887,
+    "null_p99": 0.6985705344717209,
+    "span_periods": 4.990352558299843,
+    "p_uniform": 0.27725806097712624
+  },
+  "A2_kde": {
+    "name": "A2 KDE density (bw >= P0)",
+    "n": 29,
+    "R_obs": 0.5602056481948492,
+    "p": 0.1096,
+    "p_plus1": 0.10968903109689031,
+    "null_median": 0.41065341142170975,
+    "null_p99": 0.6779989687964467,
+    "span_periods": 6.717837240599745,
+    "p_uniform": 5.8124545603078045e-05
+  }
+}

@@ -1,0 +1,33 @@
+Gate PLASMOID — controls.  P0 = 0.4658327593 (ratio 1.5933405057)
+Expected R for a perfect ladder with Gaussian log-scatter sigma: R = exp(-2 pi^2 sigma^2 / P0^2)
+  sigma = 0.03   -> R = 0.9214
+  sigma = 0.05   -> R = 0.7966
+  sigma = 0.0854 -> R = 0.5151
+  sigma = 0.1    -> R = 0.4027
+  sigma = 0.15   -> R = 0.1292
+  sigma = 0.2    -> R = 0.02629
+  sigma = 0.3    -> R = 0.0002783
+  sigma = 0.405  -> R = 3.313e-07
+  sigma = 0.693  -> R = 1.066e-19
+  (0.0854 = sqrt(0.08^2+0.03^2), the PC1 total; 0.405 = ln 1.5; 0.693 = ln 2, Rayle's 'factor of two')
+
+PC1 (real ladder, instrument grade, n=150): n = 150; span = 3.39 periods of P0; R_obs(P0) = 0.5817; heaping-aware null: median R = 0.0682, 99th pct = 0.1740; p = 0.0000 [(k+1)/(N+1) = 0.0001]; uniform-phase Rayleigh p (for contrast only) = 6.163e-25
+PC1 periodogram peak at ratio 1.5900 (R = 0.5820); R at phi = 0.5647, R at R5 = 0.5813; span = 3.39 periods -> resolution ~ 1/k = 0.295 in log-period
+
+PC1n power at alpha = 0.01 (200 replicates each, 2000 null draws per replicate):
+  n = 20   power = 0.795
+  n = 30   power = 0.940
+  n = 50   power = 1.000
+  n = 100  power = 1.000
+  n = 150  power = 1.000
+
+PC2 (no ladder, instrument grade, n=100): false-positive rate at alpha=0.01 = 0.0075 (3/400; binomial 95% band for a true 1 % rate ~ 0.0-2.25 %)
+
+PC3 (same ladder, + 35 % eyewitness log-scatter + human rounding, n=150): detected in 0/200 replicates; mean R_obs = 0.1021 (expected from scatter alone: 7.46e-06)
+
+PC4 (no ladder, human rounding, n=150): false-positive rate at alpha=0.01 — naive uniform-phase Rayleigh 0.270; heaping-aware null 0.005
+
+PC5 power at alpha = 0.01 with total log-scatter 0.10 (intrinsic 0.0954 + 3 % measurement), instrument grade (200 replicates each, 2000 null draws per replicate):
+  n = 30   power = 0.640
+  n = 50   power = 0.920
+  n = 100  power = 0.995

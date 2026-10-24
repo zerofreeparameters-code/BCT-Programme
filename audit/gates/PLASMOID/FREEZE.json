@@ -1,0 +1,10 @@
+{
+  "frozen_at": "2026-10-24T11:53:37+00:00",
+  "note": "Coding rules, rounding model, null and scoring frozen before any R was computed on real data. Controls (step1) had been run on synthetic data only.",
+  "sha256": {
+    "plasmoid_stats.py": "6833ddb3c33edd01f590fd1e6280334fecc6a8bfbc5a217a3a417c8ab5a806f5",
+    "step2_score_pilots.py": "9a5f450d464ae3a45e9e8e10172de162d5cb35c6d966c006ba1017fad4ba32ba",
+    "data/keul2021_cases.csv": "9c6d8c0e065edf876384ee03cf03bd3fab4b374e384be3663c169fa48331eaa4",
+    "data/beatty_nmt_reports.csv": "faebcf197840a3d35e722b9ec2200ebd5a9705dacb56e26138da44ff4d5a5219"
+  }
+}

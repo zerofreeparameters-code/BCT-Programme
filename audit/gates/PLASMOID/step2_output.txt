@@ -1,0 +1,28 @@
+Freeze check passed (4 files, frozen 2026-10-24T11:53:37+00:00).
+P0 = 0.4658327593; alpha = 0.01; N_null = 10000
+
+=== Dataset A: Keul 2021 (eyewitness, professional observers) — PILOT ===
+[A primary] n = 22; span = 8.47 periods of P0; R_obs(P0) = 0.0879; heaping-aware null: median R = 0.1863, 99th pct = 0.4982; p = 0.8516 [(k+1)/(N+1) = 0.8516]; uniform-phase Rayleigh p (for contrast only) = 0.8466
+[A primary] rounding-scheme audit: {"n_reports": 22, "n_numbers": 34, "share_range_reports": 0.545, "share_object_reports": 0.0, "cm: share multiple of 10 cm": 0.759, "cm: share multiple of 5 (not 10) cm": 0.103, "cm: share on 1-2-5 sequence (x10^k)": 0.483, "in: share multiple of 12 in (whole feet)": 0.4, "in: share multiple of 3 in": 0.6, "share of numbers with c = 1 (value is itself a grid step)": 0.471, "ranges: share whose endpoints are half/double (b/a = 2)": 0.167}
+[A primary] sizes (cm, sorted): 11, 11.4, 13.3, 15, 15, 17.3, 20, 20, 22, 26.4, 30.5, 31.6, 34.6, 34.6, 44.7, 70.7, 100, 100, 100, 245, 350, 566
+[A primary] periodogram (exploratory): peak at ratio 1.4920, R = 0.3796; look-elsewhere p of that peak over 1.2-2.5 under the heaping-aware null = 0.9337
+[A primary] R at competitor ratios: j11/j01 (#162) 0.0879; phi 0.1401; R5 = 10^(1/5) 0.0764; sqrt(e) 0.1414; 1.5 0.3733; 2 0.0059
+[A primary] resolution: span 8.47 periods of P0 -> ~12 % in log-period; phi is +3.3 %, R5 is -1.1 % from P0: neither can be excluded.
+--- A sensitivities (exploratory) ---
+[A core] n = 22; span = 9.45 periods of P0; R_obs(P0) = 0.0485; heaping-aware null: median R = 0.1850, 99th pct = 0.5049; p = 0.9520 [(k+1)/(N+1) = 0.9520]; uniform-phase Rayleigh p (for contrast only) = 0.9505
+[A no_angular] n = 20; span = 6.67 periods of P0; R_obs(P0) = 0.0513; heaping-aware null: median R = 0.2053, 99th pct = 0.5421; p = 0.9536 [(k+1)/(N+1) = 0.9536]; uniform-phase Rayleigh p (for contrast only) = 0.9499
+[A plus_notable] n = 24; span = 8.47 periods of P0; R_obs(P0) = 0.0912; heaping-aware null: median R = 0.1791, 99th pct = 0.4773; p = 0.8288 [(k+1)/(N+1) = 0.8288]; uniform-phase Rayleigh p (for contrast only) = 0.8221
+[A KDE density (bw >= P0)] n = 22; span = 8.47 periods of P0; R_obs(P0) = 0.0879; heaping-aware null: median R = 0.1867, 99th pct = 0.5021; p = 0.8568 [(k+1)/(N+1) = 0.8568]; uniform-phase Rayleigh p (for contrast only) = 0.8466
+
+=== Dataset A2: Beatty collection, NMT site (eyewitness, public) — PILOT ===
+[A2 primary] n = 29; span = 6.72 periods of P0; R_obs(P0) = 0.5602; heaping-aware null: median R = 0.4152, 99th pct = 0.6918; p = 0.1094 [(k+1)/(N+1) = 0.1095]; uniform-phase Rayleigh p (for contrast only) = 5.812e-05
+[A2 primary] rounding-scheme audit: {"n_reports": 29, "n_numbers": 14, "share_range_reports": 0.138, "share_object_reports": 0.655, "cm: share multiple of 10 cm": 0.625, "cm: share multiple of 5 (not 10) cm": 0.25, "cm: share on 1-2-5 sequence (x10^k)": 0.375, "in: share multiple of 12 in (whole feet)": 0.667, "in: share multiple of 3 in": 0.833, "share of numbers with c = 1 (value is itself a grid step)": 0.571, "ranges: share whose endpoints are half/double (b/a = 2)": 0.25}
+[A2 primary] sizes (cm, sorted): 4, 4.27, 5.71, 6.7, 8.94, 9.7, 9.7, 10.2, 12.2, 15, 15.2, 21, 22, 22, 22, 23.9, 23.9, 23.9, 23.9, 23.9, 23.9, 23.9, 23.9, 23.9, 34.6, 43.1, 50, 91.4, 91.4
+[A2 primary] periodogram (exploratory): peak at ratio 1.5565, R = 0.6476; look-elsewhere p of that peak over 1.2-2.5 under the heaping-aware null = 0.2797
+[A2 primary] R at competitor ratios: j11/j01 (#162) 0.5602; phi 0.4500; R5 = 10^(1/5) 0.5925; sqrt(e) 0.3278; 1.5 0.4381; 2 0.4509
+[A2 primary] resolution: span 6.72 periods of P0 -> ~15 % in log-period; phi is +3.3 %, R5 is -1.1 % from P0: neither can be excluded.
+--- A2 sensitivities (exploratory) ---
+[A2 numeric only] n = 10; span = 4.99 periods of P0; R_obs(P0) = 0.3614; heaping-aware null: median R = 0.2616, 99th pct = 0.6986; p = 0.2756 [(k+1)/(N+1) = 0.2757]; uniform-phase Rayleigh p (for contrast only) = 0.2773
+[A2 KDE density (bw >= P0)] n = 29; span = 6.72 periods of P0; R_obs(P0) = 0.5602; heaping-aware null: median R = 0.4107, 99th pct = 0.6780; p = 0.1096 [(k+1)/(N+1) = 0.1097]; uniform-phase Rayleigh p (for contrast only) = 5.812e-05
+
+Regulation object diameters used (cm): ping-pong ball 4.000, golf ball 4.267, cue ball 5.715, tennis ball 6.700, softball 9.702, volleyball 21.008, soccer ball 21.963, basketball 23.851

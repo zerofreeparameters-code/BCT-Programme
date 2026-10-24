@@ -1,0 +1,42 @@
+(1) Disc / cylinder Dirichlet modes (TM_mn0 of a circular cavity; circular membrane)
+   (m,n) = (0,1)  j_mn = 2.404826   f/f_01 = 1.000000
+   (m,n) = (1,1)  j_mn = 3.831706   f/f_01 = 1.593341
+   (m,n) = (2,1)  j_mn = 5.135622   f/f_01 = 2.135549
+   (m,n) = (0,2)  j_mn = 5.520078   f/f_01 = 2.295417
+   (m,n) = (3,1)  j_mn = 6.380162   f/f_01 = 2.653066
+   (m,n) = (1,2)  j_mn = 7.015587   f/f_01 = 2.917295
+   (m,n) = (2,2)  j_mn = 8.417244   f/f_01 = 3.500147
+   (m,n) = (3,2)  j_mn = 9.761023   f/f_01 = 4.058932
+   -> TM110/TM010 = j11/j01 = 1.5933405057  (identical to #162's step ratio)
+   Rigid-wall acoustic modes use zeros of J_m' instead:
+   j'_11 = 1.841184
+   j'_21 = 3.054237
+   j'_31 = 4.201189
+   e.g. j'_21/j'_11 = 1.658844, j'_31/j'_21 = 1.375528 (not 1.5933)
+
+(2) Harmonics of decimal heaping, period ln10/k, vs P0
+   k = 1: ratio 10.000000  period 2.302585  offset from P0 +394.29 %
+   k = 2: ratio 3.162278  period 1.151293  offset from P0 +147.15 %
+   k = 3: ratio 2.154435  period 0.767528  offset from P0 +64.76 %
+   k = 4: ratio 1.778279  period 0.575646  offset from P0 +23.57 %
+   k = 5: ratio 1.584893  period 0.460517  offset from P0 -1.14 %
+   k = 6: ratio 1.467799  period 0.383764  offset from P0 -17.62 %
+   k = 7: ratio 1.389495  period 0.328941  offset from P0 -29.39 %
+   k = 8: ratio 1.333521  period 0.287823  offset from P0 -38.21 %
+   Span (in periods of P0, and in decades of size) needed to resolve P0 from a competitor,
+   using the card's rule 'k periods resolves ~1/k':
+   R5 = 10^(1/5)  offset   1.14 %  -> need >~   87.6 periods =  17.73 decades
+   phi            offset   3.30 %  -> need >~   30.3 periods =   6.13 decades
+   sqrt(e)        offset   7.33 %  -> need >~   13.6 periods =   2.76 decades
+   1.5            offset  12.96 %  -> need >~    7.7 periods =   1.56 decades
+   2              offset  48.80 %  -> need >~    2.0 periods =   0.41 decades
+
+(3) Minnaert resonance radius, air bubble in water: R_res = (1/2 pi f) sqrt(3 gamma p0 / rho)
+   f * R_res = 3.2865 m/s
+   f =    20 kHz -> R_res =  164.33 um
+   f =   213 kHz -> R_res =   15.43 um
+   f =   355 kHz -> R_res =    9.26 um
+   f =   515 kHz -> R_res =    6.38 um
+   f =   647 kHz -> R_res =    5.08 um
+   f =  1056 kHz -> R_res =    3.11 um
+   (Sonoluminescing bubbles are typically below resonance size; the Minnaert value sets the scale only.)
