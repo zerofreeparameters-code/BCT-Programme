@@ -1,0 +1,42 @@
+# Output of C.Y. Hsieh's chsh_sandbox.py (Zenodo 21301391, CC BY 4.0), run unmodified by the Gate SINGLET runner
+# command: python3 -I chsh_sandbox.py   (numpy 2.5.3)
+# script SHA-256: 9466a2beff16b0b950e2218b1b69ca65b52d15405784c63c6c59d9c715ff9996
+# ------------------------------------------------------------------
+=== kernel shape check: Ks(0->d)/Ks(0->0) vs cos(d*u/2) ===
+  d= 0 (  0 deg): ratio=+1.000000   cos=+1.000000
+  d= 2 ( 30 deg): ratio=+0.965918   cos=+0.965926
+  d= 4 ( 60 deg): ratio=+0.865998   cos=+0.866025
+  d= 6 ( 90 deg): ratio=+0.707062   cos=+0.707107
+  d= 8 (120 deg): ratio=+0.499952   cos=+0.500000
+  d=12 (180 deg): ratio=-0.000000   cos=+0.000000
+
+=== Variant A: spinor + squared (the pairing measure) ===
+  E(a=  0,b= 45) = -0.707107   (-cos 45 deg = -0.707107)
+  E(a=  0,b=135) = +0.707107   (-cos 135 deg = +0.707107)
+  E(a= 90,b= 45) = -0.707107   (-cos 45 deg = -0.707107)
+  E(a= 90,b=135) = -0.707107   (-cos 45 deg = -0.707107)
+  CHSH S = -2.828427   (2*sqrt2 = 2.828427)
+  no-signaling: P(A=+|a,b) for b=45 vs b'=135: 0.500000000 0.500000000
+  E(theta) curve: 0:-1.0000, 30:-0.8660, 60:-0.5000, 90:+0.0000, 120:+0.5000, 150:+0.8660, 180:+1.0000
+
+=== Variant B: periodic + unsquared (forward-stochastic LHV control) ===
+  N= 40: CHSH S = -1.430672  (bound 2)
+  N=100: CHSH S = -0.181971  (bound 2)
+  N=300: CHSH S = -0.000188  (bound 2)
+
+=== Variant C: spinor + unsquared (signed linear readout) ===
+  raw 'weights': {(1, 1): '+2.436e-03', (1, -1): '+5.880e-03', (-1, 1): '-5.880e-03', (-1, -1): '+2.436e-03'}
+  -> negative entries = True  (signed measure: linear readout is not a probability)
+
+=== Variant D: periodic + squared (squared but ungraded) ===
+  CHSH S = -0.000377   (washes out to 0: bosonic kappa=0 survivor)
+  signaling leak max|dP(A|a,b)/db| = 1.110e-16   (no signaling)
+  N= 40: CHSH = -2.536818, leak = 2.220e-16
+  N=100: CHSH = -0.363190, leak = 0.000e+00
+  (finite-N |CHSH|>2 is a transient of squaring; it washes out as N grows,
+   never reaching 2*sqrt2 or -cos(theta) -- squaring alone is not enough)
+
+=== MI-failure exhibit (variant A): interior is pair-valued ===
+  settings (a=0,b=45): off-diagonal pair-mass fraction = +0.9167
+  settings (a=0,b=135): off-diagonal pair-mass fraction = +0.9167
+  settings (a=90,b=45): off-diagonal pair-mass fraction = +0.9167

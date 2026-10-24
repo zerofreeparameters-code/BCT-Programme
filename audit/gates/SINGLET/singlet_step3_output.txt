@@ -1,0 +1,86 @@
+==============================================================================
+A. S^1 BRANCH -- the written complex scalar
+==============================================================================
+A1. Single-valued Psi = sqrt(rho) e^{i theta}: functions of theta are e^{i q theta}, q in Z.
+    Vortex frame (Letter 60 profile, Psi = f(r) e^{i H phi}): rotating by alpha about the axis gives
+    Psi -> e^{-i H alpha} Psi, so a 2 pi rotation multiplies by e^{-2 pi i H} = +1 for every H in Z.
+      H = +1 : holonomy per turn = +1.0  (periodic sector)
+      H = +2 : holonomy per turn = +1.0  (periodic sector)
+      H = -1 : holonomy per turn = +1.0  (periodic sector)
+A2. The construction on the written register (q = 1) versus with an added half-charge (q = 1/2):
+    q = 1   (written: vortex frame / theta itself)       t=3200: |S| = 0.000000000000  max|E+cos| = 1.000e+00  max|E| = 2.220e-16  marg var = 3.3e-16  relvar N = 7.5e-16
+    q = 1/2 (ADDED: double cover, antiperiodic sector)   t=3200: |S| = 2.828427124746  max|E+cos| = 8.882e-16  max|E| = 1.000e+00  marg var = 4.4e-16  relvar N = 1.4e-15
+A3. Half-quantum vortex: Psi(phi) = f e^{i phi/2} on a loop around the core:
+    Psi(0) = (1+0j), Psi(2 pi) = (-1+0j) -> jump (-2+0j): not single-valued, so not a configuration of the written
+    scalar field (pi_1(S^1) = Z: integer winding only).
+
+==============================================================================
+B. DOES ANY BCT NUMBER CHANGE THE CURVE?  (S^1 register with the q = 1/2 sector ADDED)
+==============================================================================
+alpha_0 = r_oct r_tet / pi = 0.007408055727548
+  reference (Hsieh's m, p)                                m=24 t=    468: max|E+cos| = 1.4e-14  |S| = 2.828427124746243  relvar N = 3.8e-14
+  laziness p = alpha_0 (AZ7 Lemma: hopping t = alpha_0)   m=24 t=  32194: max|E+cos| = 2.1e-14  |S| = 2.828427124746246  relvar N = 6.2e-14
+  m = 8 (z = 8 coordination), p = alpha_0                 m= 8 t=   4011: max|E+cos| = 1.5e-14  |S| = 2.828427124746246  relvar N = 4.4e-14
+  m = 48, p = 2 alpha_0                                   m=48 t=  63708: max|E+cos| = 3.4e-14  |S| = 2.828427124746247  relvar N = 1.2e-13
+  => identical limit for every choice: m, p (and t) are regulators. No BCT quantity (r_oct, r_tet,
+     alpha_0, xi/a, z) enters E(theta); BCT inputs change only the convergence rate.
+
+==============================================================================
+C. C^2 BRANCH -- App JH's two-component interior field
+==============================================================================
+C1. Unit C^2 vectors: |chi|^2 = [1. 1. 1. 1. 1.] -> 4 real components on the unit sphere: S^3.
+    Hopf map n = chi^dag sigma chi: |n| = [1. 1. 1. 1. 1.] -> S^2.
+    So the field Psi_2/|Psi_2| has target S^3 (pi_3(S^3) = Z, pi_1(S^3) = 0); 'S^3 -> S^2' in App JH
+    is the Hopf projection n, not the field map. On the domain B^3(R_s) an integer invariant exists
+    only with a constant boundary value (compactification to S^3), which App JH does not impose.
+C2. Real-spinor circle chi(psi) = (cos psi/2, sin psi/2):
+    psi = 0.000 : chi = [1. 0.]   n = (+0.000, +0.000, +1.000)
+    psi = 1.571 : chi = [0.707107 0.707107]   n = (+1.000, +0.000, +0.000)
+    psi = 3.142 : chi = [0. 1.]   n = (+0.000, +0.000, -1.000)
+    psi = 6.283 : chi = [-1.  0.]   n = (-0.000, +0.000, +1.000)
+    n(psi) = (sin psi, 0, cos psi): the spinor circle double-covers the x-z great circle and
+    chi(psi + 2 pi) = -chi(psi): antiperiodicity is automatic for a C^2 field (the SU(2) centre -1).
+    |<chi(a)|chi(b)>| = |cos((a-b)/2)| -- the spin-1/2 overlap (checked): True
+C3. Construction on the spinor circle: walker position psi_k on the 2m-site circle (ADDED walk),
+    readout amplitude <chi(a_A)|chi(psi)> (the spinor component itself, no projection needed),
+    joint amplitude summed over source framing, squared (ADDED Born readout):
+    t = 468: max|E + cos| over 576 pairs = 7.94e-16 ; |S| = 2.828427124746 ; marginal variation = 5.6e-16
+    linear (unsquared) readout at (0, 45deg), normalised: [[ 0.5       1.207107] [-1.207107  0.5     ]] -> negative entries
+    The walk is inert here: the readout vector <chi(a)|chi(psi)> is already the pure n = +-1 harmonic,
+    so K^t only rescales it. On this branch the spinor overlap does the filtering the walk does on S^1.
+    => on the C^2 branch the Z2 sign (ii) comes with the field, but the walk (i), the readout
+       rule (iii), the source framing and the setting-to-SU(2) identification are all still added.
+
+==============================================================================
+D. LATTICE POINT GROUP AND SPIN STRUCTURES (candidate (ii): 'a spin structure fixed by the point group')
+==============================================================================
+body-centred tetragonal, c/a = sqrt2: first shells at [1.         1.41421356 1.73205081] ; nearest-neighbour count = 12
+point group order = 48 ; contains inversion: True ; contains a 3-fold rotation: True
+  => order 48 with 3-fold axes = O_h: the c/a = sqrt2 BCT lattice is fcc. AZ7 Sec.'Argument 3' uses
+     C_4v (order 8, no inversion); the Bravais lattice's holohedry is O_h, which contains D_4h and C_4v.
+  C_4v 'E' irrep (AZ7 Lemma 'Spinor excluded') is the single-valued 2D rep; its C_4 matrix:
+    C4 = [[0, -1], [1, 0]] ; C4^4 = [[1, 0], [0, 1]] (= +identity: single-valued, not a spinor; spinor irreps belong to the double group, where C4^4 = -1)
+spin structures on the lattice torus R^3/Lambda: homomorphisms Lambda -> Z2 (sign of each lattice
+  translation's lift), 8 in all; f = (0,0,0) is the trivial, all-periodic one. Invariant under:
+    O_h (full, order 48)         |G| = 48 : 1 invariant -> f(a=(1,0,0))=0 f(body=(1/2,1/2,c/2))=0 f(c=(0,0,c))=0
+    O (proper rotations)         |G| = 24 : 1 invariant -> f(a=(1,0,0))=0 f(body=(1/2,1/2,c/2))=0 f(c=(0,0,c))=0
+    D_4h (preserve z-axis)       |G| = 16 : 2 invariant -> f(a=(1,0,0))=0 f(body=(1/2,1/2,c/2))=0 f(c=(0,0,c))=0; f(a=(1,0,0))=0 f(body=(1/2,1/2,c/2))=1 f(c=(0,0,c))=0
+    C_4v (fix +z, as in AZ7)     |G| =  8 : 2 invariant -> f(a=(1,0,0))=0 f(body=(1/2,1/2,c/2))=0 f(c=(0,0,c))=0; f(a=(1,0,0))=0 f(body=(1/2,1/2,c/2))=1 f(c=(0,0,c))=0
+  => the full lattice point group fixes the spin structure uniquely, and fixes it to the TRIVIAL
+     (periodic) one; only a reduced subgroup (C_4v, D_4h) leaves room for antiperiodic choices, and
+     then the choice is free. Either way the lattice does not supply an antiperiodic sector, and a
+     spin structure of space acts on spatial loops, not on the internal phase register.
+
+==============================================================================
+E. APP JH FREE ENERGY UNDER ITS OWN CONSTRAINT |Psi_2|^2 = rho_0 (side finding)
+==============================================================================
+With |Psi_2|^2 = rho_0 fixed, the |Psi|^4 and surface terms of eq:free-energy are constants, so
+F = const + (hbar^2 rho_0 / 2m) * D, D = integral |grad chi|^2 over B^3(R_s), chi = Psi_2/sqrt(rho_0) in S^3.
+Degree-1 radial texture of size eps (chi = (sin g(r) rhat, cos g(r)), g: pi -> 0 on [0, eps], constant outside):
+    eps/R_s = 1.000 : D = 53.908073   D/eps = 53.908073
+    eps/R_s = 0.500 : D = 26.954036   D/eps = 53.908073
+    eps/R_s = 0.250 : D = 13.477018   D/eps = 53.908073
+    eps/R_s = 0.125 : D = 6.738509   D/eps = 53.908073
+  => D scales as eps: the degree-1 (Hopf-charge-1 after projection) class has infimum equal to the
+     uniform (H = 0) value and no minimiser. The written F does not select H = 1; App JH's selection
+     rests on eq:hopf-matching (a net current out of a closed surface), which is not part of F.

@@ -1,0 +1,21 @@
+# Output of C.Y. Hsieh's nosignaling_completeness.py (Zenodo 21301391, CC BY 4.0), run unmodified by the Gate SINGLET runner
+# command: python3 -I nosignaling_completeness.py   (numpy 2.5.3)
+# script SHA-256: b014ec98c6dfa3fe222224bc60d5c791782447e8d0927ef62660ad1cf3266887
+# ------------------------------------------------------------------
+beta    E0 leak        E0 Z(0,3)/Z(0,9)   E1 leak        E0 CHSH     E1 CHSH
+0.0   1.665e-16      1.000000        5.551e-17     -2.828427   -1.133246
+0.3   9.340e-06      1.000000        0.000e+00     -2.766196   -1.108312
+0.6   1.752e-05      1.000000        5.551e-17     -2.594916   -1.039687
+
+Tsirelson bound 2*sqrt(2) = 2.828427
+E1 E(theta) curve, beta=0.0:  0:-0.4007, 30:-0.3470, 60:-0.2003, 90:+0.0000, 120:+0.2003, 150:+0.3470, 180:+0.4007
+E1 E(theta) curve, beta=0.6:  0:-0.4007, 30:-0.3470, 60:-0.2003, 90:-0.0000, 120:+0.2003, 150:+0.3470, 180:+0.4007
+
+sanity (E0, beta=0): CHSH = -2.828427 (variant A: -2.828427), E(45deg) = -0.707107
+
+beta scan: E0 leak / E1 leak
+  beta=0.05:  E0 1.591e-06   E1 0.000e+00
+  beta=0.10:  E0 3.175e-06   E1 5.551e-17
+  beta=0.20:  E0 6.304e-06   E1 5.551e-17
+  beta=0.40:  E0 1.224e-05   E1 5.551e-17
+  beta=0.80:  E0 2.195e-05   E1 5.551e-17

@@ -1,0 +1,370 @@
+files searched (card Sec.0.2 list; JH4 disclosed as a separate appendix, not a JH version):
+  L254@501ea79             git show 501ea79:BCT_Letter254_Entanglement.tex
+  AppJH_FINAL              tex/BCT_Appendix_JH_FINAL.tex
+  AppJ                     tex/BCT_Appendix_J_SphereAction.tex
+  AZ6                      tex/BCT_Appendix_AZ6.tex
+  AZ7                      tex/BCT_Appendix_AZ7.tex
+  L36_OHC                  tex/BCT_Letter36_OHC_tex.tex
+  L60                      tex/BCT_Letter60.tex
+  L64                      tex/BCT_Letter64.tex
+  OneMedium                tex/BCT_OneMedium_JournalEdition_v2.txt
+  Monograph_PLB(search)    tex/BCT_Monograph_PLB.tex
+  AppJH4(disclosed)        tex/BCT_Appendix_JH4_YangMills_v2_CORRECTED.tex
+
+==============================================================================
+(i) stochastic process
+==============================================================================
+  stochastic                             total  13 | L64:13
+  markov                                 total  22 | L64:22
+  random walk                            total   0 |
+  random                                 total   0 |
+  transfer (matrix|operator)             total   1 | AppJH4(disclosed):1
+  master equation                        total   0 |
+  langevin                               total   0 |
+  fokker                                 total   0 |
+  noise                                  total   1 | L254@501ea79:1
+  diffus                                 total   0 |
+  heat kernel                            total   0 |
+  path integral                          total   6 | AppJ:5, OneMedium:1
+  partition function                     total   3 | Monograph_PLB(search):2, AppJH4(disclosed):1
+  probability measure                    total   2 | AppJH4(disclosed):2
+  -- hit lines --
+    L254@501ea79:173: OHC condensate being perturbed by environmental noise
+    AppJ:86: vertices in the \BCT\ lattice path integral, which is not yet established.
+    AppJ:332: fields enter the path integral through Grassmann integrals,
+    AppJ:351: the dominant contribution in the \BCT\ path integral --- requiring the explicit
+    AppJ:377: Electron mass (exact) & Open & Requires lattice path integral (K) \\
+    AppJ:395: Whether the $21$-vertex loop exists in the \BCT\ path integral, and reproduces
+    L64:8: Non-Markovian Emergence from Hopf Vacuum Geometry}
+    L64:18: of the indivisible non-Markovian stochastic processes that reproduce quantum
+    L64:24: Non-Markovian Theorem}: the OHC is structurally non-Markovian---its Bogoliubov
+    L64:27: single moment in time. No Markovian stochastic process can encode it. The OHC
+    L64:28: vacuum is the concrete physical substrate for Barandes's indivisible stochastic
+    L64:37: faces of the same coin: the OHC provides the non-Markovian substrate from which
+    L64:52: non-Markovian stochastic processes. The quantum/classical gap is not mysterious:
+    L64:53: it is a single assumption (Markovianity) that, when dropped, allows quantum
+    L64:56: non-Markovian stochastic dynamics reproduce quantum mechanics?}
+    L64:86: \section{Theorem I: OHC Non-Markovian Theorem}
+    L64:88: \textit{Statement.} The OHC vacuum is structurally non-Markovian. No Markovian
+    L64:89: stochastic process over any configuration space can reproduce its dynamics.
+    L64:91: \textit{Proof sketch.} Two independent mechanisms enforce non-Markovianity:
+    L64:98: the phonon sector ($k\xi\ll 1$), $\omega\propto k$ (linear, Markovian-compatible).
+    L64:103: The OHC is not Markovian in its ultraviolet sector.
+    L64:114: A Markovian process is memoryless: the future depends only on the present state.
+    L64:117: history. Therefore, no Markovian stochastic process over any local configuration
+    L64:121: Barandes's programme requires. Its dynamics are non-Markovian by topological
+    L64:122: necessity, not by assumption. The indivisibility of the OHC stochastic process
+    L64:165: Upward & How does QM arise from classical stochastics? & OHC non-Markovian theorem \\
+    L64:172: and the same geometric structure---the OHC vacuum. Non-Markovianity and
+    L64:178: Markovian process $\Rightarrow$ the vacuum dynamics are indivisible
+    L64:179: $\Rightarrow$ quantum mechanics emerges from non-Markovian OHC stochastics.
+    L64:220: \item The physical substrate for Barandes's indivisible non-Markovian
+    L64:221: stochastic processes (non-Markovian theorem).
+    L64:235: \bibitem{barandes2023} J.~A.~Barandes, ``The Stochastic-Quantum Correspondence,''
+    L64:238: Stochastic Processes,'' arXiv:2507.21192 (2025).
+    OneMedium:267: What remained was a second, independent factor of the instanton path integral: the moduli-space
+    Monograph_PLB(search):456: of the partition function), $\Dfour$ is the \textit{unique} root lattice
+    Monograph_PLB(search):1107: The self-dual $\Dfour$ lattice ($D_4^* = D_4$) has partition function
+    AppJH4(disclosed):78: \item The Wilson partition function $Z=\int\!\prod_\ell dU_\ell\,e^{-S_W[U]}$
+    AppJH4(disclosed):79: exists as a well-defined probability measure on $\mathrm{SU}(3)^{|\Lambda|}$,
+    AppJH4(disclosed):92: \item The transfer matrix $T$ is strictly positive on $\mathcal H_{\mathrm{phys}}$
+    AppJH4(disclosed):107: probability measure on gauge connections on $\mathbb R^4$ (not a fixed
+
+==============================================================================
+(ii) Z2 / double cover
+==============================================================================
+  double cover                           total   3 | AppJH_FINAL:2, L36_OHC:1
+  antiperiod                             total   0 |
+  anti-period                            total   0 |
+  spin structure                         total   0 |
+  holonomy                               total   0 |
+  half-quantum                           total   0 |
+  half quantum                           total   0 |
+  half-integer                           total   9 | AppJH_FINAL:3, AppJ:2, AZ7:2, L36_OHC:2
+  \\mathbb\{Z\}_2                        total   8 | Monograph_PLB(search):8
+  Z_2                                    total   2 | AppJH_FINAL:2
+  spinor                                 total  18 | AppJH_FINAL:4, AZ7:6, L36_OHC:2, OneMedium:3, Monograph_PLB(search):3
+  SU\(2\)                                total   3 | OneMedium:3
+  4\\pi                                  total  21 | AppJH_FINAL:5, AppJ:10, AZ6:1, L36_OHC:1, L64:2, Monograph_PLB(search):2
+  720                                    total   3 | AppJH_FINAL:1, L36_OHC:2
+  \\pi phase|phase of \$\\pi\$|\u03c0 phase total   4 | AppJH_FINAL:2, L36_OHC:1, OneMedium:1
+  -- hit lines --
+    AppJH_FINAL:87: (2)~the \OHC\ connects \BCT\ directly to spinor geometry, since the
+    AppJH_FINAL:88: Hopf fibration realises the double cover $\mathrm{SU}(2)\to\mathrm{SO}(3)$
+    AppJH_FINAL:89: and fermion traversal accumulates a phase of $\pi$ per pass;
+    AppJH_FINAL:157: \eta(z_1,z_2) = z_1/z_2 \in \mathbb{C}P^1 \cong S^2,
+    AppJH_FINAL:160: where $(z_1,z_2)\in\mathbb{C}^2$ with $|z_1|^2+|z_2|^2=1$.
+    AppJH_FINAL:226: = \az\cdot\rho_0\cdot 4\pi\Rsph^2,
+    AppJH_FINAL:303: \section{Result 3: Half-Integer Spin from Hopf Topology}
+    AppJH_FINAL:308: double cover
+    AppJH_FINAL:314: $S^1$, accumulating a phase of $\pi$ (not $2\pi$) per traversal.
+    AppJH_FINAL:315: Two traversals (a full $4\pi$ rotation in $\mathrm{SO}(3)$) return to
+    AppJH_FINAL:317: This is precisely the spinor property: the $4\pi$~periodicity of
+    AppJH_FINAL:320: In \BCT, half-integer spin is not a separate input.
+    AppJH_FINAL:378: $8_v$ (vector), $8_s$ (spinor), $8_c$ (co-spinor) of $\mathrm{Spin}(8)$.
+    AppJH_FINAL:423: \approx \exp\!\left(-\frac{\pi^5/6}{1-\az(4\pi+1)/\pi^2}\right)
+    AppJH_FINAL:458: 3. Half-integer spin
+    AppJH_FINAL:460: & $4\pi$ periodicity \\
+    AppJH_FINAL:515: \href{https://doi.org/10.5281/zenodo.18957202}{doi:10.5281/zenodo.18957202}.
+    AppJH_FINAL:550: \textit{Spinors and Space-Time, Vol.~2: Spinor and Twistor Methods in
+    AppJ:153: \sigma_s = \Delta V \cdot d \approx \frac{Q\,d^2}{4\pi \Rsph^2}.
+    AppJ:158: \az = \frac{\rtet\,\roct}{4\pi \Rsph^2},
+    AppJ:164: \sigma_s = \frac{\rtet\,\roct}{4\pi \Rsph^2} = \az\,(J/J_0),
+    AppJ:171: This follows from the same geometric ratio $\rtet\,\roct/(4\pi \Rsph^2)$ that
+    AppJ:236: = \sigma_s\,4\pi \Rsph^2\,|\Psi(\Rsph)|^2 .
+    AppJ:242: = \frac{\sigma_s\,4\pi \Rsph^2}{J\,\Rsph}\,
+    AppJ:248: g &= \az\,\frac{4\pi \Rsph^2}{\Rsph}\,\tanh^2(\roct/\xi) \nonumber\\
+    AppJ:249: &= \az \cdot 4\pi \Rsph \cdot \tanh^2(0.0894) \nonumber\\
+    AppJ:256: $\rtet\,\roct/(4\pi \Rsph^2)$ that defines the fine-structure constant: the
+    AppJ:317: $\az^{10}/(4\pi)$ & $3.9613\times10^{-23}$ & ratio 0.9464 ($\pm5.36\%$) \\
+    AppJ:335: $\az^{\ell/2}$ --- a half-integer power of $\az$ per loop vertex. If $m_e$ is
+    AppJ:393: half-integer powers of $\az$, and the electron mass would require an exponent
+    AZ6:403: = \frac{\pi^5/6}{1 - (4\alpha_0/\pi)(1 + 1/(4\pi))}
+    AZ7:61: ruling out spinor and tensor order parameters. Together the three arguments
+    AZ7:98: \emph{scalar} (spin-0), not a spinor or a higher-spin tensor.
+    AZ7:352: -1 & \text{(fermionic, half-integer spin, Kramers)} \end{cases}
+    AZ7:359: \begin{lemma}[Spinor excluded]\label{lem:spinor}
+    AZ7:360: The $E$ (spinor doublet) representation of $C_{4v}$ cannot support
+    AZ7:364: The $E$ representation consists of two-component spinors.
+    AZ7:366: representation (half-integer spin). By Kramers' theorem,
+    AZ7:402: By Lemmas~\ref{lem:spinor} and~\ref{lem:1d}, the representations
+    L36_OHC:68: Six principal results are established: topological quantisation, spinor
+    L36_OHC:167: \subsection{Result 3: Half-Integer Spin}
+    L36_OHC:169: The Hopf fibration $S^3\to S^2$ realises the double cover
+    L36_OHC:171: Fermions threading the \OHC\ interior accumulate a phase of $\pi$ per
+    L36_OHC:172: traversal ($4\pi$ periodicity).
+    L36_OHC:173: Half-integer spin is a topological consequence of the \OHC\ structure,
+    L36_OHC:235: doi:\href{https://doi.org/10.5281/zenodo.18957202}{10.5281/zenodo.18957202}
+    L36_OHC:289: \href{https://doi.org/10.5281/zenodo.18957202}{doi:10.5281/zenodo.18957202}.
+    L36_OHC:310: \textit{Spinors and Space-Time, Vol.~2},
+    L64:107: H = \frac{1}{4\pi^2}\int_{\mathbb{R}^3} \mathbf{F}\cdot\mathbf{A}\,d^3x,
+    L64:136: H_R = \frac{1}{4\pi^2}\int_{B_R} \mathbf{F}\cdot\mathbf{A}\,d^3x
+    OneMedium:20: with spinor structure, Fermi statistics and three generations arising from lattice topology and
+    OneMedium:456: The same two voids that build α0 fix the electroweak mixing. The SU(2) coupling is carried by
+    OneMedium:545: • Four-component spinor: two void types (octahedral, tetrahedral) × two winding chiralities.
+    OneMedium:546: The famous “two full turns to return” of the spinor is the lattice’s own requirement.
+    OneMedium:547: • Fermi statistics: a vortex acquires a topological π phase under 2π rotation; exchange
+    OneMedium:702: • SU(2)L from the two-component order parameter of the octahedral void condensate.
+    OneMedium:737: Gauge group void topology & winding SU(3)×SU(2)L×U(1)Y derived
+    Monograph_PLB(search):430: the vector representation $\bm{8}_v$, the positive spinor $\bm{8}_s$,
+    Monograph_PLB(search):431: and the negative spinor $\bm{8}_c$. No other simple Lie algebra possesses
+    Monograph_PLB(search):597: area $4\pi R^2 = \pi$ (for $R = 1/2$), so
+    Monograph_PLB(search):598: $\alpha_0 = \roct \times \rtet / (4\pi R^2)$.
+    Monograph_PLB(search):1063: ``proofs'' below establish only that the $D_4\,\mathbb{Z}_2 / T_d$ structure fixes
+    Monograph_PLB(search):1086: \subsection{Proof 1: $\Dfour$ $\mathbb{Z}_2$ centre symmetry}
+    Monograph_PLB(search):1088: The $\Dfour$ Weyl group $W(D_4)$ of order 192 has a $\mathbb{Z}_2$ centre
+    Monograph_PLB(search):1093: vacuum is $\mathbb{Z}_2$-invariant, $Z(\theta) = Z(-\theta)$, requiring
+    Monograph_PLB(search):1118: The $D_4$ $\mathbb{Z}_2$ symmetry protects $\theta = 0$ at each loop order.
+    Monograph_PLB(search):1511: \subsection{The $\Dfour$ $\mathbb{Z}_2$-stable scalar at 62.9~GeV}
+    Monograph_PLB(search):1513: BCT predicts a dark matter candidate: a $\Dfour$ $\mathbb{Z}_2$-stable
+    Monograph_PLB(search):1520: inherited from the $\mathbb{Z}_2$ centre of the $\Dfour$ Weyl group.
+    Monograph_PLB(search):1564: through the lattice. The four-component spinor structure arises from the
+
+==============================================================================
+(iii) readout rule
+==============================================================================
+  \bborn\b                               total   0 |
+  measurement                            total  16 | L254@501ea79:7, AZ6:2, L64:3, OneMedium:2, Monograph_PLB(search):2
+  readout                                total   0 |
+  read out                               total   0 |
+  projector                              total   0 |
+  probabilit                             total   3 | L64:1, AppJH4(disclosed):2
+  \|\^2|\|\^\{2\}                        total  22 | AppJH_FINAL:5, AppJ:5, AZ6:7, AZ7:3, L60:1, Monograph_PLB(search):1
+  modulus                                total   3 | AZ6:1, OneMedium:1, Monograph_PLB(search):1
+  expectation value                      total   4 | AZ7:2, Monograph_PLB(search):2
+  -- hit lines --
+    L254@501ea79:38: conserved across arbitrary spatial separation. Measurement
+    L254@501ea79:56: measurement of one particle, the superposition ``collapses''
+    L254@501ea79:104: measurement. Measurement does not collapse anything. It reads
+    L254@501ea79:107: \subsection{Why Measurements Are Always Correlated}
+    L254@501ea79:135: in quantum mechanics. This maximum arises when measurement
+    L254@501ea79:138: In BCT, the optimal measurement angle carries a precise
+    L254@501ea79:153: The optimal Bell measurement angle is geometrically encoded
+    AppJH_FINAL:118: -\frac{\hbar^2}{2m}\nabla^2\Psiint + g|\Psiint|^2\Psiint
+    AppJH_FINAL:160: where $(z_1,z_2)\in\mathbb{C}^2$ with $|z_1|^2+|z_2|^2=1$.
+    AppJH_FINAL:196: $|\Psiint|^2 = |\psi_+|^2 + |\psi_-|^2 = \rho_0$ (constant bulk density).
+    AppJH_FINAL:203: \left[\frac{\hbar^2}{2m}|\nabla\Psiint|^2
+    AppJH_FINAL:205: + \frac{\az\hbar^2}{2m\Rsph}\oint_{S^2}|\Psiint|^2\,dA,
+    AppJ:103: -\xi^2\nabla^2\Psi + \frac{g}{J}|\Psi|^2\Psi = \Psi
+    AppJ:136: + \frac{J}{\xi^2}\frac{(|\Psi|^2 - \Psi_0^2)^2}{4}\,\right].
+    AppJ:235: H_{\mathrm{int}} = \sigma_s \oint_{r=\Rsph}|\Psi|^2\,dS
+    AppJ:236: = \sigma_s\,4\pi \Rsph^2\,|\Psi(\Rsph)|^2 .
+    AppJ:243: \frac{|\Psi(\Rsph)|^2}{\Psi_0^2}.
+    AZ6:92: $K_\mathrm{BCT} = \rho_0 c^2$ is the BCT condensate bulk modulus.
+    AZ6:133: - \frac{\hbar^2}{2m}|\nabla\Psi|^2
+    AZ6:134: - V(|\Psi|^2)\right].
+    AZ6:139: V(|\Psi|^2) = \frac{g}{2}\left(|\Psi|^2 - n_0\right)^2,
+    AZ6:148: Write $\Psi = \sqrt{\rho}\,e^{i\theta}$ where $\rho = |\Psi|^2$ is the
+    AZ6:154: \frac{\hbar^2}{2m}|\nabla\Psi|^2 &=
+    AZ6:180: where $v^2 = |\mathbf{v}|^2 = (\hbar/m)^2|\nabla\theta|^2$ and
+    AZ6:205: + |\nabla\delta\theta|^2\right)\right]
+    AZ6:448: within $\sim 7\sigma$ of CODATA. Planned NIST/PTB high-precision $G$ measurements
+    AZ6:600: NIST/PTB $G$ measurements (c.~2030).
+    AZ7:87: $V(|\Psi|^2) = (g/2)(|\Psi|^2 - n_0)^2$.}
+    AZ7:159: For the GP potential $V = (g/2)(|\Psi|^2-n_0)^2$, the second-quantised
+    AZ7:229: V_n(\rho) = \frac{g_n}{2n}\,\rho^n, \qquad \rho = |\Psi|^2,\quad n \in \{2,3,4,\ldots\}.
+    AZ7:355: since condensation requires a classical expectation value
+    AZ7:368: A non-zero expectation value $\langle\psi\rangle \neq 0$
+    L60:70: i\hbar\,\partial_t\Psi = \left[-\frac{\hbar^2}{2m}\nabla^2 + g|\Psi|^2\right]\Psi.
+    L64:46: The measurement problem and the quantum-to-classical transition remain
+    L64:54: mechanics to emerge from ordinary probability theory. The question his programme
+    L64:149: can determine $H$ by performing a local measurement of the condensate field.
+    L64:191: model. They find that optimal measurements saturate the Cram\'er-Rao bound
+    OneMedium:222: the condensate bulk modulus; its direct numerical evaluation requires the
+    OneMedium:517: on the effective geometry defined by the medium’s own sound cone, and can perform measurements
+    OneMedium:751: to be almost exactly zero): predicted dn ≈ 10−32 e cm from the exact ¯θ = 0; a measurement
+    Monograph_PLB(search):94: couplings, the Higgs quartic coupling and vacuum expectation value, six quark masses,
+    Monograph_PLB(search):974: The first-row unitarity relation $|V_{ud}|^2 + |V_{us}|^2 + |V_{ub}|^2 = 1$
+    Monograph_PLB(search):1287: compared to the muonic hydrogen measurement $r_p = 0.8414$~fm.
+    Monograph_PLB(search):1410: The electroweak vacuum expectation value $v = 246.2$~GeV is determined by
+    Monograph_PLB(search):1581: lattice elastic modulus, which in turn depends on $\azero$ and $\LQCD$.
+    Monograph_PLB(search):1681: measurements gives $\chi^2/\text{dof} = 0.95$ with zero free parameters.
+    AppJH4(disclosed):79: exists as a well-defined probability measure on $\mathrm{SU}(3)^{|\Lambda|}$,
+    AppJH4(disclosed):107: probability measure on gauge connections on $\mathbb R^4$ (not a fixed
+
+==============================================================================
+carrier: C^2 / S^2 / S^3
+==============================================================================
+  mathbb\{C\}\^2                         total   2 | AppJH_FINAL:2
+  C\^2                                   total  26 | AppJ:9, AZ6:12, L64:1, Monograph_PLB(search):4
+  two-component                          total   4 | AppJH_FINAL:1, AZ7:1, OneMedium:1, Monograph_PLB(search):1
+  S\^2                                   total  39 | AppJH_FINAL:19, AppJ:1, AZ6:9, AZ7:1, L36_OHC:3, L60:2, L64:2, Monograph_PLB(search):2
+  S\^3                                   total  15 | AppJH_FINAL:12, L36_OHC:2, L60:1
+  pi_3                                   total   7 | AppJH_FINAL:4, L36_OHC:1, L60:1, L64:1
+  pi_1                                   total   0 |
+  \\psi_\+|\\psi_-                       total   1 | AppJH_FINAL:1
+  qubit                                  total   1 | L254@501ea79:1
+  bloch                                  total   0 |
+  -- hit lines --
+    L254@501ea79:165: for a qubit pair) corresponds to a single irreducible
+    AppJH_FINAL:78: $\HopfN\in\mathbb{Z}$, the generator of $\pi_3(S^2)=\mathbb{Z}$.
+    AppJH_FINAL:136: For a complex order-parameter field mapping the three-sphere $S^3$ (the
+    AppJH_FINAL:137: interior of a Planck sphere) to the order-parameter manifold $S^2$,
+    AppJH_FINAL:140: \pi_3(S^2) = \mathbb{Z},
+    AppJH_FINAL:143: generated by the Hopf fibration $\eta: S^3\to S^2$.
+    AppJH_FINAL:155: $\eta: S^3\to S^2$ defined by
+    AppJH_FINAL:157: \eta(z_1,z_2) = z_1/z_2 \in \mathbb{C}P^1 \cong S^2,
+    AppJH_FINAL:160: where $(z_1,z_2)\in\mathbb{C}^2$ with $|z_1|^2+|z_2|^2=1$.
+    AppJH_FINAL:161: The preimage of each point on $S^2$ is a circle $S^1$ (a fibre).
+    AppJH_FINAL:163: The total space $S^3$ is not homeomorphic to $S^2\times S^1$; the
+    AppJH_FINAL:169: \int_{S^3} \mathcal{A}\wedge d\mathcal{A},
+    AppJH_FINAL:172: where $\mathcal{A}$ is the pullback of the area form on $S^2$ under the
+    AppJH_FINAL:173: map $\phi:S^3\to S^2$.
+    AppJH_FINAL:174: The standard Hopf fibration has $\HopfN=1$; the identity map on $S^3$
+    AppJH_FINAL:179: When $S^3$ is stereographically projected into $\mathbb{R}^3$, the
+    AppJH_FINAL:181: Fibres above a great circle on $S^2$ form nested tori.
+    AppJH_FINAL:194: Let $\Psiint:\mathbb{R}^3\supset B^3(\Rsph)\to\mathbb{C}^2$ be the
+    AppJH_FINAL:195: two-component interior condensate field, with
+    AppJH_FINAL:196: $|\Psiint|^2 = |\psi_+|^2 + |\psi_-|^2 = \rho_0$ (constant bulk density).
+    AppJH_FINAL:198: $S^3\to S^2$ and is classified by $\pi_3(S^2)=\mathbb{Z}$.
+    AppJH_FINAL:205: + \frac{\az\hbar^2}{2m\Rsph}\oint_{S^2}|\Psiint|^2\,dA,
+    AppJH_FINAL:275: $\pi_3(S^2)=\mathbb{Z}$, generator $\eta:S^3\to S^2$).
+    AppJH_FINAL:296: $\hat{x}$ is associated with the $S^2$ base and the momentum operator
+    AppJH_FINAL:307: The Hopf fibration $S^3\to S^2$ is the geometric realisation of the
+    AppJH_FINAL:331: The Hopf fibration $S^3\to S^2$ is the fibre bundle underlying
+    AppJH_FINAL:336: \text{Hopf fibration over } S^2.
+    AppJH_FINAL:351: Base $S^2$ & $\leftrightarrow$ & Celestial sphere (null directions) \\
+    AppJ:12: %     the same interior field as C^2 (S^2) — a live S^1/S^2 contradiction;
+    AppJ:210: 1 & $A_1$ (s-wave) & 3.3905 & $3.39\,\mP c^2$ \\
+    AppJ:211: 2 & $A_1$ (s-wave) & 9.5139 & $9.51\,\mP c^2$ \\
+    AppJ:212: 3 & $A_1$ (s-wave) & 15.762 & $15.8\,\mP c^2$ \\
+    AppJ:217: All interior modes have energies of order $c/\Rsph = 2\,\mP c^2$. The Higgs gap
+    AppJ:218: of the exterior condensate is $2/\xi = 0.8630\,\mP c^2$. The ground-state
+    AppJ:268: &= -1.6429\times10^{-5}\,\mP c^2 .
+    AppJ:270: The target electron mass is $m_e = 4.2\times10^{-23}\,\mP c^2$. The second-order
+    AppJ:373: $\kappa_0 = 3.39\,\mP c^2$ (interior ground state) & Computed & Eigenvalue equation \\
+    AZ6:63: The effective Newton constant is derived as $G = c^2/(8\pi\rho_0)$, and
+    AZ6:92: $K_\mathrm{BCT} = \rho_0 c^2$ is the BCT condensate bulk modulus.
+    AZ6:203: -\frac{\delta\rho^2}{2c_s^2\rho_0}
+    AZ6:204: + \rho_0\left(-(\partial_t\delta\theta)^2/c_s^2
+    AZ6:209: where $c_s^2 = \partial^2\varepsilon/\partial\rho^2|_{\rho_0}$.
+    AZ6:215: -c_s^2 & 0 \\ 0 & \delta_{ij}
+    AZ6:230: - \frac{\delta\rho}{2c_s^2}\left(\partial_t\delta\theta
+    AZ6:240: -(c_s^2-v^2) & -v_j \\ -v_i & \delta_{ij}
+    AZ6:246: h_{00} &= -v^2 + \frac{\delta c_s}{c_s}(c_s^2-v^2) + \ldots \\
+    AZ6:261: with $G = c^2/(8\pi\rho_0)$.
+    AZ6:277: $G = c^2/(8\pi\rho_0)$. The algebra follows from the identity
+    AZ6:296: and sound speed $c_s^2 = \partial P/\partial\rho$.
+    AZ6:310: with $G = c^2/(8\pi\rho_0)$.
+    AZ6:317: $d\varepsilon = (\varepsilon + P)/\rho\,d\rho$. With $P = \rho c^2/3$
+    AZ6:318: (ultra-relativistic equation of state at $c_s=c$), $\varepsilon + P = c^2\rho$
+    AZ6:353: \emph{(i) $c_s = c$:} The BCT GP coupling is $g = mc^2/n_0$ (Josephson condition,
+    AZ6:354: App~D). Then $c_s^2 = gn_0/m = c^2$. $\checkmark$
+    AZ6:370: with $G_\mathrm{BCT} = c^2/(8\pi\rho_0)$ and the exact BCT condensate density
+    AZ6:390: G_\mathrm{BCT} = \frac{c^2}{8\pi\rho_0}.
+    AZ6:410: = \ln\!\left(\frac{\sqrt{\hbar c/G_\mathrm{CODATA}}}{m_e c^2/c^2}\right)
+    AZ7:238: c_s^2 = \frac{\partial P}{\partial\rho}\bigg|_{n_0}
+    AZ7:364: The $E$ representation consists of two-component spinors.
+    L36_OHC:119: $\Psiint$ is the Hopf fibration $\eta: S^3\to S^2$, with Hopf invariant
+    L36_OHC:120: $\HopfN=1$ (the generator of $\pi_3(S^2)=\mathbb{Z}$).
+    L36_OHC:169: The Hopf fibration $S^3\to S^2$ realises the double cover
+    L60:64: a field configuration $\Psi_2: S^3 \to S^2$ with Hopf invariant
+    L60:65: $H\in\mathbb{Z}$, classified by $\pi_3(S^2)=\mathbb{Z}$
+    L64:83: $\pi_3(S^2)=\mathbb{Z}$ (Letters~45--46, Appendix~JH). The OHC interior
+    L64:110: $S^2$ under the map $\Psi/|\Psi|:\mathbb{R}^3\to S^2$. This integral is
+    L64:200: the OHC healing length, and $m_{\rm defect} = H\times E_{D_4}/c^2$
+    OneMedium:702: • SU(2)L from the two-component order parameter of the octahedral void condensate.
+    Monograph_PLB(search):223: at distance $d_{\mathrm{nn}} = \sqrt{a^2/2 + c^2/4}$.
+    Monograph_PLB(search):288: \frac{v_s^2(\hat{\bm{z}})}{v_s^2(\hat{\bm{x}})}
+    Monograph_PLB(search):329: bounding sites are equal to $d = \sqrt{a^2/4 + c^2/16}
+    Monograph_PLB(search):341: at the same distance $\sqrt{a^2/4 + c^2/16}$ from the void centre,
+    Monograph_PLB(search):669: With $\cos^2\theta_W = 1 - \sin^2\theta_W = 0.76857$:
+    Monograph_PLB(search):1286: $r_p = \hbar c/(m_\rho c^2) \times (1 + \azero) = 0.8386$~fm,
+    Monograph_PLB(search):1600: The octahedral void condensate has a two-component order parameter,
+
+==============================================================================
+Bell vocabulary
+==============================================================================
+  \bbell\b                               total  10 | L254@501ea79:10
+  chsh                                   total   3 | L254@501ea79:3
+  tsirelson                              total   6 | L254@501ea79:6
+  entangl                                total  20 | L254@501ea79:17, AZ6:3
+  singlet                                total   2 | L254@501ea79:1, Monograph_PLB(search):1
+  signed                                 total   1 | L64:1
+  negative prob                          total   0 |
+  quasi                                  total   2 | AppJ:1, Monograph_PLB(search):1
+  -- hit lines --
+    L254@501ea79:2: % Quantum Entanglement as OHC Topological Identity
+    L254@501ea79:21: \title{Quantum Entanglement as OHC Topological Identity:\\
+    L254@501ea79:32: We present the BCT interpretation of quantum entanglement.
+    L254@501ea79:33: In the BCT Superfluid Lattice Model, entangled particles are
+    L254@501ea79:43: There is only topology. The Bell inequalities are the
+    L254@501ea79:54: The standard account of quantum entanglement describes two
+    L254@501ea79:63: Bell's theorem~\cite{bell} established that no local hidden
+    L254@501ea79:93: \subsection{Entanglement as a Single Hopf Configuration}
+    L254@501ea79:95: An entangled pair is not two separate objects that are
+    L254@501ea79:98: A singlet state $|01\rangle - |10\rangle$ corresponds to a
+    L254@501ea79:120: This is precisely what Bell's theorem encodes geometrically:
+    L254@501ea79:126: \section{The BCT Prediction and Bell Inequalities}
+    L254@501ea79:128: \subsection{Bell as Topological Statement}
+    L254@501ea79:130: The CHSH inequality~\cite{chsh}:
+    L254@501ea79:134: is violated up to $2\sqrt{2}$ (Tsirelson bound~\cite{tsirelson})
+    L254@501ea79:139: geometric signature. The CHSH optimum requires:
+    L254@501ea79:142: \label{eq:tsirelson}
+    L254@501ea79:150: The Tsirelson bound follows:
+    L254@501ea79:153: The optimal Bell measurement angle is geometrically encoded
+    L254@501ea79:160: \subsection{Entanglement Entropy as Hopf Complexity}
+    L254@501ea79:162: Entanglement entropy $S = -\mathrm{Tr}(\rho \log \rho)$
+    L254@501ea79:164: configuration. Maximum entanglement ($S = \log 2$
+    L254@501ea79:168: This immediately suggests why entanglement is fragile:
+    L254@501ea79:187: \subsection{Entanglement Is Not Special}
+    L254@501ea79:189: In the BCT framework, entanglement is not a mysterious
+    L254@501ea79:198: The universe is entangled. Localisation is the phenomenon
+    L254@501ea79:199: that needs explaining. Entanglement is just the topology
+    L254@501ea79:207: entanglement between biological systems and the OHC vacuum
+    L254@501ea79:220: Quantum entanglement, in the BCT framework, is topological
+    L254@501ea79:224: Bell's inequality violations are a geometric theorem about
+    L254@501ea79:227: The BCT Tsirelson bound derivation (Eq.~\ref{eq:tsirelson})
+    L254@501ea79:247: \bibitem{bell}
+    L254@501ea79:248: J.~S.\ Bell,
+    L254@501ea79:258: \bibitem{chsh}
+    L254@501ea79:263: \bibitem{tsirelson}
+    L254@501ea79:264: B.~S.\ Tsirelson,
+    L254@501ea79:265: Quantum Generalizations of Bell's Inequality,
+    AppJ:288: at $\kappa_0$, the bath is the exterior quasiparticles, $g=\az$, and
+    AZ6:484: The entanglement entropy of BCT vortex pairs across the acoustic horizon is:
+    AZ6:491: evaluated at the Planck scale. This can be seen from the entanglement structure
+    AZ6:493: $k_B\ln 2 / 4$ to the entanglement entropy (one vortex-antivortex pair per
+    L64:112: $H$ cannot be assigned to any spatial subregion, and cannot be defined at any
+    Monograph_PLB(search):794: $y_t$ reaches a quasi-fixed point under renormalisation group evolution.
+    Monograph_PLB(search):1262: \subsection{The Singlet Anomaly Theorem: $m_{\eta'}$}

@@ -1,0 +1,117 @@
+==============================================================================
+1. BASELINE: the 16 deterministic local strategies
+==============================================================================
+strategies enumerated: 16   max |S| = 2   (S = E(a,b) - E(a,b') + E(a',b) + E(a',b'); convex hull => every LHV mixture has |S| <= 2)
+
+==============================================================================
+2. POSITIVE CONTROL  (m = 24 base sites, 2m = 48 double-cover sites, laziness 1-p = 0.50)
+==============================================================================
+Odd (antiperiodic) eigenvalues of the lazy walk: lam_n = 1-p+p cos(pi n/m), n odd
+  lam_1 = 0.995722430686905   lam_3 = 0.961939766255643   lam_3/lam_1 = 0.966072207082895
+  => at long times the odd sector is the n = +-1 pair, cos(psi/2) and sin(psi/2): half-angle harmonics.
+check: seam-sign kernel^t vs double-cover K^t[k,j] - K^t[k,j+m] at t = 60: max diff = 4.2e-17
+       (non-negative walk on the cover + Z2 sign on sheet change = flat Z2 connection on the base circle)
+
+Convergence in walk length t, all 24 x 24 setting pairs, per-pair normalised readout P = M^2 / N(a,b):
+     t   max|E+cos th|   |S|-2sqrt2     max dP_A over b  max dP_B over a  relvar N(a,b)  relvar C_a
+      2   nan       +1.172e+00     nan         nan         4.569e+00      1.889e+00
+      5   7.304e-01       +1.172e+00     2.22e-16         2.22e-16         2.967e+00      1.404e+00
+     10   5.769e-01       +1.166e+00     5.00e-16         5.00e-16         2.001e+00      1.059e+00
+     20   3.344e-01       +9.669e-01     3.33e-16         4.44e-16         1.003e+00      7.134e-01
+     50   4.745e-02       +1.733e-01     3.89e-16         3.33e-16         1.268e-01      2.518e-01
+    100   1.507e-03       +5.676e-03     3.89e-16         5.00e-16         4.018e-03      4.482e-02
+    200   1.513e-06       +5.707e-06     4.44e-16         4.44e-16         4.035e-06      1.420e-03
+    400   1.527e-12       +5.757e-12     4.44e-16         4.44e-16         4.072e-12      1.427e-06
+    800   7.216e-16       -4.441e-16     4.44e-16         3.89e-16         7.494e-16      1.439e-12
+   1600   6.661e-16       -4.441e-16     3.89e-16         4.44e-16         8.743e-16      4.952e-16
+   3200   8.882e-16       -4.441e-16     4.44e-16         4.44e-16         1.374e-15      4.239e-16
+  Note: marginals are exactly 1/2 at EVERY t (the outcome flip a -> a+pi swaps the two terms of
+  sum_B M^2), but at short t |S| exceeds 2 sqrt2 (up to 4). That excess is bought by the per-pair
+  normalisation N(a,b), which depends on both settings; N and the local completeness C_a become
+  setting-independent only as t -> inf, at rate (lam_3/lam_1)^(2t).
+
+E(theta) table at t = 3200, a = 0, b = theta (13 angles in [0, pi]):
+   theta(deg)    E(theta)               -cos(theta)            |dE|
+      0.0      -1.000000000000000    -1.000000000000000    0.0e+00
+     15.0      -0.965925826289068    -0.965925826289068    1.1e-16
+     30.0      -0.866025403784439    -0.866025403784439    1.1e-16
+     45.0      -0.707106781186547    -0.707106781186548    1.1e-16
+     60.0      -0.500000000000000    -0.500000000000000    0.0e+00
+     75.0      -0.258819045102521    -0.258819045102521    1.7e-16
+     90.0      -0.000000000000000    -0.000000000000000    5.0e-17
+    105.0      +0.258819045102521    +0.258819045102521    5.6e-17
+    120.0      +0.500000000000000    +0.500000000000000    2.2e-16
+    135.0      +0.707106781186547    +0.707106781186547    1.1e-16
+    150.0      +0.866025403784439    +0.866025403784439    0.0e+00
+    165.0      +0.965925826289068    +0.965925826289068    0.0e+00
+    180.0      +1.000000000000000    +1.000000000000000    0.0e+00
+CHSH at (a,a',b,b') = (0, pi/2, pi/4, 3pi/4): S = -2.828427124746190   (2 sqrt2 = 2.828427124746190)
+max over all 576 (a,b) of |E + cos(b-a)| = 8.88e-16
+single-wing marginals: max_a [max_b P_A(+|a,b) - min_b P_A(+|a,b)] = 4.44e-16 ; B: 4.44e-16
+normalisation N(a,b): relative variation = 1.37e-15 ; local completeness C_a: relative variation = 4.24e-16
+
+Closed form (mpmath 40 dps): by the semigroup property M(A,B) = c * g_2t(j_A - j_B + m/2), with
+  g_2t(x) = (1/m) sum_{n odd} lam_n^(2t) cos(pi n x/m). Check against the matrix computation:
+   theta =  45.0 deg: E_closed = -0.707106781186547573   E_matrix = -0.707106781186547   -cos = -0.707106781186548
+   theta =  90.0 deg: E_closed = -0.000000000000000000   E_matrix = -0.000000000000000   -cos = -0.000000000000000
+   theta = 135.0 deg: E_closed = +0.707106781186547573   E_matrix = +0.707106781186547   -cos = +0.707106781186547
+  t -> inf: g -> lam_1^(2t) cos(pi x/m)/m, so M(+,+) ~ sin((a-b)/2), M(+,-) ~ -cos((a-b)/2), giving
+  P(++) = P(--) = sin^2((a-b)/2)/2, P(+-) = P(-+) = cos^2((a-b)/2)/2  =>  E = -cos(a-b) exactly,
+  with N(a,b) = const. Settings on lattice sites carry no discretisation error.
+
+==============================================================================
+3. ABLATIONS
+==============================================================================
+(a) Z2 sign dropped (periodic sector = the plain walk on the base circle), squared readout kept:
+     t   |S|        max|E|     undefined pairs (N=0)  max marginal var  relvar N(a,b)  relvar C_a
+      1   nan   1.000000    336                   nan          6.171e+00      2.274e+00
+      2   4.000000   1.000000    144                   nan          4.569e+00      1.889e+00
+      5   3.999999   1.000000      0                   0.00e+00          2.967e+00      1.404e+00
+     10   3.994570   0.999998      0                   0.00e+00          2.001e+00      1.059e+00
+     20   3.774089   0.994155      0                   2.78e-16          1.003e+00      7.135e-01
+     40   2.536818   0.801835      0                   3.33e-16          2.545e-01      3.568e-01
+    100   0.363190   0.128142      0                   3.33e-16          4.138e-03      4.549e-02
+    400   0.000012   0.000004      0                   3.33e-16          4.587e-12      1.514e-06
+   3200   0.000000   0.000000      0                   3.33e-16          7.494e-16      5.170e-16
+  Per-pair normalisation lets the periodic sector reach |S| = 4 at short t with flat marginals,
+  but N(a,b) then varies by O(1) and vanishes for some pairs. Requiring a setting-independent
+  normalisation (relvar N < 1e-3):
+    sector peri : max |S| over t with relvar N < 1e-3 = 0.176757906 (at t = 121)
+    sector anti : max |S| over t with relvar N < 1e-3 = 2.829760010 (at t = 121)
+  => with a setting-independent normalisation, dropping the Z2 sign removes the violation.
+(b) Z2 sign kept, squaring dropped (linear readout of the signed sum), t = 3200:
+    M(A,B | a=0, b=45deg)/sum M = [[ 0.5       1.207107] [-1.207107  0.5     ]] -> negative entries: not a probability
+    lifting setting a to the other sheet flips M(+,.): [-0.03189 -0.07699] vs [0.03189 0.07699]
+    => a linear readout is not a function of the setting on the base circle; the square is what
+       makes the readout well defined on the phase circle.
+(c) Z2 sign kept, square replaced by a local readout A = sign G(k, j_a), B = sign G_B(k, j_b),
+    mixed over the source framing k -- a local-hidden-variable model by construction:
+    S at the Tsirelson settings = -0.500000 ; max |S| over all 24^4 setting quadruples = 2.000000000000
+(d) readout |M|^q, q != 2 (non-negative; Z2 sign kept), t = 3200:
+     q      |S|            max|E+cos|   max marginal var  relvar N(a,b)  relvar C_a
+     0.5    0.867381342    5.482e-01    8.07e-10          4.506e-01      4.239e-16
+     1.0    1.656854249    2.929e-01    2.78e-16          3.258e-01      4.239e-16
+     1.5    2.316194367    1.281e-01    3.89e-16          1.701e-01      4.239e-16
+     2.0    2.828427125    8.882e-16    4.44e-16          1.374e-15      4.239e-16
+     3.0    3.469181607    1.772e-01    7.77e-16          3.451e-01      4.239e-16
+     4.0    3.771236166    3.000e-01    9.99e-16          6.667e-01      4.239e-16
+     8.0    3.993073588    5.266e-01    1.83e-15          1.600e+00      4.239e-16
+    32.0    4.000000000    7.408e-01    7.61e-15          3.573e+00      4.239e-16
+    closed form (t->inf): E_q = (|s|^q - |c|^q)/(|s|^q + |c|^q), s = sin(th/2), c = cos(th/2).
+    Marginals are 1/2 for EVERY q; sum_AB |M|^q = 2(|s|^q + |c|^q) is setting-independent iff q = 2.
+    => non-negativity plus flat marginals do NOT force the square: q > 2 gives |S| > 2 sqrt2 (-> 4)
+       but only with a normalisation that depends on both settings. q = 2 is singled out by the
+       requirement that the normalisation be setting-independent (completeness).
+(e) kernel and laziness (t chosen so the n = 3 contamination is < 1e-14):
+    nn   p=0.5  lam3/lam1=0.966072  t=  468 : max|E+cos| = 1.4e-14  |S|-2sqrt2 = +5.3e-14  relvar N = 3.8e-14
+    nn   p=0.9  lam3/lam1=0.938719  t=  256 : max|E+cos| = 1.3e-14  |S|-2sqrt2 = +4.9e-14  relvar N = 3.5e-14
+    nn   p=0.1  lam3/lam1=0.993238  t= 2377 : max|E+cos| = 1.5e-14  |S|-2sqrt2 = +5.6e-14  relvar N = 4.1e-14
+    nnn  p=0.5  lam3/lam1=0.933777  t=  237 : max|E+cos| = 1.2e-14  |S|-2sqrt2 = +4.4e-14  relvar N = 3.2e-14
+    wide p=1.0  lam3/lam1=0.901631  t=  157 : max|E+cos| = 1.2e-14  |S|-2sqrt2 = +4.3e-14  relvar N = 3.1e-14
+    => kernel-independent: the walk only filters down to the lowest antiperiodic harmonic.
+(f) m dependence (t chosen as in (e)):
+    m =   8  t =     50 : max|E+cos| = 6.8e-15   |S| = 2.828427124746216   relvar N = 1.9e-14
+    m =  16  t =    207 : max|E+cos| = 1.2e-14   |S| = 2.828427124746236   relvar N = 3.3e-14
+    m =  24  t =    468 : max|E+cos| = 1.4e-14   |S| = 2.828427124746243   relvar N = 3.8e-14
+    m =  48  t =   1879 : max|E+cos| = 1.6e-14   |S| = 2.828427124746246   relvar N = 4.1e-14
+    m =  96  t =   7523 : max|E+cos| = 1.7e-14   |S| = 2.828427124746247   relvar N = 4.3e-14
