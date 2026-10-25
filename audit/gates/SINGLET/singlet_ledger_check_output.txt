@@ -1,0 +1,22 @@
+[1] own construction m=24 p=0.5 t=800: max|E+cos(b-a)| over 576 pairs = 1.1e-15
+    CHSH a,a'=0,90 b,b'=45,135 deg = -2.828427124746190   2*sqrt2 = 2.828427124746190
+    max spread of P_A(+|a,b) over distant b = 1.0e-15
+    rel. variation of normalisation N(a,b) = 1.9e-15
+[1] own construction m=24 p=0.5 t=3200: max|E+cos(b-a)| over 576 pairs = 2.6e-11
+    CHSH a,a'=0,90 b,b'=45,135 deg = -2.828427124746190   2*sqrt2 = 2.828427124746190
+    max spread of P_A(+|a,b) over distant b = 1.5e-11
+    rel. variation of normalisation N(a,b) = 5.5e-11
+[1b] periodic sector (Z2 dropped), t=3200: |S| = 8.3e-17
+[2] lambda3/lambda1 (m=24, p=1/2) = 0.9660722070828949289212562917435432501569
+    visibility of sign readout of the n=1 harmonic, (2/pi)^2 = 0.4052847345693510857755178528389105556174
+    |S| = 2 sqrt2 (2/pi)^2 = 1.14631833650151252573178827906549130233
+    readout exponent: sum_AB |M|^q = 2(|sin th/2|^q + |cos th/2|^q); relative variation over th in [0,pi]:
+      q= 0.5: 0.44784
+      q=   1: 0.325711
+      q= 1.5: 0.170118
+      q=   2: 3.11151e-61
+      q=   3: 0.344718
+      q=   4: 0.665441
+[3] bct c/a=sqrt2: nearest-neighbour distance 1.000000, count 12
+    fcc lattice, O_h (order 48): invariant spin structures [(0, 0, 0)]
+    bct lattice, D4h (order 16): invariant spin structures [(0, 0, 0), (0, 0, 1)]
