@@ -1,0 +1,103 @@
+
+==============================================================================
+A. Identity |grad chi|^2 = 1/4 |grad n|^2 + a^2   (random smooth fields, exact derivatives)
+==============================================================================
+  trial 0: max relative residual = 7.130e-16   max|Re chi^dag d chi| = 1.665e-14
+  trial 1: max relative residual = 7.508e-16   max|Re chi^dag d chi| = 1.377e-14
+  trial 2: max relative residual = 9.062e-16   max|Re chi^dag d chi| = 4.607e-15
+  trial 3: max relative residual = 8.258e-16   max|Re chi^dag d chi| = 8.771e-15
+  trial 4: max relative residual = 8.325e-16   max|Re chi^dag d chi| = 3.008e-15
+  WORST over 5 x 2000 points: 9.062e-16   (card threshold 1e-10)  ->  PASS
+
+==============================================================================
+B. Mermin-Ho coefficient and the Faddeev/Maxwell identities
+==============================================================================
+  f_ij = d_i a_j - d_j a_i  vs  (1/2) n.(d_i n x d_j n):          max rel resid 2.640e-15
+  (curl a)_k  vs  (1/4) eps_kij n.(d_i n x d_j n):                max rel resid 2.640e-15
+  F_ij F_ij  vs  8 |curl a|^2:                                     max rel resid 3.099e-15
+  ((dn)^2)^2  vs  F_ij F_ij + (d_i n . d_j n)^2:                   max rel resid 3.910e-16
+  => precise Mermin-Ho: f_ij = (1/2) n.(d_i n x d_j n); the card's 'curl a = 1/2 n.(dn x dn)'
+     is shorthand for the 2-form statement (vector form carries 1/4 eps_kij).
+
+==============================================================================
+C. Gauge decomposition: a enters V0 only through v = grad(phi) + a_zeta
+==============================================================================
+  |grad Psi|^2 vs (grad sqrt rho)^2 + rho[1/4|dn|^2 + (grad phi + a_zeta)^2]: max rel resid 1.248e-14
+  Gauge check: under zeta -> e^{i lam} zeta, phi -> phi - lam: n and v invariant, a_zeta -> a_zeta + grad lam.
+  => V0 depends on a only via v (superflow) and on curl a only via n (Mermin-Ho identity).
+     Field content (rho, phi, n) = 1+1+2 = 4 real = C^2. a adds no variable: it is slaved.
+
+==============================================================================
+D. Hopf normalisation H = (1/4 pi^2) int a.(curl a) on the standard Hopf map
+==============================================================================
+  H (standard Hopf map, scale L=1) = 1.00000000   -> |H| = 1 to 7.0e-15
+  int (1/4)|dn|^2 d^3x            = 78.956835  = 8.000000 pi^2   (times L)
+  int [(1/4)|dn|^2]^2 d^3x        = 78.956835                     (times 1/L)
+  int |curl a|^2 d^3x             = 78.956835                     (times 1/L)
+  Consistency with App JH eq.(hopf-invariant): pullback area form A = 2a, so 1/(16pi^2) int A dA = 1/(4pi^2) int a da.
+
+==============================================================================
+E. Bogoliubov spectrum of V0 with Psi in C^2  (does a carry its own propagating DOF?)
+==============================================================================
+  nonzero positive-frequency modes: 126  (expected 2 x 63 = 126; k=0 block = zero modes)
+  branch 1 (density/phase, Bogoliubov): omega = sqrt(eps(eps+2gn0)) -> c_s k at small k
+  branch 2 (n-texture / magnon):        omega = eps_k = hbar k^2/2m (quadratic, no gap)
+  max |numeric - analytic| over all modes: 5.84e-11
+  => 2 modes per k for C^2 (phonon + quadratic magnon). No third branch, no linear transverse
+     doublet: the twist connection a has no propagating degrees of freedom of its own.
+
+==============================================================================
+F. Integrating out the density: sign and size of the induced (curl a)^2 coefficient c_F
+==============================================================================
+  Units: energy density / (g n0^2), length / xi, W~ = xi^2 W, W = 1/4|dn|^2 + v^2 >= 0.
+  Reduced functional: f = (grad s)^2 + W~ s^2 + 1/2 (s^2 - 1)^2,  s = sqrt(rho/n0).
+  Tree level (bare V0): no (curl a)^2 term appears anywhere -> c_F(tree) = 0 exactly.
+  F1 local elimination: min_s f = W - W^2/2 (W<1), 1/2 (W>=1);  max |num - formula| = 1.11e-16
+     -> induced quartic -(1/2)W~^2, i.e. dimensionful  -(xi^2/2) K_s W^2,  K_s = (hbar^2/2m) n0.
+     -> at W~ >= 1 the condensate is destroyed locally (s = 0): texture energy saturates.
+  F2 gradient kernel (W~ = W0 + W1 cos qx, exact 1-D solve vs 2nd-order formula):
+       q*xi     dE(num)        dE(formula)= -s0^2 W1^2 / (2(q^2+2 s0^2))
+       0.05   -9.984397e-05   -9.984399e-05
+       0.30   -9.467394e-05   -9.467456e-05
+       1.00   -6.153806e-05   -6.153846e-05
+       2.00   -2.857163e-05   -2.857143e-05
+       4.00   -9.090958e-06   -9.090909e-06
+     kernel C(q) = 2 s0^2/(q^2 + 2 s0^2) > 0, decreasing: 4-derivative term -C(0)W^2 < 0;
+     next order +(xi^2/4)(grad W)^2 > 0 is 6-derivative and appears only where the gradient
+     expansion has broken down (texture scale ~ xi), so it gives no controlled stabilisation.
+  F3 one loop (Gaussian amplitude fluctuations about the saddle, M^2 = 2 - 2W~):
+     I2 = int d^3k/(2pi)^3 (k^2+2)^-2 = 0.0281348849  (analytic 1/(8 pi sqrt2) = 0.0281348849)
+     one-loop W~^2 coefficient = -t I2 = -0.028135 t  (t = T/(g n0^2 xi^3)); tree = -0.5
+     same sign as tree; the 1-loop/tree ratio is 2 t I2 = t/(4 sqrt2 pi).
+     d^2/dW~^2 of the 1-loop term at W~=0.0: -0.05424  (analytic -2 int (k^2+2-2W~)^-2 = -0.05424, same cutoff 50/xi)
+     d^2/dW~^2 of the 1-loop term at W~=0.2: -0.06089  (analytic -2 int (k^2+2-2W~)^-2 = -0.06089, same cutoff 50/xi)
+     d^2/dW~^2 of the 1-loop term at W~=0.5: -0.07755  (analytic -2 int (k^2+2-2W~)^-2 = -0.07755, same cutoff 50/xi)
+  F4 sign theorem (all orders): W enters the density sector linearly (int rho W), so the ground-state
+     energy E0[W] = min_state <H0 + int rho W> is a minimum of affine functionals -> concave in W.
+     Its W-W kernel is minus a (positive) density-density response: no positive W^2 at any order.
+  F5 projection onto the Faddeev/Maxwell structure. Using ((dn)^2)^2 = F_ijF_ij + (d_i n.d_j n)^2 and
+     F_ijF_ij = 8|curl a|^2 (part B):  -(xi^2/2)K_s W^2  contains  -(xi^2/4) K_s |curl a|^2 + (other <= 0).
+     c_F(induced) = -(xi^2/4) K_s = -1.3428 a^2 K_s   (xi = 2.31754 a).   SIGN: NEGATIVE.
+     Pointwise: induced quartic <= c_F |curl a|^2 <= 0 for every configuration.
+     Scaling: c_F ~ -K_s xi^2 = -K_s a^2/(8 pi alpha0); c_F/(K_s a^2) = -1.3428.
+
+==============================================================================
+G. Derrick scaling with the induced quartic (standard Hopf map rescaled by L, units of xi)
+==============================================================================
+     E(L)/(K_s xi) = c2 L/xi - (1/2) c4 xi/L ;  c2 = int 1/4|dn|^2 = 78.9568, c4 = int (1/4 |dn|^2)^2 = 78.9568
+       L/xi =  2.00:  E = +138.1745
+       L/xi =  1.00:  E =  +39.4784
+       L/xi =  0.50:  E =  -39.4784
+       L/xi =  0.25:  E = -138.1745
+       L/xi =  0.10:  E = -386.8885
+     Monotone decreasing as L -> 0 (the quartic only accelerates collapse): no stable knot in V0.
+     (Below L ~ xi the gradient expansion fails; the true endpoint is a normal core, s -> 0, where
+      n is undefined and the Hopf number can unwind.)
+
+==============================================================================
+Q1 SUMMARY
+==============================================================================
+  (a) identity verified to 9.1e-16 (threshold 1e-10).
+  (b) a enters V0 only through v = grad phi + a; curl a = f[n] identically: a is slaved, 0 own DOF.
+  (c) c_F(tree) = 0; c_F(density integrated out) = -(xi^2/4)K_s < 0 at tree level, more negative at
+      one loop, and non-positive at all orders (concavity). Score: FAIL (BFN route = BOUGHT).

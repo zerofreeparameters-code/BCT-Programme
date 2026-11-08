@@ -1,0 +1,114 @@
+alpha0 = 0.0074080557   xi = 2.31754 a   R = 0.5 a   r_oct = 0.20711 a   r_tet = 0.11237 a
+xi/R = 4.6351   xi/r_oct = 11.190   xi/r_tet = 20.624
+
+==============================================================================
+A. Granted Maxwell term: mass of a in a uniformly condensed medium
+==============================================================================
+  lambda =   0.1 (e^2 = 50):
+     k =  0.001: eigenvalues [-0.        1.        1.        1.000001]   transverse predicted 1 + k^2 lam^2 = 1.000000
+     k =  0.500: eigenvalues [0.     1.0025 1.0025 1.25  ]   transverse predicted 1 + k^2 lam^2 = 1.002500
+     k =  2.000: eigenvalues [0.   1.04 1.04 5.  ]   transverse predicted 1 + k^2 lam^2 = 1.040000
+  lambda =   1.0 (e^2 = 0.5):
+     k =  0.001: eigenvalues [0.       1.000001 1.000001 1.000001]   transverse predicted 1 + k^2 lam^2 = 1.000001
+     k =  0.500: eigenvalues [0.   1.25 1.25 1.25]   transverse predicted 1 + k^2 lam^2 = 1.250000
+     k =  2.000: eigenvalues [0. 5. 5. 5.]   transverse predicted 1 + k^2 lam^2 = 5.000000
+  lambda =  10.0 (e^2 = 0.005):
+     k =  0.001: eigenvalues [-0.        1.000001  1.0001    1.0001  ]   transverse predicted 1 + k^2 lam^2 = 1.000100
+     k =  0.500: eigenvalues [ 0.    1.25 26.   26.  ]   transverse predicted 1 + k^2 lam^2 = 26.000000
+     k =  2.000: eigenvalues [  0.   5. 401. 401.]   transverse predicted 1 + k^2 lam^2 = 401.000000
+  One zero eigenvalue (the gauge direction phi -> phi - chi, a -> a + grad chi); the two transverse
+  eigenvalues stay >= K_s as k -> 0: screening mass m^2 = 2 e^2 K_s, lambda = 1/sqrt(2 e^2 K_s).
+  With the time-dependent terms granted (GP i hbar Psi* d_t Psi couples to a_0; Maxwell E^2 term),
+  the transverse doublet disperses as omega^2 = c_a^2 (k^2 + lambda^-2) and the longitudinal mode is
+  the gapped plasmon: 3 massive polarisations (Anderson-Higgs/Meissner), 0 massless.
+  Massless only if e -> 0, where a decouples from the medium (no twist field left). -> FAIL.
+
+geometry check: oct centre to nearest sphere centre 0.70711 (R + r_oct = 0.70711); tet 0.61237 (R + r_tet = 0.61237); contact at r = 0.50000
+
+==============================================================================
+B(i). Linear response, exact delta shells on FCC (density rho/n0 = (1+u)^2)
+==============================================================================
+  card shell term, repulsive, lam_s = +alpha0/R:  mean u0 = -0.1768
+       sphere centre          rho/n0 = 0.68074
+       shell, facing oct void  rho/n0 = 0.67692
+       shell, facing tet void  rho/n0 = 0.67630
+       contact point (12/sph)  rho/n0 = 0.67574
+       oct void centre        rho/n0 = 0.67789
+       tet void centre        rho/n0 = 0.67665
+       contrast (max-min)/mean over these points = 0.7375%;  oct-void minus shell = +0.00097
+  App J sign (attractive),     lam_s = -alpha0/R:  mean u0 = +0.1768
+       sphere centre          rho/n0 = 1.38047
+       shell, facing oct void  rho/n0 = 1.38591
+       shell, facing tet void  rho/n0 = 1.38681
+       contact point (12/sph)  rho/n0 = 1.38760
+       oct void centre        rho/n0 = 1.38453
+       tet void centre        rho/n0 = 1.38630
+       contrast (max-min)/mean over these points = 0.5152%;  oct-void minus shell = -0.00138
+  App JH BC strength,          lam_s = +alpha0  :  mean u0 = -0.0884
+       sphere centre          rho/n0 = 0.83272
+       shell, facing oct void  rho/n0 = 0.83061
+       shell, facing tet void  rho/n0 = 0.83026
+       contact point (12/sph)  rho/n0 = 0.82995
+       oct void centre        rho/n0 = 0.83114
+       tet void centre        rho/n0 = 0.83045
+       contrast (max-min)/mean over these points = 0.3328%;  oct-void minus shell = +0.00053
+  alt. xi convention xi/sqrt2, lam_s = +alpha0/R:  mean u0 = -0.0884
+       sphere centre          rho/n0 = 0.83438
+       shell, facing oct void  rho/n0 = 0.83018
+       shell, facing tet void  rho/n0 = 0.82949
+       contact point (12/sph)  rho/n0 = 0.82887
+       oct void centre        rho/n0 = 0.83125
+       tet void centre        rho/n0 = 0.82988
+       contrast (max-min)/mean over these points = 0.6626%;  oct-void minus shell = +0.00107
+
+==============================================================================
+B(ii). Nonlinear solve on a grid (smoothed shell, width w), cubic FCC cell, periodic
+==============================================================================
+  card shell term, repulsive, lam_s = +alpha0/R:  (shell area/cell 12.5978 vs 4*pi = 12.5664; iters 40, residual 7.7e-12)
+       grid min rho/n0 = 0.64457, max = 0.64818, mean = 0.64581
+       sphere centre          rho/n0 = 0.64818
+       shell, facing oct void  rho/n0 = 0.64533
+       shell, facing tet void  rho/n0 = 0.64489
+       contact point (12/sph)  rho/n0 = 0.64462
+       oct void centre        rho/n0 = 0.64591
+       tet void centre        rho/n0 = 0.64493
+       oct-void minus shell(oct-facing) = +0.00058;  global contrast (max-min)/mean = 0.560%
+  App J sign (attractive),     lam_s = -alpha0/R:  (shell area/cell 12.5978 vs 4*pi = 12.5664; iters 11, residual 5.5e-12)
+       grid min rho/n0 = 1.34974, max = 1.35729, mean = 1.35468
+       sphere centre          rho/n0 = 1.34974
+       shell, facing oct void  rho/n0 = 1.35567
+       shell, facing tet void  rho/n0 = 1.35660
+       contact point (12/sph)  rho/n0 = 1.35718
+       oct void centre        rho/n0 = 1.35446
+       tet void centre        rho/n0 = 1.35651
+       oct-void minus shell(oct-facing) = -0.00121;  global contrast (max-min)/mean = 0.557%
+  App JH BC strength,          lam_s = +alpha0  :  (shell area/cell 12.5978 vs 4*pi = 12.5664; iters 28, residual 7.8e-12)
+       grid min rho/n0 = 0.82205, max = 0.82435, mean = 0.82284
+       sphere centre          rho/n0 = 0.82435
+       shell, facing oct void  rho/n0 = 0.82254
+       shell, facing tet void  rho/n0 = 0.82226
+       contact point (12/sph)  rho/n0 = 0.82208
+       oct void centre        rho/n0 = 0.82291
+       tet void centre        rho/n0 = 0.82229
+       oct-void minus shell(oct-facing) = +0.00037;  global contrast (max-min)/mean = 0.280%
+  alt. xi convention xi/sqrt2, lam_s = +alpha0/R:  (shell area/cell 12.5978 vs 4*pi = 12.5664; iters 28, residual 7.8e-12)
+       grid min rho/n0 = 0.82132, max = 0.82591, mean = 0.82290
+       sphere centre          rho/n0 = 0.82591
+       shell, facing oct void  rho/n0 = 0.82230
+       shell, facing tet void  rho/n0 = 0.82174
+       contact point (12/sph)  rho/n0 = 0.82139
+       oct void centre        rho/n0 = 0.82304
+       tet void centre        rho/n0 = 0.82180
+       oct-void minus shell(oct-facing) = +0.00073;  global contrast (max-min)/mean = 0.557%
+
+==============================================================================
+B(iii). What 'condensed in shells, uncondensed in voids' would cost in V0
+==============================================================================
+  oct void: r = 0.2071 a; gradient cost ~ (xi/r)^2 =   125.2 x  vs condensation gain 1/2  -> ratio ~     250
+  tet void: r = 0.1124 a; gradient cost ~ (xi/r)^2 =   425.3 x  vs condensation gain 1/2  -> ratio ~     851
+  The model's only length is xi = 2.32 a; the voids are 11-21x smaller. No location-dependent
+  phase can form on the void scale. The shell term is repulsive (card) and DEPLETES the shells,
+  the opposite of 'condensed in the shells'.
+  Cross-check vs App J sec. J.3.1: |Psi(R)|/Psi0 = tanh(r_oct/xi) = 0.08913 is asserted there;
+  solving the functional itself gives |Psi(R)|/Psi0 = sqrt(rho/n0) = 0.80 (card term), 0.91 (JH strength),
+  1.16 (App J sign) -- never ~0.09. The tanh value is not a solution of the corpus's own equations.

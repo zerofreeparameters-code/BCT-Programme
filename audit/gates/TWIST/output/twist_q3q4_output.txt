@@ -1,0 +1,74 @@
+
+==============================================================================
+Q3-A. Virial theorem for the relaxed knot field (spheromak, B.n = 0 at r = R)
+==============================================================================
+  kR = 4.493409 (first zero of j1)
+  max|curl B - k B|/max|B| = 3.55e-05;  max|div B|/(k max|B|) = 1.40e-13
+  max|B.n| at wall / max|B| = 3.64e-16
+  W = 2.470886e-02,  (k/2)K = 2.470886e-02   (Arnold bound saturated: ratio 1.00000000)
+  mean wall pressure <B^2/2>_wall = 1.573015e-02;  u_bar/3 = 1.573015e-02;  ratio = 1.00000000
+  -> confirmed: a force-free knot with B.n = 0 pushes on its wall with mean pressure u_bar/3.
+
+==============================================================================
+Q3-B. Required wall pressure in condensation-energy units (bought Maxwell coupling)
+==============================================================================
+  u_bar/u_c >= 6 pi x1 (xi/R)^2 (lam_L/R)^2 = 1819.7 (lam_L/R)^2 ;  wall P/u_c = 606.6 (lam_L/R)^2
+  A wall of the same condensate holds at most P ~ u_c (thermodynamic critical field). Requires
+  lam_L <= 0.0406 R = 0.0203 a,  i.e. kappa = lam_L/xi <= 0.0088 (extreme type I).
+  lam_L is set by the bought coupling e: the requirement can only be met by choosing e (no-fit: forbidden).
+  Density is uniform to 0.6% (Q2), so lam_shell = lam_void = lam_interior to ~0.3%: the shell has no
+  screening of its own; it screens exactly as much as the interior it is supposed to hold the field in.
+  Shell thickness: corpus delta shell (d = 0); App J's input d = sqrt(r_oct r_tet) = 0.1526 a.
+  Density-profile width of the shell perturbation: xi/sqrt2 = 1.639 a > R = 0.5 a.
+
+==============================================================================
+Q3-C. V0 alone: Hopf-1 texture pinned in the ball (grip granted), energy vs condensation
+==============================================================================
+  pinned ball map (g = pi(1 - r/R)): H = 1.000000
+  E2 = int (1/4)|dn|^2 = 17.9694 K_s  (= 35.939 K_s R)
+  texture energy density / condensation energy density = 368.7
+  local W~ = xi^2 (1/4)|dn|^2: mean 184.3, fraction of ball with W~ > 1: 1.000
+  -> Exact tree result (Q1-F1): for W~ >= 1 the condensate is destroyed (s = 0). The knot's own
+     gradients exceed that threshold in 100% of the sphere: the interior goes normal, n is
+     undefined there, and the Hopf number has nothing to live on.
+  Unwinding cost <= u_c V = 0.0487 K_s  vs texture energy 17.97 K_s  (ratio 369).
+  Derrick inside the ball: shrinking the texture to size L < R scales E2 -> E2 L/R (monotone), so
+  even with the wall pinned the knot collapses to a point and unwinds through a normal core.
+
+==============================================================================
+Q4-iv. Free edge (no grip): is the Hopf number protected?
+==============================================================================
+   s (pinning)   'H' = (1/4pi^2) int_ball a.curl a   [gauge-dependent once the edge is free]
+      1.00       +1.000000
+      0.90       +0.993549
+      0.75       +0.909155
+      0.50       +0.500000
+      0.25       +0.090845
+      0.00       +0.000000
+  With the wall value of n not fixed, a one-parameter family connects H = 1 to H = 0 continuously
+  (B^3 is contractible): no invariant, no protection. The corpus shell term ~|Psi|^2 is U(2)
+  invariant and cannot pin n. A direction-dependent grip term must be added.
+
+==============================================================================
+Q4-iii. Wire medium of connected conducting shells at Planck spacing
+==============================================================================
+  Planck angular frequency c/l_P = 1.8549e+43 s^-1
+  Pendry et al. (1996), thin wires radius r, spacing a:  omega_p^2 = 2 pi c^2 / (a^2 ln(a/r))
+     r/a =   3e-01:  omega_p = 4.237e+43 s^-1 = 2.284 omega_Planck
+     r/a =   1e-01:  omega_p = 3.064e+43 s^-1 = 1.652 omega_Planck
+     r/a =   1e-02:  omega_p = 2.167e+43 s^-1 = 1.168 omega_Planck
+     r/a =   1e-05:  omega_p = 1.370e+43 s^-1 = 0.739 omega_Planck
+     r/a =   1e-10:  omega_p = 9.689e+42 s^-1 = 0.522 omega_Planck
+     r/a =   1e-30:  omega_p = 5.594e+42 s^-1 = 0.302 omega_Planck
+  Highest-energy photon observed ~3.7 PeV: omega = 5.62e+30 s^-1 = 3.0e-13 omega_Planck
+  Low-frequency cosmic radio ~10 MHz:      omega = 6.28e+07 s^-1 = 3.4e-36 omega_Planck
+  A plasma medium is opaque BELOW omega_p: every observed photon (radio to PeV gamma) lies 13-36
+  orders of magnitude below the cutoff -> connected conducting shells would make the vacuum opaque.
+  Transparency down to 10 MHz needs the dimensionless inductance per cell l = L/(mu0 a) >= (omega_P/omega)^2
+  = 8.7e+70. Geometric part ln(a/r)/2pi is O(1-10). Kinetic part (Lambda/2a) N_sq (Lambda = Pearl
+  length 2 lam^2/d of the shell, N_sq = squares along the path ~ ln(R/r_c)/pi) would need
+  Lambda >~ 2e+71 a / N_sq. Holding the knot needs the shell to screen on scale R: Lambda <~ R = 0.5 a.
+  Gap: ~72 orders of magnitude, closable only by N_sq ~ 1e71, i.e. contacts
+  narrower than R exp(-1e71): effectively insulating contacts -- an added input.
+  Static limit: a connected screening network also expels static magnetic fields (Meissner); static
+  fields are observed to penetrate the vacuum. The wire-medium argument HOLDS.

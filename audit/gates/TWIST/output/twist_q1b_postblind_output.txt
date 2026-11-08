@@ -1,0 +1,96 @@
+
+==============================================================================
+1. Gauge-covariant decomposition with EM  (random rho, phi, zeta, A; exact derivatives)
+==============================================================================
+  |(grad - iqA)Psi|^2 vs (grad sqrt rho)^2 + rho[1/4|dn|^2 + C^2]: max rel resid 2.23e-14
+  q curl A = curl a - curl C  (curl a = f[n] by Mermin-Ho):     max rel resid 3.63e-16
+  => with EM the gauge-invariant variables are (rho, n, C) plus B = (f[n] - curl C)/q. The twist
+     field's curl is still f[n] identically: a stays slaved. The new independent field is A (or C).
+
+==============================================================================
+2. London elimination of C: kernel for the twist field  c_F(k) = kappa/(1 + k^2 lam^2)
+==============================================================================
+  lam = 0.3: numerical min E = 0.19928776   kernel formula = 0.19928776   rel diff 4.2e-16
+  lam = 1.0: numerical min E = 1.04550700   kernel formula = 1.04550700   rel diff 6.4e-16
+  lam = 3.0: numerical min E = 1.82797552   kernel formula = 1.82797552   rel diff 7.3e-16
+  => texture scale >> lam: +kappa |curl a|^2 = +K_s lam^2 |curl a|^2 (the BFN Faddeev term, sign +);
+     texture scale << lam: kernel -> K_s/k^2, i.e. it degrades to a 2-derivative-like cost.
+
+==============================================================================
+3. Net local quartic: EM (+K_s lam^2 |curl a|^2) vs density (-(xi^2/2) K_s W^2)
+==============================================================================
+  F^2 projection: c_F,net = K_s (lam^2 - xi^2/4).   Standard-map Derrick coefficient (both integrals
+  = 8 pi^2 for the standard map): E = 8pi^2 K_s [L + (lam^2 - xi^2/2)/L].
+   lam/xi = 0.1000 (lam =  0.232 a =   0.46 R):  c_F,net/K_s =   -1.289 a^2;  Derrick coeff =   -2.632 a^2
+   lam/xi = 0.2500 (lam =  0.579 a =   1.16 R):  c_F,net/K_s =   -1.007 a^2;  Derrick coeff =   -2.350 a^2
+   lam/xi = 0.5000 (lam =  1.159 a =   2.32 R):  c_F,net/K_s =   +0.000 a^2;  Derrick coeff =   -1.343 a^2
+   lam/xi = 0.7071 (lam =  1.639 a =   3.28 R):  c_F,net/K_s =   +1.343 a^2;  Derrick coeff =   -0.000 a^2
+   lam/xi = 1.0000 (lam =  2.318 a =   4.64 R):  c_F,net/K_s =   +4.028 a^2;  Derrick coeff =   +2.686 a^2
+   lam/xi = 2.0000 (lam =  4.635 a =   9.27 R):  c_F,net/K_s =  +20.141 a^2;  Derrick coeff =  +18.799 a^2
+   lam/xi = 5.0000 (lam = 11.588 a =  23.18 R):  c_F,net/K_s = +132.932 a^2;  Derrick coeff = +131.590 a^2
+  Local stabilisation needs lam > xi/sqrt2 = 1.639 a = 3.28 R (F^2 projection alone: lam > xi/2).
+  The sign is decided by the bought coupling (lam ~ 1/q sqrt(mu)), not by corpus quantities.
+
+==============================================================================
+4. Size scan with the full non-local kernels (scaled standard Hopf map)
+==============================================================================
+  grid 128^3, box 24.0 L:  int W1 = 72.016 (8pi^2 = 78.957),  int W1^2 = 78.957,  int |f1|^2 = 78.957
+  k=0 component of f1 (should vanish, int f dV = 0): |S_f(0)|/sum S_f = 4.84e-06 -> set to 0 (IR artefact)
+  max of (1/4)|dn|^2 for L = 1: 8.0000  -> condensate survives the core only if L > xi sqrt(Wmax) = 6.555 a = 13.11 R
+   lam/xi    E(L) has a local minimum?   L*/a     L*/R    W~max(L*)   fits in sphere (L* <~ R)?
+   [density frozen: no local minimum; E(L=0.02a)/E(L=200a) = 1.33e-04]
+    0.100       no (collapses)          --        --        --          --
+   [density frozen: no local minimum; E(L=0.02a)/E(L=200a) = 1.33e-04]
+    0.500       no (collapses)          --        --        --          --
+   [density frozen: no local minimum; E(L=0.02a)/E(L=200a) = 1.33e-04]
+    0.707       no (collapses)          --        --        --          --
+   [density frozen: no local minimum; E(L=0.02a)/E(L=200a) = 1.33e-04]
+    1.000       no (collapses)          --        --        --          --
+   [density frozen: no local minimum; E(L=0.02a)/E(L=200a) = 1.33e-04]
+    2.000       no (collapses)          --        --        --          --
+   [density frozen: no local minimum; E(L=0.02a)/E(L=200a) = 1.33e-04]
+    5.000       no (collapses)          --        --        --          --
+   [density frozen: no local minimum; E(L=0.02a)/E(L=200a) = 1.28e-04]
+   20.000       no (collapses)          --        --        --          --
+     lam/xi=1.0: L/lam = 1000.000  E(L)/K_s =  182986.0150  [density frozen:  182986.1065]   local formula  182986.0150
+     lam/xi=1.0: L/lam =    0.300  E(L)/K_s =      24.8569  [density frozen:      71.4712]   local formula     359.8723
+     lam/xi=1.0: L/lam =    0.030  E(L)/K_s =     -14.6422  [density frozen:       7.3073]   local formula    3055.2550
+     lam/xi=1.0: L/lam =    0.003  E(L)/K_s =    -144.9340  [density frozen:       0.7309]   local formula   30498.2029
+     lam/xi=5.0: L/lam = 1000.000  E(L)/K_s =  914930.5141  [density frozen:  914930.5324]   local formula  914930.5142
+     lam/xi=5.0: L/lam =    0.300  E(L)/K_s =     315.4800  [density frozen:     357.3562]   local formula    3263.2490
+     lam/xi=5.0: L/lam =    0.030  E(L)/K_s =       2.6273  [density frozen:      36.5363]   local formula   29915.1487
+     lam/xi=5.0: L/lam =    0.003  E(L)/K_s =     -29.0847  [density frozen:       3.6547]   local formula  298879.7532
+  With the density frozen (no negative term at all), E(L) -> 0 linearly as L -> 0: below lam the field
+  penetrates, the supercurrent C cancels the twist cost, and the 'Faddeev' energy degrades to ~L.
+  With the density kernel included E(L) even goes negative at small L; that is the linear kernel
+  overshooting where W~ >> 1 (the physical floor is the normal state).
+  Either way E(L) -> 0 along the family: the H = 1 sector has infimum 0, so there is no stable knot at
+  any lam (agrees with Speight, J. Geom. Phys. 60, 599 (2010) and Jaykka-Speight, PRD 84, 125035 (2011):
+  restoring the supercurrent coupling makes BFN knots shrink and disappear).
+  W~max = xi^2 max(1/4|dn|^2): values > 1 mean the linear density kernel is outside its range and the
+  condensate is locally destroyed (Q1-F1).
+
+==============================================================================
+5. Axis alignment: easy-axis / Zeeman potential, or pinning n = z on every shell
+==============================================================================
+  (i) A potential D(1 - n_z^2) or h(1 - n_z) has no derivatives: it adds nothing to c_F and scales as
+      L^3 under x -> x/L, so it cannot stop Derrick collapse; it only caps the knot size from above.
+      It gaps the magnon (omega = eps_k + 2D/hbar-type gap): still no photon-like mode.
+  (ii) Pinning n = z on each shell is the Q4(iv) grip term: it makes H well-defined per sphere,
+      but does not touch c_F, the slaving of a, or the Higgs mass.
+  (iii) pinned Hopf-1 knot in one sphere: |int f dV| / int |f| dV = 1.84e-15
+      Each knot's twist field integrates to zero over its sphere, so aligning every knot along one
+      axis gives no macroscopic twist field and no long-range mode; aligning the knot axes in space
+      is a vector (T1u-type) order -> lattice anisotropy (Gate PROMOTE, CN-PROMOTE-02).
+
+==============================================================================
+POST-BLIND Q1 SUMMARY (inputs: EM = charge q + Maxwell mu; AXIS = D or grip)
+==============================================================================
+  (a) identity unchanged (gauge-covariant form verified).
+  (b) a still slaved (curl a = f[n]); the new independent field A is London-screened (massive).
+  (c) c_F > 0 is now generated (+K_s lam^2), but the net sign needs lam > xi/sqrt2 (Derrick, standard map),
+      i.e. it is set by the bought coupling; alignment adds nothing to c_F.
+  No stable knot exists at any lam once the supercurrent relaxes (part 4); and any knot whose core keeps
+  its superfluid must be larger than xi*sqrt(8) = 13 sphere radii.
+  Q1 under these inputs: BOUGHT for c_F > 0 (coupling-dependent); the twist field itself still has no
+  independent propagating DOF. The downstream Q2 kill (Higgs mass) is untouched.
