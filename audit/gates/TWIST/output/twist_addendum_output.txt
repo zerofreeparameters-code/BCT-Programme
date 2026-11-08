@@ -1,0 +1,69 @@
+
+==============================================================================
+1. Desk-check B (spheromak) numbers, recomputed
+==============================================================================
+  mean wall pressure / u_bar = 0.3333333333  (1/3)
+  equator wall pressure / u_bar = 0.5000000000  (desk: 1/2; exact because B^2 at the wall ~ sin^2 theta, <sin^2> = 2/3)
+  centre energy density / u_bar = 4.7090 (desk 4.71);  / equator wall value = 9.418 (desk 9.4)
+  inner half-radius ball holds 36.31% of the energy (desk 36%)
+
+==============================================================================
+2. Desk-check A (neutral C^2 knot filling the sphere), recomputed
+==============================================================================
+  int (1/4)|dn|^2 = 17.9694;  int |grad chi|^2 = 26.9540 (analytic 4 pi R (pi^2/3 + 1) = 26.9540)
+  E_knot (n-only) = 193.0 eps_c l^3 -> 369x the condensation energy in the sphere (desk: 191, 366x)
+  E_knot (with built-in flow) = 289.5 -> 553x (desk: 287, 548x)
+  TWIST CN-TWIST-15 (369x) is the n-only number; the desk's lower end agrees to ~1% (its 181^3 grid).
+
+==============================================================================
+3. The unwinding barrier: radial minimisations of the corpus functional
+==============================================================================
+  radial grid: 3200 cells to 32.4 a (dr = 0.0101)
+  (a) fully normal sphere (s = 0 for r < R), healing outside:  E =   84.37 eps_c l^3
+      [bulk part V = 0.524; the rest is the healing profile outside, ~ 4 pi R xi^2 x 2 = 67.5 for 1 - R/r]
+  (b) Hopf texture kept, density free to respond:              E =   50.62 eps_c l^3;  s(0) = 0.6075, s(R) = 0.4160
+  (c) Hopf texture at full density (n-only):                   E =  193.03 eps_c l^3
+  -> letting the density respond lowers the knot from 193 to 51 eps_c l^3 (it never reaches zero
+     density, so the radial minimum keeps the topology); a fully normal sphere would cost 84.
+  In (b) the density is below half its bulk value over 100% of the sphere's volume.
+  Knot shrunk to size L inside the sphere, density free (radial):
+     L =  0.500 a  (1.000 R):  E =   50.618 eps_c l^3   s(0) = 0.6075
+     L =  0.400 a  (0.800 R):  E =   39.233 eps_c l^3   s(0) = 0.5850
+     L =  0.300 a  (0.600 R):  E =   28.396 eps_c l^3   s(0) = 0.4996
+     L =  0.200 a  (0.400 R):  E =   18.142 eps_c l^3   s(0) = 0.4725
+     L =  0.100 a  (0.200 R):  E =    8.447 eps_c l^3   s(0) = 0.3468
+     L =  0.050 a  (0.100 R):  E =    3.814 eps_c l^3   s(0) = 0.2480
+     L =  0.025 a  (0.050 R):  E =    2.094 eps_c l^3   s(0) = 0.2109
+  E(L) decreases monotonically as the knot shrinks: True. There is no barrier on the shrink path:
+  the knot collapses (Derrick, now with the density included) and unwinds at a point as L -> 0.
+  TWIST CN-TWIST-15/16 compared the knot with the bulk term u_c V = 0.524 and called unwinding '369x
+  cheaper'. That ratio is the knot's energy over the bulk condensation energy, not over a barrier.
+  Corrected statement: the knot sector has no barrier at all against shrinking, so the conclusion
+  (no protected knot in V0) is stronger than stated, while the '369x cheaper' wording is wrong.
+  Desk A's ~23 eps_c l^3 'barrier' (bulk + gradient on scale R) is likewise not the operative barrier;
+  its Derrick line ('the knot pulls inward') is the operative statement.
+
+==============================================================================
+4. Impulse of a pinned knot (does it self-propel? does an aligned array carry momentum?)
+==============================================================================
+  int f dV = [-0. -0.  0.]  (|.|/int|f| = 1.8e-15)
+  impulse P = 1/2 int x * f dV = [-0.       -0.        0.929956];  |P|/(R int|f| dV) = 0.1715
+  Nonzero impulse along the knot axis: zero net vorticity but a dipolar outside flow, like a smoke ring.
+  => (i) a free knot translates; holding one at a lattice site needs a pinning force from the shell
+     (another input); (ii) an all-aligned array carries a net momentum density n P along c (an
+     'aether wind'); the alternating pattern cancels it. Desk C's dipolar void flows are consistent
+     with this; TWIST sec.9's 'no macroscopic twist field' is right for f, but not for the flow.
+
+==============================================================================
+5. Desk-check C: ring size, and the alternating pattern's residual axis
+==============================================================================
+  desk ring radius 0.6106 R = 0.3053 a = 0.132 xi
+  Gross-Pitaevskii vortex rings exist only down to radii of order xi; smaller solutions lose their
+  zeros and become vortex-free rarefaction pulses (Jones & Roberts 1982). A ring of 0.13 xi is not a
+  vortex ring of this medium, so desk C's flow pattern is conditional on knots existing (TWIST: they don't).
+  all aligned : net axis <m_z> = +1.0;  nematic order Q_zz = <3 m_z^2 - 1>/2 = 1.0
+  alternating : net axis <m_z> = +0.0;  nematic order Q_zz = <3 m_z^2 - 1>/2 = 1.0
+  The alternating pattern has no net direction but still singles out the c-axis (Q_zz = 1, maximal).
+  A two-way speed-of-light anisotropy of that axial (cos 2 theta) type is what rotating-cavity
+  Michelson-Morley experiments measure (twice the rotation rate), at Delta c/c ~ 1e-17..1e-18.
+  So 'alternating eases the light-speed worry' (desk C) holds only for a net direction, not the axis.
