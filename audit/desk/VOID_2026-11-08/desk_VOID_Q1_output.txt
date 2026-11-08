@@ -1,0 +1,96 @@
+
+==============================================================================
+A. The void network: nodes, windows, loops
+==============================================================================
+  octahedral void: 6 neighbouring spheres, radius 0.20711 a;  tetrahedral: 4, radius 0.11237 a
+  windows: oct-tet 8 per oct, tet-oct 4 per tet, oct-oct 0, tet-tet 0  -> BIPARTITE
+  per sphere: 1 oct + 2 tet nodes, 8 windows (= 2 tets x 4 = 1 oct x 8)
+  window (gap inside three touching spheres): inscribed radius 0.07735 a = 0.1547 R
+  4-cycles oct-tet-oct-tet found near the origin: 120; each wraps a sphere-sphere contact: True
+  loops around the 12 contacts of the sphere at the origin: 12 (one per contact); per sphere 12/2 = 6 loops
+  => The smallest loops of the void network ring the contact points between touching spheres.
+     In a Coulomb phase: electric field on the 8 windows/sphere, Gauss law on the 3 voids/sphere,
+     magnetic flux through the 6 contact-loops/sphere; charges = rule violations sitting ON voids.
+  Eligibility (3-D, bipartite, short even loops, cubic symmetry): YES - geometry is not the obstacle.
+
+==============================================================================
+B. Regime: does BCT put the network fluid in the liquid (Mott-like) regime?
+==============================================================================
+  xi = 2.3175 a;  xi/r_oct = 11.2, xi/r_tet = 20.6, xi/window = 30.0,  xi/(oct-tet spacing 0.612 a) = 3.8
+  interaction scale g n0 = hbar^2/(2 m xi^2) = 0.1862  (units hbar^2/2m = 1, a = 1)
+/home/claude/void/desk_VOID_Q1.py:138: UserWarning: Exited at iteration 400 with accuracies 
+[7.71171592e-08 6.62236905e-08 6.66156366e-08 6.70571020e-08
+ 2.33175104e-07 4.35557365e-08]
+not reaching the requested tolerance 1e-07.
+Use iteration 401 instead with accuracy 
+9.229073818441365e-08.
+
+  w, vecs = lobpcg(Hop, vecs, M=Pop, largest=False, tol=1e-7, maxiter=400)
+/home/claude/void/desk_VOID_Q1.py:138: UserWarning: Exited postprocessing with accuracies 
+[7.71170638e-08 6.79792425e-08 6.64875304e-08 6.54073049e-08
+ 2.35729490e-07 2.64451256e-08]
+not reaching the requested tolerance 1e-07.
+  w, vecs = lobpcg(Hop, vecs, M=Pop, largest=False, tol=1e-7, maxiter=400)
+  grid 48^3, wall 3000: lowest levels = [130.57237 130.57474 130.57474 130.57474 249.30664 249.30664]  (LOBPCG-refined, rel. accuracy ~1e-7)
+/home/claude/void/desk_VOID_Q1.py:138: UserWarning: Exited at iteration 400 with accuracies 
+[5.97211892e-08 8.52907034e-08 8.63440641e-08 8.53784871e-08
+ 8.17992284e-08 4.72052498e-05]
+not reaching the requested tolerance 1e-07.
+Use iteration 397 instead with accuracy 
+6.370376861974708e-06.
+
+  w, vecs = lobpcg(Hop, vecs, M=Pop, largest=False, tol=1e-7, maxiter=400)
+/home/claude/void/desk_VOID_Q1.py:138: UserWarning: Exited postprocessing with accuracies 
+[5.97221698e-08 8.59931840e-08 8.57290142e-08 8.53121425e-08
+ 6.15754967e-08 3.78306535e-05]
+not reaching the requested tolerance 1e-07.
+  w, vecs = lobpcg(Hop, vecs, M=Pop, largest=False, tol=1e-7, maxiter=400)
+  grid 64^3, wall 3000: lowest levels = [127.22999 127.23202 127.23202 127.23202 244.31663 244.31663]  (LOBPCG-refined, rel. accuracy ~1e-7)
+/home/claude/void/desk_VOID_Q1.py:138: UserWarning: Exited at iteration 400 with accuracies 
+[8.20212251e-08 8.72839166e-08 8.68252651e-08 9.15483452e-08
+ 7.51603789e-06 7.88201842e-04]
+not reaching the requested tolerance 1e-07.
+Use iteration 400 instead with accuracy 
+0.000131581425922539.
+
+  w, vecs = lobpcg(Hop, vecs, M=Pop, largest=False, tol=1e-7, maxiter=400)
+/home/claude/void/desk_VOID_Q1.py:138: UserWarning: Exited postprocessing with accuracies 
+[8.20355781e-08 8.69068124e-08 9.21626258e-08 8.65627479e-08
+ 8.37998627e-06 7.80760784e-04]
+not reaching the requested tolerance 1e-07.
+  w, vecs = lobpcg(Hop, vecs, M=Pop, largest=False, tol=1e-7, maxiter=400)
+  grid 64^3, wall 10000: lowest levels = [137.16159 137.16205 137.16205 137.16205 264.29329 264.29329]  (LOBPCG-refined, rel. accuracy ~1e-7)
+  levels 1-4 (one per octahedral void): [137.16159 137.16205 137.16205 137.16205];  next level 264.293
+  the next states sit 127 higher: the tetrahedral voids act as barriers between octahedral sites
+  -> with sealed spheres the low-energy network is a lattice of OCTAHEDRAL sites (an FCC lattice,
+     z = 12) linked through tetrahedral voids. FCC tight binding at the zone centre of the cubic cell:
+     one level at -12t (Gamma) and three at +4t (X points): splitting = 16 t.
+     (48, 3000.0): splitting 0.00237 -> |t| = 0.00015   (triplet spread 3.7e-13)
+     (64, 3000.0): splitting 0.00203 -> |t| = 0.00013   (triplet spread 3.7e-13)
+     (64, 10000.0): splitting 0.00046 -> |t| = 0.00003   (triplet spread 3.1e-13)
+  effective volume of one octahedral-site state: V_w = 0.0314 a^3 (oct void sphere volume 0.0372)
+  hopping t = 2.9e-05 .. 1.5e-04 (stiffer walls -> smaller t; a true hard wall is smaller still)
+  interaction scale g n0 = 0.1862:  g n0 / t = 1258 .. 6476
+  On-site repulsion U = g/V_w = (g n0)/nbar, nbar = n0 V_w = particles per octahedral void (NOT fixed
+  by the corpus). Mott (non-condensed) at integer filling nbar needs, in mean field on z = 12,
+  U/(z t) > (2 nbar + 1) + 2 sqrt(nbar (nbar + 1))  [= 5.83 at nbar = 1].
+     nbar = 1: U/(z t) =  104.835  vs needed   5.83  -> liquid possible
+     nbar = 2: U/(z t) =   52.417  vs needed   9.90  -> liquid possible
+     nbar = 3: U/(z t) =   34.945  vs needed  13.93  -> liquid possible
+  At nbar = 1 the liquid needs g n0 / t > 70; with the largest hopping found, g n0 / t = 1258  (margin x18).
+  Largest filling that stays non-condensed (mean field): nbar <= 4 (softest walls) .. 11 (stiffest)
+
+==============================================================================
+Q1 SUMMARY
+==============================================================================
+  Geometry: the octahedral-tetrahedral void network is 3-D and bipartite (8 windows per oct, 4 per tet,
+  no oct-oct or tet-tet), and its smallest loops ring the 12 sphere-sphere contacts (6 loops per sphere).
+  Regime: IF the spheres keep the network fluid out (Michel's 'contained' spheres), the fluid's low-energy
+  states sit in the octahedral voids; the tetrahedral voids are barriers (127 units higher). Octahedral
+  sites form an FCC lattice with hopping t = 2.9e-05..1.5e-04, far below the interaction scale g n0 = 0.186.
+  A non-condensed (Mott-like) network is then possible for up to ~4-11 particles per octahedral void.
+  Inputs: (1) spheres impermeable to the network fluid [structural; the record has the superfluid passing
+  through the shells]; (2) the filling per octahedral void [free number; n0 is not fixed by the corpus].
+  No new length is needed: BCT's own xi with the void geometry gives the right regime.
+  Score (desk): BOUGHT, 2 inputs - and better than expected. Not yet light: a Mott liquid is necessary,
+  not sufficient. Whether it carries an emergent photon is Q2.

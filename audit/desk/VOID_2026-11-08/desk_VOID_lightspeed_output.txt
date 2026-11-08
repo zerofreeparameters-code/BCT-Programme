@@ -1,0 +1,87 @@
+
+==============================================================================
+Part A: is there an energy window where charges and the emergent photon are both light?
+==============================================================================
+  Granting the Coulomb phase of VOID-Q2: photon band top ~ pi * J_ring, J_ring ~ t^L / U^(L-1);
+  charges (rule violations) cost the Mott gap Delta ~ U (it closes only at the Mott edge).
+  Running of speeds needs energies E with Delta < E < pi J_ring. Ratio Delta/(pi J_ring) = (U/t)^L / pi.
+
+     U/t  L   Delta/(pi J)  window (e-folds)   gap must be tuned to
+      70  3      1.092e+05      none (-11.6)      8.4e-11 x e^(-2 l)
+      70  4      7.643e+06      none (-15.8)      1.7e-14 x e^(-2 l)
+     310  3      9.483e+06      none (-16.1)      1.1e-14 x e^(-2 l)
+     310  4      2.940e+09      none (-21.8)      1.2e-19 x e^(-2 l)
+    1241  3      6.084e+08      none (-20.2)      2.7e-18 x e^(-2 l)
+    1241  4      7.550e+11      none (-27.3)      1.8e-24 x e^(-2 l)
+    6421  3      8.427e+10      none (-25.2)      1.4e-22 x e^(-2 l)
+    6421  4      5.411e+14      none (-33.9)      3.4e-30 x e^(-2 l)
+
+  Reading: the photon's whole band lies below the charge gap by (U/t)^L. Charges never run
+  as light particles while the photon exists, so nothing pulls the speeds together. The
+  photon's stiffness J_ring is itself the virtual-charge effect; it is already counted.
+  A window opens only within (pi J/U)^2 e^(-2l) of the Mott edge, where the charges are about to
+  condense; condensed charges Higgs the photon (it gets a mass: the TWIST outcome again).
+
+==============================================================================
+Part B: grant a window (light charges) and run the one-loop flow, l = 0 .. 51.5
+==============================================================================
+  largest window: ln(E_Planck / m_e) = 51.5 e-folds; one Dirac charge (N = 1)
+
+        R0  alpha0 charge side  R after 51.5 photon speed-up charge slow-down  alpha_IR
+   2.8e+04  0.0073          on     5.869e+02           47.08x          1.0133x  1.55e-04
+   2.8e+04  0.0073         off     5.922e+02           47.28x          1.0000x  1.54e-04
+   2.8e+04  0.0800          on     1.737e+02          154.21x          1.0455x  5.19e-04
+   2.8e+04  0.0800         off     1.789e+02          156.50x          1.0000x  5.11e-04
+   2.8e+04  1.0000          on     4.553e+01          525.01x          1.1714x  1.90e-03
+   2.8e+04  1.0000         off     5.061e+01          553.21x          1.0000x  1.81e-03
+   1.5e+12  0.0073          on     4.335e+06       346005.02x          1.0000x  2.11e-08
+   1.5e+12  0.0073         off     4.335e+06       346005.23x          1.0000x  2.11e-08
+   1.5e+12  0.0800          on     1.309e+06      1145478.81x          1.0000x  6.98e-08
+   1.5e+12  0.0800         off     1.309e+06      1145481.14x          1.0000x  6.98e-08
+   1.5e+12  1.0000          on     3.704e+05      4049858.26x          1.0000x  2.47e-07
+   1.5e+12  1.0000         off     3.704e+05      4049887.41x          1.0000x  2.47e-07
+
+  closed form, charge side off, R0 = 2.8e4, alpha0 = 1/137:  R = 592.2  (numeric above)
+  Fast charges speed the photon up, but they also screen the charge: alpha * c stays fixed
+  (the electric coefficient a_E hardly moves), so the pull weakens as it works and R falls
+  only as 1/sqrt(l). e-folds needed just to reach R = 2 from R0:
+     R0 =  2.8e+04, alpha0 = 0.0073:  l =  4.52e+06  (available 51.5)
+     R0 =  2.8e+04, alpha0 = 0.0800:  l =  4.12e+05  (available 51.5)
+     R0 =  2.8e+04, alpha0 = 1.0000:  l =  3.30e+04  (available 51.5)
+     R0 =  1.9e+06, alpha0 = 0.0073:  l =  3.07e+08  (available 51.5)
+     R0 =  1.9e+06, alpha0 = 0.0800:  l =  2.80e+07  (available 51.5)
+     R0 =  1.9e+06, alpha0 = 1.0000:  l =  2.24e+06  (available 51.5)
+     R0 =  1.5e+12, alpha0 = 0.0073:  l =  2.42e+14  (available 51.5)
+     R0 =  1.5e+12, alpha0 = 0.0800:  l =  2.21e+13  (available 51.5)
+     R0 =  1.5e+12, alpha0 = 1.0000:  l =  1.77e+12  (available 51.5)
+
+==============================================================================
+Part C: final approach (speeds nearly equal) and the observational bounds
+==============================================================================
+  Near equal speeds: d delta/dl = -(2 alpha/pi) delta and d alpha/dl = -(2/3pi) alpha^2
+  give delta_IR/delta_UV = (alpha_IR/alpha_UV)^3. alpha_IR is measured (1/137); weak coupling
+  needs alpha_UV <~ 1, and one-loop QED reaches alpha_UV = 1 only after (3pi/2)(137 - 1) e-folds.
+    e-folds from alpha = 1/137 up to alpha = 1: 641 (available 51.5)
+    best possible reduction at weak coupling: (1/137)^3 = 3.89e-07
+    over the real 51.5 e-folds: alpha_UV = 1/126.1, reduction (alpha_IR/alpha_UV)^3 = 0.779
+    numeric check: delta 1e-2 -> 7.7916e-03 over 51.5 e-folds ((alpha ratio)^3 predicts 7.7916e-03)
+
+  Observed limits on the electron-photon speed difference:
+    LEP/Tevatron (no vacuum Cherenkov, stable photons): -5.8e-12 <= k_tr - (4/3) c_e00 <= 1.2e-11
+    astrophysical (Altschul, as quoted by Anber & Donoghue): |eta| <~ 1e-14
+    delta_UV = 1 (after the fast phase): weak-coupling floor 3.9e-07;  51.5 e-folds give 7.8e-01
+    delta_UV = 1e-2 (Collins et al. size): weak-coupling floor 3.9e-09;  51.5 e-folds give 7.8e-03
+  To reach 1e-14 at weak coupling the starting mismatch would already have to be <= 2.6e-08.
+
+==============================================================================
+Summary
+==============================================================================
+  A. In the void Coulomb phase there is no window: the charge gap sits (U/t)^L above the photon's
+     whole band. Nothing runs. Opening a window means tuning to the Mott edge, where the photon
+     is Higgsed.
+  B. Granting light charges, one loop drags the photon up only as 1/sqrt(l): R0 = 2.8e4 ends at
+     ~600 (alpha0 = 1/137) to ~50 (alpha0 = 1) after the largest window physics offers, and the
+     same fast charges screen the coupling: alpha_IR ends 4x to 50x below 1/137.
+  C. The last stretch is logarithmic (delta ~ alpha^3). Best case at weak coupling: a factor 4e-7,
+     and that needs 641 e-folds (12x more than exist): short of 1e-11 (lab) / 1e-14 (astro) by
+     4.5 / 7.4 orders. Over the real 51.5 e-folds the factor is 0.78: short by 11 / 14 orders.

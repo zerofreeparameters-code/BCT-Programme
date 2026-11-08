@@ -1,0 +1,45 @@
+xi = 2.3175 a, g n0 = 0.1862, void ground state E0 ~ 130, sealing needs a barrier >~ 1300
+
+==============================================================================
+1. The corpus shell term (alpha0 hbar^2/2mR) oint |Psi|^2 dA  -> delta shell of strength alpha0/R
+==============================================================================
+  strength 0.0148/a; transmission of a void state through it: 0.9999996
+  0.1% transmission needs 721/a = 4.9e+04 x the corpus value  -> does not seal
+
+==============================================================================
+2. The corpus double layer (App J: charge Q = 1 q_P on the shell, thickness d = sqrt(r_tet r_oct))
+==============================================================================
+  potential step across the layer, for a Planck charge: 0.610 E_P; for charge e: 0.052 E_P
+  a neutral network fluid feels nothing. For a charged one, the barrier needed is 10 E0 = 650 E_P (m_P/m),
+  so sealing needs particle mass m >~ 1065 m_P (Planck charge) or 12469 m_P (charge e).
+  -> does not seal: it needs a charged network fluid (not in the medium) AND a mass scale (free), and the
+     double layer itself is an asserted input (Gate TWIST Q4(i)).
+
+==============================================================================
+3. A dense sphere interior (same fluid, density contrast n_in/n0)
+==============================================================================
+  a network particle entering a sphere of density n_in pays g n_in; sealing needs n_in/n0 >~ 6982
+  the interior then out-pushes the voids by (n_in/n0)^2 ~ 5e+07 in pressure; the corpus shell term
+  (a density penalty) holds no pressure: Gate TWIST found it changes the density by ~0.5%.
+  -> does not seal: the dense interior would simply spill into the voids.
+
+==============================================================================
+4. Cheapest physical mechanism found: two immiscible components (A1's C^2, with g12 != g)
+==============================================================================
+  Interior = component 1, network = component 2, mutual repulsion g12. Pressures balance when both
+  densities are ~ n0, so no shell strength is needed; the interface itself is the wall.
+  sealing: a network particle pays g12 n1 >~ 1300  ->  g12/g >~ 6982
+  interface width (strong segregation) ~ xi / sqrt(g12/g - 1) = 0.028 a  (windows 0.077 a, sphere radius 0.5 a): thin enough
+  V0 as fixed for TWIST has g12 = g exactly (SU(2)-symmetric): the marginal point, where nothing
+  separates. Sealing therefore costs ONE coupling, g12/g >~ 7e3, motivated by A1 rather than ad hoc.
+  Caveat: phase separation alone coarsens - droplets merge to cut interface area. Something must fix
+  the sphere size and the FCC arrangement (e.g. a fixed content per sphere); that is not supplied.
+
+==============================================================================
+SUMMARY
+==============================================================================
+  Nothing already in BCT seals the spheres: shell term 5e4 too weak; double layer needs charge + mass;
+  a dense interior bursts. One mechanism does it cleanly: strongly immiscible components (g12/g >~ 7e3),
+  interface ~0.03 a, pressures balanced. It replaces 'sealed spheres' (an assumption) with one number,
+  and adds a new open question: what fixes each sphere's size against coarsening.
+  It does not touch VOID-Q2: light is still outrun.

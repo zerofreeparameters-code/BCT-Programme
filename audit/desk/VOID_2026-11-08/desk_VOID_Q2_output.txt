@@ -1,0 +1,47 @@
+
+==============================================================================
+A. Structure of the low-energy lattice (octahedral sites)
+==============================================================================
+  octahedral sites: 108 in a periodic 3x3x3 cell block; neighbours per site: 12 (FCC, spacing 1 a)
+  triangles among octahedral sites: 864 (24 per site)
+  two-colourable (bipartite)? False
+  tetrahedral voids touching each octahedral site: [8, 8, 8, 8]  (pyrochlore needs exactly 2)
+  => Each site belongs to 8 constraint units, not 2. A site variable cannot be read as a flux on a
+     link between two units, so no Gauss law follows from the bare model. The bipartite oct-tet
+     graph has the right shape, but its links (the windows) carry no low-energy degree of freedom:
+     the tetrahedral voids are barriers (Q1). A U(1) Coulomb structure must be ADDED, e.g. by extra
+     interactions that impose a rule on every tetrahedral void and make it resonate (new inputs).
+
+==============================================================================
+B. Speeds: the photon versus the charges (granting a Coulomb phase)
+==============================================================================
+  single-hop band (E = -4t sum cos cos): maximum speed = 5.66 t a / hbar
+  photon speed ~ J_ring a / hbar with J_ring ~ t^L / U^(L-1); smallest loops on the octahedral
+  lattice: triangles (L = 3); smallest even loops L = 4. Ratio v_charge / c_photon ~ vmax (U/t)^(L-1):
+     t        nbar   U/t      L=3            L=4
+   2.9e-05    1       6421      2.3e+08        1.5e+12
+   2.9e-05    4       1605      1.5e+07        2.3e+10
+   1.5e-04    1       1241      8.7e+06        1.1e+10
+   1.5e-04    4        310      5.4e+05        1.7e+08
+  Even at the edge of the liquid (U/t = 70, the least Q1 allows): L=3 ratio = 2.8e+04, L=4 = 1.9e+06
+  For light to be the fastest signal the ratio must be <= 1, i.e. U/t <~ 1 - but then the liquid melts
+  into a superfluid (Q1 needs U/t >~ 70). The two requirements exclude each other.
+  Observed: photons and electrons share one limiting speed to many decimal places; here charges
+  living on the voids would outrun light by 10^4 (edge of the liquid) to 10^12 (BCT values).
+
+==============================================================================
+C. What does pass, granted a Coulomb phase
+==============================================================================
+  - two transverse polarisations: yes (emergent U(1) in 3-D)
+  - massless: yes, in the Coulomb phase
+  - isotropy: cubic symmetry -> isotropic at long wavelength, corrections ~ (a/lambda)^2 ~ 1e-57 for
+    visible light at Planck spacing; far inside the 1e-17..1e-18 limits
+
+==============================================================================
+Q2 SUMMARY
+==============================================================================
+  Structure: NOT supplied. The octahedral sites form a non-bipartite FCC lattice, each site in 8
+  tetrahedral units; no Gauss law comes out of the model Q1 found. A Coulomb phase must be added.
+  Speed: FAILS even if added. Charges hop at first order (~t), photons only via ring exchange
+  (~t^L/U^(L-1)), so matter outruns light by (U/t)^(L-1) >= ~10^4, while the liquid needs U/t >= 70.
+  Score (desk): FAIL. Polarisations, masslessness and isotropy would be fine; the speed ordering is not.

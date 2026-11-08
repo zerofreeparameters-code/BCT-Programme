@@ -1,0 +1,37 @@
+
+==============================================================================
+Geometry check (HCP, nearest-neighbour distance 1 a)
+==============================================================================
+  sphere-sphere distances in the cell: [1. 1. 1. 1. 1. 1.]
+  octahedral void: 6 nearest spheres at [0.7071 0.7071 0.7071 0.7071 0.7071 0.7071] -> radius 0.20711 a (FCC 0.20711)
+  octahedral voids stacked along c, centre spacing 0.8165 a: they share a triangular face (FCC: never)
+  grid (45, 78, 74), spacing [0.0222 0.0222 0.0221]
+  pore fraction 0.2603 (exact 0.2595, same as FCC)
+
+==============================================================================
+HCP, wall 3000
+==============================================================================
+  lowest levels: [127.92858 127.99485 128.13944 128.20774 244.89187 244.90455]
+  octahedral band (4 states): centre 128.0677, bottom 127.9286, spread 0.2792
+  column hopping t_c ~ (upper pair - lower pair)/4 = 0.0530
+  FCC (same wall): centre 127.2315, bottom 127.2300, hopping t = 0.00013
+  per octahedral void, HCP - FCC:  band centre +0.8361,  band bottom +0.6986
+  hopping ratio t_c(HCP column) / t(FCC) = 417
+
+==============================================================================
+HCP, wall 10000
+==============================================================================
+  lowest levels: [138.26515 138.29676 138.50771 138.54046 265.52234 265.5808 ]
+  octahedral band (4 states): centre 138.4025, bottom 138.2651, spread 0.2753
+  column hopping t_c ~ (upper pair - lower pair)/4 = 0.0608
+  FCC (same wall): centre 137.1619, bottom 137.1616, hopping t = 0.00003
+  per octahedral void, HCP - FCC:  band centre +1.2406,  band bottom +1.1036
+  hopping ratio t_c(HCP column) / t(FCC) = 2114
+
+==============================================================================
+Reading
+==============================================================================
+  wall 3000: t_c = 0.053 vs g n0 = 0.186 -> in HCP the columns are weakly coupled (U/t_c <= 3.51)
+    energy per void particle, HCP - FCC: band centre +0.836; band bottom +0.699  (E0 ~ 127)
+  wall 10000: t_c = 0.061 vs g n0 = 0.186 -> in HCP the columns are weakly coupled (U/t_c <= 3.06)
+    energy per void particle, HCP - FCC: band centre +1.241; band bottom +1.104  (E0 ~ 137)

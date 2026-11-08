@@ -1,0 +1,18 @@
+
+==============================================================================
+Matched grid: Nx=34, Ny=60, 28 points per layer
+==============================================================================
+  HCP (AB): grid (34, 60, 56), spacing [0.02941 0.02887 0.02916], spheres 4, octahedral voids 4, max sphere-centre offset from a node 0.0e+00 steps, pore fraction 0.25917
+    wall 10000: levels [138.55565 138.5559  138.58943 138.58967 265.62005 266.09765]
+      octahedral states: mean (on-site e0) 138.57266, bottom 138.55565, top 138.58967, spread 0.03401; gap to next 127.03
+  FCC (ABC): grid (34, 60, 84), spacing [0.02941 0.02887 0.02916], spheres 6, octahedral voids 6, max sphere-centre offset from a node 0.0e+00 steps, pore fraction 0.25916
+    wall 10000: levels [138.56225 138.56249 138.58245 138.58261 138.58273 138.5828  265.87117
+ 265.88234]
+      octahedral states: mean (on-site e0) 138.57589, bottom 138.56225, top 138.58280, spread 0.02056; gap to next 127.29
+
+==============================================================================
+HCP - FCC on the identical grid
+==============================================================================
+  wall 10000: on-site e0  HCP 138.57266  FCC 138.57589  diff -0.00323
+              band bottom HCP 138.55565  FCC 138.56225  diff -0.00659
+              HCP column hopping t_c = 0.00844;  FCC spread 2.06e-02

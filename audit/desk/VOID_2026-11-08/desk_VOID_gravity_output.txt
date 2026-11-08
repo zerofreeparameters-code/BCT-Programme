@@ -1,0 +1,94 @@
+
+==============================================================================
+A. The law: two spheres breathing in phase, time-averaged force
+==============================================================================
+  closed form (derived here): <F_r> = -(rho q0^2 / (8 pi r^2)) [cos kr + kr sin kr],  k = w/c_s
+  (negative = attraction).  Incompressible limit kr -> 0: -rho q0^2/(8 pi r^2) = -rho<q1 q2>/(4 pi r^2)
+      kr       numeric   closed form  ratio to incompressible
+    0.01  -3.97907e+02  -3.97907e+02  +1.0000
+    0.30  -4.61546e-01  -4.61546e-01  +1.0440
+    1.00  -5.49790e-02  -5.49790e-02  +1.3818
+    2.00  -1.39504e-02  -1.39504e-02  +1.4024
+    2.80   2.15972e-05   2.15972e-05  -0.0043
+    3.50   7.02945e-03   7.02945e-03  -2.1642
+    6.00   7.91710e-04   7.91710e-04  -0.7163
+   10.00   2.49845e-03   2.49845e-03  -6.2793
+  attraction turns into repulsion at kr = 2.7984, i.e. r = 0.445 wavelengths;
+  beyond that the force oscillates in sign and falls as 1/r, not 1/r^2.
+  Alternating part: the undisplaced volume V0 gives a zero-mean force rho V0 qdot1/(4 pi r^2).
+  Its amplitude / mean attraction = 2 V0 w / q0 = 2/eps, eps = dV/V0 <= 1: at least TWICE gravity.
+
+==============================================================================
+B. Strength: pulsation needed to give Newton's law
+==============================================================================
+  rho q01 q02 /(8 pi) = G m1 m2  ->  q0 = m sqrt(8 pi G / rho)
+  with rho = Planck density 5.156e+96 kg/m^3: q0/m = 1.804e-53 m^3 s^-1 per kg
+  a Planck mass must breathe q0 = sqrt(8 pi) l_P^3/t_P = 5.013 Planck volumes per Planck time
+    proton : q0 = 3.017e-80 m^3/s
+    Earth  : q0 = 1.077e-28 m^3/s
+    Sun    : q0 = 3.588e-23 m^3/s
+
+==============================================================================
+C. Equivalence principle: the frequency must exceed sqrt(2 pi G rho)
+==============================================================================
+  A body of volume V moving through an ideal fluid carries added mass rho V/2, so m_inertial >= rho V/2.
+  Its breathing flux is at most q0 = w dV <= w V. Gravitational charge q0 = m sqrt(8 pi G/rho).
+  m_grav = m_inertial for every body  =>  m sqrt(8 pi G/rho) <= 2 w m / rho  =>  w >= sqrt(2 pi G rho).
+  BCT (rho = Planck density): w >= 4.650e+43 s^-1 = 2.507 / t_P  (above the Planck frequency)
+  with c_s = c the attraction then reverses at r = 1.80e-35 m = 1.12 Planck lengths.
+  So in a Planck-density medium whose sound speed is c, Bjerknes attraction cannot reach past ~1 l_P.
+  (For the attraction to reach the Galaxy, 2.5e20 m, the medium would need rho <= 2.7e-14 kg/m^3.)
+
+==============================================================================
+D. Frequency window (c_s = c). Every lower bound must sit below every upper bound.
+==============================================================================
+  LOWER    1.16e-03 s^-1   gravity steady over a low-Earth orbit (alternating part >= 2x must average out): w >> 2pi/90 min
+  LOWER    4.65e+43 s^-1   equivalence principle in a Planck-density medium (part C)
+  UPPER    9.42e-06 s^-1   inverse-square to 1% out to Neptune (4.5e12 m): (kr)^2/2 < 0.01
+  UPPER    3.36e-12 s^-1   still attractive at the Sun's galactic orbit (2.5e20 m): kr < 2.80
+  UPPER    5.22e-12 s^-1   Sun and Earth stay in phase for 4.5 Gyr if pulsations redshift like all clocks (dw/w = 2.1e-6)
+
+  most lenient pair: lower 1.16e-03 vs upper 9.42e-06 -> window empty by a factor 123
+  with BCT's own density: lower 4.65e+43 vs upper 9.42e-06 -> empty by 49 orders
+  The lenient gap closes only if the medium's sound is >= 123 c, but in BCT sound is light (c_s = c).
+
+==============================================================================
+E. Can the VOID-Q1 liquid carry the breathing flow?
+==============================================================================
+  Q1's liquid is a Mott state: density changes cost the gap, mass currents are blocked. A static push
+  spreads only by virtual hops, each costing t/U, so it decays as (z t/U)^(r/a): range l = a / ln(U/(z t)).
+    U/t =    70: range 0.57 a  (force down by e^-1.8 per void spacing)
+    U/t =   310: range 0.31 a  (force down by e^-3.3 per void spacing)
+    U/t =  1241: range 0.22 a  (force down by e^-4.6 per void spacing)
+    U/t =  6421: range 0.16 a  (force down by e^-6.3 per void spacing)
+  So the void liquid screens the breathing within one void spacing. Long-range flow needs the
+  gapless superfluid, which brings in sound at c_s = c and the limits of part D.
+
+==============================================================================
+F. Energy radiated as sound (in BCT, sound is light)
+==============================================================================
+  monopole radiation: P = rho q0^2 w^2/(8 pi c_s) = G m^2 w^2 / c_s  (independent of rho)
+    Earth at the lenient minimum w = 1.2e-03: P = 1.07e+25 W, rest energy gone in 1.6e+09 yr
+    Sun   at the lenient minimum w = 1.2e-03: P = 1.19e+36 W, rest energy gone in 4.8e+03 yr
+    (solar luminosity 3.8e26 W: the Sun would shine 3.1e+09 times brighter, at frequency w)
+
+==============================================================================
+G. Light bending
+==============================================================================
+  The force acts only between bodies that breathe in step: its 1/r part is <q1 q2>, which is zero for
+  anything not pulsating at w. The time-averaged pressure round one breathing body is second order,
+  ~ rho <v^2>/2 ~ 1/r^4, so light sees no 1/r potential: no deflection, no Shapiro delay.
+  Even if light were made to breathe in step, a scalar force gives at most the Newtonian half.
+  Observed: gamma = 1 + (2.1 +- 2.3)e-5 (Cassini), i.e. full GR bending to ~1e-5.
+
+==============================================================================
+Summary
+==============================================================================
+  A. Law and sign right at short range: in-phase breathing attracts as 1/r^2 (Bjerknes).
+  B-C. Matching G with inertial = gravitational mass forces w >= sqrt(2 pi G rho), above the Planck
+       frequency for BCT's density; with c_s = c the attraction then reverses beyond ~1 Planck length.
+  D. Independently of density, steady gravity (w >~ 1e-3 /s) and inverse-square over the solar system
+     with c_s = c (w <~ 1e-5 /s) exclude each other; phase-locking under redshift needs w <~ 5e-12 /s.
+  E. The Q1 void liquid cannot carry the flow at all (range < 1 void spacing).
+  F. Breathing bodies would radiate their rest mass as light: the Sun within ~4,000 yr.
+  G. No light bending. FAIL.

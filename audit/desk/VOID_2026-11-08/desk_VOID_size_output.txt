@@ -1,0 +1,49 @@
+
+==============================================================================
+M1. Interface tension alone
+==============================================================================
+  Energy = sigma x total interface area. At fixed volume fraction the area per volume is 3 phi / R,
+  so the energy falls as 1/R: bigger spheres always win. Merging two spheres cuts their interface by
+  21%. -> no size is fixed; the lattice coarsens.
+  Worse, BCT's spheres TOUCH. With interface width w = 0.028 a (from the sealing check), the two
+  interfaces overlap within rho ~ sqrt(2 w R) = 0.167 a of each contact, so the interiors join
+  through a neck at all 12 contacts: the 'spheres' form one connected domain, which can only coarsen.
+
+==============================================================================
+M2. Long-range repulsion (frustrated phase separation): which shape wins at BCT's filling?
+==============================================================================
+  spheres of the interior fluid (BCT's picture)                    g = 0.2681  (+21.9% vs best)
+  rods of the interior fluid                                       g = 0.2552  (+16.0% vs best)
+  slabs                                                            g = 0.2309  ( +5.0% vs best)
+  tubes: rods of the NETWORK fluid in an interior-fluid matrix     g = 0.2199  ( +0.0% vs best)
+  bubbles: spheres of the NETWORK fluid in an interior-fluid matrix g = 0.2216  ( +0.8% vs best)
+  at phi = 0.7405: the touching-sphere arrangement is the HIGHEST-energy shape of the five.
+  The winners are the inverted shapes: the network fluid would form isolated tubes or bubbles inside
+  a continuous interior fluid. That is the opposite of BCT: no separate spheres, no connected network.
+  (Same sequence as nuclear 'pasta': spheres only at low filling; bubbles and tubes near 3/4 filling.)
+  Spheres win only for interior filling u <~ 0.22 (separated spheres, not touching ones).
+
+==============================================================================
+M3. Fixed content per sphere (a 'bag')
+==============================================================================
+  N particles confined in a sphere carry kinetic energy ~ N pi^2 hbar^2/(2 m R^2); an outside pressure P
+  squeezes it. Minimising N pi^2/R^2 + P (4 pi/3) R^3 (units hbar^2/2m) gives R^5 = N pi/(2 P).
+  -> the size is set by N and P: two free numbers, and soft: dlnR/dlnP = -1/5.
+  -> touching happens at one pressure only; below it the spheres separate, above it they press into
+     flat facets (as compressed emulsions do) and the voids shrink and close. And at the contacts
+     the M1 neck problem still merges neighbours unless something keeps the boundaries apart.
+
+==============================================================================
+SUMMARY
+==============================================================================
+  If the spheres are emerging droplets, nothing tested fixes their size AND gives touching FCC spheres:
+   M1 tension alone: no size; touching spheres neck together and coarsen.
+   M2 long-range repulsion: fixes a size, but at 74% filling it prefers tubes/bubbles of the network
+      fluid; spheres are the worst shape (they win only below ~22% filling).
+   M3 fixed content: size set by two free numbers; touching only at one pressure; deformable.
+  What would work: a boundary with its own identity - a membrane that does not merge at contact and
+  has a fixed area (e.g. a fixed number of shell units). That is App J's double layer promoted to a
+  physical membrane, which is an input, not a result.
+  The alternative is to keep the lattice as BCT's starting postulate (size fixed by fiat, a = l_P); then
+  sealing must also be a property of that postulated cell wall, and the immiscibility mechanism is not
+  needed.
