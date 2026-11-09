@@ -1,0 +1,6 @@
+Gate TWIST Q1(a): identity checks, exact derivatives, mpmath 60 dps, 3 random fields x 7 points
+  I1   |grad chi|^2 = 1/4|grad n|^2 + a^2                   max residual = 6.2649e-60   PASS (<1e-10)
+  I2   curl a = 1/2 n.(dn x dn)  (Mermin-Ho)                max residual = 6.2708e-60   PASS (<1e-10)
+  I3   |grad Psi|^2 = (grad sqrt rho)^2 + rho|grad chi|^2   max residual = 2.9513e-60   PASS (<1e-10)
+  I4n  n gauge-invariant                                    max residual = 0.0   PASS (<1e-10)
+  I4a  a -> a + grad lambda                                 max residual = 9.1978e-61   PASS (<1e-10)

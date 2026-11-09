@@ -1,0 +1,34 @@
+Gate TWIST Q3 — shell screening and the virial pressure budget
+Inputs: a=1, R=a/2, ξ/a = 2.31754379491166 , α0 = 0.00740805572754791 , K a² = 1/2 (declared)
+
+(1) SCREENING LENGTH
+    Corpus shell = δ-potential on |Ψ|², Ψ continuous, zero thickness → areal superfluid density 0 →
+    the shell by itself screens nothing (Pearl length Λ = 2λ_L²/d → ∞ as d → 0).
+    Bulk London length λ_L = a/e (Q2) applies INSIDE the sphere as much as outside: the knot's own
+    field is Meissner-screened in the interior; 'screened in the shell, free inside' needs a medium
+    that differs inside and out — which A1 and App J deny.
+    If one BUYS a shell of thickness d = √(r_tet r_oct) a = 0.152555 a (App J's own asserted d) with areal density n0 d:
+      e² =  0.1:  λ_L = 3.1623 a,  Pearl Λ = 2λ_L²/d = 131.1 a,  Λ/R = 262.2,  Λ/d = 859.361
+      e² =  1.0:  λ_L = 1.0 a,  Pearl Λ = 2λ_L²/d = 13.11 a,  Λ/R = 26.22,  Λ/d = 85.9361
+      e² = 10.0:  λ_L = 0.31623 a,  Pearl Λ = 2λ_L²/d = 1.311 a,  Λ/R = 2.622,  Λ/d = 8.59361
+    A closed shell with Λ ≫ R screens only a fraction ~R/Λ of the field: no shell screening at counted O(1) e.
+    Screening at R needs e² ≳ 2a²/(dR) = 26.22 — a value chosen to pass = fitting (forbidden, §8).
+
+(2) VIRIAL BUDGET
+    shell pressure / condensation energy density  P_s/ε_c = 2α0 ξ²/R² = 0.31830988618379067154  (= 1/π = 0.31830988618379067154 )
+    H=1 Hopf map at scale R, integrated over the ball |x|<R (mpmath quad):
+      ∫(curl a)² d³x = 112.467156847   →  c₁ = R⁴⟨(curl a)²⟩ = 13.4247779608
+      ∫(∇n)² d³x     = 28.6913527513   →  c₂ = R²⟨(∇n)²⟩   = 13.6991118431
+    (a) Maxwell part (BOUGHT, ∝ 1/e²):  ū_B/ε_c = c₁ ξ²/(e² K R⁴);  needed/available = (ū_B/3)/P_s = π c₁ ξ²/(3 e² K R⁴):
+      e² =  0.1:  ū_B/ε_c = 23073.5,  needed/available = 24162.5
+      e² =  1.0:  ū_B/ε_c = 2307.35,  needed/available = 2416.25
+      e² = 10.0:  ū_B/ε_c = 230.735,  needed/available = 241.625
+    (b) texture part (e-independent): ū_tex = (K/4)⟨(∇n)²⟩ = K c₂/(4R²):  ū_tex/ε_c = 147.15611
+        this part PULLS INWARD (Derrick: E₂ ∝ size), so it is not a pressure the shell must hold — it is the
+        collapse the shell cannot stop (Gate JHF).  Only the Maxwell part pushes on the wall.
+    The shell holds the Maxwell knot only if e² ≳ 2416.25 — choosing e to pass is fitting (§8). At counted O(1) coupling the shell
+    is short by a factor ~ 2416.0 .
+
+Q3 verdict: FAIL (conditional on Q1 BOUGHT and Q2 FAIL). Screening does not follow from the model (the shell
+has no superfluid density of its own; bulk screening is the same inside and out); the surface term supplies
+P_s = ε_c/π, three orders (×2.4×10³) below the virial requirement at e² = 1.

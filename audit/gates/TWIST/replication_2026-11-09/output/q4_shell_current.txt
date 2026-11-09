@@ -1,0 +1,19 @@
+Gate TWIST Q4(iii) — wire-medium (Pendry 1996) estimate for connected conducting shells at Planck spacing
+  ω_p² = 2π c²/(a² ln(a/r)),  in units of (c/a):  ω_p/(c/a) = √(2π/ln(a/r))
+   r = shell thickness d = √(r_tet r_oct) a (App J's asserted d) r/a =   0.15256   ω_p = 1.828 × (c/a)
+   r = r_tet                                                  r/a =   0.11237   ω_p = 1.6954 × (c/a)
+   r = window radius (2/√3−1)R                                r/a =   0.07735   ω_p = 1.5668 × (c/a)
+   r = 1e-3 a (very thin)                                     r/a =     0.001   ω_p = 0.95372 × (c/a)
+   r = 1e-10 a (absurdly thin)                                r/a =   1.0e-10   ω_p = 0.52237 × (c/a)
+  Scale: c/ℓ_P = 1.855e+43 rad/s  →  ω_p ~ 10^43 rad/s for every reasonable r (the log is weak).
+  Highest-energy photons observed are ~PeV (ω ~ 10^30 rad/s): ω/ω_p ~ 1e-13 → deep in the evanescent regime.
+  → If the contacts conduct, the medium is opaque to ALL observed light. The wire-medium argument HOLDS
+    (order of magnitude; the log and the network topology only move ω_p by O(1)).
+
+  Contrast — INSULATED perfectly conducting spheres (Maxwell–Garnett, f = π/(3√2) = 0.74048049 ):
+    ε_eff = (1+2f)/(1−f) = 9.5598245  → n_eff = √ε_eff = 3.0918966  — transparent, no cutoff (long-wavelength limit; MG is approximate at f = 0.74 but the qualitative point stands).
+  So the entire difference between 'opaque Planck metal' and 'transparent medium' rides on the 12 contacts
+  per sphere being insulating — nothing in App J / App JH / Letter 36 says anything about the contacts.
+
+Q4(iv) — topology (no number): Hopf number on a ball with free boundary is NOT protected; it needs n pinned on ∂B³.
+  The corpus shell term depends on |Ψ|² only (U(2)-symmetric) → it does not pin n → grip term ABSENT.

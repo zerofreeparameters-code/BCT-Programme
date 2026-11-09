@@ -1,0 +1,51 @@
+==============================================================================
+PART A — V0 in (rho, n, phi, a) variables and the density integration
+==============================================================================
+Gradient term:  (ħ²/2m)|∇Ψ|² = (ħ²/2m)(∇√ρ)² + ρ·X̃,   X̃ = hbar**2*(dn2/4 + v2)/(2*m)
+  -> the connection a enters ONLY through v = ∇φ + a (inside v2); curl v = curl a = ½ n·∂n×∂n
+     is fixed by n.  a has no kinetic term of its own: it is slaved to the texture (plus gauge).
+  -> tree level: F is quadratic in gradients; (curl a)² is quartic in gradients. c_F(tree) = 0.
+
+Local functional to O(δρ²): delta_rho**2*g/2 + delta_rho*dn2*hbar**2/(8*m) + delta_rho*hbar**2*v2/(2*m) + dn2*hbar**2*n0/(8*m) + hbar**2*n0*v2/(2*m)
+Gradient term of δρ: (ħ²/2m)(∇√ρ)² -> (ħ²/8m n0)(∇δρ)² + O(δρ³):  D = hbar**2/(8*m*n0)
+Fourier kernel of the δρ quadratic form:  K(k) = g + hbar**2*k**2/(4*m*n0)
+Gradient expansion of K^{-1}(k): 1/g - hbar**2*k**2/(4*g**2*m*n0) + hbar**4*k**4/(16*g**3*m**2*n0**2)
+  with g = ħ²/(2 m n0 ξ²):  K^{-1}(k) = (1/g)[1 − (ξ²/2) k² + (ξ⁴/4) k⁴ − ...] :
+    m*n0*xi**2*(k**4*xi**4 - 2*k**2*xi**2 + 4)/(2*hbar**2)
+
+Induced local terms after eliminating δρ (per unit volume):
+  4-derivative:  −(1/2g) X̃²  = -dn2**2*hbar**2*n0*xi**2/(64*m) - dn2*hbar**2*n0*v2*xi**2/(8*m) - hbar**2*n0*v2**2*xi**2/(4*m)
+  6-derivative:  +(ξ²/4g) (∇X̃)²   [positive; NOT a function of F_ij; valid only for textures ≫ ξ]
+
+Coefficient of [(∇n)²]² in the induced quartic:   -hbar**2*n0*xi**2/(64*m)
+  in units of K ξ² (K = ħ²n0/2m): -1/32  (i.e. −Kξ²/32)
+
+==============================================================================
+PART B — what the medium generates for a: London (k⁰) vs Maxwell (k²)
+==============================================================================
+Phase-mode elimination leaves  K a_i P^T_ij a_j ,  P^T_ij = δ_ij − k_i k_j/k²  (TRANSVERSE PROJECTOR, k⁰).
+A Maxwell term would be  (1/e²) k² P^T_ij  (k²).  The medium supplies k⁰ (a mass/London term), not k².
+Check: P^T is a projector, P^T·k = 0: True , True
+Equivalently K a_T² = K |curl a|²/k²  -> infrared-ENHANCED (1/k²), the opposite of Maxwell's k².
+This is the Meissner/Higgs/London term: the same wall as CN-LINK-10 and Gate QED (ii).
+
+==============================================================================
+PART C — numeric: [(∇n)²]² = F_ij F_ij + (∂_i n·∂_j n)²  on random unit fields
+==============================================================================
+  max residual of the identity: 1.9914e-59  (both invariants non-negative, as required)
+  => −c[(∇n)²]² = −c F_ijF_ij − c(∂_i n·∂_j n)²:  the projection on the Faddeev invariant is NEGATIVE.
+
+==============================================================================
+PART D — numbers (card §4: a = ℓ_P, ξ/a = 2.31754...)
+==============================================================================
+  α0 = r_oct r_tet/π           = 0.007408055727547908079640101104499873415571
+  ξ/a = 1/√(8πα0)               = 2.317543794911664963039020806144813022013
+  c_F / (K a²)  [Faddeev projection of the induced quartic, (curl a)² normalisation] = -1.342752310333390347856944275767129035374
+  sign: NEGATIVE.  scaling: c_F = −K ξ²/4 ∝ −ξ²;  in units of a: −(ξ/a)²/4 = −1.3427...
+  Mixed and superflow pieces of −(1/2g)X̃²: −(Kξ²/2)·[v⁴ + ½ v² (∇n)²] — also negative.
+  Six-derivative remainder +(Kξ⁴/4)(∇X̃/K)² ... positive but outside the F_ij basis and outside the
+  expansion's validity for textures smaller than ξ = 2.3 a (sphere radius R = 0.5 a).
+
+Q1 summary: (a) identities PASS; (b) a is slaved to n (enters only via ∇φ + a, curl fixed by n);
+(c) c_F(tree) = 0; c_F(density integration) < 0 (= −Kξ²/4 on the Faddeev invariant); phase-mode
+integration gives a London (k⁰) term, not Maxwell (k²).  No Maxwell-type energy from the medium.

@@ -1,0 +1,31 @@
+Gate TWIST Q2 — mass and polarisations of a with a granted Maxwell term
+Fixed inputs: a = 1, R = a/2, ξ/a = 2.317543794911664963 , K a² = 0.5 (declared Planck normalisation)
+
+(i) UNIFORMLY CONDENSED MEDIUM (App J: same GP condensate inside, outside, in voids; one n0):
+    m_a² = 2 K e²  →  m_a = e √(2K) = e/a  (Planck normalisation)   λ_L = a/e
+      e² =  0.01:  m_a = 0.1 /a  (= 0.1 m_P),  λ_L = 10.0 a,  λ_L/R = 20.0
+      e² =   0.1:  m_a = 0.316228 /a  (= 0.316228 m_P),  λ_L = 3.16228 a,  λ_L/R = 6.32456
+      e² =   1.0:  m_a = 1.0 /a  (= 1.0 m_P),  λ_L = 1.0 a,  λ_L/R = 2.0
+      e² =  10.0:  m_a = 3.16228 /a  (= 3.16228 m_P),  λ_L = 0.316228 a,  λ_L/R = 0.632456
+    For EVERY e ≠ 0: m_a ≠ 0.  The Goldstone φ is eaten (Higgs/Meissner):
+    polarisations = 2 transverse + 1 longitudinal = 3 (massive vector).  → FAIL in the uniform medium.
+    No corpus number makes m_a = 0; only e → 0 does, which switches the Maxwell term off (1/e² → ∞).
+
+(ii) CONDENSED IN SHELLS, EMPTY VOIDS — does the model supply it?
+    App J §1.1–1.2 (primary source): 'The BCT condensate field Ψ fills all of space' … 'the same GP
+    action as the exterior condensate (same J, same ξ, same nonlinear coupling)'. App JH §3.1:
+    |Ψ_int|² = ρ0 'constant bulk density'. Card A1: 'the interior is exactly the same as the OHC'.
+    → The model supplies NO location-dependent condensation. Branch (ii) is NOT REACHED without a new
+      input (a confining potential or a second phase). Counted in the cost table, not granted.
+
+    Even if bought, the void network cannot carry a long-wavelength massless mode:
+      window radius between touching spheres r_win = (2/√3 − 1) R = 0.077350269 a
+      waveguide cutoff through a window  k_c ≈ 1.841/r_win = 23.8034 /a  →  ω_c ≈ 23.803 × (c/a)
+      cavity sizes r_oct = 0.207107 a, r_tet = 0.112372 a  →  lowest cavity modes k ~ π/r ~ 15.169 – 27.957 /a
+      Everything below ~10 c/a is evanescent in the void network: no propagating massless photon at any
+      wavelength longer than the Planck length. Locally two transverse cavity polarisations, but no massless mode.
+    → Branch (ii) FAILS as well, on geometry alone (connected sub-Planck cavities, Planck-scale cutoff).
+
+Q2 verdict: FAIL (conditional on Q1 being BOUGHT).  a is massive in the corpus medium; a void-only
+massless mode needs a location-dependent condensation the corpus does not supply and is then cut off
+at ~10 Planck frequencies by the void geometry.
