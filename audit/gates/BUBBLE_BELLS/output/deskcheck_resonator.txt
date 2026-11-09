@@ -1,0 +1,21 @@
+B1 — the bell's note
+   κ0 = 3.3904626  ω0 = ħκ0²/2m = 5.74762  (Planck units);  c_s = ħ/(√2 mξ) = 0.30511  ⇒ ω0 a/c_s = 18.8378
+   host Bogoliubov mode resonant with the bell: k_res = 3.36312 /a  (k_res ξ = 7.7942 ≫ 1: particle-like, not phonon-like)
+   zone-boundary phonon ω(π/a) = 5.02703  ⇒ ω0/ω(π/a) = 1.1433
+   hardest observed photon ω ≈ 1e30 rad/s =  5.39e-14  c/a  ⇒ (ω/ω0)² ≈ 8.8e-29
+
+B2 — must the sphere be rigid?
+   shell tension σ_sh = α0 ħ² n0/(2mR) = 0.00740806  (Planck units)
+   (i) empty cavity, no internal pressure: Rayleigh collapse time τ ~ √(ρR³/σ_sh) = 4.108 t_P — a soft empty bubble is gone in a few Planck times
+   (ii) one quantum in the κ0 mode: zero-point pressure P0 = (2/3)E0/V = 7.3181  vs capillary 2σ_sh/R = 0.029632  ⇒ P0/P_cap = 246.96
+   ⇒ a soft shell can neither hold an empty bubble up nor hold a rung bell in: the sphere is a RIGID prior structure.
+     That is Horn A (Gate U″ / lattice imposed) restated from the bubble side — consistent, not new.
+
+B3 — what can ring it
+   App J Josephson coupling g_J = α0·4πR·tanh²(r_oct/ξ) = 0.00036975  ⇒ rough Q ~ 1/g_J ≈ 2705.0
+   Only a host excitation at k ≈ 3.363 /a (a Planck-scale Bogoliubov particle) is resonant; nothing in the observed
+   spectrum is within 13 orders of magnitude of the bell. Bells are silent in the low-energy world.
+
+B4 — size of the resonant correction below resonance
+   Liu-type correction to effective compressibility ~ f (ω/ω0)² ≈ 6.51e-29  at the hardest observed photon → zero for all purposes.
+   So the sub-resonant vacuum = superfluid in a rigid FCC superleak: c_eff = c_s/√α_∞ with α_∞ from part 1, nothing else.

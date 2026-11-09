@@ -1,0 +1,13 @@
+
+   N    ε      φ_grid    σ_eff/σ0    F=1/σ_eff   α_∞=φF    c4/cs=1/√α_∞   plane-flux spread   cg   time
+   64  1e-06  0.26123   0.13456       7.4316     1.9286     0.72007         1.2e-11         0    0.5s
+   96  1e-06  0.26110   0.14414       6.9376     1.8005     0.74526         9.5e-12         0    4.0s
+  128  1e-06  0.26022   0.14714       6.7964     1.7638     0.75297         8.6e-12         0   14.7s
+  192  1e-06  0.25974   0.15109       6.6184     1.7176     0.76302         1.1e-11         0   79.1s
+
+Isotropy at N=192: σ_xx=0.151094 σ_yy=0.151094 σ_zz=0.151094  (cubic symmetry ⇒ scalar tensor; off-diagonals vanish by the mirror planes)
+Extrapolated (1/N → 0, linear): σ_eff/σ0 ≈ 0.1590,  α_∞ ≈ 1.632,  c4/cs ≈ 0.7827  (≈ ±1–2 % from the contact singularities)
+  224  1e-06  0.25991   0.15248       6.5583     1.7020     0.76651         1.2e-11        0  156.1s
+Isotropy at N=224: σ_xx=σ_yy=σ_zz=0.152479
+Extrapolations over N=64..224: a+b/N → σ_eff/σ0 = 0.1596 (α_∞ = 1.626, c4/cs = 0.784); a+b/N+c/N² → 0.1573 (α_∞ = 1.649, c4/cs = 0.779); Richardson(192,224) → 0.1608.
+Adopted: σ_eff/σ0 = 0.158 ± 0.003, α_∞ = 1.64 ± 0.03, c4/cs = 0.78 ± 0.01.

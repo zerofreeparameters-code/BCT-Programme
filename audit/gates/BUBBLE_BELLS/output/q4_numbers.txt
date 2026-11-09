@@ -1,0 +1,14 @@
+Gate BUBBLE_BELLS Q4 — committed numbers (all CONJECTURE, zero free parameters)
+  N1  porosity of the void network            φ = 1 − π/(3√2) = 0.25951951          [PROVEN geometry]
+  N2  tortuosity of the FCC void network      α_∞ = 1.64 ± 0.03                    [numerical; falsified if an exact/independent value lies outside 1.5–1.8]
+  N3  macroscopic sound speed                 c_eff/c_s = 1/√α_∞ = 0.7809 ± 0.00714      [follows from N2 + superleak physics (JKD 1987)]
+  N4  isotropy of c_eff at O(k²)              exact (cubic symmetry); first anisotropy O(k⁴) (Gates RATIO/WHY√2)
+  N5  bell ladder κ_ℓ a (ℓ = 0..3)            3.390463, 6.305048, 8.99198, 11.52885      [App J BC with k_ℓ(r/ξ) matching]
+  N6  ladder ratios E_ℓ/E_0                   1.0, 3.4583, 7.0338, 11.563
+  N7  bell note vs host sound                 ω0 a/c_s = ξκ0²/√2 = 18.838;  ω0/ω(π/a) = 1.143  [bell at the zone edge]
+  N8  rigidity requirement                    soft shell fails (collapse ~4 t_P; P0/P_cap ≈ 250) ⇒ spheres rigid = Horn A
+  N9  condensate particle mass implied by c_eff = c (AZ6's identification) with the corpus ξ:
+        without tortuosity (c_s = c):   m/m_P = 1/(√2 ξ/a) = 0.30511
+        with tortuosity (c_s/√α_∞ = c): m/m_P = 1/(√(2α_∞) ξ/a) = 0.23825 ± 0.00218
+        (AZ6's g = mc²/n0 becomes g = α_∞ mc²/n0; the printed 'c_s = c' is the microscopic speed, the observable one is c_eff)
+  N10 sub-resonant correction from the bells  ~ f (ω/ω0)² ≲ 1e-28 for any observed ω  ⇒ none

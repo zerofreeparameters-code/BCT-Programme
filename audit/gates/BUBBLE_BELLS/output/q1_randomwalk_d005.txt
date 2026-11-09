@@ -1,0 +1,9 @@
+FCC void network, R = a/2, L = a√2; walkers = 10000, steps = 400000, δ = 0.005 a (throat radius 0.0774 a)
+  rejection fraction = 3.19e-04;  D0 = 1.250e-05;  D_w = 7.730e-06;  runtime 505s
+  rms displacement at end = 4.31 a  (3.0 cells)
+  α_∞ (random walk) = 1.617   ⇒ σ_eff/σ0 = φ/α_∞ = 0.1605,  c4/cs = 0.7864
+    quarter 1: α_∞(local) = 1.614
+    quarter 2: α_∞(local) = 1.593
+    quarter 3: α_∞(local) = 1.630
+    quarter 4: α_∞(local) = 1.640
+  FD extrapolation for comparison: α_∞ = 1.64 ± 0.03 (bells_tortuosity.py)
