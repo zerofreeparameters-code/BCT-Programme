@@ -1,0 +1,272 @@
+OK  tex/BCT_Appendix_AZ6.tex
+OK  tex/BCT_Letter20_GR_AllOrders.tex
+OK  tex/BCT_Appendix_AZ7.tex
+OK  tex/BCT_Letter27_GPAxiom.tex
+OK  BCT_Volume1_Foundations.tex
+OK  BCT_Appendices_Volume1_2026_compressed_Part1.pdf
+
+######## tex/BCT_Appendix_AZ6.tex
+--- L91-92
+  91| \item The effective Newton constant $G = c^4/(8\pi K_\mathrm{BCT})$ where
+  92| $K_\mathrm{BCT} = \rho_0 c^2$ is the BCT condensate bulk modulus.
+--- L139-142
+ 139| V(|\Psi|^2) = \frac{g}{2}\left(|\Psi|^2 - n_0\right)^2,
+ 140| \label{eq:Vgp}
+ 141| \end{equation}
+ 142| where $n_0$ is the ground-state number density and $g$ is the coupling strength.
+--- L168-169
+ 168| The TF limit holds when $r \gg \xi$, where $\xi = \hbar/\sqrt{2mgn_0}$
+ 169| is the healing length. In BCT, $\xi = 2.32\,\ell_P$ (App~E.3).
+--- L209-209
+ 209| where $c_s^2 = \partial^2\varepsilon/\partial\rho^2|_{\rho_0}$.
+--- L261-261
+ 261| with $G = c^2/(8\pi\rho_0)$.
+--- L310-310
+ 310| with $G = c^2/(8\pi\rho_0)$.
+--- L353-354
+ 353| \emph{(i) $c_s = c$:} The BCT GP coupling is $g = mc^2/n_0$ (Josephson condition,
+ 354| App~D). Then $c_s^2 = gn_0/m = c^2$. $\checkmark$
+--- L362-362
+ 362| \paragraph*{Audit note (Gate BUBBLE\_BELLS, 10 Nov 2026; CONJECTURE).} If the sphere interiors are depleted (Gate TWIST / BUBBLE\_BELLS), the condensate occupies only the FCC void network and its long-wavelength sound is fourth sound, $c_{\rm eff}=c_s/\sqrt{\alpha_\infty}$ with tortuosity $\alpha_\infty=1.64\pm0.03$ (two independent methods). Hypothesis (i) then reads $c_{\rm eff}=c$, i.e.\ $g=\alpha_\infty\,mc^2/n_0$; the printed $c_s=c$ refers to the microscopic sound speed. Nothing else in this lemma changes. See \texttt{audit/gates/BUBBLE\_BELLS/}.
+--- L373-374
+ 373| with $G_\mathrm{BCT} = c^2/(8\pi\rho_0)$ and the exact BCT condensate density
+ 374| $\rho_0 = m_P n_0$. General relativity is the low-energy effective theory of the
+--- L393-399
+ 393| G_\mathrm{BCT} = \frac{c^2}{8\pi\rho_0}.
+ 394| \label{eq:G_BCT}
+ 395| \end{equation}
+ 396| The direct computation of $\rho_0$ from the BCT equation of state is
+ 397| self-referential (App~AL proves this rigorously: $G = c^4/(16\pi\rho_P)$ with
+ 398| $\rho_P \propto 1/G^2$, making the formula circular in SI units). However,
+ 399| the BCT hierarchy formula provides an independent non-circular constraint.
+
+######## tex/BCT_Letter20_GR_AllOrders.tex
+--- L96-97
+  96| spacetime, identifying $G = c^4/(8\pi K_{\rm BCT})$ where $K_{\rm BCT}$
+  97| is the bulk modulus.
+--- L137-141
+ 137| \begin{equation}
+ 138|   P = \frac{c^2}{2\rho_0}\,\rho^2\,,
+ 139|   \label{eq:EOS}
+ 140| \end{equation}
+ 141| where $\rho_0 = \rho_{\rm Planck} = c^5/(\hbar G^2)$ is the background
+--- L226-231
+ 226|   \alpha_{\rm GB} = \frac{\hbar^2\rho_0}{32m}\,.
+ 227|   \label{eq:alphaGB_general}
+ 228| \end{equation}
+ 229| Substituting the BCT condensate parameters
+ 230| $\rho_0 = \rho_{\rm Planck} = c^5/(\hbar G^2)$ and $m = m_P =
+ 231| \sqrt{\hbar c/G}$ (Appendix~AI of Ref.~\cite{monograph}):
+--- L233-242
+ 233|   \alpha_{\rm GB}
+ 234|   = \frac{\hbar^2}{32\,m_P} \cdot \frac{c^5}{\hbar G^2}
+ 235|   = \frac{\hbar c^5}{32\,G^2\sqrt{\hbar c/G}}
+ 236|   = \frac{\sqrt{\hbar c^3/G}}{32}
+ 237|   = \frac{m_P c^2}{32}\,.
+ 238|   \label{eq:alphaGB_calc}
+ 239| \end{equation}
+ 240| In natural units $\hbar = c = 1$, using $\ell_P^2 = \hbar G/c^3$:
+ 241| \begin{equation}
+ 242|   \boxed{\alpha_{\rm GB} = \frac{\ell_P^2}{8\pi}}\,.
+--- L311-319
+ 311|   \item $G = c^4/(8\pi K_{\rm BCT})$: Newton's constant as the inverse
+ 312|     bulk modulus of the BCT condensate. Derived in Appendix~AI of
+ 313|     Ref.~\cite{monograph}; also in Letter~9~\cite{planck}.
+ 314|   \item $\rho_0 = c^5/(\hbar G^2)$: Planck density, the unique
+ 315|     condensate density consistent with $c_s = c$ and the BCT phonon
+ 316|     dispersion (Appendix~AI of Ref.~\cite{monograph}).
+ 317|   \item $m = m_P = \sqrt{\hbar c/G}$: Planck mass, the GP condensate
+ 318|     quantum mass. Not a free parameter---set by dimensional analysis
+ 319|     from $G$, $\hbar$, $c$, all of which are BCT outputs.
+--- L433-437
+ 433| The entire gravity derivation rests on the Lorentz invariance condition
+ 434| $c_s = c$, which in turn rests on the BCT uniqueness theorem
+ 435| $c/a = \sqrt{2}$ (Letter~1~\cite{lorentz}; Appendix~D of
+ 436| Ref.~\cite{monograph}). The equation of state $P = (c^2/2\rho_0)\rho^2$
+ 437| is forced by this theorem; without $c_s = c$ neither the dynamic
+--- L441-443
+ 441| \subsection*{Electron mass and the Planck scale}
+ 442| The Planck mass $m_P$ used in deriving $\alpha_{\rm GB}$ is itself a
+ 443| BCT prediction: $m_P = M_R/\alpha_0^2$ to $-0.08\%$ (Letter~9
+
+######## tex/BCT_Appendix_AZ7.tex
+--- L108-109
+ 108| \item $\alpha_0 = r_\mathrm{oct}\,r_\mathrm{tet}/\pi = 0.00740806$
+ 109| (fine structure constant at the Planck scale, App~D);
+--- L112-113
+ 112| \item Hopping amplitude $t = \alpha_0$ (App~K, tight-binding BCT Hamiltonian);
+ 113| \item Healing length $\xi = 2.32\,\ell_P$ (App~E.3);
+--- L154-170
+ 154| \begin{lemma}[BCT on-site repulsion]\label{lem:U}
+ 155| At the GP ground state, the on-site repulsion satisfies
+ 156| $U = \mu = t_\mathrm{kin} \equiv \hbar^2/(2m\xi^2)$.
+ 157| \end{lemma}
+ 158| \begin{proof}
+ 159| For the GP potential $V = (g/2)(|\Psi|^2-n_0)^2$, the second-quantised
+ 160| on-site interaction is $U = g$ (standard Bose-Hubbard derivation).
+ 161| The chemical potential at the GP ground state is
+ 162| $\mu = gn_0 = U \cdot n_0$, and for unit filling ($n_0 = 1$ per site
+ 163| in BCT lattice units) $\mu = U$.
+ 164| 
+ 165| The GP energy at ground state is:
+ 166| $E_\mathrm{GP}/V = t_\mathrm{kin}\,n_0 + (g/2)(n_0-n_0)^2 = t_\mathrm{kin}\,n_0$.
+ 167| 
+ 168| The stationarity condition $\partial E/\partial n_0 = 0$
+ 169| gives $\mu = t_\mathrm{kin}$, hence $U = t_\mathrm{kin}$. $\square$
+ 170| \end{proof}
+
+######## tex/BCT_Letter27_GPAxiom.tex
+--- L60-62
+  60| The BCT Superfluid Lattice Model [1,\,2] derives \textbf{100 Standard Model observables} from
+  61| three geometric inputs: $r_{\rm oct} = (\sqrt{2}-1)/2$, $r_{\rm tet} = (\sqrt{6}-2)/4$, and
+  62| $\Lambda_{\rm QCD} = 220$~MeV. Every derivation rests on the GP Axiom: the QCD vacuum is a
+--- L68-69
+  68| The BCT lattice is a bipartite tight-binding system with hopping amplitude $t = \alpha_0$ and
+  69| coordination number $z = 8$ (App.~K of [1]). The Mott-insulator-to-superfluid transition in 3D
+--- L75-80
+  75| The GP equation of state fixes $\mu = t_{\rm kin}$, and the on-site interaction
+  76| $U = gn_0 = \mu = t_{\rm kin}$ at the GP ground state. Therefore:
+  77| \begin{equation}
+  78| \frac{t}{U} = \frac{t_{\rm kin}}{U} = 1 \gg 0.025\,.
+  79| \label{eq:tU}
+  80| \end{equation}
+
+######## BCT_Volume1_Foundations.tex
+--- L209-215
+ 209| Newton's constant is derived from the BCT condensate equation of
+ 210| state. The gravitational constant $G = c^4/(8\pi K_{\mathrm{BCT}})$
+ 211| where $K_{\mathrm{BCT}}$ is the bulk modulus of the BCT superfluid.
+ 212| This identifies gravity as an emergent acoustic phenomenon --- not
+ 213| a fundamental force but the long-range restoring pressure of the
+ 214| Planck-scale condensate. The derivation reproduces $G$ to the
+ 215| accuracy of the input Planck mass.
+
+######## PDF page 49 (printed folio: see last line)
+--- p49 L41-46
+  41|    11. Identify the gravitational constant G as G = c⁴/(8πK_BCT) where K_BCT is the BCT
+  42|        bulk modulus derived from the Madelung energy.
+  43| 
+  44| 
+  45| Step 1 and Step 3 are semi-established: the linearised theory gives step 1, and K_BCT was
+  46| computed in Appendix D (though it required l_P as an external input). Step 2 is the hard
+
+######## PDF page 72 (printed folio: see last line)
+--- p72 L5-36
+   5| 3.2 The Gravitational Constant from the BCT Bulk Modulus
+   6| The gravitational constant G appears in the Poisson equation as the strength of the
+   7| coupling between matter density and gravitational potential. In BCT, this coupling is
+   8| determined by the elastic modulus of the BCT medium:
+   9| From the fluid action S_BCT = ∫[ρv²/2 - P] d⁴x, expanding to second order in the metric
+  10| perturbation h_{μν}:
+  11|              S_BCT^{(2)} = (ρ₀c²/8) ∫ [h² - h_{μν} h^{μν}] d⁴x
+  12| 
+  13| Comparing with the second-order Einstein-Hilbert action:
+  14|            S_EH^{(2)} = (c⁴/32πG) ∫ [h^{μν} □ h_{μν} - ...] d⁴x
+  15| 
+  16| The kinetic structures match when (matching coefficients at each order in the long-
+  17| wavelength expansion):
+  18|                                 ρ₀ c² / 8 = c⁴ / (32πG)
+  19| 
+  20|                                      G = c² / (4πρ₀)
+  21| 
+  22| Using the BCT equation of state ρ₀ = 2K_{BCT}/c² (the background density equals twice the
+  23| bulk modulus divided by c²):
+  24| 
+  25| 
+  26|                                    G = c⁴ / (8π K_BCT)
+  27| 
+  28| 
+  29| where K_BCT = 8 M_FCC α₀ / (9√2) is the BCT bulk modulus derived from the Madelung
+  30| energy (Appendix D). This is the prediction of BCT for Newton’s constant in terms of the
+  31| electromagnetic coupling α and the FCC Madelung constant M_FCC. As noted in the G
+  32| analysis (previous session), this formula is correct in structure but cannot be numerically
+  33| verified without first deriving the electron mass (the hierarchy between G and α involves the
+  34| mass ratio m_e/m_P).
+  35|      ✔ The gravitational constant G = c⁴/(8πK_BCT) is derived from the BCT bulk modulus by
+  36|      matching the second-order BCT fluid action to the second-order Einstein-Hilbert action.
+
+######## PDF page 120 (printed folio: see last line)
+--- p120 L40-41
+  40| The nearest-neighbour distance in BCT at c/a = √2 is exactly a = 1 (in Planck units, since a
+  41| = 2R = 1 l_P). Each A site has exactly 8 nearest-neighbour B sites, and vice versa. The 8
+
+######## PDF page 121 (printed folio: see last line)
+--- p121 L1-2
+   1| The fermionic field on the BCT lattice hops between nearest-neighbour sites with amplitude
+   2| t = α₀ (the Josephson coupling from Appendix J). In momentum space:
+--- p121 L11-11
+  11| The bandwidth is 2 × 8α₀ = 16α₀ = 0.118529 in Planck units. The spectrum is symmetric
+
+######## PDF page 20 (printed folio: see last line)
+--- p20 L9-11
+   9|    •   The Madelung constant argument cites established results. A BCT-specific
+  10|        Madelung computation as a function of c/a (or citation of the existing numerical
+  11|        literature on this) would strengthen Step 2 considerably.
+
+######## PDF page 265 (printed folio: see last line)
+--- p265 L3-8
+   3|      S_SF = ∫ d⁴x √(-g) [ρ_0 R[g] / (16πG_eff) + L_matter + O(ℵ²/r²)]
+   4| where:
+   5|    • g is the determinant of the acoustic metric g_µν
+   6|    • R[g] is the Ricci scalar of the acoustic metric
+   7|    • G_eff = c⁴/(16πρ_0) is the effective Newton constant
+   8|    • L_matter is the acoustic phonon Lagrangian (the matter sector)
+--- p265 L22-34
+  22| AI.4 Newton's Constant from BCT
+  23| The effective Newton constant is:
+  24|      G_eff = c⁴ / (16πρ_BCT)
+  25| where ρ_BCT is the BCT condensate density at the Planck scale. The Planck density is:
+  26|      ρ_Planck = c⁵/(ℏG²) = 5.1560e+96 kg/m³
+  27| Setting ρ_BCT = ρ_Planck:
+  28|      G_eff = c⁴ / (16π × ρ_Planck) = c⁴ / (16π × c⁵/(ℏG²)) = ℏG²/(16πc)
+  29| This gives G_eff ~ G (up to a numerical coefficient of order 1 that depends on the precise
+  30| definition of ρ_BCT in terms of the condensate parameters). The BCT condensate density
+  31| is the Planck density, as expected for a lattice at the Planck scale.
+  32|    ✓ G_Newton = c⁴/(16πρ_BCT) where ρ_BCT is the BCT condensate density at the
+  33|    ground state. The numerical coefficient requires computing the BCT equation of
+  34|    state, but the dimensional structure is correct.
+
+######## PDF page 273 (printed folio: see last line)
+--- p273 L5-12
+   5|   This appendix analyses whether Newton’s constant G can be derived
+   6|   numerically from BCT. The conclusion has two parts: (1) The structural formula
+   7|   G = c⁴/(16πρ_BCT) from App AI is self-referential — since ρ_BCT ∝ 1/G through
+   8|   the Planck density, deriving G numerically requires knowing the absolute BCT
+   9|   lattice constant in SI units, which itself requires an independent measurement of
+  10|   G. (2) However, the 0.075% residual in the BCT hierarchy formula ln(m_P/m_e) =
+  11|   π⁵/6/(1−4α₀/π) translates to a precise BCT PREDICTION for G. If the BCT
+  12|   hierarchy formula is exact, then G_BCT = 0.000000×10⁻¹¹ m³kg⁻¹s⁻², which is
+--- p273 L18-32
+  18| AL.1 The Structural Formula and Its Limitation
+  19| From Appendix AI, the BCT condensate action in the hydrodynamic limit gives:
+  20|      G = c⁴ / (16π ρ_BCT)
+  21| where ρ_BCT is the physical BCT condensate density. The challenge: ρ_BCT is the Planck
+  22| density ρ_P = c⁵/(ℏG²), so:
+  23|      G = c⁴ / (16π × c⁵/(ℏG²)) = ℏG² / (16πc)
+  24|      => 1 = ℏG / (16πc)      [dimensionally inconsistent!]
+  25| This is circular: the formula G = c⁴/(16πρ_BCT) is dimensionally correct but reduces to a
+  26| tautology when ρ_BCT is expressed in terms of G. To derive G numerically, one needs the
+  27| BCT lattice constant a in SI units INDEPENDENT of G. This requires a non-gravitational
+  28| measurement at the Planck scale — which is currently impossible.
+  29|    � G cannot be derived numerically from the BCT structural formula alone. The
+  30|    formula G = c⁴/(16πρ_BCT) correctly gives the STRUCTURE of gravity (G is set by
+  31|    the Planck-scale condensate density) but does not determine the SI VALUE of G
+  32|    without independent Planck-scale input.
+
+######## PDF page 274 (printed folio: see last line)
+--- p274 L21-31
+  21| AL.3 The D4 Packing Factor
+  22| A separate BCT argument connects G to the D4 sphere packing density ρ_D4 = π²/16. If
+  23| the BCT condensate occupies a fraction ρ_D4 of the Planck volume, then:
+  24|      ρ_BCT = ρ_D4 × ρ_Planck = (π²/16) × (c⁵/ℏG²)
+  25|      G = c⁴/(16π ρ_BCT) = c⁴ℏ/(c⁵ π³) = ℏ/(cπ³)
+  26| But ℏ/(cπ³) has dimensions of time, not of G [m³ kg⁻¹ s⁻²]. This shows the packing density
+  27| argument is dimensional, not numerical — it correctly identifies that ρ_BCT ~ ρ_Planck but
+  28| does not determine G in SI units.
+  29|   APPENDIX AL — KEY RESULTS 1. G CANNOT be derived numerically from BCT
+  30|   first principles alone. The structural formula G = c⁴/(16πρ_BCT) is
+  31|   dimensionally self-referential. 2. BCT PREDICTION for G from the hierarchy
+
+######## PDF page 269 (printed folio: see last line)
+--- p269 L1-54
+  42|      K_BCT = [√λ_τ+√λ_μ+√λ_e]/3 = 0.970375

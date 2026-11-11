@@ -1,0 +1,116 @@
+Gate BULK — Q4 measurement table (no verdict).  mpmath dps=60, 40 digits reported.  CODATA 2022.
+==============================================================================================================
+Terminal inputs
+  c      = 299792458.0 m/s (exact)
+  hbar   = 1.054571817646156391262428003302280744723e-34 J s
+  G      = 0.000000000066743 m^3 kg^-1 s^-2  (±1.5e-15, rel 2.2e-5)
+  l_P    = 1.616255024423705286500047697249314156917e-35 m
+  m_P    = 0.00000002176434342717898213927914919024147041117 kg
+  rho_P  = 5.154848503244932975406333574675819184477e+96 kg m^-3     (AI.4 prints 5.1560e+96)
+  rho_P c^2 (Planck pressure) = 4.632946787895116622627852811132214908986e+113 Pa
+  c^4/G (Planck force)        = 1.210255564338206288189593027905802256416e+44 N
+
+Corpus dimensionless numbers
+  alpha_0 = r_oct r_tet/pi        = 0.007408055727547908079640101104499873415571
+  xi/a    = 1/sqrt(8 pi alpha_0)  = 2.317543794911664963039020806144813022013
+  phi     = 1 - pi/(3 sqrt2)      = 0.2595195103069389588306865016565510502309
+  alpha_inf                       = 1.64 ± 0.03
+  m/m_P (BB N9, with alpha_inf)   = 0.2382512173390357230432365080930140599578
+  m/m_P (BB N9, without)          = 0.3051104288682922021812775136850060157498
+  1/(8 pi)                        = 0.03978873577297383394222094084312859050861
+  1/sqrt(8 pi)                    = 0.1994711402007163389699730299671909342379
+  pi^2/16 (App AL rho_D4)         = 0.6168502750680849136771556874922594459571
+
+A. Dimensional checks of the printed identifications (SI)
+  [c^4/(8 pi K)] with K a pressure [kg m^-1 s^-2]        = m^5 kg^-1 s^-2   (G is m^3 kg^-1 s^-2)  -> INCONSISTENT
+  [c^2/(8 pi rho_0)] with rho_0 a mass density [kg m^-3]  = m^5 kg^-1 s^-2                          -> INCONSISTENT
+  [c^4/(16 pi rho_BCT)] with rho_BCT [kg m^-3]            = m^7 kg^-1 s^-4                          -> INCONSISTENT
+  [c^4/(8 pi K)] with K a pure number                     = m^4 s^-4                                -> INCONSISTENT
+  c^4/(8 pi rho_P c^2)  = 6.937222754236188557617013148082291978861e-82  [m^5 kg^-1 s^-2];  / (G l_P^2/(8 pi)) = 1.0
+  c^4/(16 pi rho_P)     = 3.117432438210331999536625181675706168864e-65  [m^7 kg^-1 s^-4] = hbar G^2/(16 pi c): 1.0
+  (App AL p274 L25-26 calls this 'dimensions of time'; it is m^7 kg^-1 s^-4, and AL's ħ/(cπ³) dropped G².  See CN-BULK-02.)
+  c^4/(16 pi (pi^2/16) rho_P) = 5.053791113031837536043047012043134674648e-65  [m^7 kg^-1 s^-4]  (= hbar G^2/(pi^3 c), not hbar/(c pi^3))
+  closing length for variant (a): L^2 = c^4/(8 pi K G) with K = rho_P c^2 -> L/l_P = 0.1994711402007163389699730299671909342379
+
+B. Q4 numbers per variant (a = l_P by the corpus's declared assumption, App K p120 L40-41; m = m_P by Letter 20 L230 unless stated)
+   kappa = K a^4/(hbar c);  a_dagger/l_P: the lattice-spacing completion c^4/(8 pi K a^2) = G_CODATA.  No verdict attached.
+
+  (a-L20)  K = rho_0 c^2, rho_0 = rho_Planck            [AZ6 L91-92; Letter 20 L138-141]
+      K [Pa]          = 4.632946787895116622627852811132214908986e+113
+      kappa           = 1.0
+      a_dagger/l_P    = 0.1994711402007163389699730299671909342379
+      note: kappa = rho_P c^2 l_P^4/(hbar c) = 1 identically; a_dagger/l_P = 1/sqrt(8 pi)
+  (a-AZ6)  K = rho_0 c^2, rho_0 = m_P n_0, n_0 = 1/site  [AZ6 L373-374; AZ7 L162-163]
+      K [Pa]          = 6.551976181194140869217301079446994260655e+113
+      kappa           = 1.41421356237309504880168872420969807857
+      a_dagger/l_P    = 0.1677345667413534790556974219940278948585
+      note: kappa = n_0 l_P^3 = sqrt2;  with n_0 = 1/a^3 instead, identical to (a-L20)
+  (i-mP)   K = g n_0^2, g = m c^2/n_0, m = m_P, n_0 = 1/site [AZ6 L139, L353-354]
+      K [Pa]          = 6.551976181194140869217301079446994260655e+113
+      kappa           = 1.41421356237309504880168872420969807857
+      a_dagger/l_P    = 0.1677345667413534790556974219940278948585
+      note: identical in content to (a-AZ6): K = m n_0 c^2
+  (i-BB)   same with m = 0.238 m_P (BB N9)                [§4.4 second value]
+      K [Pa]          = 1.561016301145870557313678943776032011777e+113
+      kappa           = 0.3369381028127642210903902619511333188011
+      a_dagger/l_P    = 0.343641026037283594669420362816730853968
+      note: kappa = sqrt2 * 0.2382512173390357230432365080930140599578
+  (ii-mP)  K = U/v_site, U = hbar^2/(2 m xi^2), xi = 2.31754 a, m = m_P [AZ7 L154-170; Letter 27 L75-76]
+      K [Pa]          = 6.099390158158952100389826136809045611676e+112
+      kappa           = 0.1316524975873958534715264574097171035928
+      a_dagger/l_P    = 0.5497503555139371775800487906901944041225
+      note: kappa = sqrt2/(2 (xi/a)^2) = 4 sqrt2 pi alpha_0 = 0.1316524975873958534715264574097171035928  (because (xi/a)^2 = 1/(8 pi alpha_0))
+  (ii-BB)  same with m = 0.238 m_P
+      K [Pa]          = 2.560066733879227713994433467792692499314e+113
+      kappa           = 0.5525784886129333225882400295998586428338
+      a_dagger/l_P    = 0.2683385588775150265138964806697237452032
+  (ii-t)   K = U/v_site with U = t = alpha_0 E_P (App K p121 L2, L11: t = alpha_0 'in Planck units')
+      K [Pa]          = 4.853740467585272565233575010902806181474e+111
+      kappa           = 0.01047657288071393752415152349340004068513
+      a_dagger/l_P    = 1.948814269334708873981253556772097978863
+      note: kappa = sqrt2 alpha_0; AZ7's t/U = 1 would need (xi/a)^2 = 1/(2 alpha_0) -> xi/a = 8.215478847866728047813100004458743431346, vs 2.31754 (sentence only)
+  (iii)    K = 8 M_FCC alpha_0/(9 sqrt2)                  [E.3 p72 L29]  -- ABSENT (App D not in pinned sources)
+      coefficient 8 alpha_0/(9 sqrt2) = 0.004656254613650638899622899330400018082281   (times M_FCC, undefined in the pinned sources)
+      kappa 'as printed' = the printed number itself (dimensionless); no SI K; no a_dagger.
+
+  (c-AI4)  K := rho_BCT c^2, rho_BCT = rho_Planck            [AI.4 p265 L24-27]
+      K [Pa]          = 4.632946787895116622627852811132214908986e+113
+      kappa           = 1.0
+      a_dagger/l_P    = 0.1994711402007163389699730299671909342379
+      note: printed coefficient is 16 pi (recorded, not used): with 16 pi, a_dagger/l_P = 1/sqrt(16 pi) = 0.141047395886939071737019862890193146461
+  (c-AL3)  K := rho_BCT c^2, rho_BCT = (pi^2/16) rho_Planck   [AL.3 p274 L24]
+      K [Pa]          = 2.857834500488903141949756964855073817488e+113
+      kappa           = 0.6168502750680849136771556874922594459571
+      a_dagger/l_P    = 0.2539745437369638791430532197385440806202
+      note: a_dagger/l_P = 1/sqrt(pi^3/2) = 0.2539745437369638791430532197385440806202;  with 16 pi: 0.1795871221251665616890819836276927552822
+  (iv) void-localised, §3 rule: K_eff = rho_eff c_eff^2 = phi rho_0 c_s^2/alpha_inf; with AZ6 L362's g = alpha_inf m c^2/n_0, c_eff = c and K_eff = phi rho_0 c^2
+  (iv-L20) rho_0 = rho_Planck                              [Letter 20 L141 + BB N1-N3]
+      K [Pa]          = 1.202340081672646460691735742932576983515e+113
+      kappa           = 0.2595195103069389588306865016565510502309
+      a_dagger/l_P    = 0.3915570642162611773241264019865266249165
+      note: kappa = phi; a_dagger/l_P = 1/sqrt(8 pi phi)
+  (iv-AZ6) rho_0 = m_P n_0, n_0 = 1/site
+      K [Pa]          = 1.700365650086231400589435026656537413598e+113
+      kappa           = 0.3670160111764973026474742631165304505039
+      a_dagger/l_P    = 0.3292589316667225303337749423069624458665
+      note: kappa = sqrt2 phi
+  (iv-BB)  rho_0 = m n_0, m = 0.238 m_P, n_0 = 1/site
+      K [Pa]          = 4.051141860545254837489157608785256673884e+112
+      kappa           = 0.08744201144571762287064639951182620787665
+      a_dagger/l_P    = 0.6745590924282455110083239096527124517778
+
+  f_K = K_void/K_bulk for variant (iv):
+      §3 rule, same microscopic g in both (K_bulk = rho_0 c_s^2):     f_K = phi/alpha_inf = 0.1582436038456944870918820132052140550188 ± 0.002894700070348069885827109997656354664979
+      both moduli with their sound speed set to c (K_bulk = rho_0 c^2, K_void = phi rho_0 c^2): f_K = phi = 0.2595195103069389588306865016565510502309
+      other homogenisations (listed, no verdict): per unit fluid volume K = rho_0 c_s^2/alpha_inf -> 1/alpha_inf = 0.6097560975609756097560975609756097560976;
+        Biot/JKD equivalent fluid K_eff = K_f/phi with rho_eff = alpha_inf rho_0/phi -> 1/phi = 3.853274841715290815690235798377522997142
+
+  Reference column: 1/(8 pi) = 0.03978873577297383394222094084312859050861 ; 1/sqrt(8 pi) = 0.1994711402007163389699730299671909342379 ; phi = 0.2595195103069389588306865016565510502309 ; alpha_inf = 1.64 ; 1/alpha_inf = 0.6097560975609756097560975609756097560976 ; 1/sqrt(8 pi phi) = 0.3915570642162611773241264019865266249165
+
+C. Internal checks recorded in the ledgers (sentences only; nothing is changed)
+  AZ6 L168 xi = hbar/sqrt(2 m g n_0) with L353 g = m c^2/n_0 and m = m_P gives xi/l_P = 1/sqrt2 = 0.7071067811865475244008443621048490392848, vs AZ6 L169 xi = 2.32 l_P (ratio 3.277501866157687297992630482637964062955).
+  Resolving by m instead gives m/m_P = 1/(sqrt2 xi/a) = 0.3051104288682922021812775136850060157498 (BB N9 'without tortuosity').
+  E.3 p72 L22 'rho_0 = 2 K_BCT/c^2' (K = rho_0 c^2/2) vs AZ6 L92 K = rho_0 c^2: factor 2 between the two printed EOS relations.
+  Coefficients printed in front of K or rho: 8 pi (AZ6 L91, L261; Letter 20 L96; E.3 p72 L26), 4 pi (E.3 p72 L20), 16 pi (AI.4 p265 L7, L24; AL p273 L20).
+
+Q3 not evaluated: no variant has a G-free SI value (see gate_BULK_RESULT.md §Q2).
