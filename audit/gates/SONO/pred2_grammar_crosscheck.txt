@@ -1,0 +1,13 @@
+C=2: generated 325 values, 279 distinct at 12 s.f.
+C=3: generated 6782 values, 3782 distinct at 12 s.f.
+C=4: generated 158430 values, 68000 distinct at 12 s.f.
+C=5: generated 3972057 values, 1229750 distinct at 12 s.f.
+Cross-check: PRED2's own pred2_step2_grammar.py run unmodified at the pinned commit (093506c4), vs sono_q4_score.py
+PRED2 NU (unary ops) = 17  NB = 4  NA = 20
+PRED2 own code C=1: generated 20, distinct 20
+PRED2 own code C=2: generated 325, distinct 279
+PRED2 own code C=3: generated 6,782, distinct 3,782
+PRED2 own code C=4: generated 158,430, distinct 68,000
+PRED2 own code C=5: generated 3,972,057, distinct 1,229,750
+sono_q4_score.py (20-atom branch): generated 20 / 325 / 6,782 / 158,430 at C=1..4  -> identical pools
+PRED2-own-pool #154 C=3: window 0.1 hits 135/6726 p=7.581e-04 raw bits=10.37  (sono_q4_score.py: window 0.1, 135/6726, 10.37)

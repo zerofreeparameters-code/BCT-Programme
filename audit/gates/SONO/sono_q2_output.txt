@@ -1,0 +1,48 @@
+=== constants (30 dps, 10 printed) ===
+r_oct           = 0.2071067812
+r_tet           = 0.1123724357
+r_tet/r_oct     = 0.5425821166   (letter: 0.5426)
+r_oct/r_tet     = 1.843038997   (Gate RATIO: 1.8430)
+j_{1,1}         = 3.83170597   (letter 'j(1,1) = 3.832', first zero of J_1)
+j_{1,2}         = 7.01558667   (letter 'j(2,1) = 7.016' -- this is the SECOND zero of J_1)
+j_{2,1}         = 5.135622302   (the actual first zero of J_2; not used by the letter)
+j_{1,2}/j_{1,1} = 1.830930328   (letter: 1.830)
+(j12/j11)^2     = 3.352305867   (letter: 3.348; 1.830^2 = 3.3489 )
+j_{2,1}/j_{1,1} = 1.340296552   (label-literal reading of the letter's 'j(2,1)/j(1,1)')
+(j21/j11)^2     = 1.796394848
+abstract L15-16 prints 'j(2,1)/j(1,1) = 3.054': matches none of the four values above.
+nearest low-order Bessel-zero ratios to 3.054 (record only):
+   j_{2,3}/j_{1,1} = 3.03255  (off by 0.702 %)
+   j_{0,4}/j_{1,1} = 3.07736  (off by 0.765 %)
+   j_{4,1}/j_{0,1} = 3.15546  (off by 3.32 %)
+   (j12/j11)^2 = 3.3523 is off by 9.77 %; j21/j11 = 1.3403 is off by 56.1 %
+
+=== #154  lambda_UV/lambda_peak = r_tet/r_oct ===
+  obs = 200/370 = 0.5405405405  [the letter's arithmetic (L53)]
+     delta_154 = BCT/obs - 1 = 0.3777 %   ;   obs/BCT - 1 = -0.3763 %
+  obs = 200/350 = 0.5714285714  [the letter's text (L52, 'broad peak near 350 nm')]
+     delta_154 = BCT/obs - 1 = -5.048 %   ;   obs/BCT - 1 = 5.317 %
+  letter prints: Observed 0.541 (=200/370 rounded), BCT 0.5426, 'Error: -0.3%' (text) and '0.3%' (table).
+  -0.3% is obs/BCT - 1 = -0.376% rounded to one figure; the card's delta_154 (BCT/obs - 1) is +0.378%.
+
+=== #155  lambda_1/lambda_2 = j(2,1)/j(1,1) [= j_{1,2}/j_{1,1}] ===
+  letter's '7.016/3.832' = 1.830897704  (prints 1.830); full precision 1.830930328
+  obs = 700/380 = 1.842105263  (letter prints 1.842)
+     delta_155 = BCT/obs - 1 = -0.6066 %   ;   obs/BCT - 1 = 0.6103 %
+  letter prints 'Error: +0.65%' (text) and '0.65%' (table): that is obs/BCT - 1 = +0.610% rounded up, or
+  (1.842/1.830 - 1) from the rounded printed values = 0.6557 %  <- reproduces 0.65% to two figures
+  sign convention consistent with #154: the letter's 'Error' = obs/BCT - 1 computed from the ROUNDED printed values.
+  check #154 the same way: 0.541/0.5426 - 1 = -0.2949 % -> prints -0.3%  (consistent)
+  other corpus '1.84': r_oct/r_tet = 1.84304 ; vs 700/380: 0.05069 %  (look-elsewhere illustration only)
+  j_{1,2}/j_{1,1} vs r_oct/r_tet differ by -0.657 %
+
+=== tolerances handed to Q4 (card Q4: 'printed tolerance') ===
+  eps_154 = |delta_154| = 0.00377692  (card: 0.38 %)
+  eps_155 = |delta_155| = 0.00606639  (card: 0.61 %)
+
+=== Q3(d): Letter 207's 'r = r_tet x lambda_acoustic' (absent from Letter 110; literal reading, record only) ===
+  f =  20.0 kHz: lambda_acoustic = 74.1 mm ; r_tet x lambda = 8.327 mm = 8327.0 um
+  f =  26.5 kHz: lambda_acoustic = 55.92 mm ; r_tet x lambda = 6.284 mm = 6284.0 um
+  f =  40.0 kHz: lambda_acoustic = 37.05 mm ; r_tet x lambda = 4.163 mm = 4163.0 um
+  measured SBSL radii (pinned refs): R0 ~ 4-5 um, Rmax ~ 40-50 um, Rmin ~ 0.5 um.
+  6.28 mm (26.5 kHz) / 50 um = 125.7 x Rmax ; / 0.5 um = 1.257e+4 x Rmin

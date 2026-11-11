@@ -1,0 +1,17 @@
+r_oct = 0.2071067812  r_tet = 0.1123724357  r_tet/r_oct = 0.5425821166  r_oct/r_tet = 1.843038997
+Bessel zeros: j_{1,1} = 3.83170597  j_{1,2} = 7.01558667  j_{2,1} = 5.135622302  j_{0,1} = 2.404825558
+Letter's 'j(2,1) = 7.016' is j_{1,2} (second zero of J_1), not j_{2,1} = 5.13562 (first zero of J_2).
+ratio used, j_{1,2}/j_{1,1} = 1.830930328 (letter: 1.830); squared = 3.352305867 (letter: 3.348 from the rounded 1.830)
+true j_{2,1}/j_{1,1} = 1.3403; abstract's '3.054' matches neither (j_{1,2}/j_{1,1} = 1.83093, squared 3.35231).
+
+#154 comparison arithmetic as printed:
+  200/370 = 0.540541 ; BCT 0.5426 vs obs: (BCT/obs - 1) = 0.378 % ; (obs/BCT - 1) = -0.376 %
+  200/350 = 0.571429 ; BCT 0.5426 vs obs: (BCT/obs - 1) = -5.05 % ; (obs/BCT - 1) = 5.32 %
+  The text says 'broad peak near 350 nm' and then computes 200/370; the printed -0.3% uses 370. With 350 the error is ~5%.
+
+#155 comparison arithmetic as printed:
+  700/380 = 1.84211 ; BCT 1.83093 ; (BCT/obs - 1) = -0.607 % (letter: +0.65%)
+  r_oct/r_tet = 1.84304 differs from j_{1,2}/j_{1,1} = 1.83093 by 0.661 % -- the corpus has two '1.83's; the letter uses one for each prediction.
+
+Letter 207's paraphrase 'flash at r = r_tet x lambda_acoustic' does not occur in Letter 110 (no flash-radius formula there).
+  Orientation only: water, 26.5 kHz: lambda = 1482/26500 m = 55.92 mm; r_tet x lambda = 6.284 mm; SBSL radii ~0.5-50 um.

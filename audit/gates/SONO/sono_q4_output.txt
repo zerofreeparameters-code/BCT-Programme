@@ -1,0 +1,42 @@
+eps_154 = 3.776916e-03  T_154 = 0.5405405405   eps_155 = 6.066393e-03  T_155 = 1.8421052632   C_expr = 3
+
+=== grammar: PRED2 20 atoms ===
+  C=1: generated 20, distinct (12 s.f.) 20
+  C=2: generated 325, distinct (12 s.f.) 280
+  C=3: generated 6,782, distinct (12 s.f.) 3,876
+  C=4: generated 158,430, distinct (12 s.f.) 69,432
+  #154 r_tet/r_oct vs 200/370  C=2: p_raw=9.062e-04 raw bits= 10.11 (window 0.8, hits 62/323)
+  #154 r_tet/r_oct vs 200/370  C=3: p_raw=7.581e-04 raw bits= 10.37 (window 0.1, hits 135/6726)  <-- scored level (C_expr)
+  #154 r_tet/r_oct vs 200/370  C=4: p_raw=4.423e-03 raw bits=  7.82 (window 0.002, hits 369/157535)
+     exhaustive C<=3: 5 distinct values within eps of T out of 3,935 distinct values (fraction 1.271e-03 -> 9.62 bits)
+     control (best C<=3 expression for T): cos(cos(x_lep)) = 0.54033974, |eps| = 3.715e-04
+     nearest in-window expressions: cos(cos(x_lep))=0.540340; cos(cos(a0))=0.540325; cos(1)=0.540302; ^-2(acos(r_oct))=0.538929; (r_tet/r_oct)=0.542582
+  #155 j12/j11 vs 700/380: expression j12/j11 NOT expressible in this grammar - not scored here
+
+=== grammar: PRED2 + 3 Bessel zeros (23 atoms) ===
+  C=1: generated 23, distinct (12 s.f.) 23
+  C=2: generated 373, distinct (12 s.f.) 328
+  C=3: generated 8,069, distinct (12 s.f.) 4,797
+  C=4: generated 195,385, distinct (12 s.f.) 90,509
+  #154 r_tet/r_oct vs 200/370  C=2: p_raw=8.526e-04 raw bits= 10.20 (window 0.8, hits 67/371)
+  #154 r_tet/r_oct vs 200/370  C=3: p_raw=6.130e-04 raw bits= 10.67 (window 0.05, hits 65/8010)  <-- scored level (C_expr)
+  #154 r_tet/r_oct vs 200/370  C=4: p_raw=3.846e-03 raw bits=  8.02 (window 0.002, hits 396/194445)
+     exhaustive C<=3: 5 distinct values within eps of T out of 4,877 distinct values (fraction 1.025e-03 -> 9.93 bits)
+     control (best C<=3 expression for T): cos(cos(x_lep)) = 0.54033974, |eps| = 3.715e-04
+     nearest in-window expressions: cos(cos(x_lep))=0.540340; cos(cos(a0))=0.540325; cos(1)=0.540302; ^-2(acos(r_oct))=0.538929; (r_tet/r_oct)=0.542582
+  #155 j12/j11 vs 700/380  C=2: p_raw=1.840e-03 raw bits=  9.09 (window 0.8, hits 90/371)
+  #155 j12/j11 vs 700/380  C=3: p_raw=1.174e-03 raw bits=  9.73 (window 0.1, hits 155/8010)  <-- scored level (C_expr)
+  #155 j12/j11 vs 700/380  C=4: p_raw=9.297e-04 raw bits= 10.07 (window 0.005, hits 149/194445)
+     exhaustive C<=3: 7 distinct values within eps of T out of 4,877 distinct values (fraction 1.435e-03 -> 9.44 bits)
+     control (best C<=3 expression for T): (r_oct/r_tet) = 1.84303900, |eps| = 5.069e-04
+     nearest in-window expressions: (r_oct/r_tet)=1.843039; (sqrt3+r_tet)=1.844423; ln(tan(sqrt2))=1.845951; 1/(1-x)(sqrt(r_oct))=1.835165; ^-1(cos(1))=1.850816; (j11-2)=1.831706
+
+=== charge sheet (bits) ===
+LE_targets = log2(92) = 6.52;  LE_constants = log2(12) = 3.58
+LE_pairs: #154 log2(C(4,2)=6) = 2.58; #155 log2(C(6,2)=15) = 3.91
+drift: #154 log2(ln(370/336)/(2 eps)) = 3.67 [N = 12.8 windows]; #155 log2(ln(550/350)/(2 eps)) = 5.22 [N = 37.3 windows]
+
+prediction                                     grammar                                 raw   LE_t   LE_c  pairs  drift     net  bin
+#154 r_tet/r_oct vs 200/370                    PRED2 20 atoms                        10.37   6.52   3.58   2.58   3.67   -6.00  unsurprising   (net without drift charge: -2.33; raw minus LE_targets only: 3.84)
+#154 r_tet/r_oct vs 200/370                    PRED2 + 3 Bessel zeros (23 atoms)     10.67   6.52   3.58   2.58   3.67   -5.70  unsurprising   (net without drift charge: -2.02; raw minus LE_targets only: 4.15)
+#155 j12/j11 vs 700/380                        PRED2 + 3 Bessel zeros (23 atoms)      9.73   6.52   3.58   3.91   5.22   -9.50  unsurprising   (net without drift charge: -4.28; raw minus LE_targets only: 3.21)
