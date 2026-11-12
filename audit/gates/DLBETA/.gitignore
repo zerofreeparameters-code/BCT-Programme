@@ -1,0 +1,2 @@
+# numba / Python caches written when dlb_deskcheck.py is run from a checkout
+__pycache__/
