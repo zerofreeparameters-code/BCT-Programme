@@ -1,0 +1,99 @@
+Q7
+  original beta_inf = 1.25375, uncertainty = 0.005 -> I_O = [1.24875, 1.25875]
+  beta^R = 1.25875; d = 0.00000; Resolved = True; sealed material seen early: no
+  verdict = SC-DLBR-1
+  beta_inf(REP1) - beta_inf(original) = +0.00500
+  L = 6 cold jump: REP1 [1.2500, 1.2550] vs original [1.2500, 1.2550]
+
+Sensitivity of the C1 outcomes (observation; not a verdict input)
+  sigma(E_end): sd of the 10 readings / sqrt(10); sigma(S), sigma(W): 20-block errors propagated through the lines
+  | L | beta | f | sigma_f (MC) | margin to nearest cut in units of sigma_f | P(other side) |
+  | 6 | 1.24500 | -0.057044 | 0.0287 (sE 0.00074, sS 0.00029, sW 0.00051) | 13.579 | 0.000 |
+  | 6 | 1.24750 | 0.019984 | 0.0304 (sE 0.00074, sS 0.00035, sW 0.00046) | 10.295 | 0.000 |
+  | 6 | 1.25000 | 0.040710 | 0.0508 (sE 0.00124, sS 0.00042, sW 0.00041) | 5.758 | 0.000 |
+  | 6 | 1.25250 | -0.046641 | 0.0302 (sE 0.00054, sS 0.00049, sW 0.00036) | 12.602 | 0.000 |
+  | 6 | 1.25500 | 0.153847 | 0.0326 (sE 0.00061, sS 0.00055, sW 0.00032) | 5.511 | 0.000 |
+  | 6 | 1.25750 | 0.322799 | 0.0400 (sE 0.00079, sS 0.00062, sW 0.00027) | 0.263 | 0.396 |
+  | 6 | 1.26000 | 0.888762 | 0.0320 (sE 0.00065, sS 0.00069, sW 0.00022) | 6.945 | 0.000 |
+  | 8 | 1.25375 | 0.161984 | 0.0280 (sE 0.00051, sS 0.00052, sW 0.00034) | 6.130 | 0.000 |
+  | 8 | 1.25625 | 0.324410 | 0.0371 (sE 0.00075, sS 0.00058, sW 0.00029) | 0.241 | 0.405 |
+  | 8 | 1.25875 | 0.606817 | 0.0223 (sE 0.00039, sS 0.00065, sW 0.00025) | 2.683 | 0.003 |
+  | 8 | 1.26125 | 0.667003 | 0.0239 (sE 0.00041, sS 0.00072, sW 0.00020) | 0.014 | 0.494 |
+  | 8 | 1.26375 | 1.032940 | 0.0160 (sE 0.00027, sS 0.00079, sW 0.00016) | 22.956 | 0.000 |
+
+  What-if (observation): with 1.26125 unresolved instead of weak -> L = 8 flip [1.25625, 1.26375], beta_mix(8) = 1.26000, u = 0.00375, unresolved = 2, Resolved = False, d = 0.00125 -> SC-DLBR-3
+
+Cross-code comparison (after unblinding; observation): z = (E_REP1 - E_orig)/sqrt(s_REP1^2 + s_orig^2)
+  L = 4, both starts, 34 comparisons away from 1.245-1.260: rms z = 0.97, max |z| = 1.91
+  L = 4 at 1.245-1.260 (part-mixed runs): 1.245 hot +0.1; 1.245 cold +0.4; 1.250 hot +4.1; 1.250 cold +1.7; 1.255 hot -0.1; 1.255 cold +4.4; 1.260 hot -1.3; 1.260 cold +0.3
+  L = 6 cold, 7 comparisons away from 1.250-1.255: rms z = 0.93, max |z| = 2.08; at 1.250/1.255: -3.2, -0.9
+
+    L=4 hot  1.1700: REP1 0.40810 +- 0.00011  orig 0.40823 +- 0.00015  z = -0.69
+    L=4 cold 1.1700: REP1 0.40852 +- 0.00015  orig 0.40865 +- 0.00016  z = -0.58
+    L=4 hot  1.1750: REP1 0.40512 +- 0.00019  orig 0.40460 +- 0.00023  z = +1.72
+    L=4 cold 1.1750: REP1 0.40475 +- 0.00023  orig 0.40456 +- 0.00020  z = +0.64
+    L=4 hot  1.1800: REP1 0.40125 +- 0.00017  orig 0.40099 +- 0.00019  z = +1.04
+    L=4 cold 1.1800: REP1 0.40105 +- 0.00020  orig 0.40092 +- 0.00019  z = +0.47
+    L=4 hot  1.1850: REP1 0.39749 +- 0.00018  orig 0.39703 +- 0.00016  z = +1.91
+    L=4 cold 1.1850: REP1 0.39723 +- 0.00019  orig 0.39728 +- 0.00030  z = -0.16
+    L=4 hot  1.1900: REP1 0.39367 +- 0.00022  orig 0.39402 +- 0.00019  z = -1.20
+    L=4 cold 1.1900: REP1 0.39359 +- 0.00022  orig 0.39351 +- 0.00017  z = +0.30
+    L=4 hot  1.1950: REP1 0.38948 +- 0.00019  orig 0.38934 +- 0.00023  z = +0.47
+    L=4 cold 1.1950: REP1 0.38975 +- 0.00030  orig 0.38958 +- 0.00018  z = +0.48
+    L=4 hot  1.2000: REP1 0.38512 +- 0.00021  orig 0.38522 +- 0.00027  z = -0.28
+    L=4 cold 1.2000: REP1 0.38551 +- 0.00021  orig 0.38521 +- 0.00018  z = +1.10
+    L=4 hot  1.2050: REP1 0.38112 +- 0.00033  orig 0.38139 +- 0.00024  z = -0.66
+    L=4 cold 1.2050: REP1 0.38085 +- 0.00019  orig 0.38114 +- 0.00026  z = -0.89
+    L=4 hot  1.2100: REP1 0.37714 +- 0.00024  orig 0.37685 +- 0.00038  z = +0.65
+    L=4 cold 1.2100: REP1 0.37751 +- 0.00022  orig 0.37707 +- 0.00018  z = +1.54
+    L=4 hot  1.2150: REP1 0.37282 +- 0.00028  orig 0.37275 +- 0.00023  z = +0.19
+    L=4 cold 1.2150: REP1 0.37234 +- 0.00031  orig 0.37241 +- 0.00039  z = -0.14
+    L=4 hot  1.2200: REP1 0.36759 +- 0.00037  orig 0.36799 +- 0.00033  z = -0.81
+    L=4 cold 1.2200: REP1 0.36806 +- 0.00030  orig 0.36731 +- 0.00027  z = +1.87
+    L=4 hot  1.2250: REP1 0.36327 +- 0.00029  orig 0.36256 +- 0.00032  z = +1.65
+    L=4 cold 1.2250: REP1 0.36275 +- 0.00025  orig 0.36304 +- 0.00047  z = -0.54
+    L=4 hot  1.2300: REP1 0.35743 +- 0.00047  orig 0.35825 +- 0.00035  z = -1.39
+    L=4 cold 1.2300: REP1 0.35801 +- 0.00042  orig 0.35820 +- 0.00045  z = -0.31
+    L=4 hot  1.2350: REP1 0.35269 +- 0.00045  orig 0.35334 +- 0.00046  z = -1.01
+    L=4 cold 1.2350: REP1 0.35260 +- 0.00047  orig 0.35328 +- 0.00049  z = -1.00
+    L=4 hot  1.2400: REP1 0.34678 +- 0.00039  orig 0.34648 +- 0.00041  z = +0.52
+    L=4 cold 1.2400: REP1 0.34599 +- 0.00038  orig 0.34642 +- 0.00039  z = -0.78
+    L=4 hot  1.2450: REP1 0.33876 +- 0.00050  orig 0.33865 +- 0.00078  z = +0.12
+    L=4 cold 1.2450: REP1 0.34060 +- 0.00059  orig 0.34027 +- 0.00063  z = +0.39
+    L=4 hot  1.2500: REP1 0.33303 +- 0.00057  orig 0.32567 +- 0.00172  z = +4.06
+    L=4 cold 1.2500: REP1 0.33272 +- 0.00085  orig 0.32984 +- 0.00146  z = +1.70
+    L=4 hot  1.2550: REP1 0.30886 +- 0.00158  orig 0.30919 +- 0.00175  z = -0.14
+    L=4 cold 1.2550: REP1 0.31606 +- 0.00238  orig 0.30517 +- 0.00061  z = +4.43
+    L=4 hot  1.2600: REP1 0.29956 +- 0.00025  orig 0.30025 +- 0.00048  z = -1.28
+    L=4 cold 1.2600: REP1 0.30047 +- 0.00045  orig 0.30023 +- 0.00052  z = +0.35
+    L=4 hot  1.2650: REP1 0.29611 +- 0.00026  orig 0.29565 +- 0.00024  z = +1.30
+    L=4 cold 1.2650: REP1 0.29651 +- 0.00028  orig 0.29627 +- 0.00027  z = +0.61
+    L=4 hot  1.2700: REP1 0.29253 +- 0.00022  orig 0.29230 +- 0.00023  z = +0.71
+    L=4 cold 1.2700: REP1 0.29270 +- 0.00019  orig 0.29245 +- 0.00025  z = +0.80
+
+Mixed-phase E_end at the same beta, both codes (observation)
+  L=6 1.24500: REP1 E_end 0.34167 f -0.057 strong     | original E_end 0.34168; REP1's C1 lines applied: f -0.057 -> strong
+  L=6 1.24750: REP1 E_end 0.33656 f 0.020 strong     | original E_end 0.33710; REP1's C1 lines applied: f -0.000 -> strong
+  L=6 1.25000: REP1 E_end 0.33307 f 0.041 strong     | original E_end 0.33259; REP1's C1 lines applied: f 0.059 -> strong
+  L=6 1.25250: REP1 E_end 0.33229 f -0.047 strong     | original E_end 0.32727; REP1's C1 lines applied: f 0.157 -> strong
+  L=6 1.25500: REP1 E_end 0.32454 f 0.154 strong     | original E_end 0.32430; REP1's C1 lines applied: f 0.164 -> strong
+  L=6 1.25750: REP1 E_end 0.31793 f 0.323 strong     | original E_end 0.31620; REP1's C1 lines applied: f 0.400 -> unresolved
+  L=6 1.26000: REP1 E_end 0.30320 f 0.889 weak       | original E_end 0.30233; REP1's C1 lines applied: f 0.929 -> weak
+  L=8 1.24875: REP1 —                                 | original E_end 0.33578; REP1's C1 lines applied: f -0.007 -> strong
+  L=8 1.25125: REP1 —                                 | original E_end 0.32954; REP1's C1 lines applied: f 0.123 -> strong
+  L=8 1.25375: REP1 E_end 0.32575 f 0.162 strong     | original E_end 0.32540; REP1's C1 lines applied: f 0.176 -> strong
+  L=8 1.25625: REP1 E_end 0.31920 f 0.324 strong     | original E_end 0.32046; REP1's C1 lines applied: f 0.270 -> strong
+  L=8 1.25875: REP1 E_end 0.31039 f 0.607 unresolved | original E_end 0.30653; REP1's C1 lines applied: f 0.783 -> weak
+  L=8 1.26125: REP1 E_end 0.30681 f 0.667 weak       | original —
+  L=8 1.26375: REP1 E_end 0.29733 f 1.033 weak       | original —
+
+Q5 anisotropy record (recorded, not interpreted)
+  L = 6 hot  scan, beta = 1.255 (below beta_inf): E_s = 0.32968 +- 0.00042, E_t = 0.31408 +- 0.00039, E_t/E_s = 0.9527
+  L = 6 cold scan, beta = 1.255 (below beta_inf): E_s = 0.32209 +- 0.00158, E_t = 0.30744 +- 0.00137, E_t/E_s = 0.9545
+  L = 6 hot  scan, beta = 1.260 (above beta_inf): E_s = 0.32021 +- 0.00056, E_t = 0.30551 +- 0.00048, E_t/E_s = 0.9541
+  L = 6 cold scan, beta = 1.260 (above beta_inf): E_s = 0.30878 +- 0.00030, E_t = 0.29558 +- 0.00028, E_t/E_s = 0.9572
+  L = 8 mixed, beta = 1.25625 (strong win, below beta_inf): E_s = 0.32832, E_t = 0.31237, E_t/E_s = 0.9514
+  L = 8 mixed, beta = 1.26125 (weak win, above beta_inf): E_s = 0.31486, E_t = 0.30078, E_t/E_s = 0.9553
+  beta = 20 (K3, void L = 2, L_t = 6, cold): E_s = 0.014655 +- 0.000007, E_t = 0.014141 +- 0.000006, E_t/E_s = 0.9649
+  L = 6 scan E_t/E_s, every point: 1.225h 0.9489; 1.225c 0.9490; 1.230h 0.9488; 1.230c 0.9491; 1.235h 0.9491; 1.235c 0.9488; 1.240h 0.9491; 1.240c 0.9494; 1.245h 0.9496; 1.245c 0.9494; 1.250h 0.9502; 1.250c 0.9510; 1.255h 0.9527; 1.255c 0.9545; 1.260h 0.9541; 1.260c 0.9572; 1.265h 0.9579; 1.265c 0.9585; 1.270h 0.9579; 1.270c 0.9585; 1.275h 0.9586; 1.275c 0.9594; 1.280h 0.9593; 1.280c 0.9599; 1.285h 0.9594; 1.285c 0.9597
+

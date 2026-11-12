@@ -1,0 +1,53 @@
+# Gate DL-BETA REP1 -- dlbr_numbers.txt (all Q3 and Q6 numbers; written before unblinding)
+# beta in card convention (coefficient of sum over loops); 1/e^2 = beta/sqrt2. beta to 4 dp [exact grid value], E to 5 dp.
+K4_beta_Cmax = 1.0075
+K4_pass = yes
+K4_Estar_hc = 0.37301
+K5_flip_interval = [1.0070, 1.0120]
+K5_pass = yes
+beta_0 = 1.22
+beta_0_grid = [0.50, 2.00]; extensions = []
+beta_4 = 1.255
+beta_4_grid = [1.170, 1.270]; extensions = []
+jump_interval_L4_hot = [1.250, 1.255]; fall = 0.02416
+jump_interval_L4_cold = [1.250, 1.255]; fall = 0.01666
+L6_grid = [1.225, 1.285]; extensions = []
+jump_interval_L6_cold = [1.250, 1.255]; fall = 0.01665; 3sigma = 0.00491
+jump_interval_L6_hot = [1.260, 1.265]; fall = 0.01321
+beta_lo = 1.250
+beta_hi = 1.255
+E_star = 0.32205
+Located = yes
+branch_S: E = 1.823294 + (-1.191339) * beta ; points (1.230, 0.35790); (1.235, 0.35161); (1.240, 0.34694); (1.245, 0.33960)
+branch_W: E = 1.252638 + (-0.755413) * beta ; points (1.260, 0.30124); (1.265, 0.29644); (1.270, 0.29320); (1.275, 0.28973)
+mixed_L6_grid = [1.2450, 1.2600] step 0.0025; centre = 1.2525; extensions = []
+mixed_L6 beta = 1.2450 seed 759966: E_end = 0.34167; S = 0.34008; W = 0.31215; f = -0.057044; primary = strong; secondary = strong
+mixed_L6 beta = 1.2475 seed 759991: E_end = 0.33656; S = 0.33710; W = 0.31026; f = 0.019984; primary = strong; secondary = strong
+mixed_L6 beta = 1.2500 seed 760016: E_end = 0.33307; S = 0.33412; W = 0.30837; f = 0.040710; primary = strong; secondary = strong
+mixed_L6 beta = 1.2525 seed 760041: E_end = 0.33229; S = 0.33114; W = 0.30648; f = -0.046641; primary = strong; secondary = strong
+mixed_L6 beta = 1.2550 seed 760066: E_end = 0.32454; S = 0.32816; W = 0.30459; f = 0.153847; primary = strong; secondary = unresolved
+mixed_L6 beta = 1.2575 seed 760091: E_end = 0.31793; S = 0.32518; W = 0.30271; f = 0.322799; primary = strong; secondary = unresolved
+mixed_L6 beta = 1.2600 seed 760116: E_end = 0.30320; S = 0.32221; W = 0.30082; f = 0.888762; primary = weak; secondary = weak
+beta_mix(6) = 1.2588 [1.25875]; flip_interval = [1.2575, 1.2600]; non_monotonic = no; unresolved_inside = 0; unresolved_total = 0
+Q6 beta_mix_sec(6) = 1.2563 [1.25625]; flip_interval_sec = [1.2525, 1.2600]; non_monotonic = no; unresolved_total_sec = 2
+mixed_L8_grid = [1.2537 [1.25375], 1.2637 [1.26375]] step 0.0025; centre = 1.2588 [1.25875]; extensions = []
+mixed_L8 beta = 1.2537 [1.25375] seed 775892: E_end = 0.32575; S = 0.32965; W = 0.30554; f = 0.161984; primary = strong; secondary = unresolved
+mixed_L8 beta = 1.2563 [1.25625] seed 775916: E_end = 0.31920; S = 0.32667; W = 0.30365; f = 0.324410; primary = strong; secondary = unresolved
+mixed_L8 beta = 1.2588 [1.25875] seed 775942: E_end = 0.31039; S = 0.32370; W = 0.30176; f = 0.606817; primary = unresolved; secondary = weak
+mixed_L8 beta = 1.2612 [1.26125] seed 775966: E_end = 0.30681; S = 0.32072; W = 0.29987; f = 0.667003; primary = weak; secondary = weak
+mixed_L8 beta = 1.2637 [1.26375] seed 775992: E_end = 0.29733; S = 0.31774; W = 0.29798; f = 1.032940; primary = weak; secondary = weak
+beta_mix(8) = 1.2588 [1.25875]; flip_interval = [1.2563 [1.25625], 1.2612 [1.26125]]; non_monotonic = no; unresolved_inside = 1; unresolved_total = 1
+Q6 beta_mix_sec(8) = none; unresolved_total_sec = 2
+beta_inf = 1.2588 [1.25875]
+uncertainty = 0.0025
+half_L8_flip_interval = 0.0025; |beta_mix(8)-beta_mix(6)| = 0.0000
+inv_e2_c = 0.8901 +- 0.0018
+Delta_E_L8 = 0.01239 (strong run at 1.2563 [1.25625] minus weak run at 1.2612 [1.26125])
+extrapolation_check_beta(1/(L^3 L_t)->0) = 1.25875
+Resolved = yes
+beta_R = 1.2588 [1.25875]
+histogram_beta = 1.2588 [1.25875] (beta_mix(6)); B = 0.666541; two_peaks = no
+Q6 beta_inf_sec = none
+Q6 u_sec = none
+Q6 unresolved_L8_sec = 2
+Q6 original_card_code = SC-DLB-2

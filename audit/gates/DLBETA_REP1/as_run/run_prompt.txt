@@ -1,0 +1,15 @@
+Gate DL-BETA REP1 — run. One gate per thread; fresh thread; nothing from memory, past chats or the Project's knowledge base.
+
+Before reading anything, fetch the card and its record to disk and hash them:
+
+  mkdir -p /home/claude/gate_DLBETA_REP1 && cd /home/claude/gate_DLBETA_REP1
+  R=https://raw.githubusercontent.com/zerofreeparameters-code/BCT-Programme/6058f4e63d1ec0aadeb60ce5bb4a73e5c76b5369
+  curl -sS -o gate_DLBETA_REP1_prompt.md          $R/audit/gates/gate_DLBETA_REP1_prompt.md
+  curl -sS -o PREREG_20261112_DLBETA_REP1.sha256  $R/audit/gates/PREREG_20261112_DLBETA_REP1.sha256
+  sha256sum gate_DLBETA_REP1_prompt.md PREREG_20261112_DLBETA_REP1.sha256
+
+Expected:
+  2ffa8de365a01af1cd3e372998d264d16c2327459e2ffbb5b126f08e7f39a349  gate_DLBETA_REP1_prompt.md
+  fc6b6d22c98474795eb470f99ce9f19bc187f4ff61bd60a591caf1f4ffcd51b2  PREREG_20261112_DLBETA_REP1.sha256
+
+If either digest differs, stop and report; do not read the card. If both match, record the digests and the commit 6058f4e63d1ec0aadeb60ce5bb4a73e5c76b5369, read the card, and run exactly what it says (§10 is the protocol; §0 lists what is sealed until §4.7 — do not open, print, search or list it; §4.1 pins the sources with hashes to verify before reading). This is a multi-hour run: checkpoint every stage, keep the turn alive and poll while simulations run, and do not end your reply with jobs in the background. Do not shorten any sweep budget. The container cannot push: deliver a git format-patch adding audit/gates/DLBETA_REP1/ only, on top of 6058f4e63d1ec0aadeb60ce5bb4a73e5c76b5369, as a file in the conversation (about 30 MB; the Drive connector can't take it). Same-session results are capped at CONJECTURE.

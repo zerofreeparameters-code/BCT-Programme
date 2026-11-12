@@ -1,0 +1,36 @@
+================================================================================================
+Gate DL-BETA REP1 -- K2, K3, sampler
+================================================================================================
+Sampler unit test: von Mises(0, kappa), Best-Fisher, 1,000,000 draws per (kappa, seed)
+    kappa =   0.05 seed 11: KS p = 0.594; <cos> - I1/I0 = +1.05 sigma
+    kappa =   0.05 seed 12: KS p = 0.609; <cos> - I1/I0 = +0.81 sigma
+    kappa =   0.20 seed 11: KS p = 0.754; <cos> - I1/I0 = -0.03 sigma
+    kappa =   0.20 seed 12: KS p = 0.425; <cos> - I1/I0 = +1.06 sigma
+    kappa =   0.50 seed 11: KS p = 0.662; <cos> - I1/I0 = +1.73 sigma
+    kappa =   0.50 seed 12: KS p = 0.288; <cos> - I1/I0 = +1.46 sigma
+    kappa =   1.00 seed 11: KS p = 0.265; <cos> - I1/I0 = +0.16 sigma
+    kappa =   1.00 seed 12: KS p = 0.150; <cos> - I1/I0 = +1.56 sigma
+    kappa =   2.00 seed 11: KS p = 0.416; <cos> - I1/I0 = -0.35 sigma
+    kappa =   2.00 seed 12: KS p = 0.980; <cos> - I1/I0 = +0.21 sigma
+    kappa =   5.00 seed 11: KS p = 0.276; <cos> - I1/I0 = -0.60 sigma
+    kappa =   5.00 seed 12: KS p = 0.599; <cos> - I1/I0 = -1.27 sigma
+    kappa =  10.00 seed 11: KS p = 0.656; <cos> - I1/I0 = -0.40 sigma
+    kappa =  10.00 seed 12: KS p = 0.678; <cos> - I1/I0 = -0.08 sigma
+    kappa =  40.00 seed 11: KS p = 0.650; <cos> - I1/I0 = +0.31 sigma
+    kappa =  40.00 seed 12: KS p = 0.459; <cos> - I1/I0 = -0.52 sigma
+  ok    sampler: 16 KS p-values 0.150..0.980; max |z(<cos>)| = 1.73
+
+  ok    K2 void L=2: every loop is a closed oriented path (boundary of boundary = 0)
+  ok    K2 void L=2: gauge invariance, max |change in cos theta_loop| = 3.6e-15
+  ok    K2 void L=2: local staple dS equals global recompute (200 links, max diff 5.7e-13)
+  ok    K2 z4 L=4: every loop is a closed oriented path (boundary of boundary = 0)
+  ok    K2 z4 L=4: gauge invariance, max |change in cos theta_loop| = 3.5e-15
+  ok    K2 z4 L=4: local staple dS equals global recompute (200 links, max diff 2.8e-13)
+
+  ok    K3 void L=2: beta=0.1 hot (seed 716838), <cos> = 0.049794 +- 0.000104 vs I1/I0 = 0.049938 (-0.29%, -1.4 sigma)
+  ok    K3 void L=2: beta=20 cold (seed 915839), E = 0.014361 +- 0.000005 vs rank/(2 beta N_loops) = 0.014258 (+0.72%)
+        beta = 20: rhombi E_s = 0.014655 +- 0.000007; temporal squares E_t = 0.014141 +- 0.000006; E_t/E_s = 0.9649
+  ok    K3 z4 L=4: beta=0.1 hot (seed 332676), <cos> = 0.049866 +- 0.000181 vs I1/I0 = 0.049938 (-0.14%, -0.4 sigma)
+  ok    K3 z4 L=4: beta=20 cold (seed 531677), E = 0.012527 +- 0.000007 vs rank/(2 beta N_loops) = 0.012451 (+0.61%)
+
+K2/K3/sampler FAILS: 0

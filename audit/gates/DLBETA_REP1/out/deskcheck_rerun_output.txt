@@ -1,0 +1,109 @@
+================================================================================
+PART A — the spatial void complex
+================================================================================
+
+L = 2: N = 32 primitive cells; V = 96, E = 256, rhombi = 192, atoms = 32
+  ok  C1 L=2: per primitive cell V = 3, E = 8, rhombi = 6, 3-cells = 1
+  ok  C1 L=2: degree oct 8, tet 4
+  ok  C1 L=2: every link oct-tet (bipartite)
+  ok  C2 L=2: every rhombus edge is an existing window link
+  ok  C2 L=2: every rhombus planar
+  ok  C2 L=2: rhombus area = a^2/(4 sqrt2)
+  ok  C2 L=2: rhombus normal along its FCC bond (<110>)
+  ok  C3 L=2: no duplicate rhombi
+  ok  C3 L=2: the 4-cycles of the void graph are exactly the rhombi (192)
+  ok  C3 L=2: every window link lies in exactly 3 rhombi
+  ok  C4 L=2: rank d2 = 158 = E - V - 2 = 5N - 2 (rhombi span all contractible cycles)
+  ok  C4 L=2: Euler characteristic V - E + F - C3 = 0 (a cellulation of T^3)
+
+L = 3: N = 108 primitive cells; V = 324, E = 864, rhombi = 648, atoms = 108
+  ok  C1 L=3: per primitive cell V = 3, E = 8, rhombi = 6, 3-cells = 1
+  ok  C1 L=3: degree oct 8, tet 4
+  ok  C1 L=3: every link oct-tet (bipartite)
+  ok  C2 L=3: every rhombus edge is an existing window link
+  ok  C2 L=3: every rhombus planar
+  ok  C2 L=3: rhombus area = a^2/(4 sqrt2)
+  ok  C2 L=3: rhombus normal along its FCC bond (<110>)
+  ok  C3 L=3: no duplicate rhombi
+  ok  C3 L=3: the 4-cycles of the void graph are exactly the rhombi (648)
+  ok  C3 L=3: every window link lies in exactly 3 rhombi
+  ok  C4 L=3: rank d2 = 538 = E - V - 2 = 5N - 2 (rhombi span all contractible cycles)
+  ok  C4 L=3: Euler characteristic V - E + F - C3 = 0 (a cellulation of T^3)
+
+================================================================================
+PART B — product with time
+================================================================================
+
+L = 2, L_t = 6: N_v = 576, N_l = 2112, N_p = 2688
+  ok  C5: per cell per slice N_v = 3, N_l = 11, N_p = 14
+  ok  C5: every spatial link in 5 loops (3 rhombi + 2 temporal squares)
+  ok  C5: temporal links in 8 (oct) or 4 (tet) squares
+  ok  C5: rank d2 = 1533 = N_l - N_v - 3 = N_l - (N_v - 1) - b1(T^4)
+      mean loops per link = 4 N_p / N_l = 5.090909 (= 56/11; Z4: 6; D4: 8)
+      weak-coupling target E -> rank/(2 beta N_p); infinite volume 8/(28 beta) = 2/(7 beta) = 0.285714/beta
+  ok  C7: 11 link classes per cell per slice, equally populated
+  ok  C7: at zero crystal momentum the loop map has rank 5 = 5 per cell
+      => of the 8 action-carrying link modes per cell (rank d2 per cell), 5 cost action already at
+         k = 0: optical branches, gapped at the lattice scale at tree level. The remaining 3 are
+         acoustic (constant A_mu mod gauge: 4 holonomies + 2 sublattice gauge = 6 = 11 - 5 at k = 0)
+         and form the photon. This is the tree-level content of CN-DL-05 (DL left it CONJECTURE).
+
+================================================================================
+PART C — classical continuum normalisation 1/e^2 = k beta (all smallest loops at one beta)
+================================================================================
+A constant F gives each loop theta_p = sum_{mu<nu} F_{mu nu} sigma_p^{mu nu}. (beta/2) sum_p theta_p^2
+per unit 4-volume must equal (1/2e^2) sum_{mu<nu} F_{mu nu}^2. c_E ~ a_t and c_B ~ 1/a_t, so
+light speed 1 fixes a_t = sqrt(c_B/c_E) and then k = sqrt(c_E c_B), both at a_t = 1.
+
+  Z4 (method validation):
+  ok  C6 Z4: flux quadratic form is diagonal (max off-diagonal 0.0e+00)
+  ok  C6 Z4: spatially isotropic (3 equal c_E, 3 equal c_B)
+      Z4: c_E(a_t=1) = 1.0000000000, c_B(a_t=1) = 1.0000000000  ->  a_t = 1.0000000000, k = 1.0000000000
+  ok  C6 Z4: k = 1, as expected
+
+  D4 (method validation): triangle translation classes per site = 32
+  ok  C6 D4: 32 triangles per site (CRIT2 card §3)
+  ok  C6 D4: flux quadratic form is diagonal (max off-diagonal 0.0e+00)
+  ok  C6 D4: spatially isotropic (3 equal c_E, 3 equal c_B)
+      D4: c_E(a_t=1) = 2.0000000000, c_B(a_t=1) = 2.0000000000  ->  a_t = 1.0000000000, k = 2.0000000000
+  ok  C6 D4: k = 2, as expected
+
+  void network x time (beta_t = beta_s):
+  ok  C6 void: flux quadratic form is diagonal (max off-diagonal 0.0e+00)
+  ok  C6 void: spatially isotropic (3 equal c_E, 3 equal c_B)
+      void: c_E(a_t=1) = 2.0000000000, c_B(a_t=1) = 0.2500000000  ->  a_t = 0.3535533906, k = 0.7071067812
+  ok  C6 void: a_t = a/(2 sqrt2) = 0.3535533906 exactly
+  ok  C6 void: k = 1/sqrt2 = 0.7071067812 exactly, i.e. 1/e^2 = beta/sqrt2
+      a/(2 sqrt2) is numerically the radius of the touching FCC spheres. No physical weight is
+      attached to that; it is recorded so that nobody later 'discovers' it.
+
+================================================================================
+PART D — reference simulator checks (beta = 0.1 and beta = 20 ONLY)
+================================================================================
+
+void L=2 Lt=6: N_l = 2112, N_p = 2688, N_v = 576
+  ok  D1 void L=2 Lt=6: gauge invariance, max |change in cos theta_p| = 4.1e-15
+  ok  D2 void L=2 Lt=6: local staple dS equals global recompute (max diff 7.4e-13)
+  ok  D3 void L=2 Lt=6: beta=0.1 hot, <cos> = 0.049804 +- 0.000133 vs I1/I0 = 0.049938 (-0.27%, -1.0 sigma)
+  ok  D4 void L=2 Lt=6: beta=20 cold, E = 0.014369 +- 0.000005 vs rank/(2 beta N_p) = 0.014258 (+0.78%)
+      beta = 20: rhombi E_s = 0.014668 +- 0.000007; temporal squares E_t = 0.014145 +- 0.000006; E_t/E_s = 0.9643
+
+Z4 L=4: N_l = 1024, N_p = 1536, N_v = 256
+  ok  D1 Z4 L=4: gauge invariance, max |change in cos theta_p| = 4.4e-15
+  ok  D2 Z4 L=4: local staple dS equals global recompute (max diff 1.7e-13)
+  ok  D3 Z4 L=4: beta=0.1 hot, <cos> = 0.049974 +- 0.000144 vs I1/I0 = 0.049938 (+0.07%, +0.3 sigma)
+  ok  D4 Z4 L=4: beta=20 cold, E = 0.012531 +- 0.000005 vs rank/(2 beta N_p) = 0.012451 (+0.64%)
+
+================================================================================
+PART E — timing at beta = 20 (sweep cost is beta-independent to within the sampler's branch)
+================================================================================
+  void L=2 Lt=6    N_l =    2112  N_p =    2688  build    0.0 s      0.85 ms/sweep
+  void L=4 Lt=12   N_l =   33792  N_p =   43008  build    0.3 s     16.15 ms/sweep
+  void L=6 Lt=18   N_l =  171072  N_p =  217728  build    1.6 s     75.63 ms/sweep
+  void L=8 Lt=24   N_l =  540672  N_p =  688128  build    6.7 s    289.05 ms/sweep
+  Z4 L=8           N_l =   16384  N_p =   24576  build    0.1 s      9.91 ms/sweep
+  Z4 L=12          N_l =   82944  N_p =  124416  build    0.8 s     47.50 ms/sweep
+
+================================================================================
+ALL 49 ASSERTIONS PASSED
+================================================================================

@@ -1,0 +1,8 @@
+MATCH audit/gates/CRIT2/gate_CRIT2_RESULT.md
+MATCH audit/gates/DLBETA/dlb_deskcheck.py
+MATCH audit/gates/DLBETA/dlb_deskcheck_output.txt
+MATCH audit/gates/PREREG_20261112_DLBETA.sha256
+MATCH audit/gates/gate_CRIT2_prompt.md
+MATCH audit/gates/gate_DLBETA_REP1_prompt.md
+MATCH audit/gates/gate_DLBETA_prompt.md
+MATCH audit/gates/gate_LATT_prompt.md

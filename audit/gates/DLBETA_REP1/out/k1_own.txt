@@ -1,0 +1,60 @@
+================================================================================================
+Gate DL-BETA REP1 -- K1, the run's own construction (dlbr_sim.py); dlb_deskcheck.py NOT opened
+================================================================================================
+PART A -- spatial void complex
+L = 2: N = 32 primitive cells (atoms); V = 96, E = 256, rhombi = 192
+  ok    A2: per primitive cell V = 3, E = 8, rhombi = 6
+  ok    A2: degree oct {np.int64(8)}, tet {np.int64(4)}
+  ok    A2: every link oct -> tet (bipartite)
+  ok    A2: every rhombus is a closed O-T-O-T 4-cycle of existing links (unwrapped steps = link vectors)
+  ok    A2: every rhombus planar (max |triple product| 0.0e+00)
+  ok    A2: rhombus area = a^2/(4 sqrt2) = 0.1767766953 (found 0.1767766953..0.1767766953)
+  ok    A2: rhombus normal along its FCC bond <110>
+  ok    A2: no duplicate rhombi
+  ok    A2: no 3-cycles
+  ok    A2: the 4-cycles of the void graph are exactly the rhombi (192 4-cycles, 192 rhombi)
+  ok    A2: every link lies in exactly 3 rhombi
+  ok    A2: rank d2 = 158 (SVD; mod-p 158) = 5N - 2 = 158 = E - V - 2   [sv gap 1.082e+00 | 1.6e-15]
+  ok    A2: 3-cells = 32 = N rhombic dodecahedra (12 rhombi each, outward-oriented boundary closes; each rhombus on exactly 2 cells)
+  ok    A2: Euler characteristic V - E + F - C3 = 0
+
+L = 3: N = 108 primitive cells (atoms); V = 324, E = 864, rhombi = 648
+  ok    A3: per primitive cell V = 3, E = 8, rhombi = 6
+  ok    A3: degree oct {np.int64(8)}, tet {np.int64(4)}
+  ok    A3: every link oct -> tet (bipartite)
+  ok    A3: every rhombus is a closed O-T-O-T 4-cycle of existing links (unwrapped steps = link vectors)
+  ok    A3: every rhombus planar (max |triple product| 0.0e+00)
+  ok    A3: rhombus area = a^2/(4 sqrt2) = 0.1767766953 (found 0.1767766953..0.1767766953)
+  ok    A3: rhombus normal along its FCC bond <110>
+  ok    A3: no duplicate rhombi
+  ok    A3: no 3-cycles
+  ok    A3: the 4-cycles of the void graph are exactly the rhombi (648 4-cycles, 648 rhombi)
+  ok    A3: every link lies in exactly 3 rhombi
+  ok    A3: rank d2 = 538 (SVD; mod-p 538) = 5N - 2 = 538 = E - V - 2   [sv gap 7.321e-01 | 2.9e-15]
+  ok    A3: 3-cells = 108 = N rhombic dodecahedra (12 rhombi each, outward-oriented boundary closes; each rhombus on exactly 2 cells)
+  ok    A3: Euler characteristic V - E + F - C3 = 0
+
+PART B -- void network x time
+L = 2, L_t = 6: N_v = 576, N_l = 2112, N_loops = 2688
+  ok    B: per cell per slice N_v = 3, N_l = 11, N_loops = 14
+  ok    B: every spatial link in 5 loops (3 rhombi + 2 temporal squares)
+  ok    B: temporal links in {np.int64(8)} (oct) / {np.int64(4)} (tet) squares
+  ok    B: rank d2 = 1533 (SVD; mod-p 1533) = N_l - N_v - 3 = 1533   [sv gap 1.000e+00 | 5.6e-15]
+      mean loops per link = 4 N_loops / N_l = 5.090909 (56/11 = 5.090909)
+      weak-coupling target E -> rank/(2 beta N_loops) = 0.014258 at beta = 20
+  ok    B: the 4-cycles of the space-time graph are exactly the rhombi + temporal squares (2688 cycles, 2688 loops; 3-cycles 0)
+  ok    B: 11 link classes per cell per slice, equally populated ([192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192])
+  ok    B: zero-momentum loop map (14 loop classes x 11 link classes) has rank 5 = 5 per cell (rows class-consistent: True)
+
+PART C -- constant-F normalisation (beta/2) sum theta^2 per 4-volume = (1/2e^2) sum F^2
+  ok    C Z4: flux quadratic form diagonal (max off-diagonal 0.0e+00)
+  ok    C Z4: spatially isotropic (3 equal c_E, 3 equal c_B)
+      Z4: c_E(a_t=1) = 1.0000000000, c_B(a_t=1) = 1.0000000000  ->  a_t = 1.0000000000, k = 1.0000000000
+  ok    C Z4: k = 1, a_t = 1 (method validation)
+  ok    C void x time: flux quadratic form diagonal (max off-diagonal 0.0e+00)
+  ok    C void x time: spatially isotropic (3 equal c_E, 3 equal c_B)
+      void x time: c_E(a_t=1) = 2.0000000000, c_B(a_t=1) = 0.2500000000  ->  a_t = 0.3535533906, k = 0.7071067812
+  ok    C void: a_t = a/(2 sqrt2) = 0.3535533906
+  ok    C void: k = 1/sqrt2 = 0.7071067812, i.e. 1/e^2 = beta/sqrt2
+
+K1 FAILS: 0
