@@ -1,0 +1,30 @@
+# 1. The geometric number a 'beta from geometry' claim must produce
+r_oct                                                    0.2071067812
+r_tet                                                    0.1123724357
+alpha_0 = r_oct r_tet / pi                               0.007408055728
+1/alpha_0                                                134.9881854
+xi/a = 1/sqrt(8 r_oct r_tet)                             2.317543795
+beta_geom = 1/(4 pi alpha_0)                             10.74201848
+           = 1/(4 r_oct r_tet)                           10.74201848
+           = 2 xi^2 / a^2                                10.74201848
+difference of the three forms                            0.0
+for comparison 1/(4 pi alpha_CODATA)                     10.90497833
+
+# 2. Against critical couplings already on the ledger (orientation; void network = DL-BETA)
+beta_geom / beta_c [hypercubic Z4 (Wilson, standard)]    10.62409107
+beta_geom / beta_c [D4, CRIT2 card convention]           17.46669672
+beta_geom / beta_c [D4, CRIT2 Katz-Nogradi convention]   8.73334836
+A beta of ~10.7 sits an order of magnitude inside the Coulomb phase on every lattice known so far;
+the question of this gate is whether anything makes beta equal to that number, not whether it suffices.
+
+# 3. Route R2 kill test, symbolic: Maxwell coefficient induced by a dipole-coupled medium
+P(E) = E*chi + P0    U(E) = -int P dE = -E**2*chi/2 - E*P0
+coefficient of E^2 in U: -chi/2   (this is the induced Maxwell/epsilon term)
+with P identically zero (STIFF, SC-STIFF-5: P0 = 0 and no polarisable charge => chi = 0): 0
+=> a neutral medium with no dipole response induces no Maxwell term; beta cannot come from R2
+   unless the run exhibits a nonzero chi from the pinned sources.
+
+# 4. Route R3 reminder (Josephson-junction array analogue; no computation, a statement)
+link coupling E_J = phase stiffness;  plaquette (loop) coupling = Phi_0^2/(2 L_loop), set by the loop
+inductance L_loop, an independent scale. Identifying beta with the phase stiffness needs a derivation
+that the added field inherits J; the analogue says it need not.

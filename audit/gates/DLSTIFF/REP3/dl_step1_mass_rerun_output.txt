@@ -1,0 +1,13 @@
+CHARGED condensate  |(d-iqA)phi|^2 :
+   L = A**2*phi0**2*q**2 - 2*A*dtheta*phi0**2*q + dtheta**2*phi0**2
+   photon mass^2 (unitary gauge) = (1/2) d^2L/dA^2 = phi0**2*q**2
+   -> NONZERO for q!=0, phi0!=0.  This is the London/Meissner mass. (Gate LINK's fate.)
+
+NEUTRAL dipole (double layer), q=0, couples via P.E ~ derivative of A :
+   L_dip = -A*P*k
+   photon mass^2 = (1/2) d^2 L_dip/dA^2 = 0
+   -> ZERO.  A linear/derivative dipole coupling gives NO A^2 term: no mass.
+
+NEUTRAL polarisation (1/2)chi E^2 :
+   coeff of A^2 (mass^2) = 0  (k->0: NO mass)
+   coeff structure ~ chi*k**2/2  (proportional to k^2 -> renormalises SPEED c, not mass)

@@ -1,0 +1,16 @@
+xi/a = 2.3175437949   grid: L = 40.0, N = 4001, h = 0.0200   window: V0 = 1.0, w = 0.5
+
+(a) symmetric window
+    Newton iterations 5, final residual 2.74e-12
+    min density in throat n(0) = 0.7730569975   (a symmetric DEPLETION: monopole-type)
+    evenness residual max|n(z) - n(-z)| = 2.22e-16
+    number dipole p = int z (n - 1) dz   = -1.421e-16
+    depletion monopole int (n - 1) dz    = -0.9544406131
+
+(b) odd number bias b * s(z) added (s localised, odd)
+    b = 1e-04:  p = -2.386102e-05   p/b = -0.23861015   (Newton 5 it, residual 2.9e-12)
+    b = 2e-04:  p = -4.772203e-05   p/b = -0.23861015   (Newton 5 it, residual 2.8e-12)
+    b = 4e-04:  p = -9.544406e-05   p/b = -0.23861015   (Newton 5 it, residual 2.9e-12)
+    b = 8e-04:  p = -1.908881e-04   p/b = -0.23861015   (Newton 5 it, residual 2.8e-12)
+    p/b constant -> linear response of NUMBER to a NUMBER bias; vanishes with the bias.
+    In option B nothing couples this response to a_e, so it is not a dielectric chi for the added field.
