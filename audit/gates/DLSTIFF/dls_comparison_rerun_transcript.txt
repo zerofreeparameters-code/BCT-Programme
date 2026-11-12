@@ -1,0 +1,18 @@
+# Re-run of every committed DL-STIFF script at main a2d47c9 (12 Nov 2026), python3 -I from /tmp
+Python 3.13.18 sympy 1.14.0 mpmath 1.3.0 numpy 2.5.3
+dls_q1_factorisation.py -> dls_q1_factorisation_output.txt : IDENTICAL
+dls_q1_r2_r4.py -> dls_q1_r2_r4_output.txt : IDENTICAL
+dls_q1_r3_r5_r6.py -> dls_q1_r3_r5_r6_output.txt : IDENTICAL
+dls_q3_q5.py -> dls_q3_q5_output.txt : IDENTICAL
+e1_33_check.py -> e1_33_check_output.txt : IDENTICAL
+REP2/dls_rep2_routes.py -> REP2/dls_rep2_routes_output.txt : IDENTICAL
+REP3/rep3_routes.py -> REP3/rep3_routes_output.txt : IDENTICAL
+REP3/rep3_r2_gp_throat.py -> REP3/rep3_r2_gp_throat_output.txt : IDENTICAL
+REP2/SHA256SUMS:
+gate_DLSTIFF_RESULT.md: OK
+REP2_prompt_asrun.md: OK
+dls_rep2_routes.py: OK
+dls_rep2_routes_output.txt: OK
+dls_deskcheck_output.txt: OK
+dl_step0_rerun_output.txt: OK
+dl_step1_rerun_output.txt: OK

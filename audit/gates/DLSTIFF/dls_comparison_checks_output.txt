@@ -1,0 +1,33 @@
+1. Numbers all three runs report (must agree)
+  beta_geom = 1/(4 r_oct r_tet) = 1/(4 pi alpha_0)                 10.74201848
+  App J g = alpha_0 4 pi R tanh^2(r_oct/xi), R = 1/2               0.0003697506484
+  alpha_0 / g                                                      20.03527447
+  R5 ln(Lambda/m), card coefficient 1/(12 pi^2)                    1272.233675
+  R5 ln(Lambda/m), Dirac 1/(6 pi^2)                                636.1168374
+  R5 ln(Lambda/m), complex scalar 1/(24 pi^2)                      2544.467349
+  ICE E_J/E_C = 2 nbar^2 xi^2/a^2 at nbar = 1, a = d_nn            10.74201848
+    ... at nbar = 2                                                42.96807393
+
+2. Card R5 coefficient (REP2's note): Dirac one-loop in two log conventions
+  (1/(6 pi^2)) ln(Lambda/m) - (1/(12 pi^2)) ln(Lambda^2/m^2) = 0
+
+3. Duality: REP2 '2-form coefficient 1/(8 pi^2 K)' vs REP3 'beta_dual = 1/(4 pi^2 K)'
+  c = beta/2 with beta = 1/(4 pi^2 K):  c = 1/(8*pi**2*K)  -> identical action
+
+4. REP2 CN-DLS-08 (units): 2 xi^2 / a^2 for each length a = 1 could mean
+  a = d_nn (sphere diameter; MINIMAL / App J R = a/2)              10.74201848
+  a = Gate DL cubic edge                                           5.371009241
+  a = oct-tet link length                                          28.64538262
+  a = per-void cell size                                           28.15205249
+  REP2: classical coupling sqrt(E_J/E_C) at nbar = 1, a = d_nn     3.277501866
+
+5. Original CN-DLS-03/04: beta = c/(r_oct r_tet); minimum c for beta > beta_c
+  c_min (hypercubic 1.0111)                                        0.02353142479
+  c_min (D4 card 0.6150)                                           0.01431295247
+  c_min (D4 Katz-Nogradi 1.2300)                                   0.02862590494
+  candidate c                                                      0.25
+  Original CN-DLS-10: 1/alpha a derived beta would predict (1/alpha_0) 134.9881854
+
+6. MINIMAL §1.4 amplitude gap (REP2 CN-DLS-10; REP3 saw it, did not record it)
+  m^2 = Psi0**2/xi**2   -> m = Psi0/xi  ; MINIMAL §1.4 prints 2/xi, which needs Psi0 = [2]
+    2/xi (as printed in §1.4)                                      0.8629826131

@@ -4,7 +4,9 @@ Last updated 12 November 2026, afternoon (full reconciliation against every resu
 `audit/gates/` at `36edda3`; then five orphaned results — ICE, KL, MIX, STIFF, DL — plus the SINGLET
 ledger entry, the RATIO-OBS card and the 8 Nov VOID desk check recovered from the Mac and pushed at
 `bf04815`); evening: Gate DL-STIFF closed (`d67f5ca`) with a post-gate note (`35d5898`), and Gate
-DL-BETA pre-registered (`bf7d97a`), all verified from a fresh fetch of `main`. **Update this file at the close of every session.** It exists because sessions have independently invented their own gate order, and one
+DL-BETA pre-registered (`bf7d97a`), all verified from a fresh fetch of `main`; later evening: Gate
+DL-STIFF replicated blind twice (REP2 `4a1a83d`, REP3 `a2d47c9`) and the three runs compared
+(`gates/DLSTIFF/gate_DLSTIFF_COMPARISON.md`). **Update this file at the close of every session.** It exists because sessions have independently invented their own gate order, and one
 spent a turn treating a committed prompt as a mystery file. The previous version (14 September
 2026, Gate RATIO closed) is in git history; its queue is reconciled in §"Queue reconciliation"
 below.
@@ -31,8 +33,8 @@ PSI2, ICE, STIFF, PROMOTE, PV, QED, QED-DERIV; ledger); QM is inherited, not der
 SINGLET). The numeric layer scores as fits (PRED, PRED2, MIX, FWD/STAT; FORK and FWD7 run but not
 in the tree). Gate DL (15 Sep) is the one photon construction that cleared the Higgs wall — a
 conditional SC-DL-3 at CONJECTURE with confinement (SC-DL-2) as the residual risk; it is a new
-construction, not a repair of the written theory. DL-STIFF (12 Nov, CONJECTURE) found that nothing
-fixes that construction's coupling β, so it is at least a three-input theory whose geometric content
+construction, not a repair of the written theory. DL-STIFF (12 Nov; replicated blind twice the same
+evening) found that nothing fixes that construction's coupling β, so it is at least a three-input theory whose geometric content
 is the lattice itself; DL-BETA (pre-registered) measures where its Coulomb phase begins. What survives is the void geometry (r_oct, r_tet, α₀ as a number, ξ/a = 2.3175,
 the percolating network) plus one live CONJECTURE for the sphere interiors (BUBBLE_BELLS), which
 BB-ALPHA is queued to anchor. This paragraph is a reading, not a result; any gate may move it.
@@ -79,7 +81,7 @@ BB-ALPHA is queued to anchor. This paragraph is a reading, not a result; any gat
 | BUBBLE_BELLS | 10 Nov | SC-BB-2: construction holds, with repairs (α_∞ = 1.64 ± 0.03, c_eff = 0.78 c_s, κ_ℓ ladder). Same-session, non-blind, **CONJECTURE cap**. | `gates/BUBBLE_BELLS/` |
 | BULK | 11 Nov | SC-BULK-1, all four variants: no K_BCT is a G-free output of the equation of state; every chain ends in ρ_Planck, m_P or a = ℓ_P. CN-BULK-01…07. | `gates/BULK/` |
 | SONO | 12 Nov | SC-SONO-1: Letter 110's #154/#155 reproduce arithmetically, but both comparison values are the letter's own (200 nm = water's absorption edge; no SBSL peak at 350–370 nm; 380 nm not a biophoton band). Net −6.0 / −9.5 bits under PRED2. CN-SONO-01…13. | `gates/SONO/` |
-| DL-STIFF | 12 Nov | Hypothetical-construction gate (DL option B). **SC-DLS-2 (free input)**: R1–R5 and four routes found in the open R6 slot all closed by their pre-registered kill tests; the plaquette coupling β of the added link field is a parameter. Load-bearing: CN-DLS-01 (a medium neutral under a_e contributes nothing to the effective action for a, so β_eff = β_bare) and CN-DLS-02 (the only coupling-free way for the medium to fix β is q ≠ 0, which is the Meissner mass). DL theory ≥ 3 inputs (Q5). **CONJECTURE**: cap set by card §8 and the as-run prompt; the binding requirement is the blind replication (below). Post-gate note PGN-01…07: App E.1 §3.3 *assumes* J = 1/(4πα₀) ("Taking …"), so R6d closes as an assertion. | `gates/DLSTIFF/` (result `d67f5ca`, post-gate note `35d5898`) |
+| DL-STIFF | 12 Nov (+ blind replications REP2, REP3, 12 Nov) | Hypothetical-construction gate (DL option B). **SC-DLS-2 (free input)**: R1–R5 and four routes found in the open R6 slot all closed by their pre-registered kill tests; the plaquette coupling β of the added link field is a parameter. Load-bearing: CN-DLS-01 (a medium neutral under a_e contributes nothing to the effective action for a, so β_eff = β_bare) and CN-DLS-02 (the only coupling-free way for the medium to fix β is q ≠ 0, which is the Meissner mass). DL theory: 3 free inputs (4 in the card's Q5 form). Post-gate note PGN-01…07: App E.1 §3.3 *assumes* J = 1/(4πα₀) ("Taking …"), so R6d closes as an assertion. **Replicated**: REP2 and REP3 (both Opus 5.5, blind, `9993a23` fetched alone) return SC-DLS-2 with the same load-bearing notices and identical shared numbers; eight distinct R6 routes across the three runs, all closed; every script of all three runs reproduces byte for byte. **Same-session cap lifted** (comparison record §9; REP2 and REP3 count as one confirmation for independence, §8). Quote the candidate unit-free as β_geom = 1/(4 r_oct r_tet) = 10.74201848; "2ξ²/a²" gives that only with a = sphere diameter (REP2 CN-DLS-08). | `gates/DLSTIFF/` (result `d67f5ca`, post-gate note `35d5898`; `REP2/` `4a1a83d`; `REP3/` `a2d47c9`; `gate_DLSTIFF_COMPARISON.md`) |
 | LAM, LAMBDA | — | run elsewhere; cross-audited from the PSI2 thread. | `gates/crossaudits/` |
 
 Not in this table because it is not a gate result: `gates/PT/` holds only the PT card and its
@@ -128,11 +130,12 @@ Verdicts here are quoted from the Project docs or the Cold Ledger, not from this
 
 - **Gate DL-BETA** — run requested 12 Nov; fresh thread, run prompt pinned to `bf7d97a` (card
   `eae34f3b…`, PREREG `941aaf10…`). Multi-hour (≈ 3.3 core-hours). When the patch lands: apply it the
-  same day, verify from a fresh clone, move the row to Closed.
-- **DL-STIFF blind replication** — ready, independent of DL-BETA. Prompt drafted 12 Nov in the
-  DL-STIFF thread. It fetches `9993a23` alone (`git fetch --depth 1`), so the first run's result
-  cannot be seen, and delivers under `gates/DLSTIFF/REP2/`. Fresh thread, past chats and memory off.
-  The DL-STIFF thread is disqualified as replicator (post-gate reads, listed in the note).
+  same day, verify from a fresh clone, move the row to Closed. When its β_c is read against the
+  DL-STIFF candidate, use β_geom = 1/(4 r_oct r_tet) = 10.74201848 as a value of 1/e² and convert
+  through DL-BETA's own β ↔ 1/e² matching; do not compare 10.742 with β_c directly
+  (`gates/DLSTIFF/gate_DLSTIFF_COMPARISON.md` §10).
+- **DL-STIFF blind replication** — done 12 Nov: REP2 (`4a1a83d`) and REP3 (`a2d47c9`), compared in
+  `gates/DLSTIFF/gate_DLSTIFF_COMPARISON.md`. Row moved into the Closed table entry above.
 - **Correction, recorded here because the source is hash-pinned:** `audit/scoping/DL_scoping_2026-11-12.md`
   §4 credits the App E.1 §3.3 arithmetic finding to Gate QED (CN-QED-04). The section was audited by
   **Gate LINK** (CN-LINK-03/08/09). The scoping note is pinned by both DL-STIFF and DL-BETA: do not
