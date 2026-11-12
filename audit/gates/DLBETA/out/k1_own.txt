@@ -1,0 +1,113 @@
+Gate DL-BETA -- K1, run thread's own complex (dlb_complex.py), before reading dlb_deskcheck.py
+numpy 2.5.3, numba 0.68.1, python 3.13.18
+================================================================================================
+PART 1 -- spatial void complex
+================================================================================================
+
+L = 2: N = 32 primitive cells (atoms); V = 96, E = 256, rhombi F = 192, 3-cells C3 = 32
+  ok   L=2: per cell V = 3, E = 8, F = 6, C3 = 1
+  ok   L=2: degree oct 8, tet 4 (every node)
+  ok   L=2: every link oct -> tet (bipartite)
+  ok   L=2: no multiple links
+  ok   L=2: no 3-cycles  [0]
+  ok   L=2: no duplicate rhombi
+  ok   L=2: the 4-cycles of the void graph are exactly the rhombi  [4-cycles 192, rhombi 192]
+  ok   L=2: every link in exactly 3 rhombi
+  ok   L=2: every rhombus planar  [max |triple product| 0.0e+00]
+  ok   L=2: rhombus area = a^2/(4 sqrt2) = 0.1767766953
+  ok   L=2: rhombus normal along its FCC bond <110>
+  ok   L=2: rhombus sides = sqrt3/4 a (window links)
+  ok   L=2: d1 d2 = 0
+  ok   L=2: every rhombus bounds exactly 2 cells, each cell has 12 faces
+  ok   L=2: d2 d3 = 0 (closed cells, consistent orientation)
+      rank d1: mod-p 95, SVD 95 (smallest kept s.v. 1.236e+00, largest dropped 4.8e-16)
+      rank d2: mod-p 158, SVD 158 (smallest kept s.v. 1.082e+00, largest dropped 1.7e-15)
+      rank d3: mod-p 31, SVD 31 (smallest kept s.v. 2.828e+00, largest dropped 7.3e-16)
+  ok   L=2: exact and SVD ranks agree
+  ok   L=2: rank d2 = 5N - 2 = 158  [158]
+  ok   L=2: Betti numbers (1,3,3,1) = those of T^3  [(1, 3, 3, 1)]
+  ok   L=2: Euler characteristic V - E + F - C3 = 0  [0]
+
+L = 3: N = 108 primitive cells (atoms); V = 324, E = 864, rhombi F = 648, 3-cells C3 = 108
+  ok   L=3: per cell V = 3, E = 8, F = 6, C3 = 1
+  ok   L=3: degree oct 8, tet 4 (every node)
+  ok   L=3: every link oct -> tet (bipartite)
+  ok   L=3: no multiple links
+  ok   L=3: no 3-cycles  [0]
+  ok   L=3: no duplicate rhombi
+  ok   L=3: the 4-cycles of the void graph are exactly the rhombi  [4-cycles 648, rhombi 648]
+  ok   L=3: every link in exactly 3 rhombi
+  ok   L=3: every rhombus planar  [max |triple product| 0.0e+00]
+  ok   L=3: rhombus area = a^2/(4 sqrt2) = 0.1767766953
+  ok   L=3: rhombus normal along its FCC bond <110>
+  ok   L=3: rhombus sides = sqrt3/4 a (window links)
+  ok   L=3: d1 d2 = 0
+  ok   L=3: every rhombus bounds exactly 2 cells, each cell has 12 faces
+  ok   L=3: d2 d3 = 0 (closed cells, consistent orientation)
+      rank d1: mod-p 323, SVD 323 (smallest kept s.v. 8.417e-01, largest dropped 7.5e-16)
+      rank d2: mod-p 538, SVD 538 (smallest kept s.v. 7.321e-01, largest dropped 3.1e-15)
+      rank d3: mod-p 107, SVD 107 (smallest kept s.v. 2.000e+00, largest dropped 9.5e-16)
+  ok   L=3: exact and SVD ranks agree
+  ok   L=3: rank d2 = 5N - 2 = 538  [538]
+  ok   L=3: Betti numbers (1,3,3,1) = those of T^3  [(1, 3, 3, 1)]
+  ok   L=3: Euler characteristic V - E + F - C3 = 0  [0]
+
+================================================================================================
+PART 2 -- void network x time, L = 2, L_t = 6
+================================================================================================
+N = 32, L_t = 6: N_v = 576, N_l = 2112, N_loops = 2688
+  ok   per cell per slice N_v = 3, N_l = 11, N_loops = 14
+  ok   every spatial link in 5 loops (3 rhombi + 2 temporal squares)
+  ok   temporal links in 8 (oct) or 4 (tet) squares
+  ok   spatial link: exactly 3 rhombi and 2 squares
+  ok   mean loops per link = 56/11  [5.090909]
+  ok   no loop repeats a link
+  ok   space x time graph: no multiple links, no 3-cycles  [multi 0, tri 0]
+  ok   space x time: the 4-cycles are exactly the rhombi and the temporal squares  [4-cycles 2688, loops 2688]
+  ok   d1 d2 = 0 (every loop closed and consistently oriented)
+      rank d2 (space x time): mod-p 1533, SVD 1533 (smallest kept s.v. 1.000e+00, largest dropped 5.6e-15)
+  ok   exact and SVD ranks agree
+  ok   rank d2 = N_l - N_v - 3 = 1533  [1533]
+  ok   11 link classes per cell per slice, equally populated  [[192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192]]
+      rank d2 at zero crystal momentum (11 link classes): mod-p 5, SVD 5 (smallest kept s.v. 2.771e+01, largest dropped 1.2e-13)
+  ok   rank at zero crystal momentum = 5
+      rank d2 at crystal momentum (k M/2pi, w Lt/2pi) = [1, 0, 0, 1]: 8   (singular values [4.693e+01 4.157e+01 3.877e+01 3.877e+01 3.098e+01 2.203e+01 2.042e+01
+ 2.042e+01 3.345e-14 1.861e-14 1.216e-14])
+  ok   rank 8 = 11 - 3 gauge at k = [1, 0, 0, 1] (extra)
+      rank d2 at crystal momentum (k M/2pi, w Lt/2pi) = [1, 2, 3, 1]: 8   (singular values [4.482e+01 4.157e+01 3.666e+01 3.666e+01 3.098e+01 2.606e+01 2.400e+01
+ 2.400e+01 3.980e-14 3.622e-14 2.497e-14])
+  ok   rank 8 = 11 - 3 gauge at k = [1, 2, 3, 1] (extra)
+      rank d2 at crystal momentum (k M/2pi, w Lt/2pi) = [0, 1, 1, 2]: 8   (singular values [4.892e+01 4.596e+01 4.157e+01 4.157e+01 3.666e+01 3.260e+01 3.098e+01
+ 3.098e+01 3.232e-14 2.537e-14 1.908e-14])
+  ok   rank 8 = 11 - 3 gauge at k = [0, 1, 1, 2] (extra)
+      weak-coupling target at beta = 20: rank/(2 beta N_loops) = 1533/(40*2688) = 0.014258
+
+================================================================================================
+PART 3 -- classical continuum normalisation (constant F), 1/e^2 = k beta, beta_t = beta_s
+================================================================================================
+theta_p = sum_{mu<nu} sigma_p^{mu nu} F_{mu nu};  (beta/2) sum_p theta_p^2 / V4 = (beta/2) F^T Q F,
+Q = sum_p sigma_p sigma_p^T / V4.  At a_t = 1: Q = diag(c_E x3, c_B x3) required; c_E ~ a_t, c_B ~ 1/a_t,
+so light speed 1 needs a_t = sqrt(c_B/c_E), and then 1/e^2 = beta c_E(a_t) = beta sqrt(c_E c_B), k = sqrt(c_E c_B).
+  ok   Z4: Q diagonal  [max off-diag 0.0e+00]
+  ok   Z4: spatially isotropic
+      Z4: c_E(a_t=1) = 1.0000000000, c_B(a_t=1) = 1.0000000000 -> a_t = 1.0000000000, k = 1.0000000000
+  ok   Z4: k = 1 (method validation)
+  ok   D4: 32 triangle classes per site (extra)  [32]
+  ok   D4: Q diagonal and isotropic (extra)
+      D4: c_E(a_t=1) = 2.0000000000, c_B(a_t=1) = 2.0000000000 -> a_t = 1.0000000000, k = 2.0000000000
+  ok   D4: k = 2 (extra method validation)
+  ok   void: Q diagonal  [max off-diag 0.0e+00]
+  ok   void: spatially isotropic
+      void: c_E(a_t=1) = 2.0000000000, c_B(a_t=1) = 0.2500000000 -> a_t = 0.3535533906, k = 0.7071067812
+  ok   void: a_t = a/(2 sqrt2)
+  ok   void: k = 1/sqrt2
+      direct recompute at a_t = a/(2 sqrt2): Q = [0.7071067812 0.7071067812 0.7071067812 0.7071067812 0.7071067812
+ 0.7071067812] (off-diag 2.6e-19)
+  ok   void: at a_t = a/(2 sqrt2), Q = (1/sqrt2) * identity (Euclidean invariant)
+      rank d2 Z4 L=4: mod-p 765, SVD 765 (smallest kept s.v. 1.414e+00, largest dropped 5.6e-15)
+  ok   Z4 L=4: rank d2 = N_l - N_v - 3  [765]
+      Z4 L=4 weak-coupling target at beta = 20: 765/(40*1536) = 0.012451
+
+================================================================================================
+ALL K1 CHECKS PASSED   (7.1 s)
+================================================================================================

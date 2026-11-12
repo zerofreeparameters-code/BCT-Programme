@@ -1,0 +1,11 @@
+(a) hysteresis, L = 4: jump intervals hot [1.25, 1.255], cold [1.25, 1.255] (identical); largest |E_hot - E_cold| = 2.16 sigma at beta = 1.255  ->  does not hold
+(b) jump: L = 4 (cold) 0.02466; L = 6 (cold scan) 0.01762; Delta E(L = 8) 0.02926  ->  change L = 4 -> 8: +18.6 %; shrinks by more than 30 %: no
+(c) histogram L = 6 at beta_mix(6) = 1.25375: peak bins [26]; two peaks: no; Binder B = 0.666537 (2/3 = 0.666667); E* crossings 2357, fraction of sweeps below E* 0.256
+Call (card 4.4 step 7): order undetermined
+
+Q5 -- E_s (rhombi) and E_t (temporal squares)
+  L = 6 cold scan, below the jump (beta = 1.25): E_s = 0.34259 +- 0.00037, E_t = 0.32567 +- 0.00031, E_t/E_s = 0.9506
+  L = 6 cold scan, above the jump (beta = 1.255): E_s = 0.32381 +- 0.00095, E_t = 0.30891 +- 0.00081, E_t/E_s = 0.9540
+  L = 8 mixed run at 1.24875 (strong side (below beta_inf), strong): E_s = 0.34571, E_t = 0.32834, E_t/E_s = 0.9497
+  L = 8 mixed run at 1.25875 (weak side (above beta_inf), weak): E_s = 0.31425, E_t = 0.30074, E_t/E_s = 0.9570
+  beta = 20 (K3, void L = 2, Lt = 6, cold): E_s = 0.014654 +- 0.000007, E_t = 0.014135 +- 0.000007, E_t/E_s = 0.9646

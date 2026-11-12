@@ -1,0 +1,21 @@
+Run prompt as received in the run thread (12 Nov 2026, 18:07 AEDT), verbatim:
+
+Gate DL-BETA — run. One gate per thread; fresh thread; nothing from memory, past chats or the Project's knowledge base.
+
+Before reading anything, fetch the card, its record and the desk-check output to disk and hash them:
+
+  mkdir -p /home/claude/gate_DLBETA && cd /home/claude/gate_DLBETA
+  R=https://raw.githubusercontent.com/zerofreeparameters-code/BCT-Programme/bf7d97a11742ddfe086b78ad800fe9a0083f9859
+  curl -sS -o gate_DLBETA_prompt.md          $R/audit/gates/gate_DLBETA_prompt.md
+  curl -sS -o PREREG_20261112_DLBETA.sha256  $R/audit/gates/PREREG_20261112_DLBETA.sha256
+  curl -sS -o dlb_deskcheck_output.txt       $R/audit/gates/DLBETA/dlb_deskcheck_output.txt
+  sha256sum gate_DLBETA_prompt.md PREREG_20261112_DLBETA.sha256 dlb_deskcheck_output.txt
+
+Expected:
+  eae34f3becfa4c8ce798eb01f307c7560e1d1301bfb4f2e3e70d11d5c73c9024  gate_DLBETA_prompt.md
+  941aaf107274510af9eb395935b6efd102ed7f8cccdfa9fac3c85edb4b27eca7  PREREG_20261112_DLBETA.sha256
+  10d58dbbb45d3c118880d1f437c38166f946e66772152d613011fe765fc150ae  dlb_deskcheck_output.txt
+
+If any digest differs, stop and report; do not read the card. If all match, record the digests and the commit bf7d97a11742ddfe086b78ad800fe9a0083f9859, read the card, and run exactly what it says (§11 is the protocol; §4.1 pins the sources with hashes to verify before reading; §4.3 says you may not open dlb_deskcheck.py until your own K1 numbers are recorded). This is a multi-hour run: checkpoint every stage, keep the turn alive and poll while simulations run, and do not end your reply with jobs in the background. Do not shorten any sweep budget. The container can fetch over HTTPS but cannot push: deliver a git format-patch bundle adding audit/gates/DLBETA/ only, on top of bf7d97a11742ddfe086b78ad800fe9a0083f9859. Same-session results are capped at CONJECTURE.
+
+Delivery: when the patch is ready, also upload it to my Google Drive with link sharing on, and give me one Terminal block that downloads it with curl, checks its SHA-256, and only then runs git am in ~/BCT-Programme and git push.

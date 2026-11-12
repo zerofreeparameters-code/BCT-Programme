@@ -1,0 +1,30 @@
+Gate DL-BETA run — provenance log (times AEDT, 12 Nov 2026)
+18:07  Card, PREREG record and desk-check output fetched by commit-pinned raw URL (bf7d97a1...) to
+       /home/claude/gate_DLBETA, hashed before reading; all three digests match the run prompt.
+18:09  Card read. PREREG file read (lists the card, dlb_deskcheck.py, dlb_deskcheck_output.txt).
+18:10  Repository fetched: git fetch --depth 1 origin bf7d97a11742ddfe086b78ad800fe9a0083f9859 (single commit).
+       All §4.1 hashes verified (sha256sum -c) BEFORE any source was read: 11/11 OK
+       (9 §4.1 sources + card + PREREG at their repository paths).
+18:11  Read: gate_CRIT2_prompt.md (full), dlb_deskcheck_output.txt (full; permitted any time, §4.3),
+       CRIT2/gate_CRIT2_RESULT.md (full), gate_LATT_prompt.md (full), DL/gate_DL_step0_network.py (full),
+       gate_DLSTIFF_prompt.md lines 20-48 only (= §1; headers located by grep '^#' first),
+       DL/gate_DL_RESULT.md (full), scoping/DL_scoping_2026-11-12.md (full).
+       NOT opened: audit/gates/DLBETA/dlb_deskcheck.py (until own K1 numbers recorded, §4.3);
+       anything under audit/gates/DLSTIFF/; any other repository file; the Project knowledge base;
+       past chats; memory (memory not enabled for this account per session context).
+       The scoping note §7 states a forecast about DL-STIFF's outcome; it is a forecast, not a result.
+18:14  K1 (own code, dlb_complex.py + dlb_k1.py) run and recorded; all checks pass; hashes in out/k1_recorded_at.txt.
+       Only now is dlb_deskcheck.py opened (card §4.3).
+18:17  dlb_deskcheck.py (93de5d29...) run as cross-check in a scratch dir (python3 -I): ALL 49 ASSERTIONS PASSED;
+       output identical to the pinned dlb_deskcheck_output.txt except the six timing lines
+       (out/deskcheck_rerun_output.txt). K1: own numbers and desk check agree on every count, rank and
+       normalisation (see RESULT §2).
+18:20  Code frozen (out/code_frozen_before_runs.sha256); driver launched under nohup. Unit tests passed (out/unit_tests.txt).
+18:21  First launch stopped at the driver's own guard assertion (a mistyped I1(0.1)/I0(0.1) constant)
+       before K2, i.e. before any simulation; constant replaced by scipy's 0.04993760398793892; code
+       re-frozen (out/code_frozen_before_runs.sha256 overwritten with the new hashes); driver relaunched.
+20:10  All stages done (20:06:16). dlb_numbers.txt written by make_numbers.py from state.json and hashed (out/dlb_numbers.sha256) BEFORE any §6 computation; place.py not yet run.
+20:10  Digest posted to the conversation; then q4q5.py and place.py (§6) run.
+20:16  post_obs.py (post-hash observations) run; per-run raw files consolidated bit-identically into
+       out/series/ (consolidate.py); RESULT assembled from run/RESULT_template.md + out/tables.md
+       (assemble_result.py); MANIFEST.sha256 written; git format-patch built on bf7d97a.

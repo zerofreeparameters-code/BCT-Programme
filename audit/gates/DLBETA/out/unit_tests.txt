@@ -1,0 +1,38 @@
+(1) von Mises sampler (Best-Fisher, cancellation-free), 1,000,000 draws per (kappa, seed)
+   kappa  seed     KS p      <cos>      I1/I0 dev/sigma
+   0.001    11    0.913   0.000282   0.000500     -0.31
+   0.001    12    0.878   0.000799   0.000500      0.42
+   0.050    11    0.594   0.025737   0.024992      1.05
+   0.050    12    0.609   0.025565   0.024992      0.81
+   0.300    11    0.420   0.148183   0.148337     -0.22
+   0.300    12    0.856   0.148832   0.148337      0.71
+   1.000    11    0.265   0.446488   0.446390      0.16
+   1.000    12    0.150   0.447315   0.446390      1.56
+   2.500    11    0.594   0.765129   0.764997      0.40
+   2.500    12    0.727   0.764914   0.764997     -0.25
+   6.000    11    0.336   0.912341   0.912359     -0.14
+   6.000    12    0.611   0.912209   0.912359     -1.20
+  15.000    11    0.752   0.966065   0.966070     -0.10
+  15.000    12    0.551   0.966050   0.966070     -0.41
+  40.000    11    0.650   0.987425   0.987420      0.31
+  40.000    12    0.459   0.987411   0.987420     -0.52
+ 120.000    11    0.439   0.995829   0.995825      0.67
+ 120.000    12    0.545   0.995823   0.995825     -0.35
+ 200.000    11    0.506   0.997499   0.997497      0.73
+ 200.000    12    0.586   0.997495   0.997497     -0.41
+KS p-values: min 0.150, max 0.913; their own uniformity KS p = 0.090
+
+(2) staple(): local action change = global recompute (beta = 1), 200 random links each
+  void L=2 Lt=6: max |dS_local - dS_global| = 6.9e-13
+  Z4 L=4: max |dS_local - dS_global| = 3.9e-13
+  void L=3 Lt=5: max |dS_local - dS_global| = 1.3e-12
+
+(3) timing at beta = 20, cold start, 20 sweeps after 2 warm-up sweeps
+  void L=2 Lt=6    N_l =    2112 N_loops =    2688 build   0.0 s      0.80 ms/sweep
+  void L=4 Lt=12   N_l =   33792 N_loops =   43008 build   0.0 s     12.86 ms/sweep
+  void L=6 Lt=18   N_l =  171072 N_loops =  217728 build   0.1 s     79.92 ms/sweep
+  void L=8 Lt=24   N_l =  540672 N_loops =  688128 build   0.3 s    227.71 ms/sweep
+  Z4 L=8           N_l =   16384 N_loops =   24576 build   0.0 s      6.88 ms/sweep
+  Z4 L=12          N_l =   82944 N_loops =  124416 build   0.1 s     36.41 ms/sweep
+
+ALL UNIT TESTS PASSED

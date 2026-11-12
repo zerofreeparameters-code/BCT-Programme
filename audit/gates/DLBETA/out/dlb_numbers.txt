@@ -1,0 +1,17 @@
+Gate DL-BETA -- Q3 numbers (card 4.6), card convention beta = coefficient of sum over loops.
+Exact grid values in brackets where 4-decimal rounding (card 4.7) loses digits.
+beta0 (L = 2, Lt = 6; C maximum, larger of hot and cold) = 1.2200   [1.22] (scan range [0.5, 2.0], C = 2.3149, hot start)
+beta4 (L = 4, Lt = 12; C maximum) = 1.2500   [1.25] (scan range [1.17, 1.27], C = 4.0761, hot start)
+jump interval L = 4 hot  = [1.2500, 1.2550]  E 0.32567 -> 0.30919, fall 0.01649
+jump interval L = 4 cold = [1.2500, 1.2550]  E 0.32984 -> 0.30517, fall 0.02466
+jump interval L = 6 cold = [1.2500, 1.2550]  E 0.33292 -> 0.31530, fall 0.01762
+E* = 0.32411
+beta_mix(6) = 1.2537   [1.25375]  interval [1.2475, 1.26]  monotonic True, unresolved points [1.25, 1.2525, 1.255, 1.2575], extensions 0
+    outcomes (S strong, W weak, U unresolved): 1.245:S, 1.2475:S, 1.25:U, 1.2525:U, 1.255:U, 1.2575:U, 1.26:W
+beta_mix(8) = 1.2537   [1.25375]  interval [1.24875, 1.25875]  monotonic True, unresolved points [1.25125, 1.25375, 1.25625], extensions 0
+    outcomes (S strong, W weak, U unresolved): 1.24875:S, 1.25125:U, 1.25375:U, 1.25625:U, 1.25875:W
+beta_inf = beta_mix(8) = 1.2537   [1.25375]
+uncertainty = max(half L=8 flip interval 0.00500, |beta_mix(8) - beta_mix(6)| 0.00000) = 0.00500
+1/e^2_c = beta_inf/sqrt2 = 0.8865 +- 0.0035   [0.8865351 +- 0.0035355]
+Delta E(L = 8) = 0.02926 (runs at 1.24875 strong, 1.25875 weak; last-10-reading means); final-sweep values: 0.02977
+check (not headline): line through (1/(L^3 Lt), beta_mix(L)), L = 6, 8, at 0: 1.25375
