@@ -1,0 +1,115 @@
+# 0. Constants (MINIMAL_BCT 1.3) and the geometric target
+  r_oct                                                            0.2071067812
+  r_tet                                                            0.1123724357
+  alpha_0                                                          0.007408055728
+  1/alpha_0                                                        134.9881854
+  xi / a                                                           2.317543795
+  beta_geom = 1/(4 pi alpha_0)                                     10.74201848
+            = 1/(4 r_oct r_tet)                                    10.74201848
+            = 2 xi^2/a^2  (a = MINIMAL's a)                        10.74201848
+  |form1 - form3|                                                  0.0
+  1/(4 pi alpha_CODATA)                                            10.90497833
+
+  Which length is MINIMAL's 'a'?  Rebuild r_oct, r_tet from the FCC cubic cell of
+  gate_DL_step0_network.py (cubic edge = 1): oct void (1/2,1/2,1/2), tet void (1/4,1/4,1/4),
+  atoms at (1/2,1/2,0) and (0,0,0); sphere radius = half the nearest-neighbour distance.
+  r_oct (cubic units) / d_nn                                       0.2071067812
+  r_tet (cubic units) / d_nn                                       0.1123724357
+  => MINIMAL's a is the nearest-neighbour distance d_nn (sphere diameter; App J/TANH: R = a/2).
+  2 xi^2 / a^2 with a = d_nn (MINIMAL)                             10.74201848
+  2 xi^2 / a^2 with a = cubic edge (Gate DL scripts)               5.371009241
+  2 xi^2 / a^2 with a = oct-tet link length (void-network spacing) 28.64538262
+  2 xi^2 / a^2 with a = (volume per void node)^(1/3)               28.15205249
+  beta is dimensionless; the unit-free statement is beta_geom = 1/(4 pi alpha_0) = 1/(4 r_oct r_tet).
+
+# 1. R1 -- minimal coupling (kill test: m_A^2 = q^2 rho_s != 0)
+  continuum: J|(d - iqA)Psi|^2 , Psi = Psi0 e^{i theta}  ->  L = A**2*J*Psi0**2*q**2 - 2*A*J*Psi0**2*dtheta*q + J*Psi0**2*dtheta**2
+  coefficient of A^2 in unitary gauge (Meissner/London term): J*Psi0**2*q**2   -> nonzero for q != 0 (rho_s = J Psi0^2)
+  lattice, unitary gauge, Hessian in (a1..a4) around a = 0 on one 4-loop:
+    [[2*J*Psi0**2*q**2, 0, 0, 0], [0, 2*J*Psi0**2*q**2, 0, 0], [0, 0, 2*J*Psi0**2*q**2, 0], [0, 0, 0, 2*J*Psi0**2*q**2]]
+  all off-diagonal (link-link) entries zero: True  -> tree-level matter term is link-local: a mass, no plaquette (flux) term, no contribution to beta
+  Verdict R1: contradicts option B (medium must be neutral); even when charged it supplies a mass, not beta.
+
+# 2. R2 -- induced Maxwell term from dipole response (kill test: chi = 0 without polarisable charge)
+  option-B medium action (MINIMAL 1.2, schematic): J*psi*psibar - V(psi*psibar)
+  d S_GP / d E  = 0   -> Gamma_medium[a] = -ln Int DPsi e^{-S_GP} is a-independent
+  => chi = -d^2 Gamma/dE^2 = 0 identically in option B (stronger than, and consistent with, STIFF's P = 0).
+  number-bias response promoted to a0 by minimal coupling: L = J*Psi0**2*a0**2*q**2 - 2*J*Psi0**2*a0*dtheta*q + J*Psi0**2*dtheta**2
+  coefficient of a0^2 at k = 0: J*Psi0**2*q**2  (k^0: a screening mass for a0, not a chi E^2 = chi k^2 a0^2 term)
+  Sign note: the desk check's -chi/2 is the energy convention; in the Lagrangian it is +chi/2. Zero either way.
+  Verdict R2: closed -- no nonzero chi exists in the pinned sources for the neutral medium.
+
+# 3. R3 -- beta := dimensionless phase stiffness (kill test: is any term coupling a_e to Psi?)
+  option B: S = S_GP[Psi; J, xi, Psi0] + beta * sum_p (1 - cos Phi_p)  =>  Z = Z_GP(J) * Z_W(beta)
+  d^2 lnZ / dJ dbeta = 0  -> no observable links J and beta
+  Terms of MINIMAL 1.2: J (d Psi)^* (d Psi),  (J/4 xi^2)(|Psi|^2 - Psi0^2)^2   -- neither contains a_e.
+  phase stiffness of the 1.2 action, K = J Psi0^2 ; setting K = 2 xi^2 gives J = [2*xi**2/Psi0**2]  -- J and Psi0 are not in MINIMAL 1.3, so even the
+  identification beta = K would not return 2 xi^2/a^2 without a further asserted value.
+  [side observation] amplitude-mode m^2 of the 1.2 action = Psi0**2/xi**2  -> m = Psi0/xi; MINIMAL 1.4 prints 2/xi, i.e. Psi0 = 2 or a different kinetic normalisation.
+  Hubbard-Stratonovich: Int dj exp(-j^2/(2K) + i j v) = sqrt(2)*sqrt(pi)*sqrt(K)*exp(-K*v**2/2)
+  i.e. stiffness K (d theta)^2/2 <-> current action j^2/(2K); with j = (1/2pi) *dB the dual 2-form
+  carries coefficient 1/(8 pi^2 K): the medium's own gauge field (a 1-polarisation KR 2-form, PROMOTE
+  CN-PROMOTE-06/10) has coupling INVERSE to the stiffness, and it is not the 1-form link field a_e.
+  Verdict R3: closed -- assertion; nothing in the option-B action lets a_e inherit J.
+
+# 4. R4 -- alpha_0 as the surface coupling (App J 1.3, lines 147-173)
+  sigma = Q/(4 pi R^2); Delta V = sigma d / eps0; sigma_s = Delta V d = Q*d**2/(4*pi*R**2*epsilon0)
+  condition sigma_s / J = alpha_0  <=>   Eq(Q*d**2/(J*epsilon0*r_oct*r_tet), 1)   : one equation, four inputs (Q, d, eps0, J)
+  solved for d: [sqrt(J)*sqrt(epsilon0)*sqrt(r_oct)*sqrt(r_tet)/sqrt(Q)]
+  App J's point: Q = 1, eps0 = 1, J = J0 = 1, d = sqrt(r_tet r_oct) (App J l.161-173 calls Q, d inputs).
+  same step in Gaussian units: sigma_s = Q*d**2/R**2  -- the 1/(4 pi R^2) 'identical structure' (l.156-160) holds only in rationalised units with eps0 = 1.
+  STIFF 1 / CN-STIFF-05: the neutral medium has no electric charge and no eps0; Q is STIFF's e*, a free input.
+  H_int = sigma_s Oint |Psi|^2 dS (App J l.238) = 4*pi*PsiR**2*R**2*sigma_s ;  d H_int / d a_e = 0  -> no plaquette term; nothing maps the sphere shell to a window link.
+  g (App J 3.1 overlap coupling, computed) = alpha_0 4 pi R tanh^2(r_oct/xi) 0.0003697506484
+  alpha_0 / g                                                      20.03527447
+  Verdict R4: closed -- sigma_s needs Q and d (and eps0, J units) asserted; the sphere-shell term is
+  independent of a_e, so the second clause of the kill test (sphere surface -> window-link plaquette) fails.
+
+# 5. R5 -- induced Maxwell term from charged matter loops
+  one unit-charge Dirac fermion (b = 4/3): beta = c ln(Lambda/m), c 0.01688686394
+     ln(Lambda/m) needed for beta = 10.742                         636.1168374
+     log10(Lambda/m)                                               276.2620323
+  one unit-charge complex scalar (b = 1/3): beta = c ln(Lambda/m), c 0.004221715985
+     ln(Lambda/m) needed for beta = 10.742                         2544.467349
+     log10(Lambda/m)                                               1105.048129
+  check: 1/(6 pi^2) (Dirac coefficient)                            0.01688686394
+  The card's '(1/12 pi^2) ln(Lambda/m)' is the Dirac coefficient written with ln(Lambda^2/m^2).
+  Charged matter in the pinned sources: none (MINIMAL 1.1 one neutral scalar; 1.5 vortex strings,
+  neutral under a field the superfluid is neutral under). Verdict R5: closed.
+
+# 6. R6 -- candidates found in the pinned sources
+  (a) ICE 3 / CN-ICE-04: E_J/E_C = 2 nbar^2 (xi/a)^2. Re-derive:
+      E_J/E_C = a*hbar**2*nbar/(g*m)  ; / (2 nbar^2 xi^2/a^2) = 1
+        at nbar = 1, a = d_nn: E_J/E_C                             10.74201848
+        equals beta_geom to                                        0.0
+        at nbar = 1, a = oct-tet link length                       28.64538262
+        at nbar = 1, a = (volume per void node)^(1/3)              28.15205249
+      quantum rotor -> isotropic classical XY coupling K = sqrt(E_J)/sqrt(E_C)
+        K at nbar = 1, a = d_nn                                    3.277501866
+      E_J, E_C are couplings of the scalar's phase theta and number; a_e appears in neither (R3's test).
+      nbar is not geometry-fixed (CN-ICE-08). Closed: wrong sector, nbar = 1 and a = d_nn asserted.
+  (b) KR 2-form dual of the medium (PROMOTE Step 2 (ii)): see section 3 -- coupling 1/(8 pi^2 K),
+      a 2-form with one polarisation, not a_e. Closed.
+  (c) Lattice-continuum matching on the void network (the only 'theorem about the network' slot):
+      continuum per plaquette: Phi**2/(2*e**2)   Wilson: Phi**2*beta/2   -> beta = [e**(-2)] (a_L cancels)
+      homogeneity: S_W(lambda beta) / S_W(beta) = lambda
+      On an irregular cell complex beta_p = kappa_p / e^2 with kappa_p = |*p|/|p| a pure number of the
+      network: geometry fixes the relative plaquette weights, never the overall 1/e^2. Closed.
+  (d) STIFF 3 charitable double layer -- the one pinned expression carrying the added field's
+      normalisation (eps0, with a charge e*). Re-run its cancellation:
+      S = DeltaPhi/E_J = 2*e_star*m*xi/(epsilon0*f*hbar**2) ; d S/d nbar = 0  -> nbar cancels, e*/eps0 does not (CN-STIFF-05 re-derived). Supplies no value. Closed.
+
+# 7. Q3 -- comparison (no route survives; beta_geom shown for orientation only)
+  beta_geom / beta_c [hypercubic Z4, Wilson]                       10.62409107
+  beta_CODATA / beta_c [hypercubic Z4, Wilson]                     10.78526192
+  beta_geom / beta_c [D4, CRIT2 card convention]                   17.46669672
+  beta_CODATA / beta_c [D4, CRIT2 card convention]                 17.73167207
+  beta_geom / beta_c [D4, Katz-Nogradi convention]                 8.73334836
+  beta_CODATA / beta_c [D4, Katz-Nogradi convention]               8.865836037
+  void network beta_c: DL-BETA pending.
+
+# 8. Card section 9 forecast, scored against the outcome code of this run (SC-DLS-2)
+  sum of forecast probabilities                                    1.0
+  multi-class Brier score (0 best, 2 worst)                        0.125
+  log score ln p(outcome)                                          -0.3566749439
+  Brier of a uniform forecast over the 6 codes, for reference      0.8333333333
