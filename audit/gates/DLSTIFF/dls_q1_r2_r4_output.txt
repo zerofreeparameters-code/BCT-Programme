@@ -1,0 +1,86 @@
+==============================================================================
+R2 — INDUCED MAXWELL TERM FROM THE MEDIUM'S DIPOLE RESPONSE
+==============================================================================
+P(E) = E*chi + P0
+U(E) = -Int P dE = -E**2*chi/2 - E*P0
+coefficient of E^2 in U: -chi/2  -> the induced Maxwell/epsilon term
+so the induced shift in beta is  delta_beta ~ -chi/2  (per plaquette, same normalisation)
+
+Does any term in the pinned sources give chi != 0?
+  audit/MINIMAL_BCT.md §1.2: S = Int [ J |dPsi|^2 - (J/4xi^2)(|Psi|^2-Psi_0^2)^2 ].
+    No gauge field appears. No P, no chi, no epsilon_0, no electric charge.
+  audit/gates/STIFF/STIFF_RESULT.md, CN-STIFF-01 [PROVEN]: for a reflection-symmetric
+    window the GP ground state is even, so Int z delta_n dz = 0: P = 0 identically,
+    'not small, not soft, but identically absent' (SC-STIFF-5).
+  CN-STIFF-02 [PROVEN]: the Smoluchowski two-component mechanism needs a second,
+    independently-profiled charged distribution; one complex scalar has none.
+  CN-STIFF-03 [PROVEN, numeric]: a nonzero window dipole appears only under an
+    IMPOSED void-to-void bias, linearly in it, vanishing with it.
+  => chi = 0 for the pinned medium. No nonzero chi can be exhibited from the pinned
+     sources, which is the condition the card set for keeping the route.
+  R2: CLOSED.  (Also closed upstream by the decoupling theorem: with no Psi-a term in
+     the action there is nothing to integrate out that knows about a.)
+  delta_beta with chi = 0: 0
+
+==============================================================================
+R4 — alpha_0 AS THE SURFACE/BOUNDARY COUPLING (App J §J.1.3-1.4)
+==============================================================================
+App J eq:sigma      sigma_s = Delta_V * d  ~  Q d^2 / (4 pi R^2)
+App J eq:alpha0     alpha_0 = r_tet r_oct / (4 pi R^2)
+App J boxed         sigma_s = alpha_0            [in units J = 1]
+
+Re-derivation with every input named (card §4.2 tiering):
+input                                      tier       value
+------------------------------------------------------------------------------
+r_oct = (sqrt2 - 1)/2                      GEOMETRY   0.2071067812
+r_tet = (sqrt6 - 2)/4                      GEOMETRY   0.1123724357
+R = 1/2 (sphere radius, lattice units)     GEOMETRY   0.5
+Q = 1 (one Planck charge unit)             ASSERTED   1.0
+d = sqrt(r_tet r_oct) (shell thickness)    ASSERTED   0.1525552144
+J = 1 (stiffness unit)                     CONVENTION 1.0
+l_P = a = 1 (length unit)                  CONVENTION 1.0
+------------------------------------------------------------------------------
+  r_oct        source: MINIMAL_BCT §1.3 / App D
+  r_tet        source: MINIMAL_BCT §1.3 / App D
+  R            source: App J (c/R = 2 m_P; 4 pi R = 6.2832)
+  Q            source: App J line 161, flagged as an input in App J itself
+  d            source: App J line 162, flagged as an input in App J itself
+  J            source: App J line 166-168
+  l_P          source: needed to equate a 1/length with a pure number
+
+sigma_s = Q d^2/(4 pi R^2) with Q=1, d^2=r_tet r_oct   0.007408055728
+alpha_0 = r_tet r_oct/(4 pi R^2)                       0.007408055728
+difference                                             7.703719778e-34
+  -> the App J identity reproduces exactly, AS AN IDENTITY, once Q = 1 and
+     d = sqrt(r_tet r_oct) are put in: d^2/(4 pi R^2) IS alpha_0/Q by construction.
+     Two asserted inputs do the whole of the work; App J's own summary footnote
+     says so ('uses Q=1 and d=sqrt(r_tet r_oct) as inputs').
+
+Gate TANH's computed window/overlap coupling, re-derived cold (App J §J.3.1):
+r_oct/xi                                               0.0893647756
+tanh^2(r_oct/xi)                                       0.007943736598
+4 pi R                                                 6.283185307
+g = alpha_0 * 4 pi R * tanh^2(r_oct/xi)                0.0003697506484
+alpha_0                                                0.007408055728
+alpha_0 / g                                            20.03527447
+  matches App J's printed 0.00036975 and TANH SC-TANH-3 (alpha_0/g = 20.0353):
+  the computed coupling is NOT alpha_0. TANH's finding reproduces.
+
+The step R4 must take and does not: sphere surface -> window plaquette.
+  sigma_s/J is a RADIAL BOUNDARY CONDITION at r = R: it enters App J only as the
+  derivative jump [d_r Psi] = -(sigma_s/J) Psi(R), i.e. in kappa cot(kappa R) =
+  -1/xi + sigma_s/J. Its dimension is 1/length (it sits next to 1/xi).
+  beta is dimensionless and lives on the PLAQUETTES of the void graph (nodes = oct
+  and tet voids, links = triangular windows). The two objects differ in:
+    (i)  dimension      : 1/length  vs  dimensionless
+    (ii) support        : sphere shells r = R  vs  minimal cycles of the void graph
+    (iii) role          : a boundary condition on Psi  vs  the coefficient of
+                          (1 - cos Phi_p) for a field Psi is NEUTRAL under
+  The third is fatal on its own: sigma_s is a coupling OF THE MEDIUM TO THE SHELL,
+  and the added link field does not appear in it. Equating it with beta is not a
+  derivation but a renaming, and it needs l_P = a = 1 to be even numerically stated.
+if one asserts beta = 1/(4 pi sigma_s/J):              10.74201848
+beta_geom = 2 xi^2/a^2                                 10.74201848
+  i.e. R4 DOES reach the number - and reaches it because sigma_s was built out of
+  r_oct r_tet in the first place. Inputs asserted: Q=1, d=sqrt(r_tet r_oct), and the
+  unit identification. R4: CLOSED as a derivation; SC-DLS-4 if one accepts the three.

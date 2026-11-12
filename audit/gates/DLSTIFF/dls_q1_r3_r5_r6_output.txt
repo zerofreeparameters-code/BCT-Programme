@@ -1,0 +1,144 @@
+==============================================================================
+R3 — beta := J_dimensionless (the Josephson-array identification)
+==============================================================================
+Is there any term in the pinned action coupling a_e to Psi?  (card §6, 'by inspection')
+  MINIMAL_BCT §1.2:  S = Int d^4x [ J (d_mu Psi)*(d^mu Psi) - (J/4 xi^2)(|Psi|^2-Psi_0^2)^2 ]
+  Gauge term (card §1): S_gauge = beta sum_p (1 - cos Phi_p)
+  Occurrences of a_e in S_med: 0.   Occurrences of Psi in S_gauge: 0.
+  => beta and J are the coefficients of two terms with NO field in common.
+  mixed second derivative d^2 S/(da dPsi) = 0
+  (beta, J) is a two-parameter family with no relation between its members.
+
+The laboratory analogue, stated as the card does:
+  In a Josephson-junction array the LINK coupling is E_J, the phase stiffness, but
+  the PLAQUETTE (loop) coupling is Phi_0^2/(2 L_loop), set by the loop inductance -
+  a scale fixed by the circuit geometry and the permeability, not by E_J. The two can
+  be varied independently in a real array, which is the whole point of the device.
+  So even the analogue that motivates R3 says the loop coupling is independent.
+  R3: CLOSED. No derivation that the added field inherits J exists in the pinned
+  sources; the identification is an assertion. (The decoupling theorem says more:
+  for the pinned action no such derivation can exist, because the medium's partition
+  function factorises out of the a-integral exactly.)
+
+==============================================================================
+R5 — INDUCED MAXWELL TERM FROM CHARGED MATTER LOOPS
+==============================================================================
+Form pinned by the card §2: beta ~ (1/12 pi^2) sum_i q_i^2 ln(Lambda/m).
+Condition 1: charged matter must exist. Pinned sources on this:
+  MINIMAL_BCT §1.1 [PROVEN by Gate RANK]: ONE complex scalar. §1.5: the only
+    topological matter is vortex STRINGS, carrying quantised circulation.
+  Option B (card §1) makes the medium NEUTRAL under a_e; a vortex of a neutral
+    field is neutral under a_e too. Nothing in the pinned sources carries its charge.
+  The scoping note §5 records this as a SEPARATE later gate (DL-MATTER) and as a
+    THIRD input. So R5's first condition fails on the pinned sources.
+
+Condition 2: even granting charged matter, is the coefficient geometric?
+12 pi^2                                                  118.4352528
+beta_geom = 2 xi^2/a^2                                   10.74201848
+ln(Lambda/m) needed for sum q^2 = 1                      1272.233675
+  => Lambda/m                                            3.342447706e+552
+  => log10(Lambda/m)                                     552.5240646
+the corpus's own largest cutoff ratio m_P/m_e            2.389200812e+22
+  ln of it                                               51.52783097
+sum q^2 needed to give beta_geom at that ratio           24.69022373
+  Not an integer, not a geometric quantity: it is a fitted multiplicity.
+  At sum q^2 = 1 the required cutoff ratio is ~10^552, outside any scale in the corpus.
+  Either way beta comes out as a LOGARITHM OF A TUNED RATIO. R5: CLOSED.
+
+==============================================================================
+R6a — WHAT A GEOMETRIC beta CAN BE AT ALL (the one-number observation)
+==============================================================================
+MINIMAL_BCT §3 [stated there, re-checked here]: alpha_0 enters only through xi, and
+xi depends on the void radii ONLY through their product. Gate RATIO (SC-RATIO-2, from
+the card's dependency list) records that the geometry supplies ONE number, xi/a = 2.3175.
+product r_oct r_tet                                      0.02327309345
+ratio r_oct/r_tet                                        1.843038997
+xi/a = 1/sqrt(8 r_oct r_tet)                             2.317543795
+
+Consequence: ANY dimensionless beta built from the pinned geometry alone has the form
+     beta = c / (r_oct r_tet)      for some coefficient c the route must supply,
+and beta_geom corresponds to exactly one value of c:
+c for beta = 2 xi^2/a^2                                  0.25
+  (c = 1/4 exactly: 2.4652e-32 off)
+
+So the three forms in the card §7 agreeing to 30 digits is an IDENTITY and carries no
+information: 1/(4 pi alpha_0), 1/(4 r_oct r_tet) and 2 xi^2/a^2 are the same expression
+written three ways. The entire empirical content of 'beta is fixed by geometry' is the
+coefficient c. A route that supplies c = 1/4 gives SC-DLS-1; any other c gives SC-DLS-3.
+
+How much does the PHASE verdict depend on c? beta > beta_c requires c > beta_c * r_oct r_tet:
+  c_min for hypercubic Z4 1.0111                         0.02353142479
+  c_min for D4 card convention 0.6150                    0.01431295247
+  c_min for D4 Katz-Nogradi 1.2300                       0.02862590494
+c of the geometric candidate                             0.25
+  So the Coulomb-phase conclusion survives any c above ~0.03, a factor ~9 below c=1/4,
+  while the CLAIM alpha = alpha_0 needs c = 1/4 exactly. The phase is robust; the
+  number is not. This is why a surviving route must report beta to 10 digits (Q2).
+
+==============================================================================
+R6b — ICE's E_J/E_C, WHICH EQUALS beta_geom AT UNIT OCCUPATION
+==============================================================================
+audit/gates/ICE/gate_ICE_RESULT.md CN-ICE-04 [PROVEN]:  E_J/E_C = 2 nbar^2 (xi/a)^2
+  E_J/E_C      = 2*nbar**2*xi**2/a**2
+  beta_geom    = 2*xi**2/a**2
+  E_J/E_C / beta_geom = nbar**2  -> they are equal iff nbar = 1
+E_J/E_C at nbar = 1                                      10.74201848
+beta_geom                                                10.74201848
+
+This is the strongest R6 candidate found: a quantity ALREADY DERIVED in a pinned
+source, with no new coupling, whose value at unit occupation is exactly the candidate
+beta. Kill test, applied as the card requires:
+  (1) WHAT IT IS. E_J/E_C is the control parameter of the medium's own phase sector:
+      rotors on the NODES (voids), E_J the phase rigidity across a window, E_C the
+      charging energy. ICE uses it to decide superfluid vs Mott (SC-ICE-1). It is a
+      ratio in the MATTER sector of a global U(1), not the plaquette coupling of the
+      added gauge field. Identifying the two is R3's assertion in new clothing, and
+      the decoupling theorem forbids a derivation of it for the pinned action.
+  (2) IT CARRIES nbar. The occupation is not fixed by the void geometry; ICE treats it
+      as a free quantity ('nbar >~ 1'), and STIFF §5 records that nbar cancels only in
+      ratios where it happens to. Equality with beta_geom needs nbar = 1 ASSERTED.
+      One asserted coefficient is SC-DLS-4 by card §4.3, not SC-DLS-1.
+  E_J/E_C at nbar = 2 (for scale)                        42.96807393
+  nbar required to give beta = beta_c (hypercubic 1.0111) 0.3067991186
+  (3) THE COINCIDENCE IS EXPLAINED BY R6a. E_J/E_C is dimensionless and built from the
+      one geometric number; its coefficient happens to be 2, the same coefficient
+      beta_geom carries. Agreement of two expressions of the form c/(r_oct r_tet) at
+      the same c is not evidence of identity between the objects they describe.
+  R6b: CLOSED (SC-DLS-4 at best, and only by asserting nbar = 1 and the identification).
+
+==============================================================================
+R6c — SPEED MATCHING: demand the added field's wave speed equal the medium's
+==============================================================================
+Anisotropic Wilson action, quadratic order: S ~ (beta_t/2)(d_t a)^2 + (beta_s/2)(d_x a)^2
+  dispersion:  beta_t omega^2 = beta_s k^2   ->  omega = sqrt(beta_s)*k/sqrt(beta_t)
+  wave speed squared v^2 = beta_s/beta_t   -> depends ONLY on the RATIO beta_s/beta_t
+  the orthogonal combination, sqrt(beta_t beta_s), is what sets e^2 = 1/beta and so alpha.
+  d(v^2)/d(sqrt(beta_t beta_s)) at fixed ratio = 0
+
+So: imposing c_photon = c_phonon fixes the SPACE-TIME ANISOTROPY beta_s/beta_t = 1 (in
+lattice units a_t = a_s), which is precisely the convention the scoping note §5 already
+pre-registers for Gate DL-BETA ('beta_t = beta_s pre-registered as the convention').
+It says NOTHING about the overall beta, and the overall beta is the whole question: it
+is what decides the phase and what equals 1/(4 pi alpha).
+  R6c: CLOSED. The one physical requirement the neutral medium can impose on the added
+  field constrains a convention, not the coupling.
+
+==============================================================================
+R6d — App E.1 §3.3's J = 1/(4 pi alpha_0) = 10.74 MONOPOLE-ACTION PARAMETER
+==============================================================================
+Identified from the pinned scoping note (§4): 'The corpus already uses this number -
+App E.1 §3.3 writes J = 1/(4 pi alpha_0) = 10.74 as a monopole-action parameter (Gate
+QED, CN-QED-04 found that section's arithmetic inconsistent, but the parameter is there).'
+
+Card §4.1 pins the sources; tex/BCT_Appendix_E1 is NOT among them, and card §4.5 forbids
+construction. This run therefore did NOT read App E.1 and does not evaluate its derivation.
+What can be said from the pinned sources alone:
+  (i)  a number WRITTEN DOWN in the corpus as a parameter is an assertion, not a
+       derivation; the card's standard (§4.3) is a derivation with no asserted
+       coefficient. Even at face value this is SC-DLS-4 at best.
+  (ii) the pinned scoping note records that Gate QED found that section's arithmetic
+       inconsistent (CN-QED-04).
+  (iii) the number is 1/(4 pi alpha_0), i.e. c = 1/4 in R6a's form - the same single
+       geometric number, reached by writing alpha_0 into a monopole action by hand.
+  R6d: NOT EVALUABLE from the pinned sources (SC-DLS-5 for this sub-route only), and
+  closed as an assertion on its face. Recorded for a future gate with App E.1 pinned.

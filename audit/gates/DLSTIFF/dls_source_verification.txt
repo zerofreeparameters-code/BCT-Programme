@@ -1,0 +1,54 @@
+# Gate DL-STIFF — source verification transcript
+
+Run 12 November 2026. Card commit 9993a2381cdbdd8604975f285644aabb94063325.
+
+## 1. Card, pre-registration record and desk-check script, fetched by pinned raw URL
+   (hashed BEFORE the card was read)
+
+Commit: 9993a2381cdbdd8604975f285644aabb94063325
+Fetched: 2026-11-12 (Australia/Melbourne)
+294da0f50c5d740956bb0b3d64871f580a00f454a0f541701467bba47ee48e21  gate_DLSTIFF_prompt.md   MATCH
+682effc99bc12bfee62de437080ccc9054d9ea0e84ecd4de1d62da3fc9dcb696  PREREG_20261112_DLSTIFF.sha256   MATCH
+332e2d1275196c5720d78fcce6e0364d567c3281476d4795c032010e5989bde5  dls_deskcheck.py   MATCH
+
+## 2. Pre-registration record as fetched
+
+294da0f50c5d740956bb0b3d64871f580a00f454a0f541701467bba47ee48e21  gate_DLSTIFF_prompt.md
+332e2d1275196c5720d78fcce6e0364d567c3281476d4795c032010e5989bde5  DLSTIFF/dls_deskcheck.py
+fede02d1514563e11d30c05aa136a416b38cdd40ab1d6af15e95d7b8009f8a65  ../scoping/DL_scoping_2026-11-12.md
+
+## 3. Commit and parent
+
+$ git rev-parse HEAD HEAD~1
+9993a2381cdbdd8604975f285644aabb94063325
+9114b6e8da4032f944d141995a0a2baafaf38bce
+   HEAD~1 == 9114b6e8da4032f944d141995a0a2baafaf38bce, the commit card 4.1 pins. OK
+
+## 4. Every card 4.1 hash verified before any source was read
+
+$ sha256sum -c expected_4_1.sha256
+audit/MINIMAL_BCT.md: OK
+audit/gates/DL/gate_DL_RESULT.md: OK
+audit/gates/DL/gate_DL_step0_network.py: OK
+audit/gates/DL/gate_DL_step1_mass.py: OK
+audit/gates/STIFF/STIFF_RESULT.md: OK
+audit/gates/ICE/gate_ICE_RESULT.md: OK
+audit/gates/PROMOTE/gate_PROMOTE_result.md: OK
+audit/gates/TANH/gate_TANH_RESULT.md: OK
+tex/BCT_Appendix_J_SphereAction.tex: OK
+audit/scoping/DL_scoping_2026-11-12.md: OK
+audit/gates/DLSTIFF/dls_deskcheck.py: OK
+audit/gates/gate_DLSTIFF_prompt.md: OK
+audit/gates/PREREG_20261112_DLSTIFF.sha256: OK
+exit status: 0
+
+## 5. audit/gates/DLSTIFF/ before this run (no result file existed; none was opened)
+
+$ ls -1 audit/gates/DLSTIFF/
+dls_deskcheck.py
+
+## 6. Toolchain
+
+mpmath 1.3.0
+sympy  1.14.0
+Python 3.13.18

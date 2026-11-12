@@ -1,0 +1,58 @@
+==============================================================================
+PART A — THE DECOUPLING THEOREM (the load-bearing step of this gate)
+==============================================================================
+S_gauge = beta (1 - cos(k a))            ->  quadratic: A**2*beta*k**2/2
+S_med (neutral)                          = J*k**2*s**2/2 + J*s**4/4
+  d S_med / d a  = 0    <-- zero: no a-dependence at all
+  mixed Hessian block  d^2 S / da ds  = 0
+
+Integrating the medium out exactly (Gaussian case):
+  Z_med = Int ds exp(-S_med) = sqrt(2)*sqrt(pi)/(sqrt(J)*k)
+  d Z_med / d a = 0
+  induced effective action for a:  Gamma_eff = -ln Z_med = log(J)/2 + log(k) - log(pi)/2 - log(2)/2
+  d Gamma_eff / d a = 0   -> the medium induces NO a-dependent term
+
+  => beta_effective = beta_bare EXACTLY. For the pinned action the medium cannot
+     renormalise beta, let alone fix it. beta is an input of S_gauge and nothing else.
+     This closes R2, R3 and R5-without-added-charged-matter in one step:
+       R2: an induced Maxwell term requires a Psi-a coupling; there is none.
+       R3: beta and J are independent coefficients of two decoupled terms.
+       R5: a matter loop requires matter charged under a; the medium is not.
+
+--- Does the Gauss-law constraint evade the factorisation? ---
+The card §1 imposes Gauss's law at the nodes. That constraint reads div E = rho, where rho
+is the charge density of whatever is charged under a_e. With the medium NEUTRAL (option B)
+the medium contributes rho = 0 identically, so the constraint is a condition on the gauge
+sector alone and the factorisation is untouched. The constraint becomes a coupling only
+when something carries charge - which is Gate DL-MATTER's separate input, and which for the
+medium itself is R1 (Meissner mass, Part B). So the one structural element of the
+construction that touches the nodes does not connect the medium to beta either.
+
+==============================================================================
+PART B — R1 KILL TEST: minimal coupling gives the Meissner mass
+==============================================================================
+CHARGED medium  |(d - i q a)Psi|^2  ->  L = A**2*phi0**2*q**2 - 2*A*dtheta*phi0**2*q + dtheta**2*phi0**2
+  photon mass^2 (unitary gauge) = (1/2) d^2L/da^2 = phi0**2*q**2
+  = q^2 rho_s, NONZERO for q != 0  ->  Meissner/London mass (Gate LINK's fate).
+  A charged medium is not the neutral medium of option B: R1 CONTRADICTS the
+  construction it is meant to serve. Route closed by the card's own kill test.
+
+  Note the structural tension this exposes, which is the finding of the gate:
+  q != 0 is the ONLY way to make the medium's action depend on a without adding a
+  new coupling, and it is exactly the thing that gaps the photon. Neutrality buys
+  masslessness (CN-DL-02) and pays for it with beta.
+
+==============================================================================
+PART C — OPERATOR CENSUS: what could evade Part A, and what it costs
+==============================================================================
+operator                         needs      status
+------------------------------------------------------------------------------
+|(d - i q a)Psi|^2               q != 0     R1: Meissner mass q^2 rho_s != 0; not option B's medium
+-P . E  (dipole, linear)         P != 0     STIFF SC-STIFF-5 / CN-STIFF-01: P = 0 by symmetry
+(chi/2) E^2  (polarisation)      chi != 0   R2: chi = dP/dE = 0 when P == 0; and chi is a NEW coupling
+c1 |Psi|^2 F_{mu nu} F^{mu nu}   c1 != 0    absent from the pinned action; c1 is a new input (card 4.5 forbids)
+c2 |Psi|^4 F^2 , higher dim      c2 != 0    same: absent, and a new input
+------------------------------------------------------------------------------
+Every operator that would let the medium talk to a_e is either absent from the
+pinned action or carries its own coefficient. A route through one of them is a
+CONSTRUCTION, which card 4.5 forbids, and would be SC-DLS-4 at best even if allowed.
