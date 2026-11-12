@@ -1,8 +1,9 @@
 # NEXT — what is queued, running, and closed
 
-Last updated 12 November 2026 (full reconciliation against every result directory under
-`audit/gates/` at commit `36edda3`; Gate SONO closed). **Update this file at the close of every
-session.** It exists because sessions have independently invented their own gate order, and one
+Last updated 12 November 2026, afternoon (full reconciliation against every result directory under
+`audit/gates/` at `36edda3`; then five orphaned results — ICE, KL, MIX, STIFF, DL — plus the SINGLET
+ledger entry, the RATIO-OBS card and the 8 Nov VOID desk check recovered from the Mac and pushed at
+`bf04815`). **Update this file at the close of every session.** It exists because sessions have independently invented their own gate order, and one
 spent a turn treating a committed prompt as a mystery file. The previous version (14 September
 2026, Gate RATIO closed) is in git history; its queue is reconciled in §"Queue reconciliation"
 below.
@@ -10,10 +11,10 @@ below.
 ## How this version was built (12 Nov 2026)
 
 - **Source of record for "closed":** a result file under `audit/gates/<NAME>/` in the tree at
-  `36edda3`. Every row in the Closed table was read from that file — its own run date and its
+  `bf04815`. Every row in the Closed table was read from that file — its own run date and its
   own verdict line — not from memory, chat, or the Project.
 - **"Pre-registered, no result directory":** a `gate_<NAME>_prompt.md` in `audit/gates/` with a
-  `PREREG_*.sha256` line and no `<NAME>/` directory. Nine of these exist.
+  `PREREG_*.sha256` line and no `<NAME>/` directory. Eight of these exist.
 - **"Run, result not in the tree":** gates the Cold Ledger or the claude.ai Project record as run,
   whose deliverable never reached this repository. Listed so the debt is visible; their verdicts
   are quoted from where they live and are not the tree's claims.
@@ -26,11 +27,13 @@ after the gates below: GR is closed along every audited route (N, F/Fb, T, IG/BZ
 ledger); the photon is closed along every audited route and by field content (G′/PH, LINK, XI,
 PSI2, ICE, STIFF, PROMOTE, PV, QED, QED-DERIV; ledger); QM is inherited, not derived (MAD, PILOT,
 SINGLET). The numeric layer scores as fits (PRED, PRED2, MIX, FWD/STAT; FORK and FWD7 run but not
-in the tree). What survives is the void geometry (r_oct, r_tet, α₀ as a number, ξ/a = 2.3175,
+in the tree). Gate DL (15 Sep) is the one photon construction that cleared the Higgs wall — a
+conditional SC-DL-3 at CONJECTURE with confinement (SC-DL-2) as the residual risk; it is a new
+construction, not a repair of the written theory. What survives is the void geometry (r_oct, r_tet, α₀ as a number, ξ/a = 2.3175,
 the percolating network) plus one live CONJECTURE for the sphere interiors (BUBBLE_BELLS), which
 BB-ALPHA is queued to anchor. This paragraph is a reading, not a result; any gate may move it.
 
-## Closed — result committed under `audit/gates/` (34 directories at `36edda3`)
+## Closed — result committed under `audit/gates/` (39 directories at `bf04815`)
 
 | gate | run | verdict (from the result file) | deliverable |
 |---|---|---|---|
@@ -49,6 +52,11 @@ BB-ALPHA is queued to anchor. This paragraph is a reading, not a result; any gat
 | YM2 | 14 Sep | SC-YM2-4 primary: the public DOI 10.5281/zenodo.21781545 ("Complete Proof") overstates the current appendix, which disclaims a Clay-sense proof. SC-YM2-2 secondary: fixed-spacing gap essentially proven by the standard route; continuum limit open. | `gates/YM2/` |
 | JHF | 15 Sep | SC-JHF-1: App JH is not a complete, stabilised S² field theory (stabiliser cited only; Derrick; EOM one-component). | `gates/JHF/` |
 | KAUDIT | 15 Sep | SC-KAUD-1: App K Theorems T1/T2/T3 fail on the correct c/a = √2 FCC lattice; m_e not protected. | `gates/KAUDIT/` |
+| KL | 15 Sep (two runs) | Run 1 (01:04 UTC): **SC-KL-1** — no modulated S² crystal is a ground state under the geometry-fixed Faddeev/BFN energy; the uniform state is the unconditional minimum. Run 2 (06:35 UTC, fresh quarantined thread): **SC-KL-2** — a modulated crystal exists only with ≥ 1 coupling not fixed by geometry, and even then is never the ground state; SC-KL-3 provably excluded. Same physics, different code; the ledger carried SC-KL-2. | `gates/KL/` (run 1) + `gates/KL/run2_2026-09-15/` (run 2); recovered from the Mac 12 Nov |
+| ICE | 15 Sep (two runs) | **SC-ICE-1 SOFT**, both runs (11:00 and 11:43 UTC): a genuine neutral double layer on the void windows is a soft coupling (capacitor, no hard Gauss law) ⇒ ordinary lattice superfluid, single phonon, no photon; SC-ICE-2 escape unavailable (3D compact U(1) confines). | `gates/ICE/` (both runs, distinct file names); recovered 12 Nov |
+| MIX | 15 Sep | **SC-MIX-1**: none of the four correction-free mixing-angle relations forward-derives at decisive strength (sin²θ₁₃ = 3α₀ ≈ 5 bits, SC-MIX-2 motivated; θ_W falsified); numeric layer contains nothing forward-derived. | `gates/MIX/`; recovered 12 Nov |
+| STIFF | 15 Sep | **SC-STIFF-5** primary: a neutral GP condensate hosts no genuine, well-defined double layer (P = 0 by reflection symmetry); fallback SC-STIFF-1 under the Josephson reading. | `gates/STIFF/`; recovered 12 Nov |
+| DL | 15 Sep | Hypothetical-construction gate. **SC-DL-1 falsified** for this construction (Higgs/Meissner wall cleared: the double layer enters a dielectric, not a Higgs, phase); **conditional SC-DL-3 at CONJECTURE** tier, with **SC-DL-2 (confinement; photon gapped, no Coulomb phase if effectively 3D) the honest residual risk**. Audits a proposed new theory, not the written corpus. | `gates/DL/`; recovered 12 Nov — the 14 Sep and morning-of-12 Nov versions of this file said "no run located" |
 | PROMOTE | 15 Sep | SC-PROMOTE-1 (primary), SC-PROMOTE-5 (fallback): geometry selects no promotion of M beyond S¹. | `gates/PROMOTE/` |
 | CA-FLAVOUR | 16 Sep | SC-CAFLAV-1: at c/a = √2 any T_d-invariant M is block-scalar, [M_u, M_d] = 0, no physical mixing without a new T_d-breaking input. | `gates/CA-FLAVOUR/` |
 | HERM | 16 Sep | SC-HERM-1: Hermiticity needs new fermion fields; θ_QCD = 0 stays imported. | `gates/HERM/` |
@@ -62,7 +70,7 @@ BB-ALPHA is queued to anchor. This paragraph is a reading, not a result; any gat
 | CRIT2 | 8 Oct | SC-CRIT2-1 (replicated): β_∞ = 0.6150 ± 0.00125 (card convention), β_KN = 1.2300 ± 0.0025. | `gates/CRIT2/` |
 | PILOT | 9 Oct | SC-PILOT-3 (IMPORT): no-added-structure branch 2b on the GP law, 2a on the wave law, 2c by counting. | `gates/PILOT/` |
 | PLASMOID | 24 Oct | SC-PLASMOID-3 HALT: no qualifying dataset obtainable; pilot results exploratory only. SC-PLASMOID-5 open (Stenhoff 1999 unread). | `gates/PLASMOID/` |
-| SINGLET | 25 Oct | SC-SINGLET-2 (IMPORT): the singlet curve needs the signed-measure ingredients added on the written S¹ phase. | `gates/SINGLET/` |
+| SINGLET | 25 Oct | SC-SINGLET-2 (IMPORT): the singlet curve needs the signed-measure ingredients added on the written S¹ phase. Ledger entry (25 Oct, same-day re-run check) now in the tree. | `gates/SINGLET/` (+ `gate_SINGLET_LEDGER_ENTRY.md`, recovered 12 Nov) |
 | TWIST | 8 Nov (+ blind replication 9 Nov) | SC-TWIST-1, kill at Q1: no Maxwell-type term for the twist field (c_F ≤ 0), a slaved to the texture; Q2–Q4 fail; 0/4 shell properties derived. | `gates/TWIST/` (+ `replication_2026-11-09/`, unblinded addendum) |
 | BUBBLE_BELLS | 10 Nov | SC-BB-2: construction holds, with repairs (α_∞ = 1.64 ± 0.03, c_eff = 0.78 c_s, κ_ℓ ladder). Same-session, non-blind, **CONJECTURE cap**. | `gates/BUBBLE_BELLS/` |
 | BULK | 11 Nov | SC-BULK-1, all four variants: no K_BCT is a G-free output of the equation of state; every chain ends in ρ_Planck, m_P or a = ℓ_P. CN-BULK-01…07. | `gates/BULK/` |
@@ -72,7 +80,7 @@ BB-ALPHA is queued to anchor. This paragraph is a reading, not a result; any gat
 Not in this table because it is not a gate result: `gates/PT/` holds only the PT card and its
 PREREG line (result is Project-side — debt, below).
 
-## Pre-registered in the tree, no result directory (9)
+## Pre-registered in the tree, no result directory (8)
 
 | gate | card committed | state |
 |---|---|---|
@@ -83,8 +91,7 @@ PREREG line (result is Project-side — debt, below).
 | FWD7 | 11 Oct 2026 (`d169a13e…`) | **Run** 11 Oct, SC-FWD7-2 (no GO; P7 DEAD by CN-RANK-06; Zenodo pre-registration list empty) — patches 0001/0002 never applied. Debt. |
 | DYN | 10 Oct 2026 (`973815e0…`) | Analogue-gravity dynamics census. Run requested 3 Nov; **no result located** anywhere. Run or withdraw. |
 | LOG | 7 Oct 2026 | **Run** 7 Oct (SC-LOG-3; superseded by SPECTRUM/SPECTRUM2) — result is a Project doc only. Debt. |
-| KL | 15 Sep 2026 (`9ae6e37b…`) | **Run and closed** 15 Sep per the ledger (SC-KL-2; SC-KL-3 provably excluded) — "committed audit/gates/KL/ (patch to Michel)" was never applied. Debt. |
-| DL | 15 Sep 2026 (`3c05f64a…`) | Hypothetical-construction card (double-layer gauge field on the FCC void network). **No run located.** Its question was overtaken by ICE/STIFF (ledger); run or withdraw. |
+| RATIO-OBS | card written 14 Sep 2026, committed 12 Nov 2026 (`57501120…`, 9346 B; line appended to `PREREG_20260915.sha256`) | **NOT RUN.** Is an individual void radius in-principle observable? Direct finaliser of SC-RATIO-2 (CN-RATIO-07). The card sat unapplied on the Mac for two months. |
 
 ## Run, result not in the tree (deliverable debt)
 
@@ -98,29 +105,30 @@ Verdicts here are quoted from the Project docs or the Cold Ledger, not from this
 - **LOG** — 7 Oct. `claude/gate_LOG_RESULT.md`, `claude/gate_LOG_run.py`.
 - **SPECTRUM runs 1 and 2** — 7 Oct. `claude/gate_SPECTRUM_RESULT.md`,
   `claude/gate_SPECTRUM_RESULT_run2.md` (+ scripts). Only the ledger entry is in the tree.
-- **FORK, FWD7** — 11 Oct; **LATT** — 17 Oct; **KL** — 15 Sep: patches delivered, never applied
-  (see table above).
+- **FORK, FWD7** — 11 Oct; **LATT** — 17 Oct: patches delivered, never applied, and **not in
+  `~/Downloads` on 12 Nov** (FORK's was a `.diff`; the others may be on the phone). Still debt.
 - **FORK2** — card written and pre-registered 10 Nov as a patch (`PREREG_20261110_FORK2`); never
   applied, so **not in the tree and not pre-registered in any sense this file recognises**.
 - **PQCD** — card exists only as a Project draft (`claude/gate_PQCD_prompt.md`); not committed.
 - **DIPOLE** — card requested 9 Oct; no card in the tree.
-- Older chat-side gates (FWD, GEO, STAT, KND, OP, R2, P, J, MIX, ICE, STIFF, EDM, QED, QED-DERIV,
-  BC, WHY√2, LH7, R8, SYM, AM, QP, N, F/Fb, T, IG, BZ, SCR, PH, G′, U″) have no directory here;
+- Older chat-side gates (FWD, GEO, STAT, KND, OP, R2, P, J, EDM, QED, QED-DERIV, BC, WHY√2, LH7,
+  R8, SYM, AM, QP, N, F/Fb, T, IG, BZ, SCR, PH, G′, U″) have no directory here;
   their record is the Cold Ledger. `audit/desk/routeC_reconciliation.md` (+ ADDENDUM) is the one
-  piece of that work committed.
+  piece of that work committed. `audit/desk/VOID_2026-11-08/` (recovered 12 Nov) is the 8 Nov
+  session record: TWIST's first run and the VOID/HCP/gravity/light-speed desk checks, all
+  same-session CONJECTURE.
 
 ## Queued, in order
 
 1. **Run Gate BB-ALPHA** (pre-registered 10 Nov; card and run prompt as above). The one favourable
    CONJECTURE on the board depends on it.
-2. **Clear the deliverable debt in one sitting** — apply and push what already exists: FORK 0001 +
-   0002, FWD7 0001 + 0002, LATT, KL, the FORK2 card; commit PT (result + red-team), D4 (card +
-   result), LOG, SPECTRUM run 1/run 2 from the Project docs; delete `INT/README_MISSING.md` and
-   `TANH/README_MISSING.md`. Each item is a result that currently does not exist as far as this
-   tree is concerned.
+2. **Clear the remaining deliverable debt** — done 12 Nov for everything that was in `~/Downloads`
+   (ICE, KL, MIX, STIFF, DL, SINGLET ledger entry, RATIO-OBS card, VOID desk check). Still owed:
+   FORK 0001 + 0002, FWD7 0001 + 0002, LATT, the FORK2 card (find the files — phone or trash);
+   commit PT (result + red-team), D4 (card + result), LOG, SPECTRUM run 1/run 2 from the Project
+   docs. Each is a result that does not exist as far as this tree is concerned.
 3. **Gate VOID** (pre-registered 17 Oct, unrun).
 4. **Gate DYN** — run or withdraw (card 10 Oct; no run located).
-5. **Gate DL** — run or withdraw (card 15 Sep; overtaken by ICE/STIFF).
 6. **From BUBBLE_BELLS (10 Nov):** a dispersion gate (bells at the zone edge vs the O(k⁴) Lorentz
    term, CN-QED-09) and an INVENTORY-style sweep of the condensate mass m used across the corpus vs
    the implied 0.24 m_P. Both still to be carded.
@@ -133,9 +141,11 @@ Verdicts here are quoted from the Project docs or the Cold Ledger, not from this
    (SC-FWD7-2), so (b) is no longer "pre-register the six"; (c) correct the PRL C_p misprint and the
    α_s(m_Z) claim. CN-PRED-01 (One Medium App. A Eq. (15) arithmetic) still open.
 9. **Census** — resume at `tex/BCT_Appendix_KA1.tex`, next id INV-0035 (`inventory/inv_state.json`).
-10. **Gate RATIO-OBS** (proposed 14 Sep, never written): is the substrate void radius in-principle
-    observable? Direct finaliser of SC-RATIO-2 (CN-RATIO-07). Write and pre-register before running.
+10. **Gate RATIO-OBS** — now pre-registered (card `57501120…`); run in a fresh thread. Direct
+    finaliser of SC-RATIO-2 (CN-RATIO-07).
 11. **PQCD** — decide: commit and pre-register the Project draft, or drop it.
+12. Housekeeping: `PREREG_20260915.sha256` carries the DL line twice (pre-existing); harmless, fix
+    when next touched.
 
 ## Parked
 - **DIPOLE** — card never written into the tree.
@@ -149,15 +159,20 @@ Verdicts here are quoted from the Project docs or the Cold Ledger, not from this
   current debt list (item 2).
 - 14 Sep "Parked: Gate PV (prompt lost)" — PV ran 16 Sep on a new card; the old `ca214df4…` card is
   superseded, not lost.
+- Morning-of-12 Nov version: "DL — no run located" and "KL — patch never applied" — both wrong by the
+  afternoon: the patches were in `~/Downloads` all along, found by testing every `.patch`/`.diff`
+  there with `git apply --check` against the tree. Do that sweep before declaring a result lost.
 - Items 3, 5, 6 carried as 8, 9, 10.
 
 ## Standing rules, learned the hard way
 - Commit deliverables, scripts and prompts to `audit/` **at close, not at leisure**. On 14 Sep four
   closed gates (C1, RANK, MP, PRED) had no committed deliverable and RANK's committed file was
   0 bytes. This file was wrong for three days.
-- **A patch that is never applied is a result that does not exist.** KL (15 Sep), FORK and FWD7
-  (11 Oct) and LATT (17 Oct) were all run and none reached the tree; this file was wrong for two
-  months. "Pushed" is the close of a gate, not "delivered". Verify from a fresh clone.
+- **A patch that is never applied is a result that does not exist.** ICE, KL, MIX, STIFF, DL (15
+  Sep), FORK and FWD7 (11 Oct) and LATT (17 Oct) were all run and none reached the tree for two
+  months. "Pushed" is the close of a gate, not "delivered". Verify from a fresh clone. When a
+  `.patch` lands in Downloads, apply it the same day; a periodic `git apply --check` sweep of
+  Downloads catches the rest.
 - The claude.ai Project is a mirror, not the record. Anything that matters is in this tree.
 - Gate prompts are pre-registered: commit, pin by commit SHA, fetch by raw URL, hash before reading.
   The `PREREG_*.sha256` line in the tree is the authority — a run prompt's digest can be truncated
