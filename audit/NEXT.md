@@ -3,7 +3,8 @@
 Last updated 12 November 2026, afternoon (full reconciliation against every result directory under
 `audit/gates/` at `36edda3`; then five orphaned results — ICE, KL, MIX, STIFF, DL — plus the SINGLET
 ledger entry, the RATIO-OBS card and the 8 Nov VOID desk check recovered from the Mac and pushed at
-`bf04815`). **Update this file at the close of every session.** It exists because sessions have independently invented their own gate order, and one
+`bf04815`); evening: Gate DL-STIFF closed (`d67f5ca`) with a post-gate note (`35d5898`), and Gate
+DL-BETA pre-registered (`bf7d97a`), all verified from a fresh fetch of `main`. **Update this file at the close of every session.** It exists because sessions have independently invented their own gate order, and one
 spent a turn treating a committed prompt as a mystery file. The previous version (14 September
 2026, Gate RATIO closed) is in git history; its queue is reconciled in §"Queue reconciliation"
 below.
@@ -14,7 +15,8 @@ below.
   `bf04815`. Every row in the Closed table was read from that file — its own run date and its
   own verdict line — not from memory, chat, or the Project.
 - **"Pre-registered, no result directory":** a `gate_<NAME>_prompt.md` in `audit/gates/` with a
-  `PREREG_*.sha256` line and no `<NAME>/` directory. Eight of these exist.
+  `PREREG_*.sha256` line and no `<NAME>/` directory. Eight of these existed at `bf04815`; DL-BETA
+  (12 Nov) makes nine, its directory holding only the card-thread desk check.
 - **"Run, result not in the tree":** gates the Cold Ledger or the claude.ai Project record as run,
   whose deliverable never reached this repository. Listed so the debt is visible; their verdicts
   are quoted from where they live and are not the tree's claims.
@@ -29,11 +31,13 @@ PSI2, ICE, STIFF, PROMOTE, PV, QED, QED-DERIV; ledger); QM is inherited, not der
 SINGLET). The numeric layer scores as fits (PRED, PRED2, MIX, FWD/STAT; FORK and FWD7 run but not
 in the tree). Gate DL (15 Sep) is the one photon construction that cleared the Higgs wall — a
 conditional SC-DL-3 at CONJECTURE with confinement (SC-DL-2) as the residual risk; it is a new
-construction, not a repair of the written theory. What survives is the void geometry (r_oct, r_tet, α₀ as a number, ξ/a = 2.3175,
+construction, not a repair of the written theory. DL-STIFF (12 Nov, CONJECTURE) found that nothing
+fixes that construction's coupling β, so it is at least a three-input theory whose geometric content
+is the lattice itself; DL-BETA (pre-registered) measures where its Coulomb phase begins. What survives is the void geometry (r_oct, r_tet, α₀ as a number, ξ/a = 2.3175,
 the percolating network) plus one live CONJECTURE for the sphere interiors (BUBBLE_BELLS), which
 BB-ALPHA is queued to anchor. This paragraph is a reading, not a result; any gate may move it.
 
-## Closed — result committed under `audit/gates/` (39 directories at `bf04815`)
+## Closed — result committed under `audit/gates/` (39 directories at `bf04815`; DLSTIFF added 12 Nov at `d67f5ca`)
 
 | gate | run | verdict (from the result file) | deliverable |
 |---|---|---|---|
@@ -75,15 +79,17 @@ BB-ALPHA is queued to anchor. This paragraph is a reading, not a result; any gat
 | BUBBLE_BELLS | 10 Nov | SC-BB-2: construction holds, with repairs (α_∞ = 1.64 ± 0.03, c_eff = 0.78 c_s, κ_ℓ ladder). Same-session, non-blind, **CONJECTURE cap**. | `gates/BUBBLE_BELLS/` |
 | BULK | 11 Nov | SC-BULK-1, all four variants: no K_BCT is a G-free output of the equation of state; every chain ends in ρ_Planck, m_P or a = ℓ_P. CN-BULK-01…07. | `gates/BULK/` |
 | SONO | 12 Nov | SC-SONO-1: Letter 110's #154/#155 reproduce arithmetically, but both comparison values are the letter's own (200 nm = water's absorption edge; no SBSL peak at 350–370 nm; 380 nm not a biophoton band). Net −6.0 / −9.5 bits under PRED2. CN-SONO-01…13. | `gates/SONO/` |
+| DL-STIFF | 12 Nov | Hypothetical-construction gate (DL option B). **SC-DLS-2 (free input)**: R1–R5 and four routes found in the open R6 slot all closed by their pre-registered kill tests; the plaquette coupling β of the added link field is a parameter. Load-bearing: CN-DLS-01 (a medium neutral under a_e contributes nothing to the effective action for a, so β_eff = β_bare) and CN-DLS-02 (the only coupling-free way for the medium to fix β is q ≠ 0, which is the Meissner mass). DL theory ≥ 3 inputs (Q5). **CONJECTURE**: cap set by card §8 and the as-run prompt; the binding requirement is the blind replication (below). Post-gate note PGN-01…07: App E.1 §3.3 *assumes* J = 1/(4πα₀) ("Taking …"), so R6d closes as an assertion. | `gates/DLSTIFF/` (result `d67f5ca`, post-gate note `35d5898`) |
 | LAM, LAMBDA | — | run elsewhere; cross-audited from the PSI2 thread. | `gates/crossaudits/` |
 
 Not in this table because it is not a gate result: `gates/PT/` holds only the PT card and its
 PREREG line (result is Project-side — debt, below).
 
-## Pre-registered in the tree, no result directory (8)
+## Pre-registered in the tree, no result directory (9)
 
 | gate | card committed | state |
 |---|---|---|
+| **DL-BETA** | 12 Nov 2026 (`eae34f3b…`, `PREREG_20261112_DLBETA`; commit `bf7d97a`) | **Run requested 12 Nov** (see "Running"). β_c of compact U(1), Wilson action, on the FCC void network × time; CRIT2's method under LATT's conventions; Z4 calibration is the halt criterion. `gates/DLBETA/` holds only the card-thread desk check (49 assertions; no Monte Carlo in β ∈ [0.2, 5]; loops forced = rhombic faces of the FCC Voronoi tessellation; 1/e² = β/√2 at β_t = β_s). |
 | **BBALPHA** | 10 Nov 2026 (`95172ce8…`, `PREREG_20261110_BBALPHA`) | **NOT RUN. Next to run** — fresh thread, memory and past-chats off, commit-pinned raw URL. Anchors BUBBLE_BELLS' α_∞ = 1.64 ± 0.03 by literature (Sangani–Acrivos 1983, Cheng–Torquato 1997) + an independent method. |
 | VOID | 17 Oct 2026 (`e04f69db…`) | Pre-registered, unrun (do the void-volume / void-eigenvalue formulas survive the true concave void geometry?). |
 | LATT | 17 Oct 2026 (`1dccde5b…`) | **Run** per the run thread (17 Oct; ~11.7 h; verdict SC-LATT-1 for the β_∞ table, transition order undetermined, CN-LATT-01/02) — result + patch never applied. Debt. |
@@ -117,6 +123,20 @@ Verdicts here are quoted from the Project docs or the Cold Ledger, not from this
   piece of that work committed. `audit/desk/VOID_2026-11-08/` (recovered 12 Nov) is the 8 Nov
   session record: TWIST's first run and the VOID/HCP/gravity/light-speed desk checks, all
   same-session CONJECTURE.
+
+## Running, and ready to run alongside (12 Nov, evening)
+
+- **Gate DL-BETA** — run requested 12 Nov; fresh thread, run prompt pinned to `bf7d97a` (card
+  `eae34f3b…`, PREREG `941aaf10…`). Multi-hour (≈ 3.3 core-hours). When the patch lands: apply it the
+  same day, verify from a fresh clone, move the row to Closed.
+- **DL-STIFF blind replication** — ready, independent of DL-BETA. Prompt drafted 12 Nov in the
+  DL-STIFF thread. It fetches `9993a23` alone (`git fetch --depth 1`), so the first run's result
+  cannot be seen, and delivers under `gates/DLSTIFF/REP2/`. Fresh thread, past chats and memory off.
+  The DL-STIFF thread is disqualified as replicator (post-gate reads, listed in the note).
+- **Correction, recorded here because the source is hash-pinned:** `audit/scoping/DL_scoping_2026-11-12.md`
+  §4 credits the App E.1 §3.3 arithmetic finding to Gate QED (CN-QED-04). The section was audited by
+  **Gate LINK** (CN-LINK-03/08/09). The scoping note is pinned by both DL-STIFF and DL-BETA: do not
+  edit it.
 
 ## Queued, in order
 
@@ -195,6 +215,13 @@ Verdicts here are quoted from the Project docs or the Cold Ledger, not from this
   PDFs are tracked that way; Letter 110 was added so for SONO).
 - Revise notices **clause by clause**. An "unaffected" list is a set of claims.
 - A gate prompt must be able to return a favourable verdict. If it cannot, it is not a gate.
+- **A blind replication of a gate whose result is in the tree fetches the pre-registration commit
+  alone**: `git fetch --depth 1 origin <sha>` brings one commit and no later objects (checked 12 Nov).
+  A full clone carries the first run's result in its history.
+- **While a blind replication is pending, keep that gate's result out of the claude.ai Project**, and
+  anything that hints at it (this file included). Replication threads run inside the Project.
+- Getting a patch from the phone to the Mac: the claude.ai share sheet sends the file card's *text*,
+  not the file (12 Nov). Download it from the chat on the Mac, or have it put in Drive and `curl` it.
 
 ---
 
