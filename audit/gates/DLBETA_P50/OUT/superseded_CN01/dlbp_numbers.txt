@@ -1,0 +1,90 @@
+# Gate DL-BETA P50 -- dlbp_numbers.txt (written before any comparison with the prior gates)
+# beta in card convention; 1/e^2 = beta/sqrt2 on the void complex. f = (S - E_end)/(S - W).
+K2 void_b0.1_hot: value = 0.049794; target = 0.049938; dev = -0.287%; pass = yes; bit-identical to REP1 series = yes
+K2 void_b20_cold: value = 0.014361; target = 0.014258; dev = +0.724%; pass = yes; bit-identical to REP1 series = yes
+K2 z4_b0.1_hot: value = 0.049866; target = 0.049938; dev = -0.143%; pass = yes; bit-identical to REP1 series = no
+K2 z4_b20_cold: value = 0.012527; target = 0.012451; dev = +0.610%; pass = yes; bit-identical to REP1 series = no
+[z4_8] z4 L = 8, V = 4096
+  S(beta) = 1.894636 + (-1.474780) beta ; resid [-0.00067, 0.00052, 0.00099, -0.00083]
+  W(beta) = 1.129371 + (-0.782864) beta ; resid [0.00016, -6e-05, -0.00035, 0.00025]
+  branch hot  beta 0.9800 seed 3073152: E = 0.44868 +- 0.00080; span 0.01344 <= 0.25 G 0.02180: ok
+  branch hot  beta 0.9850 seed 3073202: E = 0.44250 +- 0.00077; span 0.01500 <= 0.25 G 0.02093: ok
+  branch hot  beta 0.9900 seed 3073252: E = 0.43559 +- 0.00111; span 0.01806 <= 0.25 G 0.02007: ok
+  branch hot  beta 0.9950 seed 3073302: E = 0.42640 +- 0.00121; span 0.01643 <= 0.25 G 0.01920: ok
+  branch cold beta 1.0200 seed 3073553: E = 0.33101 +- 0.00032; span 0.00564 <= 0.25 G 0.01488: ok
+  branch cold beta 1.0250 seed 3073603: E = 0.32688 +- 0.00039; span 0.00639 <= 0.25 G 0.01401: ok
+  branch cold beta 1.0300 seed 3073653: E = 0.32267 +- 0.00033; span 0.00630 <= 0.25 G 0.01315: ok
+  branch cold beta 1.0350 seed 3073703: E = 0.31936 +- 0.00038; span 0.00562 <= 0.25 G 0.01228: ok
+  integrity = ok (hot monotone True, cold monotone True, window gaps > 0 True)
+  beta 1.0000: S 0.41986 W 0.34651; phi = 0.0591 +- 0.0228 (n 4); frac_weak 0.000; f = [0.0332, 0.1229, 0.0204, 0.0599]
+  beta 1.0025: S 0.41617 W 0.34455; phi = 0.1077 +- 0.0296 (n 4); frac_weak 0.000; f = [0.1831, 0.0527, 0.0691, 0.1258]
+  beta 1.0050: S 0.41248 W 0.34259; phi = 0.2985 +- 0.1846 (n 4); frac_weak 0.250; f = [0.0477, 0.211, 0.8425, 0.0926]
+  beta 1.0075: S 0.40880 W 0.34064; phi = 0.6505 +- 0.1101 (n 4); frac_weak 0.750; f = [0.7476, 0.3463, 0.8592, 0.649]
+  beta 1.0100: S 0.40511 W 0.33868; phi = 0.8934 +- 0.0167 (n 4); frac_weak 1.000; f = [0.8802, 0.8824, 0.9427, 0.8685]
+  grid = [1.0000, 1.0100]; extensions = []; bracketed = yes
+  beta_50 = 1.00640; w = 0.00299; fit_ok = True; sigma_boot = 0.00059; sigma = 0.00070; boot failures 0/1000
+  check: interp crossing(s) of phi = [1.00643]; frac_weak crossing(s) = [1.00625]; beta_50(mid, sweeps 1050-1500) = 1.00703; drift = -0.00064
+[z4_12] z4 L = 12, V = 20736
+  S(beta) = 2.023483 + (-1.605253) beta ; resid [-0.00049, 0.00043, 0.00062, -0.00055]
+  W(beta) = 1.216093 + (-0.866787) beta ; resid [0.00018, -0.00014, -0.00027, 0.00023]
+  branch hot  beta 0.9800 seed 3104828: E = 0.44984 +- 0.00031; span 0.00663 <= 0.25 G 0.02092: ok
+  branch hot  beta 0.9850 seed 3104878: E = 0.44274 +- 0.00037; span 0.00569 <= 0.25 G 0.02000: ok
+  branch hot  beta 0.9900 seed 3104928: E = 0.43490 +- 0.00054; span 0.00798 <= 0.25 G 0.01908: ok
+  branch hot  beta 0.9950 seed 3104978: E = 0.42570 +- 0.00050; span 0.00846 <= 0.25 G 0.01815: ok
+  branch cold beta 1.0200 seed 3105229: E = 0.33215 +- 0.00020; span 0.00299 <= 0.25 G 0.01354: ok
+  branch cold beta 1.0250 seed 3105279: E = 0.32749 +- 0.00026; span 0.00384 <= 0.25 G 0.01262: ok
+  branch cold beta 1.0300 seed 3105329: E = 0.32304 +- 0.00018; span 0.00320 <= 0.25 G 0.01169: ok
+  branch cold beta 1.0350 seed 3105379: E = 0.31919 +- 0.00015; span 0.00237 <= 0.25 G 0.01077: ok
+  integrity = ok (hot monotone True, cold monotone True, window gaps > 0 True)
+  beta 1.0050: S 0.41020 W 0.34497; phi = 0.1319 +- 0.0164 (n 4); frac_weak 0.000; f = [0.0885, 0.1612, 0.1529, 0.1248]
+  beta 1.0075: S 0.40619 W 0.34280; phi = 0.1995 +- 0.0112 (n 4); frac_weak 0.000; f = [0.1698, 0.1962, 0.2103, 0.2218]
+  beta 1.0100: S 0.40218 W 0.34064; phi = 0.3114 +- 0.0380 (n 4); frac_weak 0.000; f = [0.2655, 0.2553, 0.421, 0.3038]
+  beta 1.0125: S 0.39816 W 0.33847; phi = 0.8957 +- 0.0211 (n 4); frac_weak 1.000; f = [0.9258, 0.8852, 0.9312, 0.8405]
+  beta 1.0150: S 0.39415 W 0.33630; phi = 0.9721 +- 0.0077 (n 4); frac_weak 1.000; f = [0.9777, 0.9493, 0.9788, 0.9827]
+  grid = [1.0050, 1.0150]; extensions = []; bracketed = yes
+  beta_50 = 1.01045; w = 0.00236; fit_ok = True; sigma_boot = 0.00020; sigma = 0.00070; boot failures 0/1000
+  check: interp crossing(s) of phi = [1.01081]; frac_weak crossing(s) = [1.01125]; beta_50(mid, sweeps 1050-1500) = 1.01043; drift = 0.00002
+[void_6] void L = 6, V = 3888
+  S(beta) = 1.780576 + (-1.156503) beta ; resid [-0.0002, -0.00023, 0.00105, -0.00062]
+  W(beta) = 1.053871 + (-0.599137) beta ; resid [0.00012, -0.00012, -0.00014, 0.00013]
+  branch hot  beta 1.2300 seed 4059814: E = 0.35788 +- 0.00032; span 0.00584 <= 0.25 G 0.01029: ok
+  branch hot  beta 1.2350 seed 4059864: E = 0.35207 +- 0.00025; span 0.00461 <= 0.25 G 0.00959: ok
+  branch hot  beta 1.2400 seed 4059914: E = 0.34756 +- 0.00031; span 0.00507 <= 0.25 G 0.00889: ok
+  branch hot  beta 1.2450 seed 4059964: E = 0.34011 +- 0.00038; span 0.00640 <= 0.25 G 0.00820: ok
+  branch cold beta 1.2650 seed 4060165: E = 0.29609 +- 0.00016; span 0.00268 <= 0.25 G 0.00541: ok
+  branch cold beta 1.2700 seed 4060215: E = 0.29285 +- 0.00015; span 0.00232 <= 0.25 G 0.00471: ok
+  branch cold beta 1.2750 seed 4060265: E = 0.28984 +- 0.00012; span 0.00198 <= 0.25 G 0.00402: ok
+  branch cold beta 1.2800 seed 4060315: E = 0.28711 +- 0.00012; span 0.00179 <= 0.25 G 0.00332: ok
+  integrity = ok (hot monotone True, cold monotone True, window gaps > 0 True)
+  beta 1.2525: S 0.33206 W 0.30345; phi = 0.1584 +- 0.0116 (n 6); frac_weak 0.000; f = [0.1417, 0.1377, 0.2088, 0.159, 0.1703, 0.1328]
+  beta 1.2550: S 0.32916 W 0.30195; phi = 0.2016 +- 0.0166 (n 6); frac_weak 0.000; f = [0.256, 0.1474, 0.2359, 0.1723, 0.2127, 0.1856]
+  beta 1.2575: S 0.32627 W 0.30046; phi = 0.3577 +- 0.0602 (n 6); frac_weak 0.167; f = [0.2517, 0.4375, 0.4572, 0.2225, 0.2139, 0.5635]
+  beta 1.2600: S 0.32338 W 0.29896; phi = 0.8141 +- 0.0690 (n 6); frac_weak 1.000; f = [0.7054, 0.9687, 0.8693, 0.8642, 0.5263, 0.9505]
+  beta 1.2625: S 0.32049 W 0.29746; phi = 0.9782 +- 0.0169 (n 6); frac_weak 1.000; f = [1.0368, 0.9666, 0.9806, 0.9929, 0.9833, 0.9091]
+  grid = [1.2525, 1.2625]; extensions = []; bracketed = yes
+  beta_50 = 1.25784; w = 0.00305; fit_ok = True; sigma_boot = 0.00032; sigma = 0.00070; boot failures 0/1000
+  check: interp crossing(s) of phi = [1.25828]; frac_weak crossing(s) = [1.2585]; beta_50(mid, sweeps 1050-1500) = 1.25804; drift = -0.00020
+[void_8] void L = 8, V = 12288
+  S(beta) = 1.804129 + (-1.175714) beta ; resid [-0.00032, 0.00033, 0.0003, -0.00031]
+  W(beta) = 1.057522 + (-0.601924) beta ; resid [0.00016, -0.00012, -0.00023, 0.0002]
+  branch hot  beta 1.2300 seed 4075652: E = 0.35768 +- 0.00013; span 0.00222 <= 0.25 G 0.01021: ok
+  branch hot  beta 1.2350 seed 4075702: E = 0.35245 +- 0.00017; span 0.00261 <= 0.25 G 0.00949: ok
+  branch hot  beta 1.2400 seed 4075752: E = 0.34654 +- 0.00015; span 0.00246 <= 0.25 G 0.00878: ok
+  branch hot  beta 1.2450 seed 4075802: E = 0.34006 +- 0.00018; span 0.00304 <= 0.25 G 0.00806: ok
+  branch cold beta 1.2650 seed 4076003: E = 0.29625 +- 0.00014; span 0.00239 <= 0.25 G 0.00519: ok
+  branch cold beta 1.2700 seed 4076053: E = 0.29296 +- 0.00008; span 0.00125 <= 0.25 G 0.00447: ok
+  branch cold beta 1.2750 seed 4076103: E = 0.28984 +- 0.00008; span 0.00132 <= 0.25 G 0.00376: ok
+  branch cold beta 1.2800 seed 4076153: E = 0.28725 +- 0.00005; span 0.00101 <= 0.25 G 0.00304: ok
+  integrity = ok (hot monotone True, cold monotone True, window gaps > 0 True)
+  beta 1.2525: S 0.33155 W 0.30361; phi = 0.1088 +- 0.0161 (n 6); frac_weak 0.000; f = [0.0798, 0.1262, 0.1691, 0.0603, 0.0914, 0.1262]
+  beta 1.2550: S 0.32861 W 0.30211; phi = 0.2127 +- 0.0161 (n 6); frac_weak 0.000; f = [0.1713, 0.1823, 0.2337, 0.1909, 0.2209, 0.2773]
+  beta 1.2575: S 0.32567 W 0.30060; phi = 0.3791 +- 0.0311 (n 6); frac_weak 0.000; f = [0.482, 0.3743, 0.3417, 0.3285, 0.459, 0.2892]
+  beta 1.2600: S 0.32273 W 0.29910; phi = 0.8334 +- 0.0602 (n 6); frac_weak 1.000; f = [0.5492, 0.9053, 0.9076, 0.7946, 0.9248, 0.9192]
+  beta 1.2625: S 0.31979 W 0.29759; phi = 0.9701 +- 0.0067 (n 6); frac_weak 1.000; f = [0.9797, 0.9574, 0.9829, 0.9754, 0.9427, 0.9824]
+  grid = [1.2525, 1.2625]; extensions = []; bracketed = yes
+  beta_50 = 1.25775; w = 0.00294; fit_ok = True; sigma_boot = 0.00018; sigma = 0.00070; boot failures 0/1000
+  check: interp crossing(s) of phi = [1.25817]; frac_weak crossing(s) = [1.25875]; beta_50(mid, sweeps 1050-1500) = 1.25799; drift = -0.00024
+extrapolation void (L = 6, 8): k = 0.4629; beta_inf = 1.25771; sigma_inf = 0.00107; shift = -0.00004; U = 0.00107
+extrapolation Z4 (L = 8, 12): k = 0.2462; beta_inf = 1.01144; sigma_inf = 0.00089; shift = +0.00100; U = 0.00134
+RESULT beta_c = 1.25771 +- 0.00107 (card convention); 1/e^2_c = 0.88933 +- 0.00076
+Z4 calibration: beta_inf(Z4) - 1.0111331 = +0.00031 = +0.23 U

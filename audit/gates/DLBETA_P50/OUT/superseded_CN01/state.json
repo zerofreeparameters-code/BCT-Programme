@@ -1,0 +1,48 @@
+{
+ "ext": {
+  "z4_8": [],
+  "z4_12": [],
+  "void_6": [],
+  "void_8": []
+ },
+ "K1": {
+  "dlbr_sim_sha256": "560c256fe391bfa7b0a2bf4e5abc520f8179b75647ece51006b5cba82425c9e6",
+  "expected": "560c256fe391bfa7b0a2bf4e5abc520f8179b75647ece51006b5cba82425c9e6",
+  "pass": true
+ },
+ "K2": {
+  "void_b0.1_hot": {
+   "value": 0.04979421875009671,
+   "target": 0.04993760398793892,
+   "dev": -0.002871287895127028,
+   "pass": true,
+   "seed": 716838,
+   "bit_identical": true
+  },
+  "void_b20_cold": {
+   "value": 0.01436098753422815,
+   "target": 0.0142578125,
+   "dev": 0.007236385962303249,
+   "pass": true,
+   "seed": 915839,
+   "bit_identical": true
+  },
+  "z4_b0.1_hot": {
+   "value": 0.04986617785895209,
+   "target": 0.04993760398793892,
+   "dev": -0.0014303074894038703,
+   "pass": true,
+   "seed": 332676,
+   "bit_identical": false
+  },
+  "z4_b20_cold": {
+   "value": 0.012527064694023898,
+   "target": 0.012451171875,
+   "dev": 0.006095235033762414,
+   "pass": true,
+   "seed": 531677,
+   "bit_identical": false
+  }
+ },
+ "complete": "2026-11-13T03:53:03"
+}

@@ -1,0 +1,10 @@
+audit/gates/DLBETA_P50_prereg/dlbp_driver.py: OK
+audit/gates/DLBETA_P50_prereg/dlbp_analysis.py: OK
+audit/gates/DLBETA_REP1/run/dlbr_sim.py: OK
+audit/gates/DLBETA_REP1/out/series/k3_void_L2_b0.1_hot.npz: OK
+audit/gates/DLBETA_REP1/out/series/k3_void_L2_b20_cold.npz: OK
+audit/gates/DLBETA_REP1/out/series/k3_z4_L4_b0.1_hot.npz: OK
+audit/gates/DLBETA_REP1/out/series/k3_z4_L4_b20_cold.npz: OK
+audit/gates/gate_DLBETA_prompt.md: OK
+audit/gates/DLBETA_REP1/gate_DLBETA_REP1_RESULT.md: OK
+audit/gates/DLBETA/gate_DLBETA_RESULT.md: OK

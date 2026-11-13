@@ -1,0 +1,6 @@
+K1 True; K2 True; K3 (Z4 L=12 beta_50 = 1.01045 in [1.0051, 1.0171], clean, bracketed, fit) True
+void L=6, L=8 clean, bracketed, fit: True
+beta_c = 1.25771 +- 0.00107; U <= 0.002: True
+beta_c +- 2U = [1.25556, 1.25986]; overlaps Gate DL-BETA [1.24875, 1.25875]: True; overlaps REP1 [1.25625, 1.26125]: True
+distance of beta_c to Gate DL-BETA interval = 0.00000 (0.00 U); to REP1 interval = 0.00000 (0.00 U)
+VERDICT SC-DLBP-1

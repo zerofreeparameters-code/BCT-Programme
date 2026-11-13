@@ -1,0 +1,156 @@
+2026-11-12T23:33:34 driver start; workers 2; dry run False
+2026-11-12T23:33:34 K1 dlbr_sim.py sha256 560c256fe391bfa7b0a2bf4e5abc520f8179b75647ece51006b5cba82425c9e6 -> PASS
+2026-11-12T23:33:34 submitting 136 fixed tasks
+2026-11-12T23:43:26   done void_8_b012525000_mixed_c0 seed 4075879 591s (197.0 ms/sweep) E_end=0.32932
+2026-11-12T23:43:27   done void_8_b012525000_mixed_c1 seed 4175879 591s (197.2 ms/sweep) E_end=0.32802
+2026-11-12T23:53:21   done void_8_b012525000_mixed_c2 seed 4275879 595s (198.3 ms/sweep) E_end=0.32682
+2026-11-12T23:53:22   done void_8_b012525000_mixed_c3 seed 4375879 595s (198.4 ms/sweep) E_end=0.32986
+2026-11-13T00:03:19   done void_8_b012525000_mixed_c4 seed 4475879 598s (199.3 ms/sweep) E_end=0.32899
+2026-11-13T00:03:21   done void_8_b012525000_mixed_c5 seed 4575879 599s (199.7 ms/sweep) E_end=0.32802
+2026-11-13T00:13:20   done void_8_b012550000_mixed_c0 seed 4075904 601s (200.5 ms/sweep) E_end=0.32407
+2026-11-13T00:13:22   done void_8_b012550000_mixed_c1 seed 4175904 601s (200.2 ms/sweep) E_end=0.32378
+2026-11-13T00:23:18   done void_8_b012550000_mixed_c2 seed 4275904 598s (199.4 ms/sweep) E_end=0.32242
+2026-11-13T00:23:21   done void_8_b012550000_mixed_c3 seed 4375904 599s (199.7 ms/sweep) E_end=0.32355
+2026-11-13T00:33:22   done void_8_b012550000_mixed_c4 seed 4475904 603s (201.1 ms/sweep) E_end=0.32275
+2026-11-13T00:33:26   done void_8_b012550000_mixed_c5 seed 4575904 605s (201.8 ms/sweep) E_end=0.32126
+2026-11-13T00:43:17   done void_8_b012575000_mixed_c0 seed 4075929 596s (198.5 ms/sweep) E_end=0.31359
+2026-11-13T00:43:21   done void_8_b012575000_mixed_c1 seed 4175929 594s (198.1 ms/sweep) E_end=0.31629
+2026-11-13T00:53:23   done void_8_b012575000_mixed_c2 seed 4275929 606s (201.9 ms/sweep) E_end=0.31710
+2026-11-13T00:53:26   done void_8_b012575000_mixed_c3 seed 4375929 606s (201.9 ms/sweep) E_end=0.31743
+2026-11-13T01:03:35   done void_8_b012575000_mixed_c4 seed 4475929 612s (203.9 ms/sweep) E_end=0.31416
+2026-11-13T01:03:38   done void_8_b012575000_mixed_c5 seed 4575929 612s (204.0 ms/sweep) E_end=0.31842
+2026-11-13T01:14:10   done void_8_b012600000_mixed_c0 seed 4075954 635s (211.7 ms/sweep) E_end=0.30975
+2026-11-13T01:14:15   done void_8_b012600000_mixed_c1 seed 4175954 637s (212.3 ms/sweep) E_end=0.30134
+2026-11-13T01:24:39   done void_8_b012600000_mixed_c2 seed 4275954 629s (209.7 ms/sweep) E_end=0.30128
+2026-11-13T01:24:46   done void_8_b012600000_mixed_c3 seed 4375954 631s (210.4 ms/sweep) E_end=0.30395
+2026-11-13T01:34:49   done void_8_b012600000_mixed_c4 seed 4475954 610s (203.3 ms/sweep) E_end=0.30088
+2026-11-13T01:34:53   done void_8_b012600000_mixed_c5 seed 4575954 607s (202.3 ms/sweep) E_end=0.30101
+2026-11-13T01:45:03   done void_8_b012625000_mixed_c0 seed 4075979 614s (204.8 ms/sweep) E_end=0.29804
+2026-11-13T01:45:09   done void_8_b012625000_mixed_c1 seed 4175979 616s (205.2 ms/sweep) E_end=0.29854
+2026-11-13T01:55:10   done void_8_b012625000_mixed_c2 seed 4275979 607s (202.3 ms/sweep) E_end=0.29797
+2026-11-13T01:55:13   done void_8_b012625000_mixed_c3 seed 4375979 604s (201.3 ms/sweep) E_end=0.29814
+2026-11-13T02:05:18   done void_8_b012625000_mixed_c4 seed 4475979 608s (202.6 ms/sweep) E_end=0.29886
+2026-11-13T02:05:19   done void_8_b012625000_mixed_c5 seed 4575979 606s (202.0 ms/sweep) E_end=0.29798
+2026-11-13T02:12:04   done void_8_b012300000_hot_c0 seed 4075652 406s (203.0 ms/sweep) E=0.35768
+2026-11-13T02:12:06   done void_8_b012350000_hot_c0 seed 4075702 407s (203.4 ms/sweep) E=0.35245
+2026-11-13T02:18:45   done void_8_b012400000_hot_c0 seed 4075752 402s (200.8 ms/sweep) E=0.34654
+2026-11-13T02:18:47   done void_8_b012450000_hot_c0 seed 4075802 401s (200.7 ms/sweep) E=0.34006
+2026-11-13T02:25:17   done void_8_b012650000_cold_c0 seed 4076003 392s (196.0 ms/sweep) E=0.29625
+2026-11-13T02:25:18   done void_8_b012700000_cold_c0 seed 4076053 391s (195.7 ms/sweep) E=0.29296
+2026-11-13T02:31:52   done void_8_b012750000_cold_c0 seed 4076103 395s (197.6 ms/sweep) E=0.28984
+2026-11-13T02:31:53   done void_8_b012800000_cold_c0 seed 4076153 395s (197.3 ms/sweep) E=0.28725
+2026-11-13T02:35:01   done void_6_b012525000_mixed_c0 seed 4060041 188s (62.5 ms/sweep) E_end=0.32800
+2026-11-13T02:35:01   done void_6_b012525000_mixed_c1 seed 4160041 188s (62.5 ms/sweep) E_end=0.32812
+2026-11-13T02:38:13   done void_6_b012525000_mixed_c2 seed 4260041 192s (64.1 ms/sweep) E_end=0.32608
+2026-11-13T02:38:14   done void_6_b012525000_mixed_c3 seed 4360041 193s (64.3 ms/sweep) E_end=0.32751
+2026-11-13T02:41:26   done void_6_b012525000_mixed_c4 seed 4460041 193s (64.3 ms/sweep) E_end=0.32719
+2026-11-13T02:41:29   done void_6_b012525000_mixed_c5 seed 4560041 195s (65.0 ms/sweep) E_end=0.32826
+2026-11-13T02:44:36   done void_6_b012550000_mixed_c0 seed 4060066 190s (63.4 ms/sweep) E_end=0.32220
+2026-11-13T02:44:40   done void_6_b012550000_mixed_c1 seed 4160066 191s (63.6 ms/sweep) E_end=0.32515
+2026-11-13T02:47:43   done void_6_b012550000_mixed_c2 seed 4260066 187s (62.3 ms/sweep) E_end=0.32275
+2026-11-13T02:47:47   done void_6_b012550000_mixed_c3 seed 4360066 187s (62.3 ms/sweep) E_end=0.32448
+2026-11-13T02:50:54   done void_6_b012550000_mixed_c4 seed 4460066 191s (63.8 ms/sweep) E_end=0.32338
+2026-11-13T02:50:57   done void_6_b012550000_mixed_c5 seed 4560066 190s (63.2 ms/sweep) E_end=0.32411
+2026-11-13T02:54:03   done void_6_b012575000_mixed_c0 seed 4060091 189s (63.0 ms/sweep) E_end=0.31977
+2026-11-13T02:54:05   done void_6_b012575000_mixed_c1 seed 4160091 188s (62.8 ms/sweep) E_end=0.31498
+2026-11-13T02:57:10   done void_6_b012575000_mixed_c2 seed 4260091 186s (62.1 ms/sweep) E_end=0.31447
+2026-11-13T02:57:12   done void_6_b012575000_mixed_c3 seed 4360091 187s (62.3 ms/sweep) E_end=0.32053
+2026-11-13T03:00:16   done void_6_b012575000_mixed_c4 seed 4460091 186s (62.1 ms/sweep) E_end=0.32075
+2026-11-13T03:00:18   done void_6_b012575000_mixed_c5 seed 4560091 186s (62.1 ms/sweep) E_end=0.31173
+2026-11-13T03:03:23   done void_6_b012600000_mixed_c0 seed 4060116 187s (62.3 ms/sweep) E_end=0.30615
+2026-11-13T03:03:25   done void_6_b012600000_mixed_c1 seed 4160116 187s (62.4 ms/sweep) E_end=0.29972
+2026-11-13T03:06:34   done void_6_b012600000_mixed_c2 seed 4260116 192s (63.9 ms/sweep) E_end=0.30215
+2026-11-13T03:06:35   done void_6_b012600000_mixed_c3 seed 4360116 190s (63.3 ms/sweep) E_end=0.30228
+2026-11-13T03:09:47   done void_6_b012600000_mixed_c5 seed 4560116 192s (63.9 ms/sweep) E_end=0.30017
+2026-11-13T03:09:48   done void_6_b012600000_mixed_c4 seed 4460116 193s (64.4 ms/sweep) E_end=0.31053
+2026-11-13T03:12:54   done void_6_b012625000_mixed_c0 seed 4060141 188s (62.6 ms/sweep) E_end=0.29661
+2026-11-13T03:12:55   done void_6_b012625000_mixed_c1 seed 4160141 188s (62.5 ms/sweep) E_end=0.29823
+2026-11-13T03:16:05   done void_6_b012625000_mixed_c2 seed 4260141 191s (63.5 ms/sweep) E_end=0.29791
+2026-11-13T03:16:05   done void_6_b012625000_mixed_c3 seed 4360141 190s (63.2 ms/sweep) E_end=0.29762
+2026-11-13T03:19:13   done void_6_b012625000_mixed_c4 seed 4460141 188s (62.6 ms/sweep) E_end=0.29784
+2026-11-13T03:19:14   done void_6_b012625000_mixed_c5 seed 4560141 189s (62.9 ms/sweep) E_end=0.29955
+2026-11-13T03:21:18   done void_6_b012300000_hot_c0 seed 4059814 125s (62.5 ms/sweep) E=0.35788
+2026-11-13T03:21:20   done void_6_b012350000_hot_c0 seed 4059864 126s (63.0 ms/sweep) E=0.35207
+2026-11-13T03:23:23   done void_6_b012400000_hot_c0 seed 4059914 126s (62.8 ms/sweep) E=0.34756
+2026-11-13T03:23:25   done void_6_b012450000_hot_c0 seed 4059964 125s (62.5 ms/sweep) E=0.34011
+2026-11-13T03:25:27   done void_6_b012650000_cold_c0 seed 4060165 124s (62.2 ms/sweep) E=0.29609
+2026-11-13T03:25:30   done void_6_b012700000_cold_c0 seed 4060215 125s (62.4 ms/sweep) E=0.29285
+2026-11-13T03:27:32   done void_6_b012750000_cold_c0 seed 4060265 124s (62.2 ms/sweep) E=0.28984
+2026-11-13T03:27:34   done void_6_b012800000_cold_c0 seed 4060315 125s (62.4 ms/sweep) E=0.28711
+2026-11-13T03:29:11   done z4_12_b010050000_mixed_c0 seed 3105080 99s (33.0 ms/sweep) E_end=0.40443
+2026-11-13T03:29:14   done z4_12_b010050000_mixed_c1 seed 3205080 100s (33.2 ms/sweep) E_end=0.39969
+2026-11-13T03:30:50   done z4_12_b010050000_mixed_c2 seed 3305080 99s (33.2 ms/sweep) E_end=0.40023
+2026-11-13T03:30:54   done z4_12_b010050000_mixed_c3 seed 3405080 100s (33.4 ms/sweep) E_end=0.40206
+2026-11-13T03:32:30   done z4_12_b010075000_mixed_c0 seed 3105105 99s (33.1 ms/sweep) E_end=0.39543
+2026-11-13T03:32:33   done z4_12_b010075000_mixed_c1 seed 3205105 99s (33.0 ms/sweep) E_end=0.39375
+2026-11-13T03:34:10   done z4_12_b010075000_mixed_c2 seed 3305105 100s (33.3 ms/sweep) E_end=0.39286
+2026-11-13T03:34:14   done z4_12_b010075000_mixed_c3 seed 3405105 101s (33.6 ms/sweep) E_end=0.39213
+2026-11-13T03:35:50   done z4_12_b010100000_mixed_c0 seed 3105130 100s (33.4 ms/sweep) E_end=0.38584
+2026-11-13T03:35:55   done z4_12_b010100000_mixed_c1 seed 3205130 101s (33.6 ms/sweep) E_end=0.38647
+2026-11-13T03:37:31   done z4_12_b010100000_mixed_c2 seed 3305130 101s (33.6 ms/sweep) E_end=0.37627
+2026-11-13T03:37:36   done z4_12_b010100000_mixed_c3 seed 3405130 101s (33.7 ms/sweep) E_end=0.38348
+2026-11-13T03:39:10   done z4_12_b010125000_mixed_c0 seed 3105155 99s (33.1 ms/sweep) E_end=0.34290
+2026-11-13T03:39:15   done z4_12_b010125000_mixed_c1 seed 3205155 99s (33.1 ms/sweep) E_end=0.34533
+2026-11-13T03:40:50   done z4_12_b010125000_mixed_c2 seed 3305155 100s (33.2 ms/sweep) E_end=0.34258
+2026-11-13T03:40:56   done z4_12_b010125000_mixed_c3 seed 3405155 101s (33.6 ms/sweep) E_end=0.34799
+2026-11-13T03:42:30   done z4_12_b010150000_mixed_c0 seed 3105180 101s (33.6 ms/sweep) E_end=0.33760
+2026-11-13T03:42:37   done z4_12_b010150000_mixed_c1 seed 3205180 101s (33.5 ms/sweep) E_end=0.33924
+2026-11-13T03:44:10   done z4_12_b010150000_mixed_c2 seed 3305180 100s (33.3 ms/sweep) E_end=0.33753
+2026-11-13T03:44:17   done z4_12_b010150000_mixed_c3 seed 3405180 100s (33.4 ms/sweep) E_end=0.33730
+2026-11-13T03:45:17   done z4_12_b009800000_hot_c0 seed 3104828 67s (33.4 ms/sweep) E=0.44984
+2026-11-13T03:45:24   done z4_12_b009850000_hot_c0 seed 3104878 67s (33.4 ms/sweep) E=0.44274
+2026-11-13T03:46:25   done z4_12_b009900000_hot_c0 seed 3104928 68s (33.8 ms/sweep) E=0.43490
+2026-11-13T03:46:31   done z4_12_b009950000_hot_c0 seed 3104978 68s (33.8 ms/sweep) E=0.42570
+2026-11-13T03:47:31   done z4_12_b010200000_cold_c0 seed 3105229 67s (33.4 ms/sweep) E=0.33215
+2026-11-13T03:47:38   done z4_12_b010250000_cold_c0 seed 3105279 66s (33.2 ms/sweep) E=0.32749
+2026-11-13T03:48:38   done z4_12_b010300000_cold_c0 seed 3105329 66s (33.1 ms/sweep) E=0.32304
+2026-11-13T03:48:44   done z4_12_b010350000_cold_c0 seed 3105379 66s (33.2 ms/sweep) E=0.31919
+2026-11-13T03:48:57   done z4_8_b010000000_mixed_c0 seed 3073354 20s (6.5 ms/sweep) E_end=0.41742
+2026-11-13T03:49:04   done z4_8_b010000000_mixed_c1 seed 3173354 20s (6.6 ms/sweep) E_end=0.41084
+2026-11-13T03:49:17   done z4_8_b010000000_mixed_c2 seed 3273354 20s (6.5 ms/sweep) E_end=0.41836
+2026-11-13T03:49:24   done z4_8_b010000000_mixed_c3 seed 3373354 20s (6.6 ms/sweep) E_end=0.41546
+2026-11-13T03:49:36   done z4_8_b010025000_mixed_c0 seed 3073379 20s (6.5 ms/sweep) E_end=0.40305
+2026-11-13T03:49:44   done z4_8_b010025000_mixed_c1 seed 3173379 20s (6.7 ms/sweep) E_end=0.41239
+2026-11-13T03:49:56   done z4_8_b010025000_mixed_c2 seed 3273379 20s (6.5 ms/sweep) E_end=0.41122
+2026-11-13T03:50:03   done z4_8_b010025000_mixed_c3 seed 3373379 20s (6.6 ms/sweep) E_end=0.40716
+2026-11-13T03:50:16   done z4_8_b010050000_mixed_c0 seed 3073404 20s (6.6 ms/sweep) E_end=0.40915
+2026-11-13T03:50:23   done z4_8_b010050000_mixed_c1 seed 3173404 20s (6.6 ms/sweep) E_end=0.39774
+2026-11-13T03:50:36   done z4_8_b010050000_mixed_c2 seed 3273404 20s (6.6 ms/sweep) E_end=0.35360
+2026-11-13T03:50:43   done z4_8_b010050000_mixed_c3 seed 3373404 19s (6.5 ms/sweep) E_end=0.40601
+2026-11-13T03:50:55   done z4_8_b010075000_mixed_c0 seed 3073429 20s (6.6 ms/sweep) E_end=0.35784
+2026-11-13T03:51:03   done z4_8_b010075000_mixed_c1 seed 3173429 20s (6.6 ms/sweep) E_end=0.38519
+2026-11-13T03:51:15   done z4_8_b010075000_mixed_c2 seed 3273429 20s (6.5 ms/sweep) E_end=0.35023
+2026-11-13T03:51:22   done z4_8_b010075000_mixed_c3 seed 3373429 20s (6.6 ms/sweep) E_end=0.36456
+2026-11-13T03:51:35   done z4_8_b010100000_mixed_c0 seed 3073454 20s (6.6 ms/sweep) E_end=0.34664
+2026-11-13T03:51:42   done z4_8_b010100000_mixed_c1 seed 3173454 20s (6.6 ms/sweep) E_end=0.34649
+2026-11-13T03:51:54   done z4_8_b010100000_mixed_c2 seed 3273454 19s (6.5 ms/sweep) E_end=0.34249
+2026-11-13T03:52:02   done z4_8_b010100000_mixed_c3 seed 3373454 20s (6.5 ms/sweep) E_end=0.34741
+2026-11-13T03:52:07   done z4_8_b009800000_hot_c0 seed 3073152 13s (6.6 ms/sweep) E=0.44868
+2026-11-13T03:52:15   done z4_8_b009850000_hot_c0 seed 3073202 13s (6.5 ms/sweep) E=0.44250
+2026-11-13T03:52:21   done z4_8_b009900000_hot_c0 seed 3073252 13s (6.7 ms/sweep) E=0.43559
+2026-11-13T03:52:28   done z4_8_b009950000_hot_c0 seed 3073302 13s (6.6 ms/sweep) E=0.42640
+2026-11-13T03:52:34   done z4_8_b010200000_cold_c0 seed 3073553 13s (6.5 ms/sweep) E=0.33101
+2026-11-13T03:52:41   done z4_8_b010250000_cold_c0 seed 3073603 13s (6.6 ms/sweep) E=0.32688
+2026-11-13T03:52:47   done z4_8_b010300000_cold_c0 seed 3073653 13s (6.6 ms/sweep) E=0.32267
+2026-11-13T03:52:54   done z4_8_b010350000_cold_c0 seed 3073703 13s (6.4 ms/sweep) E=0.31936
+2026-11-13T03:52:55   done K2_void_b0.1_hot seed 716838 8s (0.7 ms/sweep) E=0.95021
+2026-11-13T03:52:59   done K2_z4_b0.1_hot seed 332676 4s (0.4 ms/sweep) E=0.95013
+2026-11-13T03:53:01   done K2_void_b20_cold seed 915839 8s (0.7 ms/sweep) E=0.01436
+2026-11-13T03:53:03   done K2_z4_b20_cold seed 531677 4s (0.4 ms/sweep) E=0.01253
+2026-11-13T03:53:03 K2 K2_void_b0.1_hot: 0.049794 vs 0.049938 (-0.29%), bit-identical to REP1: True
+2026-11-13T03:53:03 K2 K2_void_b20_cold: 0.014361 vs 0.014258 (+0.72%), bit-identical to REP1: True
+2026-11-13T03:53:03 K2 K2_z4_b0.1_hot: 0.049866 vs 0.049938 (-0.14%), bit-identical to REP1: False
+2026-11-13T03:53:03 K2 K2_z4_b20_cold: 0.012527 vs 0.012451 (+0.61%), bit-identical to REP1: False
+2026-11-13T03:53:03 DRIVER COMPLETE -- next: dlbp_analysis.py numbers OUTDIR, then hash dlbp_numbers.txt
+2026-11-13T03:56:22 driver start; workers 2; dry run False
+2026-11-13T03:56:22 K1 dlbr_sim.py sha256 560c256fe391bfa7b0a2bf4e5abc520f8179b75647ece51006b5cba82425c9e6 -> PASS
+2026-11-13T03:56:22 submitting 136 fixed tasks
+2026-11-13T03:56:30   done K2_void_b20_cold seed 915839 8s (0.7 ms/sweep) E=0.01436
+2026-11-13T03:56:31   done K2_void_b0.1_hot seed 716838 8s (0.8 ms/sweep) E=0.95021
+2026-11-13T03:56:35   done K2_z4_b0.1_hot seed 332676 4s (0.4 ms/sweep) E=0.95013
+2026-11-13T03:56:35   done K2_z4_b20_cold seed 531677 4s (0.4 ms/sweep) E=0.01253
+2026-11-13T03:56:35 K2 K2_void_b0.1_hot: 0.049794 vs 0.049938 (-0.29%), bit-identical to REP1: True
+2026-11-13T03:56:35 K2 K2_void_b20_cold: 0.014361 vs 0.014258 (+0.72%), bit-identical to REP1: True
+2026-11-13T03:56:35 K2 K2_z4_b0.1_hot: 0.049866 vs 0.049938 (-0.14%), bit-identical to REP1: True
+2026-11-13T03:56:35 K2 K2_z4_b20_cold: 0.012527 vs 0.012451 (+0.61%), bit-identical to REP1: True
+2026-11-13T03:56:35 DRIVER COMPLETE -- next: dlbp_analysis.py numbers OUTDIR, then hash dlbp_numbers.txt

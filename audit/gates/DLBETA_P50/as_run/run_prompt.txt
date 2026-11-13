@@ -1,0 +1,19 @@
+Gate DL-BETA P50 — run. One gate per thread; this is a fresh session started as a scheduled task at the user's request; use nothing from memory, past chats (do not use conversation_search, read_conversation or recent_chats) or the Project's knowledge base.
+
+Before reading anything, fetch the card and its record to disk and hash them:
+
+  mkdir -p /home/claude/gate_DLBETA_P50 && cd /home/claude/gate_DLBETA_P50
+  R=https://raw.githubusercontent.com/zerofreeparameters-code/BCT-Programme/26c91c99608a2742d7cbf8dafdec6193c7831926
+  curl -sS -o gate_DLBETA_P50_prompt.md          $R/audit/gates/gate_DLBETA_P50_prompt.md
+  curl -sS -o PREREG_20261113_DLBETA_P50.sha256  $R/audit/gates/PREREG_20261113_DLBETA_P50.sha256
+  sha256sum gate_DLBETA_P50_prompt.md PREREG_20261113_DLBETA_P50.sha256
+
+Expected:
+  50525acce2f167ee78536c519562f6ea09d8aaa1768d524b2e6aaa1b483cfb9e  gate_DLBETA_P50_prompt.md
+  fdb993a5b0b5255426ac27096ec1dffc8c28914a73c0606b0fd958d237e88b53  PREREG_20261113_DLBETA_P50.sha256
+
+If either digest differs, stop and report; do not read the card. If both match, record the digests and the commit 26c91c99608a2742d7cbf8dafdec6193c7831926, read the card, and run exactly what it says (§10 is the protocol; §4.1 pins every source and the code, with hashes to verify before use). This is a multi-hour run (about 11 core-hours; use every core available): checkpoint, keep the turn alive and poll while simulations run, and do not end your reply with jobs in the background. Do not shorten any sweep budget. The user is not watching live: post the §4.7 SHA-256 of dlbp_numbers.txt with SendUserMessage before the verdict step, and send progress only at stage boundaries.
+
+Delivery: first try to push the deliverable yourself. Attach zerofreeparameters-code/BCT-Programme with push access (add_repo), clone it, and add exactly one commit that adds audit/gates/DLBETA_P50/ only, on top of the latest main (rebase onto main if it has moved past 26c91c99608a2742d7cbf8dafdec6193c7831926; touch nothing else). Push it to main. If pushing is not possible, deliver a git format-patch adding audit/gates/DLBETA_P50/ only, on top of 26c91c99608a2742d7cbf8dafdec6193c7831926, as a file in the conversation. Either way, also send gate_DLBETA_P50_RESULT.md as a file, and finish with the verdict code, β_c ± U and 1/e²_c in plain words.
+
+Record in the result, as a disclosure: this run was started as a scheduled task (a fresh cloud session) at the user's request, rather than in a hand-opened thread inside the BCT Project. Same-session results are capped at CONJECTURE.

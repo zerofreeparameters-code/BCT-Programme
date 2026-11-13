@@ -1,0 +1,12 @@
+2026-11-13T03:56:22 driver start; workers 2; dry run False
+2026-11-13T03:56:22 K1 dlbr_sim.py sha256 560c256fe391bfa7b0a2bf4e5abc520f8179b75647ece51006b5cba82425c9e6 -> PASS
+2026-11-13T03:56:22 submitting 136 fixed tasks
+2026-11-13T03:56:30   done K2_void_b20_cold seed 915839 8s (0.7 ms/sweep) E=0.01436
+2026-11-13T03:56:31   done K2_void_b0.1_hot seed 716838 8s (0.8 ms/sweep) E=0.95021
+2026-11-13T03:56:35   done K2_z4_b0.1_hot seed 332676 4s (0.4 ms/sweep) E=0.95013
+2026-11-13T03:56:35   done K2_z4_b20_cold seed 531677 4s (0.4 ms/sweep) E=0.01253
+2026-11-13T03:56:35 K2 K2_void_b0.1_hot: 0.049794 vs 0.049938 (-0.29%), bit-identical to REP1: True
+2026-11-13T03:56:35 K2 K2_void_b20_cold: 0.014361 vs 0.014258 (+0.72%), bit-identical to REP1: True
+2026-11-13T03:56:35 K2 K2_z4_b0.1_hot: 0.049866 vs 0.049938 (-0.14%), bit-identical to REP1: True
+2026-11-13T03:56:35 K2 K2_z4_b20_cold: 0.012527 vs 0.012451 (+0.61%), bit-identical to REP1: True
+2026-11-13T03:56:35 DRIVER COMPLETE -- next: dlbp_analysis.py numbers OUTDIR, then hash dlbp_numbers.txt

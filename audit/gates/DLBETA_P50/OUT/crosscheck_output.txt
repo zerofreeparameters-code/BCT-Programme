@@ -1,0 +1,8 @@
+series files checked: 136
+z4_8: beta_50 = 1.00640 (pinned 1.00640); w = 0.00299 (pinned 0.00299); independent sigma_boot = 0.00063 (pinned 0.00059), 300/300 converged
+z4_12: beta_50 = 1.01045 (pinned 1.01045); w = 0.00236 (pinned 0.00236); independent sigma_boot = 0.00020 (pinned 0.00020), 300/300 converged
+void_6: beta_50 = 1.25784 (pinned 1.25784); w = 0.00305 (pinned 0.00305); independent sigma_boot = 0.00031 (pinned 0.00032), 300/300 converged
+void_8: beta_50 = 1.25775 (pinned 1.25775); w = 0.00294 (pinned 0.00294); independent sigma_boot = 0.00018 (pinned 0.00018), 300/300 converged
+extrapolation void: k = 0.46286; beta_inf = 1.25771 (pinned 1.25771); U = 0.00107 (pinned 0.00107); 1/e^2 = 0.88933 +- 0.00076
+extrapolation Z4: k = 0.24615; beta_inf = 1.01144 (pinned 1.01144); U = 0.00134 (pinned 0.00134); (1/e^2 convention is for the void complex only)
+CROSS-CHECK PASS
