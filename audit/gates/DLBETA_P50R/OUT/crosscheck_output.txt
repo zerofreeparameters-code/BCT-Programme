@@ -1,0 +1,50 @@
+# Gate DL-BETA P50R cross-check (136 records)
+
+## 1. Series hashes and seeds
+  OK   all 136 series files match their recorded SHA-256 (0 mismatches)
+  OK   every gate seed follows the section 4.4 formula (0 mismatches)
+  OK   K2 reuses Gate DL-BETA's four K3 seeds: [32676, 231677, 516838, 715839]
+  OK   all 132 gate seeds distinct; range 5073152–6575979
+  OK   every gate seed is in the card's 5,000,000 / 6,000,000 families
+
+## 2. Observables recomputed from the raw series
+  OK   branch E reproduced from the series (max |diff| 0.00e+00)
+  OK   20-block sigma_E reproduced (max |diff| 0.00e+00)
+  OK   E_end (sweeps 2550-3000) reproduced (max |diff| 0.00e+00)
+  OK   E_mid (sweeps 1050-1500) reproduced (max |diff| 0.00e+00)
+  OK   row 0 of the series is (E at the start, NaN, NaN) as card section 4.2 states
+
+## 3. Branch lines, phi and the probit, with different routines
+  OK   z4_8: S and W lines match polyfit (max |diff| 4.97e-14)
+  z4_8: worst span/(0.25 G) = 0.987 at hot beta 0.9950 (span 0.01739, limit 0.01761) -> integrity ok
+  OK   z4_8: integrity verdict reproduced (ok)
+  OK   z4_8: beta_50 1.007466 vs 1.007466, w 0.001929 vs 0.001929
+  z4_8: independent 300-replica bootstrap sigma_boot = 0.00066 (pinned 1000-replica: 0.00061)
+  OK   z4_12: S and W lines match polyfit (max |diff| 4.86e-14)
+  z4_12: worst span/(0.25 G) = 0.427 at hot beta 0.9950 (span 0.00771, limit 0.01806) -> integrity ok
+  OK   z4_12: integrity verdict reproduced (ok)
+  OK   z4_12: beta_50 1.010027 vs 1.010027, w 0.002442 vs 0.002442
+  z4_12: independent 300-replica bootstrap sigma_boot = 0.00026 (pinned 1000-replica: 0.00029)
+  OK   void_6: S and W lines match polyfit (max |diff| 3.26e-14)
+  void_6: worst span/(0.25 G) = 1.136 at hot beta 1.2450 (span 0.00919, limit 0.00809) -> integrity FAIL
+  OK   void_6: integrity verdict reproduced (FAIL)
+  OK   void_6: beta_50 1.257085 vs 1.257085, w 0.002719 vs 0.002719
+  void_6: independent 300-replica bootstrap sigma_boot = 0.00034 (pinned 1000-replica: 0.00034)
+  OK   void_8: S and W lines match polyfit (max |diff| 4.88e-14)
+  void_8: worst span/(0.25 G) = 0.529 at hot beta 1.2450 (span 0.00410, limit 0.00776) -> integrity ok
+  OK   void_8: integrity verdict reproduced (ok)
+  OK   void_8: beta_50 1.257716 vs 1.257716, w 0.002367 vs 0.002367
+  void_8: independent 300-replica bootstrap sigma_boot = 0.00018 (pinned 1000-replica: 0.00017)
+
+## 4. Extrapolations
+  OK   void: k 0.46286, beta_inf 1.258008, U 0.001113, sigma_inf_stat 0.000288 all reproduced
+  OK   void: 1/e^2 = beta_inf/sqrt(2) = 0.889546 reproduced
+  OK   z4: k 0.24615, beta_inf 1.010658, U 0.001090, sigma_inf_stat 0.000394 all reproduced
+
+## 5. Verdict inputs recomputed (card section 5 order)
+  D = +0.000300; U_D = 0.001547 (0.19 U_D); sigma_D = 0.000420 (0.71 sigma_D)
+  OK   D, U_D and sigma_D match verdict.txt
+  OK   verdict code reproduced: SC-DLBPR-5
+  (had the void integrity passed, the ordered code would have been SC-DLBPR-1)
+
+CROSS-CHECK PASS

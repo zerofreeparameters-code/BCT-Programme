@@ -1,0 +1,7 @@
+run started (UTC): 2026-11-13T05:03:33Z
+session: scheduled task, fresh cloud session (not a hand-opened thread in the BCT Project)
+host: Linux 6.18.44-fc-v445 x86_64; cores: 2; mem: 7 GB
+python: Python 3.13.18
+numpy 2.5.3; scipy 1.18.1; numba 0.68.1; llvmlite 0.50.0
+repo commit: dcf22c72170e55613be779718a19488f726ecc9e
+workers: 2
