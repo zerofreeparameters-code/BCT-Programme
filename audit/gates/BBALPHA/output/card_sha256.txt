@@ -1,0 +1,6 @@
+Gate BB-ALPHA card hash verification (computed BEFORE reading the card)
+file: audit/gates/gate_BBALPHA_prompt.md  @ commit 1f356217aeca07a99409c612126fa889b0f749bb
+computed sha256 : 95172ce8b7e129ac3a2b2257d2de62244f9cb2edeac811c0349f8d3673b68f8c
+prereg record   : 95172ce8b7e129ac3a2b2257d2de62244f9cb2edeac811c0349f8d3673b68f8c  (PREREG_20261110_BBALPHA.sha256)
+expected (task) : 95172ce8b7e129ac3a2b2257d2de62244f9cb2edeac811c0349f8d3673b68f8c
+MATCH -> proceed.
