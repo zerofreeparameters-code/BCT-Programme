@@ -1,0 +1,54 @@
+=== A. EXACT ===
+A1 V_tet = -acos(23/27)/6 + sqrt(2)/12 = 0.0259701971256694527431167017734
+A1 V_oct = -asin(1/3) + sqrt(2)/3 = 0.131567611336909745837503728011
+A2 wall area tet = acos(23/27) = 0.551285598432530807942144151464
+A2 wall area oct = 6*asin(1/3) = 2.03902145672473162257835508035
+A3 cos(3*acos(1/3)) = 4c^3-3c = -23/27 ; so cos(3acos(1/3)-pi) = 23/27
+A3 3acos(1/3)-pi in [0,pi]? numeric = 0.551285598432530807942144151464
+A3 symbolic residual after identities: 0
+A3 numeric (V_oct+2V_tet) - (1/sqrt2 - pi/6) = 1.9447e-62
+A3 V_oct+2V_tet = 0.18350800558824865132373713155826522525197437112596
+A3 1/sqrt2-pi/6 = 0.18350800558824865132373713155826522525197437112596
+A3 VERDICT: identity holds exactly (acos(23/27) = 3acos(1/3) - pi, asin(1/3) = pi/2 - acos(1/3))
+A4 r_tet = 0.112372435695794524549321018676
+A4 r_oct = 0.207106781186547524400844362105
+A4 V_ball_tet = 0.00594385207355041304999204125355
+A4 V_ball_oct = 0.0372110192772130943068168778912
+A4 V_tet/V_ball_tet = 4.36925360932759514484942086179
+A4 V_oct/V_ball_oct = 3.53571640585179514648471253228
+A4 mu_ball_tet = pi^2/r_tet^2 = 781.592091976311873825364959725
+A4 mu_ball_oct = pi^2/r_oct^2 = 230.097080007294375972534866977
+A5 MC V_tet = 0.02602277 +- 0.00003457  z = +1.521
+A5 MC V_oct = 0.13152587 +- 0.00014950  z = -0.279
+
+=== C. FINITE-DIFFERENCE EIGENVALUES ===
+C ball     N= 48  h=0.029463  unknowns=   20341  lam=38.1383716609  resid=2.00e-11  (inner solves 21, 1.6s)
+C network  N= 48  h=0.029463  unknowns=   29228  lam=129.7131851339  resid=2.44e-11  (inner solves 41, 5.5s)
+C oct      N= 48  h=0.029463  unknowns=    5387  lam=129.6764949370  resid=1.97e-10  (inner solves 21, 0.4s)
+C tet      N= 48  h=0.029463  unknowns=    1093  lam=373.3350893622  resid=2.28e-10  (inner solves 21, 0.1s)
+C ball     N= 64  h=0.022097  unknowns=   48489  lam=38.4079361340  resid=2.33e-11  (inner solves 21, 4.7s)
+C network  N= 64  h=0.022097  unknowns=   68188  lam=142.3067714415  resid=8.55e-11  (inner solves 41, 11.1s)
+C oct      N= 64  h=0.022097  unknowns=   12399  lam=142.2752107687  resid=2.03e-11  (inner solves 21, 1.0s)
+C tet      N= 64  h=0.022097  unknowns=    2525  lam=382.5637592583  resid=5.74e-11  (inner solves 21, 0.2s)
+C ball     N= 96  h=0.014731  unknowns=  163323  lam=38.8197954172  resid=5.30e-11  (inner solves 21, 15.7s)
+C network  N= 96  h=0.014731  unknowns=  231444  lam=143.5827336421  resid=4.42e-11  (inner solves 41, 42.2s)
+C oct      N= 96  h=0.014731  unknowns=   41901  lam=143.5554525987  resid=1.28e-10  (inner solves 21, 3.8s)
+C tet      N= 96  h=0.014731  unknowns=    8437  lam=400.0349051039  resid=3.37e-10  (inner solves 21, 0.5s)
+
+C ball     raw: 38.1383716609  38.4079361340  38.8197954172  extrapolated: 39.6435139836
+C network  raw: 129.7131851339  142.3067714415  143.5827336421  extrapolated: 146.1346580431
+C oct      raw: 129.6764949370  142.2752107687  143.5554525987  extrapolated: 146.1159362587
+C tet      raw: 373.3350893622  382.5637592583  400.0349051039  extrapolated: 434.9771967951
+C ball target 4pi^2 = 39.4784176044 ; rel error of extrapolation = 4.182e-03
+
+=== B. x VALUES ===
+alpha0 = 0.007408055728   NLO = 0.01018282248   NNLO factor = 0.9976051642
+(i)   mu=pi^2/r^2, V=ball: mu_oct=230.09708 V_oct=0.03721101928 mu_tet=781.592092 V_tet=0.005943852074
+    x_EW  = 0.3391677385
+    x_SU3 = 0.7195379392   (without NNLO factor: 0.7212652511)
+(ii)  mu=pi^2/r^2, V=chamber: mu_oct=230.09708 V_oct=0.1315676113 mu_tet=781.592092 V_tet=0.02597019713
+    x_EW  = 1.199200937
+    x_SU3 = 3.143843738   (without NNLO factor: 3.151390802)
+(iii) mu=FD extrap, V=chamber: mu_oct=146.1159363 V_oct=0.1315676113 mu_tet=434.9771968 V_tet=0.02597019713
+    x_EW  = 0.7615149558
+    x_SU3 = 1.749634305   (without NNLO factor: 1.75383445)
