@@ -39,7 +39,7 @@ is the lattice itself; DL-BETA (pre-registered) measures where its Coulomb phase
 the percolating network) plus one live CONJECTURE for the sphere interiors (BUBBLE_BELLS), which
 BB-ALPHA is queued to anchor. This paragraph is a reading, not a result; any gate may move it.
 
-## Closed — result committed under `audit/gates/` (39 directories at `bf04815`; DLSTIFF added 12 Nov at `d67f5ca`)
+## Closed — result committed under `audit/gates/` (39 directories at `bf04815`; DLSTIFF added 12 Nov at `d67f5ca`; VOID added 23 Nov, PR #1)
 
 | gate | run | verdict (from the result file) | deliverable |
 |---|---|---|---|
@@ -75,6 +75,7 @@ BB-ALPHA is queued to anchor. This paragraph is a reading, not a result; any gat
 | CRIT | 8 Oct | β_c (compact U(1), Wilson action, D4, L = 8) = 0.610 ± 0.005, CONJECTURE; SC-CRIT-2: the Bennett–Nielsen–Froggatt route to 1/α(0), moved to D4, misses by ≈ +11.5 — kill. | `gates/CRIT/` |
 | CRIT2 | 8 Oct | SC-CRIT2-1 (replicated): β_∞ = 0.6150 ± 0.00125 (card convention), β_KN = 1.2300 ± 0.0025. | `gates/CRIT2/` |
 | PILOT | 9 Oct | SC-PILOT-3 (IMPORT): no-added-structure branch 2b on the GP law, 2a on the wave law, 2c by counting. | `gates/PILOT/` |
+| VOID | 17 Oct (committed 23 Nov; the session had no push credential in Oct) | SC-VOID-1: the inscribed-ball shorthand for the voids fails the true concave geometry — V_tet, V_oct are 4.37×, 3.54× the balls (exact: √2/12 − arccos(23/27)/6, √2/3 − arcsin⅓; V_oct + 2V_tet = 1/√2 − π/6 proven), lowest Dirichlet eigenvalues 146 (oct = network) and 435 (tet) vs ball 230, 782; Letter 127's x_EW, x_SU(3) move ×2.25, ×2.43 (x_SU(3) > 1), already in the CN-RATIO-06 retirement family, so no standing claim moves. CN-VOID-01 filed. p_void is a condensate-amplitude posit, not compared with 0.2595 in the permitted inputs (Letters 243–244/App AU not retrieved — Zenodo blocked; SC-VOID-3 not fired on that basis). Pred #168 (Λ_QCD) should be named when CN-RATIO-06 is executed. Independent recomputation agrees. `desk/VOID_2026-11-08/` is a different question (void-network quantum liquid), not this gate. | `gates/VOID/` |
 | PLASMOID | 24 Oct | SC-PLASMOID-3 HALT: no qualifying dataset obtainable; pilot results exploratory only. SC-PLASMOID-5 open (Stenhoff 1999 unread). | `gates/PLASMOID/` |
 | SINGLET | 25 Oct | SC-SINGLET-2 (IMPORT): the singlet curve needs the signed-measure ingredients added on the written S¹ phase. Ledger entry (25 Oct, same-day re-run check) now in the tree. | `gates/SINGLET/` (+ `gate_SINGLET_LEDGER_ENTRY.md`, recovered 12 Nov) |
 | TWIST | 8 Nov (+ blind replication 9 Nov) | SC-TWIST-1, kill at Q1: no Maxwell-type term for the twist field (c_F ≤ 0), a slaved to the texture; Q2–Q4 fail; 0/4 shell properties derived. | `gates/TWIST/` (+ `replication_2026-11-09/`, unblinded addendum) |
@@ -87,13 +88,12 @@ BB-ALPHA is queued to anchor. This paragraph is a reading, not a result; any gat
 Not in this table because it is not a gate result: `gates/PT/` holds only the PT card and its
 PREREG line (result is Project-side — debt, below).
 
-## Pre-registered in the tree, no result directory (9)
+## Pre-registered in the tree, no result directory (8)
 
 | gate | card committed | state |
 |---|---|---|
 | **DL-BETA** | 12 Nov 2026 (`eae34f3b…`, `PREREG_20261112_DLBETA`; commit `bf7d97a`) | **Run requested 12 Nov** (see "Running"). β_c of compact U(1), Wilson action, on the FCC void network × time; CRIT2's method under LATT's conventions; Z4 calibration is the halt criterion. `gates/DLBETA/` holds only the card-thread desk check (49 assertions; no Monte Carlo in β ∈ [0.2, 5]; loops forced = rhombic faces of the FCC Voronoi tessellation; 1/e² = β/√2 at β_t = β_s). |
 | **BBALPHA** | 10 Nov 2026 (`95172ce8…`, `PREREG_20261110_BBALPHA`) | **NOT RUN. Next to run** — fresh thread, memory and past-chats off, commit-pinned raw URL. Anchors BUBBLE_BELLS' α_∞ = 1.64 ± 0.03 by literature (Sangani–Acrivos 1983, Cheng–Torquato 1997) + an independent method. |
-| VOID | 17 Oct 2026 (`e04f69db…`) | Pre-registered, unrun (do the void-volume / void-eigenvalue formulas survive the true concave void geometry?). |
 | LATT | 17 Oct 2026 (`1dccde5b…`) | **Run** per the run thread (17 Oct; ~11.7 h; verdict SC-LATT-1 for the β_∞ table, transition order undetermined, CN-LATT-01/02) — result + patch never applied. Debt. |
 | FORK | 11 Oct 2026 (`c21bc5d6…`) | **Run** 11 Oct, SC-FORK-2 (base rate; CN-FORK-02: the 14 non-geometric atoms alone reach 48/48 at 0.1 %) — result patch 0001 + ledger patch 0002 never applied. Debt. |
 | FWD7 | 11 Oct 2026 (`d169a13e…`) | **Run** 11 Oct, SC-FWD7-2 (no GO; P7 DEAD by CN-RANK-06; Zenodo pre-registration list empty) — patches 0001/0002 never applied. Debt. |
