@@ -1,0 +1,44 @@
+Bubble Bells desk-check 2 — Bloch spectrum of the FCC void network (Neumann walls), eigenvalues lambda of -Laplacian in 1/a^2
+a = 1, R = 1/2, L = a sqrt2 = 1.41421, mu = 1/xi^2 = 0.18618;  App J bell kappa0^2 = 11.495 (61.7 mu);  hard-wall bell (2pi)^2 = 39.478
+free-space |K|^2 at X = 19.7392, at L = 14.8044, at W = 24.6740, at K = 22.2066
+
+=== N = 48  (h = 0.02946 a, throat radius 0.0774 a = 2.63 cells)
+  Gamma  K/b = (0, 0, 0)  n = 7168  phi_grid = 0.25926  |A-A^H|max = 0.0e+00   lambda =  -0.0000   22.9502   31.6436   39.3398   39.3398   39.3398   54.1284   54.1284
+      X  K/b = (1, 0, 0)  n = 7168  phi_grid = 0.25926  |A-A^H|max = 0.0e+00   lambda =   6.9526   13.2076   18.5673   37.9633   37.9633   59.4987   62.8139   66.2452
+      W  K/b = (1, 0.5, 0)  n = 7168  phi_grid = 0.25926  |A-A^H|max = 0.0e+00   lambda =   6.9526   15.4138   15.4138   37.9633   45.9734   45.9734   59.4987   66.2471
+      K  K/b = (0.75, 0.75, 0)  n = 7168  phi_grid = 0.25926  |A-A^H|max = 0.0e+00   lambda =   6.6528   14.3773   17.1898   38.1613   41.7315   50.8618   58.4606   66.2714
+      L  K/b = (0.5, 0.5, 0.5)  n = 7168  phi_grid = 0.25926  |A-A^H|max = 0.0e+00   lambda =   4.3932   14.7732   22.4776   38.6443   38.6443   55.7507   56.4140   67.8017
+  --- acoustic band along Gamma-X and Gamma-L (lowest eigenvalue), with |K|^2 and the local 'slope' |K|^2/lambda:
+    G-X zeta = 0.1   |K|^2 =   0.1974   lambda_0 =   0.0959   |K|^2/lambda_0 = 2.0576   lambda_1..3 =  22.8120   30.7124   39.3000
+    G-X zeta = 0.25  |K|^2 =   1.2337   lambda_0 =   0.5966   |K|^2/lambda_0 = 2.0680   lambda_1..3 =  22.1563   27.5184   39.1075
+    G-X zeta = 0.5   |K|^2 =   4.9348   lambda_0 =   2.3365   |K|^2/lambda_0 = 2.1121   lambda_1..3 =  20.4974   21.5087   38.5960
+    G-X zeta = 0.75  |K|^2 =  11.1033   lambda_0 =   4.9721   |K|^2/lambda_0 = 2.2331   lambda_1..3 =  16.1246   19.0938   38.1395
+    G-L zeta = 0.1   |K|^2 =   0.1480   lambda_0 =   0.0719   |K|^2/lambda_0 = 2.0595   lambda_1..3 =  22.8446   30.9302   39.3213
+    G-L zeta = 0.25  |K|^2 =   0.9253   lambda_0 =   0.4447   |K|^2/lambda_0 = 2.0807   lambda_1..3 =  22.2766   28.4293   39.2301
+    G-L zeta = 0.5   |K|^2 =   3.7011   lambda_0 =   1.7015   |K|^2/lambda_0 = 2.1752   lambda_1..3 =  19.9561   24.6167   38.9771
+    G-L zeta = 0.75  |K|^2 =   8.3275   lambda_0 =   3.4090   |K|^2/lambda_0 = 2.4428   lambda_1..3 =  16.5100   22.9319   38.7390
+  --- acoustic top: lambda_ac(X) = 6.9526 (free 19.739), lambda_ac(L) = 4.3932 (free 14.804);  first optical at Gamma: lambda_1(Gamma) = 22.9502
+      in units of mu: lambda_ac(X)/mu = 37.34, lambda_1(Gamma)/mu = 123.27;  App J bell = 61.7 mu, hard-wall bell = 212.0 mu
+      Bogoliubov energies eps/mu:  acoustic top (X) 38.33,  first optical (Gamma) 124.26,  App J bell 62.73,  free zone-edge k=pi/a 54.00
+      elapsed 13s
+
+=== N = 64  (h = 0.02210 a, throat radius 0.0774 a = 3.50 cells)
+  Gamma  K/b = (0, 0, 0)  n = 17120  phi_grid = 0.26123  |A-A^H|max = 0.0e+00   lambda =  -0.0000   23.5903   34.9869   41.2127   41.2127   41.2127   58.1823   58.1823
+      X  K/b = (1, 0, 0)  n = 17120  phi_grid = 0.26123  |A-A^H|max = 0.0e+00   lambda =   7.4758   13.8889   19.4315   39.6698   39.6698   62.9255   62.9255   68.2245
+      W  K/b = (1, 0.5, 0)  n = 17120  phi_grid = 0.26123  |A-A^H|max = 0.0e+00   lambda =   7.4758   16.1675   16.1675   39.6696   48.2156   48.2156   62.9255   80.1531
+      K  K/b = (0.75, 0.75, 0)  n = 17120  phi_grid = 0.26123  |A-A^H|max = 0.0e+00   lambda =   7.1421   15.0935   18.0438   39.8912   43.6792   53.4470   62.1218   76.2808
+      L  K/b = (0.5, 0.5, 0.5)  n = 17120  phi_grid = 0.26123  |A-A^H|max = 0.0e+00   lambda =   4.6761   15.4667   23.8994   40.4322   40.4322   58.0744   60.3569   60.3569
+  --- acoustic band along Gamma-X and Gamma-L (lowest eigenvalue), with |K|^2 and the local 'slope' |K|^2/lambda:
+    G-X zeta = 0.1   |K|^2 =   0.1974   lambda_0 =   0.1016   |K|^2/lambda_0 = 1.9430   lambda_1..3 =  23.4627   33.6789   41.1685
+    G-X zeta = 0.25  |K|^2 =   1.2337   lambda_0 =   0.6321   |K|^2/lambda_0 = 1.9517   lambda_1..3 =  22.8531   29.7908   40.9541
+    G-X zeta = 0.5   |K|^2 =   4.9348   lambda_0 =   2.4813   |K|^2/lambda_0 = 1.9888   lambda_1..3 =  21.2868   23.0216   40.3819
+    G-X zeta = 0.75  |K|^2 =  11.1033   lambda_0 =   5.3063   |K|^2/lambda_0 = 2.0925   lambda_1..3 =  17.1051   19.9405   39.8685
+    G-L zeta = 0.1   |K|^2 =   0.1480   lambda_0 =   0.0761   |K|^2/lambda_0 = 1.9449   lambda_1..3 =  23.4927   33.9699   41.1920
+    G-L zeta = 0.25  |K|^2 =   0.9253   lambda_0 =   0.4710   |K|^2/lambda_0 = 1.9644   lambda_1..3 =  22.9633   30.8525   41.0900
+    G-L zeta = 0.5   |K|^2 =   3.7011   lambda_0 =   1.8042   |K|^2/lambda_0 = 2.0514   lambda_1..3 =  20.7593   26.3745   40.8065
+    G-L zeta = 0.75  |K|^2 =   8.3275   lambda_0 =   3.6221   |K|^2/lambda_0 = 2.2991   lambda_1..3 =  17.2857   24.4021   40.5389
+  --- acoustic top: lambda_ac(X) = 7.4758 (free 19.739), lambda_ac(L) = 4.6761 (free 14.804);  first optical at Gamma: lambda_1(Gamma) = 23.5903
+      in units of mu: lambda_ac(X)/mu = 40.15, lambda_1(Gamma)/mu = 126.70;  App J bell = 61.7 mu, hard-wall bell = 212.0 mu
+      Bogoliubov energies eps/mu:  acoustic top (X) 41.14,  first optical (Gamma) 127.70,  App J bell 62.73,  free zone-edge k=pi/a 54.00
+      elapsed 55s
+

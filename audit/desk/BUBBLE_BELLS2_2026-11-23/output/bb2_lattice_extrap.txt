@@ -1,0 +1,18 @@
+Convergence in N (first order expected: contact-point staircase).  Extrapolations: linear a+b/N on the two finest grids,
+quadratic a+b/N+c/N^2 on the three finest; spread between them is the quoted uncertainty.
+(The K -> 0 slope |K|^2/lambda_0 — the FD tortuosity — is 2.356, 2.058, 1.943, 1.813, 1.770 at N = 32..128 and is NOT
+ extrapolated here: Gate BB-ALPHA is pre-registered to anchor it by a non-FD method; these are the same grid family as bells_tortuosity.py.)
+quantity                               N=32   N=48   N=64   N=96   N=128  N=160    lin(2 finest)  quad(3 finest)
+lambda_ac(X) = lambda_ac(W)              5.614   6.953   7.476   8.351   8.636   8.820      9.553         9.646
+lambda_ac(L)                             3.720   4.393   4.676   5.103   5.245     -        5.670         5.384
+2nd band at X (gap bottom)              12.029  13.208  13.889  14.184  14.361  14.502     15.069        15.334
+2nd band at L                           13.656  14.773  15.467  15.764  15.938     -       16.461        16.565
+2nd band at W (pair)                    14.172  15.414  16.168  16.506  16.690     -       17.242        17.301
+2nd band at Gamma (chamber mode)        22.663  22.950  23.590  23.786  23.840  24.035     24.812        26.023
+flat triplet at Gamma                   37.109  39.340  41.213  42.846  43.863  44.400     46.547        45.997
+triplet at X                            35.540  37.963  39.670  41.079  42.005  42.444     44.197        43.316
+
+acoustic top lambda_X -> 9.55-9.65 /a^2  (free 19.74): zone-edge frequency compression sqrt(19.74/lambda_X) = 1.43-1.44
+gap bottom min_K lambda_1 (at X) -> 15.07-15.33 /a^2;  gap ratio bottom/top = 1.56-1.61  (complete gap if > 1)
+in mu: acoustic top 51-52 mu, gap bottom 81-82 mu;  Bogoliubov eps/mu: top 53, bottom 83
+omega_max = c_s sqrt(lambda_X) = 3.09-3.11 c_s/a   (free zone-edge sound at X would be 4.44 c_s/a)

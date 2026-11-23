@@ -1,0 +1,69 @@
+Bubble Bells desk-check 2 — the bell as a resonance   (a = 1, R = 1/2, hbar^2/2m = 1)
+alpha0 = 0.0074080557   xi = 2.3175438 a   mu = 1/xi^2 = 0.186185   R/xi = 0.21575
+
+A. Gate BUBBLE_BELLS ladder (interior j_l(kappa r), exterior k_l(r/xi) at the SAME energy): interior fraction
+   l   kappa_l     kappa_l R   E_l=kappa^2   E_l/mu    f_inside   zero of j_{l-1} (x R)   kappa_l R - zero
+   0   3.3904626   1.695231    11.49524   61.741    0.1903       1.570796            0.1244
+   1   6.3050477   3.152524    39.75363   213.517    0.4027       3.141593            0.01093
+   2   8.9919802    4.49599    80.85571   434.277    0.6065       4.493409            0.002581
+   3   11.528852   5.764426    132.9144   713.885    0.7158       5.763459            0.000967
+   Reading: k_l(x) ~ x^-(l+1) for x = R/xi = 0.216, so the 'exterior at the same energy' is in fact the STATIC
+   (Laplace, zero-energy) multipole tail; the rungs are the zeros of j_{l-1} shifted by (-1/xi + alpha0) R = -0.21.
+   App J's own higher s-wave roots (kappa = 9.514, 15.76) are the same condition's n = 2, 3 solutions.
+   check: s-wave n = 2, 3 roots = 9.51387, 15.7618  (App J table: 9.5139, 15.762)
+
+B. Other sphere centres within the exterior cloud of one bell (FCC, NN distance a = 1)
+   within R + xi = 2.8175 a of the centre: 134 other spheres   (packing fraction 0.7405 of that shell volume is sphere interior)
+   within R + 2 xi = 5.1351 a of the centre: 790 other spheres   (packing fraction 0.7405 of that shell volume is sphere interior)
+   The single-cavity 'exterior' used for the ladder is therefore mostly other bubbles' interiors — the regions the
+   construction itself says are depleted.  (Same structural point as CN-TWIST-12: xi = 4.6 R.)
+
+C. Consistent single-quasiparticle problem: interior free, exterior Bogoliubov (mu = 1/xi^2), alpha0 delta-shell
+   C1. Reflection a quasiparticle at the bell energy E0 = kappa0^2 sees at the sphere surface (normal incidence):
+       Bogoliubov step  |r|^2 = 1.64e-5     alpha0 shell  |r|^2 = 1.19e-6     combined ~ 1.76e-5
+       (a cavity with round-trip reflectivity ~1e-5 has no standing wave: there is nothing to confine the quasiparticle)
+
+   C2. Phase shifts delta_l(E) and Wigner time delay 2 d(delta)/dE, l = 0..3, E from mu to 20 E0 (a bell would show as a
+       rise of delta_l through pi/2 over a width Gamma << E; a transparent sphere gives a smooth, tiny delta):
+       (exterior quasiparticle at E0: k_out = 3.3631 vs interior kappa0 = 3.3905; E0/mu = 61.74)
+       l = 0:  |delta_l| <= 0.0172 rad for mu <= E <= 20 E0;  max |d delta/dE| = 0.0114 at E = 0.186 (Gamma = E0/10 would give 1.74);  delta_l(E0) = 0.0168
+       l = 1:  |delta_l| <= 0.00867 rad for mu <= E <= 20 E0;  max |d delta/dE| = 0.00044 at E = 5.89 (Gamma = E0/10 would give 1.74);  delta_l(E0) = 0.00435
+       l = 2:  |delta_l| <= 0.00584 rad for mu <= E <= 20 E0;  max |d delta/dE| = 0.000139 at E = 27.3 (Gamma = E0/10 would give 1.74);  delta_l(E0) = 0.000435
+       l = 3:  |delta_l| <= 0.00434 rad for mu <= E <= 20 E0;  max |d delta/dE| = 6.67e-5 at E = 48.6 (Gamma = E0/10 would give 1.74);  delta_l(E0) = 2.3e-5
+       No partial wave shows a resonant rise anywhere; the largest time delay is at threshold (E -> mu), not at a rung.
+
+   C3. S-matrix poles in the complex kappa plane (kappa = sqrt E).  Systematic search: 160 starting points per l in
+       1 <= Re kappa <= 20, -12 <= Im kappa <= -0.05; distinct converged poles with 1 <= Re kappa <= 20 listed, nearest to the
+       real axis first.  (A rung of the ladder would be a pole with |Im kappa| << Re kappa.)
+       l = 0: 2 poles found; nearest the axis: 7.53-7.24i (Gamma/E=50.0),  14.08-7.95i (Gamma/E=3.3)
+       l = 1: 2 poles found; nearest the axis: 10.54-7.77i (Gamma/E=6.5),  17.06-8.27i (Gamma/E=2.5)
+       l = 2: 2 poles found; nearest the axis: 13.32-8.25i (Gamma/E=4.0),  19.9-8.57i (Gamma/E=2.1)
+       l = 3: 2 poles found; nearest the axis: 15.98-8.68i (Gamma/E=3.1),  9.024-8.84i (Gamma/E=98.0)
+       Every pole has |Im kappa| R > 3: widths of several times the energy.  No rung of the ladder survives as a resonance.
+
+D. Shell strength V (same delta-shell form, attractive) needed for a NARROW l = 0 bell, Q = Re E / (2|Im E|):
+       V/alpha0        V        pole kappa                   kappa R      E/mu        Q
+            1.0   0.007408         (26.7443 - 8.74042j)    13.372    3431.3   0.6833
+           10.0   0.07408         (7.31434 - 5.42272j)    3.6572    129.41   0.1519
+          135.0         1           (7.449 - 2.78545j)    3.7245    256.35   0.5751
+          405.0         3          (7.4536 - 1.68561j)    3.7268    283.13   1.049
+         1350.0        10        (7.19329 - 0.599976j)    3.5966    275.98   2.976
+         4050.0        30       (6.70102 - 0.0961426j)    3.3505    241.13   17.42
+        1.35e+4       100      (6.41068 - 0.00829751j)    3.2053    220.73   193.2
+        4.05e+4       300     (6.32533 - 0.000892192j)    3.1627    214.89   1772.0
+        1.35e+5      1000      (6.29578 - 7.92398e-5j)    3.1479    212.89   1.986e+4
+        4.05e+5      3000       (6.28738 - 8.7698e-6j)    3.1437    212.32   1.792e+5
+   Solve V for given Q (bisection in log V):
+       Q =    10:  V = 22.25 = 3004.0 alpha0,  bell at kappa R = 3.4134 (-> Dirichlet pi), E/mu = 250.17
+       Q =   100:  V = 72.22 = 9749.0 alpha0,  bell at kappa R = 3.2301 (-> Dirichlet pi), E/mu = 224.15
+       Q =  2700:  V = 369.9 = 4.993e+4 alpha0,  bell at kappa R = 3.1587 (-> Dirichlet pi), E/mu = 214.35
+   A shell strong enough to make a bell puts the ground rung at kappa R -> pi (kappa0 -> 2 pi / a = 6.28), not at App J's 3.39.
+
+E. Hard-wall (Horn A: rigid, sealed sphere) ladder, kappa_l R = first zero of j_l:
+   l   kappa_l a   E_l/E_0(hard)   E_l/mu    vs inherited kappa_l a
+   0    6.28319        1.0      212.039   3.39046
+   1    8.98682     2.0457      433.778   6.30505
+   2    11.5269     3.3656      713.645   8.99198
+   3    13.9759     4.9476      1049.09   11.5289
+   Gamma = 0 exactly, and coupling to the exterior = 0 exactly: a sealed box.  It holds a mode only if a quantum is PUT
+   in it (an input); the empty sealed sphere is just excluded volume, which is the Q1 (tortuosity) picture.

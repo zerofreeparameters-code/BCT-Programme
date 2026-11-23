@@ -1,0 +1,17 @@
+Bubble Bells desk-check 2 — Bloch spectrum of the FCC void network (Neumann walls), eigenvalues lambda of -Laplacian in 1/a^2
+a = 1, R = 1/2, L = a sqrt2 = 1.41421, mu = 1/xi^2 = 0.18618;  App J bell kappa0^2 = 11.495 (61.7 mu);  hard-wall bell (2pi)^2 = 39.478
+free-space |K|^2 at X = 19.7392, at L = 14.8044, at W = 24.6740, at K = 22.2066
+
+=== N = 128  (h = 0.01105 a, throat radius 0.0774 a = 7.01 cells)
+  Gamma  K/b = (0, 0, 0)  n = 136432  phi_grid = 0.26022  |A-A^H|max = 0.0e+00   lambda =  -0.0000   23.8405   39.6074   43.8628   43.8628   43.8628   61.9209   61.9209
+      X  K/b = (1, 0, 0)  n = 136432  phi_grid = 0.26022  |A-A^H|max = 0.0e+00   lambda =   8.6364   14.3606   19.9925   42.0053   42.0053   66.4246   66.4246   74.2567
+      W  K/b = (1, 0.5, 0)  n = 136432  phi_grid = 0.26022  |A-A^H|max = 0.0e+00   lambda =   8.6364   16.6901   16.6901   42.0048   51.0402   51.0402   66.4246   83.8857
+      L  K/b = (0.5, 0.5, 0.5)  n = 136432  phi_grid = 0.26022  |A-A^H|max = 0.0e+00   lambda =   5.2445   15.9382   25.4921   42.9196   42.9196   61.0688   64.0333   64.0333
+  --- acoustic band along Gamma-X and Gamma-L (lowest eigenvalue), with |K|^2 and the local 'slope' |K|^2/lambda:
+    G-X zeta = 0.1   |K|^2 =   0.1974   lambda_0 =   0.1115   |K|^2/lambda_0 = 1.7696   lambda_1..3 =  23.7258   37.6013   43.8092
+    G-L zeta = 0.1   |K|^2 =   0.1480   lambda_0 =   0.0836   |K|^2/lambda_0 = 1.7715   lambda_1..3 =  23.7527   38.0029   43.8377
+  --- acoustic top: lambda_ac(X) = 8.6364 (free 19.739), lambda_ac(L) = 5.2445 (free 14.804);  first optical at Gamma: lambda_1(Gamma) = 23.8405
+      in units of mu: lambda_ac(X)/mu = 46.39, lambda_1(Gamma)/mu = 128.05;  App J bell = 61.7 mu, hard-wall bell = 212.0 mu
+      Bogoliubov energies eps/mu:  acoustic top (X) 47.38,  first optical (Gamma) 129.04,  App J bell 62.73,  free zone-edge k=pi/a 54.00
+      elapsed 663s
+

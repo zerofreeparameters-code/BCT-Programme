@@ -1,0 +1,50 @@
+Bubble Bells desk-check 2 — condensate-mass sweep of tex/  (112 files)
+
+[m = m_P (Planck mass as the GP boson mass)]  3 hits
+    BCT_Letter20_GR_AllOrders.tex:66
+    BCT_Letter20_GR_AllOrders.tex:230
+    BCT_Letter20_GR_AllOrders.tex:317
+
+[g = m c^2 / n_0 (Josephson condition => c_s = c)]  2 hits
+    BCT_Appendix_AZ6.tex:353
+    BCT_Appendix_AZ6.tex:354
+
+[xi = hbar / sqrt(2 m g n_0) (GP healing length)]  1 hits
+    BCT_Appendix_AZ6.tex:168
+
+[xi = 2.32 l_P (App E.3 value)]  3 hits
+    BCT_Appendix_AZ6.tex:169
+    BCT_Appendix_AZ6.tex:359
+    BCT_Appendix_AZ7.tex:113
+
+[xi / r_oct = 1/[r_oct sqrt(8 pi alpha0)] (xi from alpha0)]  1 hits
+    BCT_Letter19_ElectronMass.tex:359
+
+[E_n = hbar c kappa_n (App J: linear dispersion, no m)]  1 hits
+    BCT_Appendix_J_SphereAction.tex:208
+
+[c_s = c (identification)]  14 hits
+    BCT_Appendix_AZ6.tex:220
+    BCT_Appendix_AZ6.tex:274
+    BCT_Appendix_AZ6.tex:275
+    BCT_Appendix_AZ6.tex:299
+    BCT_Appendix_AZ6.tex:318
+    BCT_Appendix_AZ6.tex:353
+    BCT_Appendix_AZ6.tex:362
+    BCT_Appendix_AZ6.tex:465
+    ... and 6 more
+
+Arithmetic (units: a = l_P, n_0 a^3 = 1):
+  xi = a/sqrt(8 pi alpha0) = 2.31754 l_P   (App E.3 / AZ6 / AZ7: 2.32 l_P)
+  with g = m c^2/n_0 (AZ6):  xi = hbar/sqrt(2 m g n_0) = hbar/(sqrt2 m c) = (m_P/m) l_P/sqrt2
+     Letter 20's m = m_P  =>  xi = l_P/sqrt2 = 0.70711 l_P   (factor 3.278 below App E.3's 2.32)
+     App E.3's xi = 2.32 l_P  =>  m = l_P/(sqrt2 xi) m_P = 0.30511 m_P   (Gate BUBBLE_BELLS N9, c_s = c)
+     bubble bells (c_eff = c_s/sqrt(alpha_inf) = c, alpha_inf = 1.64):  m = 0.23825 m_P   (N9 with tortuosity)
+  App J's bell energy under the three conventions (kappa0 = 3.39046/l_P):
+     E = hbar c kappa0                      = 3.39 m_P c^2   (App J table)
+     E = hbar^2 kappa0^2/2m,  m = m_P       = 5.748 m_P c^2   (Gate BUBBLE_BELLS bells_resonator.py)
+     E = hbar^2 kappa0^2/2m,  m = 0.305 m_P = 18.84 m_P c^2   (c_s = c with xi = 2.32 l_P)
+  Finding: the corpus carries two incompatible values of the GP boson mass (m = m_P in Letter 20 / Monograph App AI;
+  m = 0.305 m_P forced by AZ6's c_s = c together with App E.3's xi = 2.32 l_P) and a third energy convention in App J
+  (E = hbar c kappa, no m).  Gate BUBBLE_BELLS' N9 is the second of these, shifted by 1/sqrt(alpha_inf).  Any corpus
+  number that uses both m = m_P and xi = 2.32 l_P (or c_s = c) is off by the factor 3.28 somewhere.
